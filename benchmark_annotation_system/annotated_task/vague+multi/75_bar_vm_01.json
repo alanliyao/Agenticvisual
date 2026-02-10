@@ -1,0 +1,76 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "75_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/75_Refined_Employment_Telecom_Services_2024_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "First select the countries with the highest 10 percent employment, then group these countries by their continent, and then analyze the distribution pattern of these high employment countries across different continents.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "After filtering the top 10% countries with the highest employment and grouping them by continent, we can see that these high‑employment countries are mainly concentrated in North America and Asia. North America has a prominent share driven by the United States, while Europe, South America and other continents account for very few. The overall distribution shows a clear continental concentration, reflecting the imbalance and polarization of national employment levels worldwide."
+        },
+        "key_insights": [
+          "The top 10% employment countries form an obvious high-value cluster, with employment values far higher than the global average.",
+          "Global employment is extremely uneven, as only a tiny fraction of countries occupy the highest employment tier.",
+          "Most countries in the original view are excluded from the top 10%, showing strong polarization in national employment scale.",
+          "High-employment countries in the top 10% are mainly concentrated in North America and Asia, rather than being evenly spread across all continents.",
+          "North America has a high proportion in this group, largely driven by the United States as a core outlier.",
+          "Europe, South America and other continents have very few entries in the top 10% employment group.",
+          "The distribution reflects that ultra-high national employment is a regional feature limited to major economic continents."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_top_n",
+            "reasoning": "Highlighting countries with top 10% mean employment first narrows the scope to extreme high-employment countries to avoid interference from ordinary data."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "Grouping by continent then converts individual country data into regional distribution features"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_top_n",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n": 6,
+                  "order": "descending"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Continent",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Country",
+            "y": "Continent",
+            "color": "Continent"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -113,7 +113,7 @@ CHART_TYPE_CONFIGS = {
         description="用于展示流量和转换关系",
         typical_marks=["rect", "path"],
         typical_encodings=["x", "y", "color", "opacity"],
-        supported_interactions=["filter_flows", "highlight_path", "adjust_threshold"],
+        supported_interactions=["filter_flow", "highlight_path", "trace_node"],
         prompt_file="sankey_diagram.txt"
     )
 }

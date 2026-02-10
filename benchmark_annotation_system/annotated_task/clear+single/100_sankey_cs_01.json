@@ -1,0 +1,70 @@
+{
+  "task_type": "clear_single",
+  "task_id": "100_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/100_sankey_patient.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_02",
+      "question": "Isolate the Emergency registration source to see how many of its patients receive a Blood Panel diagnostic test.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "120 patients from the Emergency registration source receive a Blood Panel diagnostic test.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "After isolating Emergency, we see it sends ~210 patients to Internal Medicine, its most common department destination.",
+          "A majority of Emergency patients who get a Blood Panel proceed to Medication treatment"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "The trace node action eliminates overlapping flows, making the Emergency pathway visible"
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data",
+            "reasoning": "The get data tool then extracts the precise patient count for the Blood Panel step, which was hidden in the original view."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Emergency"
+                }
+              }
+            },
+            {
+              "tool": "get_data",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "visible"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

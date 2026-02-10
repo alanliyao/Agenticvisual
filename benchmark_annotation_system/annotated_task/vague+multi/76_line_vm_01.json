@@ -1,0 +1,78 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "76_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/76_Refined_Employment_Telecom_Services_NA_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore how employment trends differ in America from 2003 to 2005, and identify any periods of unusual activity.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The U.S. employment drop from 1,780 to 1,510 thousand between 2003 and 2005 is confirmed as the most dramatic event in the dataset.The most significant anomaly is the sharp drop in U.S. employment around 2003, which is not mirrored by any other country."
+        },
+        "key_insights": [
+          "Mexico shows a small, consistent upward trend with no detected anomalies, indicating stable growth.",
+          "The smallest countries (Grenada, Barbados) exhibit no anomalies, as their employment levels remain near zero with minimal fluctuation.",
+          "The results show that the largest economy (U.S.) experienced the most dramatic fluctuations, while smaller economies remained stable."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "It allows us to compare the resilience and volatility of economies at different scales."
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_time_range",
+            "reasoning": "Zooming time range allows us to analyze the trend from 2002 to 2005 in the USA."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "threshold": 2
+                }
+              }
+            },
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2003",
+                  "end": "2005"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "point"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

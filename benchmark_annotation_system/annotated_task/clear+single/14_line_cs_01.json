@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "14_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/14_museum_visitors_line_multi.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the spike in visitors for Firehouse Museum around late 2014 to check if there was a single day or a sustained period of high attendance.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "On September 1st.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "The initial view only shows a large spike, so zooming in is necessary to clarify its duration."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2014/7/1",
+                  "end": "2014/9/1"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2014/7/1",
+              "2014/9/1"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "Visitors",
+            "color": "Museum"
+          }
+        }
+      }
+    }
+  ]
+}

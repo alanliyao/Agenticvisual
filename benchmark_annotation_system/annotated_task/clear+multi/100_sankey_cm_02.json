@@ -1,0 +1,73 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "100_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/100_sankey_patient.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First filter to show only patients from the Outpatient Appt registration source, then trace their pathway to see how many of them are Cured & Released after receiving Surgery Tx.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "210 patients from the Outpatient Appt registration source are Cured & Released after receiving Surgery Tx.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Outpatient Appt is the largest source",
+          "Only 45 Outpatient patients in Surgery Tx are transferred to another facility."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_path",
+            "reasoning": "isolates the Surgery Tx journey"
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data",
+            "reasoning": "retrieves the final outcome count"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_path",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "path": [
+                    "Surgery Tx",
+                    "Cured & Discharged"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "get_data",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "visible"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

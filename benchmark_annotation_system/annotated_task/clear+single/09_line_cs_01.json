@@ -1,0 +1,64 @@
+{
+  "task_type": "clear_single",
+  "task_id": "09_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/09_museum_visitors_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the time range of the highest peak to find the exact date when the value reached its maximum.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Around July 2nd 2014.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The highest peak reaches approximately 13,500, which is the most extreme value in the entire series.",
+          "The peak occurs abruptly after a sharp upward trend, followed by an immediate steep decline.",
+          "No other nearby points approach this peak’s magnitude, confirming it as an isolated extreme."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "The zoom action resolves the compressed time axis, making the peak date readable. This single tool operation directly answers the precise date question, so no further steps are needed."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "categorical",
+                "param": "start",
+                "target": {
+                  "start": "2014-06-01",
+                  "end": "2014-10-01"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2014-06-01",
+              "2014-10-01"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "America Tropical Interpretive Center",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "filename": "11_line_stocks.json",
+  "spec_index": 10,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "description": "Multi-series Line Chart with Halo (Stock Prices)",
+    "data": {
+      "values": [
+        {
+          "date": "2000-01-01",
+          "AAPL": 25.94,
+          "AMZN": 64.56,
+          "GOOG": null,
+          "IBM": 100.52,
+          "MSFT": 39.81
+        },
+        {
+          "date": "2000-02-01",
+          "AAPL": 28.66,
+          "AMZN": 68.87,
+          "GOOG": null,
+          "IBM": 92.11,
+          "MSFT": 36.35
+        },
+        {
+          "date": "2000-03-01",
+          "AAPL": 33.95,
+          "AMZN": 67,
+          "GOOG": null,
+          "IBM": 106.11,
+          "MSFT": 43.22
+        },
+        {
+          "date": "2000-04-01",
+          "AAPL": 31.01,
+          "AMZN": 55.19,
+          "GOOG": null,
+          "IBM": 99.95,
+          "MSFT": 28.37
+        },
+        {
+          "date": "2000-05-01",
+          "AAPL": 21,
+          "AMZN": 48.31,
+          "GOOG": null,
+          "IBM": 96.31,
+          "MSFT": 25.45
+        },
+        {
+          "date": "2001-01-01",
+          "AAPL": 10.81,
+          "AMZN": 15.56,
+          "GOOG": null,
+          "IBM": 88.5,
+          "MSFT": 24.84
+        },
+        {
+          "date": "2001-02-01",
+          "AAPL": 9.12,
+          "AMZN": 13.87,
+          "GOOG": null,
+          "IBM": 84.83,
+          "MSFT": 23.73
+        },
+        {
+          "date": "2001-03-01",
+          "AAPL": 8.86,
+          "AMZN": 11.19,
+          "GOOG": null,
+          "IBM": 83.29,
+          "MSFT": 22.25
+        },
+        {
+          "date": "2002-01-01",
+          "AAPL": 12.36,
+          "AMZN": 17.01,
+          "GOOG": null,
+          "IBM": 97.54,
+          "MSFT": 28.11
+        },
+        {
+          "date": "2002-02-01",
+          "AAPL": 10.85,
+          "AMZN": 16.3,
+          "GOOG": null,
+          "IBM": 93.03,
+          "MSFT": 26.36
+        },
+        {
+          "date": "2003-01-01",
+          "AAPL": 7.21,
+          "AMZN": 18.89,
+          "GOOG": null,
+          "IBM": 76.96,
+          "MSFT": 24.53
+        },
+        {
+          "date": "2003-02-01",
+          "AAPL": 7.16,
+          "AMZN": 17.95,
+          "GOOG": null,
+          "IBM": 73.95,
+          "MSFT": 23.74
+        },
+        {
+          "date": "2004-01-01",
+          "AAPL": 10.87,
+          "AMZN": 43.22,
+          "GOOG": null,
+          "IBM": 97.96,
+          "MSFT": 26.84
+        },
+        {
+          "date": "2004-02-01",
+          "AAPL": 10.96,
+          "AMZN": 39.88,
+          "GOOG": 50.05,
+          "IBM": 91.15,
+          "MSFT": 27.2
+        },
+        {
+          "date": "2004-03-01",
+          "AAPL": 11.01,
+          "AMZN": 40.34,
+          "GOOG": 58.5,
+          "IBM": 90.31,
+          "MSFT": 25.67
+        },
+        {
+          "date": "2005-01-01",
+          "AAPL": 38.45,
+          "AMZN": 35.64,
+          "GOOG": 195.62,
+          "IBM": 92.27,
+          "MSFT": 26.13
+        },
+        {
+          "date": "2005-02-01",
+          "AAPL": 44.86,
+          "AMZN": 32.79,
+          "GOOG": 187.99,
+          "IBM": 91.82,
+          "MSFT": 25.87
+        },
+        {
+          "date": "2006-01-01",
+          "AAPL": 75.51,
+          "AMZN": 38.09,
+          "GOOG": 390.22,
+          "IBM": 78.6,
+          "MSFT": 26.88
+        },
+        {
+          "date": "2006-02-01",
+          "AAPL": 68.49,
+          "AMZN": 36.17,
+          "GOOG": 362.62,
+          "IBM": 78.93,
+          "MSFT": 25.95
+        },
+        {
+          "date": "2007-01-01",
+          "AAPL": 83.08,
+          "AMZN": 37.67,
+          "GOOG": 466.74,
+          "IBM": 97.27,
+          "MSFT": 29.86
+        },
+        {
+          "date": "2007-02-01",
+          "AAPL": 84.61,
+          "AMZN": 39.14,
+          "GOOG": 449.45,
+          "IBM": 90.24,
+          "MSFT": 28.08
+        },
+        {
+          "date": "2008-01-01",
+          "AAPL": 135.36,
+          "AMZN": 72.76,
+          "GOOG": 564.3,
+          "IBM": 107.59,
+          "MSFT": 29.54
+        },
+        {
+          "date": "2008-02-01",
+          "AAPL": 119.15,
+          "AMZN": 64.79,
+          "GOOG": 471.18,
+          "IBM": 113.66,
+          "MSFT": 27.11
+        },
+        {
+          "date": "2009-01-01",
+          "AAPL": 82.33,
+          "AMZN": 51.28,
+          "GOOG": 308.57,
+          "IBM": 89.46,
+          "MSFT": 17.17
+        },
+        {
+          "date": "2009-02-01",
+          "AAPL": 89.31,
+          "AMZN": 58.82,
+          "GOOG": 337.99,
+          "IBM": 90.32,
+          "MSFT": 18.58
+        },
+        {
+          "date": "2010-01-01",
+          "AAPL": 192.06,
+          "AMZN": 125.41,
+          "GOOG": 529.94,
+          "IBM": 131.18,
+          "MSFT": 28.18
+        }
+      ]
+    },
+    "transform": [
+      {
+        "fold": [
+          "AAPL",
+          "AMZN",
+          "GOOG",
+          "IBM",
+          "MSFT"
+        ],
+        "as": [
+          "symbol",
+          "price"
+        ]
+      }
+    ],
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "Date",
+        "axis": {
+          "format": "%Y"
+        }
+      },
+      "y": {
+        "field": "price",
+        "type": "quantitative",
+        "title": "Stock Price ($)"
+      },
+      "color": {
+        "field": "symbol",
+        "type": "nominal",
+        "title": "Company",
+        "scale": {
+          "domain": [
+            "AAPL",
+            "AMZN",
+            "GOOG",
+            "IBM",
+            "MSFT"
+          ],
+          "range": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd"
+          ]
+        }
+      },
+      "tooltip": [
+        {
+          "field": "date",
+          "type": "temporal",
+          "title": "Date"
+        },
+        {
+          "field": "symbol",
+          "type": "nominal",
+          "title": "Company"
+        },
+        {
+          "field": "price",
+          "type": "quantitative",
+          "title": "Price",
+          "format": ".2f"
+        }
+      ]
+    },
+    "width": 600,
+    "height": 400
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "description": "Multi-series Line Chart with Halo (Stock Prices)",
+    "data": {
+      "values": [
+        {
+          "date": "2000-01-01",
+          "AAPL": 25.94,
+          "AMZN": 64.56,
+          "GOOG": null,
+          "IBM": 100.52,
+          "MSFT": 39.81
+        },
+        {
+          "date": "2000-02-01",
+          "AAPL": 28.66,
+          "AMZN": 68.87,
+          "GOOG": null,
+          "IBM": 92.11,
+          "MSFT": 36.35
+        },
+        {
+          "date": "2000-03-01",
+          "AAPL": 33.95,
+          "AMZN": 67,
+          "GOOG": null,
+          "IBM": 106.11,
+          "MSFT": 43.22
+        },
+        {
+          "date": "2000-04-01",
+          "AAPL": 31.01,
+          "AMZN": 55.19,
+          "GOOG": null,
+          "IBM": 99.95,
+          "MSFT": 28.37
+        },
+        {
+          "date": "2000-05-01",
+          "AAPL": 21,
+          "AMZN": 48.31,
+          "GOOG": null,
+          "IBM": 96.31,
+          "MSFT": 25.45
+        },
+        {
+          "date": "2001-01-01",
+          "AAPL": 10.81,
+          "AMZN": 15.56,
+          "GOOG": null,
+          "IBM": 88.5,
+          "MSFT": 24.84
+        },
+        {
+          "date": "2001-02-01",
+          "AAPL": 9.12,
+          "AMZN": 13.87,
+          "GOOG": null,
+          "IBM": 84.83,
+          "MSFT": 23.73
+        },
+        {
+          "date": "2001-03-01",
+          "AAPL": 8.86,
+          "AMZN": 11.19,
+          "GOOG": null,
+          "IBM": 83.29,
+          "MSFT": 22.25
+        },
+        {
+          "date": "2002-01-01",
+          "AAPL": 12.36,
+          "AMZN": 17.01,
+          "GOOG": null,
+          "IBM": 97.54,
+          "MSFT": 28.11
+        },
+        {
+          "date": "2002-02-01",
+          "AAPL": 10.85,
+          "AMZN": 16.3,
+          "GOOG": null,
+          "IBM": 93.03,
+          "MSFT": 26.36
+        },
+        {
+          "date": "2003-01-01",
+          "AAPL": 7.21,
+          "AMZN": 18.89,
+          "GOOG": null,
+          "IBM": 76.96,
+          "MSFT": 24.53
+        },
+        {
+          "date": "2003-02-01",
+          "AAPL": 7.16,
+          "AMZN": 17.95,
+          "GOOG": null,
+          "IBM": 73.95,
+          "MSFT": 23.74
+        },
+        {
+          "date": "2004-01-01",
+          "AAPL": 10.87,
+          "AMZN": 43.22,
+          "GOOG": null,
+          "IBM": 97.96,
+          "MSFT": 26.84
+        },
+        {
+          "date": "2004-02-01",
+          "AAPL": 10.96,
+          "AMZN": 39.88,
+          "GOOG": 50.05,
+          "IBM": 91.15,
+          "MSFT": 27.2
+        },
+        {
+          "date": "2004-03-01",
+          "AAPL": 11.01,
+          "AMZN": 40.34,
+          "GOOG": 58.5,
+          "IBM": 90.31,
+          "MSFT": 25.67
+        },
+        {
+          "date": "2005-01-01",
+          "AAPL": 38.45,
+          "AMZN": 35.64,
+          "GOOG": 195.62,
+          "IBM": 92.27,
+          "MSFT": 26.13
+        },
+        {
+          "date": "2005-02-01",
+          "AAPL": 44.86,
+          "AMZN": 32.79,
+          "GOOG": 187.99,
+          "IBM": 91.82,
+          "MSFT": 25.87
+        },
+        {
+          "date": "2006-01-01",
+          "AAPL": 75.51,
+          "AMZN": 38.09,
+          "GOOG": 390.22,
+          "IBM": 78.6,
+          "MSFT": 26.88
+        },
+        {
+          "date": "2006-02-01",
+          "AAPL": 68.49,
+          "AMZN": 36.17,
+          "GOOG": 362.62,
+          "IBM": 78.93,
+          "MSFT": 25.95
+        },
+        {
+          "date": "2007-01-01",
+          "AAPL": 83.08,
+          "AMZN": 37.67,
+          "GOOG": 466.74,
+          "IBM": 97.27,
+          "MSFT": 29.86
+        },
+        {
+          "date": "2007-02-01",
+          "AAPL": 84.61,
+          "AMZN": 39.14,
+          "GOOG": 449.45,
+          "IBM": 90.24,
+          "MSFT": 28.08
+        },
+        {
+          "date": "2008-01-01",
+          "AAPL": 135.36,
+          "AMZN": 72.76,
+          "GOOG": 564.3,
+          "IBM": 107.59,
+          "MSFT": 29.54
+        },
+        {
+          "date": "2008-02-01",
+          "AAPL": 119.15,
+          "AMZN": 64.79,
+          "GOOG": 471.18,
+          "IBM": 113.66,
+          "MSFT": 27.11
+        },
+        {
+          "date": "2009-01-01",
+          "AAPL": 82.33,
+          "AMZN": 51.28,
+          "GOOG": 308.57,
+          "IBM": 89.46,
+          "MSFT": 17.17
+        },
+        {
+          "date": "2009-02-01",
+          "AAPL": 89.31,
+          "AMZN": 58.82,
+          "GOOG": 337.99,
+          "IBM": 90.32,
+          "MSFT": 18.58
+        },
+        {
+          "date": "2010-01-01",
+          "AAPL": 192.06,
+          "AMZN": 125.41,
+          "GOOG": 529.94,
+          "IBM": 131.18,
+          "MSFT": 28.18
+        }
+      ]
+    },
+    "transform": [
+      {
+        "fold": [
+          "AAPL",
+          "AMZN",
+          "GOOG",
+          "IBM",
+          "MSFT"
+        ],
+        "as": [
+          "symbol",
+          "price"
+        ]
+      }
+    ],
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "title": "Date",
+        "axis": {
+          "format": "%Y"
+        }
+      },
+      "y": {
+        "field": "price",
+        "type": "quantitative",
+        "title": "Stock Price ($)"
+      },
+      "color": {
+        "field": "symbol",
+        "type": "nominal",
+        "title": "Company",
+        "scale": {
+          "domain": [
+            "AAPL",
+            "AMZN",
+            "GOOG",
+            "IBM",
+            "MSFT"
+          ],
+          "range": [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd"
+          ]
+        }
+      },
+      "tooltip": [
+        {
+          "field": "date",
+          "type": "temporal",
+          "title": "Date"
+        },
+        {
+          "field": "symbol",
+          "type": "nominal",
+          "title": "Company"
+        },
+        {
+          "field": "price",
+          "type": "quantitative",
+          "title": "Price",
+          "format": ".2f"
+        }
+      ]
+    },
+    "width": 600,
+    "height": 400
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "line",
+  "chart_meta": {
+    "chart_type": "line",
+    "title": "11_line_stocks",
+    "filename": "11_line_stocks.json",
+    "data_points": 26,
+    "total_points": 26,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:28:44.571245Z"
+}

@@ -1,0 +1,71 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "72_heatmap_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/72_StudentsPerformance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore how writing scores vary across different racial/ethnic groups and parental education levels, starting with adjusting the color scale to improve contrast and then clustering rows and columns to identify patterns",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "By first adjusting the color scale to improve visibility and then clustering to organize the data, we transform a dense heatmap into a clear, interpretable structure. This reveals that while parental education is a strong predictor of writing scores, racial/ethnic identity also plays a significant role, creating distinct performance clusters that would have been hidden in the original view."
+        },
+        "key_insights": [
+          "The heatmap colors become more distinct, making it easier to spot small variations in scores that were previously hidden.",
+          "Similar performance patterns are placed next to each other, creating distinct blocks of color."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "adjust_color_scale",
+            "reasoning": "Increase the contrast between the light and dark shades to make subtle differences in writing scores more visible."
+          },
+          {
+            "iteration": 2,
+            "tool": "cluster_rows_cols",
+            "reasoning": "Clustering then organizes the data into meaningful groups, turning a dense heatmap into a clear, interpretable structure that reveals hidden relationships between parental education, race/ethnicity, and writing scores."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "adjust_color_scale",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scheme": "viridis"
+                }
+              }
+            },
+            {
+              "tool": "cluster_rows_cols",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "cluster_rows": true,
+                  "cluster_cols": true,
+                  "method": "max"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "parental level of education",
+            "color": "writing score"
+          }
+        }
+      }
+    }
+  ]
+}

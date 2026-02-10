@@ -1,0 +1,594 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "Microsoft Revenue Flow Sankey Diagram (Data-Driven Architecture)",
+    "width": 1000,
+    "height": 500,
+    "padding": {"left": 100, "right": 120, "top": 55, "bottom": 50},
+    "background": "white",
+  
+    "_metadata": {
+      "chart_type": "sankey_multi_stage",
+      "title": "Sankey Microsoft's FY23 Q2 Income Statement",
+      "topic": "revenue_flow",
+      "architecture": "data-driven layout via Vega transform pipeline",
+      "value_unit": "Billions USD"
+    },
+  
+    "signals": [
+      {"name": "nodeWidth", "value": 15},
+      {"name": "nodeGap", "value": 600},
+      {
+        "name": "threshold",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 10,
+          "step": 0.5,
+          "name": "Min Flow ($B): "
+        }
+      },
+      {
+        "name": "nodeHover",
+        "value": null,
+        "on": [
+          {"events": "@nodeRect:mouseover", "update": "datum.name"},
+          {"events": "@nodeRect:mouseout", "update": "null"}
+        ]
+      },
+      {
+        "name": "edgeHover",
+        "value": null,
+        "on": [
+          {"events": "@edgeMark:mouseover", "update": "datum.linkId"},
+          {"events": "@edgeMark:mouseout", "update": "null"}
+        ]
+      },
+      {
+        "name": "selectedNode",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:click!",
+            "update": "selectedNode === datum.name ? null : datum.name"
+          },
+          {
+            "events": [
+              {"type": "click", "markname": "resetBtn"},
+              {"type": "dblclick"}
+            ],
+            "update": "null"
+          }
+        ]
+      }
+    ],
+  
+    "data": [
+      {
+        "name": "rawLinks",
+        "values": [
+          {"source": "Server Products",   "target": "Intelligent Cloud",   "value": 19.6},
+          {"source": "Enterprise Svc",     "target": "Intelligent Cloud",   "value": 1.9},
+          {"source": "Office Products",    "target": "Productivity",        "value": 11.8},
+          {"source": "LinkedIn",           "target": "Productivity",        "value": 3.9},
+          {"source": "Other",              "target": "Productivity",        "value": 1.3},
+          {"source": "Windows",            "target": "Personal Computing",  "value": 4.8},
+          {"source": "Gaming",             "target": "Personal Computing",  "value": 4.8},
+          {"source": "Search & Ads",       "target": "Personal Computing",  "value": 3.2},
+          {"source": "Devices",            "target": "Personal Computing",  "value": 1.4},
+          {"source": "Intelligent Cloud",  "target": "Revenue",             "value": 21.5},
+          {"source": "Productivity",       "target": "Revenue",             "value": 17.0},
+          {"source": "Personal Computing", "target": "Revenue",             "value": 14.2},
+          {"source": "Revenue",            "target": "Gross Profit",        "value": 35.2},
+          {"source": "Revenue",            "target": "Cost of Revenue",     "value": 17.5},
+          {"source": "Gross Profit",       "target": "Operating Profit",    "value": 20.4},
+          {"source": "Gross Profit",       "target": "Operating Expenses",  "value": 14.8},
+          {"source": "Cost of Revenue",    "target": "Product Costs",       "value": 5.7},
+          {"source": "Cost of Revenue",    "target": "Service Costs",       "value": 11.8},
+          {"source": "Operating Profit",   "target": "Net Profit",          "value": 16.4},
+          {"source": "Operating Profit",   "target": "Tax",                 "value": 3.9},
+          {"source": "Operating Expenses", "target": "R&D",                 "value": 6.8},
+          {"source": "Operating Expenses", "target": "S&M",                 "value": 5.7},
+          {"source": "Operating Expenses", "target": "G&A",                 "value": 2.3}
+        ]
+      },
+      {
+        "name": "nodeConfig",
+        "values": [
+          {"name": "Server Products",   "depth": 0, "order": 0},
+          {"name": "Enterprise Svc",     "depth": 0, "order": 1},
+          {"name": "Office Products",    "depth": 0, "order": 2},
+          {"name": "LinkedIn",           "depth": 0, "order": 3},
+          {"name": "Other",              "depth": 0, "order": 4},
+          {"name": "Windows",            "depth": 0, "order": 5},
+          {"name": "Gaming",             "depth": 0, "order": 6},
+          {"name": "Search & Ads",       "depth": 0, "order": 7},
+          {"name": "Devices",            "depth": 0, "order": 8},
+  
+          {"name": "Intelligent Cloud",  "depth": 1, "order": 0},
+          {"name": "Productivity",       "depth": 1, "order": 1},
+          {"name": "Personal Computing", "depth": 1, "order": 2},
+  
+          {"name": "Revenue",            "depth": 2, "order": 0},
+  
+          {"name": "Gross Profit",       "depth": 3, "order": 0},
+          {"name": "Cost of Revenue",    "depth": 3, "order": 1},
+  
+          {"name": "Operating Profit",   "depth": 4, "order": 0},
+          {"name": "Operating Expenses", "depth": 4, "order": 1},
+          {"name": "Product Costs",      "depth": 4, "order": 2},
+          {"name": "Service Costs",      "depth": 4, "order": 3},
+  
+          {"name": "Net Profit",         "depth": 5, "order": 0},
+          {"name": "Tax",                "depth": 5, "order": 1},
+          {"name": "R&D",                "depth": 5, "order": 2},
+          {"name": "S&M",                "depth": 5, "order": 3},
+          {"name": "G&A",                "depth": 5, "order": 4}
+        ]
+      },
+      {
+        "name": "depthLabelsData",
+        "values": [
+          {"depth": 0, "label": "Products & Services"},
+          {"depth": 1, "label": "Business Segments"},
+          {"depth": 2, "label": "Total Revenue"},
+          {"depth": 3, "label": "Gross Split"},
+          {"depth": 4, "label": "Operating Split"},
+          {"depth": 5, "label": "Final Allocation"}
+        ]
+      },
+  
+      {
+        "name": "filteredLinks",
+        "source": "rawLinks",
+        "transform": [
+          {"type": "filter", "expr": "datum.value >= threshold"},
+          {"type": "formula", "expr": "datum.source + ' → ' + datum.target", "as": "linkId"}
+        ]
+      },
+  
+      {
+        "name": "linksWithOrder",
+        "source": "filteredLinks",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": ["source"],
+            "as": ["srcConfig"]
+          },
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": ["target"],
+            "as": ["tgtConfig"]
+          },
+          {"type": "formula", "expr": "datum.srcConfig.order",  "as": "srcOrder"},
+          {"type": "formula", "expr": "datum.tgtConfig.order",  "as": "tgtOrder"},
+          {"type": "formula", "expr": "datum.srcConfig.depth",  "as": "srcDepth"},
+          {"type": "formula", "expr": "datum.tgtConfig.depth",  "as": "tgtDepth"}
+        ]
+      },
+  
+      {
+        "name": "outTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": ["source"],
+            "fields": ["value"],
+            "ops": ["sum"],
+            "as": ["totalOut"]
+          }
+        ]
+      },
+      {
+        "name": "inTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": ["target"],
+            "fields": ["value"],
+            "ops": ["sum"],
+            "as": ["totalIn"]
+          }
+        ]
+      },
+  
+      {
+        "name": "nodePositions",
+        "source": "nodeConfig",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "outTotals",
+            "key": "source",
+            "fields": ["name"],
+            "as": ["outInfo"]
+          },
+          {
+            "type": "lookup",
+            "from": "inTotals",
+            "key": "target",
+            "fields": ["name"],
+            "as": ["inInfo"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+            "as": "totalOut"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+            "as": "totalIn"
+          },
+          {
+            "type": "formula",
+            "expr": "max(datum.totalOut, datum.totalIn)",
+            "as": "total"
+          },
+          {"type": "filter", "expr": "datum.total > 0"},
+          {
+            "type": "stack",
+            "groupby": ["depth"],
+            "sort": {"field": "order", "order": "ascending"},
+            "field": "total"
+          },
+          {
+            "type": "window",
+            "groupby": ["depth"],
+            "sort": {"field": "order", "order": "ascending"},
+            "ops": ["row_number"],
+            "as": ["rankInDepth"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y0g"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y1g"
+          }
+        ]
+      },
+  
+      {
+        "name": "sourceStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": ["source"],
+            "sort": {"field": "tgtOrder", "order": "ascending"},
+            "ops": ["sum"],
+            "fields": ["value"],
+            "frame": [null, 0],
+            "as": ["srcCumEnd"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcCumEnd - datum.value",
+            "as": "srcCumStart"
+          }
+        ]
+      },
+  
+      {
+        "name": "targetStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": ["target"],
+            "sort": {"field": "srcOrder", "order": "ascending"},
+            "ops": ["sum"],
+            "fields": ["value"],
+            "frame": [null, 0],
+            "as": ["tgtCumEnd"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtCumEnd - datum.value",
+            "as": "tgtCumStart"
+          }
+        ]
+      },
+  
+      {
+        "name": "edges",
+        "source": "sourceStacked",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "targetStacked",
+            "key": "linkId",
+            "fields": ["linkId"],
+            "as": ["tgtInfo"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+            "as": "tgtCumStart"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+            "as": "tgtCumEnd"
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": ["source"],
+            "as": ["srcNode"]
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": ["target"],
+            "as": ["tgtNode"]
+          },
+          {"type": "filter", "expr": "datum.srcNode && datum.tgtNode"},
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumStart",
+            "as": "absSy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+            "as": "absSy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+            "as": "absTy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+            "as": "absTy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+            "as": "srcPct"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+            "as": "tgtPct"
+          }
+        ]
+      }
+    ],
+  
+    "scales": [
+      {
+        "name": "x",
+        "type": "point",
+        "range": "width",
+        "domain": [0, 1, 2, 3, 4, 5],
+        "padding": 0.5
+      },
+      {
+        "name": "y",
+        "type": "linear",
+        "range": [0, {"signal": "height"}],
+        "domain": {"data": "nodePositions", "field": "y1g"}
+      },
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {"data": "nodeConfig", "field": "name"},
+        "range": {"scheme": "tableau20"}
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "path",
+        "name": "edgeMark",
+        "from": {"data": "edges"},
+        "encode": {
+          "update": {
+            "path": {
+              "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+            },
+            "fill": {"scale": "color", "field": "source"},
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.35"
+            },
+            "stroke": {"scale": "color", "field": "source"},
+            "strokeWidth": {"value": 0.5},
+            "strokeOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': $' + format(datum.value, ',.1f') + 'B (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ')'"
+            },
+            "cursor": {"value": "pointer"}
+          },
+          "hover": {
+            "fillOpacity": {"value": 0.8}
+          }
+        }
+      },
+  
+      {
+        "type": "rect",
+        "name": "nodeRect",
+        "from": {"data": "nodePositions"},
+        "encode": {
+          "enter": {
+            "width": {"signal": "nodeWidth"},
+            "cornerRadius": {"value": 2}
+          },
+          "update": {
+            "x": {"scale": "x", "field": "depth"},
+            "y": {"scale": "y", "field": "y0g"},
+            "y2": {"scale": "y", "field": "y1g"},
+            "fill": {"scale": "color", "field": "name"},
+            "stroke": {"value": "#333"},
+            "strokeWidth": {
+              "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 0.5"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+            },
+            "tooltip": {
+              "signal": "datum.name + ': $' + format(datum.total, ',.1f') + 'B'"
+            },
+            "cursor": {"value": "pointer"}
+          }
+        }
+      },
+  
+      {
+        "type": "text",
+        "from": {"data": "nodePositions"},
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {"field": "name"},
+            "fontSize": {"value": 10},
+            "fontWeight": {"value": "bold"},
+            "fill": {"value": "#333"},
+            "baseline": {"value": "middle"},
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+  
+      {
+        "type": "text",
+        "from": {"data": "nodePositions"},
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 12"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 18 ? '$' + format(datum.total, ',.1f') + 'B' : ''"
+            },
+            "fontSize": {"value": 9},
+            "fill": {"value": "#888"},
+            "baseline": {"value": "middle"},
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+  
+      {
+        "type": "text",
+        "from": {"data": "depthLabelsData"},
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "x": {"signal": "scale('x', datum.depth) + nodeWidth / 2"},
+            "y": {"signal": "height + 25"},
+            "text": {"field": "label"},
+            "fontSize": {"value": 11},
+            "fontWeight": {"value": "bold"},
+            "fill": {"value": "#555"},
+            "baseline": {"value": "top"},
+            "align": {"value": "center"}
+          }
+        }
+      },
+  
+      {
+        "type": "group",
+        "data": [
+          {
+            "name": "showResetData",
+            "values": [{}],
+            "transform": [{"type": "filter", "expr": "selectedNode"}]
+          }
+        ],
+        "encode": {
+          "enter": {
+            "xc": {"signal": "width / 2"},
+            "y": {"value": -35},
+            "width": {"value": 100},
+            "height": {"value": 26}
+          }
+        },
+        "marks": [
+          {
+            "type": "group",
+            "name": "resetBtn",
+            "from": {"data": "showResetData"},
+            "encode": {
+              "enter": {
+                "cornerRadius": {"value": 5},
+                "fill": {"value": "#f5f5f5"},
+                "stroke": {"value": "#bbb"},
+                "strokeWidth": {"value": 1.5},
+                "height": {"field": {"group": "height"}},
+                "width": {"field": {"group": "width"}},
+                "cursor": {"value": "pointer"}
+              },
+              "update": {"opacity": {"value": 1}},
+              "hover": {"opacity": {"value": 0.7}}
+            },
+            "marks": [
+              {
+                "type": "text",
+                "interactive": false,
+                "encode": {
+                  "enter": {
+                    "xc": {"field": {"group": "width"}, "mult": 0.5},
+                    "yc": {"field": {"group": "height"}, "mult": 0.5, "offset": 1},
+                    "align": {"value": "center"},
+                    "baseline": {"value": "middle"},
+                    "fontWeight": {"value": "bold"},
+                    "fontSize": {"value": 11},
+                    "text": {"value": "Show All"},
+                    "fill": {"value": "#555"}
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+  
+    "title": {
+      "text": "Sankey Business Revenue Flow (Billions USD)",
+      "subtitle": "Hover to highlight  |  Click node to focus  |  Drag slider to filter by volume",
+      "fontSize": 16,
+      "subtitleFontSize": 11,
+      "subtitleColor": "#999",
+      "anchor": "start"
+    }
+  }

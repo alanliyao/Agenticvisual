@@ -1,0 +1,104 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "45_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/45_ign_scores_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "How the value of \"Action\", \"Adventure\" and \"Action,Adventure\" change during PS develop",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The values of \"Action\", \"Adventure\" on PS increase when PS develops. The values of \"Action,Adventure\" also increases except from PS to PS2."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We only cares about the \"Action\", \"Adventure\" and \"Action,Adventure\"."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "We just cares PS platforms."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Fighting",
+                    "Platformer"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Platform",
+                  "values": [
+                    "Dreamcast",
+                    "Game Boy Advance",
+                    "Game Boy Color",
+                    "GameCube",
+                    "Nintendo 3DS",
+                    "Nintendo 64",
+                    "Nintendo DS",
+                    "Nintendo DSi",
+                    "PC",
+                    "PlayStation Portable",
+                    "PlayStation Vita",
+                    "Wii",
+                    "Wireless",
+                    "Xbox",
+                    "Xbox 360",
+                    "iPhone",
+                    "Xbox One"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Dreamcast\",\"Game Boy Advance\",\"Game Boy Color\",\"GameCube\",\"Nintendo 3DS\",\"Nintendo 64\",\"Nintendo DS\",\"Nintendo DSi\",\"PC\",\"PlayStation Portable\",\"PlayStation Vita\",\"Wii\",\"Wireless\",\"Xbox\",\"Xbox 360\",\"iPhone\",\"Xbox One\"], datum['Platform']) < 0"
+            },
+            {
+              "filter": "indexof([\"Action\", \"Action, Adventure\", \"Adventure\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 1,
+            "types": [
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "94_sankey_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/94_samkey_retail.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Focus on the Community Group channel to examine how its GMV is distributed across all business categories.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "The Community Group channel has a diversified GMV distribution, unlike the more concentrated patterns of other channels.\n",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The Community Group channel distributes its GMV relatively evenly across all four business categories, rather than concentrating on one."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Focusing on the Community Group channel simplifies the visual by removing other acquisition sources, making it easier to analyze its distribution."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Community Group (WeChat/Community)"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

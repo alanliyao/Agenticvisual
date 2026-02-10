@@ -1,0 +1,57 @@
+{
+  "task_type": "vague_single",
+  "task_id": "60_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/60_Berlin_crimes_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "How does the graffiti situation vary across Berlin?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The situation with graffiti varies greatly across different districts. You can see that the Mitte district and Friedrichshain-Kreuzberg district have relatively more graffiti, while the Lichtenberg district and Spandau area have comparatively less.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Mitte district and Friedrichshain-Kreuzberg district have relatively more graffiti, while the Lichtenberg district and Spandau area have comparatively less.",
+          "From the view, it can be seen that the two districts with the highest number of fires also have the highest amount of graffiti.",
+          "But the district with the fewest fires does not have the least amount of graffiti."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "In order to see the graffiti situation in different districts, it's necessary to use the change encoding tool to switch the field to graffiti."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Graffiti",
+                  "channel": "color"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "District",
+            "y": "Fire",
+            "color": "Graffiti"
+          }
+        }
+      }
+    }
+  ]
+}

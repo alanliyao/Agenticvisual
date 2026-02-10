@@ -1,0 +1,93 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "48_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/48_candy_parallel .json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What is the relationship between winpercent and other two dimensions in chocolate candy group.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "There exists a iinverse Relationship between Win Percent and Price Percent and  lack of Clear Correlation between Sugar and Popularity."
+        },
+        "key_insights": [
+          "The orange lines (chocolate) generally show a higher concentration of high winpercent values compared to the blue lines.",
+          "Non-chocolate candies (blue) show a wider spread in popularity, ranging from very low to medium-high",
+          "High Popularity, Low Cost: Many of the lines with high Win Percent values (closer to the top of the middle axis) correspond to lower Price Percent values (towards the bottom of the right axis).",
+          "The lines are widely spread across the Sugar Percent axis (leftmost axis), ranging from very low (bottom) to very high (top)."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "reorder_dimensions",
+            "reasoning": "We care about the relationship between winpercent and other two dimensions, putting winpercent in the middle can help to show the relationship."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "We focus on chocolate candy group."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "sugarpercent",
+                    "winpercent",
+                    "pricepercent"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "chocolate",
+                  "values": [
+                    "No"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"No\"], datum['chocolate']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

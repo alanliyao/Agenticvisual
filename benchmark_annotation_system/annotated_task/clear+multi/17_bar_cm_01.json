@@ -1,0 +1,68 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "17_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/17_Heart_Disease_Prediction_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_01",
+      "question": "filter the categories and subcategories to see in the people without heart disease of type 3 chest pain,what is the  cholesterol levels?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "region",
+          "value": "(126,564)",
+          "metric": "iou",
+          "threshold": 0.5
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "filter the categories and subcategories and find the people without heart disease of type 3 chest pain,then look through the datas to find the region"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    4,
+                    2,
+                    1
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Heart Disease",
+            "y": "Cholesterol",
+            "color": "Chest pain type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Presence\"], datum['Heart Disease']) < 0"
+            },
+            {
+              "filter": "datum['Chest pain type'] != 4 && datum['Chest pain type'] != 2 && datum['Chest pain type'] != 1"
+            },
+            {
+              "filter": "datum['Chest pain type'] != 4 && datum['Chest pain type'] != 2 && datum['Chest pain type'] != 1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "19_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/19_Heart_Disease_Prediction_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What's the average cholesterol of the group that age is between 45 and 60 and heart diease status is presence?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "248.30",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The average cholesterol is 248.30"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "We just care about data points of presence status, so we filter Absence status."
+          },
+          {
+            "iteration": 2,
+            "tool": "select_region",
+            "reasoning": "We focus at data of age between 45 and 60."
+          },
+          {
+            "iteration": 3,
+            "tool": "get_data_summary",
+            "reasoning": "We cares about the average of specific type data."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Heart Disease",
+                  "categories_to_remove": [
+                    "Absence"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    45.12000325520833,
+                    60.16000162760417
+                  ],
+                  "y_range": [
+                    98.32495880126953,
+                    417.82495880126953
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "visible"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Age",
+            "y": "Cholesterol",
+            "color": "Heart Disease"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Absence\"], datum['Heart Disease']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "18_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/18_Heart_Disease_Prediction_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What is the relationship between Thallium and Max HR in Absence group?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "In the \"Absence\" group visualized here, as the Thallium score decreases, the Max HR tends to increase. The lines on the plot cross over significantly between these two axes, confirming this opposing trend."
+        },
+        "key_insights": [
+          "patients with specific results on the Thallium scan (likely indicating reversible defects or other abnormalities) are highly represented in this heart disease prediction dataset",
+          "High Thallium correspond to the lowest values on the Max HR axis"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "We cares about Absence group"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "We care about Max HR and Thallium"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Heart Disease",
+                  "values": [
+                    "Presence"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "dimension",
+                  "values": [
+                    "Age",
+                    "BP",
+                    "Cholesterol",
+                    "ST depression"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Age\",\"BP\",\"Cholesterol\",\"ST depression\"], datum['dimension']) < 0"
+            },
+            {
+              "filter": "indexof([\"Presence\"], datum['Heart Disease']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

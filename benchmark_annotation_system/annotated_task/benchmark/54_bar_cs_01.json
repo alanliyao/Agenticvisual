@@ -1,0 +1,50 @@
+{
+  "task_type": "clear_single",
+  "task_id": "54_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/54_Ecommerce_Delivery_Analytics_New_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which platform tends to have the longest extreme delivery times?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Blinkit.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "Use the change encoding tool to switch the field to delivery time in order to focus on delivery time issues."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Delivery Time (Minutes)"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Delivery Time (Minutes)",
+            "color": "Delivery Time (Minutes)"
+          }
+        }
+      }
+    }
+  ]
+}

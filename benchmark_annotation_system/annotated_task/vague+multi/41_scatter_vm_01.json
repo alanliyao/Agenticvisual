@@ -1,0 +1,97 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "41_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/41_museum_visitors_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_06",
+      "question": "What are the correlation between America Tropical Interpretive and the rest three kinds of museum?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "With Chinese American Museum:0.16936097326015134\nWith Acila Adobe:0.6661398112459997\nWith Firehouse Museum:0.49075514366392153",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "America Tropical Interpretive and Chinese American Museum:0.16936097326015134",
+          "With Acila Adobe:0.6661398112459997",
+          "With Firehouse Museum:0.49075514366392153"
+        ],
+        "reasoning": [
+          {
+            "iteration": 5,
+            "tool": "select_region",
+            "reasoning": "There exists a anamalous point"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Avila Adobe"
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Firehouse Museum"
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "list",
+                "param": "x_range",
+                "target": [
+                  1787.5,
+                  15914.169311523438
+                ]
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Firehouse Museum",
+            "y": "America Tropical Interpretive Center",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

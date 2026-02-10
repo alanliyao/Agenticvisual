@@ -1,0 +1,75 @@
+{
+  "task_type": "clear_single",
+  "task_id": "19_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/19_Heart_Disease_Prediction_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which heart disease status dominates in the dense area?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Presence",
+          "alternatives": [
+            "Presence"
+          ]
+        },
+        "key_insights": [
+          "there is no strong linear correlation between a patient's age and their cholesterol level.",
+          "there appear to be more orange bubbles than blue ones, suggesting that in this dataset, a higher proportion of patients were diagnosed with heart disease.",
+          "while high cholesterol and older age are risk factors (particularly when combined), the diagnosis of heart disease in this dataset relies heavily on other variables, specifically the type of chest pain (bubble size)."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "Zooming up the diagram can help to detect the dominating status."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    40,
+                    65.17333170572917
+                  ],
+                  "y_range": [
+                    197.09994506835938,
+                    325.5
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              40,
+              65.17333170572917
+            ],
+            "y": [
+              197.09994506835938,
+              325.5
+            ]
+          },
+          "encoding": {
+            "x": "Age",
+            "y": "Cholesterol",
+            "color": "Heart Disease"
+          }
+        }
+      }
+    }
+  ]
+}

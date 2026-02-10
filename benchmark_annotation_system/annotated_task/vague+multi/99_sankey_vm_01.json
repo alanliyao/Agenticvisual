@@ -1,0 +1,101 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "99_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/99_sankey_cloud.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_04",
+      "question": "which project is most sensitive to region choice?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Project Alpha is more susceptible to the influence of the region, especially in us-east-1."
+        },
+        "key_insights": [
+          "The source from us-east-1 in project alpha accounts for a relatively large proportion.",
+          "The source of proj beta is relatively balanced.",
+          "The source of shared infra is relatively balanced.",
+          "The source of proj gamma is relatively balanced."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Use the tool to activate the proj alpha analysis source"
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Use the tool to activate the proj beta analysis source"
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Use the tool to activate the shared infra analysis source"
+          },
+          {
+            "iteration": 4,
+            "tool": "trace_node",
+            "reasoning": "Use the tool to activate the proj gamma analysis source."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Proj Alpha"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Proj Beta"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Shared Infra"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Proj Gamma"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

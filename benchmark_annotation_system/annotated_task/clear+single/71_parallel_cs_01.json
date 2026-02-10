@@ -1,0 +1,67 @@
+{
+  "task_type": "clear_single",
+  "task_id": "71_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/71_one_person_ai_work_and_burnout_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Do people who use AI tools more often experience greater stress?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "No."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "reorder_dimensions",
+            "reasoning": "Using the \"reorder\" tool, you can place the two vertical lines, \"AI tool usage\" and \"pressure level\", side by side."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "AI_Tool_Usage_%",
+                    "Stress_Level_1_10",
+                    "Hours_Coded",
+                    "Code_Complexity_Score",
+                    "Bugs_Introduced"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

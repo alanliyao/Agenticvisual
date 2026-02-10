@@ -1,0 +1,97 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "99_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/99_sankey_cloud.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_04",
+      "question": "Trace the dominant cost allocation path from On-Demand purchases to the final cost center.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "On-Demand - EC2 - us-east-1 - Proj Alpha - Engineering is the single most dominant cost path.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Use tools to analyze where the on-demand traffic mainly flows to."
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Use tools to analyze where the EC2 traffic mainly flows to."
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Use tools to analyze where the us-east-1 traffic mainly flows to."
+          },
+          {
+            "iteration": 4,
+            "tool": "trace_node",
+            "reasoning": "Use tools to analyze where the proj alpha traffic mainly flows to."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "On-Demand"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "EC2"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "us-east-1"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Proj Alpha"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

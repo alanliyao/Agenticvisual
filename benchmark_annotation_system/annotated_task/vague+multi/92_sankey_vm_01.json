@@ -1,0 +1,72 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "92_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/92_sankey_b2b.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore how different lead sources contribute to high-value product lines, then compare the relative contribution patterns across these products.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Channel Partner leads are more evenly split between Enterprise SaaS Platform and Customized Solution."
+        },
+        "key_insights": [
+          "The Enterprise SaaS Platform and Customized Solution are the two highest-value product lines",
+          "Official Website SEO/SEM leads favor the Enterprise SaaS Platform."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data_summary",
+            "reasoning": "identify which product lines have the highest total signed value."
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_path",
+            "reasoning": "the original view’s overlapping flows make it difficult to discern these patterns without targeted exploration."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            },
+            {
+              "tool": "highlight_path",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "path": [
+                    "Official Website SEO/SEM",
+                    "Enterprise SaaS Platform"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

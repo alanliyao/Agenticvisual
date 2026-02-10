@@ -1,0 +1,81 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "11_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/11_apple_time_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What changes occurred in the trends of Macbook and iPhone from 2020 to 2022?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Macbook revenue did not change from 2020 to 2021, but increased significantly from 2021 to 2022; iPhone revenue continued to grow over the two years, with the increase in 2021 greater than the previous year. Macbook revenue surpassed iPhone revenue in 2021.1."
+        },
+        "key_insights": [
+          "Macbook revenue did not change from 2020 to 2021, but it increased significantly from 2021 to 2022, surpassing that of iPhone.",
+          "iPhone have been rising year by year, and the increase from 2021 to 2022 far exceeded that of the previous year."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "First, zoom the time range and lock the time from 2020 to 2022."
+          },
+          {
+            "iteration": 2,
+            "tool": "focus_lines",
+            "reasoning": "Focused on lines:MacBook and iPhone.We can see that they have been rising year by year, and the increase from 2021 to 2022 far exceeded that of the previous year.At the same time, starting from 2021, Macbook revenue surpassed that of iPhone."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2020",
+                  "end": "2022"
+                }
+              }
+            },
+            {
+              "tool": "focus_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "dim",
+                  "lines": [
+                    "MacBook",
+                    "iPhone"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2020",
+              "2022"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Revenue_Billions",
+            "color": "Product"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "task_type": "vague_single",
+  "task_id": "34_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/34_bmw_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Use the identify_clusters tool to perform clustering analysis on the scatter plot. After clustering, what is the most distinctive characteristic of the data cluster that exhibits the highest average fuel efficiency?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The cluster with the highest average MPG is predominantly characterized by having the lowest overall price range and the smallest engine sizes among all clusters."
+        },
+        "key_insights": [
+          "This high-efficiency cluster is concentrated in the low-price region of the chart, indicating a strong inverse relationship between affordability and fuel economy in this dataset."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "identify_clusters",
+            "reasoning": "The identify_clusters tool successfully grouped the data, revealing a clear pattern. The most distinctive and logical characteristic of the highest-MPG cluster is its strong association with low cost, which is intrinsically linked vehicle attributes. This provides a meaningful, high-level insight into the composition of the most fuel-efficient segment of the market."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "numeric",
+                "param": "n_clusters",
+                "target": 3,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "price",
+            "y": "mpg",
+            "color": "cluster_3"
+          }
+        }
+      }
+    }
+  ]
+}

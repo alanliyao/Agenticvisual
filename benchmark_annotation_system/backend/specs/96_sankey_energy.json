@@ -1,0 +1,1216 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "National Energy Flow & Carbon Footprint Sankey (Data-Driven Architecture)",
+    "width": 1100,
+    "height": 580,
+    "padding": {
+      "left": 110,
+      "right": 150,
+      "top": 55,
+      "bottom": 50
+    },
+    "background": "white",
+    "_metadata": {
+      "chart_type": "sankey_multi_stage",
+      "title": "Sankey National Energy Flow & Carbon Footprint",
+      "topic": "energy_flow_carbon",
+      "architecture": "data-driven layout via Vega transform pipeline",
+      "value_unit": "Exajoules (EJ)",
+      "notes": "Loss nodes at Depth 2 are terminal sinks — 285 EJ input, 89 EJ useful output (31% overall efficiency)"
+    },
+    "signals": [
+      {
+        "name": "nodeWidth",
+        "value": 15
+      },
+      {
+        "name": "nodeGap",
+        "value": 80
+      },
+      {
+        "name": "threshold",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "name": "Min Flow (EJ): "
+        }
+      },
+      {
+        "name": "nodeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:mouseover",
+            "update": "datum.name"
+          },
+          {
+            "events": "@nodeRect:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "edgeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@edgeMark:mouseover",
+            "update": "datum.linkId"
+          },
+          {
+            "events": "@edgeMark:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "selectedNode",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:click!",
+            "update": "selectedNode === datum.name ? null : datum.name"
+          },
+          {
+            "events": [
+              {
+                "type": "click",
+                "markname": "resetBtn"
+              },
+              {
+                "type": "dblclick"
+              }
+            ],
+            "update": "null"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "name": "rawLinks",
+        "values": [
+          {
+            "source": "Coal",
+            "target": "Power Generation",
+            "value": 80
+          },
+          {
+            "source": "Coal",
+            "target": "Direct Heat",
+            "value": 5
+          },
+          {
+            "source": "Natural Gas",
+            "target": "Power Generation",
+            "value": 25
+          },
+          {
+            "source": "Natural Gas",
+            "target": "Fuel Processing",
+            "value": 25
+          },
+          {
+            "source": "Natural Gas",
+            "target": "Direct Heat",
+            "value": 15
+          },
+          {
+            "source": "Petroleum",
+            "target": "Fuel Processing",
+            "value": 75
+          },
+          {
+            "source": "Nuclear",
+            "target": "Power Generation",
+            "value": 25
+          },
+          {
+            "source": "Renewables",
+            "target": "Power Generation",
+            "value": 35
+          },
+          {
+            "source": "Power Generation",
+            "target": "Electricity Grid",
+            "value": 62
+          },
+          {
+            "source": "Power Generation",
+            "target": "Generation Loss",
+            "value": 103
+          },
+          {
+            "source": "Fuel Processing",
+            "target": "Fuel Supply",
+            "value": 82
+          },
+          {
+            "source": "Fuel Processing",
+            "target": "Refinery Loss",
+            "value": 18
+          },
+          {
+            "source": "Direct Heat",
+            "target": "Heat Supply",
+            "value": 18
+          },
+          {
+            "source": "Direct Heat",
+            "target": "Thermal Loss",
+            "value": 2
+          },
+          {
+            "source": "Electricity Grid",
+            "target": "Industry",
+            "value": 22
+          },
+          {
+            "source": "Electricity Grid",
+            "target": "Transport",
+            "value": 3
+          },
+          {
+            "source": "Electricity Grid",
+            "target": "Residential",
+            "value": 20
+          },
+          {
+            "source": "Electricity Grid",
+            "target": "Commercial",
+            "value": 17
+          },
+          {
+            "source": "Fuel Supply",
+            "target": "Industry",
+            "value": 15
+          },
+          {
+            "source": "Fuel Supply",
+            "target": "Transport",
+            "value": 52
+          },
+          {
+            "source": "Fuel Supply",
+            "target": "Residential",
+            "value": 8
+          },
+          {
+            "source": "Fuel Supply",
+            "target": "Commercial",
+            "value": 7
+          },
+          {
+            "source": "Heat Supply",
+            "target": "Industry",
+            "value": 16
+          },
+          {
+            "source": "Heat Supply",
+            "target": "Commercial",
+            "value": 2
+          },
+          {
+            "source": "Industry",
+            "target": "Heating",
+            "value": 18
+          },
+          {
+            "source": "Industry",
+            "target": "Motive Power",
+            "value": 15
+          },
+          {
+            "source": "Industry",
+            "target": "Lighting",
+            "value": 8
+          },
+          {
+            "source": "Industry",
+            "target": "Other Uses",
+            "value": 12
+          },
+          {
+            "source": "Transport",
+            "target": "Motive Power",
+            "value": 40
+          },
+          {
+            "source": "Transport",
+            "target": "Lighting",
+            "value": 3
+          },
+          {
+            "source": "Transport",
+            "target": "Other Uses",
+            "value": 12
+          },
+          {
+            "source": "Residential",
+            "target": "Heating",
+            "value": 12
+          },
+          {
+            "source": "Residential",
+            "target": "Cooling",
+            "value": 7
+          },
+          {
+            "source": "Residential",
+            "target": "Lighting",
+            "value": 5
+          },
+          {
+            "source": "Residential",
+            "target": "Other Uses",
+            "value": 4
+          },
+          {
+            "source": "Commercial",
+            "target": "Heating",
+            "value": 6
+          },
+          {
+            "source": "Commercial",
+            "target": "Cooling",
+            "value": 5
+          },
+          {
+            "source": "Commercial",
+            "target": "Lighting",
+            "value": 6
+          },
+          {
+            "source": "Commercial",
+            "target": "Other Uses",
+            "value": 9
+          },
+          {
+            "source": "Heating",
+            "target": "Useful Energy",
+            "value": 25
+          },
+          {
+            "source": "Heating",
+            "target": "Rejected Energy",
+            "value": 11
+          },
+          {
+            "source": "Motive Power",
+            "target": "Useful Energy",
+            "value": 17
+          },
+          {
+            "source": "Motive Power",
+            "target": "Rejected Energy",
+            "value": 38
+          },
+          {
+            "source": "Lighting",
+            "target": "Useful Energy",
+            "value": 18
+          },
+          {
+            "source": "Lighting",
+            "target": "Rejected Energy",
+            "value": 4
+          },
+          {
+            "source": "Cooling",
+            "target": "Useful Energy",
+            "value": 6
+          },
+          {
+            "source": "Cooling",
+            "target": "Rejected Energy",
+            "value": 6
+          },
+          {
+            "source": "Other Uses",
+            "target": "Useful Energy",
+            "value": 23
+          },
+          {
+            "source": "Other Uses",
+            "target": "Rejected Energy",
+            "value": 14
+          }
+        ]
+      },
+      {
+        "name": "nodeConfig",
+        "values": [
+          {
+            "name": "Coal",
+            "depth": 0,
+            "order": 0
+          },
+          {
+            "name": "Natural Gas",
+            "depth": 0,
+            "order": 1
+          },
+          {
+            "name": "Petroleum",
+            "depth": 0,
+            "order": 2
+          },
+          {
+            "name": "Nuclear",
+            "depth": 0,
+            "order": 3
+          },
+          {
+            "name": "Renewables",
+            "depth": 0,
+            "order": 4
+          },
+          {
+            "name": "Power Generation",
+            "depth": 1,
+            "order": 0
+          },
+          {
+            "name": "Fuel Processing",
+            "depth": 1,
+            "order": 1
+          },
+          {
+            "name": "Direct Heat",
+            "depth": 1,
+            "order": 2
+          },
+          {
+            "name": "Electricity Grid",
+            "depth": 2,
+            "order": 0
+          },
+          {
+            "name": "Fuel Supply",
+            "depth": 2,
+            "order": 1
+          },
+          {
+            "name": "Heat Supply",
+            "depth": 2,
+            "order": 2
+          },
+          {
+            "name": "Generation Loss",
+            "depth": 2,
+            "order": 3
+          },
+          {
+            "name": "Refinery Loss",
+            "depth": 2,
+            "order": 4
+          },
+          {
+            "name": "Thermal Loss",
+            "depth": 2,
+            "order": 5
+          },
+          {
+            "name": "Industry",
+            "depth": 3,
+            "order": 0
+          },
+          {
+            "name": "Transport",
+            "depth": 3,
+            "order": 1
+          },
+          {
+            "name": "Residential",
+            "depth": 3,
+            "order": 2
+          },
+          {
+            "name": "Commercial",
+            "depth": 3,
+            "order": 3
+          },
+          {
+            "name": "Heating",
+            "depth": 4,
+            "order": 0
+          },
+          {
+            "name": "Motive Power",
+            "depth": 4,
+            "order": 1
+          },
+          {
+            "name": "Lighting",
+            "depth": 4,
+            "order": 2
+          },
+          {
+            "name": "Cooling",
+            "depth": 4,
+            "order": 3
+          },
+          {
+            "name": "Other Uses",
+            "depth": 4,
+            "order": 4
+          },
+          {
+            "name": "Useful Energy",
+            "depth": 5,
+            "order": 0
+          },
+          {
+            "name": "Rejected Energy",
+            "depth": 5,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "name": "depthLabelsData",
+        "values": [
+          {
+            "depth": 0,
+            "label": "Primary Energy"
+          },
+          {
+            "depth": 1,
+            "label": "Conversion"
+          },
+          {
+            "depth": 2,
+            "label": "Transmission & Losses"
+          },
+          {
+            "depth": 3,
+            "label": "End-Use Sectors"
+          },
+          {
+            "depth": 4,
+            "label": "Final Use"
+          },
+          {
+            "depth": 5,
+            "label": "Energy Efficiency"
+          }
+        ]
+      },
+      {
+        "name": "filteredLinks",
+        "source": "rawLinks",
+        "transform": [
+          {
+            "type": "filter",
+            "expr": "datum.value >= threshold"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.source + ' → ' + datum.target",
+            "as": "linkId"
+          }
+        ]
+      },
+      {
+        "name": "linksWithOrder",
+        "source": "filteredLinks",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcConfig"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtConfig"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.order",
+            "as": "srcOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.order",
+            "as": "tgtOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.depth",
+            "as": "srcDepth"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.depth",
+            "as": "tgtDepth"
+          }
+        ]
+      },
+      {
+        "name": "outTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "source"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalOut"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "inTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "target"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalIn"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nodePositions",
+        "source": "nodeConfig",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "outTotals",
+            "key": "source",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "outInfo"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "inTotals",
+            "key": "target",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "inInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+            "as": "totalOut"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+            "as": "totalIn"
+          },
+          {
+            "type": "formula",
+            "expr": "max(datum.totalOut, datum.totalIn)",
+            "as": "total"
+          },
+          {
+            "type": "filter",
+            "expr": "datum.total > 0"
+          },
+          {
+            "type": "stack",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "field": "total"
+          },
+          {
+            "type": "window",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "ops": [
+              "row_number"
+            ],
+            "as": [
+              "rankInDepth"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y0g"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y1g"
+          }
+        ]
+      },
+      {
+        "name": "sourceStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "source"
+            ],
+            "sort": {
+              "field": "tgtOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "srcCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcCumEnd - datum.value",
+            "as": "srcCumStart"
+          }
+        ]
+      },
+      {
+        "name": "targetStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "target"
+            ],
+            "sort": {
+              "field": "srcOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "tgtCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtCumEnd - datum.value",
+            "as": "tgtCumStart"
+          }
+        ]
+      },
+      {
+        "name": "edges",
+        "source": "sourceStacked",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "targetStacked",
+            "key": "linkId",
+            "fields": [
+              "linkId"
+            ],
+            "as": [
+              "tgtInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+            "as": "tgtCumStart"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+            "as": "tgtCumEnd"
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcNode"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtNode"
+            ]
+          },
+          {
+            "type": "filter",
+            "expr": "datum.srcNode && datum.tgtNode"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumStart",
+            "as": "absSy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+            "as": "absSy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+            "as": "absTy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+            "as": "absTy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+            "as": "srcPct"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+            "as": "tgtPct"
+          }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "x",
+        "type": "point",
+        "range": "width",
+        "domain": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "padding": 0.5
+      },
+      {
+        "name": "y",
+        "type": "linear",
+        "range": [
+          0,
+          {
+            "signal": "height"
+          }
+        ],
+        "domain": {
+          "data": "nodePositions",
+          "field": "y1g"
+        }
+      },
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {
+          "data": "nodeConfig",
+          "field": "name"
+        },
+        "range": {
+          "scheme": "tableau20"
+        }
+      }
+    ],
+    "marks": [
+      {
+        "type": "path",
+        "name": "edgeMark",
+        "from": {
+          "data": "edges"
+        },
+        "encode": {
+          "update": {
+            "path": {
+              "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "source"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.35"
+            },
+            "stroke": {
+              "scale": "color",
+              "field": "source"
+            },
+            "strokeWidth": {
+              "value": 0.5
+            },
+            "strokeOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',.1f') + ' EJ (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ')'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          },
+          "hover": {
+            "fillOpacity": {
+              "value": 0.8
+            }
+          }
+        }
+      },
+      {
+        "type": "rect",
+        "name": "nodeRect",
+        "from": {
+          "data": "nodePositions"
+        },
+        "encode": {
+          "enter": {
+            "width": {
+              "signal": "nodeWidth"
+            },
+            "cornerRadius": {
+              "value": 2
+            }
+          },
+          "update": {
+            "x": {
+              "scale": "x",
+              "field": "depth"
+            },
+            "y": {
+              "scale": "y",
+              "field": "y0g"
+            },
+            "y2": {
+              "scale": "y",
+              "field": "y1g"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "name"
+            },
+            "stroke": {
+              "value": "#333"
+            },
+            "strokeWidth": {
+              "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 0.5"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+            },
+            "tooltip": {
+              "signal": "datum.name + ': ' + format(datum.total, ',.1f') + ' EJ'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "field": "name"
+            },
+            "fontSize": {
+              "value": 10
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#333"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 12"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 18 ? '' + format(datum.total, ',.1f') + ' EJ' : ''"
+            },
+            "fontSize": {
+              "value": 9
+            },
+            "fill": {
+              "value": "#888"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "depthLabelsData"
+        },
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "x": {
+              "signal": "scale('x', datum.depth) + nodeWidth / 2"
+            },
+            "y": {
+              "signal": "height + 25"
+            },
+            "text": {
+              "field": "label"
+            },
+            "fontSize": {
+              "value": 11
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#555"
+            },
+            "baseline": {
+              "value": "top"
+            },
+            "align": {
+              "value": "center"
+            }
+          }
+        }
+      },
+      {
+        "type": "group",
+        "data": [
+          {
+            "name": "showResetData",
+            "values": [
+              {}
+            ],
+            "transform": [
+              {
+                "type": "filter",
+                "expr": "selectedNode"
+              }
+            ]
+          }
+        ],
+        "encode": {
+          "enter": {
+            "xc": {
+              "signal": "width / 2"
+            },
+            "y": {
+              "value": -35
+            },
+            "width": {
+              "value": 100
+            },
+            "height": {
+              "value": 26
+            }
+          }
+        },
+        "marks": [
+          {
+            "type": "group",
+            "name": "resetBtn",
+            "from": {
+              "data": "showResetData"
+            },
+            "encode": {
+              "enter": {
+                "cornerRadius": {
+                  "value": 5
+                },
+                "fill": {
+                  "value": "#f5f5f5"
+                },
+                "stroke": {
+                  "value": "#bbb"
+                },
+                "strokeWidth": {
+                  "value": 1.5
+                },
+                "height": {
+                  "field": {
+                    "group": "height"
+                  }
+                },
+                "width": {
+                  "field": {
+                    "group": "width"
+                  }
+                },
+                "cursor": {
+                  "value": "pointer"
+                }
+              },
+              "update": {
+                "opacity": {
+                  "value": 1
+                }
+              },
+              "hover": {
+                "opacity": {
+                  "value": 0.7
+                }
+              }
+            },
+            "marks": [
+              {
+                "type": "text",
+                "interactive": false,
+                "encode": {
+                  "enter": {
+                    "xc": {
+                      "field": {
+                        "group": "width"
+                      },
+                      "mult": 0.5
+                    },
+                    "yc": {
+                      "field": {
+                        "group": "height"
+                      },
+                      "mult": 0.5,
+                      "offset": 1
+                    },
+                    "align": {
+                      "value": "center"
+                    },
+                    "baseline": {
+                      "value": "middle"
+                    },
+                    "fontWeight": {
+                      "value": "bold"
+                    },
+                    "fontSize": {
+                      "value": 11
+                    },
+                    "text": {
+                      "value": "Show All"
+                    },
+                    "fill": {
+                      "value": "#555"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "title": {
+      "text": "Sankey National Energy Flow: From Source to Useful Work (EJ)",
+      "subtitle": "Hover to trace  |  Click node to isolate path  |  285 EJ in → 89 EJ useful (31% efficiency)",
+      "fontSize": 16,
+      "subtitleFontSize": 11,
+      "subtitleColor": "#999",
+      "anchor": "start"
+    }
+  }

@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "33_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/33_bmw_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": " What is the name of the third most fuel-efficient model series after sorting?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "2 Series.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The 3 Series is the most fuel-efficient series, with the 1 Series a close second, forming a top tier.",
+          "The 2 Series emerges as the clear third-ranked model, establishing a benchmark for high efficiency.",
+          "The traditional core numbered series occupy the top five positions, outperforming the X and M line models in total efficiency."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "The sorting operation directly answers the question by revealing the ranking. The third bar corresponds to the 2 Series. No further tools are needed."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "categorical",
+                "param": "order",
+                "target": "descending"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "model",
+            "y": "mpg",
+            "color": "fuelType"
+          }
+        }
+      }
+    }
+  ]
+}

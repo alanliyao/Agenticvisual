@@ -1,0 +1,62 @@
+{
+  "task_type": "vague_single",
+  "task_id": "77_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/77_gym_bar_sum.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "for the workout type of cardio,what are the characteristics of different experience level?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "experience level 1 had the highest sum of mean and level 3 had the lowest."
+        },
+        "key_insights": [
+          "experience level 1 had the highest sum of mean and level 3 had the lowest."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "filter categories and we can see the data of cardio."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Yoga",
+                    "HIIT",
+                    "Strength"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Yoga\",\"HIIT\",\"Strength\"], datum['Workout_Type']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

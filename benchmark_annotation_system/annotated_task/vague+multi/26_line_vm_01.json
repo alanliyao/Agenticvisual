@@ -1,0 +1,88 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "26_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/26_China_centra_death_rate_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What changes occurred in the trends of people aged 0 and 65 from 2000 to 2010?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Both lines are continuously declining, but at different speeds. There were intersections in 2006 and 2007."
+        },
+        "key_insights": [
+          "Both lines are declining.",
+          "There were intersections in 2006 and 2007.",
+          "The changing trends from 2006 to 2007 almost completely overlapped."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "Zoomed to time range: 2000 to 2010,and can see the rough trend."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_lines",
+            "reasoning": "Filtered out lines,and we can see the trends  almost completely overlapped at some time."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2000",
+                  "end": "2010"
+                }
+              }
+            },
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Age: 10",
+                    "Age: 25",
+                    "Age: 45",
+                    "Age: 80"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2000",
+              "2010"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Central death rate",
+            "color": "Age_Group"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Age: 10\", \"Age: 25\", \"Age: 45\", \"Age: 80\"], datum['Age_Group']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

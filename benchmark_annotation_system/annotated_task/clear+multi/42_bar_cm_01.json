@@ -1,0 +1,108 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "42_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/42_pokemon_stats_2025_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What is highest hp value in dragon type in this dataset?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "80",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "We want to explore the data unvisible yet"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categories",
+            "reasoning": "We only care dragon type"
+          },
+          {
+            "iteration": 3,
+            "tool": "expand_stack",
+            "reasoning": "we want to know exact value"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "name",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "fire",
+                    "grass",
+                    "water",
+                    "bug",
+                    "poison",
+                    "electric",
+                    "ground",
+                    "fairy",
+                    "fighting",
+                    "normal",
+                    "ice",
+                    "ghost",
+                    "rock",
+                    "psychic",
+                    "dark",
+                    "steel"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "expand_stack",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "category": "dragon"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "name",
+            "y": "hp",
+            "color": "name"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"fire\",\"grass\",\"water\",\"bug\",\"poison\",\"electric\",\"ground\",\"fairy\",\"fighting\",\"normal\",\"ice\",\"ghost\",\"rock\",\"psychic\",\"dark\",\"steel\"], datum['type_1']) < 0"
+            },
+            {
+              "filter": "datum['type_1'] == \"dragon\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

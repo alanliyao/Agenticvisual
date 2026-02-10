@@ -1,0 +1,67 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "33_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/33_bmw_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore how fuel type composition varies across different tiers of model series performance.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Based on the operations, the fuel type composition shows a clear correlation with performance tiers. The top-performing series derive their high totals predominantly from a single, high-impact fuel type. Mid-tier series show more balanced contributions from multiple fuel types, while the long tail of low-performance series is likely characterized by minimal contributions from all types, or a different, less efficient dominant type."
+        },
+        "key_insights": [
+          "The view is now in grouped bar mode, setting the stage to compare fuel type contributions side-by-side within each model series.",
+          "Five fuel types are listed, providing a clear categorical dimension for composition analysis.",
+          "Without sorting or aggregated values, the overall performance hierarchy among the model series is not yet apparent from this view alone.",
+          "This structure strongly suggests that the dominant fuel type within the top-tier models is likely different from the type prevalent in the lower tiers."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "The grouped view is correctly established, which is the necessary foundation for analyzing fuel type composition. However, to explore variation across performance tiers, we must first define those tiers. The next logical step is to sort the model series by their total efficiency to create a performance ranking. No need to reset. Proceed directly to sort_bars."
+          },
+          {
+            "iteration": 2,
+            "tool": "sort_bars",
+            "reasoning": "The two-step operation provides a complete analytical path. The grouped view setup allows for composition comparison, and the sorted list defines the tiers. The logical conclusion is that composition varies significantly by tier, with high performance correlating with concentration in a potent fuel type, and diversity or less potent types correlating with lower total output. This is a testable insight derived from the tool interactions."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "categorical",
+                "param": "order",
+                "target": "descending"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "model",
+            "y": "mpg",
+            "color": "fuelType"
+          }
+        }
+      }
+    }
+  ]
+}

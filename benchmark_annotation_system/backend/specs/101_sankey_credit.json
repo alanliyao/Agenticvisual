@@ -1,0 +1,1331 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "Bank Credit Risk Migration Sankey — Rating Transition Over 3 Years (Data-Driven Architecture)",
+    "width": 1000,
+    "height": 580,
+    "padding": {
+      "left": 100,
+      "right": 130,
+      "top": 55,
+      "bottom": 50
+    },
+    "background": "white",
+    "_metadata": {
+      "chart_type": "sankey_multi_stage",
+      "title": "Sankey Credit Risk Migration Matrix (3-Year Tracking)",
+      "topic": "credit_risk_migration",
+      "architecture": "data-driven layout via Vega transform pipeline",
+      "value_unit": "Loan count",
+      "notes": "1,620 loans tracked — 84% AAA retained rating through Y3; Junk → Default cumulative rate 56%"
+    },
+    "signals": [
+      {
+        "name": "nodeWidth",
+        "value": 15
+      },
+      {
+        "name": "nodeGap",
+        "value": 80
+      },
+      {
+        "name": "threshold",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 50,
+          "step": 5,
+          "name": "Min Flow (loans): "
+        }
+      },
+      {
+        "name": "nodeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:mouseover",
+            "update": "datum.name"
+          },
+          {
+            "events": "@nodeRect:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "edgeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@edgeMark:mouseover",
+            "update": "datum.linkId"
+          },
+          {
+            "events": "@edgeMark:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "selectedNode",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:click!",
+            "update": "selectedNode === datum.name ? null : datum.name"
+          },
+          {
+            "events": [
+              {
+                "type": "click",
+                "markname": "resetBtn"
+              },
+              {
+                "type": "dblclick"
+              }
+            ],
+            "update": "null"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "name": "rawLinks",
+        "values": [
+          {
+            "source": "AAA Orig",
+            "target": "AAA Y1",
+            "value": 420
+          },
+          {
+            "source": "AAA Orig",
+            "target": "AA Y1",
+            "value": 55
+          },
+          {
+            "source": "AAA Orig",
+            "target": "A Y1",
+            "value": 15
+          },
+          {
+            "source": "AAA Orig",
+            "target": "Paid Off Y1",
+            "value": 10
+          },
+          {
+            "source": "AA Orig",
+            "target": "AAA Y1",
+            "value": 20
+          },
+          {
+            "source": "AA Orig",
+            "target": "AA Y1",
+            "value": 310
+          },
+          {
+            "source": "AA Orig",
+            "target": "A Y1",
+            "value": 45
+          },
+          {
+            "source": "AA Orig",
+            "target": "BBB Y1",
+            "value": 10
+          },
+          {
+            "source": "AA Orig",
+            "target": "Paid Off Y1",
+            "value": 15
+          },
+          {
+            "source": "A Orig",
+            "target": "AA Y1",
+            "value": 15
+          },
+          {
+            "source": "A Orig",
+            "target": "A Y1",
+            "value": 225
+          },
+          {
+            "source": "A Orig",
+            "target": "BBB Y1",
+            "value": 35
+          },
+          {
+            "source": "A Orig",
+            "target": "Junk Y1",
+            "value": 10
+          },
+          {
+            "source": "A Orig",
+            "target": "Paid Off Y1",
+            "value": 15
+          },
+          {
+            "source": "BBB Orig",
+            "target": "A Y1",
+            "value": 15
+          },
+          {
+            "source": "BBB Orig",
+            "target": "BBB Y1",
+            "value": 155
+          },
+          {
+            "source": "BBB Orig",
+            "target": "Junk Y1",
+            "value": 30
+          },
+          {
+            "source": "BBB Orig",
+            "target": "Default Y1",
+            "value": 10
+          },
+          {
+            "source": "BBB Orig",
+            "target": "Paid Off Y1",
+            "value": 10
+          },
+          {
+            "source": "Junk Orig",
+            "target": "BBB Y1",
+            "value": 10
+          },
+          {
+            "source": "Junk Orig",
+            "target": "Junk Y1",
+            "value": 65
+          },
+          {
+            "source": "Junk Orig",
+            "target": "Default Y1",
+            "value": 30
+          },
+          {
+            "source": "Junk Orig",
+            "target": "Paid Off Y1",
+            "value": 5
+          },
+          {
+            "source": "AAA Y1",
+            "target": "AAA Y2",
+            "value": 380
+          },
+          {
+            "source": "AAA Y1",
+            "target": "AA Y2",
+            "value": 45
+          },
+          {
+            "source": "AAA Y1",
+            "target": "Paid Off Y2",
+            "value": 15
+          },
+          {
+            "source": "AA Y1",
+            "target": "AAA Y2",
+            "value": 25
+          },
+          {
+            "source": "AA Y1",
+            "target": "AA Y2",
+            "value": 270
+          },
+          {
+            "source": "AA Y1",
+            "target": "A Y2",
+            "value": 55
+          },
+          {
+            "source": "AA Y1",
+            "target": "BBB Y2",
+            "value": 10
+          },
+          {
+            "source": "AA Y1",
+            "target": "Paid Off Y2",
+            "value": 20
+          },
+          {
+            "source": "A Y1",
+            "target": "AA Y2",
+            "value": 20
+          },
+          {
+            "source": "A Y1",
+            "target": "A Y2",
+            "value": 220
+          },
+          {
+            "source": "A Y1",
+            "target": "BBB Y2",
+            "value": 45
+          },
+          {
+            "source": "A Y1",
+            "target": "Junk Y2",
+            "value": 12
+          },
+          {
+            "source": "A Y1",
+            "target": "Paid Off Y2",
+            "value": 3
+          },
+          {
+            "source": "BBB Y1",
+            "target": "A Y2",
+            "value": 15
+          },
+          {
+            "source": "BBB Y1",
+            "target": "BBB Y2",
+            "value": 145
+          },
+          {
+            "source": "BBB Y1",
+            "target": "Junk Y2",
+            "value": 30
+          },
+          {
+            "source": "BBB Y1",
+            "target": "Default Y2",
+            "value": 15
+          },
+          {
+            "source": "BBB Y1",
+            "target": "Paid Off Y2",
+            "value": 5
+          },
+          {
+            "source": "Junk Y1",
+            "target": "BBB Y2",
+            "value": 8
+          },
+          {
+            "source": "Junk Y1",
+            "target": "Junk Y2",
+            "value": 50
+          },
+          {
+            "source": "Junk Y1",
+            "target": "Default Y2",
+            "value": 35
+          },
+          {
+            "source": "Junk Y1",
+            "target": "Paid Off Y2",
+            "value": 12
+          },
+          {
+            "source": "AAA Y2",
+            "target": "AAA Y3",
+            "value": 345
+          },
+          {
+            "source": "AAA Y2",
+            "target": "AA Y3",
+            "value": 40
+          },
+          {
+            "source": "AAA Y2",
+            "target": "Paid Off Y3",
+            "value": 20
+          },
+          {
+            "source": "AA Y2",
+            "target": "AAA Y3",
+            "value": 30
+          },
+          {
+            "source": "AA Y2",
+            "target": "AA Y3",
+            "value": 228
+          },
+          {
+            "source": "AA Y2",
+            "target": "A Y3",
+            "value": 40
+          },
+          {
+            "source": "AA Y2",
+            "target": "BBB Y3",
+            "value": 10
+          },
+          {
+            "source": "AA Y2",
+            "target": "Paid Off Y3",
+            "value": 27
+          },
+          {
+            "source": "A Y2",
+            "target": "AA Y3",
+            "value": 18
+          },
+          {
+            "source": "A Y2",
+            "target": "A Y3",
+            "value": 178
+          },
+          {
+            "source": "A Y2",
+            "target": "BBB Y3",
+            "value": 50
+          },
+          {
+            "source": "A Y2",
+            "target": "Junk Y3",
+            "value": 15
+          },
+          {
+            "source": "A Y2",
+            "target": "Default Y3",
+            "value": 10
+          },
+          {
+            "source": "A Y2",
+            "target": "Paid Off Y3",
+            "value": 19
+          },
+          {
+            "source": "BBB Y2",
+            "target": "A Y3",
+            "value": 12
+          },
+          {
+            "source": "BBB Y2",
+            "target": "BBB Y3",
+            "value": 128
+          },
+          {
+            "source": "BBB Y2",
+            "target": "Junk Y3",
+            "value": 38
+          },
+          {
+            "source": "BBB Y2",
+            "target": "Default Y3",
+            "value": 18
+          },
+          {
+            "source": "BBB Y2",
+            "target": "Paid Off Y3",
+            "value": 12
+          },
+          {
+            "source": "Junk Y2",
+            "target": "BBB Y3",
+            "value": 5
+          },
+          {
+            "source": "Junk Y2",
+            "target": "Junk Y3",
+            "value": 38
+          },
+          {
+            "source": "Junk Y2",
+            "target": "Default Y3",
+            "value": 40
+          },
+          {
+            "source": "Junk Y2",
+            "target": "Paid Off Y3",
+            "value": 9
+          }
+        ]
+      },
+      {
+        "name": "nodeConfig",
+        "values": [
+          {
+            "name": "AAA Orig",
+            "depth": 0,
+            "order": 0
+          },
+          {
+            "name": "AA Orig",
+            "depth": 0,
+            "order": 1
+          },
+          {
+            "name": "A Orig",
+            "depth": 0,
+            "order": 2
+          },
+          {
+            "name": "BBB Orig",
+            "depth": 0,
+            "order": 3
+          },
+          {
+            "name": "Junk Orig",
+            "depth": 0,
+            "order": 4
+          },
+          {
+            "name": "AAA Y1",
+            "depth": 1,
+            "order": 0
+          },
+          {
+            "name": "AA Y1",
+            "depth": 1,
+            "order": 1
+          },
+          {
+            "name": "A Y1",
+            "depth": 1,
+            "order": 2
+          },
+          {
+            "name": "BBB Y1",
+            "depth": 1,
+            "order": 3
+          },
+          {
+            "name": "Junk Y1",
+            "depth": 1,
+            "order": 4
+          },
+          {
+            "name": "Default Y1",
+            "depth": 1,
+            "order": 5
+          },
+          {
+            "name": "Paid Off Y1",
+            "depth": 1,
+            "order": 6
+          },
+          {
+            "name": "AAA Y2",
+            "depth": 2,
+            "order": 0
+          },
+          {
+            "name": "AA Y2",
+            "depth": 2,
+            "order": 1
+          },
+          {
+            "name": "A Y2",
+            "depth": 2,
+            "order": 2
+          },
+          {
+            "name": "BBB Y2",
+            "depth": 2,
+            "order": 3
+          },
+          {
+            "name": "Junk Y2",
+            "depth": 2,
+            "order": 4
+          },
+          {
+            "name": "Default Y2",
+            "depth": 2,
+            "order": 5
+          },
+          {
+            "name": "Paid Off Y2",
+            "depth": 2,
+            "order": 6
+          },
+          {
+            "name": "AAA Y3",
+            "depth": 3,
+            "order": 0
+          },
+          {
+            "name": "AA Y3",
+            "depth": 3,
+            "order": 1
+          },
+          {
+            "name": "A Y3",
+            "depth": 3,
+            "order": 2
+          },
+          {
+            "name": "BBB Y3",
+            "depth": 3,
+            "order": 3
+          },
+          {
+            "name": "Junk Y3",
+            "depth": 3,
+            "order": 4
+          },
+          {
+            "name": "Default Y3",
+            "depth": 3,
+            "order": 5
+          },
+          {
+            "name": "Paid Off Y3",
+            "depth": 3,
+            "order": 6
+          }
+        ]
+      },
+      {
+        "name": "depthLabelsData",
+        "values": [
+          {
+            "depth": 0,
+            "label": "Origination Rating"
+          },
+          {
+            "depth": 1,
+            "label": "Year 1 Rating"
+          },
+          {
+            "depth": 2,
+            "label": "Year 2 Rating"
+          },
+          {
+            "depth": 3,
+            "label": "Year 3 Rating"
+          }
+        ]
+      },
+      {
+        "name": "filteredLinks",
+        "source": "rawLinks",
+        "transform": [
+          {
+            "type": "filter",
+            "expr": "datum.value >= threshold"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.source + ' → ' + datum.target",
+            "as": "linkId"
+          }
+        ]
+      },
+      {
+        "name": "linksWithOrder",
+        "source": "filteredLinks",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcConfig"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtConfig"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.order",
+            "as": "srcOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.order",
+            "as": "tgtOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.depth",
+            "as": "srcDepth"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.depth",
+            "as": "tgtDepth"
+          }
+        ]
+      },
+      {
+        "name": "outTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "source"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalOut"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "inTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "target"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalIn"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nodePositions",
+        "source": "nodeConfig",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "outTotals",
+            "key": "source",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "outInfo"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "inTotals",
+            "key": "target",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "inInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+            "as": "totalOut"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+            "as": "totalIn"
+          },
+          {
+            "type": "formula",
+            "expr": "max(datum.totalOut, datum.totalIn)",
+            "as": "total"
+          },
+          {
+            "type": "filter",
+            "expr": "datum.total > 0"
+          },
+          {
+            "type": "stack",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "field": "total"
+          },
+          {
+            "type": "window",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "ops": [
+              "row_number"
+            ],
+            "as": [
+              "rankInDepth"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y0g"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y1g"
+          }
+        ]
+      },
+      {
+        "name": "sourceStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "source"
+            ],
+            "sort": {
+              "field": "tgtOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "srcCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcCumEnd - datum.value",
+            "as": "srcCumStart"
+          }
+        ]
+      },
+      {
+        "name": "targetStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "target"
+            ],
+            "sort": {
+              "field": "srcOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "tgtCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtCumEnd - datum.value",
+            "as": "tgtCumStart"
+          }
+        ]
+      },
+      {
+        "name": "edges",
+        "source": "sourceStacked",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "targetStacked",
+            "key": "linkId",
+            "fields": [
+              "linkId"
+            ],
+            "as": [
+              "tgtInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+            "as": "tgtCumStart"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+            "as": "tgtCumEnd"
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcNode"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtNode"
+            ]
+          },
+          {
+            "type": "filter",
+            "expr": "datum.srcNode && datum.tgtNode"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumStart",
+            "as": "absSy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+            "as": "absSy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+            "as": "absTy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+            "as": "absTy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+            "as": "srcPct"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+            "as": "tgtPct"
+          }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "x",
+        "type": "point",
+        "range": "width",
+        "domain": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "padding": 0.5
+      },
+      {
+        "name": "y",
+        "type": "linear",
+        "range": [
+          0,
+          {
+            "signal": "height"
+          }
+        ],
+        "domain": {
+          "data": "nodePositions",
+          "field": "y1g"
+        }
+      },
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {
+          "data": "nodeConfig",
+          "field": "name"
+        },
+        "range": [
+          "#1f77b4",
+          "#2ca02c",
+          "#17becf",
+          "#9467bd",
+          "#d62728",
+          "#0b3d91",
+          "#3182bd",
+          "#6baed6",
+          "#9ecae1",
+          "#c6dbef",
+          "#e6550d",
+          "#fdae6b",
+          "#08519c",
+          "#3182bd",
+          "#6baed6",
+          "#9ecae1",
+          "#fd8d3c",
+          "#d62728",
+          "#fdae6b",
+          "#08306b",
+          "#2171b5",
+          "#4292c6",
+          "#6baed6",
+          "#ef3b2c",
+          "#a50f15",
+          "#fee0d2"
+        ]
+      }
+    ],
+    "marks": [
+      {
+        "type": "path",
+        "name": "edgeMark",
+        "from": {
+          "data": "edges"
+        },
+        "encode": {
+          "update": {
+            "path": {
+              "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "source"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.35"
+            },
+            "stroke": {
+              "scale": "color",
+              "field": "source"
+            },
+            "strokeWidth": {
+              "value": 0.5
+            },
+            "strokeOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',d') + ' loans (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ')'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          },
+          "hover": {
+            "fillOpacity": {
+              "value": 0.8
+            }
+          }
+        }
+      },
+      {
+        "type": "rect",
+        "name": "nodeRect",
+        "from": {
+          "data": "nodePositions"
+        },
+        "encode": {
+          "enter": {
+            "width": {
+              "signal": "nodeWidth"
+            },
+            "cornerRadius": {
+              "value": 2
+            }
+          },
+          "update": {
+            "x": {
+              "scale": "x",
+              "field": "depth"
+            },
+            "y": {
+              "scale": "y",
+              "field": "y0g"
+            },
+            "y2": {
+              "scale": "y",
+              "field": "y1g"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "name"
+            },
+            "stroke": {
+              "value": "#333"
+            },
+            "strokeWidth": {
+              "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 0.5"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+            },
+            "tooltip": {
+              "signal": "datum.name + ': ' + format(datum.total, ',d') + ' loans'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "field": "name"
+            },
+            "fontSize": {
+              "value": 10
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#333"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 12"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 18 ? '' + format(datum.total, ',d') + ' loans' : ''"
+            },
+            "fontSize": {
+              "value": 9
+            },
+            "fill": {
+              "value": "#888"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "depthLabelsData"
+        },
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "x": {
+              "signal": "scale('x', datum.depth) + nodeWidth / 2"
+            },
+            "y": {
+              "signal": "height + 25"
+            },
+            "text": {
+              "field": "label"
+            },
+            "fontSize": {
+              "value": 11
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#555"
+            },
+            "baseline": {
+              "value": "top"
+            },
+            "align": {
+              "value": "center"
+            }
+          }
+        }
+      },
+      {
+        "type": "group",
+        "data": [
+          {
+            "name": "showResetData",
+            "values": [
+              {}
+            ],
+            "transform": [
+              {
+                "type": "filter",
+                "expr": "selectedNode"
+              }
+            ]
+          }
+        ],
+        "encode": {
+          "enter": {
+            "xc": {
+              "signal": "width / 2"
+            },
+            "y": {
+              "value": -35
+            },
+            "width": {
+              "value": 100
+            },
+            "height": {
+              "value": 26
+            }
+          }
+        },
+        "marks": [
+          {
+            "type": "group",
+            "name": "resetBtn",
+            "from": {
+              "data": "showResetData"
+            },
+            "encode": {
+              "enter": {
+                "cornerRadius": {
+                  "value": 5
+                },
+                "fill": {
+                  "value": "#f5f5f5"
+                },
+                "stroke": {
+                  "value": "#bbb"
+                },
+                "strokeWidth": {
+                  "value": 1.5
+                },
+                "height": {
+                  "field": {
+                    "group": "height"
+                  }
+                },
+                "width": {
+                  "field": {
+                    "group": "width"
+                  }
+                },
+                "cursor": {
+                  "value": "pointer"
+                }
+              },
+              "update": {
+                "opacity": {
+                  "value": 1
+                }
+              },
+              "hover": {
+                "opacity": {
+                  "value": 0.7
+                }
+              }
+            },
+            "marks": [
+              {
+                "type": "text",
+                "interactive": false,
+                "encode": {
+                  "enter": {
+                    "xc": {
+                      "field": {
+                        "group": "width"
+                      },
+                      "mult": 0.5
+                    },
+                    "yc": {
+                      "field": {
+                        "group": "height"
+                      },
+                      "mult": 0.5,
+                      "offset": 1
+                    },
+                    "align": {
+                      "value": "center"
+                    },
+                    "baseline": {
+                      "value": "middle"
+                    },
+                    "fontWeight": {
+                      "value": "bold"
+                    },
+                    "fontSize": {
+                      "value": 11
+                    },
+                    "text": {
+                      "value": "Show All"
+                    },
+                    "fill": {
+                      "value": "#555"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "title": {
+      "text": "Sankey Credit Risk Migration: Rating Transitions Over 3 Years (Loan Count)",
+      "subtitle": "Hover to trace migration  |  Click rating to isolate  |  1,620 loans tracked; Junk cumulative default 56%",
+      "fontSize": 16,
+      "subtitleFontSize": 11,
+      "subtitleColor": "#999",
+      "anchor": "start"
+    }
+  }

@@ -1,0 +1,56 @@
+{
+  "task_type": "vague_single",
+  "task_id": "32_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/32_insurance_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Is there any relationship between the categories resulting from data point clustering and the two categories of smoking status?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Yes, there is a strong relationship between the clustering results and smoking status.\n\nComparing the two views, the cluster assignments almost perfectly mirror the smoker categories .The spatial distribution of points is nearly identical between the two images: the high-charge upper region is dominated by blue in the cluster view and by orange  in the smoker view, while the lower-charge dense region  shows the inverse pattern.\n\nThis indicates that the K-means algorithm has essentially rediscovered the smoking variable as the primary factor separating the data into two groups, validating that smoking status is the most dominant feature distinguishing insurance charge patterns."
+        },
+        "key_insights": [
+          "Cluster 0 (blue) occupies the high-charge territory with charges predominantly ranging from 25,000 to 65,000, while Cluster 1 (orange) dominates the low-charge region below 20,000.",
+          "The clustering visualization reveals that unsupervised learning has identified a natural two-group structure in the data that strongly correlates with an existing categorical variable (smoking status). This is analytically valuable because it confirms that smoking is not just statistically associated with higher charges, but is the dominant structural feature of the dataset.",
+          "nearly all blue points exist only where BMI > 27, and the densest blue concentration occurs between BMI 30-40. This suggests the clustering algorithm identified a BMI-charge interaction pattern.",
+          "in the lower region, with charges gradually increasing from ~3,000 to ~15,000 as BMI rises from 15 to 50. However, Cluster 0 shows a much steeper relationship in the upper region.",
+          "The number of children (bubble size) appears evenly distributed across both clusters, suggesting family size is not a significant factor in the clustering separation — the algorithm prioritized other variables."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "identify_clusters",
+            "reasoning": "The clustered view clearly answers the question, eliminating the need for additional tools."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "numeric",
+                "param": "n_clusters",
+                "target": 2,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "bmi",
+            "y": "charges",
+            "color": "cluster_2"
+          }
+        }
+      }
+    }
+  ]
+}

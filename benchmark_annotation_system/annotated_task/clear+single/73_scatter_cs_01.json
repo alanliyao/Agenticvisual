@@ -1,0 +1,51 @@
+{
+  "task_type": "clear_single",
+  "task_id": "73_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/73_StudentsPerformance_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Is there a significant positive correlation between the math score and the reading score?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "YES"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "obtain the answer:spearman correlation: 0.812 (strong positive)"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "spearman"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "math score",
+            "y": "reading score",
+            "color": "test preparation course"
+          }
+        }
+      }
+    }
+  ]
+}

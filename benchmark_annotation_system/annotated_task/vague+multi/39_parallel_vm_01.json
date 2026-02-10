@@ -1,0 +1,91 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "39_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/39_insurance_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Filtering the male, find the relationship between age and bmi in female group.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Small age tends to associate with high bmi, big age tends to associate with small bmi."
+        },
+        "key_insights": [
+          "Age and BMI: The overall trend of negative correlation. The older sample (closer to 64 years old) generally had a lower BMI value (close to 15.96), while the younger sample (around 18 years old) had a higher BMI value (up to 39)",
+          ""
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We only cares about the relationship between age and bmi."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "The question asks us to filter the male group"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "children",
+                    "charges"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "sex",
+                  "values": [
+                    "male"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"male\"], datum['sex']) < 0"
+            },
+            {
+              "filter": "indexof([\"age\", \"bmi\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 1,
+            "types": [
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

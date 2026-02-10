@@ -1,0 +1,90 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "114_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/114_sport_life_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "For online and retail stores, is it the case that the more units sold, the greater the revenue in USD?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "NO"
+        },
+        "key_insights": [
+          "no",
+          "no"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "filter the retail one"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "filter the online one"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "sales_channel",
+                  "values": [
+                    "Retail Store"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "sales_channel",
+                  "values": [
+                    "Online"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Online\"], datum['sales_channel']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

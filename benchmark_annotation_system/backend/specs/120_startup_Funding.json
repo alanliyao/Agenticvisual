@@ -1,0 +1,1301 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "Startup Funding & Cash Burn Sankey — Series B SaaS Company Annual Flow (Data-Driven Architecture)",
+    "width": 1150,
+    "height": 620,
+    "padding": {
+      "left": 130,
+      "right": 150,
+      "top": 55,
+      "bottom": 50
+    },
+    "background": "white",
+    "_metadata": {
+      "chart_type": "sankey_multi_stage",
+      "title": "Sankey Startup Funding & Cash Burn Flow",
+      "topic": "startup_funding_cashburn",
+      "architecture": "data-driven layout via Vega transform pipeline",
+      "value_unit": "Thousands USD",
+      "notes": "$50M total capital; Engineering 40% of OpEx; Salaries 63% of burn; 18% kept in reserve; 24-month runway target"
+    },
+    "signals": [
+      {
+        "name": "nodeWidth",
+        "value": 15
+      },
+      {
+        "name": "nodeGap",
+        "value": 60
+      },
+      {
+        "name": "threshold",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 2000,
+          "step": 200,
+          "name": "Min Flow ($K): "
+        }
+      },
+      {
+        "name": "nodeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:mouseover",
+            "update": "datum.name"
+          },
+          {
+            "events": "@nodeRect:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "edgeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@edgeMark:mouseover",
+            "update": "datum.linkId"
+          },
+          {
+            "events": "@edgeMark:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "selectedNode",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:click!",
+            "update": "selectedNode === datum.name ? null : datum.name"
+          },
+          {
+            "events": [
+              {
+                "type": "click",
+                "markname": "resetBtn"
+              },
+              {
+                "type": "dblclick"
+              }
+            ],
+            "update": "null"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "name": "rawLinks",
+        "values": [
+          {
+            "source": "Series B VC",
+            "target": "Operating Fund",
+            "value": 28000
+          },
+          {
+            "source": "Series B VC",
+            "target": "Reserve Fund",
+            "value": 7000
+          },
+          {
+            "source": "Series A (Prior)",
+            "target": "Operating Fund",
+            "value": 8000
+          },
+          {
+            "source": "Series A (Prior)",
+            "target": "Reserve Fund",
+            "value": 2000
+          },
+          {
+            "source": "Revenue",
+            "target": "Operating Fund",
+            "value": 4500
+          },
+          {
+            "source": "Grants & Credits",
+            "target": "Operating Fund",
+            "value": 500
+          },
+          {
+            "source": "Operating Fund",
+            "target": "Engineering",
+            "value": 16400
+          },
+          {
+            "source": "Operating Fund",
+            "target": "Sales & Marketing",
+            "value": 12300
+          },
+          {
+            "source": "Operating Fund",
+            "target": "G&A",
+            "value": 6150
+          },
+          {
+            "source": "Operating Fund",
+            "target": "Product",
+            "value": 4100
+          },
+          {
+            "source": "Operating Fund",
+            "target": "Customer Success",
+            "value": 2050
+          },
+          {
+            "source": "Reserve Fund",
+            "target": "Emergency Buffer",
+            "value": 5400
+          },
+          {
+            "source": "Reserve Fund",
+            "target": "M&A Fund",
+            "value": 2700
+          },
+          {
+            "source": "Reserve Fund",
+            "target": "Runway Extension",
+            "value": 900
+          },
+          {
+            "source": "Engineering",
+            "target": "Salaries",
+            "value": 12300
+          },
+          {
+            "source": "Engineering",
+            "target": "Cloud & Infra",
+            "value": 2870
+          },
+          {
+            "source": "Engineering",
+            "target": "Tools & Software",
+            "value": 820
+          },
+          {
+            "source": "Engineering",
+            "target": "Contractors",
+            "value": 410
+          },
+          {
+            "source": "Sales & Marketing",
+            "target": "Salaries",
+            "value": 6150
+          },
+          {
+            "source": "Sales & Marketing",
+            "target": "Paid Ads",
+            "value": 3690
+          },
+          {
+            "source": "Sales & Marketing",
+            "target": "Events & Travel",
+            "value": 1230
+          },
+          {
+            "source": "Sales & Marketing",
+            "target": "Tools & Software",
+            "value": 1230
+          },
+          {
+            "source": "G&A",
+            "target": "Salaries",
+            "value": 2460
+          },
+          {
+            "source": "G&A",
+            "target": "Office & Rent",
+            "value": 1845
+          },
+          {
+            "source": "G&A",
+            "target": "Legal & Compliance",
+            "value": 923
+          },
+          {
+            "source": "G&A",
+            "target": "Insurance",
+            "value": 615
+          },
+          {
+            "source": "G&A",
+            "target": "Tools & Software",
+            "value": 307
+          },
+          {
+            "source": "Product",
+            "target": "Salaries",
+            "value": 3280
+          },
+          {
+            "source": "Product",
+            "target": "User Research",
+            "value": 410
+          },
+          {
+            "source": "Product",
+            "target": "Tools & Software",
+            "value": 410
+          },
+          {
+            "source": "Customer Success",
+            "target": "Salaries",
+            "value": 1640
+          },
+          {
+            "source": "Customer Success",
+            "target": "Tools & Software",
+            "value": 205
+          },
+          {
+            "source": "Customer Success",
+            "target": "Events & Travel",
+            "value": 205
+          },
+          {
+            "source": "Salaries",
+            "target": "Team Growth",
+            "value": 15930
+          },
+          {
+            "source": "Salaries",
+            "target": "Talent Retention",
+            "value": 9900
+          },
+          {
+            "source": "Cloud & Infra",
+            "target": "Product Scale",
+            "value": 2870
+          },
+          {
+            "source": "Paid Ads",
+            "target": "Lead Generation",
+            "value": 2952
+          },
+          {
+            "source": "Paid Ads",
+            "target": "Brand Awareness",
+            "value": 738
+          },
+          {
+            "source": "Events & Travel",
+            "target": "Lead Generation",
+            "value": 861
+          },
+          {
+            "source": "Events & Travel",
+            "target": "Brand Awareness",
+            "value": 574
+          },
+          {
+            "source": "Tools & Software",
+            "target": "Productivity",
+            "value": 2972
+          },
+          {
+            "source": "Office & Rent",
+            "target": "Workspace",
+            "value": 1845
+          },
+          {
+            "source": "Legal & Compliance",
+            "target": "Risk Mitigation",
+            "value": 923
+          },
+          {
+            "source": "Insurance",
+            "target": "Risk Mitigation",
+            "value": 615
+          },
+          {
+            "source": "User Research",
+            "target": "Product Insights",
+            "value": 410
+          },
+          {
+            "source": "Contractors",
+            "target": "Flexible Capacity",
+            "value": 410
+          },
+          {
+            "source": "Emergency Buffer",
+            "target": "Cash Runway",
+            "value": 5400
+          },
+          {
+            "source": "M&A Fund",
+            "target": "Strategic Options",
+            "value": 2700
+          },
+          {
+            "source": "Runway Extension",
+            "target": "Cash Runway",
+            "value": 900
+          }
+        ]
+      },
+      {
+        "name": "nodeConfig",
+        "values": [
+          {
+            "name": "Series B VC",
+            "depth": 0,
+            "order": 0
+          },
+          {
+            "name": "Series A (Prior)",
+            "depth": 0,
+            "order": 1
+          },
+          {
+            "name": "Revenue",
+            "depth": 0,
+            "order": 2
+          },
+          {
+            "name": "Grants & Credits",
+            "depth": 0,
+            "order": 3
+          },
+          {
+            "name": "Operating Fund",
+            "depth": 1,
+            "order": 0
+          },
+          {
+            "name": "Reserve Fund",
+            "depth": 1,
+            "order": 1
+          },
+          {
+            "name": "Engineering",
+            "depth": 2,
+            "order": 0
+          },
+          {
+            "name": "Sales & Marketing",
+            "depth": 2,
+            "order": 1
+          },
+          {
+            "name": "G&A",
+            "depth": 2,
+            "order": 2
+          },
+          {
+            "name": "Product",
+            "depth": 2,
+            "order": 3
+          },
+          {
+            "name": "Customer Success",
+            "depth": 2,
+            "order": 4
+          },
+          {
+            "name": "Emergency Buffer",
+            "depth": 2,
+            "order": 5
+          },
+          {
+            "name": "M&A Fund",
+            "depth": 2,
+            "order": 6
+          },
+          {
+            "name": "Runway Extension",
+            "depth": 2,
+            "order": 7
+          },
+          {
+            "name": "Salaries",
+            "depth": 3,
+            "order": 0
+          },
+          {
+            "name": "Cloud & Infra",
+            "depth": 3,
+            "order": 1
+          },
+          {
+            "name": "Paid Ads",
+            "depth": 3,
+            "order": 2
+          },
+          {
+            "name": "Events & Travel",
+            "depth": 3,
+            "order": 3
+          },
+          {
+            "name": "Tools & Software",
+            "depth": 3,
+            "order": 4
+          },
+          {
+            "name": "Office & Rent",
+            "depth": 3,
+            "order": 5
+          },
+          {
+            "name": "Legal & Compliance",
+            "depth": 3,
+            "order": 6
+          },
+          {
+            "name": "Insurance",
+            "depth": 3,
+            "order": 7
+          },
+          {
+            "name": "User Research",
+            "depth": 3,
+            "order": 8
+          },
+          {
+            "name": "Contractors",
+            "depth": 3,
+            "order": 9
+          },
+          {
+            "name": "Team Growth",
+            "depth": 4,
+            "order": 0
+          },
+          {
+            "name": "Talent Retention",
+            "depth": 4,
+            "order": 1
+          },
+          {
+            "name": "Product Scale",
+            "depth": 4,
+            "order": 2
+          },
+          {
+            "name": "Lead Generation",
+            "depth": 4,
+            "order": 3
+          },
+          {
+            "name": "Brand Awareness",
+            "depth": 4,
+            "order": 4
+          },
+          {
+            "name": "Productivity",
+            "depth": 4,
+            "order": 5
+          },
+          {
+            "name": "Workspace",
+            "depth": 4,
+            "order": 6
+          },
+          {
+            "name": "Risk Mitigation",
+            "depth": 4,
+            "order": 7
+          },
+          {
+            "name": "Product Insights",
+            "depth": 4,
+            "order": 8
+          },
+          {
+            "name": "Flexible Capacity",
+            "depth": 4,
+            "order": 9
+          },
+          {
+            "name": "Cash Runway",
+            "depth": 4,
+            "order": 10
+          },
+          {
+            "name": "Strategic Options",
+            "depth": 4,
+            "order": 11
+          }
+        ]
+      },
+      {
+        "name": "depthLabelsData",
+        "values": [
+          {
+            "depth": 0,
+            "label": "Funding Source"
+          },
+          {
+            "depth": 1,
+            "label": "Capital Pool"
+          },
+          {
+            "depth": 2,
+            "label": "Department"
+          },
+          {
+            "depth": 3,
+            "label": "Expense Type"
+          },
+          {
+            "depth": 4,
+            "label": "Outcome"
+          }
+        ]
+      },
+      {
+        "name": "filteredLinks",
+        "source": "rawLinks",
+        "transform": [
+          {
+            "type": "filter",
+            "expr": "datum.value >= threshold"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.source + ' → ' + datum.target",
+            "as": "linkId"
+          }
+        ]
+      },
+      {
+        "name": "linksWithOrder",
+        "source": "filteredLinks",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcConfig"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtConfig"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.order",
+            "as": "srcOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.order",
+            "as": "tgtOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.depth",
+            "as": "srcDepth"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.depth",
+            "as": "tgtDepth"
+          }
+        ]
+      },
+      {
+        "name": "outTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "source"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalOut"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "inTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "target"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalIn"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nodePositions",
+        "source": "nodeConfig",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "outTotals",
+            "key": "source",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "outInfo"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "inTotals",
+            "key": "target",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "inInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+            "as": "totalOut"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+            "as": "totalIn"
+          },
+          {
+            "type": "formula",
+            "expr": "max(datum.totalOut, datum.totalIn)",
+            "as": "total"
+          },
+          {
+            "type": "filter",
+            "expr": "datum.total > 0"
+          },
+          {
+            "type": "stack",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "field": "total"
+          },
+          {
+            "type": "window",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "ops": [
+              "row_number"
+            ],
+            "as": [
+              "rankInDepth"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y0g"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y1g"
+          }
+        ]
+      },
+      {
+        "name": "sourceStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "source"
+            ],
+            "sort": {
+              "field": "tgtOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "srcCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcCumEnd - datum.value",
+            "as": "srcCumStart"
+          }
+        ]
+      },
+      {
+        "name": "targetStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "target"
+            ],
+            "sort": {
+              "field": "srcOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "tgtCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtCumEnd - datum.value",
+            "as": "tgtCumStart"
+          }
+        ]
+      },
+      {
+        "name": "edges",
+        "source": "sourceStacked",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "targetStacked",
+            "key": "linkId",
+            "fields": [
+              "linkId"
+            ],
+            "as": [
+              "tgtInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+            "as": "tgtCumStart"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+            "as": "tgtCumEnd"
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcNode"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtNode"
+            ]
+          },
+          {
+            "type": "filter",
+            "expr": "datum.srcNode && datum.tgtNode"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumStart",
+            "as": "absSy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+            "as": "absSy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+            "as": "absTy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+            "as": "absTy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+            "as": "srcPct"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+            "as": "tgtPct"
+          }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "x",
+        "type": "point",
+        "range": "width",
+        "domain": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "padding": 0.5
+      },
+      {
+        "name": "y",
+        "type": "linear",
+        "range": [
+          0,
+          {
+            "signal": "height"
+          }
+        ],
+        "domain": {
+          "data": "nodePositions",
+          "field": "y1g"
+        }
+      },
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {
+          "data": "nodeConfig",
+          "field": "name"
+        },
+        "range": [
+          "#7C3AED",
+          "#6366F1",
+          "#10B981",
+          "#14B8A6",
+          "#3B82F6",
+          "#64748B",
+          "#0EA5E9",
+          "#F97316",
+          "#6B7280",
+          "#8B5CF6",
+          "#06B6D4",
+          "#475569",
+          "#334155",
+          "#1E293B",
+          "#059669",
+          "#06B6D4",
+          "#EA580C",
+          "#D97706",
+          "#7C3AED",
+          "#78716C",
+          "#DC2626",
+          "#EC4899",
+          "#A855F7",
+          "#3B82F6",
+          "#22C55E",
+          "#14B8A6",
+          "#0EA5E9",
+          "#F97316",
+          "#EAB308",
+          "#8B5CF6",
+          "#A8A29E",
+          "#EF4444",
+          "#A855F7",
+          "#60A5FA",
+          "#10B981",
+          "#6366F1"
+        ]
+      }
+    ],
+    "marks": [
+      {
+        "type": "path",
+        "name": "edgeMark",
+        "from": {
+          "data": "edges"
+        },
+        "encode": {
+          "update": {
+            "path": {
+              "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "source"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.35"
+            },
+            "stroke": {
+              "scale": "color",
+              "field": "source"
+            },
+            "strokeWidth": {
+              "value": 0.5
+            },
+            "strokeOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': $' + format(datum.value, ',.0f') + 'K (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ')'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          },
+          "hover": {
+            "fillOpacity": {
+              "value": 0.8
+            }
+          }
+        }
+      },
+      {
+        "type": "rect",
+        "name": "nodeRect",
+        "from": {
+          "data": "nodePositions"
+        },
+        "encode": {
+          "enter": {
+            "width": {
+              "signal": "nodeWidth"
+            },
+            "cornerRadius": {
+              "value": 2
+            }
+          },
+          "update": {
+            "x": {
+              "scale": "x",
+              "field": "depth"
+            },
+            "y": {
+              "scale": "y",
+              "field": "y0g"
+            },
+            "y2": {
+              "scale": "y",
+              "field": "y1g"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "name"
+            },
+            "stroke": {
+              "value": "#333"
+            },
+            "strokeWidth": {
+              "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 0.5"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+            },
+            "tooltip": {
+              "signal": "datum.name + ': $' + format(datum.total, ',.0f') + 'K'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "field": "name"
+            },
+            "fontSize": {
+              "value": 10
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#333"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 12"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 18 ? '$' + format(datum.total, ',.0f') + 'K' : ''"
+            },
+            "fontSize": {
+              "value": 9
+            },
+            "fill": {
+              "value": "#888"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "depthLabelsData"
+        },
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "x": {
+              "signal": "scale('x', datum.depth) + nodeWidth / 2"
+            },
+            "y": {
+              "signal": "height + 25"
+            },
+            "text": {
+              "field": "label"
+            },
+            "fontSize": {
+              "value": 11
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#555"
+            },
+            "baseline": {
+              "value": "top"
+            },
+            "align": {
+              "value": "center"
+            }
+          }
+        }
+      },
+      {
+        "type": "group",
+        "data": [
+          {
+            "name": "showResetData",
+            "values": [
+              {}
+            ],
+            "transform": [
+              {
+                "type": "filter",
+                "expr": "selectedNode"
+              }
+            ]
+          }
+        ],
+        "encode": {
+          "enter": {
+            "xc": {
+              "signal": "width / 2"
+            },
+            "y": {
+              "value": -35
+            },
+            "width": {
+              "value": 100
+            },
+            "height": {
+              "value": 26
+            }
+          }
+        },
+        "marks": [
+          {
+            "type": "group",
+            "name": "resetBtn",
+            "from": {
+              "data": "showResetData"
+            },
+            "encode": {
+              "enter": {
+                "cornerRadius": {
+                  "value": 5
+                },
+                "fill": {
+                  "value": "#f5f5f5"
+                },
+                "stroke": {
+                  "value": "#bbb"
+                },
+                "strokeWidth": {
+                  "value": 1.5
+                },
+                "height": {
+                  "field": {
+                    "group": "height"
+                  }
+                },
+                "width": {
+                  "field": {
+                    "group": "width"
+                  }
+                },
+                "cursor": {
+                  "value": "pointer"
+                }
+              },
+              "update": {
+                "opacity": {
+                  "value": 1
+                }
+              },
+              "hover": {
+                "opacity": {
+                  "value": 0.7
+                }
+              }
+            },
+            "marks": [
+              {
+                "type": "text",
+                "interactive": false,
+                "encode": {
+                  "enter": {
+                    "xc": {
+                      "field": {
+                        "group": "width"
+                      },
+                      "mult": 0.5
+                    },
+                    "yc": {
+                      "field": {
+                        "group": "height"
+                      },
+                      "mult": 0.5,
+                      "offset": 1
+                    },
+                    "align": {
+                      "value": "center"
+                    },
+                    "baseline": {
+                      "value": "middle"
+                    },
+                    "fontWeight": {
+                      "value": "bold"
+                    },
+                    "fontSize": {
+                      "value": 11
+                    },
+                    "text": {
+                      "value": "Show All"
+                    },
+                    "fill": {
+                      "value": "#555"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "title": {
+      "text": "Startup Cash Flow: Funding → Capital Pool → Department → Expense → Outcome ($K)",
+      "subtitle": "Hover to trace funds  |  Click to isolate  |  $50M capital; Eng=40% OpEx; Salaries=63% burn; 18% reserve",
+      "fontSize": 16,
+      "subtitleFontSize": 11,
+      "subtitleColor": "#999",
+      "anchor": "start"
+    }
+  }

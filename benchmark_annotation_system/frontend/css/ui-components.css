@@ -1,0 +1,520 @@
+/* ========================================
+   UI Components - 标准化组件样式
+   参考 Ant Design / Element UI
+   ======================================== */
+
+/* ========== 基础变量 ========== */
+:root {
+    --ui-primary: #2563eb;
+    --ui-primary-hover: #1d4ed8;
+    --ui-border: #d1d5db;
+    --ui-border-hover: #9ca3af;
+    --ui-bg: #fff;
+    --ui-bg-hover: #f3f4f6;
+    --ui-text: #333;
+    --ui-text-secondary: #666;
+    --ui-placeholder: #9ca3af;
+    --ui-radius: 6px;
+    --ui-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --ui-transition: all 0.2s ease;
+}
+
+/* ========== 通用输入框 ========== */
+.ui-input-wrapper {
+    width: 100%;
+}
+
+.ui-input {
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    background: var(--ui-bg);
+    color: var(--ui-text);
+    font-size: 13px;
+    transition: var(--ui-transition);
+    outline: none;
+}
+
+.ui-input:hover {
+    border-color: var(--ui-border-hover);
+}
+
+.ui-input:focus {
+    border-color: var(--ui-primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.ui-input::placeholder {
+    color: var(--ui-placeholder);
+}
+
+/* ========== 单选下拉框 ========== */
+.ui-select {
+    position: relative;
+    width: 100%;
+}
+
+.ui-select-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    background: var(--ui-bg);
+    cursor: pointer;
+    transition: var(--ui-transition);
+}
+
+.ui-select-display:hover {
+    border-color: var(--ui-border-hover);
+}
+
+.ui-select.open .ui-select-display,
+.ui-multi-select.open .ui-select-display {
+    border-color: var(--ui-primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.ui-select-text {
+    flex: 1;
+    font-size: 13px;
+    color: var(--ui-placeholder);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ui-select.has-value .ui-select-text {
+    color: var(--ui-text);
+}
+
+.ui-select-arrow {
+    font-size: 10px;
+    color: var(--ui-text-secondary);
+    transition: transform 0.2s;
+    margin-left: 8px;
+}
+
+.ui-select.open .ui-select-arrow,
+.ui-multi-select.open .ui-select-arrow {
+    transform: rotate(180deg);
+}
+
+/* 下拉面板 */
+.ui-select-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    max-height: 256px;
+    overflow-y: auto;
+    background: var(--ui-bg);
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    box-shadow: var(--ui-shadow);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: var(--ui-transition);
+}
+
+.ui-select.open .ui-select-dropdown,
+.ui-multi-select.open .ui-select-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 选项 */
+.ui-select-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--ui-text);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.ui-select-option:hover {
+    background: var(--ui-bg-hover);
+}
+
+.ui-select-option.selected {
+    color: var(--ui-primary);
+    background: #eff6ff;
+}
+
+/* 多选复选框指示器 */
+.ui-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 1px solid var(--ui-border);
+    border-radius: 3px;
+    background: var(--ui-bg);
+    transition: var(--ui-transition);
+}
+
+.ui-select-option.selected .ui-checkbox {
+    background: var(--ui-primary);
+    border-color: var(--ui-primary);
+}
+
+.ui-select-option.selected .ui-checkbox::after {
+    content: '✓';
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* ========== 多选下拉框 ========== */
+.ui-multi-select {
+    position: relative;
+    width: 100%;
+}
+
+.ui-multi-select .ui-select-display {
+    min-height: 36px;
+    height: auto;
+    padding: 4px 12px 4px 8px;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.ui-select-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    flex: 1;
+    align-items: center;
+}
+
+.ui-select-placeholder {
+    font-size: 13px;
+    color: var(--ui-placeholder);
+}
+
+/* 标签 */
+.ui-tag {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    padding: 0 8px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--ui-primary);
+}
+
+.ui-tag-close {
+    margin-left: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.15s;
+}
+
+.ui-tag-close:hover {
+    opacity: 1;
+}
+
+/* ========== 复选框 ========== */
+.ui-checkbox-wrapper {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ui-checkbox-wrapper input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ui-checkbox-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--ui-border);
+    border-radius: 4px;
+    background: var(--ui-bg);
+    transition: var(--ui-transition);
+}
+
+.ui-checkbox-wrapper input:checked + .ui-checkbox-indicator {
+    background: var(--ui-primary);
+    border-color: var(--ui-primary);
+}
+
+.ui-checkbox-wrapper input:checked + .ui-checkbox-indicator::after {
+    content: '✓';
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ========== 范围输入 ========== */
+.ui-range-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ui-range-input .ui-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.ui-range-separator {
+    color: var(--ui-text-secondary);
+    font-size: 14px;
+}
+
+/* ========== 可排序列表 ========== */
+.ui-sortable-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    overflow: hidden;
+}
+
+.ui-sortable-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    background: var(--ui-bg);
+    border-bottom: 1px solid #f0f0f0;
+    cursor: grab;
+    transition: background 0.15s;
+}
+
+.ui-sortable-item:last-child {
+    border-bottom: none;
+}
+
+.ui-sortable-item:hover {
+    background: var(--ui-bg-hover);
+}
+
+.ui-sortable-item.dragging {
+    opacity: 0.5;
+    background: #e0e7ff;
+}
+
+.ui-sortable-handle {
+    color: var(--ui-text-secondary);
+    margin-right: 10px;
+    font-size: 12px;
+    letter-spacing: -2px;
+}
+
+.ui-sortable-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background: #e5e7eb;
+    border-radius: 50%;
+    font-size: 11px;
+    color: var(--ui-text-secondary);
+}
+
+.ui-sortable-text {
+    flex: 1;
+    font-size: 13px;
+    color: var(--ui-text);
+}
+
+/* ========== Brush 显示区域 ========== */
+.ui-brush-display {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f0fdf4;
+    border: 1px dashed #86efac;
+    border-radius: var(--ui-radius);
+    color: #166534;
+}
+
+.ui-brush-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.ui-brush-text {
+    font-size: 13px;
+}
+
+/* ========== 提示文字 ========== */
+.ui-hint {
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--ui-text-secondary);
+}
+
+/* ========== Path Builder（路径构建器） ========== */
+.ui-path-builder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ui-path-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    background: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.ui-path-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--ui-border);
+    background: #fff;
+}
+
+.ui-path-item:last-child {
+    border-bottom: none;
+}
+
+.ui-path-item:hover {
+    background: #f9fafb;
+}
+
+.ui-path-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: #e5e7eb;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ui-text-secondary);
+}
+
+.ui-path-text {
+    flex: 1;
+    font-size: 13px;
+    color: var(--ui-text);
+}
+
+.ui-path-remove {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin-left: 8px;
+    background: transparent;
+    border: none;
+    border-radius: var(--ui-radius);
+    font-size: 18px;
+    line-height: 1;
+    color: #ef4444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-path-remove:hover {
+    background: #fee2e2;
+}
+
+.ui-path-add-section {
+    position: relative;
+}
+
+.ui-path-add-btn {
+    width: 100%;
+    padding: 8px 12px;
+    background: #f3f4f6;
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    font-size: 13px;
+    color: var(--ui-text);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ui-path-add-btn:hover {
+    background: #e5e7eb;
+    border-color: var(--ui-primary);
+}
+
+.ui-path-select-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 4px;
+    z-index: 1000;
+}
+
+.ui-path-select-dropdown {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid var(--ui-border);
+    border-radius: var(--ui-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ui-path-select-option {
+    padding: 8px 12px;
+    font-size: 13px;
+    color: var(--ui-text);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ui-path-select-option:hover {
+    background: #f3f4f6;
+}
+
+.ui-path-select-empty {
+    padding: 12px;
+    font-size: 12px;
+    color: var(--ui-text-secondary);
+    text-align: center;
+}
+
+/* ========== 滚动条美化 ========== */
+.ui-select-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ui-select-dropdown::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ui-select-dropdown::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+.ui-select-dropdown::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}

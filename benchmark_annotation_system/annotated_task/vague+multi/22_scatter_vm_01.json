@@ -1,0 +1,126 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "22_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/22_Employee_Attrition_DataSet_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_05",
+      "question": "What are the advantages and disadvantages of working away from home?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Jobs that are far from home seem to be better than those that are close to home: they offer higher salaries, more stable jobs, and better balance between work and life."
+        },
+        "key_insights": [
+          "The regression line rises slowly, indicating that jobs that require traveling a long distance from home generally have higher wages than those that are closer to home.",
+          "It seems that there is no connection. Further confirmation is needed.",
+          "The regression line shows a slow decline, indicating that those who work away from home tend to be better at balancing work and life.",
+          "It's not clear what the connection is. Further calculation of the regression line is needed.",
+          "The regression line is rising, indicating that jobs farther from home tend to be long-term positions and people are less likely to change jobs."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_regression",
+            "reasoning": "get the regression"
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "Prepare for the next step of calculating the correlation."
+          },
+          {
+            "iteration": 3,
+            "tool": "show_regression",
+            "reasoning": "get the regression"
+          },
+          {
+            "iteration": 4,
+            "tool": "change_encoding",
+            "reasoning": "Prepare for the next step of calculating the correlation."
+          },
+          {
+            "iteration": 5,
+            "tool": "show_regression",
+            "reasoning": "get the regression"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "linear"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "WorkLifeBalance",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "linear"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "YearsAtCompany",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "linear"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "point",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

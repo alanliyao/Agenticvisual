@@ -1,0 +1,106 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "32_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/32_insurance_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "Zoom into the dense area in the lower region where charges are below 15000, then identify clusters to discover whether non-smokers form distinct subgroups based on other hidden characteristics beyond smoking status. ",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Yes, non-smokers do form distinct subgroups based on hidden characteristics beyond smoking status.The hidden drivers of these subgroups are BMI and number of children, which together create distinct risk profiles reflected in insurance charges."
+        },
+        "key_insights": [
+          "The zoomed view reveals at least two clear clusters among non-smokers (blue points) with charges below 15,000.",
+          "The clusters are primarily separated by BMI, with the number of children (point size) acting as a secondary differentiator. This shows that even among non-smokers, these factors create distinct risk profiles reflected in insurance charges.",
+          "The orange smoker points, while few, lie in the upper-left and do not overlap with the non-smoker clusters, reinforcing that smoking is a separate, high-impact factor.",
+          "With smokers removed, the upward trend between BMI and charges becomes more visible",
+          "Three distinct risk tiers are clearly defined",
+          "Cluster 0 (Blue): Middle-risk group, with charges between 6,000–10,000 and BMI between 25–35. These points are mostly medium-sized, representing 1–2 children.",
+          "Cluster 1 (Orange): High-risk group, with charges above 10,000 and BMI between 25–35. This aligns with the smoker subgroup, showing the strong impact of smoking on insurance costs.",
+          "Cluster 2 (Green): Low-risk group, with charges below 6,000 and BMI between 20–30. These points are mostly small, representing 0–1 children.",
+          "Cluster 1 (smokers) and Cluster 0 (non-smokers) have very similar BMI ranges, but their charges differ drastically. This confirms that smoking status is a more powerful predictor of insurance costs than BMI."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "The initial view was too dense to resolve individual subgroups among non-smokers. Zooming into the lower-charge regionThe gap between the initial question and the answer was closed by isolating the non-smoker population and resolving their subgroups"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "The data has been enlarged to focus on densely populated areas and filtered to exclude smokers. Next, a clustering method will be applied to analyze the sub-cluster patterns among non-smokers."
+          },
+          {
+            "iteration": 3,
+            "tool": "identify_clusters",
+            "reasoning": "We are now able to answer questions, and non-smokers' charges also show distinct categories."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "list",
+                "param": "x_range",
+                "target": [
+                  0.12568359375,
+                  55
+                ]
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "list",
+                "param": "categories_to_remove",
+                "target": [
+                  "yes"
+                ]
+              }
+            },
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "numeric",
+                "param": "n_clusters",
+                "target": 3,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.12568359375,
+              55
+            ],
+            "y": [
+              0,
+              14821.142578125
+            ]
+          },
+          "encoding": {
+            "x": "bmi",
+            "y": "charges",
+            "color": "cluster_3"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"yes\"], datum['smoker']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

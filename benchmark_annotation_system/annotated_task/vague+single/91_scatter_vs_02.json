@@ -1,0 +1,55 @@
+{
+  "task_type": "vague_single",
+  "task_id": "91_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/91_supply_chain_data_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Is the profit of the product related to the type of the product?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "NO, because after i get the charts of revenue and product type, it could obviously see that no matter what kind of product is, all of them have high and low revenue dots, and the distribution is evenly spread"
+        },
+        "key_insights": [
+          "It was discovered that every product has both high prices and low prices.",
+          "The income distribution of the same product is evenly spread."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the charts of revenue and product type"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product type",
+                  "channel": "x"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Product type",
+            "y": "Revenue generated",
+            "color": "Product type"
+          }
+        }
+      }
+    }
+  ]
+}

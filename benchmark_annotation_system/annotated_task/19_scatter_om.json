@@ -1,0 +1,172 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "open_ended_multi",
+      "chart_type": "scatter",
+      "meta": {
+        "chart_type": "scatter",
+        "title": "Scatter Plot: Age vs Cholesterol",
+        "filename": "19_Heart_Disease_Prediction_scatter.json",
+        "data_points": 270,
+        "total_points": 270,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "op_03",
+          "question": "Is the age-cholesterol correlation in the core dense area different from the overall one?",
+          "ground_truth": {
+            "answer": "Yes",
+            "key_insights": [
+              "overall dataset's correlation_coefficient is 0.22005630764974443",
+              "The dense area's correlation is  0.1265669932797749"
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "calculate_correlation",
+                "reasoning": "calculate overall dataset's correlation."
+              },
+              {
+                "iteration": 2,
+                "tool": "zoom_dense_area",
+                "reasoning": "zoom the core dense region of cholesterol"
+              },
+              {
+                "iteration": 3,
+                "tool": "calculate_correlation",
+                "reasoning": "calculate the correlation of the core dense area after zooming."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "calculate_correlation",
+                "zoom_dense_area",
+                "calculate_correlation"
+              ],
+              "param_eval": [
+                {
+                  "tool": "calculate_correlation",
+                  "params": {
+                    "method": "pearson"
+                  }
+                },
+                {
+                  "tool": "zoom_dense_area",
+                  "params": {
+                    "x_range": [
+                      40.044445800781254,
+                      72.4888916015625
+                    ],
+                    "y_range": [
+                      113.50003051757815,
+                      369.4999694824219
+                    ]
+                  }
+                },
+                {
+                  "tool": "calculate_correlation",
+                  "params": {
+                    "method": "pearson"
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "visible_domain": {
+                "x": [
+                  40.044445800781254,
+                  72.4888916015625
+                ],
+                "y": [
+                  113.50003051757815,
+                  369.4999694824219
+                ]
+              },
+              "encoding": {
+                "x": "Age",
+                "y": "Cholesterol",
+                "color": "Heart Disease"
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "calculate_correlation",
+          "parameters": {
+            "method": "pearson"
+          },
+          "result": {
+            "operation": "calculate_correlation",
+            "method": "pearson",
+            "correlation_coefficient": 0.22005630764974443,
+            "p_value": 0.00026855311479482,
+            "strength": "weak",
+            "direction": "positive",
+            "message": "pearson correlation: 0.220 (weak positive)"
+          },
+          "key_insights": [
+            "overall dataset's correlation_coefficient is 0.22005630764974443"
+          ],
+          "reasoning": "calculate overall dataset's correlation."
+        },
+        {
+          "tool_name": "zoom_dense_area",
+          "parameters": {
+            "x_range": [
+              40.044445800781254,
+              72.4888916015625
+            ],
+            "y_range": [
+              113.50003051757815,
+              369.4999694824219
+            ]
+          },
+          "result": {
+            "operation": "zoom_dense_area",
+            "original_count": 270,
+            "filtered_count": 247,
+            "zoom_range": {
+              "x": [
+                40.044445800781254,
+                72.4888916015625
+              ],
+              "y": [
+                113.50003051757815,
+                369.4999694824219
+              ]
+            },
+            "message": "Zoomed to dense area: showing 247 out of 270 points (91.5%)"
+          },
+          "key_insights": [],
+          "reasoning": "zoom the core dense region of cholesterol"
+        },
+        {
+          "tool_name": "calculate_correlation",
+          "parameters": {
+            "method": "pearson"
+          },
+          "result": {
+            "operation": "calculate_correlation",
+            "method": "pearson",
+            "correlation_coefficient": 0.1265669932797749,
+            "p_value": 0.04691526644895462,
+            "strength": "weak",
+            "direction": "positive",
+            "message": "pearson correlation: 0.127 (weak positive)"
+          },
+          "key_insights": [
+            "The dense area's correlation is  0.1265669932797749"
+          ],
+          "reasoning": "calculate the correlation of the core dense area after zooming."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-23T02:10:58.542Z"
+}

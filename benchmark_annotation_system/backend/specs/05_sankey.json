@@ -1,0 +1,581 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "E-commerce User Flow - Interactive Sankey Diagram (Data-Driven Architecture)",
+    "width": 900,
+    "height": 500,
+    "padding": {"left": 80, "right": 160, "top": 55, "bottom": 50},
+  
+    "_metadata": {
+      "chart_type": "sankey_multi_stage",
+      "title": "Sankey E-commerce User Journey",
+      "architecture": "data-driven layout via Vega transform pipeline (stack + window + lookup)",
+      "interactive_features": {
+        "threshold_filter": "Signal 'threshold' — slider controls minimum flow; layout auto-recalculates",
+        "edge_hover": "Hover an edge to highlight that specific flow",
+        "node_hover": "Hover a node to highlight ALL directly connected edges",
+        "node_click": "Click a node to lock focus on its connections; click again to deselect",
+        "reset": "Click 'Show All' button or double-click canvas to clear selection"
+      },
+      "tool_function_guide": {
+        "change_data": "Replace rawLinks.values and nodeConfig.values to switch datasets",
+        "change_column_labels": "Replace depthLabelsData.values to rename stage columns",
+        "highlight_specific_path": "Inject formula transforms into edges dataset to flag path membership, or programmatically set selectedNode",
+        "adjust_threshold_range": "Modify threshold signal bind.min / bind.max / bind.step",
+        "add_depth_levels": "Add entries to nodeConfig + depthLabelsData, extend x scale domain array"
+      }
+    },
+  
+    "signals": [
+      {"name": "nodeWidth", "value": 15},
+      {"name": "nodeGap", "value": 800},
+      {
+        "name": "threshold",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 5000,
+          "step": 100,
+          "name": "Min Flow: "
+        }
+      },
+      {
+        "name": "nodeHover",
+        "value": null,
+        "on": [
+          {"events": "@nodeRect:mouseover", "update": "datum.name"},
+          {"events": "@nodeRect:mouseout", "update": "null"}
+        ]
+      },
+      {
+        "name": "edgeHover",
+        "value": null,
+        "on": [
+          {"events": "@edgeMark:mouseover", "update": "datum.linkId"},
+          {"events": "@edgeMark:mouseout", "update": "null"}
+        ]
+      },
+      {
+        "name": "selectedNode",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:click!",
+            "update": "selectedNode === datum.name ? null : datum.name"
+          },
+          {
+            "events": [
+              {"type": "click", "markname": "resetBtn"},
+              {"type": "dblclick"}
+            ],
+            "update": "null"
+          }
+        ]
+      }
+    ],
+  
+    "data": [
+      {
+        "name": "rawLinks",
+        "values": [
+          {"source": "Google Ads", "target": "Landing Page", "value": 5000},
+          {"source": "Google Ads", "target": "Product List", "value": 4000},
+          {"source": "Facebook", "target": "Landing Page", "value": 4500},
+          {"source": "Facebook", "target": "Product List", "value": 2500},
+          {"source": "Organic", "target": "Landing Page", "value": 3500},
+          {"source": "Organic", "target": "Search", "value": 2500},
+          {"source": "Email", "target": "Product List", "value": 3000},
+          {"source": "Email", "target": "Search", "value": 1500},
+          {"source": "Landing Page", "target": "Product Detail", "value": 8000},
+          {"source": "Landing Page", "target": "Exit", "value": 5000},
+          {"source": "Product List", "target": "Product Detail", "value": 6000},
+          {"source": "Product List", "target": "Exit", "value": 3500},
+          {"source": "Search", "target": "Product Detail", "value": 3000},
+          {"source": "Search", "target": "Exit", "value": 1000},
+          {"source": "Product Detail", "target": "Add to Cart", "value": 10000},
+          {"source": "Product Detail", "target": "Bounce", "value": 7000},
+          {"source": "Add to Cart", "target": "Purchase", "value": 8000}
+        ]
+      },
+      {
+        "name": "nodeConfig",
+        "values": [
+          {"name": "Google Ads", "depth": 0, "order": 0},
+          {"name": "Facebook", "depth": 0, "order": 1},
+          {"name": "Organic", "depth": 0, "order": 2},
+          {"name": "Email", "depth": 0, "order": 3},
+          {"name": "Landing Page", "depth": 1, "order": 0},
+          {"name": "Product List", "depth": 1, "order": 1},
+          {"name": "Search", "depth": 1, "order": 2},
+          {"name": "Product Detail", "depth": 2, "order": 0},
+          {"name": "Exit", "depth": 2, "order": 1},
+          {"name": "Add to Cart", "depth": 3, "order": 0},
+          {"name": "Bounce", "depth": 3, "order": 1},
+          {"name": "Purchase", "depth": 4, "order": 0}
+        ]
+      },
+      {
+        "name": "depthLabelsData",
+        "values": [
+          {"depth": 0, "label": "Traffic Source"},
+          {"depth": 1, "label": "Entry Point"},
+          {"depth": 2, "label": "Engagement"},
+          {"depth": 3, "label": "Action"},
+          {"depth": 4, "label": "Conversion"}
+        ]
+      },
+  
+      {
+        "name": "filteredLinks",
+        "source": "rawLinks",
+        "transform": [
+          {"type": "filter", "expr": "datum.value >= threshold"},
+          {"type": "formula", "expr": "datum.source + ' → ' + datum.target", "as": "linkId"}
+        ]
+      },
+  
+      {
+        "name": "linksWithOrder",
+        "source": "filteredLinks",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": ["source"],
+            "as": ["srcConfig"]
+          },
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": ["target"],
+            "as": ["tgtConfig"]
+          },
+          {"type": "formula", "expr": "datum.srcConfig.order", "as": "srcOrder"},
+          {"type": "formula", "expr": "datum.tgtConfig.order", "as": "tgtOrder"},
+          {"type": "formula", "expr": "datum.srcConfig.depth", "as": "srcDepth"},
+          {"type": "formula", "expr": "datum.tgtConfig.depth", "as": "tgtDepth"}
+        ]
+      },
+  
+      {
+        "name": "outTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": ["source"],
+            "fields": ["value"],
+            "ops": ["sum"],
+            "as": ["totalOut"]
+          }
+        ]
+      },
+      {
+        "name": "inTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": ["target"],
+            "fields": ["value"],
+            "ops": ["sum"],
+            "as": ["totalIn"]
+          }
+        ]
+      },
+  
+      {
+        "name": "nodePositions",
+        "source": "nodeConfig",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "outTotals",
+            "key": "source",
+            "fields": ["name"],
+            "as": ["outInfo"]
+          },
+          {
+            "type": "lookup",
+            "from": "inTotals",
+            "key": "target",
+            "fields": ["name"],
+            "as": ["inInfo"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+            "as": "totalOut"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+            "as": "totalIn"
+          },
+          {
+            "type": "formula",
+            "expr": "max(datum.totalOut, datum.totalIn)",
+            "as": "total"
+          },
+          {"type": "filter", "expr": "datum.total > 0"},
+          {
+            "type": "stack",
+            "groupby": ["depth"],
+            "sort": {"field": "order", "order": "ascending"},
+            "field": "total"
+          },
+          {
+            "type": "window",
+            "groupby": ["depth"],
+            "sort": {"field": "order", "order": "ascending"},
+            "ops": ["row_number"],
+            "as": ["rankInDepth"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y0g"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y1g"
+          }
+        ]
+      },
+  
+      {
+        "name": "sourceStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": ["source"],
+            "sort": {"field": "tgtOrder", "order": "ascending"},
+            "ops": ["sum"],
+            "fields": ["value"],
+            "frame": [null, 0],
+            "as": ["srcCumEnd"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcCumEnd - datum.value",
+            "as": "srcCumStart"
+          }
+        ]
+      },
+  
+      {
+        "name": "targetStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": ["target"],
+            "sort": {"field": "srcOrder", "order": "ascending"},
+            "ops": ["sum"],
+            "fields": ["value"],
+            "frame": [null, 0],
+            "as": ["tgtCumEnd"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtCumEnd - datum.value",
+            "as": "tgtCumStart"
+          }
+        ]
+      },
+  
+      {
+        "name": "edges",
+        "source": "sourceStacked",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "targetStacked",
+            "key": "linkId",
+            "fields": ["linkId"],
+            "as": ["tgtInfo"]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+            "as": "tgtCumStart"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+            "as": "tgtCumEnd"
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": ["source"],
+            "as": ["srcNode"]
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": ["target"],
+            "as": ["tgtNode"]
+          },
+          {"type": "filter", "expr": "datum.srcNode && datum.tgtNode"},
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumStart",
+            "as": "absSy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+            "as": "absSy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+            "as": "absTy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+            "as": "absTy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+            "as": "srcPct"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+            "as": "tgtPct"
+          }
+        ]
+      }
+    ],
+  
+    "scales": [
+      {
+        "name": "x",
+        "type": "point",
+        "range": "width",
+        "domain": [0, 1, 2, 3, 4],
+        "padding": 0.5
+      },
+      {
+        "name": "y",
+        "type": "linear",
+        "range": [0, {"signal": "height"}],
+        "domain": {"data": "nodePositions", "field": "y1g"}
+      },
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {"data": "nodeConfig", "field": "name"},
+        "range": {"scheme": "tableau20"}
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "path",
+        "name": "edgeMark",
+        "from": {"data": "edges"},
+        "encode": {
+          "update": {
+            "path": {
+              "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+            },
+            "fill": {"scale": "color", "field": "source"},
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.3"
+            },
+            "stroke": {"scale": "color", "field": "source"},
+            "strokeWidth": {"value": 0.5},
+            "strokeOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',') + ' users (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ', ' + format(datum.tgtPct, '.0%') + ' of ' + datum.target + ')'"
+            },
+            "cursor": {"value": "pointer"}
+          },
+          "hover": {
+            "fillOpacity": {"value": 0.8}
+          }
+        }
+      },
+  
+      {
+        "type": "rect",
+        "name": "nodeRect",
+        "from": {"data": "nodePositions"},
+        "encode": {
+          "enter": {
+            "width": {"signal": "nodeWidth"},
+            "cornerRadius": {"value": 2}
+          },
+          "update": {
+            "x": {"scale": "x", "field": "depth"},
+            "y": {"scale": "y", "field": "y0g"},
+            "y2": {"scale": "y", "field": "y1g"},
+            "fill": {"scale": "color", "field": "name"},
+            "stroke": {"value": "#333"},
+            "strokeWidth": {
+              "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 1"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+            },
+            "tooltip": {
+              "signal": "datum.name + ': ' + format(datum.total, ',') + ' users'"
+            },
+            "cursor": {"value": "pointer"}
+          }
+        }
+      },
+  
+      {
+        "type": "text",
+        "from": {"data": "nodePositions"},
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {"field": "name"},
+            "fontSize": {"value": 11},
+            "fontWeight": {"value": "bold"},
+            "fill": {"value": "#333"},
+            "baseline": {"value": "middle"},
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+  
+      {
+        "type": "text",
+        "from": {"data": "nodePositions"},
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 13"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 22 ? format(datum.total, ',') + ' users' : ''"
+            },
+            "fontSize": {"value": 9},
+            "fill": {"value": "#888"},
+            "baseline": {"value": "middle"},
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+  
+      {
+        "type": "text",
+        "from": {"data": "depthLabelsData"},
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "x": {"signal": "scale('x', datum.depth) + nodeWidth / 2"},
+            "y": {"signal": "height + 25"},
+            "text": {"field": "label"},
+            "fontSize": {"value": 12},
+            "fontWeight": {"value": "bold"},
+            "fill": {"value": "#555"},
+            "baseline": {"value": "top"},
+            "align": {"value": "center"}
+          }
+        }
+      },
+  
+      {
+        "type": "group",
+        "data": [
+          {
+            "name": "showResetData",
+            "values": [{}],
+            "transform": [{"type": "filter", "expr": "selectedNode"}]
+          }
+        ],
+        "encode": {
+          "enter": {
+            "xc": {"signal": "width / 2"},
+            "y": {"value": -35},
+            "width": {"value": 100},
+            "height": {"value": 26}
+          }
+        },
+        "marks": [
+          {
+            "type": "group",
+            "name": "resetBtn",
+            "from": {"data": "showResetData"},
+            "encode": {
+              "enter": {
+                "cornerRadius": {"value": 5},
+                "fill": {"value": "#f5f5f5"},
+                "stroke": {"value": "#bbb"},
+                "strokeWidth": {"value": 1.5},
+                "height": {"field": {"group": "height"}},
+                "width": {"field": {"group": "width"}},
+                "cursor": {"value": "pointer"}
+              },
+              "update": {"opacity": {"value": 1}},
+              "hover": {"opacity": {"value": 0.7}}
+            },
+            "marks": [
+              {
+                "type": "text",
+                "interactive": false,
+                "encode": {
+                  "enter": {
+                    "xc": {"field": {"group": "width"}, "mult": 0.5},
+                    "yc": {"field": {"group": "height"}, "mult": 0.5, "offset": 1},
+                    "align": {"value": "center"},
+                    "baseline": {"value": "middle"},
+                    "fontWeight": {"value": "bold"},
+                    "fontSize": {"value": 11},
+                    "text": {"value": "Show All"},
+                    "fill": {"value": "#555"}
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+  
+    "title": {
+      "text": "Sankey E-commerce Conversion Funnel",
+      "subtitle": "Hover to highlight  |  Click node to focus  |  Drag slider to filter by volume",
+      "fontSize": 16,
+      "subtitleFontSize": 11,
+      "subtitleColor": "#999",
+      "anchor": "start"
+    }
+  }

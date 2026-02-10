@@ -1,0 +1,68 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "57_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/57_health care diabetes_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Is high blood sugar related to pregnancy?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Regardless of whether one is pregnant or not, and regardless of the duration of pregnancy, the distribution pattern of high blood sugar is consistent. Therefore, it is believed that the two are unrelated."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "change the encoding to match the question"
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "change the encoding to match the question"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Pregnancies",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Outcome",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Pregnancies",
+            "y": "Outcome",
+            "color": "Outcome"
+          }
+        }
+      }
+    }
+  ]
+}

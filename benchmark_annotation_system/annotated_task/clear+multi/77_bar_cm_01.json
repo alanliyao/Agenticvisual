@@ -1,0 +1,76 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "77_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/77_gym_bar_sum.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First sort all workout types by total mean fat percentage from highest to lowest, then filter to keep only the top two workout types and find the numeric difference between their total mean fat percentage values.\n",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "0.",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sorting highlights which workout types are associated with higher or lower overall mean fat percentage at a glance."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categories",
+            "reasoning": "Both top workout types show similar proportional contributions from low, middle, and high experience levels."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending",
+                  "by_subcategory": "3"
+                }
+              }
+            },
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "HIIT",
+                    "Yoga"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"HIIT\",\"Yoga\"], datum['Workout_Type']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

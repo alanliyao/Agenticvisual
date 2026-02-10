@@ -1,0 +1,53 @@
+{
+  "task_type": "vague_single",
+  "task_id": "85_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/85_supply_chain_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "By changing the stacking order to explore which customer demographics has the most balanced consumption structure.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Customer demographics equals unknown."
+        },
+        "key_insights": [
+          "The mean of price of products from the \"Unknown\" group is the most evenly distributed."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Use tools to switch to the group mode and analyze the differences in product types among various customer demographics."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Customer demographics",
+            "y": "Price",
+            "color": "Product type"
+          }
+        }
+      }
+    }
+  ]
+}

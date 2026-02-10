@@ -1,0 +1,69 @@
+{
+  "task_type": "clear_single",
+  "task_id": "91_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/91_supply_chain_data_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "zoom to see what product type occurs the most frequently in the 55-60 price level?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "haircare",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the area of 55-60 price level,and we can see there is one skincare point and two haircare points."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    55.166669845581055,
+                    59.94444592793783
+                  ],
+                  "y_range": [
+                    0,
+                    9941.666793823242
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              55.166669845581055,
+              59.94444592793783
+            ],
+            "y": [
+              0,
+              9941.666793823242
+            ]
+          },
+          "encoding": {
+            "x": "Price",
+            "y": "Revenue generated",
+            "color": "Product type"
+          }
+        }
+      }
+    }
+  ]
+}

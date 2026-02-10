@@ -1,0 +1,58 @@
+{
+  "task_type": "vague_single",
+  "task_id": "57_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/57_health care diabetes_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "After you display the regression line, do you think this trend line can effectively depict the relationship between DiabetesPedigreeFunction and Glucose?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Although the regression line rises from approximately 115 to 145, presenting a seemingly positive trend on the surface, this is merely a visual illusion caused by the \"pulling up\" of a few extreme points with high DiabetesPedigreeFunction and high Glucose; due to the highly dispersed and lack of monotonic structure of the overall scatter plot, the Spearman correlation coefficient is only 0.088, indicating that there is actually no meaningful monotonic relationship between the two variables. Therefore, this regression line does not truly reflect the relationship between the variables."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_regression",
+            "reasoning": "get the regression"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "linear"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "point",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

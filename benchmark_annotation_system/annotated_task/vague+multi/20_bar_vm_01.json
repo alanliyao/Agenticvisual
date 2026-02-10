@@ -1,0 +1,84 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "20_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/20_ign_scores_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Filter the charts, focusing on home game consoles. Then further narrow down the scope to only those platforms with high scores, and examine what common features they share.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The platforms with higher mean of RPG are all very popular and have new and user-friendly products."
+        },
+        "key_insights": [
+          "Select the household game consoles with generally high ratings",
+          "The higher-ranked ones are all very popular and innovative products."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "It was discovered that the home game consoles received high ratings. Tools were used to select and study them."
+          },
+          {
+            "iteration": 2,
+            "tool": "sort_bars",
+            "reasoning": "Using tools to study the common characteristics of the higher-ranked ones."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Dreamcast",
+                    "PC",
+                    "Nintendo 3DS",
+                    "Nintendo 64",
+                    "Nintendo DS",
+                    "Nintendo DSi",
+                    "Game Boy Advance",
+                    "Game Boy Color",
+                    "GameCube"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "RPG",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Dreamcast\",\"PC\",\"Nintendo 3DS\",\"Nintendo 64\",\"Nintendo DS\",\"Nintendo DSi\",\"Game Boy Advance\",\"Game Boy Color\",\"GameCube\"], datum['Platform']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

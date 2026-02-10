@@ -1,0 +1,80 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "74_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/74_StudentsPerformance_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which kind of student have highest mean math score in group B",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "parental level of education is bachelor's degree",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "We focus on only group B's mean math score"
+          },
+          {
+            "iteration": 2,
+            "tool": "expand_stack",
+            "reasoning": "We want to compare different kinds of students' mean math score directly."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "group C",
+                    "group A",
+                    "group D",
+                    "group E"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "expand_stack",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "category": "group B"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "parental level of education",
+            "y": "math score",
+            "color": "parental level of education"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"group C\",\"group A\",\"group D\",\"group E\"], datum['race/ethnicity']) < 0"
+            },
+            {
+              "filter": "datum['race/ethnicity'] == \"group B\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

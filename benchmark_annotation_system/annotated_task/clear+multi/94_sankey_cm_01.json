@@ -1,0 +1,71 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "94_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/94_samkey_retail.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "filter the flow to retain only the Fresh Food category, then reorder the nodes in the acquisition channel layer by their GMV contribution in descending order to find which channel is the top contributor.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The Fresh Supermarket channel is the top contributor to the Fresh Food category’s GMV.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The view now shows only the acquisition channels feeding into Fresh Food, with overlapping flows.",
+          "The Fresh Supermarket channel moves to the top of the acquisition layer, followed by Live Streaming, Community Group, and Brand Ads."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "The first filter isolates the Fresh Food category to focus the analysis on its acquisition sources."
+          },
+          {
+            "iteration": 2,
+            "tool": "reorder_nodes_in_layer",
+            "reasoning": "the second step of sorting by GMV clarifies the ranking of channel contributions."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Fresh Food"
+                }
+              }
+            },
+            {
+              "tool": "reorder_nodes_in_layer",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "depth": 0,
+                  "sort_by": "value_asc"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

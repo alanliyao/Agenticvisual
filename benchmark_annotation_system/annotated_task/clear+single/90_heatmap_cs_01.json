@@ -1,0 +1,48 @@
+{
+  "task_type": "clear_single",
+  "task_id": "90_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/89_Sleep_health_and_lifestyle_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Filter the cell at the intersection of Normal Weight BMI category and Stress Level 3 to get the precise mean sleep duration value for this subgroup.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "8",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The deep blue color of the cell directly corresponds to the peak value on the color legend."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "reset_view",
+            "reasoning": "Filtering the target cell is essential to move beyond rough color-scale estimation and obtain the exact mean sleep duration"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "reset_view",
+              "param_eval": {}
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Stress Level",
+            "y": "BMI Category",
+            "color": "Sleep Duration"
+          }
+        }
+      }
+    }
+  ]
+}

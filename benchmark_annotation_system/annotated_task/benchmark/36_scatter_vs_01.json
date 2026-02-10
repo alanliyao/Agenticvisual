@@ -1,0 +1,55 @@
+{
+  "task_type": "vague_single",
+  "task_id": "36_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/36_cancer_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Use identify_clusters to conduct clustering analysis, then describe the characteristics of the cluster with the highest Radius mean values.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": null,
+          "alternatives": []
+        },
+        "key_insights": [
+          "The orange cluster contains the highest Radius mean values, ranging from approximately 15 to 28.",
+          "Its Texture mean values fall in the mid to high range, between 15 and 35.",
+          "The cluster shows a positive correlation: as Radius mean increases, Texture mean tends to increase as well."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "identify_clusters",
+            "reasoning": "The cluster with the highest Radius mean values (orange cluster) has Radius mean ranging from 15 to 28 and Texture mean ranging from 15 to 35. It shows a positive correlation between the two metrics and is spatially distinct from the cluster with the lowest Texture mean. This distinct grouping suggests high Radius mean values define a unique subset of tumor data points."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "numeric",
+                "param": "n_clusters",
+                "target": 3,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Radius (mean)",
+            "y": "Texture (mean)",
+            "color": "cluster_3"
+          }
+        }
+      }
+    }
+  ]
+}

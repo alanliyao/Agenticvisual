@@ -1,0 +1,85 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "108_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/108_insurance_sankey.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "Which claim processing paths are most likely to result in delayed payment at the later stage of the process?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Complex manual, investigation - field inspection - medium risk - partial payout - delayed payment."
+        },
+        "key_insights": [
+          "Partial payout is more likely to result in delayed payment.",
+          "Delayed Payments mostly come from the Medium Risk category.",
+          "Medium Risk is mainly introduced by Complex Manual and Investigation."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Use tools to activate the \"delayed payment\" node and analyze its source."
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Use tools to activate the \"partial payout\" node and analyze its source."
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Use tools to activate the \"medium risk\" node and analyze its source."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Delayed Payment"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Partial Payout"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Medium Risk"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

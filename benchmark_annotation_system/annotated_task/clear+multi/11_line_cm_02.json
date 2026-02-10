@@ -1,0 +1,78 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "11_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/11_apple_time_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which products have maintained a steady trend from 2021 to 2024?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "AirPods",
+          "alternatives": []
+        },
+        "key_insights": [
+          "it seems that one three lines had stable step",
+          "only the line of AirPods is stable"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "Zoomed to time range: 2021 to 2024,and then observe the lines"
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_trend",
+            "reasoning": "Added stable regression trend line,and only one line fits it."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2021",
+                  "end": "2024"
+                }
+              }
+            },
+            {
+              "tool": "highlight_trend",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "trend_type": "stable"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

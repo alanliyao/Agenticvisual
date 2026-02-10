@@ -1,0 +1,6124 @@
+{
+  "filename": "68_vitamin_deficiency_disease_dataset_parallel.json",
+  "spec_index": 66,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Parallel Coordinates Plot",
+    "width": 800,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2727272727272727
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.43397129186602873
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.8444976076555024
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3167464114832536
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.42296650717703355
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.6148325358851675
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3167464114832536
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.39712918660287083
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.44880382775119615
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.32057416267942584
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.6267942583732058
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.28086124401913876
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.408133971291866
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.1631578947368421
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5435406698564593
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5282296650717704
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.522488038277512
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.7751196172248804
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.322488038277512
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.17416267942583732
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2583732057416268
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.03253588516746412
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.34210526315789475
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2684210526315789
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.23779904306220098
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5717703349282297
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4019138755980861
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.41866028708133973
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.28373205741626795
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.361244019138756
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.38229665071770336
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.06650717703349282
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.26889952153110047
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2799043062200957
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.38421052631578945
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.38947368421052636
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5803827751196173
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5904306220095694
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3803827751196172
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.32488038277511966
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.26889952153110047
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3062200956937799
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.22679425837320574
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5062200956937799
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3660287081339713
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.17894736842105263
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2985645933014354
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4717703349282296
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4904306220095694
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5425837320574163
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4148325358851675
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.28708133971291866
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5444976076555024
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.638755980861244
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.27129186602870814
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2952153110047847
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5732057416267943
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.376555023923445
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2727272727272727
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.37559808612440193
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5019138755980862
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.16028708133971292
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5382775119617225
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3952153110047847
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.30526315789473685
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.7952153110047846
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.18516746411483254
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.19712918660287082
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3066985645933014
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4679425837320574
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.49760765550239233
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.18612440191387558
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.7650717703349282
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.30239234449760766
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.8980861244019138
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.33540669856459326
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3736842105263158
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3813397129186603
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.19712918660287082
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2574162679425837
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3167464114832536
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4105263157894737
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.45215311004784686
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.35119617224880384
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3382775119617225
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.18708133971291865
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.35167464114832536
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5746411483253588
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2143540669856459
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.1416267942583732
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3650717703349282
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.20717703349282296
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4574162679425837
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.18516746411483254
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2803827751196172
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3708133971291866
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3157894736842105
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.28660287081339714
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.31483253588516746
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4363636363636364
+        },
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.22291666666666668
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.16666666666666666
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.7845833333333334
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.46041666666666664
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3091666666666667
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.35083333333333333
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.30041666666666667
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2866666666666667
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2345833333333333
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20541666666666666
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.49041666666666667
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.18125
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.455
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3891666666666667
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.22624999999999998
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.38958333333333334
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.6883333333333332
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2075
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.29375
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.04583333333333333
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.22166666666666668
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.38625000000000004
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.19291666666666665
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3695833333333333
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2658333333333333
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.49333333333333335
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3295833333333333
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.34958333333333336
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.19625
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.21416666666666667
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5225000000000001
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20500000000000002
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.22291666666666668
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.26166666666666666
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3725
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.47250000000000003
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.48666666666666664
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3675
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3875
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.42
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.19
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.45875
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2504166666666666
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.41291666666666665
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.41208333333333336
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.17541666666666667
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.38833333333333336
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.41208333333333336
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5279166666666666
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.45666666666666667
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.4845833333333333
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.39916666666666667
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.425
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.6058333333333333
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.40625
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.26208333333333333
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.45625
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3125
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.29624999999999996
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.6458333333333334
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5700000000000001
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20208333333333334
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3125
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.16333333333333336
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.1675
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.51375
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5087499999999999
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.16333333333333336
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.32125
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3733333333333333
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2845833333333333
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20124999999999998
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3804166666666667
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.11666666666666667
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.23083333333333336
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.36041666666666666
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20958333333333332
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.18125
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.4083333333333333
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.6799999999999999
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.19041666666666668
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3575
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.4858333333333333
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3775
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.41333333333333333
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2845833333333333
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.25958333333333333
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5795833333333333
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.32125
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2841666666666667
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.49249999999999994
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2758333333333333
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3233333333333333
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.17541666666666667
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2075
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.13874999999999998
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.27416666666666667
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5345833333333334
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.11083333333333334
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.13333333333333333
+        },
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14594192107222637
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3224125093075204
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12807148175725985
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18912881608339535
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12379002233804913
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.11753536857781086
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3332092330603127
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.11466865227103498
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1407297096053611
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14333581533879372
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.08562918838421443
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.0888682055100521
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.34661206254653754
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18931496649292628
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18279970215934474
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.17408786299329856
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.515524944154877
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1787043931496649
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.22673119880863737
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.11831720029784062
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.10554728220402082
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1947133283693224
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.17163067758749068
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.13916604616530154
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.25502606105733433
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14776619508562916
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.22151898734177214
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.02684288905435592
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12360387192851824
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18354430379746833
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.5135889798957558
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1112807148175726
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.06254653760238271
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1292628443782576
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.23790022338049144
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.6220029784065525
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.2590469099032018
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.6012285927029039
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.20699925539836186
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.2827624720774385
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.10349962769918092
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.2159344750558451
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.30640357408786295
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.21630677587490688
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1753536857781087
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.20774385703648546
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.24609084139985105
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.5234549516008935
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.4329858525688756
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.16861504095309007
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3751675353685778
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.30022338049143704
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.20104244229337304
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.09642591213700669
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.34363365599404316
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.17092330603127323
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1308265078183172
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12248696947133282
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.28804914370811613
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.16221146686522708
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1965748324646314
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.09251675353685777
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.32315711094564403
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.15793000744601635
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.04821295606850334
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.07583767684288906
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.23231571109456442
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.11020104244229337
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12613551749813848
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.10945644080416976
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.4661578555472822
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14724497393894265
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.9796723752792257
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.09408041697691732
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.23376768428890538
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.19802680565897243
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.07557706626954577
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.04456440804169769
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3277364110201042
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.7531645569620253
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.2181682799702159
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.20819061801935962
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.35469099032017865
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.5687639612807148
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.30934475055845123
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.16455696202531644
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3819434102755026
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.0552494415487714
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18544303797468353
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14285182427401338
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3993670886075949
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.17930007446016377
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.4232315711094564
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.06626954579300075
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.19210722263588978
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.038830975428145925
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.07974683544303797
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14817572598659715
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.19843633655994042
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.4811615785554728
+        },
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.30711775043936734
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.710896309314587
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.36950790861159927
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23242530755711774
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3633567662565905
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4108084358523726
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.09578207381370826
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.14718804920913883
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.6726713532513181
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2249560632688928
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5536028119507909
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.1836555360281195
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.24692442882249563
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.10061511423550087
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2627416520210896
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4266256590509666
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.47231985940246046
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.633567662565905
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.14718804920913883
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.39015817223198596
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2614235500878735
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.20650263620386644
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23681898066783832
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3295254833040422
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2609841827768014
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.47319859402460457
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2702108963093146
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4305799648506151
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.18629173989455183
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.15421792618629174
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.28690685413005274
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.1265377855887522
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.20826010544815465
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23022847100175747
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.36687170474516695
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.44727592267135324
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.45386643233743407
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5698594024604569
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.26625659050966605
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.46133567662565905
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.19903339191564146
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.39411247803163446
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.19376098418277682
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5861159929701231
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.44815465729349735
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.26362038664323373
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3532513181019333
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5562390158172232
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.28383128295254834
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5474516695957821
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2565905096660809
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.616871704745167
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.46265377855887524
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.44859402460456943
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23418277680140598
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.21221441124780316
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4437609841827768
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2381370826010545
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.21704745166959577
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.6142355008787347
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3479789103690686
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.30931458699472764
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.38971880492091393
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.49165202108963096
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3343585237258348
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5272407732864675
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5571177504393674
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.19332161687170474
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.22934973637961337
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.38884007029876977
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.47978910369068545
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.31151142355008793
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.35588752196836554
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23857644991212654
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.37170474516695956
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.29481546572934975
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3563268892794376
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.24253075571177507
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.15992970123022848
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4600175746924429
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2873462214411248
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.19024604569420034
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.36906854130052724
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4323374340949034
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.31985940246045697
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.1946397188049209
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.25834797891036904
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.16344463971880493
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.6146748681898068
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.10588752196836557
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.6709138840070299
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.148506151142355
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5035149384885764
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2680140597539543
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2728471001757469
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.30931458699472764
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2631810193321617
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3132688927943761
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.1616871704745167
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.37346221441124783
+        },
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.016695205479452056
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.351027397260274
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.08690068493150685
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2303082191780822
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1579623287671233
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4186643835616438
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.21404109589041095
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.03467465753424658
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.14554794520547945
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.14554794520547945
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2303082191780822
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.22602739726027396
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.25428082191780826
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1601027397260274
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.05821917808219179
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.24571917808219182
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4785958904109589
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.09546232876712328
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3142123287671233
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.0740582191780822
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.13741438356164384
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.16909246575342465
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.20419520547945208
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.15325342465753425
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.17594178082191783
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.06335616438356165
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3133561643835617
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4088184931506849
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.19777397260273974
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.11001712328767124
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2863869863013699
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.17808219178082194
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1309931506849315
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2585616438356165
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.5877568493150686
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.7011986301369864
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.488013698630137
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1673801369863014
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4426369863013699
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.05993150684931507
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.454195205479452
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2649828767123288
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.08647260273972603
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.11044520547945205
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2851027397260274
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2928082191780822
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.33261986301369867
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2204623287671233
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.288527397260274
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.19135273972602743
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.476027397260274
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.17080479452054795
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.10830479452054793
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.23715753424657537
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2833904109589041
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.389554794520548
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2106164383561644
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.03381849315068493
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.15582191780821916
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.023116438356164386
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3026541095890411
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.6472602739726027
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.30222602739726023
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.12457191780821919
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.026969178082191785
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.040239726027397255
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.18065068493150688
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1459760273972603
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.12071917808219179
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.8377568493150684
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3959760273972603
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.5042808219178082
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.030393835616438363
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4101027397260274
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.10231164383561643
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.011986301369863017
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.18407534246575344
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2752568493150685
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3219178082191781
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1579623287671233
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.08090753424657533
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3809931506849315
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4777397260273972
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2607020547945206
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.14383561643835618
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4456335616438356
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.06720890410958905
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.03424657534246575
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3009417808219178
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2461472602739726
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2684075342465754
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.05179794520547946
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.27140410958904115
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.19263698630136986
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.07020547945205478
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.0586472602739726
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.14940068493150685
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3617294520547945
+        }
+      ]
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "opacity": 0.5,
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "dimension",
+            "type": "nominal",
+            "sort": [
+              "vitamin_a_percent_rda",
+              "vitamin_c_percent_rda",
+              "vitamin_d_percent_rda",
+              "vitamin_e_percent_rda",
+              "vitamin_b12_percent_rda"
+            ],
+            "axis": {
+              "title": null,
+              "labelAngle": 0
+            }
+          },
+          "y": {
+            "field": "normalized_value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Normalized Value"
+            }
+          },
+          "detail": {
+            "field": "_index",
+            "type": "nominal"
+          },
+          "color": {
+            "field": "gender",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Parallel Coordinates Plot",
+    "width": 800,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2727272727272727
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.43397129186602873
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.8444976076555024
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3167464114832536
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.42296650717703355
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.6148325358851675
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3167464114832536
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.39712918660287083
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.44880382775119615
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.32057416267942584
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.6267942583732058
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.28086124401913876
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.408133971291866
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.1631578947368421
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5435406698564593
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5282296650717704
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.522488038277512
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.7751196172248804
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.322488038277512
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.17416267942583732
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2583732057416268
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.03253588516746412
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.34210526315789475
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2684210526315789
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.23779904306220098
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5717703349282297
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4019138755980861
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.41866028708133973
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.28373205741626795
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.361244019138756
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.38229665071770336
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.06650717703349282
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.26889952153110047
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2799043062200957
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.38421052631578945
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.38947368421052636
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5803827751196173
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5904306220095694
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3803827751196172
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.32488038277511966
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.26889952153110047
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3062200956937799
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.22679425837320574
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5062200956937799
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3660287081339713
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.17894736842105263
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2985645933014354
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4717703349282296
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4904306220095694
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5425837320574163
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4148325358851675
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.28708133971291866
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5444976076555024
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.638755980861244
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.27129186602870814
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2952153110047847
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5732057416267943
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.376555023923445
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2727272727272727
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.37559808612440193
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5019138755980862
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.16028708133971292
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5382775119617225
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3952153110047847
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.30526315789473685
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.7952153110047846
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.18516746411483254
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.19712918660287082
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3066985645933014
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4679425837320574
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.49760765550239233
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.18612440191387558
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.7650717703349282
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.30239234449760766
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.8980861244019138
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.33540669856459326
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3736842105263158
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3813397129186603
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.19712918660287082
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2574162679425837
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3167464114832536
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4105263157894737
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.45215311004784686
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.35119617224880384
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3382775119617225
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.18708133971291865
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.35167464114832536
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.5746411483253588
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2143540669856459
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.1416267942583732
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3650717703349282
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.20717703349282296
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4574162679425837
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.18516746411483254
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.2803827751196172
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3708133971291866
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.3157894736842105
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.28660287081339714
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.31483253588516746
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_a_percent_rda",
+          "normalized_value": 0.4363636363636364
+        },
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.22291666666666668
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.16666666666666666
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.7845833333333334
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.46041666666666664
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3091666666666667
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.35083333333333333
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.30041666666666667
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2866666666666667
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2345833333333333
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20541666666666666
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.49041666666666667
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.18125
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.455
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3891666666666667
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.22624999999999998
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.38958333333333334
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.6883333333333332
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2075
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.29375
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.04583333333333333
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.22166666666666668
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.38625000000000004
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.19291666666666665
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3695833333333333
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2658333333333333
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.49333333333333335
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3295833333333333
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.34958333333333336
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.19625
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.21416666666666667
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5225000000000001
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20500000000000002
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.22291666666666668
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.26166666666666666
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3725
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.47250000000000003
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.48666666666666664
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3675
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3875
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.42
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.19
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.45875
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2504166666666666
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.41291666666666665
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.41208333333333336
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.17541666666666667
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.38833333333333336
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.41208333333333336
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5279166666666666
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.45666666666666667
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.4845833333333333
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.39916666666666667
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.425
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.6058333333333333
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.40625
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.26208333333333333
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.45625
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3125
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.29624999999999996
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.6458333333333334
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5700000000000001
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20208333333333334
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3125
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.16333333333333336
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.1675
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.51375
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5087499999999999
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.16333333333333336
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.32125
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3733333333333333
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2845833333333333
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20124999999999998
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3804166666666667
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.11666666666666667
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.23083333333333336
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.36041666666666666
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.20958333333333332
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.18125
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.4083333333333333
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.6799999999999999
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.19041666666666668
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3575
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.4858333333333333
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3775
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.41333333333333333
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2845833333333333
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.25958333333333333
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5795833333333333
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.32125
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2841666666666667
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.49249999999999994
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2758333333333333
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.3233333333333333
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.17541666666666667
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.2075
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.13874999999999998
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.27416666666666667
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.5345833333333334
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.11083333333333334
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_c_percent_rda",
+          "normalized_value": 0.13333333333333333
+        },
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14594192107222637
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3224125093075204
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12807148175725985
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18912881608339535
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12379002233804913
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.11753536857781086
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3332092330603127
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.11466865227103498
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1407297096053611
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14333581533879372
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.08562918838421443
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.0888682055100521
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.34661206254653754
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18931496649292628
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18279970215934474
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.17408786299329856
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.515524944154877
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1787043931496649
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.22673119880863737
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.11831720029784062
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.10554728220402082
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1947133283693224
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.17163067758749068
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.13916604616530154
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.25502606105733433
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14776619508562916
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.22151898734177214
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.02684288905435592
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12360387192851824
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18354430379746833
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.5135889798957558
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1112807148175726
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.06254653760238271
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1292628443782576
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.23790022338049144
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.6220029784065525
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.2590469099032018
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.6012285927029039
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.20699925539836186
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.2827624720774385
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.10349962769918092
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.2159344750558451
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.30640357408786295
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.21630677587490688
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1753536857781087
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.20774385703648546
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.24609084139985105
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.5234549516008935
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.4329858525688756
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.16861504095309007
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3751675353685778
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.30022338049143704
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.20104244229337304
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.09642591213700669
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.34363365599404316
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.17092330603127323
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1308265078183172
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12248696947133282
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.28804914370811613
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.16221146686522708
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.1965748324646314
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.09251675353685777
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.32315711094564403
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.15793000744601635
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.04821295606850334
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.07583767684288906
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.23231571109456442
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.11020104244229337
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.12613551749813848
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.10945644080416976
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.4661578555472822
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14724497393894265
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.9796723752792257
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.09408041697691732
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.23376768428890538
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.19802680565897243
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.07557706626954577
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.04456440804169769
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3277364110201042
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.7531645569620253
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.2181682799702159
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.20819061801935962
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.35469099032017865
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.5687639612807148
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.30934475055845123
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.16455696202531644
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3819434102755026
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.0552494415487714
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.18544303797468353
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14285182427401338
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.3993670886075949
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.17930007446016377
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.4232315711094564
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.06626954579300075
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.19210722263588978
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.038830975428145925
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.07974683544303797
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.14817572598659715
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.19843633655994042
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_d_percent_rda",
+          "normalized_value": 0.4811615785554728
+        },
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.30711775043936734
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.710896309314587
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.36950790861159927
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23242530755711774
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3633567662565905
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4108084358523726
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.09578207381370826
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.14718804920913883
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.6726713532513181
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2249560632688928
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5536028119507909
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.1836555360281195
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.24692442882249563
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.10061511423550087
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2627416520210896
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4266256590509666
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.47231985940246046
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.633567662565905
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.14718804920913883
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.39015817223198596
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2614235500878735
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.20650263620386644
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23681898066783832
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3295254833040422
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2609841827768014
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.47319859402460457
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2702108963093146
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4305799648506151
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.18629173989455183
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.15421792618629174
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.28690685413005274
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.1265377855887522
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.20826010544815465
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23022847100175747
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.36687170474516695
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.44727592267135324
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.45386643233743407
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5698594024604569
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.26625659050966605
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.46133567662565905
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.19903339191564146
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.39411247803163446
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.19376098418277682
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5861159929701231
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.44815465729349735
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.26362038664323373
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3532513181019333
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5562390158172232
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.28383128295254834
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5474516695957821
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2565905096660809
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.616871704745167
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.46265377855887524
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.44859402460456943
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23418277680140598
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.21221441124780316
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4437609841827768
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2381370826010545
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.21704745166959577
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.6142355008787347
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3479789103690686
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.30931458699472764
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.38971880492091393
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.49165202108963096
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3343585237258348
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5272407732864675
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5571177504393674
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.19332161687170474
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.22934973637961337
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.38884007029876977
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.47978910369068545
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.31151142355008793
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.35588752196836554
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.23857644991212654
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.37170474516695956
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.29481546572934975
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3563268892794376
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.24253075571177507
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.15992970123022848
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4600175746924429
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2873462214411248
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.19024604569420034
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.36906854130052724
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.4323374340949034
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.31985940246045697
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.1946397188049209
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.25834797891036904
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.16344463971880493
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.6146748681898068
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.10588752196836557
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.6709138840070299
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.148506151142355
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.5035149384885764
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2680140597539543
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2728471001757469
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.30931458699472764
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.2631810193321617
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.3132688927943761
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.1616871704745167
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_e_percent_rda",
+          "normalized_value": 0.37346221441124783
+        },
+        {
+          "_index": 56,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.016695205479452056
+        },
+        {
+          "_index": 65,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.351027397260274
+        },
+        {
+          "_index": 75,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.08690068493150685
+        },
+        {
+          "_index": 99,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2303082191780822
+        },
+        {
+          "_index": 101,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1579623287671233
+        },
+        {
+          "_index": 115,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4186643835616438
+        },
+        {
+          "_index": 141,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.21404109589041095
+        },
+        {
+          "_index": 178,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.03467465753424658
+        },
+        {
+          "_index": 189,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.14554794520547945
+        },
+        {
+          "_index": 234,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.14554794520547945
+        },
+        {
+          "_index": 255,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2303082191780822
+        },
+        {
+          "_index": 373,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.22602739726027396
+        },
+        {
+          "_index": 410,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.25428082191780826
+        },
+        {
+          "_index": 449,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1601027397260274
+        },
+        {
+          "_index": 456,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.05821917808219179
+        },
+        {
+          "_index": 522,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.24571917808219182
+        },
+        {
+          "_index": 658,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4785958904109589
+        },
+        {
+          "_index": 692,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.09546232876712328
+        },
+        {
+          "_index": 854,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3142123287671233
+        },
+        {
+          "_index": 880,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.0740582191780822
+        },
+        {
+          "_index": 886,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.13741438356164384
+        },
+        {
+          "_index": 891,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.16909246575342465
+        },
+        {
+          "_index": 986,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.20419520547945208
+        },
+        {
+          "_index": 991,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.15325342465753425
+        },
+        {
+          "_index": 1068,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.17594178082191783
+        },
+        {
+          "_index": 1092,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.06335616438356165
+        },
+        {
+          "_index": 1112,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3133561643835617
+        },
+        {
+          "_index": 1161,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4088184931506849
+        },
+        {
+          "_index": 1182,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.19777397260273974
+        },
+        {
+          "_index": 1213,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.11001712328767124
+        },
+        {
+          "_index": 1336,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2863869863013699
+        },
+        {
+          "_index": 1438,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.17808219178082194
+        },
+        {
+          "_index": 1466,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0
+        },
+        {
+          "_index": 1478,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1309931506849315
+        },
+        {
+          "_index": 1496,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2585616438356165
+        },
+        {
+          "_index": 1520,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.5877568493150686
+        },
+        {
+          "_index": 1547,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.7011986301369864
+        },
+        {
+          "_index": 1552,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.488013698630137
+        },
+        {
+          "_index": 1625,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1673801369863014
+        },
+        {
+          "_index": 1649,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4426369863013699
+        },
+        {
+          "_index": 1667,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.05993150684931507
+        },
+        {
+          "_index": 1689,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.454195205479452
+        },
+        {
+          "_index": 1697,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2649828767123288
+        },
+        {
+          "_index": 1706,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.08647260273972603
+        },
+        {
+          "_index": 1822,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.11044520547945205
+        },
+        {
+          "_index": 1855,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2851027397260274
+        },
+        {
+          "_index": 1889,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2928082191780822
+        },
+        {
+          "_index": 1927,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.33261986301369867
+        },
+        {
+          "_index": 1932,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2204623287671233
+        },
+        {
+          "_index": 1962,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.288527397260274
+        },
+        {
+          "_index": 1982,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.19135273972602743
+        },
+        {
+          "_index": 2063,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.476027397260274
+        },
+        {
+          "_index": 2065,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.17080479452054795
+        },
+        {
+          "_index": 2121,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.10830479452054793
+        },
+        {
+          "_index": 2140,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.23715753424657537
+        },
+        {
+          "_index": 2158,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2833904109589041
+        },
+        {
+          "_index": 2236,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.389554794520548
+        },
+        {
+          "_index": 2317,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2106164383561644
+        },
+        {
+          "_index": 2344,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.03381849315068493
+        },
+        {
+          "_index": 2466,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.15582191780821916
+        },
+        {
+          "_index": 2479,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.023116438356164386
+        },
+        {
+          "_index": 2480,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3026541095890411
+        },
+        {
+          "_index": 2489,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.6472602739726027
+        },
+        {
+          "_index": 2539,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.30222602739726023
+        },
+        {
+          "_index": 2586,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.12457191780821919
+        },
+        {
+          "_index": 2683,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.026969178082191785
+        },
+        {
+          "_index": 2695,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.040239726027397255
+        },
+        {
+          "_index": 2755,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.18065068493150688
+        },
+        {
+          "_index": 2780,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1459760273972603
+        },
+        {
+          "_index": 2808,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.12071917808219179
+        },
+        {
+          "_index": 2856,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.8377568493150684
+        },
+        {
+          "_index": 2880,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3959760273972603
+        },
+        {
+          "_index": 2889,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.5042808219178082
+        },
+        {
+          "_index": 2912,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.030393835616438363
+        },
+        {
+          "_index": 2913,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4101027397260274
+        },
+        {
+          "_index": 2920,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.10231164383561643
+        },
+        {
+          "_index": 2974,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.011986301369863017
+        },
+        {
+          "_index": 2993,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.18407534246575344
+        },
+        {
+          "_index": 3002,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2752568493150685
+        },
+        {
+          "_index": 3044,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3219178082191781
+        },
+        {
+          "_index": 3135,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.1579623287671233
+        },
+        {
+          "_index": 3223,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.08090753424657533
+        },
+        {
+          "_index": 3263,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3809931506849315
+        },
+        {
+          "_index": 3277,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4777397260273972
+        },
+        {
+          "_index": 3326,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2607020547945206
+        },
+        {
+          "_index": 3385,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.14383561643835618
+        },
+        {
+          "_index": 3394,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.4456335616438356
+        },
+        {
+          "_index": 3398,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.06720890410958905
+        },
+        {
+          "_index": 3467,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0
+        },
+        {
+          "_index": 3525,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.03424657534246575
+        },
+        {
+          "_index": 3542,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3009417808219178
+        },
+        {
+          "_index": 3585,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2461472602739726
+        },
+        {
+          "_index": 3592,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.2684075342465754
+        },
+        {
+          "_index": 3709,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.05179794520547946
+        },
+        {
+          "_index": 3729,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.27140410958904115
+        },
+        {
+          "_index": 3748,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.19263698630136986
+        },
+        {
+          "_index": 3813,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.07020547945205478
+        },
+        {
+          "_index": 3887,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.0586472602739726
+        },
+        {
+          "_index": 3933,
+          "gender": "Male",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.14940068493150685
+        },
+        {
+          "_index": 3961,
+          "gender": "Female",
+          "dimension": "vitamin_b12_percent_rda",
+          "normalized_value": 0.3617294520547945
+        }
+      ]
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "opacity": 0.5,
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "dimension",
+            "type": "nominal",
+            "sort": [
+              "vitamin_a_percent_rda",
+              "vitamin_c_percent_rda",
+              "vitamin_d_percent_rda",
+              "vitamin_e_percent_rda",
+              "vitamin_b12_percent_rda"
+            ],
+            "axis": {
+              "title": null,
+              "labelAngle": 0
+            }
+          },
+          "y": {
+            "field": "normalized_value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Normalized Value"
+            }
+          },
+          "detail": {
+            "field": "_index",
+            "type": "nominal"
+          },
+          "color": {
+            "field": "gender",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "parallel",
+  "chart_meta": {
+    "chart_type": "parallel",
+    "title": "Parallel Coordinates Plot",
+    "filename": "68_vitamin_deficiency_disease_dataset_parallel.json",
+    "data_points": 500,
+    "total_points": 20000,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:50:37.532812Z"
+}

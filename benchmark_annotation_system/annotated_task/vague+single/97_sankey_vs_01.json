@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "97_sankey_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/97_sankey_hr.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Investigate which career movement paths are most strongly associated with employees being terminated.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "PIP",
+          "alternatives": []
+        },
+        "key_insights": [
+          "No employees who were promoted or made a lateral move were terminated during the 3-year period"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "This single focused exploration provides actionable insights for performance management"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Terminated"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

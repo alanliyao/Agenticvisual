@@ -1,0 +1,90 @@
+{
+  "spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Sales by Region",
+    "width": 500,
+    "height": 350,
+    "data": {
+      "values": [
+        {
+          "region": "North",
+          "product": "Electronics",
+          "sales": 1200
+        },
+        {
+          "region": "North",
+          "product": "Clothing",
+          "sales": 800
+        },
+        {
+          "region": "South",
+          "product": "Electronics",
+          "sales": 950
+        },
+        {
+          "region": "South",
+          "product": "Clothing",
+          "sales": 1100
+        },
+        {
+          "region": "East",
+          "product": "Electronics",
+          "sales": 1300
+        },
+        {
+          "region": "East",
+          "product": "Clothing",
+          "sales": 650
+        },
+        {
+          "region": "West",
+          "product": "Electronics",
+          "sales": 1100
+        },
+        {
+          "region": "West",
+          "product": "Clothing",
+          "sales": 920
+        }
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "region",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "sales",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "product",
+        "type": "nominal"
+      },
+      "xOffset": {
+        "field": "product"
+      },
+      "tooltip": [
+        {
+          "field": "region",
+          "type": "nominal"
+        },
+        {
+          "field": "sales",
+          "type": "quantitative"
+        },
+        {
+          "field": "product",
+          "type": "nominal"
+        }
+      ]
+    }
+  },
+  "meta": {
+    "chart_type": "bar",
+    "title": "Sales by Region",
+    "topic": "Business",
+    "data_points": 8
+  }
+}

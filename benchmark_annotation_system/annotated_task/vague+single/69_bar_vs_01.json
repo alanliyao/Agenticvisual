@@ -1,0 +1,55 @@
+{
+  "task_type": "vague_single",
+  "task_id": "69_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/69_top_100_linkedin_companies_2026_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "When only the top 5 companies based on the number of fans are considered, what characteristics do the industry distributions of these companies exhibit?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The top five companies are all internet-related companies and they started their layout very early. LinkedIn is like Google and Microsoft, even having the fundamental products of the internet. While companies like LinkedIn and Amazon are closely related to people's lives - one is related to companies, and the other is about shopping. And Ted provides some internet-based entertainment services, etc."
+        },
+        "key_insights": [
+          "It was discovered that they are all related to the Internet.",
+          "The products are almost all closely related to people."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_top_n",
+            "reasoning": "get the top 5 companies"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_top_n",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n": 5,
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "company",
+            "y": "followers",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

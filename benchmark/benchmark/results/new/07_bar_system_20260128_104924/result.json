@@ -1,0 +1,88 @@
+{
+  "task_id": "07_bar",
+  "model": "system",
+  "model_name": "My System",
+  "timestamp": "2026-01-28T10:49:27.458552",
+  "questions_count": 2,
+  "success_count": 0,
+  "results": [
+    {
+      "qid": "cs_01",
+      "question": "Sort the bars by total sleep_hours in descending order. Which diet_quality category has the highest total?",
+      "success": false,
+      "error": "Connection error.",
+      "answer": "",
+      "question_type": "unknown",
+      "task_type": "clear_single",
+      "key_insights": [],
+      "reasoning_rounds": [],
+      "reasoning": "",
+      "tool_calls": [],
+      "final_spec": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "title": "Bar Chart: sleep_hours by diet_quality",
+        "width": 600,
+        "height": 400,
+        "data": {
+          "_values_omitted": "2000 items"
+        },
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "field": "diet_quality",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "sleep_hours",
+            "type": "quantitative",
+            "aggregate": "mean"
+          },
+          "color": {
+            "field": "weather",
+            "type": "nominal"
+          }
+        }
+      },
+      "iterations": 0
+    },
+    {
+      "qid": "vs_01",
+      "question": "Explore the relationship between diet quality and sleep hours. What patterns do you notice?",
+      "success": false,
+      "error": "Connection error.",
+      "answer": "",
+      "question_type": "unknown",
+      "task_type": "vague_single",
+      "key_insights": [],
+      "reasoning_rounds": [],
+      "reasoning": "",
+      "tool_calls": [],
+      "final_spec": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "title": "Bar Chart: sleep_hours by diet_quality",
+        "width": 600,
+        "height": 400,
+        "data": {
+          "_values_omitted": "2000 items"
+        },
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "field": "diet_quality",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "sleep_hours",
+            "type": "quantitative",
+            "aggregate": "mean"
+          },
+          "color": {
+            "field": "weather",
+            "type": "nominal"
+          }
+        }
+      },
+      "iterations": 0
+    }
+  ]
+}

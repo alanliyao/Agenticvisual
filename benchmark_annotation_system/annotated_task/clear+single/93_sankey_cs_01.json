@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "93_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/93_sankey_financial.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Filter the traffic entries to only show those from Offline Branch/Field Sales and see which financial product it contributes to most.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Wealth Products.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "This channel has a noticeably stronger conversion to high-margin wealth management services than to payment tools."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "Filtering to focus only on Offline Branch/Field Sales eliminates noise from other channels, making its conversion patterns clear."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Offline Branch/Field Sales"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

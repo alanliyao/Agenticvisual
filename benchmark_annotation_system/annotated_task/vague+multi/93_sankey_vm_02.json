@@ -1,0 +1,130 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "93_sankey_vm_02",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/93_sankey_financial.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_05",
+      "question": "What are the characteristics of paths with a traffic flow greater than 4000? ",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "There are five paths with flow greater than 4000: two go to Consumer Credit, two go to Wealth Products, and one goes to Payment."
+        },
+        "key_insights": [
+          "there are five paths that their traffic flows are greater than 4000",
+          "Alipay/WeChat Entry flows to Consumer Credit and Payment.",
+          "Bank App Push only flows to Wealth Products.",
+          "Short Video Feed Ads only flows to Consumer Credit.",
+          "Offline Branch/Field Sales only flows to Wealth Products."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_flow",
+            "reasoning": "filter the flow wiht min value of 4000,and there only left 5."
+          },
+          {
+            "iteration": 2,
+            "tool": "color_flows",
+            "reasoning": "Alipay/WeChat Entry has two traffic flows for paths with more than 4000 traffic in the Alipay/WeChat entry."
+          },
+          {
+            "iteration": 3,
+            "tool": "color_flows",
+            "reasoning": "Bank App Push has one traffic flows for paths with more than 4000 traffic."
+          },
+          {
+            "iteration": 4,
+            "tool": "color_flows",
+            "reasoning": "Short Video Feed Ads  has one traffic flows for paths with more than 4000 traffic."
+          },
+          {
+            "iteration": 5,
+            "tool": "color_flows",
+            "reasoning": "Offline Branch/Field Sales has one traffic flows for paths with more than 4000 traffic."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_flow",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 4000
+                }
+              }
+            },
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "color": "#e74c3c",
+                  "nodes": [
+                    "Alipay/WeChat Entry"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "color": "#e74c3c",
+                  "nodes": [
+                    "Bank App Push"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "color": "#e74c3c",
+                  "nodes": [
+                    "Short Video Feed Ads",
+                    "Offline Branch/Field Sales"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "color": "#e74c3c",
+                  "nodes": [
+                    "Offline Branch/Field Sales"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

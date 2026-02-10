@@ -1,0 +1,157 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "39_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/39_insurance_parallel (1).json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_05",
+      "question": "Does age → BMI → charges show some consistent regional pattern of change?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "we can find that the east region are the same:older people have lower bmi and more charges. and for the west areas, they are the same too:no matter how old they are, their bmi is so so and have very little charges"
+        },
+        "key_insights": [
+          "it seem that have some trend in different areas",
+          "many people in this region that when they are older, the bmi lower and more charges",
+          "older people have lower bmi and use more charges",
+          "no matter how old they are, their bmi is so so and have very little charges",
+          "just like the northeast one"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "reorder_dimensions",
+            "reasoning": "change the order that make me more convenient to wathch the trend"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "watch the southeast one"
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_by_category",
+            "reasoning": "watch the northeast one"
+          },
+          {
+            "iteration": 4,
+            "tool": "filter_by_category",
+            "reasoning": "watch the northwest one"
+          },
+          {
+            "iteration": 5,
+            "tool": "filter_by_category",
+            "reasoning": "watch the southwest one"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "age",
+                    "bmi",
+                    "charges",
+                    "children"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "region",
+                  "values": [
+                    "southwest",
+                    "northwest",
+                    "northeast"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "region",
+                  "values": [
+                    "southwest",
+                    "northwest",
+                    "southeast"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "region",
+                  "values": [
+                    "southwest",
+                    "northeast",
+                    "southeast"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "region",
+                  "values": [
+                    "northwest",
+                    "northeast",
+                    "southeast"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"northwest\",\"northeast\",\"southeast\"], datum['region']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

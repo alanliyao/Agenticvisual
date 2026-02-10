@@ -1,0 +1,103 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "32_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/32_insurance_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What is the correlation coefficient between BMI and charges in the densest BMI distribution zone among non-smokers?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "0.018",
+          "tolerance": 0.005
+        },
+        "key_insights": [
+          "Most non-smokers' premiums are concentrated below 20,000, with only a small portion falling between 25,000 and 35,000.",
+          "The points are most densely clustered in the 25-30 BMI range, with some overlapping areas requiring closer inspection when magnified.",
+          "Upon magnifying the region where BMI falls between 25 and 35, it was observed that the majority of data points' charges are concentrated below 15,000.",
+          "The correlation is not readily apparent from the view.",
+          "Since the data are continuous values, the Pearson correlation coefficient was used, yielding a correlation coefficient of approximately 0.018.",
+          "Compared to the initial view, it can be inferred that BMI has a smaller impact on charges than smoking status does."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "To focus solely on the non-smoking population, we first filtered out smokers from the chart. Next, we need to use the zoom tool to focus on the BMI range between 25 and 30."
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_dense_area",
+            "reasoning": "The correlation after magnification is not particularly significant; you can calculate the correlation coefficient to examine the specific numerical values."
+          },
+          {
+            "iteration": 3,
+            "tool": "calculate_correlation",
+            "reasoning": "The correlation coefficients for the regions with the densest BMI distributions have already been obtained; no further tool invocation is required."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "list",
+                "param": "categories_to_remove",
+                "target": [
+                  "yes"
+                ]
+              }
+            },
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "list",
+                "param": "x_range",
+                "target": [
+                  25.317057291666668,
+                  34.888346354166664
+                ]
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              25.317057291666668,
+              34.888346354166664
+            ],
+            "y": [
+              157.0312499999993,
+              39746.09375
+            ]
+          },
+          "encoding": {
+            "x": "bmi",
+            "y": "charges",
+            "color": "smoker"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"yes\"], datum['smoker']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

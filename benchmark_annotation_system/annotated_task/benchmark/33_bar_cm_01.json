@@ -1,0 +1,68 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "33_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/33_bmw_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First, use the sort_bars tool to arrange bars in descending order. Then, use the toggle_stack_mode tool to switch to a stacked view. What is the dominant fuel type within the single most fuel-efficient model series?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Diesel.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The view was successfully sorted, identifying the 3 Series as the top model by total fuel efficiency.",
+          "This step achieved the goal of establishing a performance ranking.",
+          "Within the cluster for the top-ranked 3 Series, the Diesel bar is the tallest, indicating Diesel models contribute the most to its total fuel efficiency sum.",
+          "This view allows for direct comparison of fuel type dominance across different series without the need for a stacked percentage view."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "The first tool completed its objective. The view was ready for composition analysis. No need to reset at that point."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "The grouped view successfully answers the question by revealing the internal composition. The dominant fuel type for the 3 Series is Diesel. The multi-tool operation is complete."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "categorical",
+                "param": "order",
+                "target": "descending"
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "model",
+            "y": "mpg",
+            "color": "fuelType"
+          }
+        }
+      }
+    }
+  ]
+}

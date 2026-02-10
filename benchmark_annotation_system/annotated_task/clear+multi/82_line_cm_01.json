@@ -1,0 +1,83 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "82_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/82_Online Sales Data_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First, filter out the Electronics and Home Appliances lines, then zoom into the month of April to find which of the remaining categories had the highest revenue.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Sports.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "Removing the two highest-revenue categories shifts the focus to the lower-volume segments."
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_time_range",
+            "reasoning": "his allows for a precise comparison of the revenue data for the target categories within the specified time frame."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Electronics",
+                    "Home Appliances"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2024-03-30",
+                  "end": "2024-05-02"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2024-03-30",
+              "2024-05-02"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "Total Revenue",
+            "color": "Product Category"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Electronics\", \"Home Appliances\"], datum['Product Category']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

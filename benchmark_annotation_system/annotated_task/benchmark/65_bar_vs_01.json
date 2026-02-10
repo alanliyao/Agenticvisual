@@ -1,0 +1,56 @@
+{
+  "task_type": "vague_single",
+  "task_id": "65_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/65_vitamin_deficiency_disease_dataset_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "How does gender affect vitamin C intake?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "It seems that the mean vitamin C percent RDA for males is slightly higher than that for females.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The mean vitamin C percent RDA for males is slightly higher than that for females.",
+          "The vitamin C percent RDA of males on an omnivore diet is higher than that of females on an omnivore diet."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "In order to observe the effect of gender on vitamin C intake, use the change encoding tool to select 'x' for the channel and 'gender' for the field."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "gender",
+                  "channel": "x"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "gender",
+            "y": "vitamin_c_percent_rda",
+            "color": "diet_type"
+          }
+        }
+      }
+    }
+  ]
+}

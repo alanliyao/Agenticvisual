@@ -1,0 +1,4258 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "China annual death rate in each Age group",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1947,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20396422
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1948,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19090912
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1949,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18234105
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1950,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.170186
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1951,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1609557
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1952,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14953513
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1953,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14535771
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1954,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14454392
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1955,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1412491
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1956,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13885258
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1957,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13940842
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1958,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13480268
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1959,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13481797
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1960,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1292333
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1961,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12453608
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1962,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12395385
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1963,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1222423
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1964,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12056006
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1965,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11844906
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1966,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11835743
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1967,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11549337
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1968,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.114651196
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1969,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11548536
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1970,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11484561
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1971,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.113936074
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1972,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11363594
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1973,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11097776
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1974,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.110394225
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1975,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10826584
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1976,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10484331
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1977,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10459989
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1978,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.101204365
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1979,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10208548
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1980,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10128829
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1981,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09846545
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1982,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09867913
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1983,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09755753
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1984,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.097059645
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1985,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09453373
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1986,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09386168
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1987,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09287421
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1988,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09072498
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1989,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09077127
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1990,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09041554
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1991,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.089780055
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1992,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08967066
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1993,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08948299
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1994,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.088902846
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1995,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08653076
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1996,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08607778
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1997,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.084382065
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1998,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.083551586
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 1999,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08366205
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2000,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08329636
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2001,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08213565
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2002,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08086177
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2003,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.081622824
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2004,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08079006
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2005,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08031341
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2006,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.078204595
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2007,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.078053646
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2008,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.077294365
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2009,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07871169
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2010,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07800843
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2011,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07765217
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2012,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0766897
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2013,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07610982
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2014,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07746694
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2015,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07569421
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2016,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0762284
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2017,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07465631
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2018,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07471278
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2019,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07469676
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2020,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07346238
+      },
+      {
+        "Entity": "Austria",
+        "Code": "AUT",
+        "Year": 2021,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.074212044
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1950,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.34844074
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1951,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.34467673
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1952,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.33968848
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1953,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.33704913
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1954,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3304205
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1955,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.32548848
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1956,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3205127
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1957,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3154779
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1958,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.31036958
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1959,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3043978
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1960,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.29933232
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1961,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.29387397
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1962,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2887373
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1963,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.28374812
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1964,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.27913347
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1965,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.27466488
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1966,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.27073044
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1967,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.26678583
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1968,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.26245388
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1969,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25850153
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1970,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25440845
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1971,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25024465
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1972,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24602649
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1973,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24181189
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1974,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.23825745
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1975,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.23385927
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1976,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22975034
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1977,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22535121
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1978,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22069769
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1979,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21584342
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1980,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21076229
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1981,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2056517
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1982,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20059657
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1983,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19600776
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1984,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19161129
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1985,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18744782
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1986,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18337533
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1987,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1793846
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1988,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17594275
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1989,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17216097
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1990,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16818786
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1991,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16483356
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1992,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16098058
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1993,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15715064
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1994,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15315005
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1995,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1491831
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1996,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14525859
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1997,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14155258
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1998,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13810995
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1999,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13488904
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2000,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13114944
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2001,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12772956
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2002,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12523268
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2003,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12277088
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2004,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11978539
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2005,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.116957724
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2006,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11476782
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2007,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11282304
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2008,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11094876
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2009,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10938318
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2010,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.107663184
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2011,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.106616095
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2012,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10512702
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2013,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10377768
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2014,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10238535
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2015,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1014041
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2016,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10019649
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2017,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09939297
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2018,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.098316565
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2019,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.097298875
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2020,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10257557
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2021,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1109872
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1950,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.36421904
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1951,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.35680923
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1952,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.34827513
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1953,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3442766
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1954,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3364477
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1955,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3299603
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1956,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.32383752
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1957,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.31788397
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1958,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3120845
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1959,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.41329
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1960,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.48871556
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1961,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.40597993
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1962,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.28968114
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1963,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.28435197
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1964,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.27781475
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1965,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2709616
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1966,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.26518446
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1967,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25944883
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1968,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2539386
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1969,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24848986
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1970,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24129736
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1971,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.23391484
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1972,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22678089
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1973,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21936612
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1974,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21239299
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1975,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20549576
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1976,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1976644
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1977,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19137084
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1978,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1854788
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1979,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18004827
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1980,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17544286
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1981,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17113222
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1982,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16757786
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1983,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16440667
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1984,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16181324
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1985,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15973438
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1986,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15797092
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1987,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15631466
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1988,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15504602
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1989,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15385851
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1990,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1527156
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1991,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15197212
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1992,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14930643
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1993,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14654626
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1994,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14454629
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1995,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1415332
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1996,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13937896
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1997,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13660783
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1998,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13325368
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1999,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13102685
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2000,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12745504
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2001,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12297151
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2002,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12004415
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2003,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11684547
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2004,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11382212
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2005,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11118975
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2006,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.108767144
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2007,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10655845
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2008,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10636876
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2009,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10267699
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2010,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10114927
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2011,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09925524
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2012,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09753332
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2013,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0960624
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2014,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.094596736
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2015,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09316978
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2016,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.091827914
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2017,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09054068
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2018,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0892555
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2019,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08822752
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2020,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08710317
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2021,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08612957
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1950,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.5214981
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1951,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.5149517
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1952,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4935029
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1953,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4841538
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1954,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.46695775
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1955,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.45205632
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1956,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.44366348
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1957,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.43512776
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1958,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.42764574
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1959,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.41859928
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1960,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.41011196
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1961,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.402041
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1962,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.39297014
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1963,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.38378626
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1964,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.37565646
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1965,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.36831492
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1966,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.36214486
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1967,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.35760882
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1968,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3539131
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1969,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3512005
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1970,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.34826717
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1971,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3448876
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1972,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.34054232
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1973,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.33541322
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1974,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3279054
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1975,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.31925243
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1976,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3099961
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1977,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.30076966
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1978,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.29135436
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1979,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.28207594
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1980,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.27304873
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1981,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.26496395
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1982,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25528997
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1983,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24494828
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1984,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.23549514
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1985,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22556372
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1986,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21680886
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1987,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20876391
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1988,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20100431
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1989,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1954238
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1990,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18991002
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1991,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18496262
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1992,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18099861
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1993,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17599763
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1994,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17097263
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1995,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16544755
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1996,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1605625
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1997,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15584835
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1998,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15211688
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 1999,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14845684
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2000,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14455886
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2001,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14123982
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2002,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13822865
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2003,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13607232
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2004,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13351542
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2005,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13101809
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2006,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12871663
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2007,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12651679
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2008,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12438771
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2009,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.122423835
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2010,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.120427035
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2011,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.118514866
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2012,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1165696
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2013,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.115165904
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2014,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11304563
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2015,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.111778125
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2016,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10970334
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2017,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.107844055
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2018,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.106434874
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2019,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.105226986
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2020,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10439327
+      },
+      {
+        "Entity": "Egypt",
+        "Code": "EGY",
+        "Year": 2021,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.104685575
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1872,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.55993474
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1873,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.53282326
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1874,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.52898204
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1875,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.5354673
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1876,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.51471734
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1877,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4986859
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1878,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.50299835
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1879,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.5078724
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1880,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.51618046
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1881,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.51296675
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1882,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.51422024
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1883,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.50418794
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1884,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4865964
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1885,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.48783275
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1886,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.5021547
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1887,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4956193
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1888,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.48202014
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1889,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.46250814
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1890,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4633352
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1891,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.46544182
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1892,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.45531297
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1893,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.44655508
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1894,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.44691187
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1895,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.45065314
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1896,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.44047558
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1897,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4183632
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1898,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.42315975
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1899,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.408888
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1900,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4243006
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1901,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4072304
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1902,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.41987103
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1903,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.41221583
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1904,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.4044334
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1905,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.40428227
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1906,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.39650893
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1907,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.38819036
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1908,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.41093168
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1909,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.39094004
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1910,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3759485
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1911,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.39240426
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1912,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.35366604
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1913,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.35834283
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1914,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.340876
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1915,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.37396282
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1916,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.38316318
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1917,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.36917135
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1918,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.5450939
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1919,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3978845
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1920,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3834821
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1921,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.34775755
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1922,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.33054215
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1923,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.32643262
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1924,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.32110733
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1925,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.32224423
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1926,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.32691035
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1927,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.3122982
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1928,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.30899727
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1929,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.30675095
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1930,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.28867042
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1931,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.28564683
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1932,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.28434774
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1933,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.27164307
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1934,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2672748
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1935,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2688138
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1936,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2611658
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1937,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2774594
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1938,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.26884738
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1939,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25205246
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1940,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24993321
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1941,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25894102
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1942,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.26699758
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1943,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.28032106
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1944,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.26418275
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1945,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25918424
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1946,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24837139
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1947,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2196575
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1948,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19920905
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1949,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19160596
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1950,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17695743
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1951,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1749435
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1952,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16896881
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1953,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16083232
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1954,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1540474
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1955,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14937046
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1956,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14450607
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1957,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14870566
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1958,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14376111
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1959,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14210448
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1960,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13765666
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1961,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1342692
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1962,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13421494
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1963,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1328694
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1964,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12818444
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1965,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.124624446
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1966,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.123022065
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1967,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12124345
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1968,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11950171
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1969,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12061671
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1970,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11696658
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1971,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1152161
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1972,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11384314
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1973,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1111186
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1974,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.107245006
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1975,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10470364
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1976,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10312904
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1977,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.100534536
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1978,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09959072
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1979,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0980575
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1980,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09766632
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1981,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09591159
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1982,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09486499
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1983,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.093217544
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1984,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09236999
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1985,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.091055445
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1986,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09050238
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1987,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.090632945
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1988,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08954525
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1989,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.088881545
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1990,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0877321
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1991,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08838142
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1992,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08795404
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1993,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08737339
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1994,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.086273804
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1995,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08580988
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1996,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.086258866
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1997,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0838926
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1998,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08310091
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 1999,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08146429
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2000,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08113115
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2001,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08065827
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2002,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07979806
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2003,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07776737
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2004,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07795258
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2005,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.076349735
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2006,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07595143
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2007,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07548227
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2008,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.074585475
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2009,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07483336
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2010,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07367354
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2011,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07368349
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2012,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.073034845
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2013,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.072724216
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2014,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07249445
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2015,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07199698
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2016,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07219746
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2017,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07210771
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2018,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.071576536
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2019,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07146991
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2020,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.071080126
+      },
+      {
+        "Entity": "Italy",
+        "Code": "ITA",
+        "Year": 2021,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07229424
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1947,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.29623044
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1948,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.25040767
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1949,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24432918
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1950,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22599632
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1951,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2115178
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1952,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19244622
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1953,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18392783
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1954,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17727388
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1955,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16587868
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1956,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16177832
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1957,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1587384
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1958,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15135324
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1959,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14643456
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1960,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1394458
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1961,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1336467
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1962,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12871449
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1963,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12347931
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1964,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11938825
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1965,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11547978
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1966,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11315424
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1967,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.111345045
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1968,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.108855985
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1969,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1077145
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1970,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10599363
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1971,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.104175605
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1972,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.102489226
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1973,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10024958
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1974,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09803455
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1975,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09615959
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1976,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09399787
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1977,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09298121
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1978,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.091645285
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1979,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09060795
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1980,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08895909
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1981,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08814026
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1982,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08761543
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1983,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0866273
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1984,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.085863255
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1985,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0849872
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1986,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08411347
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1987,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.083343305
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1988,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08249911
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1989,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.082380235
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1990,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.081510924
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1991,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.081625685
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1992,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08166896
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1993,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08147556
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1994,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08072789
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1995,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.081730425
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1996,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08085819
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1997,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08052337
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1998,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08108997
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1999,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08011539
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2000,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07992846
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2001,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07930766
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2002,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.079081684
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2003,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07862348
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2004,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.078346066
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2005,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07790481
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2006,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.077438496
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2007,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07680057
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2008,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07647618
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2009,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07557876
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2010,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07514338
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2011,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.077671595
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2012,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07387439
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2013,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07326804
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2014,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07324338
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2015,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07229911
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2016,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07206909
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2017,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07113567
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2018,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07133357
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2019,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07106694
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2020,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.07127749
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2021,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.06931109
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1922,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.24405096
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1923,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22565751
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1924,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.23440291
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1925,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.23309682
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1926,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22354627
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1927,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.22376429
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1928,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.218853
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1929,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.23266044
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1930,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21135251
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1931,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21432541
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1932,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21156801
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1933,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20892355
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1934,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20738398
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1935,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19889995
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1936,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19819716
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1937,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1957662
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1938,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18767124
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1939,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17779711
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1940,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19516423
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1941,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1999466
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1942,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18044986
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1943,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17747341
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1944,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17299257
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1945,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16454764
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1946,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16018416
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1947,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15630421
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1948,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14548317
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1949,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1397911
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1950,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13344064
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1951,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13011986
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1952,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12658767
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1953,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.124587536
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1954,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12128974
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1955,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11957937
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1956,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.116798766
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1957,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.118926324
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1958,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.115404576
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1959,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11546968
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1960,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1146005
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1961,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.113896064
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1962,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11400657
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1963,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11345039
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1964,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11384534
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1965,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11263929
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1966,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11201055
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1967,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.111379124
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1968,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11004995
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1969,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11100424
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1970,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.110621974
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1971,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10988898
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1972,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.109496556
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1973,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10839032
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1974,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10791296
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1975,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.107072726
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1976,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10494302
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1977,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10511437
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1978,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10576505
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1979,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10412278
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1980,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10334326
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1981,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10113763
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1982,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10056227
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1983,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.099648535
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1984,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.099362165
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1985,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09835352
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1986,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09773672
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1987,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09828284
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1988,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.097532615
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1989,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.096305616
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1990,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09600804
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1991,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09466085
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1992,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09384722
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1993,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09281439
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1994,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09260271
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1995,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09197837
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1996,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09162334
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1997,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09095065
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1998,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09033683
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1999,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.089643516
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2000,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08956095
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2001,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08890514
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2002,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08773486
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2003,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.087688506
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2004,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08699081
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2005,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08640346
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2006,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.086757354
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2007,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08593621
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2008,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08555362
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2009,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08532017
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2010,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08466832
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2011,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.083957165
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2012,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08253818
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2013,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08215575
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2014,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08277422
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2015,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.081709936
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2016,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08301311
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2017,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.081818655
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2018,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0823893
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2019,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08304496
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2020,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08467756
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2021,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.08656489
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1933,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20596546
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1934,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.21142732
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1935,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.2039368
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1936,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.20382045
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1937,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19984007
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1938,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.19165847
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1939,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.18262771
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1940,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17912927
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1941,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17683926
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1942,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.17035048
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1943,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16737185
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1944,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1646227
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1945,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.16123144
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1946,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.15881509
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1947,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1497948
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1948,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14682981
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1949,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14465575
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1950,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.14084864
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1951,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13978139
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1952,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13935551
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1953,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13567051
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1954,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13272797
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1955,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13052082
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1956,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12962505
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1957,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.13043806
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1958,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12908705
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1959,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12789221
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1960,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12763777
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1961,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12615535
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1962,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12611526
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1963,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12634219
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1964,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1265359
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1965,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12575567
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1966,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12533146
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1967,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12422712
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1968,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12461133
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1969,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12406509
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1970,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1241085
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1971,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.12179157
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1972,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.120447166
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1973,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11942193
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1974,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11768954
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1975,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11653941
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1976,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11483627
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1977,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1140889
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1978,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.113232225
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1979,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11193065
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1980,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.111130916
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1981,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.11019717
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1982,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.109181084
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1983,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10802097
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1984,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1078219
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1985,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10704969
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1986,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10706947
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1987,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10675838
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1988,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10659795
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1989,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10665627
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1990,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.105699964
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1991,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10527971
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1992,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10455437
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1993,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10423558
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1994,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10385491
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1995,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10322332
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1996,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10216942
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1997,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10101583
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1998,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.100261696
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1999,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09953872
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2000,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09911361
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2001,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09901825
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2002,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.098769836
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2003,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09869409
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2004,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09849647
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2005,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09812982
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2006,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.098181486
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2007,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09781534
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2008,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.096994914
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2009,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.0974244
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2010,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09610501
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2011,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09606442
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2012,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09598831
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2013,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09613033
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2014,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09683797
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2015,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.097347654
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2016,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.098786846
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2017,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09869554
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2018,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.098335
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2019,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.09854068
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2020,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.1009355
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2021,
+        "Gini coefficient of lifespan inequality - Sex: female": 0.10623208
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Gini coefficient of lifespan inequality - Sex: female",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal"
+    }
+  }
+}

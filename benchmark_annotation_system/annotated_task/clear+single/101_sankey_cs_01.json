@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "101_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/101_sankey_credit.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What is the conversion rate from AAA Orig to AAA Y3?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "0.75",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "Calculate the conversion rate from AAA Orig to AAA Y3 using tools."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "AAA Orig"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

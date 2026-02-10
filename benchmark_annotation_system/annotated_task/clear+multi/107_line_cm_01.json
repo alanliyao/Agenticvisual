@@ -1,0 +1,75 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "107_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/107_survive_to_65_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "2000年以前的男子能活到65岁的平均概率是多少",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "65.1",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "get the right time range"
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data_summary",
+            "reasoning": "get the data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "1960",
+                  "end": "2000"
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "visible"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "1960",
+              "2000"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Survival to age 65, male (% of cohort)",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

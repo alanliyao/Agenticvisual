@@ -1,0 +1,86 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "107_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/107_survive_to_65_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Developed countries compared to developing countries",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It can be seen that the proportion of developed countries has always been high, and during this period, their development has been steady. However, the development of developing countries has been irregular, such as rapid development, slow development, and fluctuations."
+        },
+        "key_insights": [
+          "all of them over 60% from 1960",
+          "both of them have a slight increase in this period",
+          "Their proportion was relatively low in 1960.",
+          "Irregular development"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "get the data of developed counties"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_lines",
+            "reasoning": "get the data of developing countries"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "China",
+                    "India",
+                    "Russia"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Belgium",
+                    "Denmark",
+                    "Germany",
+                    "United Kingdom",
+                    "United States"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Survival to age 65, male (% of cohort)",
+            "color": "Entity"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Belgium\", \"Denmark\", \"Germany\", \"United Kingdom\", \"United States\"], datum['Entity']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

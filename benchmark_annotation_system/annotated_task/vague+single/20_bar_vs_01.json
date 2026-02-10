@@ -1,0 +1,75 @@
+{
+  "task_type": "vague_single",
+  "task_id": "20_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/20_ign_scores_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What is the relationship between the product updates and the mean of RPG of PlayStation?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The product update has improved the mean of RPG.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The new product has received a high mean of RPG."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "It was discovered that there is a correlation between product updates and scores, so the tool was used to prove this."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Dreamcast",
+                    "Game Boy Advance",
+                    "Game Boy Color",
+                    "GameCube",
+                    "Nintendo 3DS",
+                    "Nintendo 64",
+                    "Nintendo DS",
+                    "Nintendo DSi",
+                    "PC",
+                    "Wii",
+                    "Wireless",
+                    "Xbox",
+                    "Xbox 360",
+                    "Xbox One",
+                    "iPhone"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "RPG",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Dreamcast\",\"Game Boy Advance\",\"Game Boy Color\",\"GameCube\",\"Nintendo 3DS\",\"Nintendo 64\",\"Nintendo DS\",\"Nintendo DSi\",\"PC\",\"Wii\",\"Wireless\",\"Xbox\",\"Xbox 360\",\"Xbox One\",\"iPhone\"], datum['Platform']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

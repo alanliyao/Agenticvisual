@@ -1,0 +1,78 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "52_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/52_years of economic new_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Examine the electricity access data to uncover patterns of resilience and disruption, and investigate how the system recovered from major shocks.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "There are no anomalies in the data.\nThe 2015 dip bottomed out at 71% in mid-year, with recovery beginning as early as the final quarter of 2015."
+        },
+        "key_insights": [
+          "No anomalies founded.",
+          "By the end of 2016, access had not only recovered but exceeded pre-shock levels, reaching 98%, indicating strong system resilience.",
+          "The rapid recovery suggests the 2015 disruption was likely a temporary event, such as a conflict or technical failure, rather than a systemic collapse."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "This multi-tool approach first uses anomaly detection to pinpoint the most significant shocks"
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_time_range",
+            "reasoning": "Zoom into the 2014–2016 period to analyze the dynamics of disruption and recovery."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "threshold": 2
+                }
+              }
+            },
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2014",
+                  "end": "2016"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2014",
+              "2016"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Access to electricity (% of population)",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

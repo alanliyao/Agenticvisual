@@ -1,0 +1,75 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "89_heatmap_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/88_patient_churn_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "how gender impacts mean total bill amount across different health status contexts.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "gender’s negligible impact on non-chronic expenditure and significant impact on chronic expenditure."
+        },
+        "key_insights": [
+          "the gender-expenditure relationship is conditional on chronic disease status",
+          "gender’s impact on expenditure is negligible in non-chronic cases but pronounced in chronic cases."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_cells",
+            "reasoning": "Using two tools (color scale adjustment + data subsetting) enables high-dimensional, exploratory analysis of the interaction between two categorical variables (gender, chronic disease) and a continuous metric (mean total bill amount)"
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data_summary",
+            "reasoning": "The gap between the original heatmap’s surface-level view and the nuanced interaction pattern is filled by combining these two exploratory actions"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_cells",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 7146.61,
+                  "max_value": 12473.72
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "filter"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Gender",
+            "y": "Chronic_Disease",
+            "color": "Total_Bill_Amount"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Total_Bill_Amount'] >= 7146.61 && datum['Total_Bill_Amount'] <= 12473.72"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

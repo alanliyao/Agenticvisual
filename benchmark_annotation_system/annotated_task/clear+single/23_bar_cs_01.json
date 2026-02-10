@@ -1,0 +1,58 @@
+{
+  "task_type": "clear_single",
+  "task_id": "23_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/23_Mobiles Dataset (2025)_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which company's devices have the highest average battery capacity in 2024?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Poco",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "get the answer"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Year 2025",
+                    "Year 2020",
+                    "Year 2021",
+                    "Year 2022",
+                    "Year 2023"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Company Name",
+            "y": "Battery Capacity(mAh)",
+            "color": "Launched Year"
+          }
+        }
+      }
+    }
+  ]
+}

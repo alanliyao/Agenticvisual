@@ -1,0 +1,75 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "115_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/115_sport_life_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Among the high-income customer group, which brand has the highest sales volume?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "ASICS",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "prepare to filter customer in other income level"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_subcategories",
+            "reasoning": "get data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Medium",
+                    "Low"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "brand",
+            "y": "units_sold",
+            "color": "customer_income_level"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['customer_income_level'] != \"Medium\" && datum['customer_income_level'] != \"Low\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

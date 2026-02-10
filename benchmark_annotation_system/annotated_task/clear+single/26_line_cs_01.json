@@ -1,0 +1,63 @@
+{
+  "task_type": "clear_single",
+  "task_id": "26_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/26_China_centra_death_rate_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "filter to see among people aged 80, which year has the highest annual death rate?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "1960",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "the higheset point of the line occured in 1960"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    " Age: 0",
+                    "Age: 10",
+                    "Age: 25",
+                    "Age: 45",
+                    "Age: 65"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Central death rate",
+            "color": "Age_Group"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\" Age: 0\", \"Age: 10\", \"Age: 25\", \"Age: 45\", \"Age: 65\"], datum['Age_Group']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

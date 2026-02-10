@@ -1,0 +1,96 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "113_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/113_nime_less_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which one has the highest popularity, TV or TV Special?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "TV Special",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "get the chart with TV and TV Special"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "get the data only population"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "type",
+                  "values": [
+                    "OVA",
+                    "Movie",
+                    "ONA",
+                    "Special"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "dimension",
+                  "values": [
+                    "score",
+                    "members",
+                    "episodes"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"score\",\"members\",\"episodes\"], datum['dimension']) < 0"
+            },
+            {
+              "filter": "indexof([\"OVA\",\"Movie\",\"ONA\",\"Special\"], datum['type']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

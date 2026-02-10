@@ -1,0 +1,91 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "19_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/19_Heart_Disease_Prediction_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First, the research scope was narrowed down to older individuals. Then, high cholesterol levels were selected to see if there were more people with heart disease or more without heart disease.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "There are more people suffer from heart disease among people aged 45 to 70, those with higher cholesterol levels are more likely to suffer from heart disease.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the core dense region of cholesterol to see if there are more people suffer from heart disease."
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the more focused region of cholesterol to see if there are more people suffer from heart disease."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    45.199999999999996,
+                    70.06666666666666
+                  ],
+                  "y_range": [
+                    0,
+                    597.75
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    45.262166666666666,
+                    70.04594444444444
+                  ],
+                  "y_range": [
+                    200.99343750000003,
+                    597.0028125
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              45.262166666666666,
+              70.04594444444444
+            ],
+            "y": [
+              200.99343750000003,
+              597.0028125
+            ]
+          },
+          "encoding": {
+            "x": "Age",
+            "y": "Cholesterol",
+            "color": "Heart Disease"
+          }
+        }
+      }
+    }
+  ]
+}

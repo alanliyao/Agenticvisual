@@ -1,0 +1,88 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "37_parallel_cm_02",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/37_cancer_parallel .json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "what is the range of values in Texture (mean) for B?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "(0.03415,0.6496)",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "Filtered Diagnosis M and we can see the Parallel for B."
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_category",
+            "reasoning": "Highlighted dimension Texture (mean) and we can see the range from the datas."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Diagnosis",
+                  "values": [
+                    "M"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "dimension",
+                  "values": [
+                    "Texture (mean)"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"M\"], datum['Diagnosis']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "task_type": "clear_single",
+  "task_id": "05_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/05_sankey_ecommercial.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Among the users who viewed the product list, how many of them were redirected there via Google Ads?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "4000",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "get the data to obtain the answer"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Product List"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Google Ads",
+            "Facebook",
+            "Organic",
+            "Email",
+            "Landing Page",
+            "Product List",
+            "Search",
+            "Product Detail",
+            "Exit",
+            "Add to Cart",
+            "Bounce",
+            "Purchase"
+          ],
+          "collapsed_nodes": []
+        }
+      }
+    }
+  ]
+}

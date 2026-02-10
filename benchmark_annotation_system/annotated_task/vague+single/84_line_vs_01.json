@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "84_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/83_global-data-on-sustainable-energy-filtered_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What is the relationship between electricity from renewables and low-carbon electricity?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Countries with high electricity generation often have a relatively low proportion of low-carbon electricity."
+        },
+        "key_insights": [
+          "Countries with high electricity generation have a low proportion of low-carbon electricity."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "It was discovered that there is a correlation between power generation and low-carbon electricity. Therefore, tools were used to prove this."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Low-carbon electricity (% electricity)",
+                  "channel": "size"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Electricity from renewables (TWh)",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

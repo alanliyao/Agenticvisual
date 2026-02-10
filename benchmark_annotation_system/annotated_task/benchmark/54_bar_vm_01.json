@@ -1,0 +1,72 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "54_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/54_Ecommerce_Delivery_Analytics_New_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What are the patterns of delivery times for different product categories across various platforms?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "It seems that the delivery times across the three platforms for different product categories are generally similar, but we can see that on Blinkit, delivery times are higher for the personal care category; on JioMart, delivery times are higher for the fruits & vegetables category; and on Swiggy Instamart, delivery times are higher for the snacks category.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "In stack mode, the delivery times for different product categories on different platforms seem to be about the same.",
+          "In stack mode, the difference in delivery times for different product categories across different platforms is not noticeable.",
+          "It seems that the delivery times for different product categories across the three platforms are basically the same."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "To analyze the patterns of delivery times for different product categories across various platforms, you first need to use the change encoding tool to switch the field to product category."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "You need to switch to grouped mode using toggle stack mode to see the differences in delivery times between different product categories."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product Category",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Delivery Time (Minutes)",
+            "color": "Product Category"
+          }
+        }
+      }
+    }
+  ]
+}

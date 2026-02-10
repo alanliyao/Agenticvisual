@@ -1,0 +1,124 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "67_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/67_vitamin_deficiency_disease_dataset_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_05",
+      "question": "How is the content of vitamin A related to gender?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "we can find that the data of male and female are equal, so it can say that the content of va have no related to gender"
+        },
+        "key_insights": [
+          "it seem that a little bit different",
+          "mean: 91.7468",
+          "min: 10",
+          "max: 213.6",
+          "mean:91.7468",
+          "min:10",
+          "max: 213.6"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the chart of gender and va"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "get data of male"
+          },
+          {
+            "iteration": 3,
+            "tool": "get_data_summary",
+            "reasoning": "get data"
+          },
+          {
+            "iteration": 4,
+            "tool": "filter_categorical",
+            "reasoning": "get female line"
+          },
+          {
+            "iteration": 5,
+            "tool": "get_data_summary",
+            "reasoning": "get female data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "gender",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "Female"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "filter"
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "Male"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "filter"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "vitamin_a_percent_rda",
+            "y": "vitamin_e_percent_rda",
+            "color": "gender"
+          }
+        }
+      }
+    }
+  ]
+}

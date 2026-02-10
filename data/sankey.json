@@ -1,95 +1,166 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  "description": "Microsoft Revenue Flow (Sankey Diagram)",
-  "title": "Microsoft Business Segments Revenue Flow (in billions USD)",
-  "width": 800,
-  "height": 600,
-    "data": {
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Microsoft Revenue Flow Sankey Diagram",
+  "width": 900,
+  "height": 400,
+  "padding": {"left": 100, "right": 100, "top": 50, "bottom": 50},
+  "background": "white",
+
+  "data": [
+    {
+      "name": "nodes",
       "values": [
-        {"source": "Server Products & Cloud", "target": "Intelligent Cloud", "value": 19.6},
-        {"source": "Enterprise Services", "target": "Intelligent Cloud", "value": 1.9},
-        {"source": "Office Products", "target": "Productivity", "value": 11.8},
-        {"source": "LinkedIn", "target": "Productivity", "value": 3.9},
-        {"source": "Other", "target": "Productivity", "value": 1.3},
-        {"source": "Windows", "target": "Personal Computing", "value": 4.8},
-        {"source": "Gaming", "target": "Personal Computing", "value": 4.8},
-        {"source": "Search & News Advertising", "target": "Personal Computing", "value": 3.2},
-        {"source": "Devices", "target": "Personal Computing", "value": 1.4},
-        {"source": "Intelligent Cloud", "target": "Revenue", "value": 21.5},
-        {"source": "Productivity", "target": "Revenue", "value": 17.0},
-        {"source": "Personal Computing", "target": "Revenue", "value": 14.2},
-        {"source": "Revenue", "target": "Gross Profit", "value": 35.2},
-        {"source": "Revenue", "target": "Cost of Revenue", "value": 17.5},
-        {"source": "Gross Profit", "target": "Operating Profit", "value": 20.4},
-        {"source": "Gross Profit", "target": "Operating Expenses", "value": 14.8},
-        {"source": "Cost of Revenue", "target": "Product Costs", "value": 5.7},
-        {"source": "Cost of Revenue", "target": "Service Costs", "value": 11.8},
-        {"source": "Operating Profit", "target": "Net Profit", "value": 16.4},
-        {"source": "Operating Profit", "target": "Tax", "value": 3.9},
-        {"source": "Operating Expenses", "target": "R&D", "value": 6.8},
-        {"source": "Operating Expenses", "target": "S&M", "value": 5.7},
-        {"source": "Operating Expenses", "target": "G&A", "value": 2.3}
+        {"name": "Server Products", "depth": 0, "x": 0, "y": 0, "dy": 70},
+        {"name": "Enterprise Svc", "depth": 0, "x": 0, "y": 75, "dy": 10},
+        {"name": "Office Products", "depth": 0, "x": 0, "y": 95, "dy": 50},
+        {"name": "LinkedIn", "depth": 0, "x": 0, "y": 150, "dy": 20},
+        {"name": "Other", "depth": 0, "x": 0, "y": 175, "dy": 10},
+        {"name": "Windows", "depth": 0, "x": 0, "y": 200, "dy": 25},
+        {"name": "Gaming", "depth": 0, "x": 0, "y": 230, "dy": 25},
+        {"name": "Search & Ads", "depth": 0, "x": 0, "y": 260, "dy": 18},
+        {"name": "Devices", "depth": 0, "x": 0, "y": 283, "dy": 10},
+
+        {"name": "Intelligent Cloud", "depth": 1, "x": 180, "y": 10, "dy": 80},
+        {"name": "Productivity", "depth": 1, "x": 180, "y": 100, "dy": 65},
+        {"name": "Personal Computing", "depth": 1, "x": 180, "y": 175, "dy": 58},
+
+        {"name": "Revenue", "depth": 2, "x": 360, "y": 40, "dy": 200},
+
+        {"name": "Gross Profit", "depth": 3, "x": 540, "y": 20, "dy": 130},
+        {"name": "Cost of Revenue", "depth": 3, "x": 540, "y": 165, "dy": 70},
+
+        {"name": "Operating Profit", "depth": 4, "x": 720, "y": 0, "dy": 80},
+        {"name": "Operating Expenses", "depth": 4, "x": 720, "y": 90, "dy": 60},
+        {"name": "Product Costs", "depth": 4, "x": 720, "y": 165, "dy": 25},
+        {"name": "Service Costs", "depth": 4, "x": 720, "y": 195, "dy": 50},
+
+        {"name": "Net Profit", "depth": 5, "x": 900, "y": 0, "dy": 65},
+        {"name": "Tax", "depth": 5, "x": 900, "y": 70, "dy": 18},
+        {"name": "R&D", "depth": 5, "x": 900, "y": 100, "dy": 28},
+        {"name": "S&M", "depth": 5, "x": 900, "y": 133, "dy": 24},
+        {"name": "G&A", "depth": 5, "x": 900, "y": 162, "dy": 12}
       ]
   },
-  "transform": [
     {
-      "lookup": "source",
-      "from": {
-        "data": {
+      "name": "links",
           "values": [
-            {"key": "Server Products & Cloud", "order": 0},
-            {"key": "Enterprise Services", "order": 1},
-            {"key": "Office Products", "order": 2},
-            {"key": "LinkedIn", "order": 3},
-            {"key": "Other", "order": 4},
-            {"key": "Windows", "order": 5},
-            {"key": "Gaming", "order": 6},
-            {"key": "Search & News Advertising", "order": 7},
-            {"key": "Devices", "order": 8},
-            {"key": "Intelligent Cloud", "order": 9},
-            {"key": "Productivity", "order": 10},
-            {"key": "Personal Computing", "order": 11},
-            {"key": "Revenue", "order": 12},
-            {"key": "Gross Profit", "order": 13},
-            {"key": "Cost of Revenue", "order": 14},
-            {"key": "Operating Profit", "order": 15},
-            {"key": "Operating Expenses", "order": 16}
-          ]
+        {"source": "Server Products", "target": "Intelligent Cloud", "value": 19.6, "sy0": 0, "sy1": 70, "ty0": 10, "ty1": 80},
+        {"source": "Enterprise Svc", "target": "Intelligent Cloud", "value": 1.9, "sy0": 75, "sy1": 85, "ty0": 80, "ty1": 90},
+        {"source": "Office Products", "target": "Productivity", "value": 11.8, "sy0": 95, "sy1": 145, "ty0": 100, "ty1": 150},
+        {"source": "LinkedIn", "target": "Productivity", "value": 3.9, "sy0": 150, "sy1": 170, "ty0": 150, "ty1": 155},
+        {"source": "Other", "target": "Productivity", "value": 1.3, "sy0": 175, "sy1": 185, "ty0": 155, "ty1": 165},
+        {"source": "Windows", "target": "Personal Computing", "value": 4.8, "sy0": 200, "sy1": 225, "ty0": 175, "ty1": 200},
+        {"source": "Gaming", "target": "Personal Computing", "value": 4.8, "sy0": 230, "sy1": 255, "ty0": 200, "ty1": 218},
+        {"source": "Search & Ads", "target": "Personal Computing", "value": 3.2, "sy0": 260, "sy1": 278, "ty0": 218, "ty1": 228},
+        {"source": "Devices", "target": "Personal Computing", "value": 1.4, "sy0": 283, "sy1": 293, "ty0": 228, "ty1": 233},
+
+        {"source": "Intelligent Cloud", "target": "Revenue", "value": 21.5, "sy0": 10, "sy1": 90, "ty0": 40, "ty1": 120},
+        {"source": "Productivity", "target": "Revenue", "value": 17.0, "sy0": 100, "sy1": 165, "ty0": 120, "ty1": 185},
+        {"source": "Personal Computing", "target": "Revenue", "value": 14.2, "sy0": 175, "sy1": 233, "ty0": 185, "ty1": 240},
+
+        {"source": "Revenue", "target": "Gross Profit", "value": 35.2, "sy0": 40, "sy1": 170, "ty0": 20, "ty1": 150},
+        {"source": "Revenue", "target": "Cost of Revenue", "value": 17.5, "sy0": 170, "sy1": 240, "ty0": 165, "ty1": 235},
+
+        {"source": "Gross Profit", "target": "Operating Profit", "value": 20.4, "sy0": 20, "sy1": 95, "ty0": 0, "ty1": 80},
+        {"source": "Gross Profit", "target": "Operating Expenses", "value": 14.8, "sy0": 95, "sy1": 150, "ty0": 90, "ty1": 150},
+        {"source": "Cost of Revenue", "target": "Product Costs", "value": 5.7, "sy0": 165, "sy1": 190, "ty0": 165, "ty1": 190},
+        {"source": "Cost of Revenue", "target": "Service Costs", "value": 11.8, "sy0": 190, "sy1": 235, "ty0": 195, "ty1": 245},
+
+        {"source": "Operating Profit", "target": "Net Profit", "value": 16.4, "sy0": 0, "sy1": 65, "ty0": 0, "ty1": 65},
+        {"source": "Operating Profit", "target": "Tax", "value": 3.9, "sy0": 65, "sy1": 80, "ty0": 70, "ty1": 88},
+        {"source": "Operating Expenses", "target": "R&D", "value": 6.8, "sy0": 90, "sy1": 118, "ty0": 100, "ty1": 128},
+        {"source": "Operating Expenses", "target": "S&M", "value": 5.7, "sy0": 118, "sy1": 142, "ty0": 133, "ty1": 157},
+        {"source": "Operating Expenses", "target": "G&A", "value": 2.3, "sy0": 142, "sy1": 150, "ty0": 162, "ty1": 174}
+      ],
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "nodes",
+          "key": "name",
+          "fields": ["source"],
+          "values": ["x", "depth"],
+          "as": ["sx", "sd"]
         },
-        "key": "key",
-        "fields": ["order"]
-      },
-      "as": "source_order"
+        {
+          "type": "lookup",
+          "from": "nodes",
+          "key": "name",
+          "fields": ["target"],
+          "values": ["x", "depth"],
+          "as": ["tx", "td"]
+        }
+      ]
     }
   ],
-  "layer": [
+
+  "scales": [
     {
-      "mark": {"type": "rule", "strokeWidth": 2, "opacity": 0.5},
-      "encoding": {
-        "x": {
-          "field": "source",
-          "type": "nominal",
-          "axis": {"title": "Flow", "labelAngle": -45}
-        },
-        "x2": {"field": "target"},
-        "strokeWidth": {
-          "field": "value",
-          "type": "quantitative",
-          "scale": {"range": [1, 20]},
-          "legend": {"title": "Flow Value (B USD)"}
-        },
-        "color": {
-          "field": "source",
-          "type": "nominal",
-          "legend": null
-        },
-        "tooltip": [
-          {"field": "source", "type": "nominal", "title": "From"},
-          {"field": "target", "type": "nominal", "title": "To"},
-          {"field": "value", "type": "quantitative", "title": "Value (B USD)", "format": ".1f"}
-        ]
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "nodes", "field": "depth"},
+      "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "group",
+      "from": {"data": "links"},
+      "marks": [
+        {
+          "type": "path",
+          "encode": {
+            "enter": {
+              "path": {
+                "signal": "'M' + (parent.sx + 15) + ',' + parent.sy0 + ' C' + ((parent.sx + 15 + parent.tx) / 2) + ',' + parent.sy0 + ' ' + ((parent.sx + 15 + parent.tx) / 2) + ',' + parent.ty0 + ' ' + parent.tx + ',' + parent.ty0 + ' L' + parent.tx + ',' + parent.ty1 + ' C' + ((parent.sx + 15 + parent.tx) / 2) + ',' + parent.ty1 + ' ' + ((parent.sx + 15 + parent.tx) / 2) + ',' + parent.sy1 + ' ' + (parent.sx + 15) + ',' + parent.sy1 + ' Z'"
+              },
+              "fill": {"scale": "color", "signal": "parent.sd"},
+              "fillOpacity": {"value": 0.4},
+              "tooltip": {"signal": "parent.source + ' → ' + parent.target + ': $' + parent.value + 'B'"}
+            },
+            "hover": {
+              "fillOpacity": {"value": 0.7}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "rect",
+      "from": {"data": "nodes"},
+      "encode": {
+        "enter": {
+          "x": {"field": "x"},
+          "width": {"value": 15},
+          "y": {"field": "y"},
+          "height": {"field": "dy"},
+          "fill": {"scale": "color", "field": "depth"},
+          "stroke": {"value": "#333"},
+          "strokeWidth": {"value": 0.5},
+          "tooltip": {"signal": "datum.name + ': $' + datum.dy + 'B'"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "nodes"},
+      "encode": {
+        "enter": {
+          "x": {"signal": "datum.x + 20"},
+          "y": {"signal": "datum.y + datum.dy / 2"},
+          "text": {"field": "name"},
+          "baseline": {"value": "middle"},
+          "fontSize": {"value": 10},
+          "fill": {"value": "#333"}
+        }
       }
     }
-  ]
+  ],
+
+  "title": {
+    "text": "Microsoft Business Revenue Flow (Billions USD)",
+    "anchor": "start",
+    "fontSize": 16
+  }
   }
   

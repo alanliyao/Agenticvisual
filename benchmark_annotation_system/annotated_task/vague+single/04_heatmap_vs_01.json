@@ -1,0 +1,52 @@
+{
+  "task_type": "vague_single",
+  "task_id": "04_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/04_heatmap_temp.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Reveal subtle differences in temperature patterns across cities and months",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Denver’s June temperature (around 22°C) is now visibly higher than its January temperature (around 8°C).\nMiami’s temperatures are consistently high across all months, with its lowest monthly temperature still being warmer than the highest temperatures in Denver or Seattle."
+        },
+        "key_insights": [
+          "After adjusting the color scale, the subtle temperature differences in Denver and Seattle become much clearer.",
+          "The refined color scale makes it easier to spot the gradual temperature changes in Seattle, which shows a steady increase from January to June."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "adjust_color_scale",
+            "reasoning": "The goal is exploratory, focusing on revealing hidden patterns rather than getting a precise numeric answer.\nAdjusting the color scale is a single tool action that improves visual differentiation, making it easier to observe nuanced temperature variations.\nThe result provides a better understanding of relative temperature behavior, and the next step could be to use clustering to formally group cities by these refined patterns."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "adjust_color_scale",
+              "param_eval": {
+                "type": "categorical",
+                "param": "scheme",
+                "target": "viridis"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "month",
+            "y": "city",
+            "color": "temp"
+          }
+        }
+      }
+    }
+  ]
+}

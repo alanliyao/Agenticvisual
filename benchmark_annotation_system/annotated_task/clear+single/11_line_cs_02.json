@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "11_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/11_apple_time_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "zoom to see which product has the highest revenue in 2007?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Macbook",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "Zoomed to time range: 2007 to 2007,and then we can see the point(line) of Macbook is on the top"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2007",
+                  "end": "2007"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2007",
+              "2007"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Revenue_Billions",
+            "color": "Product"
+          }
+        }
+      }
+    }
+  ]
+}

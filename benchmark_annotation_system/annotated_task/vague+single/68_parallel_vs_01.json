@@ -1,0 +1,68 @@
+{
+  "task_type": "vague_single",
+  "task_id": "68_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/68_supply_chain_data_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "what is the distribution of cosmetics types and products in four dimensions",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Cosmetics shows a very wide distribution across the price axis.\nCosmetics sales volume is spread across the entire spectrum.\nCosmetics generates the widest range of revenue, covering almost the entire vertical space of this axis (from ~51 to ~9866).\nShipping costs for Cosmetics are moderate to high."
+        },
+        "key_insights": [
+          "Cosmetics consistently has the highest Price (closer to 99.17), indicating it is positioned as a premium or high-end category.",
+          "Corresponding to the high price, the Revenue generated is also the highest among the three categories.",
+          "Shipping costs for cosmetics are scattered, suggesting a lack of consistent economies of scale in logistics for this category."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "We want to let lines of cosmetics type more  conspicuous"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product type",
+                  "values": [
+                    "cosmetics"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

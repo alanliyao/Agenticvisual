@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "41_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/41_museum_visitors_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Is the correlation between the two variables strong or weak?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Weak.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The Pearson correlation coefficient of 0.169 indicates a weak positive relationship between the two museums' visitor counts, suggesting they do not share strong visitation patterns.",
+          "The p-value of 0.20 exceeds the typical significance threshold of 0.05, meaning this correlation is not statistically significant and could be due to random chance.",
+          "Despite both being cultural institutions in proximity, external factors like different target audiences or exhibition schedules may drive their visitor numbers independently."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "The initial scatter plot showed a somewhat dispersed pattern with no obvious linear trend, prompting the need to quantify the actual relationship. By calculating the correlation coefficient, I confirmed that the visual impression of weak association is accurate. The high p-value further suggests that any apparent correlation lacks statistical reliability. This insight indicates that marketing or operational strategies for one museum may not directly impact the other, and further investigation into what drives each museum's attendance separately would be more valuable."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Chinese American Museum",
+            "y": "America Tropical Interpretive Center",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

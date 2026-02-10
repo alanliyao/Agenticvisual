@@ -1,0 +1,106 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "71_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/71_one_person_ai_work_and_burnout_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore how coding hours and AI usage interact across different levels of code complexity to identify any distinct workload profiles.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The exploration reveals at least three workload profiles: light (low complexity), balanced/diverse (mid complexity), and two types of heavy (high complexity with high or low AI). "
+        },
+        "key_insights": [
+          "With fewer dimensions, the remaining three axes (AI usage, Hours_Coded, Code_Complexity) show clearer trends: as complexity increases, hours tend to rise slightly, but AI usage variation widens.",
+          "At low complexity (scores 0–3), most points have low to moderate AI usage (0–20%) and hours below 10.",
+          "At mid complexity (4–7), hours spread from 6 to 14, and AI usage covers the full range (0–50%), suggesting diverse strategies.",
+          "Lines now cluster by complexity score first. For each complexity level, the fan-out to hours and AI usage reveals distinct profiles.",
+          "High complexity scores (8–10) consistently pair with high hours (12+), but AI usage splits: one subset uses AI heavily (~40%), another uses little (~10%).",
+          "High complexity scores (8–10) consistently pair with high hours (12+), but AI usage splits: one subset uses AI heavily (~40%), another uses little (~10%).",
+          "High complexity scores (8–10) consistently pair with high hours (12+), but AI usage splits: one subset uses AI heavily (~40%), another uses little (~10%)."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "Hiding extra dimensions reduces visual clutter, making it easier to trace interactions among the three core metrics."
+          },
+          {
+            "iteration": 2,
+            "tool": "reorder_dimensions",
+            "reasoning": "Reordering by complexity groups developers by technical demand. This clarifies that high complexity always requires long hours, but AI adoption varies—suggesting two different high-complexity strategies."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Stress_Level_1_10",
+                    "Bugs_Introduced"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "AI_Tool_Usage_%",
+                    "Code_Complexity_Score",
+                    "Hours_Coded"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "AI_Tool_Usage_%",
+              "Code_Complexity_Score",
+              "Hours_Coded"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"AI_Tool_Usage_%\", \"Hours_Coded\", \"Code_Complexity_Score\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

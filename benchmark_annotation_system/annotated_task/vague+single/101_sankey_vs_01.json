@@ -1,0 +1,53 @@
+{
+  "task_type": "vague_single",
+  "task_id": "101_sankey_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/101_sankey_credit.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "For all the origination ratings, what was the overall trend of credit grade changes after one year?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "For all the origination ratings, the overall credit grade remained largely unchanged after one year."
+        },
+        "key_insights": [
+          "For all the initial ratings, the overall credit grade remained largely unchanged after one year."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_flow",
+            "reasoning": "Use tools to eliminate the streams with smaller values and analyze the overall trend."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_flow",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 50
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

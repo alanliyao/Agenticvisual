@@ -1,0 +1,60 @@
+{
+  "task_type": "vague_single",
+  "task_id": "28_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/28_silver_prices_data_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Which price points deviate most from the typical trend and what patterns exist in these deviations?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Anomalies are clustered in the end of 2025 of the series, indicating increased volatility and momentum in this year."
+        },
+        "key_insights": [
+          "The late-2025 to 2026 price surge is the most significant anomaly, far exceeding the historical growth rate.",
+          "The 2020 price dip (to ~12) is the most notable downward anomaly, representing the lowest point in the series."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "The anomaly detection tool addresses the vague goal of exploring deviation patterns. The result identifies clear extreme points, providing actionable exploratory insights without needing precise numeric targets."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "numeric",
+                "param": "threshold",
+                "target": 2,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "point"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

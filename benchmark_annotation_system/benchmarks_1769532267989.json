@@ -1,0 +1,231 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "open_ended_single",
+      "chart_type": "bar",
+      "meta": {
+        "chart_type": "bar",
+        "title": "Bar Chart: sleep_hours by diet_quality",
+        "filename": "07_bar_synthetic_mental_health.json",
+        "data_points": 2000,
+        "total_points": 2000,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "op_01",
+          "question": "question 1 relationship between sleep and diet",
+          "ground_truth": {
+            "answer": null,
+            "key_insights": [
+              "insight1"
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "expand_stack",
+                "reasoning": "推理1"
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "expand_stack"
+              ],
+              "param_eval": [
+                {
+                  "tool": "expand_stack",
+                  "params": {
+                    "category": "good"
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": "weather",
+                "y": "sleep_hours",
+                "color": "weather"
+              },
+              "data_filtered": [
+                {
+                  "filter": "datum.diet_quality == \"good\""
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "expand_stack",
+          "parameters": {
+            "category": "good"
+          },
+          "result": {
+            "operation": "expand_stack",
+            "message": "Expanded stacked bars for category \"good\" into parallel bars"
+          },
+          "key_insights": [
+            "insight1"
+          ],
+          "reasoning": "推理1"
+        }
+      ]
+    },
+    {
+      "task_type": "open_ended_single",
+      "chart_type": "bar",
+      "meta": {
+        "chart_type": "bar",
+        "title": "Bar Chart: sleep_hours by diet_quality",
+        "filename": "07_bar_synthetic_mental_health.json",
+        "data_points": 2000,
+        "total_points": 2000,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "op_01",
+          "question": "question 2 ",
+          "ground_truth": {
+            "answer": null,
+            "key_insights": [
+              "高亮了"
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "highlight_top_n",
+                "reasoning": "你好"
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "highlight_top_n"
+              ],
+              "param_eval": [
+                {
+                  "tool": "highlight_top_n",
+                  "params": {
+                    "n": 2,
+                    "order": "descending"
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": "diet_quality",
+                "y": "sleep_hours",
+                "color": "weather"
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "highlight_top_n",
+          "parameters": {
+            "n": 2,
+            "order": "descending"
+          },
+          "result": {
+            "operation": "highlight_top_n",
+            "message": "Highlighted top 2 bars"
+          },
+          "key_insights": [
+            "高亮了"
+          ],
+          "reasoning": "你好"
+        }
+      ]
+    },
+    {
+      "task_type": "clear_multi",
+      "chart_type": "bar",
+      "meta": {
+        "chart_type": "bar",
+        "title": "Bar Chart: sleep_hours by diet_quality",
+        "filename": "07_bar_synthetic_mental_health.json",
+        "data_points": 2000,
+        "total_points": 2000,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "cl_01",
+          "question": "4",
+          "ground_truth": {
+            "answer": "4",
+            "key_insights": [
+              "4"
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "filter_categories",
+                "reasoning": "4"
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "filter_categories"
+              ],
+              "param_eval": [
+                {
+                  "tool": "filter_categories",
+                  "params": {
+                    "categories": [
+                      "good"
+                    ]
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": "diet_quality",
+                "y": "sleep_hours",
+                "color": "weather"
+              },
+              "data_filtered": [
+                {
+                  "filter": "indexof([\"good\"], datum.diet_quality) < 0"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "filter_categories",
+          "parameters": {
+            "categories": [
+              "good"
+            ]
+          },
+          "result": {
+            "operation": "filter_categories",
+            "message": "Filtered to 1 categories"
+          },
+          "key_insights": [
+            "4"
+          ],
+          "reasoning": "4"
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-27T16:44:27.988Z"
+}

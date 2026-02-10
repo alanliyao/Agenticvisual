@@ -1,0 +1,76 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "85_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/85_supply_chain_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Focus on the \"female\" group and analyze the characteristics that can be used to distinguish this group from the others.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The mean of price of haircare of the \"female\" group was the lowest, clearly differentiating it from the other groups."
+        },
+        "key_insights": [
+          "The mean of price of haircare for the female group was the lowest, which might be a distinguishing feature from the other groups.",
+          "The remaining two product types did not exhibit any distinct characteristics among the customer demographics."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Use the tool to switch to the group mode to facilitate an intuitive analysis of the differences in product types among various customer groups."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_subcategories",
+            "reasoning": "Use tools to eliminate \"haircare\", and then analyze the characteristics of the remaining two product types in different customer groups."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "haircare"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Customer demographics",
+            "y": "Price",
+            "color": "Product type"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Product type'] != \"haircare\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

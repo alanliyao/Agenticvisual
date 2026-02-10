@@ -1,0 +1,59 @@
+{
+  "task_type": "vague_single",
+  "task_id": "09_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/09_museum_visitors_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Which points deviate most from the typical pattern and what is its characteristic?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Most anomalies occur in the first half, with extreme peaks followed immediately by extreme troughs."
+        },
+        "key_insights": [
+          "Most anomalies appear in the first half of the time series, with extreme peaks followed immediately by extreme troughs."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "A single anomaly detection tool isolates the most extreme points, addressing the vague goal of exploring deviation patterns. The result provides clear exploratory insights without needing precise numeric targets."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "numeric",
+                "param": "threshold",
+                "target": 2,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "point"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

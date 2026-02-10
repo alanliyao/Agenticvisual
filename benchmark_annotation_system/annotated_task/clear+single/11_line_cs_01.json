@@ -1,0 +1,65 @@
+{
+  "task_type": "clear_single",
+  "task_id": "11_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/11_apple_time_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "In which year did the revenue of iPhone reach its historical peak?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "2023",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "get the chart only have iphone line"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "MacBook",
+                    "iPad",
+                    "Revenue_Billions",
+                    "Watch",
+                    "AirPods",
+                    "Services",
+                    "Other_Products"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Revenue_Billions",
+            "color": "Product"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"MacBook\", \"iPad\", \"Revenue_Billions\", \"Watch\", \"AirPods\", \"Services\", \"Other_Products\"], datum['Product']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

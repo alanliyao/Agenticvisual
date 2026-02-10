@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "97_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/97_sankey_hr.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Trace the talent path of hires from LinkedIn to see how many of them end up being promoted after 3 years.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "22",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The flow from LinkedIn to S-Tier performance is a strong predictor of promotion"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Tracing the path from a single recruitment source isolates its specific contribution to promotion outcomes, helping identify which talent pools deliver high-potential employees."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "LinkedIn"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

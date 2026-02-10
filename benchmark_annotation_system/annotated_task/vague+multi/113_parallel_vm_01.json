@@ -1,0 +1,97 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "113_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/113_nime_less_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "For a film, what is the relationship between its score, popularity, and the number of members?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The scores and popularity of the movies are characterized by low scores but high viewership, and high scores but still low attendance rates for all movies, regardless of their quality. Their audience ratings are much lower than those of other types."
+        },
+        "key_insights": [
+          "find the higher score, the less popularity",
+          "no matter how popularity, members are not many"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "get all Movie data"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "filter the episodes"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "type",
+                  "values": [
+                    "OVA",
+                    "Special",
+                    "ONA",
+                    "TV Special",
+                    "TV"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "dimension",
+                  "values": [
+                    "episodes"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"episodes\"], datum['dimension']) < 0"
+            },
+            {
+              "filter": "indexof([\"OVA\",\"Special\",\"ONA\",\"TV Special\",\"TV\"], datum['type']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

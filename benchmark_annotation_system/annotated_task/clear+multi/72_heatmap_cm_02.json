@@ -1,0 +1,82 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "72_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/72_StudentsPerformance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First, filter the heatmap to only show parental education levels of high school or below,and then findthe highest mean writing score within this filtered subset.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The some college.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_cells_by_region",
+            "reasoning": "Filtering first reduces the dataset to a relevant subset of lower parental education levels."
+          },
+          {
+            "iteration": 2,
+            "tool": "find_extremes",
+            "reasoning": "within the filtered subset confirms that It finds the some college row, paired with race/ethnicity groups C and E, contains the highest scores."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_cells_by_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "y_value": "associate's degree"
+                }
+              }
+            },
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 1,
+                  "mode": "max"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "parental level of education",
+            "color": "writing score"
+          },
+          "data_filtered": [
+            {
+              "filter": "!(indexof([\"bachelor's degree\"], datum['parental level of education']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"master's degree\"], datum['parental level of education']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"associate's degree\"], datum['parental level of education']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

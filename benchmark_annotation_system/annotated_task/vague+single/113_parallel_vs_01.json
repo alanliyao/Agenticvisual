@@ -1,0 +1,68 @@
+{
+  "task_type": "vague_single",
+  "task_id": "113_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/113_nime_less_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Will the program be continued for the next season when there is a lot of popularity?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "No, because find that no matter how many popularity is, most of them have about 1 episode"
+        },
+        "key_insights": [
+          "find no matter how many popularity is, most of them have about 1 episode"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "reorder_dimensions",
+            "reasoning": "easier to obtain the data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "score",
+                    "members",
+                    "popularity",
+                    "episodes"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

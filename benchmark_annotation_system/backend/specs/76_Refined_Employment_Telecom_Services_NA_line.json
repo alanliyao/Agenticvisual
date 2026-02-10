@@ -1,0 +1,833 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Employment_Thousands over Year",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2003,
+        "Employment_Thousands": 1772.228,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2004,
+        "Employment_Thousands": 1620.497,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2005,
+        "Employment_Thousands": 150.516,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2005,
+        "Employment_Thousands": 1507.953,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2006,
+        "Employment_Thousands": 176.447,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2006,
+        "Employment_Thousands": 1571.072,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2007,
+        "Employment_Thousands": 166.012,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2007,
+        "Employment_Thousands": 1632.449,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2008,
+        "Employment_Thousands": 185.101,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2008,
+        "Employment_Thousands": 1617.538,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2009,
+        "Employment_Thousands": 189.424,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2009,
+        "Employment_Thousands": 1481.224,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2010,
+        "Employment_Thousands": 14.088,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2010,
+        "Employment_Thousands": 21.986,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2010,
+        "Employment_Thousands": 180.992,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2010,
+        "Employment_Thousands": 1454.95,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2011,
+        "Employment_Thousands": 17.97,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2011,
+        "Employment_Thousands": 25.582,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2011,
+        "Employment_Thousands": 168.976,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Panama",
+        "Country_Code": "PAN",
+        "Year": 2011,
+        "Employment_Thousands": 6.775,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2011,
+        "Employment_Thousands": 1484.796,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2012,
+        "Employment_Thousands": 18.769,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2012,
+        "Employment_Thousands": 25.918,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2012,
+        "Employment_Thousands": 197.034,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Panama",
+        "Country_Code": "PAN",
+        "Year": 2012,
+        "Employment_Thousands": 10.843,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2012,
+        "Employment_Thousands": 1353.601,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2013,
+        "Employment_Thousands": 17.194,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2013,
+        "Employment_Thousands": 28.652,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2013,
+        "Employment_Thousands": 222.878,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Panama",
+        "Country_Code": "PAN",
+        "Year": 2013,
+        "Employment_Thousands": 8.236,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2013,
+        "Employment_Thousands": 1297.061,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2014,
+        "Employment_Thousands": 18.979,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2014,
+        "Employment_Thousands": 15.937,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2014,
+        "Employment_Thousands": 185.926,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Panama",
+        "Country_Code": "PAN",
+        "Year": 2014,
+        "Employment_Thousands": 5.089,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2014,
+        "Employment_Thousands": 1357.145,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Barbados",
+        "Country_Code": "BRB",
+        "Year": 2015,
+        "Employment_Thousands": 1.415,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2015,
+        "Employment_Thousands": 24.287,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2015,
+        "Employment_Thousands": 21.737,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2015,
+        "Employment_Thousands": 26.746,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2015,
+        "Employment_Thousands": 9.674,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2015,
+        "Employment_Thousands": 196.302,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2015,
+        "Employment_Thousands": 1325.119,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Barbados",
+        "Country_Code": "BRB",
+        "Year": 2016,
+        "Employment_Thousands": 0.929,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2016,
+        "Employment_Thousands": 27.318,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2016,
+        "Employment_Thousands": 14.891,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2016,
+        "Employment_Thousands": 32.29,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2016,
+        "Employment_Thousands": 15.191,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2016,
+        "Employment_Thousands": 229.177,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2016,
+        "Employment_Thousands": 1225.512,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Barbados",
+        "Country_Code": "BRB",
+        "Year": 2017,
+        "Employment_Thousands": 1.162,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Costa Rica",
+        "Country_Code": "CRI",
+        "Year": 2017,
+        "Employment_Thousands": 10.147,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2017,
+        "Employment_Thousands": 20.549,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2017,
+        "Employment_Thousands": 12.536,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2017,
+        "Employment_Thousands": 38.603,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2017,
+        "Employment_Thousands": 11.794,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2017,
+        "Employment_Thousands": 220.041,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2017,
+        "Employment_Thousands": 1266.095,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Barbados",
+        "Country_Code": "BRB",
+        "Year": 2018,
+        "Employment_Thousands": 0.59,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Costa Rica",
+        "Country_Code": "CRI",
+        "Year": 2018,
+        "Employment_Thousands": 6.926,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2018,
+        "Employment_Thousands": 23.562,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2018,
+        "Employment_Thousands": 16.08,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2018,
+        "Employment_Thousands": 28.289,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2018,
+        "Employment_Thousands": 17.016,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2018,
+        "Employment_Thousands": 224.717,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2018,
+        "Employment_Thousands": 1227.755,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Barbados",
+        "Country_Code": "BRB",
+        "Year": 2019,
+        "Employment_Thousands": 0.536,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Costa Rica",
+        "Country_Code": "CRI",
+        "Year": 2019,
+        "Employment_Thousands": 10.863,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2019,
+        "Employment_Thousands": 29.736,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2019,
+        "Employment_Thousands": 17.854,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Grenada",
+        "Country_Code": "GRD",
+        "Year": 2019,
+        "Employment_Thousands": 1.038,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2019,
+        "Employment_Thousands": 28.369,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2019,
+        "Employment_Thousands": 13.78,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2019,
+        "Employment_Thousands": 225.636,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2019,
+        "Employment_Thousands": 1169.704,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Costa Rica",
+        "Country_Code": "CRI",
+        "Year": 2020,
+        "Employment_Thousands": 11.673,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2020,
+        "Employment_Thousands": 27.225,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2020,
+        "Employment_Thousands": 15.015,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Grenada",
+        "Country_Code": "GRD",
+        "Year": 2020,
+        "Employment_Thousands": 0.477,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2020,
+        "Employment_Thousands": 8.022,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2020,
+        "Employment_Thousands": 234.226,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2020,
+        "Employment_Thousands": 1108.035,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Costa Rica",
+        "Country_Code": "CRI",
+        "Year": 2021,
+        "Employment_Thousands": 13.644,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2021,
+        "Employment_Thousands": 23.708,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2021,
+        "Employment_Thousands": 13.496,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Grenada",
+        "Country_Code": "GRD",
+        "Year": 2021,
+        "Employment_Thousands": 0.729,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2021,
+        "Employment_Thousands": 21.673,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2021,
+        "Employment_Thousands": 265.842,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2021,
+        "Employment_Thousands": 1157.368,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Barbados",
+        "Country_Code": "BRB",
+        "Year": 2022,
+        "Employment_Thousands": 0.809,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Costa Rica",
+        "Country_Code": "CRI",
+        "Year": 2022,
+        "Employment_Thousands": 11.416,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2022,
+        "Employment_Thousands": 20.291,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2022,
+        "Employment_Thousands": 19.173,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2022,
+        "Employment_Thousands": 21.619,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2022,
+        "Employment_Thousands": 20.539,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2022,
+        "Employment_Thousands": 270.133,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2022,
+        "Employment_Thousands": 1101.68,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Barbados",
+        "Country_Code": "BRB",
+        "Year": 2023,
+        "Employment_Thousands": 0.854,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Costa Rica",
+        "Country_Code": "CRI",
+        "Year": 2023,
+        "Employment_Thousands": 8.876,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2023,
+        "Employment_Thousands": 18.76,
+        "Continent": "North America"
+      },
+      {
+        "Country": "El Salvador",
+        "Country_Code": "SLV",
+        "Year": 2023,
+        "Employment_Thousands": 24.172,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Grenada",
+        "Country_Code": "GRD",
+        "Year": 2023,
+        "Employment_Thousands": 0.173,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Guatemala",
+        "Country_Code": "GTM",
+        "Year": 2023,
+        "Employment_Thousands": 19.884,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2023,
+        "Employment_Thousands": 11.734,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2023,
+        "Employment_Thousands": 276.476,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Panama",
+        "Country_Code": "PAN",
+        "Year": 2023,
+        "Employment_Thousands": 9.217,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2023,
+        "Employment_Thousands": 1153.758,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Costa Rica",
+        "Country_Code": "CRI",
+        "Year": 2024,
+        "Employment_Thousands": 10.039,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Dominican Republic",
+        "Country_Code": "DOM",
+        "Year": 2024,
+        "Employment_Thousands": 22.009,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Honduras",
+        "Country_Code": "HND",
+        "Year": 2024,
+        "Employment_Thousands": 7.048,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Mexico",
+        "Country_Code": "MEX",
+        "Year": 2024,
+        "Employment_Thousands": 274.807,
+        "Continent": "North America"
+      },
+      {
+        "Country": "Panama",
+        "Country_Code": "PAN",
+        "Year": 2024,
+        "Employment_Thousands": 6.568,
+        "Continent": "North America"
+      },
+      {
+        "Country": "United States",
+        "Country_Code": "USA",
+        "Year": 2024,
+        "Employment_Thousands": 1044.651,
+        "Continent": "North America"
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Employment_Thousands",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "quantitative"
+      },
+      {
+        "field": "Employment_Thousands",
+        "type": "quantitative"
+      },
+      {
+        "field": "Country",
+        "type": "nominal"
+      }
+    ]
+  }
+}

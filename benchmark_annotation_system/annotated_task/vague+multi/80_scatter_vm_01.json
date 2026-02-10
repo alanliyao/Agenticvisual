@@ -1,0 +1,77 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "80_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/80_gym_members_exercise_tracking_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What is the relationship between exercise duration and frequency when in high duration?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was found that people who engage in prolonged physical activities also have a high frequency of exercise."
+        },
+        "key_insights": [
+          "it seem that the more they spend on time in exercise, the more frequency they have",
+          "find all of the plots are high frequency"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the plot of frequency and time"
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the area"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Workout_Frequency (days/week)",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    1.4944445037841796,
+                    2
+                  ],
+                  "y_range": [
+                    2.541666412353516,
+                    5.041666793823242
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Session_Duration (hours)",
+            "y": "Calories_Burned",
+            "color": "Workout_Type"
+          }
+        }
+      }
+    }
+  ]
+}

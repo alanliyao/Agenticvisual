@@ -1,0 +1,57 @@
+{
+  "task_type": "clear_single",
+  "task_id": "02_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/02_bar_sales.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What are the exact sales value of Electronics in the East region?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "1300",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "After expanding, the Electronics bar for the East region shows a sales value of approximately 1,300, which is the highest Electronics sales across all regions."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "expand_stack",
+            "reasoning": "The expand stack action is a single, precise tool that separates the stacked segments, allowing us to read the exact value of the Electronics component in the East region. The original stacked view only showed the combined total, so expanding resolves the ambiguity in individual segment values. This directly answers the question, and no further tools are needed unless we want to compare this value across all regions."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "expand_stack",
+              "param_eval": {
+                "type": "categorical",
+                "param": "category",
+                "target": "East"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "product",
+            "y": "sales",
+            "color": "product"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['region'] == \"East\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

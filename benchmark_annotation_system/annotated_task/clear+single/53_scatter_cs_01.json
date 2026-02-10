@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "53_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/53_Housing_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What is the correlation between price and sqft_living?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "0.68",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The correlation is 0.68"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "As the question ask to calculate the correlation, we use the tool of calculate correlation."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sqft_living",
+            "y": "price",
+            "color": "floors"
+          }
+        }
+      }
+    }
+  ]
+}

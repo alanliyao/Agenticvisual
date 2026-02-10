@@ -1,0 +1,59 @@
+{
+  "task_type": "clear_single",
+  "task_id": "45_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/45_ign_scores_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which kinds of games perform better on PC compared to Nintendo 3DS",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Action and Fighting",
+          "alternatives": [
+            "Action and Fighting"
+          ]
+        },
+        "key_insights": [
+          "Action and Fighting perform better on PC compared to Nintendo 3DS"
+        ],
+        "reasoning": [],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Platform"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Game Boy Advance\",\"Dreamcast\",\"Game Boy Color\",\"GameCube\",\"Nintendo 64\",\"Nintendo DS\",\"Nintendo DSi\",\"PlayStation\",\"PlayStation 2\",\"PlayStation 3\",\"PlayStation 4\",\"PlayStation Portable\",\"PlayStation Vita\",\"Wii\",\"Wireless\",\"Xbox\",\"Xbox 360\",\"Xbox One\",\"iPhone\"], datum['Platform']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 1,
+            "types": [
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

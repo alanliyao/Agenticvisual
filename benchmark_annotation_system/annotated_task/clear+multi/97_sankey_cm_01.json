@@ -1,0 +1,73 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "97_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/97_sankey_hr.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Filter the flow to only show hires from the Referral source, then highlight those who stayed in their role to see why they resigned.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Most Referral hires who stayed in their role and resigned did so for growth reasons, rather than company-related factors.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Referral hires are heavily concentrated in Sales and Engineering departments.",
+          "The B-Tier performance group has the highest number of resignations for growth among Referral hires"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "First filtering isolates Referral hires to focus the analysis"
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_path",
+            "reasoning": "highlighting the \"Stayed in Role\" group narrows it to the subset of interest"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Referral"
+                }
+              }
+            },
+            {
+              "tool": "highlight_path",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "path": [
+                    "Stayed in Role",
+                    "Resigned (Growth)"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

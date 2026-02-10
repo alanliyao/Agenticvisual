@@ -1,0 +1,140 @@
+{
+  "spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Temperature Heatmap",
+    "width": 400,
+    "height": 250,
+    "data": {
+      "values": [
+        {
+          "month": "Jan",
+          "city": "Seattle",
+          "temp": 8
+        },
+        {
+          "month": "Feb",
+          "city": "Seattle",
+          "temp": 9
+        },
+        {
+          "month": "Mar",
+          "city": "Seattle",
+          "temp": 12
+        },
+        {
+          "month": "Apr",
+          "city": "Seattle",
+          "temp": 15
+        },
+        {
+          "month": "May",
+          "city": "Seattle",
+          "temp": 18
+        },
+        {
+          "month": "Jun",
+          "city": "Seattle",
+          "temp": 21
+        },
+        {
+          "month": "Jan",
+          "city": "Miami",
+          "temp": 22
+        },
+        {
+          "month": "Feb",
+          "city": "Miami",
+          "temp": 23
+        },
+        {
+          "month": "Mar",
+          "city": "Miami",
+          "temp": 25
+        },
+        {
+          "month": "Apr",
+          "city": "Miami",
+          "temp": 27
+        },
+        {
+          "month": "May",
+          "city": "Miami",
+          "temp": 29
+        },
+        {
+          "month": "Jun",
+          "city": "Miami",
+          "temp": 31
+        },
+        {
+          "month": "Jan",
+          "city": "Denver",
+          "temp": 2
+        },
+        {
+          "month": "Feb",
+          "city": "Denver",
+          "temp": 4
+        },
+        {
+          "month": "Mar",
+          "city": "Denver",
+          "temp": 8
+        },
+        {
+          "month": "Apr",
+          "city": "Denver",
+          "temp": 12
+        },
+        {
+          "month": "May",
+          "city": "Denver",
+          "temp": 17
+        },
+        {
+          "month": "Jun",
+          "city": "Denver",
+          "temp": 23
+        }
+      ]
+    },
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "field": "month",
+        "type": "ordinal"
+      },
+      "y": {
+        "field": "city",
+        "type": "nominal"
+      },
+      "color": {
+        "field": "temp",
+        "type": "quantitative",
+        "scale": {
+          "scheme": "blues"
+        }
+      },
+      "tooltip": [
+        {
+          "field": "month",
+          "type": "ordinal"
+        },
+        {
+          "field": "city",
+          "type": "nominal"
+        },
+        {
+          "field": "temp",
+          "type": "quantitative"
+        }
+      ]
+    }
+  },
+  "meta": {
+    "chart_type": "heatmap",
+    "title": "Temperature Heatmap",
+    "topic": "Weather",
+    "data_points": 18
+  }
+}

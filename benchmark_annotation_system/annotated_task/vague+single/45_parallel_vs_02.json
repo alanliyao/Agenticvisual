@@ -1,0 +1,71 @@
+{
+  "task_type": "vague_single",
+  "task_id": "45_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/45_ign_scores_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What are the same characteristics in \"Action\", \"Adventure\" and \"Action,Adventure\" on different platforms?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The value of \"Action,Adventure\" game is usually higher than other two on most platforms."
+        },
+        "key_insights": [
+          "Action Adventure (second axis) shows the highest peak score of 8.5, suggesting this genre contains some of the best-rated games across all platforms",
+          "Adventure (third axis) has the lowest floor score (5.307), which means this genre has the widest spread between its highest and lowest-rated titles.",
+          "Nintendo 3DS (green lines) stands out with a very high score in the Action Adventure genre, reaching the 8.5 peak, highlighting this platform’s strength in delivering top-rated action-adventure experiences."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We cares about \"Action\", \"Adventure\" and \"Action,Adventure\"."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Fighting",
+                    "Platformer"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Action\", \"Action, Adventure\", \"Adventure\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 1,
+            "types": [
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

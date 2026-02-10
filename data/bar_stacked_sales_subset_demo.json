@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Bar Demo (subset + full_data_path)",
+  "description": "Demo spec: starts with a subset of regions/products; tools can add whole bars or individual stacked segments and will load missing rows from _metadata.full_data_path.",
+  "_metadata": {
+    "full_data_path": "data/bar_stacked_sales_full_values.json"
+  },
+  "data": {
+    "values": [
+      {"region": "east_china", "product": "electronics", "quarter": "Q1", "sales": 1520},
+      {"region": "east_china", "product": "electronics", "quarter": "Q2", "sales": 1680},
+
+      {"region": "south_china", "product": "electronics", "quarter": "Q1", "sales": 1850},
+      {"region": "south_china", "product": "electronics", "quarter": "Q2", "sales": 2100}
+    ]
+  },
+  "transform": [
+    {"aggregate": [{"op": "sum", "field": "sales", "as": "total_sales"}], "groupby": ["region", "product"]}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "region", "type": "nominal", "title": "Region"},
+    "y": {"field": "total_sales", "type": "quantitative", "title": "Total sales", "stack": "zero"},
+    "color": {"field": "product", "type": "nominal", "title": "Product"},
+    "tooltip": [
+      {"field": "region", "type": "nominal"},
+      {"field": "product", "type": "nominal"},
+      {"field": "total_sales", "type": "quantitative"}
+    ]
+  },
+  "width": 520,
+  "height": 320
+}
+

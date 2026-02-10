@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "72_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/72_StudentsPerformance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which combination of race/ethnicity and parental level of education has the minimal writing score?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "The result shows that group A in some high school has the minimal writing score of 45,on average.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "find_extremes",
+            "reasoning": "By using the tool we find that the minimum score appears in group A at some high school."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 1,
+                  "mode": "min"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "parental level of education",
+            "color": "writing score"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+    "task_type": "clear_multi",
+    "task_id": "65_bar_cm_01",
+    "vega_spec_path": "benchmark_annotation_system/backend/specs/65_vitamin_deficiency_disease_dataset_bar.json",
+    "eval_weights": {
+      "tool_call": 0.7,
+      "final_state": 0.3
+    },
+    "questions": [
+      {
+        "qid": "cm_02",
+        "question": "Filter to focus on vegan individuals, and change the view to see syptoms. Then, do those who exercise actively have fewer symptoms than those who are sedentary?",
+        "ground_truth": {
+          "task_type": "clear_multi",
+          "answer": {
+            "type": "categorical",
+            "value": "Yes.",
+            "alternatives": []
+          },
+          "key_insights": [],
+          "reasoning": [
+            {
+              "iteration": 1,
+              "tool": "filter_subcategories",
+              "reasoning": "The question focuses on vegan individuals, so it is necessary to use the filter subcategories tool to filter out vegetarian, omnivore, and pescatarian types."
+            },
+            {
+              "iteration": 2,
+              "tool": "change_encoding",
+              "reasoning": "The focus of the question lies on the symptoms of vegan individuals. Therefore, the \"change encoding\" tool was used to set the channel as \"y\" and the field as \"symptoms_count\" to compare the symptom counts among different exercise level groups."
+            }
+          ],
+          "tool_eval": {
+            "tools": [
+              {
+                "tool": "filter_subcategories",
+                "param_eval": {
+                  "type": "object",
+                  "param": "all_params",
+                  "target": {
+                    "subcategories_to_remove": [
+                      "Vegetarian",
+                      "Omnivore",
+                      "Pescatarian"
+                    ]
+                  }
+                }
+              },
+              {
+                "tool": "change_encoding",
+                "param_eval": {
+                  "type": "object",
+                  "param": "all_params",
+                  "target": {
+                    "field": "symptoms_count",
+                    "channel": "y"
+                  }
+                }
+              }
+            ]
+          },
+          "state_eval": {
+            "encoding": {
+              "x": "exercise_level",
+              "y": "symptoms_count",
+              "color": "diet_type"
+            },
+            "data_filtered": [
+              {
+                "filter": "datum['diet_type'] != \"Vegetarian\" && datum['diet_type'] != \"Omnivore\" && datum['diet_type'] != \"Pescatarian\""
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }

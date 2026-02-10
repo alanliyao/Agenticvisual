@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "47_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/47_candy_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What's the correlation between winpercent and sugarpercent?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "0.20763497996748556",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The correlation between winpercent and sugarpercent is 0.20763497996748556."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "The problem ask to calculate correlation"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sugarpercent",
+            "y": "winpercent",
+            "color": "chocolate"
+          }
+        }
+      }
+    }
+  ]
+}

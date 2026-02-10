@@ -25,7 +25,7 @@ except ImportError:
 
 
 class VegaService:
-    """Vega渲染服务"""
+    """Vega rendering service"""
     
     def __init__(self):
         self.default_width = Settings.VEGA_DEFAULT_WIDTH
@@ -35,11 +35,12 @@ class VegaService:
         app_logger.info("Vega Service initialized")
     
     def _check_rendering_capabilities(self):
-        """检查可用的渲染方案"""
+        """check the available rendering方案"""
         self.vega_cli_available = False
+        self.vega_full_cli_available = False  # vg2png for full Vega specs
         self.altair_available = ALTAIR_AVAILABLE
         
-        # 检查 vega-cli 是否可用
+        # check if vl2png (Vega-Lite) is available
         try:
             result = subprocess.run(
                 ['vl2png', '--version'],
@@ -49,15 +50,29 @@ class VegaService:
             if result.returncode == 0:
                 self.vega_cli_available = True
                 version = result.stdout.decode('utf-8').strip()
-                app_logger.info(f"✅ vega-cli available: {version}")
+                app_logger.info(f"✅ vl2png (Vega-Lite) available: {version}")
         except (FileNotFoundError, subprocess.TimeoutExpired):
             pass
         
-        # 如果要求必须使用 CLI 但 CLI 不可用
+        # check if vg2png (full Vega) is available
+        try:
+            result = subprocess.run(
+                ['vg2png', '--version'],
+                capture_output=True,
+                timeout=5
+            )
+            if result.returncode == 0:
+                self.vega_full_cli_available = True
+                version = result.stdout.decode('utf-8').strip()
+                app_logger.info(f"✅ vg2png (full Vega) available: {version}")
+        except (FileNotFoundError, subprocess.TimeoutExpired):
+            pass
+        
+        # if it is required to use CLI but CLI is not available
         if self.require_cli and not self.vega_cli_available:
             error_msg = (
                 "\n" + "="*70 + "\n"
-                "❌ ERROR: VEGA_REQUIRE_CLI is set but vega-cli is not available!\n"
+                " ERROR: VEGA_REQUIRE_CLI is set but vega-cli is not available!\n"
                 "="*70 + "\n"
                 "\n"
                 "vega-cli is required but not found in your system.\n"
@@ -94,15 +109,15 @@ class VegaService:
         
         # 正常情况下的日志输出
         if not self.vega_cli_available:
-            app_logger.warning("⚠️  vega-cli not found")
+            app_logger.warning("  vega-cli not found")
         
         # 报告可用的渲染方案
         if self.altair_available:
-            app_logger.info("✅ altair/vl-convert available (Pure Python renderer)")
+            app_logger.info(" altair/vl-convert available (Pure Python renderer)")
         
         if not self.vega_cli_available and not self.altair_available and not self.require_cli:
             app_logger.warning(
-                "⚠️  WARNING: No chart renderer available!\n"
+                "  WARNING: No chart renderer available!\n"
                 "   System will use mock rendering (placeholder images).\n"
                 "\n"
                 "   To enable real chart rendering, choose one:\n"
@@ -118,7 +133,7 @@ class VegaService:
             )
         elif not self.vega_cli_available and not self.require_cli:
             app_logger.info(
-                "ℹ️  Using altair for rendering (Pure Python).\n"
+                "  Using altair for rendering (Pure Python).\n"
                 "   For better quality, consider installing vega-cli:\n"
                 "   1. Install Node.js: https://nodejs.org/\n"
                 "   2. Run: npm install -g vega vega-lite vega-cli canvas\n"
@@ -126,80 +141,90 @@ class VegaService:
     
     def render(self, vega_spec: Dict, output_format: str = "png") -> Dict[str, Any]:
         """
-        渲染Vega-Lite规范为图像
+        Render Vega-Lite or Vega specification to image
         
-        渲染优先级（当 VEGA_REQUIRE_CLI=False 时）:
-        1. altair + vl-convert (纯Python，无需Node.js)
-        2. vega-cli (需要Node.js)
-        3. mock渲染 (占位符)
-        
-        当 VEGA_REQUIRE_CLI=True 时:
-        - 只使用 vega-cli
-        - 如果 vega-cli 不可用，返回错误
+        Rendering strategy:
+        - Always use vega-cli (vl2png for Vega-Lite, vg2png for Vega)
+        - If CLI not available, use mock rendering
         
         Args:
-            vega_spec: Vega-Lite JSON规范
-            output_format: 输出格式 (png/svg)
+            vega_spec: Vega-Lite or Vega JSON specification
+            output_format: Output format (png/svg)
         
         Returns:
             {
                 "success": bool,
-                "image_base64": str,  # base64编码的图像
-                "image_path": str,  # 临时文件路径
-                "renderer": str,  # 使用的渲染器
+                "image_base64": str,  # base64 encoded image
+                "image_path": str,  # temporary file path
+                "renderer": str,  # renderer used
                 "error": str
             }
         """
         try:
-            # 如果要求只使用 CLI
+            # Always use CLI rendering (no altair)
             if self.require_cli:
-                if not self.vega_cli_available:
+                if not self.vega_cli_available and not self.vega_full_cli_available:
                     return {
                         "success": False,
                         "error": "vega-cli is required but not available. Please install Node.js and vega-cli. See NODEJS_VEGA_INSTALLATION.md"
                     }
-                # 只使用 vega-cli
                 return self._render_with_cli(vega_spec, output_format)
             
-            # 正常模式：尝试多种渲染方案
-            # 方案 1: 使用 altair + vl-convert（纯 Python，推荐）
-            if ALTAIR_AVAILABLE:
-                try:
-                    # 将 vega-lite spec 转换为图像
-                    png_data = vlc.vegalite_to_png(
-                        vega_spec,
-                        scale=2  # 提高分辨率
-                    )
-                    
-                    # 转换为 base64
-                    image_base64 = base64.b64encode(png_data).decode('utf-8')
-                    
-                    app_logger.info("✅ Rendered using altair/vl-convert (Python)")
-                    return {
-                        "success": True,
-                        "image_base64": image_base64,
-                        "image_path": None,
-                        "renderer": "altair"
-                    }
-                except Exception as e:
-                    app_logger.warning(f"Altair rendering failed: {e}, trying vega-cli...")
+            # Normal mode: try CLI first
+            # Check if it's Vega format
+            is_full_vega = self._is_full_vega_spec(vega_spec)
+            if is_full_vega:
+                if self.vega_full_cli_available:
+                    return self._render_with_cli(vega_spec, output_format)
+            else:
+                if self.vega_cli_available:
+                    return self._render_with_cli(vega_spec, output_format)
             
-            # 方案 2: 使用vega-cli (需要 Node.js)
-            if self.vega_cli_available:
-                return self._render_with_cli(vega_spec, output_format)
-            
-            # 方案 3: Mock 渲染（如果没有其他选项）
-            app_logger.warning("No real renderer available, using mock rendering")
+            # If CLI not available, use mock rendering
+            app_logger.warning("No CLI renderer available, using mock rendering")
             return self._mock_render(vega_spec)
             
         except Exception as e:
             app_logger.error(f"Render error: {e}")
             return {"success": False, "error": str(e)}
     
+    def _is_full_vega_spec(self, vega_spec: Dict) -> bool:
+        """check if it is a full Vega specification (rather than Vega-Lite)"""
+        schema = vega_spec.get("$schema", "")
+        # Vega schema contains /vega/ but not /vega-lite/
+        if "vega-lite" in schema.lower():
+            return False
+        if "/vega/" in schema.lower() or "vega/v" in schema.lower():
+            return True
+        # if there are signals or scales top-level fields, it is usually Vega
+        if "signals" in vega_spec or ("scales" in vega_spec and "encoding" not in vega_spec):
+            return True
+        return False
+    
     def _render_with_cli(self, vega_spec: Dict, output_format: str = "png") -> Dict[str, Any]:
-        """使用 vega-cli 渲染"""
+        """render with vega-cli (automatically select vl2png or vg2png)"""
         try:
-            # 创建临时文件
+            # 检测规范类型
+            is_full_vega = self._is_full_vega_spec(vega_spec)
+            
+            if is_full_vega:
+                if not self.vega_full_cli_available:
+                    return {
+                        "success": False,
+                        "error": "Full Vega spec detected but vg2png is not available. Please install: npm install -g vega vega-cli"
+                    }
+                cli_cmd = 'vg2png'
+                renderer_name = "vega-cli (vg2png)"
+            else:
+                if not self.vega_cli_available:
+                    return {
+                        "success": False,
+                        "error": "Vega-Lite spec but vl2png is not available. Please install: npm install -g vega-lite vega-cli"
+                    }
+                cli_cmd = 'vl2png'
+                renderer_name = "vega-cli (vl2png)"
+            
+            # create a temporary file
             with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as spec_file:
                 json.dump(vega_spec, spec_file)
                 spec_path = spec_file.name
@@ -207,61 +232,51 @@ class VegaService:
             output_path = spec_path.replace('.json', f'.{output_format}')
             
             subprocess.run([
-                'vl2png',
+                cli_cmd,
                 spec_path,
                 output_path
-            ], check=True, capture_output=True, timeout=10)
+            ], check=True, capture_output=True, timeout=30)  # increase the timeout time
             
-            # 读取生成的图像
+            # read the generated image
             image_base64 = encode_image_to_base64(output_path)
             
-            app_logger.info("✅ Rendered using vega-cli (Node.js)")
+            app_logger.info(f" Rendered using {renderer_name}")
             return {
                 "success": True,
                 "image_base64": image_base64,
                 "image_path": output_path,
-                "renderer": "vega-cli"
+                "renderer": renderer_name
             }
         except (subprocess.CalledProcessError, FileNotFoundError, subprocess.TimeoutExpired) as e:
             error_msg = f"vega-cli execution failed: {e}"
             app_logger.error(error_msg)
             
             if self.require_cli:
-                # 如果要求只使用 CLI，返回错误
+                # if it is required to use CLI only, return an error
                 return {
                     "success": False,
                     "error": error_msg,
-                    "help": "Please check vega-cli installation. Run: vl2png --version"
+                    "help": "Please check vega-cli installation. Run: vl2png --version or vg2png --version"
                 }
             else:
-                # 否则使用 mock 渲染
+                # otherwise use mock rendering
                 app_logger.warning(
-                    "❌ vega-cli not found. Using mock rendering.\n"
-                    "\n"
-                    "   Quick Fix - Install Node.js and vega-cli:\n"
-                    "   macOS: brew install node && npm install -g vega vega-lite vega-cli canvas\n"
-                    "   Windows: Download from https://nodejs.org/ then run:\n"
-                    "            npm install -g vega vega-lite vega-cli canvas\n"
-                    "\n"
-                    "   OR install Python alternative (no Node.js needed):\n"
-                    "   pip install altair vl-convert-python --break-system-packages\n"
-                    "\n"
-                    "   Full guide: See NODEJS_VEGA_INSTALLATION.md\n"
+                    "Something wrong. The real data is not rendered.\n" 
                 )
                 return self._mock_render(vega_spec)
     
     def _mock_render(self, vega_spec: Dict) -> Dict:
         """
-        模拟渲染（返回占位符图像）
+        mock rendering (return a placeholder image)
         
-        当 vega-cli 和 altair 都不可用时使用
+        when vega-cli and altair are both unavailable
         """
         app_logger.info(
-            "ℹ️  Using mock rendering (placeholder image).\n"
+            "  Using mock rendering (placeholder image).\n"
             "   For real charts, see VEGA_CLI_INSTALLATION.md"
         )
         
-        # 返回一个简单的1x1像素占位符（白色）
+        # return a simple 1x1 pixel placeholder (white)
         mock_image = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
         return {
             "success": True,
@@ -272,7 +287,7 @@ class VegaService:
         }
     
     def validate_spec(self, vega_spec: Dict) -> Dict[str, Any]:
-        """验证Vega-Lite规范"""
+        """validate the Vega-Lite specification"""
         required_fields = ["mark", "encoding"]
         missing = [f for f in required_fields if f not in vega_spec]
         
@@ -284,7 +299,7 @@ class VegaService:
         return {"valid": True}
     
     def update_spec(self, vega_spec: Dict, updates: Dict) -> Dict:
-        """更新Vega-Lite规范"""
+        """update the Vega-Lite specification"""
         new_spec = copy.deepcopy(vega_spec)  # 使用copy.deepcopy代替JSON序列化
         new_spec.update(updates)
         return new_spec
@@ -293,7 +308,7 @@ class VegaService:
 _vega_service = None
 
 def get_vega_service() -> VegaService:
-    """获取Vega服务单例"""
+    """get the Vega service singleton"""
     global _vega_service
     if _vega_service is None:
         _vega_service = VegaService()

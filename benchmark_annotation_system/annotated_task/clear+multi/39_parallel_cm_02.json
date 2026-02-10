@@ -1,0 +1,91 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "39_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/39_insurance_parallel (1).json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "In this graph, are there any samples in the northwest region with a lower BMI but higher charges?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "NO"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "get the data of northwest region"
+          },
+          {
+            "iteration": 2,
+            "tool": "reorder_dimensions",
+            "reasoning": "more convenient to watch the trend"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "region",
+                  "values": [
+                    "southeast",
+                    "southwest",
+                    "northeast"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "age",
+                    "children",
+                    "bmi",
+                    "charges"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"northwest\"], datum['region']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

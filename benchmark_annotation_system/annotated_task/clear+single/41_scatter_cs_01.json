@@ -1,0 +1,49 @@
+{
+  "task_type": "clear_single",
+  "task_id": "41_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/41_museum_visitors_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "what is the correlation between America Tropical Interpretive Center and Chinese American Museum",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "weak positive correlation"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "As the problem mention the correlation, we use the tool to  calculate"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Chinese American Museum",
+            "y": "America Tropical Interpretive Center",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "99_sankey_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/99_sankey_cloud.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Examine the cost distribution across all projects to identify any unexpected or disproportionate cost allocations.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "The “Shared Infra” project has a disproportionately high cost allocation",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The \"Others\" service category also has a non-trivial cost, indicating potential uncategorized spending."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data_summary",
+            "reasoning": "The get data summary tool provides the precise numerical values needed to spot anomalies that might not be obvious from visual inspection alone."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

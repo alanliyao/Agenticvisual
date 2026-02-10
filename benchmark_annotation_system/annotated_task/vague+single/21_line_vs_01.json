@@ -1,0 +1,53 @@
+{
+  "task_type": "vague_single",
+  "task_id": "21_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/21_Number of trees sold over Yea_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What patterns does the average price of Real Tree exhibit?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "From 2010 to 2016, the average price of Real Tree products showed an overall upward trend. Only the first two quarters of 2012 saw a brief decline, followed by a sustained recovery. The largest increase occurred between 2014 and 2016, rising from approximately 40 to around 75."
+        },
+        "key_insights": [
+          "The average price of Real Tree products has generally shown an upward trend.",
+          "In the first and second quarters of 2012, the average price of Real Tree experienced a slight decline, dropping from around $40 to approximately $37.",
+          "The largest increase occurred between 2014 and 2016, with the average price rising from 40 to around 75."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "After using the change encoding tool to convert the y-axis values to average prices, you can observe the shift in Real Tree's average price. Patterns are now discernible, eliminating the need to call the tool."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Average Tree Price"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Average Tree Price",
+            "color": "Type of tree"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "85_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/85_supply_chain_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First, compare the overall mean of prices of the Female and Male groups, and then determine which main product type is responsible for the difference.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Haircare.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Select and analyze the data for both male and female."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Use the tool to switch to the group mode to visually compare the differences in those product types that are the greatest."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Unknown",
+                    "Non-binary"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Customer demographics",
+            "y": "Price",
+            "color": "Product type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Unknown\",\"Non-binary\"], datum['Customer demographics']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

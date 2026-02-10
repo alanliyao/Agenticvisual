@@ -1,0 +1,56 @@
+{
+  "task_type": "vague_single",
+  "task_id": "75_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/75_Refined_Employment_Telecom_Services_2024_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Rearrange the data by grouping countries into their respective continents, then compare how this new layout changes your understanding of employment distribution compared to the original country-ordered view.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "We found that the new layout clearly reveals Europe has the largest number of countries represented, the U.S. is an outlier driving North America’s high employment, and Asia has an employment pattern of “coexisting high-employment countries and smaller nations”."
+        },
+        "key_insights": [
+          "The continent-grouped view immediately reveals that Europe has the largest number of countries represented, a detail that was hidden in the original view where countries were spread out alphabetically.",
+          "The grouped layout makes it clear that North America’s high employment is driven almost entirely by the United States, which stands out as a dramatic outlier within its continent—this was far less obvious in the original view.",
+          "The continent-based grouping shows Asia has a mix of high-employment countries (like India) and smaller ones, a pattern that was harder to identify when countries were listed alphabetically."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "Rearranging the data to group by continent is a single exploratory action that shifts focus from individual countries to continental patterns. This helps uncover which continents have more countries, where outliers lie, and how employment clusters within regions—insights that were obscured by the original alphabetical order. Since the goal is to compare perceptual differences, this single action is sufficient to highlight how grouping changes interpretability, though further filtering could deepen the analysis."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Continent",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Country",
+            "y": "Continent",
+            "color": "Continent"
+          }
+        }
+      }
+    }
+  ]
+}

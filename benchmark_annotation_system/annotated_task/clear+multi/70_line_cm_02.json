@@ -1,0 +1,84 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "70_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/70_one_person_ai_work_and_burnout_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "How many days had four or more bugs occur in the first 100 days?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "15",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "get the period"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_lines",
+            "reasoning": "filter the days blow 4 bugs occur"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "1",
+                  "end": "100"
+                }
+              }
+            },
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    2,
+                    3,
+                    1
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "1",
+              "100"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Day",
+            "y": "AI_Tool_Usage_%",
+            "color": "Bugs_Introduced"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([2, 3, 1], datum['Bugs_Introduced']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

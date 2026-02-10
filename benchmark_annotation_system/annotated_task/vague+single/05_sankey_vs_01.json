@@ -1,0 +1,71 @@
+{
+  "task_type": "vague_single",
+  "task_id": "05_sankey_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/05_sankey_ecommercial.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Does advertising contribute to the sales of the product?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The fact that the majority of the traffic flows into the purchase process indicates that the advertisement has a positive impact on the purchase."
+        },
+        "key_insights": [
+          "It was found that the majority of the traffic was directed towards the purchase section."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "collapse_nodes",
+            "reasoning": "Aggregate the flow directions of all users"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "collapse_nodes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "aggregate_name": "Other",
+                  "nodes_to_collapse": [
+                    "Google Ads",
+                    "Facebook",
+                    "Organic",
+                    "Email",
+                    "Landing Page",
+                    "Product List",
+                    "Search"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Other",
+            "Product Detail",
+            "Exit",
+            "Add to Cart",
+            "Bounce",
+            "Purchase"
+          ],
+          "collapsed_nodes": []
+        }
+      }
+    }
+  ]
+}

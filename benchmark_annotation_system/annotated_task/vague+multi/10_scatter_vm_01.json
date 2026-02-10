@@ -1,0 +1,71 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "10_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/10_scatter_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Is the duration of exercise related to dietary habits?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Reliable studies have shown that there is little correlation between diet habits and exercise. Regardless of whether their dietary habits are good, bad or average, the duration of their physical activities varies greatly. It can be seen that regardless of the quality of dietary habits, some people like to exercise while others don't. However, it can be observed that people with poor dietary habits are relatively less likely to engage in long-term exercise activities."
+        },
+        "key_insights": [
+          "find screen time seems that not have a relation with diet one",
+          "it's seem that they are have no relationship"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "change the xbar to diet_quality"
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "get the charts of exercise and diet"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "diet_quality",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "exercise_minutes",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "exercise_minutes",
+            "color": "diet_quality"
+          }
+        }
+      }
+    }
+  ]
+}

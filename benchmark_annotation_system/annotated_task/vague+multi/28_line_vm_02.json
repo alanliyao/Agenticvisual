@@ -1,0 +1,78 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "28_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/28_silver_prices_data_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "analyze the monthly price fluctuation pattern in 2023 within this core trend.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The 2023 monthly pattern confirms no abnormal fluctuations."
+        },
+        "key_insights": [
+          "monthly price fluctuations between 28 and 35, with a mild upward trend and low volatility.",
+          "The 2023 monthly pattern shows no extreme spikes/drops,"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "drilldown line time then breaks down the 2023 sub-period into monthly granularity to explore fine-grained fluctuations"
+          },
+          {
+            "iteration": 2,
+            "tool": "drilldown_line_time",
+            "reasoning": "drilldown line time then breaks down the 2023 sub-period into monthly granularity to explore fine-grained fluctuations"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2023/1/3",
+                  "end": "2023/12/29"
+                }
+              }
+            },
+            {
+              "tool": "drilldown_line_time",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "parent": "{“Year”：2023}",
+                  "level": "year",
+                  "value": "2023"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "month_date",
+            "y": "total_value",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "year(datum.Date) == 2023",
+              "_avs_tag": "line_drilldown_time"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

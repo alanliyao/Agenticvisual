@@ -1,0 +1,77 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "25_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/25_gym_members_exercise_tracking_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "First, focus your attention on the two workout type with similar average fat content, and then investigate whether higher experience levels have the same effect on mean fat percentage.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The changes in the experience levels of two projects with similar fat percentage have the same effect on the changes in fat percentage."
+        },
+        "key_insights": [
+          "The fat percentage of HIIT and Yoga is the similar.",
+          "The chart shows that the fat percentage of both projects decreases as the level increases."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Use the filter to select two items with similar fat percentage."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Using tools to group horizontally can help us more intuitively study whether the changes in the levels of the two projects have the same effect on the changes in fat content."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Cardio",
+                    "Strength"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Experience_Level",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Cardio\",\"Strength\"], datum['Workout_Type']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

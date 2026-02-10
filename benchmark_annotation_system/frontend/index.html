@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benchmark Annotation System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/ui-components.css">
+    <!-- Vega libraries - matching Vega Editor versions -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <!-- Sortable.js for drag-drop functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <!-- Header -->
+            <div class="header-section">
+                <div class="meta-info">
+                    <div class="meta-row">
+                        <span class="meta-label">Type:</span>
+                        <span id="chart-type-display" class="meta-value">-</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Title:</span>
+                        <span id="chart-title-display" class="meta-value">-</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Topic:</span>
+                        <span id="chart-topic-display" class="meta-value">-</span>
+                    </div>
+                    <div class="meta-row">
+                        <span class="meta-label">Points:</span>
+                        <span id="data-points-display" class="meta-value">-</span>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button id="prev-btn" class="nav-btn">Prev</button>
+                    <span class="nav-info"><span id="current-index">1</span> / <span id="total-specs">0</span></span>
+                    <input type="text" id="nav-index-input" class="nav-index-input" placeholder="跳转" title="Jump to index" inputmode="numeric" />
+                    <button id="nav-go-btn" class="nav-btn">Go</button>
+                    <button id="next-btn" class="nav-btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Notice -->
+            <div id="sampling-notice" class="sampling-notice" style="display: none;"></div>
+            
+            <!-- Tools -->
+            <div class="tool-panel">
+                <div class="tool-section">
+                    <h3>Common Tools</h3>
+                    <div id="common-tools" class="tool-buttons"></div>
+                </div>
+                <div class="tool-section">
+                    <h3>Chart-Specific Tools</h3>
+                    <div id="specific-tools" class="tool-buttons"></div>
+                </div>
+            </div>
+            
+            <!-- Parameters -->
+            <div id="param-panel" class="param-panel" style="display: none;"></div>
+            
+            <!-- Chart -->
+            <div class="chart-container">
+                <div id="vega-chart"></div>
+            </div>
+            
+            <!-- Status -->
+            <div id="status-message" class="status-message" style="display: none;"></div>
+        </div>
+        
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <!-- Question -->
+            <div class="question-section">
+                <h3>Query / Question</h3>
+                <textarea id="question-input" placeholder="Enter your exploration question..."></textarea>
+            </div>
+            
+            <!-- Answer -->
+            <div class="answer-section">
+                <h3>Answer (Optional)</h3>
+                <textarea id="answer-input" placeholder="Enter the ground truth answer..."></textarea>
+            </div>
+            
+            <!-- Answer Type -->
+            <div class="answer-type-section">
+                <label>Answer Type:</label>
+                <select id="answer-type-select">
+                    <option value="categorical" selected>Categorical (text/short answer)</option>
+                    <option value="numeric">Numeric (with tolerance)</option>
+                    <option value="boolean">Boolean (yes/no)</option>
+                    <option value="open_ended">Open-ended (subjective, LLM judge)</option>
+                    <option value="region">Region (IoU evaluation)</option>
+                </select>
+                
+                <!-- Answer Type Config (shown based on type) -->
+                <div id="answer-type-config" class="answer-type-config">
+                    <!-- Categorical config -->
+                    <div id="config-categorical" class="type-config">
+                        <label>Alternatives (comma-separated):</label>
+                        <input type="text" id="alternatives-input" placeholder="e.g., USA, America, United States">
+                    </div>
+                    
+                    <!-- Numeric config -->
+                    <div id="config-numeric" class="type-config" style="display:none;">
+                        <label>Tolerance:</label>
+                        <input type="number" id="tolerance-input" value="0.05" step="0.01" min="0">
+                    </div>
+                    
+                    <!-- Region config -->
+                    <div id="config-region" class="type-config" style="display:none;">
+                        <label>IoU Threshold:</label>
+                        <input type="number" id="region-threshold-input" value="0.5" step="0.1" min="0" max="1">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Task Type -->
+            <div class="task-type-section">
+                <label>Task Type:</label>
+                <select id="task-type-select">
+                    <option value="clear_single" selected>Clear Single</option>
+                    <option value="clear_multi">Clear Multi</option>
+                    <option value="vague_single">Vague Single</option>
+                    <option value="vague_multi">Vague Multi</option>
+                </select>
+            </div>
+            
+            <!-- Log -->
+            <div class="log-section">
+                <h3>Real-time Log</h3>
+                <div id="realtime-log" class="realtime-log"></div>
+            </div>
+            
+            <!-- Insight Form -->
+            <div id="insight-form-container" class="insight-form-container" style="display: none;"></div>
+            
+            <!-- Iterations -->
+            <div class="iterations-section">
+                <h3>Recorded Iterations</h3>
+                <div id="iterations-list" class="iterations-list"></div>
+            </div>
+            
+            <!-- Actions -->
+            <div class="action-buttons">
+                <button id="finish-btn" class="finish-btn">Finish Question</button>
+                <button id="export-btn" class="export-btn">Export (raw)</button>
+                <button id="export-task-btn" class="export-btn">Export Task</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/ui-components.js"></script>
+    <script src="/js/tool-config.js"></script>
+    <script src="/js/app.js?v=nodraft"></script>
+</body>
+</html>

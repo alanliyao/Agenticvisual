@@ -1,0 +1,80 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "106_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/106_life expectancey_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "What is the average age of death in Zimbabwe?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "57",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "get the chart only have zimbabwe one"
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data_summary",
+            "reasoning": "get data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Australia",
+                    "Brazil",
+                    "Canada",
+                    "China",
+                    "Japan",
+                    "United Kingdom",
+                    "United States"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "filter"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Life expectancy - Sex: female - Age: 0 - Variant: estimates",
+            "color": "Entity"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Australia\", \"Brazil\", \"Canada\", \"China\", \"Japan\", \"United Kingdom\", \"United States\"], datum['Entity']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

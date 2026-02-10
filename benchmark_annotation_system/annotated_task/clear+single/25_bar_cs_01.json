@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "25_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/25_gym_members_exercise_tracking_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Select experience level of 2 to determine which workout type has the lowest average fat percentage for that group？",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Yoga.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "use the filter to select the group of people with a experience level of 2."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    3,
+                    1
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Experience_Level'] != 3 && datum['Experience_Level'] != 1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

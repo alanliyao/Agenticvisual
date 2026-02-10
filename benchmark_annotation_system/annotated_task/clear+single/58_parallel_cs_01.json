@@ -1,0 +1,64 @@
+{
+  "task_type": "clear_single",
+  "task_id": "58_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/58_Train_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Do high-importance products require heavy discounts?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "No"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "We focus the lines of high importance product"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product_importance",
+                  "values": [
+                    "high"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "108_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/108_insurance_sankey.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_04",
+      "question": "Compare claims originating from App Self-Service and Call Center channels to determine which channel leads to a higher proportion of instant payments.\n",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "App-self-service.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Use tools to identify the primary source of timely payments."
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Use tools to identify the primary source of low risk."
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "The main sources of doc review that were identified through the tool are auto-approve and simple-manual."
+          },
+          {
+            "iteration": 4,
+            "tool": "collapse_nodes",
+            "reasoning": "By using the tool to aggregate auto-approve and simple-manual nodes, it can be found that their main source is app-self-service."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Full Payout"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Low Risk"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Doc Review"
+                }
+              }
+            },
+            {
+              "tool": "collapse_nodes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "aggregate_name": "Other",
+                  "nodes_to_collapse": [
+                    "Auto-Approve",
+                    "Simple Manual"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

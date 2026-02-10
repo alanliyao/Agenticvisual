@@ -1,0 +1,85 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "103_sankey_vm_02",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/103_sankey_university.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "Focus on the starting salary and the graduation status, and analyze how to increase the starting salary.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Graduating on time can increase the probability of obtaining a high salary."
+        },
+        "key_insights": [
+          "Most industries are 10-20k/mo.",
+          "The higher-paid tech workers mainly come from on-time grad.",
+          "The higher-paid tech workers mainly come from on-time grad."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Use tools to track where the higher salaries come from in those industries"
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Use tools to track where the higher salaries come from graduation status."
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Use tools to track where the higher salaries come from graduation status."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "10-20K/mo"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Tech/Internet"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Finance Ind"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

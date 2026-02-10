@@ -1,0 +1,109 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "106_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/106_life expectancey_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_04",
+      "question": "What long-term development characteristics does the overall change trend of China exhibit among all countries?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It can be observed that during this period, compared to other countries, the average age of death in China has been rising at an increasingly rapid rate, and it has surpassed the most backward levels and reached the level of developed countries."
+        },
+        "key_insights": [
+          "vert steep increase",
+          "a slow increase"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "let the chart only have the line of china"
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_trend",
+            "reasoning": "get the trend"
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_lines",
+            "reasoning": "get the chart without china"
+          },
+          {
+            "iteration": 4,
+            "tool": "highlight_trend",
+            "reasoning": "get the trend"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Australia",
+                    "Brazil",
+                    "Canada",
+                    "Japan",
+                    "United Kingdom",
+                    "United States",
+                    "Zimbabwe"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "highlight_trend",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "trend_type": "increasing"
+                }
+              }
+            },
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "China"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "highlight_trend",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "trend_type": "increasing"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Life expectancy - Sex: female - Age: 0 - Variant: estimates",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

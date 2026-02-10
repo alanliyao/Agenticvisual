@@ -1,0 +1,56 @@
+{
+  "task_type": "vague_single",
+  "task_id": "86_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/85_supply_chain_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What are the consumption price trends for different types of people?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "all of the type of customer, the biggest price of them is cosmetics and the second one is skincare and the last one is haircare"
+        },
+        "key_insights": [
+          "for female, cosmetics the most, skincare the second and haircare the last.",
+          "for male, cosmetics the most, skincare the second and haircare the last.",
+          "for non-binary, cosmetics the most, skincare the second and haircare the last.",
+          "for unknown, cosmetics the most, skincare the second and haircare the last."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Obtain the relationship between the data more intuitively"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Customer demographics",
+            "y": "Price",
+            "color": "Product type"
+          }
+        }
+      }
+    }
+  ]
+}

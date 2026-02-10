@@ -1,0 +1,95 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "114_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/114_sport_life_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "How do discounts and final prices affect sales volume?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was found that in the sample, although discounts would cause changes in the final prices, they would not affect the sales volume."
+        },
+        "key_insights": [
+          "The discovery that the final price is closely related to the sales volume, which is relatively uniform, indicates that there is no significant correlation between them.",
+          "The sales distribution is quite even."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "focus on these three channels"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "filter the influent of final price"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "dimension",
+                  "values": [
+                    "size",
+                    "base_price_usd",
+                    "revenue_usd"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "dimension",
+                  "values": [
+                    "size",
+                    "base_price_usd",
+                    "revenue_usd",
+                    "final_price_usd"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"size\",\"base_price_usd\",\"revenue_usd\",\"final_price_usd\"], datum['dimension']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

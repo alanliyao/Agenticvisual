@@ -1,0 +1,69 @@
+{
+  "task_type": "clear_single",
+  "task_id": "05_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/05_sankey_ecommercial.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which of the four advertisers has the best traffic?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Google Ads",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "auto_collapse_by_rank",
+            "reasoning": "Select the largest one."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "auto_collapse_by_rank",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 1
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Google Ads",
+            "Others (Layer 0)",
+            "Landing Page",
+            "Others (Layer 1)",
+            "Product Detail",
+            "Others (Layer 2)",
+            "Add to Cart",
+            "Others (Layer 3)",
+            "Purchase"
+          ],
+          "collapsed_nodes": [
+            "Others (Layer 0)",
+            "Others (Layer 1)",
+            "Others (Layer 2)",
+            "Others (Layer 3)"
+          ]
+        }
+      }
+    }
+  ]
+}

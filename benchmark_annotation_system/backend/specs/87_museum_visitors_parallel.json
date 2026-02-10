@@ -1,0 +1,1240 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: museum_visitors",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "_index": 0,
+        "dimension": "Avila Adobe",
+        "value": 24778
+      },
+      {
+        "_index": 1,
+        "dimension": "Avila Adobe",
+        "value": 18976
+      },
+      {
+        "_index": 2,
+        "dimension": "Avila Adobe",
+        "value": 25231
+      },
+      {
+        "_index": 3,
+        "dimension": "Avila Adobe",
+        "value": 26989
+      },
+      {
+        "_index": 4,
+        "dimension": "Avila Adobe",
+        "value": 36883
+      },
+      {
+        "_index": 5,
+        "dimension": "Avila Adobe",
+        "value": 29487
+      },
+      {
+        "_index": 6,
+        "dimension": "Avila Adobe",
+        "value": 32378
+      },
+      {
+        "_index": 7,
+        "dimension": "Avila Adobe",
+        "value": 37680
+      },
+      {
+        "_index": 8,
+        "dimension": "Avila Adobe",
+        "value": 28473
+      },
+      {
+        "_index": 9,
+        "dimension": "Avila Adobe",
+        "value": 27995
+      },
+      {
+        "_index": 10,
+        "dimension": "Avila Adobe",
+        "value": 25691
+      },
+      {
+        "_index": 11,
+        "dimension": "Avila Adobe",
+        "value": 18754
+      },
+      {
+        "_index": 12,
+        "dimension": "Avila Adobe",
+        "value": 20438
+      },
+      {
+        "_index": 13,
+        "dimension": "Avila Adobe",
+        "value": 15578
+      },
+      {
+        "_index": 14,
+        "dimension": "Avila Adobe",
+        "value": 21297
+      },
+      {
+        "_index": 15,
+        "dimension": "Avila Adobe",
+        "value": 26670
+      },
+      {
+        "_index": 16,
+        "dimension": "Avila Adobe",
+        "value": 34383
+      },
+      {
+        "_index": 17,
+        "dimension": "Avila Adobe",
+        "value": 30569
+      },
+      {
+        "_index": 18,
+        "dimension": "Avila Adobe",
+        "value": 41242
+      },
+      {
+        "_index": 19,
+        "dimension": "Avila Adobe",
+        "value": 30700
+      },
+      {
+        "_index": 20,
+        "dimension": "Avila Adobe",
+        "value": 20967
+      },
+      {
+        "_index": 21,
+        "dimension": "Avila Adobe",
+        "value": 29764
+      },
+      {
+        "_index": 22,
+        "dimension": "Avila Adobe",
+        "value": 24483
+      },
+      {
+        "_index": 23,
+        "dimension": "Avila Adobe",
+        "value": 21426
+      },
+      {
+        "_index": 24,
+        "dimension": "Avila Adobe",
+        "value": 19659
+      },
+      {
+        "_index": 25,
+        "dimension": "Avila Adobe",
+        "value": 17378
+      },
+      {
+        "_index": 26,
+        "dimension": "Avila Adobe",
+        "value": 20322
+      },
+      {
+        "_index": 27,
+        "dimension": "Avila Adobe",
+        "value": 24521
+      },
+      {
+        "_index": 28,
+        "dimension": "Avila Adobe",
+        "value": 31728
+      },
+      {
+        "_index": 29,
+        "dimension": "Avila Adobe",
+        "value": 23696
+      },
+      {
+        "_index": 30,
+        "dimension": "Avila Adobe",
+        "value": 31689
+      },
+      {
+        "_index": 31,
+        "dimension": "Avila Adobe",
+        "value": 25987
+      },
+      {
+        "_index": 32,
+        "dimension": "Avila Adobe",
+        "value": 22897
+      },
+      {
+        "_index": 33,
+        "dimension": "Avila Adobe",
+        "value": 25040
+      },
+      {
+        "_index": 34,
+        "dimension": "Avila Adobe",
+        "value": 17760
+      },
+      {
+        "_index": 35,
+        "dimension": "Avila Adobe",
+        "value": 20107
+      },
+      {
+        "_index": 36,
+        "dimension": "Avila Adobe",
+        "value": 18792
+      },
+      {
+        "_index": 37,
+        "dimension": "Avila Adobe",
+        "value": 14035
+      },
+      {
+        "_index": 38,
+        "dimension": "Avila Adobe",
+        "value": 20680
+      },
+      {
+        "_index": 39,
+        "dimension": "Avila Adobe",
+        "value": 25234
+      },
+      {
+        "_index": 40,
+        "dimension": "Avila Adobe",
+        "value": 30029
+      },
+      {
+        "_index": 41,
+        "dimension": "Avila Adobe",
+        "value": 22169
+      },
+      {
+        "_index": 42,
+        "dimension": "Avila Adobe",
+        "value": 30831
+      },
+      {
+        "_index": 43,
+        "dimension": "Avila Adobe",
+        "value": 27009
+      },
+      {
+        "_index": 44,
+        "dimension": "Avila Adobe",
+        "value": 23403
+      },
+      {
+        "_index": 45,
+        "dimension": "Avila Adobe",
+        "value": 22164
+      },
+      {
+        "_index": 46,
+        "dimension": "Avila Adobe",
+        "value": 17629
+      },
+      {
+        "_index": 47,
+        "dimension": "Avila Adobe",
+        "value": 18339
+      },
+      {
+        "_index": 48,
+        "dimension": "Avila Adobe",
+        "value": 16265
+      },
+      {
+        "_index": 49,
+        "dimension": "Avila Adobe",
+        "value": 14718
+      },
+      {
+        "_index": 50,
+        "dimension": "Avila Adobe",
+        "value": 19001
+      },
+      {
+        "_index": 51,
+        "dimension": "Avila Adobe",
+        "value": 18966
+      },
+      {
+        "_index": 52,
+        "dimension": "Avila Adobe",
+        "value": 25173
+      },
+      {
+        "_index": 53,
+        "dimension": "Avila Adobe",
+        "value": 22171
+      },
+      {
+        "_index": 54,
+        "dimension": "Avila Adobe",
+        "value": 23136
+      },
+      {
+        "_index": 55,
+        "dimension": "Avila Adobe",
+        "value": 20815
+      },
+      {
+        "_index": 56,
+        "dimension": "Avila Adobe",
+        "value": 21020
+      },
+      {
+        "_index": 57,
+        "dimension": "Avila Adobe",
+        "value": 19280
+      },
+      {
+        "_index": 58,
+        "dimension": "Avila Adobe",
+        "value": 17163
+      },
+      {
+        "_index": 0,
+        "dimension": "Firehouse Museum",
+        "value": 4486
+      },
+      {
+        "_index": 1,
+        "dimension": "Firehouse Museum",
+        "value": 4172
+      },
+      {
+        "_index": 2,
+        "dimension": "Firehouse Museum",
+        "value": 7082
+      },
+      {
+        "_index": 3,
+        "dimension": "Firehouse Museum",
+        "value": 6756
+      },
+      {
+        "_index": 4,
+        "dimension": "Firehouse Museum",
+        "value": 10858
+      },
+      {
+        "_index": 5,
+        "dimension": "Firehouse Museum",
+        "value": 5751
+      },
+      {
+        "_index": 6,
+        "dimension": "Firehouse Museum",
+        "value": 5406
+      },
+      {
+        "_index": 7,
+        "dimension": "Firehouse Museum",
+        "value": 8619
+      },
+      {
+        "_index": 8,
+        "dimension": "Firehouse Museum",
+        "value": 61192
+      },
+      {
+        "_index": 9,
+        "dimension": "Firehouse Museum",
+        "value": 6488
+      },
+      {
+        "_index": 10,
+        "dimension": "Firehouse Museum",
+        "value": 4189
+      },
+      {
+        "_index": 11,
+        "dimension": "Firehouse Museum",
+        "value": 4339
+      },
+      {
+        "_index": 12,
+        "dimension": "Firehouse Museum",
+        "value": 3858
+      },
+      {
+        "_index": 13,
+        "dimension": "Firehouse Museum",
+        "value": 3742
+      },
+      {
+        "_index": 14,
+        "dimension": "Firehouse Museum",
+        "value": 5390
+      },
+      {
+        "_index": 15,
+        "dimension": "Firehouse Museum",
+        "value": 7000
+      },
+      {
+        "_index": 16,
+        "dimension": "Firehouse Museum",
+        "value": 12528
+      },
+      {
+        "_index": 17,
+        "dimension": "Firehouse Museum",
+        "value": 5377
+      },
+      {
+        "_index": 18,
+        "dimension": "Firehouse Museum",
+        "value": 6111
+      },
+      {
+        "_index": 19,
+        "dimension": "Firehouse Museum",
+        "value": 5383
+      },
+      {
+        "_index": 20,
+        "dimension": "Firehouse Museum",
+        "value": 5746
+      },
+      {
+        "_index": 21,
+        "dimension": "Firehouse Museum",
+        "value": 8882
+      },
+      {
+        "_index": 22,
+        "dimension": "Firehouse Museum",
+        "value": 6848
+      },
+      {
+        "_index": 23,
+        "dimension": "Firehouse Museum",
+        "value": 4502
+      },
+      {
+        "_index": 24,
+        "dimension": "Firehouse Museum",
+        "value": 4377
+      },
+      {
+        "_index": 25,
+        "dimension": "Firehouse Museum",
+        "value": 3675
+      },
+      {
+        "_index": 26,
+        "dimension": "Firehouse Museum",
+        "value": 6334
+      },
+      {
+        "_index": 27,
+        "dimension": "Firehouse Museum",
+        "value": 6509
+      },
+      {
+        "_index": 28,
+        "dimension": "Firehouse Museum",
+        "value": 9315
+      },
+      {
+        "_index": 29,
+        "dimension": "Firehouse Museum",
+        "value": 4918
+      },
+      {
+        "_index": 30,
+        "dimension": "Firehouse Museum",
+        "value": 5602
+      },
+      {
+        "_index": 31,
+        "dimension": "Firehouse Museum",
+        "value": 5181
+      },
+      {
+        "_index": 32,
+        "dimension": "Firehouse Museum",
+        "value": 4736
+      },
+      {
+        "_index": 33,
+        "dimension": "Firehouse Museum",
+        "value": 6145
+      },
+      {
+        "_index": 34,
+        "dimension": "Firehouse Museum",
+        "value": 3930
+      },
+      {
+        "_index": 35,
+        "dimension": "Firehouse Museum",
+        "value": 3911
+      },
+      {
+        "_index": 36,
+        "dimension": "Firehouse Museum",
+        "value": 3551
+      },
+      {
+        "_index": 37,
+        "dimension": "Firehouse Museum",
+        "value": 3491
+      },
+      {
+        "_index": 38,
+        "dimension": "Firehouse Museum",
+        "value": 5273
+      },
+      {
+        "_index": 39,
+        "dimension": "Firehouse Museum",
+        "value": 5320
+      },
+      {
+        "_index": 40,
+        "dimension": "Firehouse Museum",
+        "value": 8733
+      },
+      {
+        "_index": 41,
+        "dimension": "Firehouse Museum",
+        "value": 4862
+      },
+      {
+        "_index": 42,
+        "dimension": "Firehouse Museum",
+        "value": 5242
+      },
+      {
+        "_index": 43,
+        "dimension": "Firehouse Museum",
+        "value": 5379
+      },
+      {
+        "_index": 44,
+        "dimension": "Firehouse Museum",
+        "value": 4484
+      },
+      {
+        "_index": 45,
+        "dimension": "Firehouse Museum",
+        "value": 4822
+      },
+      {
+        "_index": 46,
+        "dimension": "Firehouse Museum",
+        "value": 4613
+      },
+      {
+        "_index": 47,
+        "dimension": "Firehouse Museum",
+        "value": 4448
+      },
+      {
+        "_index": 48,
+        "dimension": "Firehouse Museum",
+        "value": 3910
+      },
+      {
+        "_index": 49,
+        "dimension": "Firehouse Museum",
+        "value": 3306
+      },
+      {
+        "_index": 50,
+        "dimension": "Firehouse Museum",
+        "value": 5225
+      },
+      {
+        "_index": 51,
+        "dimension": "Firehouse Museum",
+        "value": 4535
+      },
+      {
+        "_index": 52,
+        "dimension": "Firehouse Museum",
+        "value": 8013
+      },
+      {
+        "_index": 53,
+        "dimension": "Firehouse Museum",
+        "value": 4635
+      },
+      {
+        "_index": 54,
+        "dimension": "Firehouse Museum",
+        "value": 4191
+      },
+      {
+        "_index": 55,
+        "dimension": "Firehouse Museum",
+        "value": 4866
+      },
+      {
+        "_index": 56,
+        "dimension": "Firehouse Museum",
+        "value": 4956
+      },
+      {
+        "_index": 57,
+        "dimension": "Firehouse Museum",
+        "value": 4622
+      },
+      {
+        "_index": 58,
+        "dimension": "Firehouse Museum",
+        "value": 4082
+      },
+      {
+        "_index": 0,
+        "dimension": "Chinese American Museum",
+        "value": 1581
+      },
+      {
+        "_index": 1,
+        "dimension": "Chinese American Museum",
+        "value": 1785
+      },
+      {
+        "_index": 2,
+        "dimension": "Chinese American Museum",
+        "value": 3229
+      },
+      {
+        "_index": 3,
+        "dimension": "Chinese American Museum",
+        "value": 2129
+      },
+      {
+        "_index": 4,
+        "dimension": "Chinese American Museum",
+        "value": 3676
+      },
+      {
+        "_index": 5,
+        "dimension": "Chinese American Museum",
+        "value": 2121
+      },
+      {
+        "_index": 6,
+        "dimension": "Chinese American Museum",
+        "value": 2239
+      },
+      {
+        "_index": 7,
+        "dimension": "Chinese American Museum",
+        "value": 1769
+      },
+      {
+        "_index": 8,
+        "dimension": "Chinese American Museum",
+        "value": 1073
+      },
+      {
+        "_index": 9,
+        "dimension": "Chinese American Museum",
+        "value": 1979
+      },
+      {
+        "_index": 10,
+        "dimension": "Chinese American Museum",
+        "value": 2404
+      },
+      {
+        "_index": 11,
+        "dimension": "Chinese American Museum",
+        "value": 1319
+      },
+      {
+        "_index": 12,
+        "dimension": "Chinese American Museum",
+        "value": 1823
+      },
+      {
+        "_index": 13,
+        "dimension": "Chinese American Museum",
+        "value": 1558
+      },
+      {
+        "_index": 14,
+        "dimension": "Chinese American Museum",
+        "value": 2336
+      },
+      {
+        "_index": 15,
+        "dimension": "Chinese American Museum",
+        "value": 3057
+      },
+      {
+        "_index": 16,
+        "dimension": "Chinese American Museum",
+        "value": 4009
+      },
+      {
+        "_index": 17,
+        "dimension": "Chinese American Museum",
+        "value": 2544
+      },
+      {
+        "_index": 18,
+        "dimension": "Chinese American Museum",
+        "value": 3057
+      },
+      {
+        "_index": 19,
+        "dimension": "Chinese American Museum",
+        "value": 2415
+      },
+      {
+        "_index": 20,
+        "dimension": "Chinese American Museum",
+        "value": 1398
+      },
+      {
+        "_index": 21,
+        "dimension": "Chinese American Museum",
+        "value": 2237
+      },
+      {
+        "_index": 22,
+        "dimension": "Chinese American Museum",
+        "value": 2850
+      },
+      {
+        "_index": 23,
+        "dimension": "Chinese American Museum",
+        "value": 2075
+      },
+      {
+        "_index": 24,
+        "dimension": "Chinese American Museum",
+        "value": 2150
+      },
+      {
+        "_index": 25,
+        "dimension": "Chinese American Museum",
+        "value": 2547
+      },
+      {
+        "_index": 26,
+        "dimension": "Chinese American Museum",
+        "value": 7702
+      },
+      {
+        "_index": 27,
+        "dimension": "Chinese American Museum",
+        "value": 3485
+      },
+      {
+        "_index": 28,
+        "dimension": "Chinese American Museum",
+        "value": 4565
+      },
+      {
+        "_index": 29,
+        "dimension": "Chinese American Museum",
+        "value": 3034
+      },
+      {
+        "_index": 30,
+        "dimension": "Chinese American Museum",
+        "value": 2776
+      },
+      {
+        "_index": 31,
+        "dimension": "Chinese American Museum",
+        "value": 2153
+      },
+      {
+        "_index": 32,
+        "dimension": "Chinese American Museum",
+        "value": 1754
+      },
+      {
+        "_index": 33,
+        "dimension": "Chinese American Museum",
+        "value": 2607
+      },
+      {
+        "_index": 34,
+        "dimension": "Chinese American Museum",
+        "value": 2248
+      },
+      {
+        "_index": 35,
+        "dimension": "Chinese American Museum",
+        "value": 2263
+      },
+      {
+        "_index": 36,
+        "dimension": "Chinese American Museum",
+        "value": 2531
+      },
+      {
+        "_index": 37,
+        "dimension": "Chinese American Museum",
+        "value": 2139
+      },
+      {
+        "_index": 38,
+        "dimension": "Chinese American Museum",
+        "value": 5966
+      },
+      {
+        "_index": 39,
+        "dimension": "Chinese American Museum",
+        "value": 3273
+      },
+      {
+        "_index": 40,
+        "dimension": "Chinese American Museum",
+        "value": 5585
+      },
+      {
+        "_index": 41,
+        "dimension": "Chinese American Museum",
+        "value": 2946
+      },
+      {
+        "_index": 42,
+        "dimension": "Chinese American Museum",
+        "value": 2939
+      },
+      {
+        "_index": 43,
+        "dimension": "Chinese American Museum",
+        "value": 1784
+      },
+      {
+        "_index": 44,
+        "dimension": "Chinese American Museum",
+        "value": 1704
+      },
+      {
+        "_index": 45,
+        "dimension": "Chinese American Museum",
+        "value": 2419
+      },
+      {
+        "_index": 46,
+        "dimension": "Chinese American Museum",
+        "value": 2685
+      },
+      {
+        "_index": 47,
+        "dimension": "Chinese American Museum",
+        "value": 2768
+      },
+      {
+        "_index": 48,
+        "dimension": "Chinese American Museum",
+        "value": 2477
+      },
+      {
+        "_index": 49,
+        "dimension": "Chinese American Museum",
+        "value": 2710
+      },
+      {
+        "_index": 50,
+        "dimension": "Chinese American Museum",
+        "value": 4529
+      },
+      {
+        "_index": 51,
+        "dimension": "Chinese American Museum",
+        "value": 2750
+      },
+      {
+        "_index": 52,
+        "dimension": "Chinese American Museum",
+        "value": 4960
+      },
+      {
+        "_index": 53,
+        "dimension": "Chinese American Museum",
+        "value": 2518
+      },
+      {
+        "_index": 54,
+        "dimension": "Chinese American Museum",
+        "value": 2620
+      },
+      {
+        "_index": 55,
+        "dimension": "Chinese American Museum",
+        "value": 2409
+      },
+      {
+        "_index": 56,
+        "dimension": "Chinese American Museum",
+        "value": 2146
+      },
+      {
+        "_index": 57,
+        "dimension": "Chinese American Museum",
+        "value": 2364
+      },
+      {
+        "_index": 58,
+        "dimension": "Chinese American Museum",
+        "value": 2385
+      },
+      {
+        "_index": 0,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6602
+      },
+      {
+        "_index": 1,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5029
+      },
+      {
+        "_index": 2,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 8129
+      },
+      {
+        "_index": 3,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 2824
+      },
+      {
+        "_index": 4,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 10694
+      },
+      {
+        "_index": 5,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 11036
+      },
+      {
+        "_index": 6,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 13490
+      },
+      {
+        "_index": 7,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 9139
+      },
+      {
+        "_index": 8,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5661
+      },
+      {
+        "_index": 9,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 7356
+      },
+      {
+        "_index": 10,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 9773
+      },
+      {
+        "_index": 11,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 7184
+      },
+      {
+        "_index": 12,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6250
+      },
+      {
+        "_index": 13,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5907
+      },
+      {
+        "_index": 14,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 9884
+      },
+      {
+        "_index": 15,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 7254
+      },
+      {
+        "_index": 16,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 13207
+      },
+      {
+        "_index": 17,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 11102
+      },
+      {
+        "_index": 18,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 11072
+      },
+      {
+        "_index": 19,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 12096
+      },
+      {
+        "_index": 20,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6608
+      },
+      {
+        "_index": 21,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 12524
+      },
+      {
+        "_index": 22,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6677
+      },
+      {
+        "_index": 23,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5967
+      },
+      {
+        "_index": 24,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6587
+      },
+      {
+        "_index": 25,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6955
+      },
+      {
+        "_index": 26,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 9979
+      },
+      {
+        "_index": 27,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5113
+      },
+      {
+        "_index": 28,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 7757
+      },
+      {
+        "_index": 29,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6751
+      },
+      {
+        "_index": 30,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 12188
+      },
+      {
+        "_index": 31,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6245
+      },
+      {
+        "_index": 32,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6977
+      },
+      {
+        "_index": 33,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6282
+      },
+      {
+        "_index": 34,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6365
+      },
+      {
+        "_index": 35,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5223
+      },
+      {
+        "_index": 36,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 4929
+      },
+      {
+        "_index": 37,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 4493
+      },
+      {
+        "_index": 38,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6271
+      },
+      {
+        "_index": 39,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6685
+      },
+      {
+        "_index": 40,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 7556
+      },
+      {
+        "_index": 41,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6818
+      },
+      {
+        "_index": 42,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 8675
+      },
+      {
+        "_index": 43,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6212
+      },
+      {
+        "_index": 44,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 4607
+      },
+      {
+        "_index": 45,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6097
+      },
+      {
+        "_index": 46,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6757
+      },
+      {
+        "_index": 47,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 6780
+      },
+      {
+        "_index": 48,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5837
+      },
+      {
+        "_index": 49,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5705
+      },
+      {
+        "_index": 50,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 4909
+      },
+      {
+        "_index": 51,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 4650
+      },
+      {
+        "_index": 52,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 5626
+      },
+      {
+        "_index": 53,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 4694
+      },
+      {
+        "_index": 54,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 4718
+      },
+      {
+        "_index": 55,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 3891
+      },
+      {
+        "_index": 56,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 3180
+      },
+      {
+        "_index": 57,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 3775
+      },
+      {
+        "_index": 58,
+        "dimension": "America Tropical Interpretive Center",
+        "value": 4562
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.3,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "dimension",
+          "type": "nominal",
+          "sort": [
+            "Avila Adobe",
+            "Firehouse Museum",
+            "Chinese American Museum",
+            "America Tropical Interpretive Center"
+          ],
+          "axis": {
+            "title": null,
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "axis": {
+            "title": "Value"
+          }
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "value",
+            "type": "quantitative"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "65_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/65_vitamin_deficiency_disease_dataset_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Do active exercisers have higher average serum vitamin D level than sedentary individuals?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "No."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "Use the change encoding tool to select channel as 'y' and field as 'serum_vitamin_d_ng_ml' in order to compare the average serum vitamin D levels of active exercisers and sedentary individuals."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "serum_vitamin_d_ng_ml",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "exercise_level",
+            "y": "serum_vitamin_d_ng_ml",
+            "color": "diet_type"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "93_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/93_sankey_financial.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore the conversion flow to identify which traffic entry and financial product pair has the most unexpected volume, then investigate whether this pattern holds when filtering for higher transaction sizes.\n",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Enterprise Payroll → Credit Card Installment"
+        },
+        "key_insights": [
+          "Alipay/WeChat Entry’s high volume across most products aligns with expectations, but its dominance in Payment is less pronounced than in Consumer Credit.",
+          "The unexpected link between Enterprise Payroll and Credit Card Installment becomes even more distinct when focusing on higher-value transactions."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_flow",
+            "reasoning": "The first step of highlighting all flows helps spot counterintuitive patterns by comparing actual volumes against typical industry assumptions."
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "This multi-step approach balances exploratory discovery with targeted validation"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_flow",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 4796
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Enterprise Payroll"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

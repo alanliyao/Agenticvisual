@@ -1,0 +1,108 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "41_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/41_museum_visitors_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What is the correlation of America Tropical Interpretive Center and Chinese American Museum among dense area?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "The correlation is about 0.01.",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The correlation is about 0.01."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "The question mentions the dense area."
+          },
+          {
+            "iteration": 2,
+            "tool": "select_region",
+            "reasoning": "We should select the data point in the area first for following calculation."
+          },
+          {
+            "iteration": 3,
+            "tool": "calculate_correlation",
+            "reasoning": "We use the tool of calculate correlation to calculate."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    987.9996744791667,
+                    3633.3333333333335
+                  ],
+                  "y_range": [
+                    2387.0004272460938,
+                    7735
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    1023.2707899305557,
+                    3562.791371527811
+                  ],
+                  "y_range": [
+                    2579.52792224125,
+                    7542.47168896487
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              987.9996744791667,
+              3633.3333333333335
+            ],
+            "y": [
+              2387.0004272460938,
+              7735
+            ]
+          },
+          "encoding": {
+            "x": "Chinese American Museum",
+            "y": "America Tropical Interpretive Center",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

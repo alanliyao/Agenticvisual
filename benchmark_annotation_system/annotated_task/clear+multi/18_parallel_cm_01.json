@@ -1,0 +1,90 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "18_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/18_Heart_Disease_Prediction_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which feature is the most discriminative feature for presence group?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Thallium",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Age ranges are mostly 45–65, with BP and cholesterol showing wider variation but generally above average values.",
+          "most cases have Thallium = 7"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "We just care about the presence group"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Heart Disease",
+                  "values": [
+                    "Absence"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "Thallium",
+                    "ST depression",
+                    "Max HR",
+                    "Age",
+                    "BP",
+                    "Cholesterol"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Absence\"], datum['Heart Disease']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

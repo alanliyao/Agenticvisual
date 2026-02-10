@@ -1,0 +1,71 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "clear_single",
+      "chart_type": "bar",
+      "meta": {
+        "chart_type": "bar",
+        "title": "Bar Chart: Boxes Shipped by Sales Person",
+        "filename": "16_bar_Chocolate Sales.json",
+        "data_points": 3282,
+        "total_points": 3282,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "cl_01",
+          "question": "If sorted from highest to lowest total shipments, who are the top two sales persons?",
+          "ground_truth": {
+            "answer": "Karlen McCaffrey and Beverie Moffet",
+            "key_insights": [],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "sort_bars",
+                "reasoning": "using the tool of sort because the tool of highlight can not be used."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "sort_bars"
+              ],
+              "param_eval": [
+                {
+                  "tool": "sort_bars",
+                  "params": {
+                    "order": "descending"
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": "Sales Person",
+                "y": "Boxes Shipped",
+                "color": "Country"
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "sort_bars",
+          "parameters": {
+            "order": "descending"
+          },
+          "result": {
+            "operation": "sort_bars",
+            "message": "Sorted bars in descending order"
+          },
+          "key_insights": [],
+          "reasoning": "using the tool of sort because the tool of highlight can not be used."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-23T02:37:39.442Z"
+}

@@ -1,0 +1,75 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "10_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/10_scatter_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "What is the correlation between sleep hours and screen time for individuals with good diet quality?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "0.02856",
+          "tolerance": 0.005
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "Select the category \"good\" for the variable Diet_quality to isolate data points from individuals with good diet quality,better calculate solution for our problem."
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_correlation",
+            "reasoning": "Filtered data shows a positive correlation between sleep_hours and screen_time."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "diet_quality",
+                  "categories_to_remove": [
+                    "good"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sleep_hours",
+            "y": "screen_time",
+            "color": "diet_quality"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"good\"], datum['diet_quality']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

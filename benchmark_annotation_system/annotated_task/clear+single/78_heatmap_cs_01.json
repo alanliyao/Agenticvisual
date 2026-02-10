@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "78_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/78_ai_job_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which combination of role and skill has the highest and lowest demand score,respectively?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "It turns out that a CV Engineer with skill Computer Vision has the highest demand score of 98,while a Data Engineer with skill Computer Vision has the lowest demand score of 8.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "find_extremes",
+            "reasoning": "Use this tool to help us better find out the extremes in demand score."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 1,
+                  "mode": "both"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "skill",
+            "y": "role",
+            "color": "demand"
+          }
+        }
+      }
+    }
+  ]
+}

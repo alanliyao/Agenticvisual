@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "36_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/36_cancer_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use the calculate correlation tool with the pearson method to compute the correlation coefficient between Radius mean and Texture mean in this scatter plot.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "0.339.",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The Pearson correlation coefficient between Radius mean and Texture mean is 0.339.",
+          "This value represents a weak positive relationship between the two variables.",
+          "The p-value of 6.44e-15 indicates the correlation is statistically significant."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "The calculate_correlation tool was selected to quantify the relationship between Radius mean and Texture mean, which directly addresses the question’s goal. The operation successfully returned a clear correlation metric and its statistical context. No need to reset, as this tool does not alter the plot view."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Radius (mean)",
+            "y": "Texture (mean)",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

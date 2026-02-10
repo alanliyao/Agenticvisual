@@ -1,0 +1,71 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "49_heatmap_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/49_coffee_sales_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore the sales patterns throughout the day. Which time period seems to be the most profitable overall, and are there any specific coffee types that uniquely drive sales in a particular period?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Based on marginal bars, the 'Afternoon' appears to be the most profitable period overall. Upon adjusting the color scale, 'Espresso' shows a very strong performance uniquely in the 'Morning' compared to other times, while 'Hot Chocolate' is a clear standout performer exclusively during the 'Night.'"
+        },
+        "key_insights": [
+          "This helps subjectively identify if a specific coffee has a strikingly darker color in one column compared to its performance in others, indicating a unique time-based preference.",
+          "The column marginal bar will quickly show which Time_of_Day (Morning, Afternoon, Night) has the longest bar, indicating the highest total revenue. This answers the first part of the question subjectively."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "adjust_color_scale",
+            "reasoning": "To enhance the contrast within the heatmap to better spot unique drivers. By adjusting the scale (e.g., changing the color range to accentuate differences), cells that stand out in a particular column become more visually apparent."
+          },
+          {
+            "iteration": 2,
+            "tool": "add_marginal_bars",
+            "reasoning": "To get a high-level, visual summary of profitability by time and product. Adding bars to the margins (sums for each row and column) provides an immediate visual indicator of totals."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "adjust_color_scale",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scheme": "viridis"
+                }
+              }
+            },
+            {
+              "tool": "add_marginal_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "show_top": true,
+                  "show_right": true,
+                  "op": "sum"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

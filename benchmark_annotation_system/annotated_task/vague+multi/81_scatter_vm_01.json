@@ -1,0 +1,99 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "81_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/80_gym_members_exercise_tracking_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_01",
+      "question": "What is the relationship between exercise duration and exercise frequency?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "People who exercise five days have the longest duration, while the duration for people of other frequency is alomst the same."
+        },
+        "key_insights": [
+          "People who exercise five days a week usually work out for more than 1.6 hours, those who exercise two to four days a week are between 0.9 to 1.5 hours, and a few who exercise two to three days a week work out for 0.5 to 0.9 hours."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "filter four time and find the relationship"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "filter the categories of Yoga to find the relationship"
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_categorical",
+            "reasoning": "filter the categories of HIIT to find the relationship"
+          },
+          {
+            "iteration": 4,
+            "tool": "filter_categorical",
+            "reasoning": "filter the categories of Strength to find the relationship"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "Yoga"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "HIIT"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "Strength"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Session_Duration (hours)",
+            "y": "Calories_Burned",
+            "color": "Workout_Type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Yoga\", \"HIIT\"], datum['Workout_Type']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "61_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/61_Berlin_crimes_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "What is the average number of robberies in the Mitte district?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "35",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "get the data in Mitte"
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data_summary",
+            "reasoning": "get the answer"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "Spandau",
+                    "Treptow-Köpenick",
+                    "Lichtenberg",
+                    "Tempelhof-Schöneberg",
+                    "Reinickendorf",
+                    "Steglitz-Zehlendorf",
+                    "Pankow",
+                    "Neukölln",
+                    "Charlottenburg-Wilmersdorf",
+                    "Marzahn-Hellersdorf",
+                    "Friedrichshain-Kreuzberg"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "filter"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Robbery",
+            "y": "Injury",
+            "color": "District"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Spandau\", \"Treptow-K\\u00f6penick\", \"Lichtenberg\", \"Tempelhof-Sch\\u00f6neberg\", \"Reinickendorf\", \"Steglitz-Zehlendorf\", \"Pankow\", \"Neuk\\u00f6lln\", \"Charlottenburg-Wilmersdorf\", \"Marzahn-Hellersdorf\", \"Friedrichshain-Kreuzberg\"], datum['District']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

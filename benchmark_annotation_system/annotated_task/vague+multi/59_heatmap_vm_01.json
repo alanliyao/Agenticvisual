@@ -1,0 +1,71 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "59_heatmap_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/59_health care diabetes_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore the pattern of how blood pressure varies with pregnancy history for patients with different outcomes. Does the effect of pregnancy history on blood pressure appear consistent across good (Outcome=0) and poor (Outcome=1) health outcomes?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "After adjusting the color scale and adding marginal bars, a clear pattern emerges. For patients with a good health outcome (Outcome=0), those with a pregnancy history (Pregnancies=1) have a lower mean blood pressure than those without (Pregnancies=0). In contrast, for patients with a poor health outcome (Outcome=1), those with a pregnancy history have a higher mean blood pressure. Therefore, the effect of pregnancy history on blood pressure is not consistent; it reverses direction depending on the health outcome."
+        },
+        "key_insights": [
+          "This allows for a clearer subjective assessment of whether the change in blood pressure from Pregnancies=0 to Pregnancies=1 is similar in magnitude and direction for both Outcome groups.",
+          "The row marginal bars show if, on average, Pregnancies=1 is associated with higher or lower BP than Pregnancies=0. The column marginal bars show the same for Outcome. This helps contextualize the interaction we are trying to observe."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "adjust_color_scale",
+            "reasoning": "To enhance the visual contrast between different blood pressure values. By adjusting the color scale range or midpoint, subtle differences between the four cells become more pronounced, making it easier to compare patterns across rows or columns."
+          },
+          {
+            "iteration": 2,
+            "tool": "add_marginal_bars",
+            "reasoning": "To obtain a visual summary of the main effects. Adding marginal bars for rows (Pregnancies) and columns (Outcome) shows the average blood pressure for each category independently."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "adjust_color_scale",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scheme": "viridis"
+                }
+              }
+            },
+            {
+              "tool": "add_marginal_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "show_top": true,
+                  "show_right": true,
+                  "op": "mean"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "61_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/61_Berlin_crimes_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "After separately magnifying the low \"Robbery\" area and the high \"Robbery\" area, do you think the distribution patterns of \"Injury\" in these two areas are the same, or do they exhibit different discrete characteristics?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Their distribution is different. In the case of low robbery rates, as the robbery rate increases, the injury rate also increases significantly. However, when the robbery rate reaches a high level, an increase in the robbery rate no longer affects the injury rate."
+        },
+        "key_insights": [
+          "Most of the data are concentrated in the low-injury category.",
+          "the more robbery, the more injury",
+          "The injury data are concentrated in the middle.",
+          "The injury data and the robbery data do not seem to be related."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "get the data in low robbery"
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_dense_area",
+            "reasoning": "get the data in high robbery"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.12999471028645834,
+                    60.79667460123698
+                  ],
+                  "y_range": [
+                    0,
+                    800.9999084472656
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    40.20033862965942,
+                    60.79667460123698
+                  ],
+                  "y_range": [
+                    0,
+                    793.3903726501507
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Robbery",
+            "y": "Injury",
+            "color": "District"
+          }
+        }
+      }
+    }
+  ]
+}

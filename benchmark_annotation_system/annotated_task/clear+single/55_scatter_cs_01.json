@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "55_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/55_Ecommerce_Delivery_Analytics_New_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What is the average value of the goods?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "641.704",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data_summary",
+            "reasoning": "get the data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Delivery Time (Minutes)",
+            "y": "Order Value (INR)",
+            "color": "Service Rating"
+          }
+        }
+      }
+    }
+  ]
+}

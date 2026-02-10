@@ -1,0 +1,90 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "07_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/07_bar_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "Filter to only show good diet quality records, then compare, do people with higher coffee consumption tend to sleep more or fewer hours?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "In most cases it's more, but the exception is that the sleep time is less when the number of coffee cups is 3 than when the number of coffee cups is 2.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The view only has the good diet quality category left.",
+          "The number of coffee cups ranges from 0 to 5.",
+          "As shown in the figure, the sleep duration is longest when the number of coffee cups is 5.",
+          "In most cases people with higher coffee consumption tend to sleep more.",
+          "The exception is that the sleep time is less when the number of coffee cups is 3 than when the number of coffee cups is 2."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Use the filter categories tool to make the view show only good diet quality that meets the requirements of the problem."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "To study the effect of coffee cups on sleep hours, the change encoding tool was used to make the view reflect the impact of coffee cups."
+          },
+          {
+            "iteration": 3,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Switching the mode to grouped clearly shows the differences between different quantities of coffee cups."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "list",
+                "param": "categories",
+                "target": [
+                  "average",
+                  "poor"
+                ]
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "coffee_cups"
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "sleep_hours",
+            "color": "coffee_cups"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"average\",\"poor\"], datum['diet_quality']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

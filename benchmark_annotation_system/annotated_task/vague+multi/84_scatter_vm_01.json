@@ -1,0 +1,95 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "84_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/84_starbucks_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "After separately magnifying the low Sugars area and the high Sugars area, do you think the distribution differences of different Beverage_categories in these two areas are significant?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was found that in both the low-sugar area and the high-sugar area, there were mainly concentrated on one or two types of beverages. Moreover, the calories in the low-sugar area were low, while the calories in the high-sugar area were all high."
+        },
+        "key_insights": [
+          "find that most of them are classic espresso drinks",
+          "all of them calories are low",
+          "find most of them are frappuccino blended drinks",
+          "almost all of them have more than 300 calories"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the low sugars area"
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the high sugars area"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.3750011444091797,
+                    25.27500114440918
+                  ],
+                  "y_range": [
+                    0,
+                    253.4583053588867
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    60.075005722045894,
+                    90
+                  ],
+                  "y_range": [
+                    0,
+                    544.9583473205566
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              60.075005722045894,
+              90
+            ],
+            "y": [
+              0,
+              544.9583473205566
+            ]
+          },
+          "encoding": {
+            "x": " Sugars (g)",
+            "y": "Calories",
+            "color": "Beverage_category"
+          }
+        }
+      }
+    }
+  ]
+}

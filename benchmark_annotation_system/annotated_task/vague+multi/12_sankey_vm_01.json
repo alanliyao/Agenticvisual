@@ -1,0 +1,92 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "12_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/12_sankey_microsoft.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Does Microsoft attach importance to research and development?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "From its total profit of 35.2 billion, Microsoft will allocate 6.5 billion for R&B investment, accounting for 0.185 of the total profit. Therefore, it can be concluded that Microsoft attaches great importance to the research and development of its products."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "get the gross profit is 35.2B"
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "get microsoft invest 6.5B money in research and development"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Gross Profit"
+                }
+              }
+            },
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "R&D"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Server Products",
+            "Office Products",
+            "LinkedIn",
+            "Windows",
+            "Gaming",
+            "Others (Layer 0)",
+            "Intelligent Cloud",
+            "Productivity",
+            "Personal Computing",
+            "Revenue",
+            "Gross Profit",
+            "Cost of Revenue",
+            "Operating Profit",
+            "Operating Expenses",
+            "Product Costs",
+            "Service Costs",
+            "Net Profit",
+            "Tax",
+            "R&D",
+            "S&M",
+            "G&A"
+          ],
+          "collapsed_nodes": [
+            "Others (Layer 0)"
+          ]
+        }
+      }
+    }
+  ]
+}

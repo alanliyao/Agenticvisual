@@ -1,0 +1,59 @@
+{
+  "task_type": "vague_single",
+  "task_id": "03_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/03_line_stocks.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Describe underlying long-term trends of TechCorp.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Its underlying long-term trend is for strong and accelerating growth."
+        },
+        "key_insights": [
+          "The 3-period moving average line shows a consistently steep upward slope without any significant pullback, indicating that the company's stock price maintained a stable growth momentum throughout 2023."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_moving_average",
+            "reasoning": "The role of moving average is to filter out short-term noise, allowing us to more clearly observe the core trend. The selection of a 3-period window achieves the smoothness of monthly fluctuations while preserving the changes in the medium-term trend."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_moving_average",
+              "param_eval": {
+                "type": "numeric",
+                "param": "window_size",
+                "target": 3,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "task_type": "vague_single",
+  "task_id": "48_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/48_candy_parallel .json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Explore the relationship between sugarpercent and winpercent for candies.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "No Direct Correlation between Sugar and Wins for Chocolates. When sugarpercent is not too high, winpercent of non-chocolate candy has positive correlation with sugarpercent. If it is too high, winpercent of non-chocolate candy drop sharply."
+        },
+        "key_insights": [
+          "No Direct Correlation between Sugar and Wins for Chocolates",
+          "There is a distinct group of non-chocolate candies that are high in sugar but low in popularity.",
+          "When sugarpercent is not too high, winpercent of non-chocolate candy has positive correlation with sugarpercent."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We focus on the relationship of sugarpercent and winpercent."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "pricepercent"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "sugarpercent",
+              "winpercent"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"sugarpercent\", \"winpercent\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

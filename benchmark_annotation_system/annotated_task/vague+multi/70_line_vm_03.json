@@ -1,0 +1,74 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "70_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/70_one_person_ai_work_and_burnout_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "The relationship between usage rate and bug occurrence",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was found that the trend is upward. Therefore, it can be concluded that the higher the usage rate of the tool, the more frequent the occurrence of bugs."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the chart of usage and bugs"
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_trend",
+            "reasoning": "get the trend"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Bugs_Introduced",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "highlight_trend",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "trend_type": "increasing"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

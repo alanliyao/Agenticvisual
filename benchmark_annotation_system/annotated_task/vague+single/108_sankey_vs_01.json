@@ -1,0 +1,57 @@
+{
+  "task_type": "vague_single",
+  "task_id": "108_sankey_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/108_insurance_sankey.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "From the overall structure perspective, which assessment method is most likely to lead to high-risk claims?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": null
+        },
+        "key_insights": [
+          "The proportion of those who moved to high-risk areas was the highest."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "collapse_nodes",
+            "reasoning": "Aggregate the high-risk nodes using tools and analyze their sources."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "collapse_nodes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "aggregate_name": "High Risk",
+                  "nodes_to_collapse": [
+                    "Medium Risk",
+                    "High Risk"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "39_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/39_insurance_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Can children be the factor to categorize the age in male group?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "Yes"
+        },
+        "key_insights": [
+          "The lines of children have high line concentration."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We only cares about the factors: children and age."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "We cares about the male group, so we filter female group."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "bmi",
+                    "charges"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "sex",
+                  "values": [
+                    "female"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"female\"], datum['sex']) < 0"
+            },
+            {
+              "filter": "indexof([\"age\", \"children\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 1,
+            "types": [
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

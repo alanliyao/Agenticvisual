@@ -1,0 +1,92 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "82_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/82_Online Sales Data_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What are the characteristics of the books and beauty products between April and June?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The income fluctuated, with both increases and decreases. But overall, June saw an increase compared to April."
+        },
+        "key_insights": [
+          "the changes of the two lines seemed to be small fluctuations.",
+          "The income fluctuated, with both increases and decreases. But overall, June saw an increase compared to April.",
+          "June saw an increase compared to April."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "zoomed to show time range between 2024-04-01 and 2024-06-30,and we can see the changes."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_lines",
+            "reasoning": "filter out other lines and we can see the changes of the line had many increasing and decreasing stages."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2024-04-01",
+                  "end": "2024-06-30"
+                }
+              }
+            },
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Electronics",
+                    "Home Appliances",
+                    "Clothing",
+                    "Sports",
+                    "Books"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2024-04-01",
+              "2024-06-30"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "Total Revenue",
+            "color": "Product Category"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Electronics\", \"Home Appliances\", \"Clothing\", \"Sports\"], datum['Product Category']) < 0"
+            },
+            {
+              "filter": "indexof([\"Electronics\", \"Home Appliances\", \"Clothing\", \"Sports\", \"Books\"], datum['Product Category']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

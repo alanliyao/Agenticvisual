@@ -1,0 +1,51 @@
+{
+  "task_type": "vague_single",
+  "task_id": "02_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/02_bar_sales.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Represent sales values with color intensity instead of bar height, then explore how this new view reveals hidden patterns in regional product performance.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "East Electronics stands out as the highest-intensity cell, confirming its dominant position, while South Clothing is the next most prominent.\nThe color-based encoding highlights that the West region has a more balanced intensity between Clothing and Electronics, unlike the East’s heavy tilt toward Electronics.\nLow-intensity cells (e.g., South Electronics) are more visually distinct in this view, making underperforming segments easier to identify."
+        },
+        "key_insights": [
+          "The color gradient makes it immediately clear which region-product combinations have the highest and lowest sales, without relying on bar height comparisons."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "Changing the encoding from bar height to color intensity is a single exploratory tool that shifts the focus from absolute value comparison to relative performance. This transformation is valuable because it reduces the cognitive load of comparing bar heights and instead uses pre-attentive visual cues (color) to highlight patterns. The goal is to uncover subtle performance differences that might be overlooked in the original bar chart, such as balanced vs. skewed product mixes across regions. This new view raises further questions about why certain region-product pairs perform better, which could be explored with additional tools like filtering or highlighting."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "sales"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "region",
+            "y": "sales",
+            "color": "sales"
+          }
+        }
+      }
+    }
+  ]
+}

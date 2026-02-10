@@ -1,0 +1,76 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "90_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/89_Sleep_health_and_lifestyle_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "filter cells to retain only Obese BMI Category entries, then extract the mean sleep duration values for each stress level to quantify the stress-sleep duration relationship in this group.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "sleep duration decreases as stress level rises, with a linear negative correlation.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "For Obese individuals, sleep duration decreases as stress level rises, with a linear negative correlation.",
+          "Stress Level 1 for Obese individuals has the highest mean sleep duration among their subgroup, nearly matching Normal BMI Category at low stress levels."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_cells",
+            "reasoning": "Filtering isolates the Obese subgroup to eliminate confounding variables from other BMI categories, enabling a focused analysis of stress-sleep duration relationships"
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data_summary",
+            "reasoning": "converts the filtered visual subset into quantifiable data, resolving the gap between visual pattern and numerical comparison."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_cells",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 6.1,
+                  "max_value": 8.1
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "filter"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Stress Level",
+            "y": "BMI Category",
+            "color": "Sleep Duration"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Sleep Duration'] >= 6.1 && datum['Sleep Duration'] <= 8.1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "74_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/74_StudentsPerformance_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore differences in mean math scores for different genders across different races",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "There exists a covincing advantage for male group in mean math score."
+        },
+        "key_insights": [
+          "There is a clear upward trend in math scores across the groups. Group E has the highest total mean score, followed by Group D, Group C, Group B, and Group A",
+          "There is a consistent trend where male students have a higher mean math score than female students across all racial/ethnic categories represented in this dataset except group B",
+          "The blue bars (females) show less variation"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "We want to research on the difference for different genders"
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "We want to directly show the gap between male and female."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "gender",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "math score",
+            "color": "gender"
+          }
+        }
+      }
+    }
+  ]
+}

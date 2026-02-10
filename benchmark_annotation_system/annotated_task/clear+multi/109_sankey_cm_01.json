@@ -1,0 +1,82 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "109_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/109_sankey_seo.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What is the typical access path for users who have completed the payment success?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "related article, sidebar CTA - ultimate guide - pricing - payment success.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Start by reversing the process and identifying the key entry points from the final target node"
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main sources of pricing using tools."
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main sources of ultimate guide using tools."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Payment Success"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Pricing"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Ultimate Guide"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

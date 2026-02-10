@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "88_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/88_patient_churn_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Based on the visual intensity of the heatmap, does one gender appear to have a more pronounced difference in total bill amounts between those with and without a chronic disease?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": null
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region",
+            "reasoning": "Use Highlight region to highlight the two rows,then we must subjectively decide if the lack of visual variation itself is meaningful—e.g., does this suggest financial burden is equal across groups, or does it imply the data may lack sensitivity."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_values": [
+                    "Female",
+                    "Male"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Gender",
+            "y": "Chronic_Disease",
+            "color": "Total_Bill_Amount"
+          }
+        }
+      }
+    }
+  ]
+}

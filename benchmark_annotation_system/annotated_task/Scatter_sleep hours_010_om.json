@@ -1,0 +1,157 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "open_ended_multi",
+      "chart_type": "scatter",
+      "meta": {
+        "chart_type": "scatter",
+        "title": "Scatter Plot: sleep_hours vs screen_time",
+        "filename": "10_scatter_synthetic_mental_health.json",
+        "data_points": 500,
+        "total_points": 2000,
+        "is_sampled": true,
+        "is_vega_full": false,
+        "sampling_info": {
+          "sampled": true,
+          "displayed": 500,
+          "total": 2000,
+          "message": "从 2000 个点中随机采样 500 个显示",
+          "hint": "使用 zoom 工具缩放到感兴趣的区域可以看到更多数据点"
+        },
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "op_02",
+          "question": "Is there a significant correlation between sleep duration and screen time?",
+          "ground_truth": {
+            "answer": null,
+            "key_insights": [
+              "\"Moderate sleep and moderate screen time\" is the most common lifestyle pattern.",
+              "People with a good diet often engage in a moderate to high amount of exercise."
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "zoom_dense_area",
+                "reasoning": "The vast majority of samples (about 70%) are concentrated in 5–9 hours of sleep and 2.5–8 hours of screen time."
+              },
+              {
+                "iteration": 2,
+                "tool": "filter_categorical",
+                "reasoning": "The orange points almost all fall within the core range of '5–9 hours of sleep, 2–8 hours of screen time', with no extreme values, and the points are generally medium to large in size."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "zoom_dense_area",
+                "filter_categorical"
+              ],
+              "param_eval": [
+                {
+                  "tool": "zoom_dense_area",
+                  "params": {
+                    "x_range": [
+                      5.113691495259603,
+                      9.000357602437337
+                    ],
+                    "y_range": [
+                      2.13,
+                      8.095714416503906
+                    ]
+                  }
+                },
+                {
+                  "tool": "filter_categorical",
+                  "params": {
+                    "field": "diet_quality",
+                    "categories_to_remove": [
+                      "average",
+                      "poor"
+                    ]
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "visible_domain": {
+                "x": [
+                  5.113691495259603,
+                  9.000357602437337
+                ],
+                "y": [
+                  2.13,
+                  8.095714416503906
+                ]
+              },
+              "encoding": {
+                "x": "sleep_hours",
+                "y": "screen_time",
+                "color": "diet_quality"
+              },
+              "data_filtered": [
+                {
+                  "filter": "indexof([\"average\", \"poor\"], datum.diet_quality) < 0"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "zoom_dense_area",
+          "parameters": {
+            "x_range": [
+              5.113691495259603,
+              9.000357602437337
+            ],
+            "y_range": [
+              2.13,
+              8.095714416503906
+            ]
+          },
+          "result": {
+            "operation": "zoom_dense_area",
+            "original_count": 500,
+            "filtered_count": 348,
+            "zoom_range": {
+              "x": [
+                5.113691495259603,
+                9.000357602437337
+              ],
+              "y": [
+                2.13,
+                8.095714416503906
+              ]
+            },
+            "message": "Zoomed to dense area: showing 348 out of 500 points (69.6%)"
+          },
+          "key_insights": [
+            "\"Moderate sleep and moderate screen time\" is the most common lifestyle pattern."
+          ],
+          "reasoning": "The vast majority of samples (about 70%) are concentrated in 5–9 hours of sleep and 2.5–8 hours of screen time."
+        },
+        {
+          "tool_name": "filter_categorical",
+          "parameters": {
+            "field": "diet_quality",
+            "categories_to_remove": [
+              "average",
+              "poor"
+            ]
+          },
+          "result": {
+            "operation": "filter_categorical",
+            "message": "Filtered out categories: ['average', 'poor'] from field diet_quality"
+          },
+          "key_insights": [
+            "People with a good diet often engage in a moderate to high amount of exercise."
+          ],
+          "reasoning": "The orange points almost all fall within the core range of '5–9 hours of sleep, 2–8 hours of screen time', with no extreme values, and the points are generally medium to large in size."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-23T08:39:58.894Z"
+}

@@ -1,0 +1,109 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "53_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/53_Housing_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "what is the relationship between price and sqft_living in the dense area of data points.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "In this area, the price shows a good positive relationship with sqft_living. As the sqft_living increases, the price also increases."
+        },
+        "key_insights": [
+          "The price and sqft_living seems to be a strong positve relationship.",
+          "The correlation is 0.55",
+          "It can support the relationship"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "The dense area of data points should be the down_left part of original diagram, so we zoom it up."
+          },
+          {
+            "iteration": 2,
+            "tool": "select_region",
+            "reasoning": "Selecting the data points for next step."
+          },
+          {
+            "iteration": 3,
+            "tool": "calculate_correlation",
+            "reasoning": "Calculating the correlation is a good tool to show the relationship."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    514.6663411458334,
+                    3938.6669921875
+                  ],
+                  "y_range": [
+                    92749.78637695296,
+                    988749.9999999999
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    572.303546115425,
+                    3938.6669921875
+                  ],
+                  "y_range": [
+                    104397.81649780911,
+                    986061.9720153742
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              514.6663411458334,
+              3938.6669921875
+            ],
+            "y": [
+              92749.78637695296,
+              988749.9999999999
+            ]
+          },
+          "encoding": {
+            "x": "sqft_living",
+            "y": "price",
+            "color": "floors"
+          }
+        }
+      }
+    }
+  ]
+}

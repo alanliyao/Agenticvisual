@@ -1,0 +1,82 @@
+{
+  "task_type": "vague_single",
+  "task_id": "71_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/71_one_person_ai_work_and_burnout_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Explore the trend in AI tool usage percentage across different stress level groups to identify potential associations with burnout risk.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "High stress combined with mid-range AI usage is most linked to burnout, rather than AI usage alone. "
+        },
+        "key_insights": [
+          "Stress level groups 4–6 have AI tool usage spread evenly from 0–60%, with most lines showing low burnout risk.",
+          "Stress level groups 8–10 have AI tool usage concentrated in 30–50%, and most of these lines show high burnout risk.",
+          "The mid stress group (6–8) has a mixed distribution of AI usage and burnout risk, acting as a transition zone."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "Hiding dimensions organizes the data by stress level, making cross-group trends visible."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Code_Complexity_Score",
+                    "Bugs_Introduced"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "AI_Tool_Usage_%",
+              "Stress_Level_1_10"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"AI_Tool_Usage_%\", \"Stress_Level_1_10\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

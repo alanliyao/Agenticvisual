@@ -1,0 +1,61 @@
+{
+  "task_type": "vague_single",
+  "task_id": "19_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/19_Heart_Disease_Prediction_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Explore the relationship between age and cholesterol",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "There exists a weak positive correlation between age and cholesterol."
+        },
+        "key_insights": [
+          "The red trend line shows a slight upward slope, indicating a weak positive correlation between age and cholesterol.",
+          "There is a significant amount of variation in cholesterol levels across all age groups."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_regression",
+            "reasoning": "We cares about the relationship and regression can directly show the relationship."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "linear"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "point",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

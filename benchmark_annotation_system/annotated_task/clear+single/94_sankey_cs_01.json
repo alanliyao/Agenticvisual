@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "94_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/94_samkey_retail.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Highlight the path from the Live Streaming channel to observe which business category receives the highest GMV contribution from it.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Live Streaming contributes the highest GMV to the Fresh Food category.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Live streaming has a relatively small contribution to the Electronics & Appliances category."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Isolating the live streaming channel using a filter allows us to directly assess its impact on each business category, avoiding the visual clutter of other acquisition channels"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Live Streaming (Douyin/Xiaohongshu)"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

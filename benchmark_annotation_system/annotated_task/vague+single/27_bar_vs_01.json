@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "27_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/27_coffee_sales_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Is there a significant relationship between the mean of money of coffee and the months?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "There is a significant relationship between the mean of money of coffee and the month."
+        },
+        "key_insights": [
+          "The prices of coffee vary significantly across different months as shown in the chart."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "Use the tool to map the months onto the x-axis to study the relationship between the months and the mean of money."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Month_name",
+                  "channel": "x"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Month_name",
+            "y": "money",
+            "color": "Time_of_Day"
+          }
+        }
+      }
+    }
+  ]
+}

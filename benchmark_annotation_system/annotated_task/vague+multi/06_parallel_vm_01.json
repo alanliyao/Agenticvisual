@@ -1,0 +1,87 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "06_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/06_parallel_penguins.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What similarities and differences exist in the beak morphology relationship between Class A and Class C penguins? Particularly when they are intermixed, how can their characteristic patterns be distinguished?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Both penguin species have beak depths concentrated within the relatively narrow range of (17.2, 21.2).\"\nHowever, beak length can serve as a distinguishing feature between the two species, with 43.65 as the critical threshold."
+        },
+        "key_insights": [
+          "Gentoo penguins can be distinguished from the other two species by beak depth",
+          "Focusing solely on beak characteristics is sufficient to differentiate all three penguin species."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "Removing the axes for body mass and flipper length allows for a more precise exploration of the characteristics of beak depth and length."
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_category",
+            "reasoning": "Adelie and Chinstrap penguins exhibit both similarities and differences in their beak characteristics, which can be emphasized through highlighting for focused analysis"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Body Mass (g)",
+                    "Flipper Length (mm)"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Species",
+                  "values": [
+                    "Adelie",
+                    "Chinstrap"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

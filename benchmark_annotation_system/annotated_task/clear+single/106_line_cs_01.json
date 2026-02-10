@@ -1,0 +1,59 @@
+{
+  "task_type": "clear_single",
+  "task_id": "106_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/106_life expectancey_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which country experienced the most significant abnormal decline around 1960?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "China",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "using this detect anomalies can fast to located the true area"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "threshold": 3
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "point"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

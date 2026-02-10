@@ -1,0 +1,94 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "42_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/42_pokemon_stats_2025_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore weight 's data's distribution for bug type",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The weight data for Bug-type Pokémon shows that while most members of this type are lightweight, the type as a whole includes some of the heaviest species in the dataset, leading to a distribution with a long tail on the right."
+        },
+        "key_insights": [
+          "Psychic Type (Yellow): Generally shows moderate to high weights, with the notable exception of the extreme outlier at ID 201",
+          "Fighting Type (Purple): Shows a wide variance. While many are moderate, there is a significant peak around ID 140-150.",
+          "The vast majority of Bug-type Pokémon have weights clustered in the 0 to 550 range.",
+          "There are two distinct, very high peaks:"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "We want to explore the data that does not be shown yet."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_subcategories",
+            "reasoning": "We only care bug type"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "type_1",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "grass",
+                    "fire",
+                    "water",
+                    "normal",
+                    "poison",
+                    "electric",
+                    "ground",
+                    "fairy",
+                    "fighting",
+                    "psychic",
+                    "rock",
+                    "ghost",
+                    "ice",
+                    "dragon",
+                    "dark",
+                    "steel"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "pokedex_id",
+            "y": "weight",
+            "color": "type_1"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['type_1'] != \"grass\" && datum['type_1'] != \"fire\" && datum['type_1'] != \"water\" && datum['type_1'] != \"normal\" && datum['type_1'] != \"poison\" && datum['type_1'] != \"electric\" && datum['type_1'] != \"ground\" && datum['type_1'] != \"fairy\" && datum['type_1'] != \"fighting\" && datum['type_1'] != \"psychic\" && datum['type_1'] != \"rock\" && datum['type_1'] != \"ghost\" && datum['type_1'] != \"ice\" && datum['type_1'] != \"dragon\" && datum['type_1'] != \"dark\" && datum['type_1'] != \"steel\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

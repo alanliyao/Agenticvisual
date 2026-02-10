@@ -1,0 +1,90 @@
+{
+  "task_id": "07_bar",
+  "model": "qwen",
+  "model_name": "Qwen 3 VL 235B",
+  "timestamp": "2026-01-28T10:50:53.362363",
+  "questions_count": 2,
+  "success_count": 2,
+  "results": [
+    {
+      "qid": "cs_01",
+      "question": "Sort the bars by total sleep_hours in descending order. Which diet_quality category has the highest total?",
+      "success": true,
+      "answer": "",
+      "question_type": "subjective",
+      "task_type": "clear_single",
+      "key_insights": [],
+      "reasoning_rounds": [],
+      "reasoning": "",
+      "model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "tool_calls": [],
+      "final_spec": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "title": "Bar Chart: sleep_hours by diet_quality",
+        "width": 600,
+        "height": 400,
+        "data": {
+          "_values_omitted": "2000 items"
+        },
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "field": "diet_quality",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "sleep_hours",
+            "type": "quantitative",
+            "aggregate": "mean"
+          },
+          "color": {
+            "field": "weather",
+            "type": "nominal"
+          }
+        }
+      },
+      "iterations": 1,
+      "final_view_path": "benchmark/results/new/07_bar_qwen_20260128_105021/images/cs_01_final.png"
+    },
+    {
+      "qid": "vs_01",
+      "question": "Explore the relationship between diet quality and sleep hours. What patterns do you notice?",
+      "success": true,
+      "answer": "",
+      "question_type": "subjective",
+      "task_type": "vague_single",
+      "key_insights": [],
+      "reasoning_rounds": [],
+      "reasoning": "",
+      "model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "tool_calls": [],
+      "final_spec": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "title": "Bar Chart: sleep_hours by diet_quality",
+        "width": 600,
+        "height": 400,
+        "data": {
+          "_values_omitted": "2000 items"
+        },
+        "mark": "bar",
+        "encoding": {
+          "x": {
+            "field": "diet_quality",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "sleep_hours",
+            "type": "quantitative",
+            "aggregate": "mean"
+          },
+          "color": {
+            "field": "weather",
+            "type": "nominal"
+          }
+        }
+      },
+      "iterations": 1,
+      "final_view_path": "benchmark/results/new/07_bar_qwen_20260128_105021/images/vs_01_final.png"
+    }
+  ]
+}

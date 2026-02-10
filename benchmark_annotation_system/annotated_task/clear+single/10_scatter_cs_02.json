@@ -1,0 +1,69 @@
+{
+  "task_type": "clear_single",
+  "task_id": "10_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/10_scatter_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which diet_quality have the longest sleep_hours?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "average",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the area"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    10.360166918436686,
+                    11
+                  ],
+                  "y_range": [
+                    2.403498992919922,
+                    7.969499664306641
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              10.360166918436686,
+              11
+            ],
+            "y": [
+              2.403498992919922,
+              7.969499664306641
+            ]
+          },
+          "encoding": {
+            "x": "sleep_hours",
+            "y": "screen_time",
+            "color": "diet_quality"
+          }
+        }
+      }
+    }
+  ]
+}

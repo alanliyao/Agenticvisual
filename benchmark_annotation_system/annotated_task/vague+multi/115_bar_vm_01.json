@@ -1,0 +1,118 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "115_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/115_sport_life_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_04",
+      "question": "If only the top 3 brands in terms of sales volume are retained, how will the distribution structure of different income levels within these brands change?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Among their sales figures, what is consistently clear is that Adidas has the lowest sales volume, but the highest one varies. People with lower incomes prefer to buy Puma, while those with middle to high incomes have the same preference, all preferring Asics."
+        },
+        "key_insights": [
+          "puma most",
+          "adidas least",
+          "asics most",
+          "adidas least",
+          "asics most",
+          "adidas least"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_top_n",
+            "reasoning": "get the top 3 brands"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_subcategories",
+            "reasoning": "obtain data in low income group"
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_subcategories",
+            "reasoning": "analyse medium one"
+          },
+          {
+            "iteration": 4,
+            "tool": "filter_subcategories",
+            "reasoning": "get data of high income level"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_top_n",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n": 3,
+                  "order": "descending"
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Medium",
+                    "High"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Low",
+                    "High"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Medium",
+                    "Low"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "brand",
+            "y": "units_sold",
+            "color": "customer_income_level"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['customer_income_level'] != \"Medium\" && datum['customer_income_level'] != \"Low\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

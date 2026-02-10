@@ -1,0 +1,1787 @@
+{
+  "filename": "09_museum_visitors_line.json",
+  "spec_index": 8,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Line Chart: America Tropical Interpretive Center over Date",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "Date": "2014-01-01",
+          "Avila Adobe": 24778,
+          "Firehouse Museum": 4486,
+          "Chinese American Museum": 1581,
+          "America Tropical Interpretive Center": 6602
+        },
+        {
+          "Date": "2014-02-01",
+          "Avila Adobe": 18976,
+          "Firehouse Museum": 4172,
+          "Chinese American Museum": 1785,
+          "America Tropical Interpretive Center": 5029
+        },
+        {
+          "Date": "2014-03-01",
+          "Avila Adobe": 25231,
+          "Firehouse Museum": 7082,
+          "Chinese American Museum": 3229,
+          "America Tropical Interpretive Center": 8129
+        },
+        {
+          "Date": "2014-04-01",
+          "Avila Adobe": 26989,
+          "Firehouse Museum": 6756,
+          "Chinese American Museum": 2129,
+          "America Tropical Interpretive Center": 2824
+        },
+        {
+          "Date": "2014-05-01",
+          "Avila Adobe": 36883,
+          "Firehouse Museum": 10858,
+          "Chinese American Museum": 3676,
+          "America Tropical Interpretive Center": 10694
+        },
+        {
+          "Date": "2014-06-01",
+          "Avila Adobe": 29487,
+          "Firehouse Museum": 5751,
+          "Chinese American Museum": 2121,
+          "America Tropical Interpretive Center": 11036
+        },
+        {
+          "Date": "2014-07-01",
+          "Avila Adobe": 32378,
+          "Firehouse Museum": 5406,
+          "Chinese American Museum": 2239,
+          "America Tropical Interpretive Center": 13490
+        },
+        {
+          "Date": "2014-08-01",
+          "Avila Adobe": 37680,
+          "Firehouse Museum": 8619,
+          "Chinese American Museum": 1769,
+          "America Tropical Interpretive Center": 9139
+        },
+        {
+          "Date": "2014-09-01",
+          "Avila Adobe": 28473,
+          "Firehouse Museum": 61192,
+          "Chinese American Museum": 1073,
+          "America Tropical Interpretive Center": 5661
+        },
+        {
+          "Date": "2014-10-01",
+          "Avila Adobe": 27995,
+          "Firehouse Museum": 6488,
+          "Chinese American Museum": 1979,
+          "America Tropical Interpretive Center": 7356
+        },
+        {
+          "Date": "2014-11-01",
+          "Avila Adobe": 25691,
+          "Firehouse Museum": 4189,
+          "Chinese American Museum": 2404,
+          "America Tropical Interpretive Center": 9773
+        },
+        {
+          "Date": "2014-12-01",
+          "Avila Adobe": 18754,
+          "Firehouse Museum": 4339,
+          "Chinese American Museum": 1319,
+          "America Tropical Interpretive Center": 7184
+        },
+        {
+          "Date": "2015-01-01",
+          "Avila Adobe": 20438,
+          "Firehouse Museum": 3858,
+          "Chinese American Museum": 1823,
+          "America Tropical Interpretive Center": 6250
+        },
+        {
+          "Date": "2015-02-01",
+          "Avila Adobe": 15578,
+          "Firehouse Museum": 3742,
+          "Chinese American Museum": 1558,
+          "America Tropical Interpretive Center": 5907
+        },
+        {
+          "Date": "2015-03-01",
+          "Avila Adobe": 21297,
+          "Firehouse Museum": 5390,
+          "Chinese American Museum": 2336,
+          "America Tropical Interpretive Center": 9884
+        },
+        {
+          "Date": "2015-04-01",
+          "Avila Adobe": 26670,
+          "Firehouse Museum": 7000,
+          "Chinese American Museum": 3057,
+          "America Tropical Interpretive Center": 7254
+        },
+        {
+          "Date": "2015-05-01",
+          "Avila Adobe": 34383,
+          "Firehouse Museum": 12528,
+          "Chinese American Museum": 4009,
+          "America Tropical Interpretive Center": 13207
+        },
+        {
+          "Date": "2015-06-01",
+          "Avila Adobe": 30569,
+          "Firehouse Museum": 5377,
+          "Chinese American Museum": 2544,
+          "America Tropical Interpretive Center": 11102
+        },
+        {
+          "Date": "2015-07-01",
+          "Avila Adobe": 41242,
+          "Firehouse Museum": 6111,
+          "Chinese American Museum": 3057,
+          "America Tropical Interpretive Center": 11072
+        },
+        {
+          "Date": "2015-08-01",
+          "Avila Adobe": 30700,
+          "Firehouse Museum": 5383,
+          "Chinese American Museum": 2415,
+          "America Tropical Interpretive Center": 12096
+        },
+        {
+          "Date": "2015-09-01",
+          "Avila Adobe": 20967,
+          "Firehouse Museum": 5746,
+          "Chinese American Museum": 1398,
+          "America Tropical Interpretive Center": 6608
+        },
+        {
+          "Date": "2015-10-01",
+          "Avila Adobe": 29764,
+          "Firehouse Museum": 8882,
+          "Chinese American Museum": 2237,
+          "America Tropical Interpretive Center": 12524
+        },
+        {
+          "Date": "2015-11-01",
+          "Avila Adobe": 24483,
+          "Firehouse Museum": 6848,
+          "Chinese American Museum": 2850,
+          "America Tropical Interpretive Center": 6677
+        },
+        {
+          "Date": "2015-12-01",
+          "Avila Adobe": 21426,
+          "Firehouse Museum": 4502,
+          "Chinese American Museum": 2075,
+          "America Tropical Interpretive Center": 5967
+        },
+        {
+          "Date": "2016-01-01",
+          "Avila Adobe": 19659,
+          "Firehouse Museum": 4377,
+          "Chinese American Museum": 2150,
+          "America Tropical Interpretive Center": 6587
+        },
+        {
+          "Date": "2016-02-01",
+          "Avila Adobe": 17378,
+          "Firehouse Museum": 3675,
+          "Chinese American Museum": 2547,
+          "America Tropical Interpretive Center": 6955
+        },
+        {
+          "Date": "2016-03-01",
+          "Avila Adobe": 20322,
+          "Firehouse Museum": 6334,
+          "Chinese American Museum": 7702,
+          "America Tropical Interpretive Center": 9979
+        },
+        {
+          "Date": "2016-04-01",
+          "Avila Adobe": 24521,
+          "Firehouse Museum": 6509,
+          "Chinese American Museum": 3485,
+          "America Tropical Interpretive Center": 5113
+        },
+        {
+          "Date": "2016-05-01",
+          "Avila Adobe": 31728,
+          "Firehouse Museum": 9315,
+          "Chinese American Museum": 4565,
+          "America Tropical Interpretive Center": 7757
+        },
+        {
+          "Date": "2016-06-01",
+          "Avila Adobe": 23696,
+          "Firehouse Museum": 4918,
+          "Chinese American Museum": 3034,
+          "America Tropical Interpretive Center": 6751
+        },
+        {
+          "Date": "2016-07-01",
+          "Avila Adobe": 31689,
+          "Firehouse Museum": 5602,
+          "Chinese American Museum": 2776,
+          "America Tropical Interpretive Center": 12188
+        },
+        {
+          "Date": "2016-08-01",
+          "Avila Adobe": 25987,
+          "Firehouse Museum": 5181,
+          "Chinese American Museum": 2153,
+          "America Tropical Interpretive Center": 6245
+        },
+        {
+          "Date": "2016-09-01",
+          "Avila Adobe": 22897,
+          "Firehouse Museum": 4736,
+          "Chinese American Museum": 1754,
+          "America Tropical Interpretive Center": 6977
+        },
+        {
+          "Date": "2016-10-01",
+          "Avila Adobe": 25040,
+          "Firehouse Museum": 6145,
+          "Chinese American Museum": 2607,
+          "America Tropical Interpretive Center": 6282
+        },
+        {
+          "Date": "2016-11-01",
+          "Avila Adobe": 17760,
+          "Firehouse Museum": 3930,
+          "Chinese American Museum": 2248,
+          "America Tropical Interpretive Center": 6365
+        },
+        {
+          "Date": "2016-12-01",
+          "Avila Adobe": 20107,
+          "Firehouse Museum": 3911,
+          "Chinese American Museum": 2263,
+          "America Tropical Interpretive Center": 5223
+        },
+        {
+          "Date": "2017-01-01",
+          "Avila Adobe": 18792,
+          "Firehouse Museum": 3551,
+          "Chinese American Museum": 2531,
+          "America Tropical Interpretive Center": 4929
+        },
+        {
+          "Date": "2017-02-01",
+          "Avila Adobe": 14035,
+          "Firehouse Museum": 3491,
+          "Chinese American Museum": 2139,
+          "America Tropical Interpretive Center": 4493
+        },
+        {
+          "Date": "2017-03-01",
+          "Avila Adobe": 20680,
+          "Firehouse Museum": 5273,
+          "Chinese American Museum": 5966,
+          "America Tropical Interpretive Center": 6271
+        },
+        {
+          "Date": "2017-04-01",
+          "Avila Adobe": 25234,
+          "Firehouse Museum": 5320,
+          "Chinese American Museum": 3273,
+          "America Tropical Interpretive Center": 6685
+        },
+        {
+          "Date": "2017-05-01",
+          "Avila Adobe": 30029,
+          "Firehouse Museum": 8733,
+          "Chinese American Museum": 5585,
+          "America Tropical Interpretive Center": 7556
+        },
+        {
+          "Date": "2017-06-01",
+          "Avila Adobe": 22169,
+          "Firehouse Museum": 4862,
+          "Chinese American Museum": 2946,
+          "America Tropical Interpretive Center": 6818
+        },
+        {
+          "Date": "2017-07-01",
+          "Avila Adobe": 30831,
+          "Firehouse Museum": 5242,
+          "Chinese American Museum": 2939,
+          "America Tropical Interpretive Center": 8675
+        },
+        {
+          "Date": "2017-08-01",
+          "Avila Adobe": 27009,
+          "Firehouse Museum": 5379,
+          "Chinese American Museum": 1784,
+          "America Tropical Interpretive Center": 6212
+        },
+        {
+          "Date": "2017-09-01",
+          "Avila Adobe": 23403,
+          "Firehouse Museum": 4484,
+          "Chinese American Museum": 1704,
+          "America Tropical Interpretive Center": 4607
+        },
+        {
+          "Date": "2017-10-01",
+          "Avila Adobe": 22164,
+          "Firehouse Museum": 4822,
+          "Chinese American Museum": 2419,
+          "America Tropical Interpretive Center": 6097
+        },
+        {
+          "Date": "2017-11-01",
+          "Avila Adobe": 17629,
+          "Firehouse Museum": 4613,
+          "Chinese American Museum": 2685,
+          "America Tropical Interpretive Center": 6757
+        },
+        {
+          "Date": "2017-12-01",
+          "Avila Adobe": 18339,
+          "Firehouse Museum": 4448,
+          "Chinese American Museum": 2768,
+          "America Tropical Interpretive Center": 6780
+        },
+        {
+          "Date": "2018-01-01",
+          "Avila Adobe": 16265,
+          "Firehouse Museum": 3910,
+          "Chinese American Museum": 2477,
+          "America Tropical Interpretive Center": 5837
+        },
+        {
+          "Date": "2018-02-01",
+          "Avila Adobe": 14718,
+          "Firehouse Museum": 3306,
+          "Chinese American Museum": 2710,
+          "America Tropical Interpretive Center": 5705
+        },
+        {
+          "Date": "2018-03-01",
+          "Avila Adobe": 19001,
+          "Firehouse Museum": 5225,
+          "Chinese American Museum": 4529,
+          "America Tropical Interpretive Center": 4909
+        },
+        {
+          "Date": "2018-04-01",
+          "Avila Adobe": 18966,
+          "Firehouse Museum": 4535,
+          "Chinese American Museum": 2750,
+          "America Tropical Interpretive Center": 4650
+        },
+        {
+          "Date": "2018-05-01",
+          "Avila Adobe": 25173,
+          "Firehouse Museum": 8013,
+          "Chinese American Museum": 4960,
+          "America Tropical Interpretive Center": 5626
+        },
+        {
+          "Date": "2018-06-01",
+          "Avila Adobe": 22171,
+          "Firehouse Museum": 4635,
+          "Chinese American Museum": 2518,
+          "America Tropical Interpretive Center": 4694
+        },
+        {
+          "Date": "2018-07-01",
+          "Avila Adobe": 23136,
+          "Firehouse Museum": 4191,
+          "Chinese American Museum": 2620,
+          "America Tropical Interpretive Center": 4718
+        },
+        {
+          "Date": "2018-08-01",
+          "Avila Adobe": 20815,
+          "Firehouse Museum": 4866,
+          "Chinese American Museum": 2409,
+          "America Tropical Interpretive Center": 3891
+        },
+        {
+          "Date": "2018-09-01",
+          "Avila Adobe": 21020,
+          "Firehouse Museum": 4956,
+          "Chinese American Museum": 2146,
+          "America Tropical Interpretive Center": 3180
+        },
+        {
+          "Date": "2018-10-01",
+          "Avila Adobe": 19280,
+          "Firehouse Museum": 4622,
+          "Chinese American Museum": 2364,
+          "America Tropical Interpretive Center": 3775
+        },
+        {
+          "Date": "2018-11-01",
+          "Avila Adobe": 17163,
+          "Firehouse Museum": 4082,
+          "Chinese American Museum": 2385,
+          "America Tropical Interpretive Center": 4562
+        }
+      ]
+    },
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal"
+      },
+      "y": {
+        "field": "America Tropical Interpretive Center",
+        "type": "quantitative"
+      }
+    }
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Line Chart: America Tropical Interpretive Center over Date",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "Date": "2014-01-01",
+          "Avila Adobe": 24778,
+          "Firehouse Museum": 4486,
+          "Chinese American Museum": 1581,
+          "America Tropical Interpretive Center": 6602
+        },
+        {
+          "Date": "2014-02-01",
+          "Avila Adobe": 18976,
+          "Firehouse Museum": 4172,
+          "Chinese American Museum": 1785,
+          "America Tropical Interpretive Center": 5029
+        },
+        {
+          "Date": "2014-03-01",
+          "Avila Adobe": 25231,
+          "Firehouse Museum": 7082,
+          "Chinese American Museum": 3229,
+          "America Tropical Interpretive Center": 8129
+        },
+        {
+          "Date": "2014-04-01",
+          "Avila Adobe": 26989,
+          "Firehouse Museum": 6756,
+          "Chinese American Museum": 2129,
+          "America Tropical Interpretive Center": 2824
+        },
+        {
+          "Date": "2014-05-01",
+          "Avila Adobe": 36883,
+          "Firehouse Museum": 10858,
+          "Chinese American Museum": 3676,
+          "America Tropical Interpretive Center": 10694
+        },
+        {
+          "Date": "2014-06-01",
+          "Avila Adobe": 29487,
+          "Firehouse Museum": 5751,
+          "Chinese American Museum": 2121,
+          "America Tropical Interpretive Center": 11036
+        },
+        {
+          "Date": "2014-07-01",
+          "Avila Adobe": 32378,
+          "Firehouse Museum": 5406,
+          "Chinese American Museum": 2239,
+          "America Tropical Interpretive Center": 13490
+        },
+        {
+          "Date": "2014-08-01",
+          "Avila Adobe": 37680,
+          "Firehouse Museum": 8619,
+          "Chinese American Museum": 1769,
+          "America Tropical Interpretive Center": 9139
+        },
+        {
+          "Date": "2014-09-01",
+          "Avila Adobe": 28473,
+          "Firehouse Museum": 61192,
+          "Chinese American Museum": 1073,
+          "America Tropical Interpretive Center": 5661
+        },
+        {
+          "Date": "2014-10-01",
+          "Avila Adobe": 27995,
+          "Firehouse Museum": 6488,
+          "Chinese American Museum": 1979,
+          "America Tropical Interpretive Center": 7356
+        },
+        {
+          "Date": "2014-11-01",
+          "Avila Adobe": 25691,
+          "Firehouse Museum": 4189,
+          "Chinese American Museum": 2404,
+          "America Tropical Interpretive Center": 9773
+        },
+        {
+          "Date": "2014-12-01",
+          "Avila Adobe": 18754,
+          "Firehouse Museum": 4339,
+          "Chinese American Museum": 1319,
+          "America Tropical Interpretive Center": 7184
+        },
+        {
+          "Date": "2015-01-01",
+          "Avila Adobe": 20438,
+          "Firehouse Museum": 3858,
+          "Chinese American Museum": 1823,
+          "America Tropical Interpretive Center": 6250
+        },
+        {
+          "Date": "2015-02-01",
+          "Avila Adobe": 15578,
+          "Firehouse Museum": 3742,
+          "Chinese American Museum": 1558,
+          "America Tropical Interpretive Center": 5907
+        },
+        {
+          "Date": "2015-03-01",
+          "Avila Adobe": 21297,
+          "Firehouse Museum": 5390,
+          "Chinese American Museum": 2336,
+          "America Tropical Interpretive Center": 9884
+        },
+        {
+          "Date": "2015-04-01",
+          "Avila Adobe": 26670,
+          "Firehouse Museum": 7000,
+          "Chinese American Museum": 3057,
+          "America Tropical Interpretive Center": 7254
+        },
+        {
+          "Date": "2015-05-01",
+          "Avila Adobe": 34383,
+          "Firehouse Museum": 12528,
+          "Chinese American Museum": 4009,
+          "America Tropical Interpretive Center": 13207
+        },
+        {
+          "Date": "2015-06-01",
+          "Avila Adobe": 30569,
+          "Firehouse Museum": 5377,
+          "Chinese American Museum": 2544,
+          "America Tropical Interpretive Center": 11102
+        },
+        {
+          "Date": "2015-07-01",
+          "Avila Adobe": 41242,
+          "Firehouse Museum": 6111,
+          "Chinese American Museum": 3057,
+          "America Tropical Interpretive Center": 11072
+        },
+        {
+          "Date": "2015-08-01",
+          "Avila Adobe": 30700,
+          "Firehouse Museum": 5383,
+          "Chinese American Museum": 2415,
+          "America Tropical Interpretive Center": 12096
+        },
+        {
+          "Date": "2015-09-01",
+          "Avila Adobe": 20967,
+          "Firehouse Museum": 5746,
+          "Chinese American Museum": 1398,
+          "America Tropical Interpretive Center": 6608
+        },
+        {
+          "Date": "2015-10-01",
+          "Avila Adobe": 29764,
+          "Firehouse Museum": 8882,
+          "Chinese American Museum": 2237,
+          "America Tropical Interpretive Center": 12524
+        },
+        {
+          "Date": "2015-11-01",
+          "Avila Adobe": 24483,
+          "Firehouse Museum": 6848,
+          "Chinese American Museum": 2850,
+          "America Tropical Interpretive Center": 6677
+        },
+        {
+          "Date": "2015-12-01",
+          "Avila Adobe": 21426,
+          "Firehouse Museum": 4502,
+          "Chinese American Museum": 2075,
+          "America Tropical Interpretive Center": 5967
+        },
+        {
+          "Date": "2016-01-01",
+          "Avila Adobe": 19659,
+          "Firehouse Museum": 4377,
+          "Chinese American Museum": 2150,
+          "America Tropical Interpretive Center": 6587
+        },
+        {
+          "Date": "2016-02-01",
+          "Avila Adobe": 17378,
+          "Firehouse Museum": 3675,
+          "Chinese American Museum": 2547,
+          "America Tropical Interpretive Center": 6955
+        },
+        {
+          "Date": "2016-03-01",
+          "Avila Adobe": 20322,
+          "Firehouse Museum": 6334,
+          "Chinese American Museum": 7702,
+          "America Tropical Interpretive Center": 9979
+        },
+        {
+          "Date": "2016-04-01",
+          "Avila Adobe": 24521,
+          "Firehouse Museum": 6509,
+          "Chinese American Museum": 3485,
+          "America Tropical Interpretive Center": 5113
+        },
+        {
+          "Date": "2016-05-01",
+          "Avila Adobe": 31728,
+          "Firehouse Museum": 9315,
+          "Chinese American Museum": 4565,
+          "America Tropical Interpretive Center": 7757
+        },
+        {
+          "Date": "2016-06-01",
+          "Avila Adobe": 23696,
+          "Firehouse Museum": 4918,
+          "Chinese American Museum": 3034,
+          "America Tropical Interpretive Center": 6751
+        },
+        {
+          "Date": "2016-07-01",
+          "Avila Adobe": 31689,
+          "Firehouse Museum": 5602,
+          "Chinese American Museum": 2776,
+          "America Tropical Interpretive Center": 12188
+        },
+        {
+          "Date": "2016-08-01",
+          "Avila Adobe": 25987,
+          "Firehouse Museum": 5181,
+          "Chinese American Museum": 2153,
+          "America Tropical Interpretive Center": 6245
+        },
+        {
+          "Date": "2016-09-01",
+          "Avila Adobe": 22897,
+          "Firehouse Museum": 4736,
+          "Chinese American Museum": 1754,
+          "America Tropical Interpretive Center": 6977
+        },
+        {
+          "Date": "2016-10-01",
+          "Avila Adobe": 25040,
+          "Firehouse Museum": 6145,
+          "Chinese American Museum": 2607,
+          "America Tropical Interpretive Center": 6282
+        },
+        {
+          "Date": "2016-11-01",
+          "Avila Adobe": 17760,
+          "Firehouse Museum": 3930,
+          "Chinese American Museum": 2248,
+          "America Tropical Interpretive Center": 6365
+        },
+        {
+          "Date": "2016-12-01",
+          "Avila Adobe": 20107,
+          "Firehouse Museum": 3911,
+          "Chinese American Museum": 2263,
+          "America Tropical Interpretive Center": 5223
+        },
+        {
+          "Date": "2017-01-01",
+          "Avila Adobe": 18792,
+          "Firehouse Museum": 3551,
+          "Chinese American Museum": 2531,
+          "America Tropical Interpretive Center": 4929
+        },
+        {
+          "Date": "2017-02-01",
+          "Avila Adobe": 14035,
+          "Firehouse Museum": 3491,
+          "Chinese American Museum": 2139,
+          "America Tropical Interpretive Center": 4493
+        },
+        {
+          "Date": "2017-03-01",
+          "Avila Adobe": 20680,
+          "Firehouse Museum": 5273,
+          "Chinese American Museum": 5966,
+          "America Tropical Interpretive Center": 6271
+        },
+        {
+          "Date": "2017-04-01",
+          "Avila Adobe": 25234,
+          "Firehouse Museum": 5320,
+          "Chinese American Museum": 3273,
+          "America Tropical Interpretive Center": 6685
+        },
+        {
+          "Date": "2017-05-01",
+          "Avila Adobe": 30029,
+          "Firehouse Museum": 8733,
+          "Chinese American Museum": 5585,
+          "America Tropical Interpretive Center": 7556
+        },
+        {
+          "Date": "2017-06-01",
+          "Avila Adobe": 22169,
+          "Firehouse Museum": 4862,
+          "Chinese American Museum": 2946,
+          "America Tropical Interpretive Center": 6818
+        },
+        {
+          "Date": "2017-07-01",
+          "Avila Adobe": 30831,
+          "Firehouse Museum": 5242,
+          "Chinese American Museum": 2939,
+          "America Tropical Interpretive Center": 8675
+        },
+        {
+          "Date": "2017-08-01",
+          "Avila Adobe": 27009,
+          "Firehouse Museum": 5379,
+          "Chinese American Museum": 1784,
+          "America Tropical Interpretive Center": 6212
+        },
+        {
+          "Date": "2017-09-01",
+          "Avila Adobe": 23403,
+          "Firehouse Museum": 4484,
+          "Chinese American Museum": 1704,
+          "America Tropical Interpretive Center": 4607
+        },
+        {
+          "Date": "2017-10-01",
+          "Avila Adobe": 22164,
+          "Firehouse Museum": 4822,
+          "Chinese American Museum": 2419,
+          "America Tropical Interpretive Center": 6097
+        },
+        {
+          "Date": "2017-11-01",
+          "Avila Adobe": 17629,
+          "Firehouse Museum": 4613,
+          "Chinese American Museum": 2685,
+          "America Tropical Interpretive Center": 6757
+        },
+        {
+          "Date": "2017-12-01",
+          "Avila Adobe": 18339,
+          "Firehouse Museum": 4448,
+          "Chinese American Museum": 2768,
+          "America Tropical Interpretive Center": 6780
+        },
+        {
+          "Date": "2018-01-01",
+          "Avila Adobe": 16265,
+          "Firehouse Museum": 3910,
+          "Chinese American Museum": 2477,
+          "America Tropical Interpretive Center": 5837
+        },
+        {
+          "Date": "2018-02-01",
+          "Avila Adobe": 14718,
+          "Firehouse Museum": 3306,
+          "Chinese American Museum": 2710,
+          "America Tropical Interpretive Center": 5705
+        },
+        {
+          "Date": "2018-03-01",
+          "Avila Adobe": 19001,
+          "Firehouse Museum": 5225,
+          "Chinese American Museum": 4529,
+          "America Tropical Interpretive Center": 4909
+        },
+        {
+          "Date": "2018-04-01",
+          "Avila Adobe": 18966,
+          "Firehouse Museum": 4535,
+          "Chinese American Museum": 2750,
+          "America Tropical Interpretive Center": 4650
+        },
+        {
+          "Date": "2018-05-01",
+          "Avila Adobe": 25173,
+          "Firehouse Museum": 8013,
+          "Chinese American Museum": 4960,
+          "America Tropical Interpretive Center": 5626
+        },
+        {
+          "Date": "2018-06-01",
+          "Avila Adobe": 22171,
+          "Firehouse Museum": 4635,
+          "Chinese American Museum": 2518,
+          "America Tropical Interpretive Center": 4694
+        },
+        {
+          "Date": "2018-07-01",
+          "Avila Adobe": 23136,
+          "Firehouse Museum": 4191,
+          "Chinese American Museum": 2620,
+          "America Tropical Interpretive Center": 4718
+        },
+        {
+          "Date": "2018-08-01",
+          "Avila Adobe": 20815,
+          "Firehouse Museum": 4866,
+          "Chinese American Museum": 2409,
+          "America Tropical Interpretive Center": 3891
+        },
+        {
+          "Date": "2018-09-01",
+          "Avila Adobe": 21020,
+          "Firehouse Museum": 4956,
+          "Chinese American Museum": 2146,
+          "America Tropical Interpretive Center": 3180
+        },
+        {
+          "Date": "2018-10-01",
+          "Avila Adobe": 19280,
+          "Firehouse Museum": 4622,
+          "Chinese American Museum": 2364,
+          "America Tropical Interpretive Center": 3775
+        },
+        {
+          "Date": "2018-11-01",
+          "Avila Adobe": 17163,
+          "Firehouse Museum": 4082,
+          "Chinese American Museum": 2385,
+          "America Tropical Interpretive Center": 4562
+        }
+      ]
+    },
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal"
+      },
+      "y": {
+        "field": "America Tropical Interpretive Center",
+        "type": "quantitative"
+      }
+    }
+  },
+  "spec_history": [
+    {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title": "Line Chart: America Tropical Interpretive Center over Date",
+      "width": 600,
+      "height": 400,
+      "data": {
+        "values": [
+          {
+            "Date": "2014-01-01",
+            "Avila Adobe": 24778,
+            "Firehouse Museum": 4486,
+            "Chinese American Museum": 1581,
+            "America Tropical Interpretive Center": 6602
+          },
+          {
+            "Date": "2014-02-01",
+            "Avila Adobe": 18976,
+            "Firehouse Museum": 4172,
+            "Chinese American Museum": 1785,
+            "America Tropical Interpretive Center": 5029
+          },
+          {
+            "Date": "2014-03-01",
+            "Avila Adobe": 25231,
+            "Firehouse Museum": 7082,
+            "Chinese American Museum": 3229,
+            "America Tropical Interpretive Center": 8129
+          },
+          {
+            "Date": "2014-04-01",
+            "Avila Adobe": 26989,
+            "Firehouse Museum": 6756,
+            "Chinese American Museum": 2129,
+            "America Tropical Interpretive Center": 2824
+          },
+          {
+            "Date": "2014-05-01",
+            "Avila Adobe": 36883,
+            "Firehouse Museum": 10858,
+            "Chinese American Museum": 3676,
+            "America Tropical Interpretive Center": 10694
+          },
+          {
+            "Date": "2014-06-01",
+            "Avila Adobe": 29487,
+            "Firehouse Museum": 5751,
+            "Chinese American Museum": 2121,
+            "America Tropical Interpretive Center": 11036
+          },
+          {
+            "Date": "2014-07-01",
+            "Avila Adobe": 32378,
+            "Firehouse Museum": 5406,
+            "Chinese American Museum": 2239,
+            "America Tropical Interpretive Center": 13490
+          },
+          {
+            "Date": "2014-08-01",
+            "Avila Adobe": 37680,
+            "Firehouse Museum": 8619,
+            "Chinese American Museum": 1769,
+            "America Tropical Interpretive Center": 9139
+          },
+          {
+            "Date": "2014-09-01",
+            "Avila Adobe": 28473,
+            "Firehouse Museum": 61192,
+            "Chinese American Museum": 1073,
+            "America Tropical Interpretive Center": 5661
+          },
+          {
+            "Date": "2014-10-01",
+            "Avila Adobe": 27995,
+            "Firehouse Museum": 6488,
+            "Chinese American Museum": 1979,
+            "America Tropical Interpretive Center": 7356
+          },
+          {
+            "Date": "2014-11-01",
+            "Avila Adobe": 25691,
+            "Firehouse Museum": 4189,
+            "Chinese American Museum": 2404,
+            "America Tropical Interpretive Center": 9773
+          },
+          {
+            "Date": "2014-12-01",
+            "Avila Adobe": 18754,
+            "Firehouse Museum": 4339,
+            "Chinese American Museum": 1319,
+            "America Tropical Interpretive Center": 7184
+          },
+          {
+            "Date": "2015-01-01",
+            "Avila Adobe": 20438,
+            "Firehouse Museum": 3858,
+            "Chinese American Museum": 1823,
+            "America Tropical Interpretive Center": 6250
+          },
+          {
+            "Date": "2015-02-01",
+            "Avila Adobe": 15578,
+            "Firehouse Museum": 3742,
+            "Chinese American Museum": 1558,
+            "America Tropical Interpretive Center": 5907
+          },
+          {
+            "Date": "2015-03-01",
+            "Avila Adobe": 21297,
+            "Firehouse Museum": 5390,
+            "Chinese American Museum": 2336,
+            "America Tropical Interpretive Center": 9884
+          },
+          {
+            "Date": "2015-04-01",
+            "Avila Adobe": 26670,
+            "Firehouse Museum": 7000,
+            "Chinese American Museum": 3057,
+            "America Tropical Interpretive Center": 7254
+          },
+          {
+            "Date": "2015-05-01",
+            "Avila Adobe": 34383,
+            "Firehouse Museum": 12528,
+            "Chinese American Museum": 4009,
+            "America Tropical Interpretive Center": 13207
+          },
+          {
+            "Date": "2015-06-01",
+            "Avila Adobe": 30569,
+            "Firehouse Museum": 5377,
+            "Chinese American Museum": 2544,
+            "America Tropical Interpretive Center": 11102
+          },
+          {
+            "Date": "2015-07-01",
+            "Avila Adobe": 41242,
+            "Firehouse Museum": 6111,
+            "Chinese American Museum": 3057,
+            "America Tropical Interpretive Center": 11072
+          },
+          {
+            "Date": "2015-08-01",
+            "Avila Adobe": 30700,
+            "Firehouse Museum": 5383,
+            "Chinese American Museum": 2415,
+            "America Tropical Interpretive Center": 12096
+          },
+          {
+            "Date": "2015-09-01",
+            "Avila Adobe": 20967,
+            "Firehouse Museum": 5746,
+            "Chinese American Museum": 1398,
+            "America Tropical Interpretive Center": 6608
+          },
+          {
+            "Date": "2015-10-01",
+            "Avila Adobe": 29764,
+            "Firehouse Museum": 8882,
+            "Chinese American Museum": 2237,
+            "America Tropical Interpretive Center": 12524
+          },
+          {
+            "Date": "2015-11-01",
+            "Avila Adobe": 24483,
+            "Firehouse Museum": 6848,
+            "Chinese American Museum": 2850,
+            "America Tropical Interpretive Center": 6677
+          },
+          {
+            "Date": "2015-12-01",
+            "Avila Adobe": 21426,
+            "Firehouse Museum": 4502,
+            "Chinese American Museum": 2075,
+            "America Tropical Interpretive Center": 5967
+          },
+          {
+            "Date": "2016-01-01",
+            "Avila Adobe": 19659,
+            "Firehouse Museum": 4377,
+            "Chinese American Museum": 2150,
+            "America Tropical Interpretive Center": 6587
+          },
+          {
+            "Date": "2016-02-01",
+            "Avila Adobe": 17378,
+            "Firehouse Museum": 3675,
+            "Chinese American Museum": 2547,
+            "America Tropical Interpretive Center": 6955
+          },
+          {
+            "Date": "2016-03-01",
+            "Avila Adobe": 20322,
+            "Firehouse Museum": 6334,
+            "Chinese American Museum": 7702,
+            "America Tropical Interpretive Center": 9979
+          },
+          {
+            "Date": "2016-04-01",
+            "Avila Adobe": 24521,
+            "Firehouse Museum": 6509,
+            "Chinese American Museum": 3485,
+            "America Tropical Interpretive Center": 5113
+          },
+          {
+            "Date": "2016-05-01",
+            "Avila Adobe": 31728,
+            "Firehouse Museum": 9315,
+            "Chinese American Museum": 4565,
+            "America Tropical Interpretive Center": 7757
+          },
+          {
+            "Date": "2016-06-01",
+            "Avila Adobe": 23696,
+            "Firehouse Museum": 4918,
+            "Chinese American Museum": 3034,
+            "America Tropical Interpretive Center": 6751
+          },
+          {
+            "Date": "2016-07-01",
+            "Avila Adobe": 31689,
+            "Firehouse Museum": 5602,
+            "Chinese American Museum": 2776,
+            "America Tropical Interpretive Center": 12188
+          },
+          {
+            "Date": "2016-08-01",
+            "Avila Adobe": 25987,
+            "Firehouse Museum": 5181,
+            "Chinese American Museum": 2153,
+            "America Tropical Interpretive Center": 6245
+          },
+          {
+            "Date": "2016-09-01",
+            "Avila Adobe": 22897,
+            "Firehouse Museum": 4736,
+            "Chinese American Museum": 1754,
+            "America Tropical Interpretive Center": 6977
+          },
+          {
+            "Date": "2016-10-01",
+            "Avila Adobe": 25040,
+            "Firehouse Museum": 6145,
+            "Chinese American Museum": 2607,
+            "America Tropical Interpretive Center": 6282
+          },
+          {
+            "Date": "2016-11-01",
+            "Avila Adobe": 17760,
+            "Firehouse Museum": 3930,
+            "Chinese American Museum": 2248,
+            "America Tropical Interpretive Center": 6365
+          },
+          {
+            "Date": "2016-12-01",
+            "Avila Adobe": 20107,
+            "Firehouse Museum": 3911,
+            "Chinese American Museum": 2263,
+            "America Tropical Interpretive Center": 5223
+          },
+          {
+            "Date": "2017-01-01",
+            "Avila Adobe": 18792,
+            "Firehouse Museum": 3551,
+            "Chinese American Museum": 2531,
+            "America Tropical Interpretive Center": 4929
+          },
+          {
+            "Date": "2017-02-01",
+            "Avila Adobe": 14035,
+            "Firehouse Museum": 3491,
+            "Chinese American Museum": 2139,
+            "America Tropical Interpretive Center": 4493
+          },
+          {
+            "Date": "2017-03-01",
+            "Avila Adobe": 20680,
+            "Firehouse Museum": 5273,
+            "Chinese American Museum": 5966,
+            "America Tropical Interpretive Center": 6271
+          },
+          {
+            "Date": "2017-04-01",
+            "Avila Adobe": 25234,
+            "Firehouse Museum": 5320,
+            "Chinese American Museum": 3273,
+            "America Tropical Interpretive Center": 6685
+          },
+          {
+            "Date": "2017-05-01",
+            "Avila Adobe": 30029,
+            "Firehouse Museum": 8733,
+            "Chinese American Museum": 5585,
+            "America Tropical Interpretive Center": 7556
+          },
+          {
+            "Date": "2017-06-01",
+            "Avila Adobe": 22169,
+            "Firehouse Museum": 4862,
+            "Chinese American Museum": 2946,
+            "America Tropical Interpretive Center": 6818
+          },
+          {
+            "Date": "2017-07-01",
+            "Avila Adobe": 30831,
+            "Firehouse Museum": 5242,
+            "Chinese American Museum": 2939,
+            "America Tropical Interpretive Center": 8675
+          },
+          {
+            "Date": "2017-08-01",
+            "Avila Adobe": 27009,
+            "Firehouse Museum": 5379,
+            "Chinese American Museum": 1784,
+            "America Tropical Interpretive Center": 6212
+          },
+          {
+            "Date": "2017-09-01",
+            "Avila Adobe": 23403,
+            "Firehouse Museum": 4484,
+            "Chinese American Museum": 1704,
+            "America Tropical Interpretive Center": 4607
+          },
+          {
+            "Date": "2017-10-01",
+            "Avila Adobe": 22164,
+            "Firehouse Museum": 4822,
+            "Chinese American Museum": 2419,
+            "America Tropical Interpretive Center": 6097
+          },
+          {
+            "Date": "2017-11-01",
+            "Avila Adobe": 17629,
+            "Firehouse Museum": 4613,
+            "Chinese American Museum": 2685,
+            "America Tropical Interpretive Center": 6757
+          },
+          {
+            "Date": "2017-12-01",
+            "Avila Adobe": 18339,
+            "Firehouse Museum": 4448,
+            "Chinese American Museum": 2768,
+            "America Tropical Interpretive Center": 6780
+          },
+          {
+            "Date": "2018-01-01",
+            "Avila Adobe": 16265,
+            "Firehouse Museum": 3910,
+            "Chinese American Museum": 2477,
+            "America Tropical Interpretive Center": 5837
+          },
+          {
+            "Date": "2018-02-01",
+            "Avila Adobe": 14718,
+            "Firehouse Museum": 3306,
+            "Chinese American Museum": 2710,
+            "America Tropical Interpretive Center": 5705
+          },
+          {
+            "Date": "2018-03-01",
+            "Avila Adobe": 19001,
+            "Firehouse Museum": 5225,
+            "Chinese American Museum": 4529,
+            "America Tropical Interpretive Center": 4909
+          },
+          {
+            "Date": "2018-04-01",
+            "Avila Adobe": 18966,
+            "Firehouse Museum": 4535,
+            "Chinese American Museum": 2750,
+            "America Tropical Interpretive Center": 4650
+          },
+          {
+            "Date": "2018-05-01",
+            "Avila Adobe": 25173,
+            "Firehouse Museum": 8013,
+            "Chinese American Museum": 4960,
+            "America Tropical Interpretive Center": 5626
+          },
+          {
+            "Date": "2018-06-01",
+            "Avila Adobe": 22171,
+            "Firehouse Museum": 4635,
+            "Chinese American Museum": 2518,
+            "America Tropical Interpretive Center": 4694
+          },
+          {
+            "Date": "2018-07-01",
+            "Avila Adobe": 23136,
+            "Firehouse Museum": 4191,
+            "Chinese American Museum": 2620,
+            "America Tropical Interpretive Center": 4718
+          },
+          {
+            "Date": "2018-08-01",
+            "Avila Adobe": 20815,
+            "Firehouse Museum": 4866,
+            "Chinese American Museum": 2409,
+            "America Tropical Interpretive Center": 3891
+          },
+          {
+            "Date": "2018-09-01",
+            "Avila Adobe": 21020,
+            "Firehouse Museum": 4956,
+            "Chinese American Museum": 2146,
+            "America Tropical Interpretive Center": 3180
+          },
+          {
+            "Date": "2018-10-01",
+            "Avila Adobe": 19280,
+            "Firehouse Museum": 4622,
+            "Chinese American Museum": 2364,
+            "America Tropical Interpretive Center": 3775
+          },
+          {
+            "Date": "2018-11-01",
+            "Avila Adobe": 17163,
+            "Firehouse Museum": 4082,
+            "Chinese American Museum": 2385,
+            "America Tropical Interpretive Center": 4562
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "America Tropical Interpretive Center",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title": "Line Chart: America Tropical Interpretive Center over Date",
+      "width": 600,
+      "height": 400,
+      "data": {
+        "values": [
+          {
+            "Date": "2014-01-01",
+            "Avila Adobe": 24778,
+            "Firehouse Museum": 4486,
+            "Chinese American Museum": 1581,
+            "America Tropical Interpretive Center": 6602
+          },
+          {
+            "Date": "2014-02-01",
+            "Avila Adobe": 18976,
+            "Firehouse Museum": 4172,
+            "Chinese American Museum": 1785,
+            "America Tropical Interpretive Center": 5029
+          },
+          {
+            "Date": "2014-03-01",
+            "Avila Adobe": 25231,
+            "Firehouse Museum": 7082,
+            "Chinese American Museum": 3229,
+            "America Tropical Interpretive Center": 8129
+          },
+          {
+            "Date": "2014-04-01",
+            "Avila Adobe": 26989,
+            "Firehouse Museum": 6756,
+            "Chinese American Museum": 2129,
+            "America Tropical Interpretive Center": 2824
+          },
+          {
+            "Date": "2014-05-01",
+            "Avila Adobe": 36883,
+            "Firehouse Museum": 10858,
+            "Chinese American Museum": 3676,
+            "America Tropical Interpretive Center": 10694
+          },
+          {
+            "Date": "2014-06-01",
+            "Avila Adobe": 29487,
+            "Firehouse Museum": 5751,
+            "Chinese American Museum": 2121,
+            "America Tropical Interpretive Center": 11036
+          },
+          {
+            "Date": "2014-07-01",
+            "Avila Adobe": 32378,
+            "Firehouse Museum": 5406,
+            "Chinese American Museum": 2239,
+            "America Tropical Interpretive Center": 13490
+          },
+          {
+            "Date": "2014-08-01",
+            "Avila Adobe": 37680,
+            "Firehouse Museum": 8619,
+            "Chinese American Museum": 1769,
+            "America Tropical Interpretive Center": 9139
+          },
+          {
+            "Date": "2014-09-01",
+            "Avila Adobe": 28473,
+            "Firehouse Museum": 61192,
+            "Chinese American Museum": 1073,
+            "America Tropical Interpretive Center": 5661
+          },
+          {
+            "Date": "2014-10-01",
+            "Avila Adobe": 27995,
+            "Firehouse Museum": 6488,
+            "Chinese American Museum": 1979,
+            "America Tropical Interpretive Center": 7356
+          },
+          {
+            "Date": "2014-11-01",
+            "Avila Adobe": 25691,
+            "Firehouse Museum": 4189,
+            "Chinese American Museum": 2404,
+            "America Tropical Interpretive Center": 9773
+          },
+          {
+            "Date": "2014-12-01",
+            "Avila Adobe": 18754,
+            "Firehouse Museum": 4339,
+            "Chinese American Museum": 1319,
+            "America Tropical Interpretive Center": 7184
+          },
+          {
+            "Date": "2015-01-01",
+            "Avila Adobe": 20438,
+            "Firehouse Museum": 3858,
+            "Chinese American Museum": 1823,
+            "America Tropical Interpretive Center": 6250
+          },
+          {
+            "Date": "2015-02-01",
+            "Avila Adobe": 15578,
+            "Firehouse Museum": 3742,
+            "Chinese American Museum": 1558,
+            "America Tropical Interpretive Center": 5907
+          },
+          {
+            "Date": "2015-03-01",
+            "Avila Adobe": 21297,
+            "Firehouse Museum": 5390,
+            "Chinese American Museum": 2336,
+            "America Tropical Interpretive Center": 9884
+          },
+          {
+            "Date": "2015-04-01",
+            "Avila Adobe": 26670,
+            "Firehouse Museum": 7000,
+            "Chinese American Museum": 3057,
+            "America Tropical Interpretive Center": 7254
+          },
+          {
+            "Date": "2015-05-01",
+            "Avila Adobe": 34383,
+            "Firehouse Museum": 12528,
+            "Chinese American Museum": 4009,
+            "America Tropical Interpretive Center": 13207
+          },
+          {
+            "Date": "2015-06-01",
+            "Avila Adobe": 30569,
+            "Firehouse Museum": 5377,
+            "Chinese American Museum": 2544,
+            "America Tropical Interpretive Center": 11102
+          },
+          {
+            "Date": "2015-07-01",
+            "Avila Adobe": 41242,
+            "Firehouse Museum": 6111,
+            "Chinese American Museum": 3057,
+            "America Tropical Interpretive Center": 11072
+          },
+          {
+            "Date": "2015-08-01",
+            "Avila Adobe": 30700,
+            "Firehouse Museum": 5383,
+            "Chinese American Museum": 2415,
+            "America Tropical Interpretive Center": 12096
+          },
+          {
+            "Date": "2015-09-01",
+            "Avila Adobe": 20967,
+            "Firehouse Museum": 5746,
+            "Chinese American Museum": 1398,
+            "America Tropical Interpretive Center": 6608
+          },
+          {
+            "Date": "2015-10-01",
+            "Avila Adobe": 29764,
+            "Firehouse Museum": 8882,
+            "Chinese American Museum": 2237,
+            "America Tropical Interpretive Center": 12524
+          },
+          {
+            "Date": "2015-11-01",
+            "Avila Adobe": 24483,
+            "Firehouse Museum": 6848,
+            "Chinese American Museum": 2850,
+            "America Tropical Interpretive Center": 6677
+          },
+          {
+            "Date": "2015-12-01",
+            "Avila Adobe": 21426,
+            "Firehouse Museum": 4502,
+            "Chinese American Museum": 2075,
+            "America Tropical Interpretive Center": 5967
+          },
+          {
+            "Date": "2016-01-01",
+            "Avila Adobe": 19659,
+            "Firehouse Museum": 4377,
+            "Chinese American Museum": 2150,
+            "America Tropical Interpretive Center": 6587
+          },
+          {
+            "Date": "2016-02-01",
+            "Avila Adobe": 17378,
+            "Firehouse Museum": 3675,
+            "Chinese American Museum": 2547,
+            "America Tropical Interpretive Center": 6955
+          },
+          {
+            "Date": "2016-03-01",
+            "Avila Adobe": 20322,
+            "Firehouse Museum": 6334,
+            "Chinese American Museum": 7702,
+            "America Tropical Interpretive Center": 9979
+          },
+          {
+            "Date": "2016-04-01",
+            "Avila Adobe": 24521,
+            "Firehouse Museum": 6509,
+            "Chinese American Museum": 3485,
+            "America Tropical Interpretive Center": 5113
+          },
+          {
+            "Date": "2016-05-01",
+            "Avila Adobe": 31728,
+            "Firehouse Museum": 9315,
+            "Chinese American Museum": 4565,
+            "America Tropical Interpretive Center": 7757
+          },
+          {
+            "Date": "2016-06-01",
+            "Avila Adobe": 23696,
+            "Firehouse Museum": 4918,
+            "Chinese American Museum": 3034,
+            "America Tropical Interpretive Center": 6751
+          },
+          {
+            "Date": "2016-07-01",
+            "Avila Adobe": 31689,
+            "Firehouse Museum": 5602,
+            "Chinese American Museum": 2776,
+            "America Tropical Interpretive Center": 12188
+          },
+          {
+            "Date": "2016-08-01",
+            "Avila Adobe": 25987,
+            "Firehouse Museum": 5181,
+            "Chinese American Museum": 2153,
+            "America Tropical Interpretive Center": 6245
+          },
+          {
+            "Date": "2016-09-01",
+            "Avila Adobe": 22897,
+            "Firehouse Museum": 4736,
+            "Chinese American Museum": 1754,
+            "America Tropical Interpretive Center": 6977
+          },
+          {
+            "Date": "2016-10-01",
+            "Avila Adobe": 25040,
+            "Firehouse Museum": 6145,
+            "Chinese American Museum": 2607,
+            "America Tropical Interpretive Center": 6282
+          },
+          {
+            "Date": "2016-11-01",
+            "Avila Adobe": 17760,
+            "Firehouse Museum": 3930,
+            "Chinese American Museum": 2248,
+            "America Tropical Interpretive Center": 6365
+          },
+          {
+            "Date": "2016-12-01",
+            "Avila Adobe": 20107,
+            "Firehouse Museum": 3911,
+            "Chinese American Museum": 2263,
+            "America Tropical Interpretive Center": 5223
+          },
+          {
+            "Date": "2017-01-01",
+            "Avila Adobe": 18792,
+            "Firehouse Museum": 3551,
+            "Chinese American Museum": 2531,
+            "America Tropical Interpretive Center": 4929
+          },
+          {
+            "Date": "2017-02-01",
+            "Avila Adobe": 14035,
+            "Firehouse Museum": 3491,
+            "Chinese American Museum": 2139,
+            "America Tropical Interpretive Center": 4493
+          },
+          {
+            "Date": "2017-03-01",
+            "Avila Adobe": 20680,
+            "Firehouse Museum": 5273,
+            "Chinese American Museum": 5966,
+            "America Tropical Interpretive Center": 6271
+          },
+          {
+            "Date": "2017-04-01",
+            "Avila Adobe": 25234,
+            "Firehouse Museum": 5320,
+            "Chinese American Museum": 3273,
+            "America Tropical Interpretive Center": 6685
+          },
+          {
+            "Date": "2017-05-01",
+            "Avila Adobe": 30029,
+            "Firehouse Museum": 8733,
+            "Chinese American Museum": 5585,
+            "America Tropical Interpretive Center": 7556
+          },
+          {
+            "Date": "2017-06-01",
+            "Avila Adobe": 22169,
+            "Firehouse Museum": 4862,
+            "Chinese American Museum": 2946,
+            "America Tropical Interpretive Center": 6818
+          },
+          {
+            "Date": "2017-07-01",
+            "Avila Adobe": 30831,
+            "Firehouse Museum": 5242,
+            "Chinese American Museum": 2939,
+            "America Tropical Interpretive Center": 8675
+          },
+          {
+            "Date": "2017-08-01",
+            "Avila Adobe": 27009,
+            "Firehouse Museum": 5379,
+            "Chinese American Museum": 1784,
+            "America Tropical Interpretive Center": 6212
+          },
+          {
+            "Date": "2017-09-01",
+            "Avila Adobe": 23403,
+            "Firehouse Museum": 4484,
+            "Chinese American Museum": 1704,
+            "America Tropical Interpretive Center": 4607
+          },
+          {
+            "Date": "2017-10-01",
+            "Avila Adobe": 22164,
+            "Firehouse Museum": 4822,
+            "Chinese American Museum": 2419,
+            "America Tropical Interpretive Center": 6097
+          },
+          {
+            "Date": "2017-11-01",
+            "Avila Adobe": 17629,
+            "Firehouse Museum": 4613,
+            "Chinese American Museum": 2685,
+            "America Tropical Interpretive Center": 6757
+          },
+          {
+            "Date": "2017-12-01",
+            "Avila Adobe": 18339,
+            "Firehouse Museum": 4448,
+            "Chinese American Museum": 2768,
+            "America Tropical Interpretive Center": 6780
+          },
+          {
+            "Date": "2018-01-01",
+            "Avila Adobe": 16265,
+            "Firehouse Museum": 3910,
+            "Chinese American Museum": 2477,
+            "America Tropical Interpretive Center": 5837
+          },
+          {
+            "Date": "2018-02-01",
+            "Avila Adobe": 14718,
+            "Firehouse Museum": 3306,
+            "Chinese American Museum": 2710,
+            "America Tropical Interpretive Center": 5705
+          },
+          {
+            "Date": "2018-03-01",
+            "Avila Adobe": 19001,
+            "Firehouse Museum": 5225,
+            "Chinese American Museum": 4529,
+            "America Tropical Interpretive Center": 4909
+          },
+          {
+            "Date": "2018-04-01",
+            "Avila Adobe": 18966,
+            "Firehouse Museum": 4535,
+            "Chinese American Museum": 2750,
+            "America Tropical Interpretive Center": 4650
+          },
+          {
+            "Date": "2018-05-01",
+            "Avila Adobe": 25173,
+            "Firehouse Museum": 8013,
+            "Chinese American Museum": 4960,
+            "America Tropical Interpretive Center": 5626
+          },
+          {
+            "Date": "2018-06-01",
+            "Avila Adobe": 22171,
+            "Firehouse Museum": 4635,
+            "Chinese American Museum": 2518,
+            "America Tropical Interpretive Center": 4694
+          },
+          {
+            "Date": "2018-07-01",
+            "Avila Adobe": 23136,
+            "Firehouse Museum": 4191,
+            "Chinese American Museum": 2620,
+            "America Tropical Interpretive Center": 4718
+          },
+          {
+            "Date": "2018-08-01",
+            "Avila Adobe": 20815,
+            "Firehouse Museum": 4866,
+            "Chinese American Museum": 2409,
+            "America Tropical Interpretive Center": 3891
+          },
+          {
+            "Date": "2018-09-01",
+            "Avila Adobe": 21020,
+            "Firehouse Museum": 4956,
+            "Chinese American Museum": 2146,
+            "America Tropical Interpretive Center": 3180
+          },
+          {
+            "Date": "2018-10-01",
+            "Avila Adobe": 19280,
+            "Firehouse Museum": 4622,
+            "Chinese American Museum": 2364,
+            "America Tropical Interpretive Center": 3775
+          },
+          {
+            "Date": "2018-11-01",
+            "Avila Adobe": 17163,
+            "Firehouse Museum": 4082,
+            "Chinese American Museum": 2385,
+            "America Tropical Interpretive Center": 4562
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "point": true
+      },
+      "encoding": {
+        "x": {
+          "field": "Date",
+          "type": "temporal",
+          "timeUnit": "yearmonth"
+        },
+        "y": {
+          "field": "America Tropical Interpretive Center",
+          "type": "quantitative",
+          "aggregate": "mean"
+        }
+      },
+      "_resample_state": {
+        "original_encoding": {
+          "x": {
+            "field": "Date",
+            "type": "temporal"
+          },
+          "y": {
+            "field": "America Tropical Interpretive Center",
+            "type": "quantitative"
+          }
+        },
+        "current_granularity": "month",
+        "current_agg": "mean"
+      }
+    }
+  ],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "line",
+  "chart_meta": {
+    "chart_type": "line",
+    "title": "Line Chart: America Tropical Interpretive Center over Date",
+    "filename": "09_museum_visitors_line.json",
+    "data_points": 59,
+    "total_points": 59,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:30:15.506179Z"
+}

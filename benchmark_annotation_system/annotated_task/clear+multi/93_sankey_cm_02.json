@@ -1,0 +1,75 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "93_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/93_sankey_financial.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "color the flows to show what are the percentage from Alipay/WeChat Entry to Wealth Products and Bank App Push to Insurance？",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "13%;9%",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "color_flows",
+            "reasoning": "the flow from Alipay/WeChat Entry to Wealth Products take 13% of its total flow"
+          },
+          {
+            "iteration": 2,
+            "tool": "color_flows",
+            "reasoning": "the flow from Bank App Push to Insurance take 9% of its total flow"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "color": "#e74c3c",
+                  "nodes": [
+                    "Alipay/WeChat Entry",
+                    "Wealth Products"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "color": "#e74c3c",
+                  "nodes": [
+                    "Bank App Push",
+                    "Insurance"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

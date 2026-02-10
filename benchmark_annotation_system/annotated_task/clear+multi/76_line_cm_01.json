@@ -1,0 +1,88 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "76_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/76_Refined_Employment_Telecom_Services_NA_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Filter the chart to show only Mexico and the United States, then apply a moving average to compare their underlying employment growth patterns.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The U.S. shows a clear long-term downward trend, while Mexico’s trend is consistently upward.The moving average highlights that the two largest economies in the dataset are on completely opposite trajectories.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "The scale difference is dramatic: U.S. employment is an order of magnitude larger than Mexico’s."
+          },
+          {
+            "iteration": 2,
+            "tool": "show_moving_average",
+            "reasoning": "The U.S. downward trend becomes smoother, confirming a gradual, long-term decline rather than short-term fluctuations.\nMexico’s upward trend is reinforced, showing steady, uninterrupted growth over the entire period."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Guatemala",
+                    "El Salvador",
+                    "Panama",
+                    "Barbados",
+                    "Honduras",
+                    "Dominican Republic",
+                    "Grenada",
+                    "Costa Rica"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "show_moving_average",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "window_size": 5
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Guatemala\", \"El Salvador\", \"Panama\", \"Barbados\", \"Honduras\", \"Dominican Republic\", \"Grenada\", \"Costa Rica\"], datum['Country']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "task_type": "vague_single",
+  "task_id": "25_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/25_gym_members_exercise_tracking_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Among individuals engaged in four types of exercise, how does exercise experience affect fat percentage?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The chart clearly shows that regardless of exercise type, the total body fat percentage for individuals at Experience Level 3 is significantly lower than those at Levels 1 and 2. The gap is quite pronounced: the bar for Level 3 ranges between 650 and 800, while Levels 1 and 2 both fall between 2300 and 3200."
+        },
+        "key_insights": [
+          "The impact of experience is overwhelming. Level 3 body fat percentages are only about one-quarter to one-fifth of those at Levels 1-2. This gap is consistent across all exercise types, demonstrating that long-term commitment to exercise significantly reduces body fat.",
+          "The differences between exercise types are relatively minor. Although Strength performed best at Level 2, overall, the differences between the four exercise types are far less significant than those resulting from experience level.",
+          "One point to note: The Y-axis here represents the “Sum of Fat_Percentage,” which is a total rather than an average. If the number of people in each group differs, this may affect interpretation. For example, Level 3 may inherently have fewer people, resulting in a lower total."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "To more clearly visualize the fat percentage of individuals across the three experience categories within the four exercise types, use the toggle stack mode tool to switch the bar chart layout to stacked format. This allows for a more intuitive comparison of the combined fat percentage across the three exercise experience groups within the four exercise types."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          }
+        }
+      }
+    }
+  ]
+}

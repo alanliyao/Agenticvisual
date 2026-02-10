@@ -1,0 +1,81 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "105_line_vm_03",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/105_gini_filter_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What are the different trends from 1950 to 1970?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "China had an increasing and an decreasing between 1958 and 1962."
+        },
+        "key_insights": [
+          "There is a country with a different trend.",
+          "Presented  as a sharp corner",
+          "China had an increasing and an decreasing between 1958 and 1962."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "Zoomed to time range: 1950 to 1970."
+          },
+          {
+            "iteration": 2,
+            "tool": "focus_lines",
+            "reasoning": "Focused on line:China,since it was the only one whose trends were different from each other."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "1950",
+                  "end": "1970"
+                }
+              }
+            },
+            {
+              "tool": "focus_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "dim",
+                  "lines": [
+                    "China"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "1950",
+              "1970"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Gini coefficient of lifespan inequality - Sex: female",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

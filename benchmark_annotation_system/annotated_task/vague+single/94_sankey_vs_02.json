@@ -1,0 +1,60 @@
+{
+  "task_type": "vague_single",
+  "task_id": "94_sankey_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/94_samkey_retail.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "what the characteristics of the traffic flowing to fresh food？",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "There are four sources, each accounting for 52%,32%,13%,3%."
+        },
+        "key_insights": [
+          "there are four sources",
+          "the flow from Live Streaming (Douyin/Xiaohongshu) takes 13%.",
+          "the flthe flow from Fresh Supermarket (Offline Scan/Delivery) takes 52%.",
+          "the flow from Community Group (WeChat/Community) takes 32%.",
+          "the flow from Brand Ads (Elevator/Official) takes 3%."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "color_flows",
+            "reasoning": "color the flows of fresh food,and there are four sources"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "color": "#e74c3c",
+                  "nodes": [
+                    "Fresh Food"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

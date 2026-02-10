@@ -1,0 +1,956 @@
+{
+  "filename": "75_Refined_Employment_Telecom_Services_2024_bar.json",
+  "spec_index": 73,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Bar Chart: Employment_Thousands by Country",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "Country": "Argentina",
+          "Country_Code": "ARG",
+          "Year": 2024,
+          "Employment_Thousands": 107.306,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Australia",
+          "Country_Code": "AUS",
+          "Year": 2024,
+          "Employment_Thousands": 81.609,
+          "Continent": "Oceania"
+        },
+        {
+          "Country": "Austria",
+          "Country_Code": "AUT",
+          "Year": 2024,
+          "Employment_Thousands": 14.03,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Bangladesh",
+          "Country_Code": "BGD",
+          "Year": 2024,
+          "Employment_Thousands": 132.684,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Belarus",
+          "Country_Code": "BLR",
+          "Year": 2024,
+          "Employment_Thousands": 23.368,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Belgium",
+          "Country_Code": "BEL",
+          "Year": 2024,
+          "Employment_Thousands": 22.283,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Bhutan",
+          "Country_Code": "BTN",
+          "Year": 2024,
+          "Employment_Thousands": 1.291,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Bolivia",
+          "Country_Code": "BOL",
+          "Year": 2024,
+          "Employment_Thousands": 11.191,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Botswana",
+          "Country_Code": "BWA",
+          "Year": 2024,
+          "Employment_Thousands": 3.018,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Brazil",
+          "Country_Code": "BRA",
+          "Year": 2024,
+          "Employment_Thousands": 486.978,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Bulgaria",
+          "Country_Code": "BGR",
+          "Year": 2024,
+          "Employment_Thousands": 16.259,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Colombia",
+          "Country_Code": "COL",
+          "Year": 2024,
+          "Employment_Thousands": 136.308,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Costa Rica",
+          "Country_Code": "CRI",
+          "Year": 2024,
+          "Employment_Thousands": 10.039,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Croatia",
+          "Country_Code": "HRV",
+          "Year": 2024,
+          "Employment_Thousands": 12.507,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Cyprus",
+          "Country_Code": "CYP",
+          "Year": 2024,
+          "Employment_Thousands": 4.33,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Czechia",
+          "Country_Code": "CZE",
+          "Year": 2024,
+          "Employment_Thousands": 20.385,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Denmark",
+          "Country_Code": "DNK",
+          "Year": 2024,
+          "Employment_Thousands": 13.297,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Dominican Republic",
+          "Country_Code": "DOM",
+          "Year": 2024,
+          "Employment_Thousands": 22.009,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Ecuador",
+          "Country_Code": "ECU",
+          "Year": 2024,
+          "Employment_Thousands": 39.978,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Estonia",
+          "Country_Code": "EST",
+          "Year": 2024,
+          "Employment_Thousands": 5.077,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Fiji",
+          "Country_Code": "FJI",
+          "Year": 2024,
+          "Employment_Thousands": 1.491,
+          "Continent": "Oceania"
+        },
+        {
+          "Country": "Finland",
+          "Country_Code": "FIN",
+          "Year": 2024,
+          "Employment_Thousands": 13.974,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "France",
+          "Country_Code": "FRA",
+          "Year": 2024,
+          "Employment_Thousands": 97.166,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Germany",
+          "Country_Code": "DEU",
+          "Year": 2024,
+          "Employment_Thousands": 215.865,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Greece",
+          "Country_Code": "GRC",
+          "Year": 2024,
+          "Employment_Thousands": 33.25,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Honduras",
+          "Country_Code": "HND",
+          "Year": 2024,
+          "Employment_Thousands": 7.048,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Hungary",
+          "Country_Code": "HUN",
+          "Year": 2024,
+          "Employment_Thousands": 22.809,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Iceland",
+          "Country_Code": "ISL",
+          "Year": 2024,
+          "Employment_Thousands": 0.958,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "India",
+          "Country_Code": "IND",
+          "Year": 2024,
+          "Employment_Thousands": 521.304,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Ireland",
+          "Country_Code": "IRL",
+          "Year": 2024,
+          "Employment_Thousands": 22.423,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Israel",
+          "Country_Code": "ISR",
+          "Year": 2024,
+          "Employment_Thousands": 21.944,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Italy",
+          "Country_Code": "ITA",
+          "Year": 2024,
+          "Employment_Thousands": 114.346,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Kosovo",
+          "Country_Code": "XKX",
+          "Year": 2024,
+          "Employment_Thousands": 4.591,
+          "Continent": "Unknown"
+        },
+        {
+          "Country": "Latvia",
+          "Country_Code": "LVA",
+          "Year": 2024,
+          "Employment_Thousands": 4.069,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Lesotho",
+          "Country_Code": "LSO",
+          "Year": 2024,
+          "Employment_Thousands": 1.363,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Lithuania",
+          "Country_Code": "LTU",
+          "Year": 2024,
+          "Employment_Thousands": 5.58,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Luxembourg",
+          "Country_Code": "LUX",
+          "Year": 2024,
+          "Employment_Thousands": 4.886,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Malta",
+          "Country_Code": "MLT",
+          "Year": 2024,
+          "Employment_Thousands": 2.458,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Mexico",
+          "Country_Code": "MEX",
+          "Year": 2024,
+          "Employment_Thousands": 274.807,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Netherlands",
+          "Country_Code": "NLD",
+          "Year": 2024,
+          "Employment_Thousands": 36.464,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Nigeria",
+          "Country_Code": "NGA",
+          "Year": 2024,
+          "Employment_Thousands": 62.195,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "North Macedonia",
+          "Country_Code": "MKD",
+          "Year": 2024,
+          "Employment_Thousands": 5.029,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Norway",
+          "Country_Code": "NOR",
+          "Year": 2024,
+          "Employment_Thousands": 14.467,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Panama",
+          "Country_Code": "PAN",
+          "Year": 2024,
+          "Employment_Thousands": 6.568,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Peru",
+          "Country_Code": "PER",
+          "Year": 2024,
+          "Employment_Thousands": 40.879,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Poland",
+          "Country_Code": "POL",
+          "Year": 2024,
+          "Employment_Thousands": 75.675,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Portugal",
+          "Country_Code": "PRT",
+          "Year": 2024,
+          "Employment_Thousands": 32.072,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Romania",
+          "Country_Code": "ROU",
+          "Year": 2024,
+          "Employment_Thousands": 55.426,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Rwanda",
+          "Country_Code": "RWA",
+          "Year": 2024,
+          "Employment_Thousands": 2.102,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Senegal",
+          "Country_Code": "SEN",
+          "Year": 2024,
+          "Employment_Thousands": 7.96,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Seychelles",
+          "Country_Code": "SYC",
+          "Year": 2024,
+          "Employment_Thousands": 0.12,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Singapore",
+          "Country_Code": "SGP",
+          "Year": 2024,
+          "Employment_Thousands": 12.131,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Slovak Republic",
+          "Country_Code": "SVK",
+          "Year": 2024,
+          "Employment_Thousands": 18.595,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Slovenia",
+          "Country_Code": "SVN",
+          "Year": 2024,
+          "Employment_Thousands": 5.025,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Spain",
+          "Country_Code": "ESP",
+          "Year": 2024,
+          "Employment_Thousands": 130.063,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Sweden",
+          "Country_Code": "SWE",
+          "Year": 2024,
+          "Employment_Thousands": 24.125,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Switzerland",
+          "Country_Code": "CHE",
+          "Year": 2024,
+          "Employment_Thousands": 19.306,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Thailand",
+          "Country_Code": "THA",
+          "Year": 2024,
+          "Employment_Thousands": 49.858,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Turkiye",
+          "Country_Code": "TUR",
+          "Year": 2024,
+          "Employment_Thousands": 60.507,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "United Kingdom",
+          "Country_Code": "GBR",
+          "Year": 2024,
+          "Employment_Thousands": 161.116,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "United States",
+          "Country_Code": "USA",
+          "Year": 2024,
+          "Employment_Thousands": 1044.651,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Uruguay",
+          "Country_Code": "URY",
+          "Year": 2024,
+          "Employment_Thousands": 10.644,
+          "Continent": "South America"
+        },
+        {
+          "Country": "West Bank and Gaza",
+          "Country_Code": "PSE",
+          "Year": 2024,
+          "Employment_Thousands": 3.363,
+          "Continent": "Asia"
+        }
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "Employment_Thousands",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      "color": {
+        "field": "Continent",
+        "type": "nominal"
+      }
+    }
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Bar Chart: Employment_Thousands by Country",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "Country": "Argentina",
+          "Country_Code": "ARG",
+          "Year": 2024,
+          "Employment_Thousands": 107.306,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Australia",
+          "Country_Code": "AUS",
+          "Year": 2024,
+          "Employment_Thousands": 81.609,
+          "Continent": "Oceania"
+        },
+        {
+          "Country": "Austria",
+          "Country_Code": "AUT",
+          "Year": 2024,
+          "Employment_Thousands": 14.03,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Bangladesh",
+          "Country_Code": "BGD",
+          "Year": 2024,
+          "Employment_Thousands": 132.684,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Belarus",
+          "Country_Code": "BLR",
+          "Year": 2024,
+          "Employment_Thousands": 23.368,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Belgium",
+          "Country_Code": "BEL",
+          "Year": 2024,
+          "Employment_Thousands": 22.283,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Bhutan",
+          "Country_Code": "BTN",
+          "Year": 2024,
+          "Employment_Thousands": 1.291,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Bolivia",
+          "Country_Code": "BOL",
+          "Year": 2024,
+          "Employment_Thousands": 11.191,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Botswana",
+          "Country_Code": "BWA",
+          "Year": 2024,
+          "Employment_Thousands": 3.018,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Brazil",
+          "Country_Code": "BRA",
+          "Year": 2024,
+          "Employment_Thousands": 486.978,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Bulgaria",
+          "Country_Code": "BGR",
+          "Year": 2024,
+          "Employment_Thousands": 16.259,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Colombia",
+          "Country_Code": "COL",
+          "Year": 2024,
+          "Employment_Thousands": 136.308,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Costa Rica",
+          "Country_Code": "CRI",
+          "Year": 2024,
+          "Employment_Thousands": 10.039,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Croatia",
+          "Country_Code": "HRV",
+          "Year": 2024,
+          "Employment_Thousands": 12.507,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Cyprus",
+          "Country_Code": "CYP",
+          "Year": 2024,
+          "Employment_Thousands": 4.33,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Czechia",
+          "Country_Code": "CZE",
+          "Year": 2024,
+          "Employment_Thousands": 20.385,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Denmark",
+          "Country_Code": "DNK",
+          "Year": 2024,
+          "Employment_Thousands": 13.297,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Dominican Republic",
+          "Country_Code": "DOM",
+          "Year": 2024,
+          "Employment_Thousands": 22.009,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Ecuador",
+          "Country_Code": "ECU",
+          "Year": 2024,
+          "Employment_Thousands": 39.978,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Estonia",
+          "Country_Code": "EST",
+          "Year": 2024,
+          "Employment_Thousands": 5.077,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Fiji",
+          "Country_Code": "FJI",
+          "Year": 2024,
+          "Employment_Thousands": 1.491,
+          "Continent": "Oceania"
+        },
+        {
+          "Country": "Finland",
+          "Country_Code": "FIN",
+          "Year": 2024,
+          "Employment_Thousands": 13.974,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "France",
+          "Country_Code": "FRA",
+          "Year": 2024,
+          "Employment_Thousands": 97.166,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Germany",
+          "Country_Code": "DEU",
+          "Year": 2024,
+          "Employment_Thousands": 215.865,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Greece",
+          "Country_Code": "GRC",
+          "Year": 2024,
+          "Employment_Thousands": 33.25,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Honduras",
+          "Country_Code": "HND",
+          "Year": 2024,
+          "Employment_Thousands": 7.048,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Hungary",
+          "Country_Code": "HUN",
+          "Year": 2024,
+          "Employment_Thousands": 22.809,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Iceland",
+          "Country_Code": "ISL",
+          "Year": 2024,
+          "Employment_Thousands": 0.958,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "India",
+          "Country_Code": "IND",
+          "Year": 2024,
+          "Employment_Thousands": 521.304,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Ireland",
+          "Country_Code": "IRL",
+          "Year": 2024,
+          "Employment_Thousands": 22.423,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Israel",
+          "Country_Code": "ISR",
+          "Year": 2024,
+          "Employment_Thousands": 21.944,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Italy",
+          "Country_Code": "ITA",
+          "Year": 2024,
+          "Employment_Thousands": 114.346,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Kosovo",
+          "Country_Code": "XKX",
+          "Year": 2024,
+          "Employment_Thousands": 4.591,
+          "Continent": "Unknown"
+        },
+        {
+          "Country": "Latvia",
+          "Country_Code": "LVA",
+          "Year": 2024,
+          "Employment_Thousands": 4.069,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Lesotho",
+          "Country_Code": "LSO",
+          "Year": 2024,
+          "Employment_Thousands": 1.363,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Lithuania",
+          "Country_Code": "LTU",
+          "Year": 2024,
+          "Employment_Thousands": 5.58,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Luxembourg",
+          "Country_Code": "LUX",
+          "Year": 2024,
+          "Employment_Thousands": 4.886,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Malta",
+          "Country_Code": "MLT",
+          "Year": 2024,
+          "Employment_Thousands": 2.458,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Mexico",
+          "Country_Code": "MEX",
+          "Year": 2024,
+          "Employment_Thousands": 274.807,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Netherlands",
+          "Country_Code": "NLD",
+          "Year": 2024,
+          "Employment_Thousands": 36.464,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Nigeria",
+          "Country_Code": "NGA",
+          "Year": 2024,
+          "Employment_Thousands": 62.195,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "North Macedonia",
+          "Country_Code": "MKD",
+          "Year": 2024,
+          "Employment_Thousands": 5.029,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Norway",
+          "Country_Code": "NOR",
+          "Year": 2024,
+          "Employment_Thousands": 14.467,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Panama",
+          "Country_Code": "PAN",
+          "Year": 2024,
+          "Employment_Thousands": 6.568,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Peru",
+          "Country_Code": "PER",
+          "Year": 2024,
+          "Employment_Thousands": 40.879,
+          "Continent": "South America"
+        },
+        {
+          "Country": "Poland",
+          "Country_Code": "POL",
+          "Year": 2024,
+          "Employment_Thousands": 75.675,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Portugal",
+          "Country_Code": "PRT",
+          "Year": 2024,
+          "Employment_Thousands": 32.072,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Romania",
+          "Country_Code": "ROU",
+          "Year": 2024,
+          "Employment_Thousands": 55.426,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Rwanda",
+          "Country_Code": "RWA",
+          "Year": 2024,
+          "Employment_Thousands": 2.102,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Senegal",
+          "Country_Code": "SEN",
+          "Year": 2024,
+          "Employment_Thousands": 7.96,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Seychelles",
+          "Country_Code": "SYC",
+          "Year": 2024,
+          "Employment_Thousands": 0.12,
+          "Continent": "Africa"
+        },
+        {
+          "Country": "Singapore",
+          "Country_Code": "SGP",
+          "Year": 2024,
+          "Employment_Thousands": 12.131,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Slovak Republic",
+          "Country_Code": "SVK",
+          "Year": 2024,
+          "Employment_Thousands": 18.595,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Slovenia",
+          "Country_Code": "SVN",
+          "Year": 2024,
+          "Employment_Thousands": 5.025,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Spain",
+          "Country_Code": "ESP",
+          "Year": 2024,
+          "Employment_Thousands": 130.063,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Sweden",
+          "Country_Code": "SWE",
+          "Year": 2024,
+          "Employment_Thousands": 24.125,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Switzerland",
+          "Country_Code": "CHE",
+          "Year": 2024,
+          "Employment_Thousands": 19.306,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "Thailand",
+          "Country_Code": "THA",
+          "Year": 2024,
+          "Employment_Thousands": 49.858,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "Turkiye",
+          "Country_Code": "TUR",
+          "Year": 2024,
+          "Employment_Thousands": 60.507,
+          "Continent": "Asia"
+        },
+        {
+          "Country": "United Kingdom",
+          "Country_Code": "GBR",
+          "Year": 2024,
+          "Employment_Thousands": 161.116,
+          "Continent": "Europe"
+        },
+        {
+          "Country": "United States",
+          "Country_Code": "USA",
+          "Year": 2024,
+          "Employment_Thousands": 1044.651,
+          "Continent": "North America"
+        },
+        {
+          "Country": "Uruguay",
+          "Country_Code": "URY",
+          "Year": 2024,
+          "Employment_Thousands": 10.644,
+          "Continent": "South America"
+        },
+        {
+          "Country": "West Bank and Gaza",
+          "Country_Code": "PSE",
+          "Year": 2024,
+          "Employment_Thousands": 3.363,
+          "Continent": "Asia"
+        }
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "Employment_Thousands",
+        "type": "quantitative",
+        "aggregate": "mean"
+      },
+      "color": {
+        "field": "Continent",
+        "type": "nominal"
+      }
+    }
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "bar",
+  "chart_meta": {
+    "chart_type": "bar",
+    "title": "Bar Chart: Employment_Thousands by Country",
+    "filename": "75_Refined_Employment_Telecom_Services_2024_bar.json",
+    "data_points": 63,
+    "total_points": 63,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:50:32.666673Z"
+}

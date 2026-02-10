@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "07_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/07_bar_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Under the three different levels of diet quality, which types of weather lead to the longest mean of sleep hours?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "It's rainy under average diet quality and cloudy under good diet quality, while it's a sunny day under poor diet quality.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "By changing the view to grouped, you can see that it's rainy under average diet quality and cloudy under good diet quality, while it's a sunny day under poor diet quality.",
+          "The average sleep duration under poor diet quality and cloudy weather is the shortest."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Use toggle stack mode to switch the view to grouped in order to see the comparison of sleep hours."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "sleep_hours",
+            "color": "weather"
+          }
+        }
+      }
+    }
+  ]
+}

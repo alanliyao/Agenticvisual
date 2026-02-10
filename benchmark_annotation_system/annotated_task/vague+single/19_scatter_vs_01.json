@@ -1,0 +1,61 @@
+{
+  "task_type": "vague_single",
+  "task_id": "19_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/19_Heart_Disease_Prediction_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "As one ages, does cholesterol tend to increase or decrease?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The older one gets, the higher the cholesterol level is usually.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The older one gets, the higher the cholesterol level is usually."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_regression",
+            "reasoning": "The regression line between age and cholesterol shows an upward trend."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "log"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "point",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

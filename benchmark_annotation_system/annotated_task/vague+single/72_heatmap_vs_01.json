@@ -1,0 +1,56 @@
+{
+  "task_type": "vague_single",
+  "task_id": "72_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/72_StudentsPerformance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Identify any unexpected patterns in the relationship between parental education and writing scores across different racial/ethnic groups.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Using the “highlight region by value” tool to focus on scores above 80 reveals that group C consistently achieves high scores across all parental education levels, which is unexpected given the general trend of higher education correlating with higher scores."
+        },
+        "key_insights": [
+          "Group B shows a surprising dip in scores at the high school parental education level, which is significantly lower than its performance at other education levels.",
+          "The master’s degree level shows a strong, consistent performance across most groups, but group D’s performance at this level is notably higher than its performance at other levels, creating a distinct peak."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region_by_value",
+            "reasoning": "This action transforms the dense heatmap into a clearer set of high-value data points, making it easier to spot non-intuitive trends. The gap between the original and highlighted view is the reduction of noise, which allows us to focus on anomalies."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region_by_value",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 80,
+                  "max_value": 100,
+                  "outside_opacity": 0.12
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "parental level of education",
+            "color": "writing score"
+          }
+        }
+      }
+    }
+  ]
+}

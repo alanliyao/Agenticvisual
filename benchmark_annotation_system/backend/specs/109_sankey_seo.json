@@ -1,0 +1,1295 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "Website SEO & Internal Link Flow Sankey — Traffic to Conversion (Data-Driven Architecture)",
+    "width": 1150,
+    "height": 560,
+    "padding": {
+      "left": 120,
+      "right": 140,
+      "top": 55,
+      "bottom": 50
+    },
+    "background": "white",
+    "_metadata": {
+      "chart_type": "sankey_multi_stage",
+      "title": "Sankey Website SEO Traffic & Conversion Funnel",
+      "topic": "seo_traffic_conversion",
+      "architecture": "data-driven layout via Vega transform pipeline",
+      "value_unit": "Session count",
+      "notes": "100K sessions — Google Organic 50%; Blog content retains 92%; 7% payment conversion; 23.5% overall conversion"
+    },
+    "signals": [
+      {
+        "name": "nodeWidth",
+        "value": 15
+      },
+      {
+        "name": "nodeGap",
+        "value": 100
+      },
+      {
+        "name": "threshold",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 5000,
+          "step": 500,
+          "name": "Min Flow (sessions): "
+        }
+      },
+      {
+        "name": "nodeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:mouseover",
+            "update": "datum.name"
+          },
+          {
+            "events": "@nodeRect:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "edgeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@edgeMark:mouseover",
+            "update": "datum.linkId"
+          },
+          {
+            "events": "@edgeMark:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "selectedNode",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:click!",
+            "update": "selectedNode === datum.name ? null : datum.name"
+          },
+          {
+            "events": [
+              {
+                "type": "click",
+                "markname": "resetBtn"
+              },
+              {
+                "type": "dblclick"
+              }
+            ],
+            "update": "null"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "name": "rawLinks",
+        "values": [
+          {
+            "source": "Google Organic",
+            "target": "Blog Post A",
+            "value": 22000
+          },
+          {
+            "source": "Google Organic",
+            "target": "Blog Post B",
+            "value": 14000
+          },
+          {
+            "source": "Google Organic",
+            "target": "Homepage",
+            "value": 8000
+          },
+          {
+            "source": "Google Organic",
+            "target": "Product Landing",
+            "value": 6000
+          },
+          {
+            "source": "Direct",
+            "target": "Homepage",
+            "value": 12000
+          },
+          {
+            "source": "Direct",
+            "target": "Product Landing",
+            "value": 5000
+          },
+          {
+            "source": "Direct",
+            "target": "Pricing Page",
+            "value": 3000
+          },
+          {
+            "source": "Newsletter",
+            "target": "Blog Post A",
+            "value": 4000
+          },
+          {
+            "source": "Newsletter",
+            "target": "Blog Post B",
+            "value": 3000
+          },
+          {
+            "source": "Newsletter",
+            "target": "Feature Page",
+            "value": 3000
+          },
+          {
+            "source": "Social Media",
+            "target": "Blog Post A",
+            "value": 5000
+          },
+          {
+            "source": "Social Media",
+            "target": "Blog Post B",
+            "value": 4000
+          },
+          {
+            "source": "Social Media",
+            "target": "Homepage",
+            "value": 2000
+          },
+          {
+            "source": "Social Media",
+            "target": "Product Landing",
+            "value": 1000
+          },
+          {
+            "source": "Paid Ads",
+            "target": "Product Landing",
+            "value": 4000
+          },
+          {
+            "source": "Paid Ads",
+            "target": "Pricing Page",
+            "value": 2500
+          },
+          {
+            "source": "Paid Ads",
+            "target": "Demo Page",
+            "value": 1500
+          },
+          {
+            "source": "Blog Post A",
+            "target": "Related Article",
+            "value": 14000
+          },
+          {
+            "source": "Blog Post A",
+            "target": "Sidebar CTA",
+            "value": 10000
+          },
+          {
+            "source": "Blog Post A",
+            "target": "Nav Links",
+            "value": 4500
+          },
+          {
+            "source": "Blog Post A",
+            "target": "Exit (Bounce)",
+            "value": 2500
+          },
+          {
+            "source": "Blog Post B",
+            "target": "Related Article",
+            "value": 9000
+          },
+          {
+            "source": "Blog Post B",
+            "target": "Sidebar CTA",
+            "value": 7000
+          },
+          {
+            "source": "Blog Post B",
+            "target": "Nav Links",
+            "value": 3000
+          },
+          {
+            "source": "Blog Post B",
+            "target": "Exit (Bounce)",
+            "value": 2000
+          },
+          {
+            "source": "Homepage",
+            "target": "Nav Links",
+            "value": 12000
+          },
+          {
+            "source": "Homepage",
+            "target": "Sidebar CTA",
+            "value": 6000
+          },
+          {
+            "source": "Homepage",
+            "target": "Exit (Bounce)",
+            "value": 4000
+          },
+          {
+            "source": "Product Landing",
+            "target": "Nav Links",
+            "value": 8000
+          },
+          {
+            "source": "Product Landing",
+            "target": "Sidebar CTA",
+            "value": 5000
+          },
+          {
+            "source": "Product Landing",
+            "target": "Exit (Bounce)",
+            "value": 3000
+          },
+          {
+            "source": "Feature Page",
+            "target": "Sidebar CTA",
+            "value": 1500
+          },
+          {
+            "source": "Feature Page",
+            "target": "Nav Links",
+            "value": 1000
+          },
+          {
+            "source": "Feature Page",
+            "target": "Exit (Bounce)",
+            "value": 500
+          },
+          {
+            "source": "Pricing Page",
+            "target": "Sidebar CTA",
+            "value": 3000
+          },
+          {
+            "source": "Pricing Page",
+            "target": "Nav Links",
+            "value": 1500
+          },
+          {
+            "source": "Pricing Page",
+            "target": "Exit (Bounce)",
+            "value": 1000
+          },
+          {
+            "source": "Demo Page",
+            "target": "Sidebar CTA",
+            "value": 1000
+          },
+          {
+            "source": "Demo Page",
+            "target": "Exit (Bounce)",
+            "value": 500
+          },
+          {
+            "source": "Related Article",
+            "target": "Ultimate Guide",
+            "value": 13000
+          },
+          {
+            "source": "Related Article",
+            "target": "Solutions Hub",
+            "value": 7500
+          },
+          {
+            "source": "Related Article",
+            "target": "Exit (Mid)",
+            "value": 2500
+          },
+          {
+            "source": "Sidebar CTA",
+            "target": "Ultimate Guide",
+            "value": 14000
+          },
+          {
+            "source": "Sidebar CTA",
+            "target": "Solutions Hub",
+            "value": 13000
+          },
+          {
+            "source": "Sidebar CTA",
+            "target": "Exit (Mid)",
+            "value": 6500
+          },
+          {
+            "source": "Nav Links",
+            "target": "Ultimate Guide",
+            "value": 10000
+          },
+          {
+            "source": "Nav Links",
+            "target": "Solutions Hub",
+            "value": 14000
+          },
+          {
+            "source": "Nav Links",
+            "target": "Exit (Mid)",
+            "value": 6000
+          },
+          {
+            "source": "Ultimate Guide",
+            "target": "Pricing",
+            "value": 18000
+          },
+          {
+            "source": "Ultimate Guide",
+            "target": "Demo Request",
+            "value": 12000
+          },
+          {
+            "source": "Ultimate Guide",
+            "target": "Exit (Late)",
+            "value": 7000
+          },
+          {
+            "source": "Solutions Hub",
+            "target": "Pricing",
+            "value": 17000
+          },
+          {
+            "source": "Solutions Hub",
+            "target": "Demo Request",
+            "value": 11500
+          },
+          {
+            "source": "Solutions Hub",
+            "target": "Exit (Late)",
+            "value": 6000
+          },
+          {
+            "source": "Pricing",
+            "target": "Signup Success",
+            "value": 7000
+          },
+          {
+            "source": "Pricing",
+            "target": "Payment Success",
+            "value": 4500
+          },
+          {
+            "source": "Pricing",
+            "target": "Exit (Final)",
+            "value": 23500
+          },
+          {
+            "source": "Demo Request",
+            "target": "Signup Success",
+            "value": 9500
+          },
+          {
+            "source": "Demo Request",
+            "target": "Payment Success",
+            "value": 2500
+          },
+          {
+            "source": "Demo Request",
+            "target": "Exit (Final)",
+            "value": 11500
+          }
+        ]
+      },
+      {
+        "name": "nodeConfig",
+        "values": [
+          {
+            "name": "Google Organic",
+            "depth": 0,
+            "order": 0
+          },
+          {
+            "name": "Direct",
+            "depth": 0,
+            "order": 1
+          },
+          {
+            "name": "Newsletter",
+            "depth": 0,
+            "order": 2
+          },
+          {
+            "name": "Social Media",
+            "depth": 0,
+            "order": 3
+          },
+          {
+            "name": "Paid Ads",
+            "depth": 0,
+            "order": 4
+          },
+          {
+            "name": "Blog Post A",
+            "depth": 1,
+            "order": 0
+          },
+          {
+            "name": "Blog Post B",
+            "depth": 1,
+            "order": 1
+          },
+          {
+            "name": "Homepage",
+            "depth": 1,
+            "order": 2
+          },
+          {
+            "name": "Product Landing",
+            "depth": 1,
+            "order": 3
+          },
+          {
+            "name": "Feature Page",
+            "depth": 1,
+            "order": 4
+          },
+          {
+            "name": "Pricing Page",
+            "depth": 1,
+            "order": 5
+          },
+          {
+            "name": "Demo Page",
+            "depth": 1,
+            "order": 6
+          },
+          {
+            "name": "Related Article",
+            "depth": 2,
+            "order": 0
+          },
+          {
+            "name": "Sidebar CTA",
+            "depth": 2,
+            "order": 1
+          },
+          {
+            "name": "Nav Links",
+            "depth": 2,
+            "order": 2
+          },
+          {
+            "name": "Exit (Bounce)",
+            "depth": 2,
+            "order": 3
+          },
+          {
+            "name": "Ultimate Guide",
+            "depth": 3,
+            "order": 0
+          },
+          {
+            "name": "Solutions Hub",
+            "depth": 3,
+            "order": 1
+          },
+          {
+            "name": "Exit (Mid)",
+            "depth": 3,
+            "order": 2
+          },
+          {
+            "name": "Pricing",
+            "depth": 4,
+            "order": 0
+          },
+          {
+            "name": "Demo Request",
+            "depth": 4,
+            "order": 1
+          },
+          {
+            "name": "Exit (Late)",
+            "depth": 4,
+            "order": 2
+          },
+          {
+            "name": "Signup Success",
+            "depth": 5,
+            "order": 0
+          },
+          {
+            "name": "Payment Success",
+            "depth": 5,
+            "order": 1
+          },
+          {
+            "name": "Exit (Final)",
+            "depth": 5,
+            "order": 2
+          }
+        ]
+      },
+      {
+        "name": "depthLabelsData",
+        "values": [
+          {
+            "depth": 0,
+            "label": "Traffic Source"
+          },
+          {
+            "depth": 1,
+            "label": "Landing Page"
+          },
+          {
+            "depth": 2,
+            "label": "First Click"
+          },
+          {
+            "depth": 3,
+            "label": "Pillar Content"
+          },
+          {
+            "depth": 4,
+            "label": "Money Page"
+          },
+          {
+            "depth": 5,
+            "label": "Conversion"
+          }
+        ]
+      },
+      {
+        "name": "filteredLinks",
+        "source": "rawLinks",
+        "transform": [
+          {
+            "type": "filter",
+            "expr": "datum.value >= threshold"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.source + ' → ' + datum.target",
+            "as": "linkId"
+          }
+        ]
+      },
+      {
+        "name": "linksWithOrder",
+        "source": "filteredLinks",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcConfig"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtConfig"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.order",
+            "as": "srcOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.order",
+            "as": "tgtOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.depth",
+            "as": "srcDepth"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.depth",
+            "as": "tgtDepth"
+          }
+        ]
+      },
+      {
+        "name": "outTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "source"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalOut"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "inTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "target"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalIn"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nodePositions",
+        "source": "nodeConfig",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "outTotals",
+            "key": "source",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "outInfo"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "inTotals",
+            "key": "target",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "inInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+            "as": "totalOut"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+            "as": "totalIn"
+          },
+          {
+            "type": "formula",
+            "expr": "max(datum.totalOut, datum.totalIn)",
+            "as": "total"
+          },
+          {
+            "type": "filter",
+            "expr": "datum.total > 0"
+          },
+          {
+            "type": "stack",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "field": "total"
+          },
+          {
+            "type": "window",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "ops": [
+              "row_number"
+            ],
+            "as": [
+              "rankInDepth"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y0g"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y1g"
+          }
+        ]
+      },
+      {
+        "name": "sourceStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "source"
+            ],
+            "sort": {
+              "field": "tgtOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "srcCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcCumEnd - datum.value",
+            "as": "srcCumStart"
+          }
+        ]
+      },
+      {
+        "name": "targetStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "target"
+            ],
+            "sort": {
+              "field": "srcOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "tgtCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtCumEnd - datum.value",
+            "as": "tgtCumStart"
+          }
+        ]
+      },
+      {
+        "name": "edges",
+        "source": "sourceStacked",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "targetStacked",
+            "key": "linkId",
+            "fields": [
+              "linkId"
+            ],
+            "as": [
+              "tgtInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+            "as": "tgtCumStart"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+            "as": "tgtCumEnd"
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcNode"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtNode"
+            ]
+          },
+          {
+            "type": "filter",
+            "expr": "datum.srcNode && datum.tgtNode"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumStart",
+            "as": "absSy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+            "as": "absSy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+            "as": "absTy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+            "as": "absTy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+            "as": "srcPct"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+            "as": "tgtPct"
+          }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "x",
+        "type": "point",
+        "range": "width",
+        "domain": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "padding": 0.5
+      },
+      {
+        "name": "y",
+        "type": "linear",
+        "range": [
+          0,
+          {
+            "signal": "height"
+          }
+        ],
+        "domain": {
+          "data": "nodePositions",
+          "field": "y1g"
+        }
+      },
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {
+          "data": "nodeConfig",
+          "field": "name"
+        },
+        "range": [
+          "#FF6B35",
+          "#F7C59F",
+          "#2EC4B6",
+          "#5C5CFF",
+          "#9B5DE5",
+          "#0496FF",
+          "#00C49A",
+          "#FFCA3A",
+          "#8338EC",
+          "#FF006E",
+          "#3A86FF",
+          "#FB5607",
+          "#06D6A0",
+          "#118AB2",
+          "#073B4C",
+          "#EF476F",
+          "#7209B7",
+          "#3A0CA3",
+          "#F72585",
+          "#4361EE",
+          "#4CC9F0",
+          "#E63946",
+          "#2ECC71",
+          "#27AE60",
+          "#C0392B"
+        ]
+      }
+    ],
+    "marks": [
+      {
+        "type": "path",
+        "name": "edgeMark",
+        "from": {
+          "data": "edges"
+        },
+        "encode": {
+          "update": {
+            "path": {
+              "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "source"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.35"
+            },
+            "stroke": {
+              "scale": "color",
+              "field": "source"
+            },
+            "strokeWidth": {
+              "value": 0.5
+            },
+            "strokeOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',d') + ' sessions (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ')'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          },
+          "hover": {
+            "fillOpacity": {
+              "value": 0.8
+            }
+          }
+        }
+      },
+      {
+        "type": "rect",
+        "name": "nodeRect",
+        "from": {
+          "data": "nodePositions"
+        },
+        "encode": {
+          "enter": {
+            "width": {
+              "signal": "nodeWidth"
+            },
+            "cornerRadius": {
+              "value": 2
+            }
+          },
+          "update": {
+            "x": {
+              "scale": "x",
+              "field": "depth"
+            },
+            "y": {
+              "scale": "y",
+              "field": "y0g"
+            },
+            "y2": {
+              "scale": "y",
+              "field": "y1g"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "name"
+            },
+            "stroke": {
+              "value": "#333"
+            },
+            "strokeWidth": {
+              "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 0.5"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+            },
+            "tooltip": {
+              "signal": "datum.name + ': ' + format(datum.total, ',d') + ' sessions'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "field": "name"
+            },
+            "fontSize": {
+              "value": 10
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#333"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 12"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 18 ? '' + format(datum.total, ',d') + ' sessions' : ''"
+            },
+            "fontSize": {
+              "value": 9
+            },
+            "fill": {
+              "value": "#888"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "depthLabelsData"
+        },
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "x": {
+              "signal": "scale('x', datum.depth) + nodeWidth / 2"
+            },
+            "y": {
+              "signal": "height + 25"
+            },
+            "text": {
+              "field": "label"
+            },
+            "fontSize": {
+              "value": 11
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#555"
+            },
+            "baseline": {
+              "value": "top"
+            },
+            "align": {
+              "value": "center"
+            }
+          }
+        }
+      },
+      {
+        "type": "group",
+        "data": [
+          {
+            "name": "showResetData",
+            "values": [
+              {}
+            ],
+            "transform": [
+              {
+                "type": "filter",
+                "expr": "selectedNode"
+              }
+            ]
+          }
+        ],
+        "encode": {
+          "enter": {
+            "xc": {
+              "signal": "width / 2"
+            },
+            "y": {
+              "value": -35
+            },
+            "width": {
+              "value": 100
+            },
+            "height": {
+              "value": 26
+            }
+          }
+        },
+        "marks": [
+          {
+            "type": "group",
+            "name": "resetBtn",
+            "from": {
+              "data": "showResetData"
+            },
+            "encode": {
+              "enter": {
+                "cornerRadius": {
+                  "value": 5
+                },
+                "fill": {
+                  "value": "#f5f5f5"
+                },
+                "stroke": {
+                  "value": "#bbb"
+                },
+                "strokeWidth": {
+                  "value": 1.5
+                },
+                "height": {
+                  "field": {
+                    "group": "height"
+                  }
+                },
+                "width": {
+                  "field": {
+                    "group": "width"
+                  }
+                },
+                "cursor": {
+                  "value": "pointer"
+                }
+              },
+              "update": {
+                "opacity": {
+                  "value": 1
+                }
+              },
+              "hover": {
+                "opacity": {
+                  "value": 0.7
+                }
+              }
+            },
+            "marks": [
+              {
+                "type": "text",
+                "interactive": false,
+                "encode": {
+                  "enter": {
+                    "xc": {
+                      "field": {
+                        "group": "width"
+                      },
+                      "mult": 0.5
+                    },
+                    "yc": {
+                      "field": {
+                        "group": "height"
+                      },
+                      "mult": 0.5,
+                      "offset": 1
+                    },
+                    "align": {
+                      "value": "center"
+                    },
+                    "baseline": {
+                      "value": "middle"
+                    },
+                    "fontWeight": {
+                      "value": "bold"
+                    },
+                    "fontSize": {
+                      "value": 11
+                    },
+                    "text": {
+                      "value": "Show All"
+                    },
+                    "fill": {
+                      "value": "#555"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "title": {
+      "text": "Sankey SEO Traffic Flow: Source → Landing → Navigation → Pillar → Money Page → Conversion",
+      "subtitle": "Hover to trace flow  |  Click to isolate  |  100K sessions; Blog bounce rate 8%; 7% payment conversion",
+      "fontSize": 16,
+      "subtitleFontSize": 11,
+      "subtitleColor": "#999",
+      "anchor": "start"
+    }
+  }

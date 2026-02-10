@@ -1,0 +1,128 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "open_ended_multi",
+      "chart_type": "heatmap",
+      "meta": {
+        "chart_type": "heatmap",
+        "title": "Temperature Heatmap",
+        "topic": "Weather",
+        "data_points": 18,
+        "filename": "04_heatmap_temp.json",
+        "total_points": 18,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "op_02",
+          "question": "First, filter out the matrix cells with temperatures lower than 10℃, and then highlight the temperature sub-matrices of Miami and Seattle from the remaining area for April to June. What information can we obtain from the graph?",
+          "ground_truth": {
+            "answer": null,
+            "key_insights": [
+              "The original heat map contains a large number of cells with temperatures below 10℃ (such as Denver and Seattle in January and February). These data are irrelevant to the core objective of \"analyzing the temperature trends in Miami and Seattle from April to June\". ",
+              "The 6 cells corresponding to the rows of Miami (Apr, May, Jun) and Seattle (Apr, May, Jun) form a strong visual contrast with the other unhighlighted cells in the matrix.",
+              "The cells for all months in Denver, as well as those for the months other than April, May, and June (January, February, March) in Miami and Seattle are weakened and become the background."
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "filter_cells",
+                "reasoning": "After filtering, the visual noise can be removed, allowing attention to be focused on the effective temperature range of ≥10℃, avoiding irrelevant data from distracting the analytical efforts."
+              },
+              {
+                "iteration": 2,
+                "tool": "highlight_region",
+                "reasoning": "The highlighting operation can directly define the core analysis scope of \"Miami + Seattle + April-June\", avoiding the need to repeatedly filter the target data throughout the entire chart, allowing the analysts to quickly pinpoint the research subjects."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "filter_cells",
+                "highlight_region"
+              ],
+              "param_eval": [
+                {
+                  "tool": "filter_cells",
+                  "params": {
+                    "min_value": 10,
+                    "max_value": 30
+                  }
+                },
+                {
+                  "tool": "highlight_region",
+                  "params": {
+                    "x_values": [
+                      "Apr",
+                      "May",
+                      "Jun"
+                    ],
+                    "y_values": [
+                      "Seattle",
+                      "Miami"
+                    ]
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": "month",
+                "y": "city",
+                "color": "temp"
+              },
+              "data_filtered": [
+                {
+                  "filter": "datum.temp >= 10 && datum.temp <= 30"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "filter_cells",
+          "parameters": {
+            "min_value": 10,
+            "max_value": 30
+          },
+          "result": {
+            "operation": "filter_cells",
+            "message": "Filtered cells to [10, 30]"
+          },
+          "key_insights": [
+            "The original heat map contains a large number of cells with temperatures below 10℃ (such as Denver and Seattle in January and February). These data are irrelevant to the core objective of \"analyzing the temperature trends in Miami and Seattle from April to June\". "
+          ],
+          "reasoning": "After filtering, the visual noise can be removed, allowing attention to be focused on the effective temperature range of ≥10℃, avoiding irrelevant data from distracting the analytical efforts."
+        },
+        {
+          "tool_name": "highlight_region",
+          "parameters": {
+            "x_values": [
+              "Apr",
+              "May",
+              "Jun"
+            ],
+            "y_values": [
+              "Seattle",
+              "Miami"
+            ]
+          },
+          "result": {
+            "operation": "highlight_region",
+            "message": "Highlighted specified region"
+          },
+          "key_insights": [
+            "The 6 cells corresponding to the rows of Miami (Apr, May, Jun) and Seattle (Apr, May, Jun) form a strong visual contrast with the other unhighlighted cells in the matrix.",
+            "The cells for all months in Denver, as well as those for the months other than April, May, and June (January, February, March) in Miami and Seattle are weakened and become the background."
+          ],
+          "reasoning": "The highlighting operation can directly define the core analysis scope of \"Miami + Seattle + April-June\", avoiding the need to repeatedly filter the target data throughout the entire chart, allowing the analysts to quickly pinpoint the research subjects."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-23T08:22:11.254Z"
+}

@@ -1,0 +1,68 @@
+{
+  "task_type": "vague_single",
+  "task_id": "06_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/06_parallel_penguins.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Comparing the data between Adelie penguins and Chinstrap penguins, what are the significant differences in their characteristics?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Although the data for beak depth, body mass, and flipper length are relatively concentrated and uniform between Adelie and Chinstrap penguins, the beak length of Chinstrap is significantly longer than that of Adelie."
+        },
+        "key_insights": [
+          "Adelie and Chinstrap penguins exhibit similar data for beak depth, body mass, and flipper length.",
+          "They show significant differences in the beak length characteristic."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "By comparing the characteristic differences among penguin species, I noticed that the similarities and differences between Adelie and Chinstrap penguins are quite pronounced. I adopted the highlight_category tool and analyzed the new view."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Species",
+                  "values": [
+                    "Adelie",
+                    "Chinstrap"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

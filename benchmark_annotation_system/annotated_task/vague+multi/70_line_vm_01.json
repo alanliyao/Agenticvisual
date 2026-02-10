@@ -1,0 +1,77 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "70_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/70_one_person_ai_work_and_burnout_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore the relationship between AI tool usage and the number of bugs introduced, looking for patterns that link higher usage to more bugs.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The highest spikes in AI tool usage all coincide with the highest number of bugs introduced.The period from day 80 to 100 shows a direct, positive correlation: as AI tool usage increases from 10% to 47%, the number of bugs increases from 1 to 5."
+        },
+        "key_insights": [
+          "There are no instances of high bug counts occurring when AI tool usage is low, strengthening the correlation.",
+          "This detailed view reveals that the relationship is not just a general trend but holds true at the daily level during this high-volatility period."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "This multi-tool approach first uses anomaly detection to identify the most extreme cases."
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_time_range",
+            "reasoning": "It allows us to move from a general hypothesis to a concrete, data-supported observation of a positive correlation."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "threshold": 2
+                }
+              }
+            },
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "80",
+                  "end": "100"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "point"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

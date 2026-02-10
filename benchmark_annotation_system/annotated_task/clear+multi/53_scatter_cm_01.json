@@ -1,0 +1,71 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "53_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/53_Housing_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "What is the correlation between price and grade?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "0.67",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The data shows a positive relationship between price and grade.",
+          "The correlation is about 0.067"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "We want to take insight on grade and price, so we should change the encoding to show the data."
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_correlation",
+            "reasoning": "The question ask us to do the calculation of correlation."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "grade",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "grade",
+            "y": "price",
+            "color": "floors"
+          }
+        }
+      }
+    }
+  ]
+}

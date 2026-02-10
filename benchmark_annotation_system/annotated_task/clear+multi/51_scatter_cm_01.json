@@ -1,0 +1,100 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "51_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/51_Train_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What's the correlation between cost and weight in the road shipment mode?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "-0.12",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The correlation is about -0.12."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "We just cares about the data points of road shipment mode."
+          },
+          {
+            "iteration": 2,
+            "tool": "select_region",
+            "reasoning": "We select the current visible data poiints to prepare for following steps."
+          },
+          {
+            "iteration": 3,
+            "tool": "calculate_correlation",
+            "reasoning": "The question asks us to calculate the correlation."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Mode_of_Shipment",
+                  "categories_to_remove": [
+                    "Flight",
+                    "Ship"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    764.1666666666666,
+                    6840.166524251302
+                  ],
+                  "y_range": [
+                    70.875,
+                    318.67501068115234
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Weight_in_gms",
+            "y": "Cost_of_the_Product",
+            "color": "Mode_of_Shipment"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Flight\", \"Ship\"], datum['Mode_of_Shipment']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

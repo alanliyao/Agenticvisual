@@ -1,0 +1,77 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "91_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/91_supply_chain_data_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "when product type is cosmetics,is there any relationship between revenue and price?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "pearson correlation is 0.038,and revenue and price are weak positive"
+        },
+        "key_insights": [
+          "Most of the higher-priced spots are concentrated in high-income areas.",
+          "correlation_coefficient: 0.038424402958872866;p_value: 0.7042769951387069;strength: weak;direction: positive."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "Select this product type and roughly observe the distribution of data points about cosmetics."
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_correlation",
+            "reasoning": "calculate the pearson correlation and the p-value,and we can see the conclusion is weak positive."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "skincare",
+                    "haircare"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Price",
+            "y": "Revenue generated",
+            "color": "Product type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"skincare\", \"haircare\"], datum['Product type']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

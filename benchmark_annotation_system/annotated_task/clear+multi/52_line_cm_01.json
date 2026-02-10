@@ -1,0 +1,74 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "52_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/52_years of economic new_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Smooth the electricity access trend, and then see if growth is sustained despite short-term fluctuations.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "Yes."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_moving_average",
+            "reasoning": "The smoothed trend reveals a consistent upward trajectory from 2000 to 2021, with only minor deviations."
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_trend",
+            "reasoning": "Highlighting the trend then makes the long-term direction unmistakable."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_moving_average",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "window_size": 5
+                }
+              }
+            },
+            {
+              "tool": "highlight_trend",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "trend_type": "increasing"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 3,
+            "types": [
+              "line",
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

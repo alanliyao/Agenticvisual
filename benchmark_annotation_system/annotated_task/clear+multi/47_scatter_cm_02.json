@@ -1,0 +1,120 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "47_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/47_candy_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Is chocolate existing or not affect the correlation?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "Yes"
+        },
+        "key_insights": [
+          "The original correlation is 0.20763497996748556.",
+          "The correlation changes to 0.22216062460711655",
+          "The correlation changes to 0.08977741116093971"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "We need a compare line"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "we filter \"Yes\" of chocolate to make preparation."
+          },
+          {
+            "iteration": 5,
+            "tool": "reset_view",
+            "reasoning": "We should reset first for following filter."
+          },
+          {
+            "iteration": 6,
+            "tool": "filter_categorical",
+            "reasoning": "we filter \"No\" of chocolate to make preparation."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "chocolate"
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "list",
+                "param": "x_range",
+                "target": [
+                  0.014499969482421875,
+                  0.9878333536783854
+                ]
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            },
+            {
+              "tool": "reset_view",
+              "param_eval": {}
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "chocolate"
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sugarpercent",
+            "y": "winpercent",
+            "color": "chocolate"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"No\"], datum['chocolate']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

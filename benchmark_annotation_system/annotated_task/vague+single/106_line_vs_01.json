@@ -1,0 +1,60 @@
+{
+  "task_type": "vague_single",
+  "task_id": "106_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/106_life expectancey_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Are there any abnormal points in the picture? Why?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was found that both China and Zimbabwe have abnormal points. This might be due to wars or problems with grain harvests, which led to a significant loss of the adult population and thus lowered the average age of death."
+        },
+        "key_insights": [
+          "find china and zimbabwe have"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "in order to see whether there are some anomalies or not"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "threshold": 2
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "point"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

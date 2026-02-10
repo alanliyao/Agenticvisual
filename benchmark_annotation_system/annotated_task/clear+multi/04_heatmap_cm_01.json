@@ -1,0 +1,72 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "04_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/04_heatmap_temp.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Group similar temperature patterns, show only temperatures above 25°C, and identify which cities and months fall into this range.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Miami in January, April, May, and June",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Groups the rows and columns by temperature similarity. Miami is clustered alone due to its consistently high temperatures, while Denver and Seattle are grouped together as their temperature patterns are more similar.",
+          "After filtering for temperatures >25°C, the only cells that remain are those for Miami in January, April, May, and June, with June being the hottest at ~30°C."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "cluster_rows_cols",
+            "reasoning": "Clustering helps simplify the heatmap by organizing cities and months with similar temperature behavior, making it easier to spot the high-temperature group (Miami)."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_cells",
+            "reasoning": "Filtering then narrows down the exact cells that meet the 25°C threshold, providing a precise, objective answer to the question."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "cluster_rows_cols",
+              "param_eval": {
+                "type": "categorical",
+                "param": "cluster_rows",
+                "target": true
+              }
+            },
+            {
+              "tool": "filter_cells",
+              "param_eval": {
+                "type": "numeric",
+                "param": "min_value",
+                "target": 25,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "month",
+            "y": "city",
+            "color": "temp"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['temp'] >= 25 && datum['temp'] <= 30"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

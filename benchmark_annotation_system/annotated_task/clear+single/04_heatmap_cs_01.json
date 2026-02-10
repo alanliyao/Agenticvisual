@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "04_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/04_heatmap_temp.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which city and month had the highest temperature？",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Miami, June.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "After using the find extremes tool, the highest temperature of approximately 30°C occurred in Miami, June.",
+          "Miami consistently shows the highest temperatures across all months, with its June value being the clear peak."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "find_extremes",
+            "reasoning": "The original heatmap shows color differences, but exact extreme values and their locations aren’t obvious without the tool.\nUsing find extremes directly pinpoints the maximum value, which is the most efficient way to answer this objective question.\nThe result is categorical and precise, with no gap between the goal and the outcome, so no further tool use is needed."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "numeric",
+                "param": "top_n",
+                "target": 1,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "month",
+            "y": "city",
+            "color": "temp"
+          }
+        }
+      }
+    }
+  ]
+}

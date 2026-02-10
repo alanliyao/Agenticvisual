@@ -1,0 +1,92 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "91_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/91_supply_chain_data_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "What is the highest haircare price within the income range of 1000-3000?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "89",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the area of revenue from 1000 to 3000,and do next step."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "Filtered out categories skincare and cosmetics,and we can see the rightmost point is at price 89."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.133332888285319,
+                    100
+                  ],
+                  "y_range": [
+                    967.0003890991208,
+                    3014.999961853028
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "skincare",
+                    "cosmetics"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.133332888285319,
+              100
+            ],
+            "y": [
+              967.0003890991208,
+              3014.999961853028
+            ]
+          },
+          "encoding": {
+            "x": "Price",
+            "y": "Revenue generated",
+            "color": "Product type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"skincare\", \"cosmetics\"], datum['Product type']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

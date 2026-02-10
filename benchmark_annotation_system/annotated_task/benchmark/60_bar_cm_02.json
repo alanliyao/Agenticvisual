@@ -1,0 +1,209 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "60_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/60_Berlin_crimes_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_09",
+      "question": "Which district is the safest to live in?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Treptow-Köpenick district.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "From the view, it can be seen that the amount of drugs in Friedrichshain-Kreuzberg, Mitte, and Neukölln districts is relatively high, exceeding 10,000.",
+          "Pankow and Tempelhof-Schöneberg district have a relatively high amount of arson, exceeding 600.",
+          "Charlottenburg-Wilmersdorf, Reinickendorf, and Spandau districts have relatively high rates of aggressive assault."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "To find the safest district, first check the amount of drugs in different districts."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categories",
+            "reasoning": "To find the safest district, you should use the filter categories tool to exclude Friedrichshain-Kreuzberg, Mitte, and Neukölln districts."
+          },
+          {
+            "iteration": 3,
+            "tool": "change_encoding",
+            "reasoning": "In order to find the safest district, you should use the change encoding tool to switch the field to arson, in order to compare and see the arson levels in the remaining districts."
+          },
+          {
+            "iteration": 4,
+            "tool": "filter_categories",
+            "reasoning": "To find the safest neighborhoods, you should use the filter categories tool to exclude the Pankow and Tempelhof-Schöneberg districts."
+          },
+          {
+            "iteration": 5,
+            "tool": "change_encoding",
+            "reasoning": "To find the safest neighborhoods, use the change encoding tool to switch filed to Agg_assault compare to see the number of Agg_assault remaining districts"
+          },
+          {
+            "iteration": 6,
+            "tool": "filter_categories",
+            "reasoning": "To find the safest district, you should use the filter categories tool to exclude districts like Charlottenburg-Wilmersdorf, Reinickendorf, and Spandau, which have relatively high numbers of Agg_assault cases."
+          },
+          {
+            "iteration": 7,
+            "tool": "change_encoding",
+            "reasoning": "To find the safest district, you should use the change encoding tool to switch the field to robbery in order to compare the robbery situation of the remaining districts."
+          },
+          {
+            "iteration": 8,
+            "tool": "filter_categories",
+            "reasoning": "To find the safest districts, use the filter categories tool to filter out the Marzahn-Hellersdorf and Lichtenberg districts, which have more robbery."
+          },
+          {
+            "iteration": 9,
+            "tool": "change_encoding",
+            "reasoning": "In order to find the safest district, the change encoding tool should be used to switch the field to theft, in order to compare the number of thefts in the remaining districts. At the same time, it can be seen that the Treptow-Köpenick district has fewer thefts, leading to the final answer being the Treptow-Köpenick district."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Drugs",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Mitte",
+                    "Friedrichshain-Kreuzberg",
+                    "Neukölln"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Arson",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Pankow",
+                    "Tempelhof-Schöneberg"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Agg_assault",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Charlottenburg-Wilmersdorf",
+                    "Reinickendorf",
+                    "Spandau"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Robbery",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Lichtenberg",
+                    "Marzahn-Hellersdorf"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Theft",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "District",
+            "y": "Theft",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Mitte\",\"Friedrichshain-Kreuzberg\",\"Neukölln\"], datum['District']) < 0"
+            },
+            {
+              "filter": "indexof([\"Pankow\",\"Tempelhof-Schöneberg\"], datum['District']) < 0"
+            },
+            {
+              "filter": "indexof([\"Charlottenburg-Wilmersdorf\",\"Reinickendorf\",\"Spandau\"], datum['District']) < 0"
+            },
+            {
+              "filter": "indexof([\"Lichtenberg\",\"Marzahn-Hellersdorf\"], datum['District']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

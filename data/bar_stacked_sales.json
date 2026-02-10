@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "2024年各地区产品销售额（按季度）",
+  "description": "堆叠条形图：按地区分类，按产品类别堆叠，可按季度筛选",
+  "data": {
+    "values": [
+      {"region": "east_china", "product": "electronics", "quarter": "Q1", "sales": 1520},
+      {"region": "east_china", "product": "electronics", "quarter": "Q2", "sales": 1680},
+      {"region": "east_china", "product": "electronics", "quarter": "Q3", "sales": 1450},
+      {"region": "east_china", "product": "electronics", "quarter": "Q4", "sales": 2100},
+      {"region": "south_china", "product": "electronics", "quarter": "Q1", "sales": 1850},
+      {"region": "south_china", "product": "electronics", "quarter": "Q2", "sales": 2100},
+      {"region": "south_china", "product": "electronics", "quarter": "Q3", "sales": 1920},
+      {"region": "south_china", "product": "electronics", "quarter": "Q4", "sales": 2450},
+      {"region": "north_china", "product": "electronics", "quarter": "Q1", "sales": 1320},
+      {"region": "north_china", "product": "electronics", "quarter": "Q2", "sales": 1480},
+      {"region": "north_china", "product": "electronics", "quarter": "Q3", "sales": 1250},
+      {"region": "north_china", "product": "electronics", "quarter": "Q4", "sales": 1750},
+      {"region": "south_china", "product": "clothings", "quarter": "Q1", "sales": 780},
+      {"region": "south_china", "product": "clothings", "quarter": "Q2", "sales": 920},
+      {"region": "south_china", "product": "clothings", "quarter": "Q3", "sales": 850},
+      {"region": "south_china", "product": "clothings", "quarter": "Q4", "sales": 1100},
+      {"region": "south_china", "product": "food", "quarter": "Q1", "sales": 1050},
+      {"region": "south_china", "product": "food", "quarter": "Q2", "sales": 980},
+      {"region": "south_china", "product": "food", "quarter": "Q3", "sales": 1120},
+      {"region": "south_china", "product": "food", "quarter": "Q4", "sales": 1200},
+      {"region": "south_china", "product": "furniture", "quarter": "Q1", "sales": 580},
+      {"region": "south_china", "product": "furniture", "quarter": "Q2", "sales": 650},
+      {"region": "south_china", "product": "furniture", "quarter": "Q3", "sales": 620},
+      {"region": "south_china", "product": "furniture", "quarter": "Q4", "sales": 780},
+      {"region": "north_china", "product": "electronics", "quarter": "Q1", "sales": 620},
+      {"region": "north_east_china", "product": "electronics", "quarter": "Q2", "sales": 820},
+      {"region": "north_east_china", "product": "electronics", "quarter": "Q3", "sales": 750},
+      {"region": "north_east_china", "product": "electronics", "quarter": "Q4", "sales": 980},
+      {"region": "north_east_china", "product": "clothings", "quarter": "Q1", "sales": 420},
+      {"region": "north_east_china", "product": "clothings", "quarter": "Q2", "sales": 550},
+      {"region": "north_east_china", "product": "clothings", "quarter": "Q3", "sales": 480},
+      {"region": "north_east_china", "product": "clothings", "quarter": "Q4", "sales": 650},
+      {"region": "north_east_china", "product": "food", "quarter": "Q1", "sales": 580},
+      {"region": "north_east_china", "product": "food", "quarter": "Q2", "sales": 650},
+      {"region": "north_east_china", "product": "food", "quarter": "Q3", "sales": 620},
+      {"region": "north_east_china", "product": "food", "quarter": "Q4", "sales": 720},
+      {"region": "north_east_china", "product": "furniture", "quarter": "Q1", "sales": 320},
+      {"region": "north_east_china", "product": "furniture", "quarter": "Q2", "sales": 380},
+      {"region": "north_east_china", "product": "furniture", "quarter": "Q3", "sales": 350},
+      {"region": "north_east_china", "product": "furniture", "quarter": "Q4", "sales": 450},
+      {"region": "north_east_china", "product": "electronics", "quarter": "Q2", "sales": 820},
+      {"region": "north_east_china", "product": "electronics", "quarter": "Q3", "sales": 750},
+      {"region": "north_east_china", "product": "electronics", "quarter": "Q4", "sales": 980},
+      {"region": "north_east_china", "product": "clothings", "quarter": "Q1", "sales": 420},
+      {"region": "north_east_china", "product": "clothings", "quarter": "Q2", "sales": 550},
+      {"region": "north_east_china", "product": "clothings", "quarter": "Q3", "sales": 480},
+      {"region": "north_east_china", "product": "clothings", "quarter": "Q4", "sales": 650},
+      {"region": "north_east_china", "product": "food", "quarter": "Q1", "sales": 580},
+      {"region": "north_east_china", "product": "food", "quarter": "Q2", "sales": 650},
+      {"region": "north_east_china", "product": "food", "quarter": "Q3", "sales": 620},
+      {"region": "north_east_china", "product": "food", "quarter": "Q4", "sales": 720},
+      {"region": "north_east_china", "product": "furniture", "quarter": "Q1", "sales": 320},
+      {"region": "north_east_china", "product": "furniture", "quarter": "Q2", "sales": 380},
+      {"region": "north_east_china", "product": "furniture", "quarter": "Q3", "sales": 350},
+      {"region": "north_east_china", "product": "furniture", "quarter": "Q4", "sales": 450}
+    ]
+  },
+  "transform": [
+    {"aggregate": [{"op": "sum", "field": "sales", "as": "total_sales"}], "groupby": ["region", "product"]}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "region",
+      "type": "nominal",
+      "title": "Region",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {
+      "field": "total_sales",
+      "type": "quantitative",
+      "title": "Total Sales (万元)",
+      "stack": "zero"
+    },
+    "color": {
+      "field": "product",
+      "type": "nominal",
+      "title": "Product Category",
+      "scale": {
+        "domain": ["electronics", "clothings", "food", "furniture"],
+        "range": ["#4c78a8", "#f58518", "#54a24b", "#e45756"]
+      }
+    },
+    "tooltip": [
+      {"field": "region", "type": "nominal", "title": "Region"},
+      {"field": "product", "type": "nominal", "title": "Product Category"},
+      {"field": "total_sales", "type": "quantitative", "title": "Sales", "format": ",.0f"}
+    ]
+  },
+  "width": 500,
+  "height": 350
+}

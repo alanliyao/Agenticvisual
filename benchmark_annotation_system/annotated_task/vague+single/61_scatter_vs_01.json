@@ -1,0 +1,57 @@
+{
+  "task_type": "vague_single",
+  "task_id": "61_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/61_Berlin_crimes_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "After you have identified the clusters, do you think these clusters are more driven by the number of robberies or by the number of injuries?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "These clusters seem to be driven more by the changes in the number of robberies: The dispersion and stratification of the points along the horizontal axis are more pronounced, while the dispersion in the Injury direction is relatively small, indicating that different clusters are first separated based on the level of robberies, and Injury is merely a secondary variable that changes along with it, rather than the main factor for classification."
+        },
+        "key_insights": [
+          "These clusters seem to be driven more by the changes in the number of robberies: The dispersion and stratification of the points along the horizontal axis are more pronounced, while the dispersion in the Injury direction is relatively small, indicating that different clusters are first separated based on the level of robberies, and Injury is merely a secondary variable that changes along with it, rather than the main factor for classification.",  
+          "The dispersion and stratification of the points along the horizontal axis are more pronounced, while the dispersion in the Injury direction is relatively small, indicating that different clusters are first separated based on the level of robberies, and Injury is merely a secondary variable that changes along with it, rather than the main factor for classification.",
+          "The dispersion in the Injury direction is relatively small, indicating that different clusters are first separated based on the level of robberies, and Injury is merely a secondary variable that changes along with it, rather than the main factor for classification.",
+          "These clusters seem to be driven more by the changes in the number of robberies: The dispersion and stratification of the points along the horizontal axis are more pronounced, while the dispersion in the Injury direction is relatively small, indicating that different clusters are first separated based on the level of robberies, and Injury is merely a secondary variable that changes along with it, rather than the main factor for classification."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "identify_clusters",
+            "reasoning": "get the clusters' data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n_clusters": 3,
+                  "method": "kmeans"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Robbery",
+            "y": "Injury",
+            "color": "District"
+          }
+        }
+      }
+    }
+  ]
+}

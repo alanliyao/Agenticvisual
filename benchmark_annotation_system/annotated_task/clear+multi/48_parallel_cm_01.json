@@ -1,0 +1,72 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "48_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/48_candy_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "Which dimension can help categorize?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "pricepercent",
+          "alternatives": [
+            "pricepercent"
+          ]
+        },
+        "key_insights": [
+          "The dimension of pricepercent shows good Line concentration.",
+          "The dimension of pricepercent still shows good Line concentration"
+        ],
+        "reasoning": [],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "chocolate"
+              }
+            },
+            {
+              "tool": "reset_view",
+              "param_eval": {}
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "chocolate"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Yes\"], datum['chocolate']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 1,
+            "types": [
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

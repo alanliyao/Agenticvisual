@@ -1,0 +1,64 @@
+{
+  "task_type": "clear_single",
+  "task_id": "28_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/28_silver_prices_data_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the last year time range to find the exact close value at the final data point.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "80",
+          "tolerance": 5,
+          "alternatives": []
+        },
+        "key_insights": [
+          "The rate of price acceleration in this interval is the steepest observed across the entire timeline.",
+          "No short-term pullbacks occur in this late surge, indicating strong upward momentum."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "The zoom action resolves the compressed late-2025 to 2026 interval, making the exact final value readable. This single tool operation directly answers the question, so no further steps are needed."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "categorical",
+                "param": "start",
+                "target": {
+                  "start": "2025/1/10",
+                  "end": "2026/1/9"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2025/1/10",
+              "2026/1/09"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "Close",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

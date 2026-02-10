@@ -1,0 +1,74 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "01_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/01_scatter_cars.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Only the car data from Japan and the United States are retained. Within the region with the highest \"miles per gallon\" value, what are the differences in the data distribution between Japanese cars and American cars?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "When only the data of Japanese and American cars are retained, the analysis of the \"miles per gallon\" highest region shows that Japanese cars (in orange) dominate in the high fuel consumption range of 35–47 MPG. The data points are not only more numerous but also exhibit a distinct clustering feature, even including the highest fuel consumption value in the graph. On the other hand, American cars (in red) only have a few scattered points in this range, without forming a dense cluster area, and their highest fuel consumption value is only about 38 MPG, which is much lower than the upper limit of Japanese cars. This distribution difference directly reflects the significant differences in the investment in fuel economy technology and product positioning between the two car manufacturers at that time.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "By retaining only the data from Japan and the United States, we can more closely compare the two countries that are the most representative of the automotive industries. This allows us to eliminate the influence of European models and avoid diluting the core findings due to the limited data from the third region.",
+          "The \"brush region\" can precisely select the area with the highest \"miles per gallon\" value. This enables us to focus on the core samples that best represent the differences in fuel economy from the scattered overall data, avoiding the need to blindly search for patterns in a vast amount of information."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "Only two research subjects were retained, eliminating the potential influence of the third variable (European models), making the subsequent conclusions about the distribution differences in the high fuel consumption range more reliable."
+          },
+          {
+            "iteration": 2,
+            "tool": "brush_region",
+            "reasoning": "It enables us to conduct in-depth analysis of local features without altering the original dataset, thus ensuring both the flexibility of the analysis and the integrity of the data."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Origin"
+              }
+            },
+            {
+              "tool": "brush_region",
+              "param_eval": {
+                "type": "list",
+                "param": "x_range",
+                "target": [
+                  40.166664123535156,
+                  116.3888931274414
+                ]
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Horsepower",
+            "y": "Miles_per_Gallon",
+            "color": "Origin"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Europe\"], datum['Origin']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

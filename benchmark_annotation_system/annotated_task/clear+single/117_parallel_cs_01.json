@@ -1,0 +1,73 @@
+{
+  "task_type": "clear_single",
+  "task_id": "117_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/117_startup_funding_dataset_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "The scale and financing situation of a company during the IPO stage",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Generally, the company is not large in size but can secure a relatively high amount of financing.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "get data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Funding Stage",
+                  "values": [
+                    "Series B",
+                    "Series C",
+                    "Series A",
+                    "Seed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Series B\",\"Series C\",\"Series A\",\"Seed\"], datum['Funding Stage']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

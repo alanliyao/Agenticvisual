@@ -1,0 +1,100 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "05_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/05_sankey_ecommercial.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What percentage of the users ended up purchasing the product due to the advertisements?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "0.3",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "collapse_nodes",
+            "reasoning": "Gather all the advertisers together to facilitate the counting of the number of participants."
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "get there are 26500 people in the chart"
+          },
+          {
+            "iteration": 3,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "get the inflow data is 8000. therefore, the purchase rate is 8000/26500 = 0.3"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "collapse_nodes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "aggregate_name": "Other",
+                  "nodes_to_collapse": [
+                    "Google Ads",
+                    "Facebook",
+                    "Organic",
+                    "Email"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Other"
+                }
+              }
+            },
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Purchase"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Other",
+            "Landing Page",
+            "Product List",
+            "Search",
+            "Product Detail",
+            "Exit",
+            "Add to Cart",
+            "Bounce",
+            "Purchase"
+          ],
+          "collapsed_nodes": []
+        }
+      }
+    }
+  ]
+}

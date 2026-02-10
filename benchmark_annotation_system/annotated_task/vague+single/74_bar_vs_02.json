@@ -1,0 +1,55 @@
+{
+  "task_type": "vague_single",
+  "task_id": "74_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/74_StudentsPerformance_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What does the data reveal about how math score performance differs across race/ethnicity groups, and how does parental education mediate these differences?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The data indicates that while race/ethnicity groups show distinct baseline performance levels (Group E > Group A), parental education is a strong mediating factor. Higher levels of parental education elevate math scores across all groups, but the magnitude of the boost appears to be greatest in the highest-performing racial/ethnic group (Group E)."
+        },
+        "key_insights": [
+          "The general ranking of performance based on parental education appears consistent across groups: Master's > Bachelor's > Associate's > Some college > High school > Some high school.",
+          "Group E consistently shows the highest mean math scores across all education levels compared to Groups A-D.",
+          "Group A generally shows the lowest mean math scores across all education levels."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "we want to show the difference in subcategories"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "math score",
+            "color": "parental level of education"
+          }
+        }
+      }
+    }
+  ]
+}

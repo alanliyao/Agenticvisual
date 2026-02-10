@@ -1,0 +1,77 @@
+{
+  "task_type": "clear_single",
+  "task_id": "42_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/42_pokemon_stats_2025_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which is faster: grass-type Pokémon or rock-type Pokémon?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "grass-type",
+          "alternatives": [
+            "grass-type",
+            "GRASS-TYPE"
+          ]
+        },
+        "key_insights": [
+          "After filtering out other categories, it was found that grass pokemons are significantly faster than rock pokemons.",
+          "The Grass Pokemon's mean speed is around 55, while the Rock Pokemon's speed is slightly below."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "After removing other interfering pillars, the speed of the grass type and rock type becomes readily apparent, allowing for direct comparison."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "list",
+                "param": "categories",
+                "target": [
+                  "grass",
+                  "fire",
+                  "water",
+                  "bug",
+                  "normal",
+                  "poison",
+                  "electric",
+                  "ground",
+                  "dragon",
+                  "steel",
+                  "ghost",
+                  "rock",
+                  "psychic",
+                  "fighting",
+                  "fairy"
+                ]
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "type_1",
+            "y": "speed",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"grass\",\"fire\",\"water\",\"bug\",\"normal\",\"poison\",\"electric\",\"ground\",\"dragon\",\"steel\",\"ghost\",\"rock\",\"psychic\",\"fighting\",\"fairy\"], datum['type_1']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

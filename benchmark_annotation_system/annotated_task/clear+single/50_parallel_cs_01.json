@@ -1,0 +1,80 @@
+{
+  "task_type": "clear_single",
+  "task_id": "50_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/50_supply_chain_data_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Is there exist a significant correlation between manufacturing costs and production volumes?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "No"
+        },
+        "key_insights": [
+          "he lines connecting the \"Manufacturing costs\" axis (left) to the \"Production volumes\" axis (right) are chaotic and cross over each other extensively.he lines connecting the \"Manufacturing costs\" axis (left) to the \"Production volumes\" axis (right) are chaotic and cross over each other extensively."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We care about correlation between manufacturing costs and production volumes"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Manufacturing lead time",
+                    "Defect rates"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "Manufacturing costs",
+              "Production volumes"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Manufacturing costs\", \"Production volumes\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

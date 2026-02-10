@@ -1,0 +1,126 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "47_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/47_candy_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_04",
+      "question": "Zoom into the region where sugar percent is between 0.2 and 0.5, then identify clusters to see whether non-chocolate candies form distinct groups.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It seems to be two groups. One group is sugarpercent lower than 0.32 and other group is sugarpercent higher than 0.40. However, it does not show research value yet."
+        },
+        "key_insights": [
+          "It seems identify clusters tool don't do well"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "As the question mentions the tool of zoom and zoomed place"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "The question cares about non-chocolate candies, so we decide to filter chocolate."
+          },
+          {
+            "iteration": 3,
+            "tool": "select_region",
+            "reasoning": "Select thd data point in zoomed area for following steps"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.1998333231608073,
+                    0.5024999491373698
+                  ],
+                  "y_range": [
+                    19.48499450683594,
+                    79.9649917602539
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "chocolate",
+                  "categories_to_remove": [
+                    "Yes"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.20664332224527995,
+                    0.4899393026326473
+                  ],
+                  "y_range": [
+                    20.573636303100503,
+                    69.56243407836905
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n_clusters": 2,
+                  "method": "kmeans"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.1998333231608073,
+              0.5024999491373698
+            ],
+            "y": [
+              19.48499450683594,
+              79.9649917602539
+            ]
+          },
+          "encoding": {
+            "x": "sugarpercent",
+            "y": "winpercent",
+            "color": "cluster_2"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Yes\"], datum['chocolate']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

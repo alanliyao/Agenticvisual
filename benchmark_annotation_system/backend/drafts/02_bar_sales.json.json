@@ -1,0 +1,159 @@
+{
+  "filename": "02_bar_sales.json",
+  "spec_index": 1,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Sales by Region",
+    "width": 500,
+    "height": 350,
+    "data": {
+      "values": [
+        {
+          "region": "North",
+          "product": "Electronics",
+          "sales": 1200
+        },
+        {
+          "region": "North",
+          "product": "Clothing",
+          "sales": 800
+        },
+        {
+          "region": "South",
+          "product": "Electronics",
+          "sales": 950
+        },
+        {
+          "region": "South",
+          "product": "Clothing",
+          "sales": 1100
+        },
+        {
+          "region": "East",
+          "product": "Electronics",
+          "sales": 1300
+        },
+        {
+          "region": "East",
+          "product": "Clothing",
+          "sales": 650
+        },
+        {
+          "region": "West",
+          "product": "Electronics",
+          "sales": 1100
+        },
+        {
+          "region": "West",
+          "product": "Clothing",
+          "sales": 920
+        }
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "region",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "sales",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "product",
+        "type": "nominal"
+      },
+      "xOffset": {
+        "field": "product"
+      }
+    }
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Sales by Region",
+    "width": 500,
+    "height": 350,
+    "data": {
+      "values": [
+        {
+          "region": "North",
+          "product": "Electronics",
+          "sales": 1200
+        },
+        {
+          "region": "North",
+          "product": "Clothing",
+          "sales": 800
+        },
+        {
+          "region": "South",
+          "product": "Electronics",
+          "sales": 950
+        },
+        {
+          "region": "South",
+          "product": "Clothing",
+          "sales": 1100
+        },
+        {
+          "region": "East",
+          "product": "Electronics",
+          "sales": 1300
+        },
+        {
+          "region": "East",
+          "product": "Clothing",
+          "sales": 650
+        },
+        {
+          "region": "West",
+          "product": "Electronics",
+          "sales": 1100
+        },
+        {
+          "region": "West",
+          "product": "Clothing",
+          "sales": 920
+        }
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "region",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "sales",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "product",
+        "type": "nominal"
+      },
+      "xOffset": {
+        "field": "product"
+      }
+    }
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "bar",
+  "chart_meta": {
+    "chart_type": "bar",
+    "title": "Sales by Region",
+    "topic": "Business",
+    "data_points": 8,
+    "filename": "02_bar_sales.json",
+    "total_points": 8,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:57:20.625510Z"
+}

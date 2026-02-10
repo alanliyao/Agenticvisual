@@ -1,0 +1,133 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "89_heatmap_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/89_Sleep_health_and_lifestyle_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_05",
+      "question": "Explore the relationship between Stress Level and BMI Category. Which BMI category's sleep pattern seems most resilient to changes in stress, and which seems most vulnerable?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Based on visual patterns and clustering, the 'Normal Weight' category appears most resilient, showing only a mild decrease in sleep duration as stress increases. The 'Obese' category appears most vulnerable, exhibiting the sharpest decline in sleep duration at higher stress levels (7 & 8)."
+        },
+        "key_insights": [
+          "This helps in subjectively assessing \"resilience\" (minimal color change across stress levels) vs. \"vulnerability\" (steep color gradient from left to right).",
+          "We find that \"Normal\" and \"Normal Weight\" cluster together, showing a similar gentle decline in sleep with stress, while \"Obese\" forms its own cluster with a steeper decline.",
+          "Isolating the row confirms the initial subjective assessment, allowing for a clear statement about that specific category's pattern.",
+          "Isolating the row confirms our initial subjective assessment, allowing for a clear statement about that specific category's pattern.",
+          "Isolating the row confirms our initial subjective assessment, allowing for a clear statement about that specific category's pattern."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "adjust_color_scale",
+            "reasoning": "To enhance the visual contrast between different sleep durations. By adjusting the scale's range or midpoint, we can make subtle differences between rows (BMI categories) more apparent."
+          },
+          {
+            "iteration": 2,
+            "tool": "cluster_rows_cols",
+            "reasoning": "To algorithmically group BMI categories with similar sleep patterns across stress levels."
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_cells_by_region",
+            "reasoning": "Use this tool to isolate the specific\"obese\" row for final observation and description."
+          },
+          {
+            "iteration": 4,
+            "tool": "filter_cells_by_region",
+            "reasoning": "Use this tool to isolate the specific\"obese\" row for final observation and description."
+          },
+          {
+            "iteration": 5,
+            "tool": "filter_cells_by_region",
+            "reasoning": "Use this tool to isolate the specific\"obese\" row for final observation and description."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "adjust_color_scale",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scheme": "viridis"
+                }
+              }
+            },
+            {
+              "tool": "cluster_rows_cols",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "cluster_rows": true,
+                  "cluster_cols": true,
+                  "method": "sum"
+                }
+              }
+            },
+            {
+              "tool": "filter_cells_by_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "y_value": "Overweight"
+                }
+              }
+            },
+            {
+              "tool": "filter_cells_by_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "y_value": "Normal"
+                }
+              }
+            },
+            {
+              "tool": "filter_cells_by_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "y_value": "Normal Weight"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Stress Level",
+            "y": "BMI Category",
+            "color": "Sleep Duration"
+          },
+          "data_filtered": [
+            {
+              "filter": "!(indexof([\"Overweight\"], datum['BMI Category']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"Normal\"], datum['BMI Category']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"Normal Weight\"], datum['BMI Category']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

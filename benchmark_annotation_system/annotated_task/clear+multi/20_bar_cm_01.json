@@ -1,0 +1,91 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "20_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/20_ign_scores_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which Xbox brand product has the highest mean of RPG?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Xbox One.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "filter the other categories to focus on the highest mean of RPG."
+          },
+          {
+            "iteration": 2,
+            "tool": "sort_bars",
+            "reasoning": "sort the bars by the mean of RPG to get the highest mean of RPG."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Dreamcast",
+                    "Game Boy Advance",
+                    "Game Boy Color",
+                    "GameCube",
+                    "Nintendo 3DS",
+                    "Nintendo 64",
+                    "Nintendo DS",
+                    "Nintendo DSi",
+                    "PC",
+                    "PlayStation",
+                    "PlayStation 2",
+                    "PlayStation 3",
+                    "PlayStation 4",
+                    "PlayStation Portable",
+                    "PlayStation Vita",
+                    "Wii",
+                    "Wireless",
+                    "iPhone"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "RPG",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Dreamcast\",\"Game Boy Advance\",\"Game Boy Color\",\"GameCube\",\"Nintendo 3DS\",\"Nintendo 64\",\"Nintendo DS\",\"Nintendo DSi\",\"PC\",\"PlayStation\",\"PlayStation 2\",\"PlayStation 3\",\"PlayStation 4\",\"PlayStation Portable\",\"PlayStation Vita\",\"Wii\",\"Wireless\",\"iPhone\"], datum['Platform']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

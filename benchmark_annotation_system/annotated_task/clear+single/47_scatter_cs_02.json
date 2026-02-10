@@ -1,0 +1,62 @@
+{
+  "task_type": "vague_single",
+  "task_id": "47_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/47_candy_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "I want to know the names of sugarpercent that is lower than 0.07",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Chiclets, Lemonhead, Reese's Miniatures, Sour Patch Kids and Sour Patch Tricksters"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "Zoom the region can lists the name clearly at right-bar of the map."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "list",
+                "param": "x_range",
+                "target": [
+                  0.028571119350857207,
+                  0.07156844937472812
+                ]
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.028571119350857207,
+              0.07156844937472812
+            ],
+            "y": [
+              17.56728153259261,
+              83.70539456176758
+            ]
+          },
+          "encoding": {
+            "x": "sugarpercent",
+            "y": "winpercent",
+            "color": "competitorname"
+          }
+        }
+      }
+    }
+  ]
+}

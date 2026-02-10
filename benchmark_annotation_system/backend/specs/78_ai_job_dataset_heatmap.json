@@ -1,0 +1,190 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "AI Job Market Skill Demand Heatmap",
+    "subtitle": "Relative demand score (0–100) for key skills across major AI roles",
+    "color": "#e8e6e1",
+    "subtitleColor": "#7a7a8a",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
+    "anchor": "start",
+    "offset": 16
+  },
+  "width": 680,
+  "height": 420,
+  "background": "#0e0f1a",
+  "config": {
+    "font": "DM Sans",
+    "view": { "stroke": null },
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "labelColor": "#9a9aaa",
+      "labelFontSize": 11.5,
+      "labelFontWeight": 400,
+      "titleColor": "#7a7a8a",
+      "titleFontSize": 12,
+      "titleFontWeight": 500,
+      "titlePadding": 14,
+      "gridColor": "#1e1f30"
+    }
+  },
+  "data": {
+    "values": [
+      { "role": "ML Engineer", "skill": "Python", "demand": 95 },
+      { "role": "ML Engineer", "skill": "TensorFlow", "demand": 88 },
+      { "role": "ML Engineer", "skill": "PyTorch", "demand": 90 },
+      { "role": "ML Engineer", "skill": "SQL", "demand": 60 },
+      { "role": "ML Engineer", "skill": "Cloud (AWS/GCP)", "demand": 78 },
+      { "role": "ML Engineer", "skill": "NLP", "demand": 72 },
+      { "role": "ML Engineer", "skill": "Docker/K8s", "demand": 75 },
+      { "role": "ML Engineer", "skill": "Statistics", "demand": 70 },
+      { "role": "ML Engineer", "skill": "LLM/GenAI", "demand": 82 },
+      { "role": "ML Engineer", "skill": "Computer Vision", "demand": 68 },
+
+      { "role": "Data Scientist", "skill": "Python", "demand": 92 },
+      { "role": "Data Scientist", "skill": "TensorFlow", "demand": 65 },
+      { "role": "Data Scientist", "skill": "PyTorch", "demand": 62 },
+      { "role": "Data Scientist", "skill": "SQL", "demand": 88 },
+      { "role": "Data Scientist", "skill": "Cloud (AWS/GCP)", "demand": 55 },
+      { "role": "Data Scientist", "skill": "NLP", "demand": 58 },
+      { "role": "Data Scientist", "skill": "Docker/K8s", "demand": 35 },
+      { "role": "Data Scientist", "skill": "Statistics", "demand": 94 },
+      { "role": "Data Scientist", "skill": "LLM/GenAI", "demand": 60 },
+      { "role": "Data Scientist", "skill": "Computer Vision", "demand": 45 },
+
+      { "role": "AI Researcher", "skill": "Python", "demand": 90 },
+      { "role": "AI Researcher", "skill": "TensorFlow", "demand": 72 },
+      { "role": "AI Researcher", "skill": "PyTorch", "demand": 95 },
+      { "role": "AI Researcher", "skill": "SQL", "demand": 30 },
+      { "role": "AI Researcher", "skill": "Cloud (AWS/GCP)", "demand": 40 },
+      { "role": "AI Researcher", "skill": "NLP", "demand": 80 },
+      { "role": "AI Researcher", "skill": "Docker/K8s", "demand": 28 },
+      { "role": "AI Researcher", "skill": "Statistics", "demand": 85 },
+      { "role": "AI Researcher", "skill": "LLM/GenAI", "demand": 92 },
+      { "role": "AI Researcher", "skill": "Computer Vision", "demand": 78 },
+
+      { "role": "Data Engineer", "skill": "Python", "demand": 82 },
+      { "role": "Data Engineer", "skill": "TensorFlow", "demand": 18 },
+      { "role": "Data Engineer", "skill": "PyTorch", "demand": 15 },
+      { "role": "Data Engineer", "skill": "SQL", "demand": 96 },
+      { "role": "Data Engineer", "skill": "Cloud (AWS/GCP)", "demand": 92 },
+      { "role": "Data Engineer", "skill": "NLP", "demand": 12 },
+      { "role": "Data Engineer", "skill": "Docker/K8s", "demand": 88 },
+      { "role": "Data Engineer", "skill": "Statistics", "demand": 35 },
+      { "role": "Data Engineer", "skill": "LLM/GenAI", "demand": 20 },
+      { "role": "Data Engineer", "skill": "Computer Vision", "demand": 8 },
+
+      { "role": "MLOps Engineer", "skill": "Python", "demand": 85 },
+      { "role": "MLOps Engineer", "skill": "TensorFlow", "demand": 55 },
+      { "role": "MLOps Engineer", "skill": "PyTorch", "demand": 50 },
+      { "role": "MLOps Engineer", "skill": "SQL", "demand": 60 },
+      { "role": "MLOps Engineer", "skill": "Cloud (AWS/GCP)", "demand": 95 },
+      { "role": "MLOps Engineer", "skill": "NLP", "demand": 22 },
+      { "role": "MLOps Engineer", "skill": "Docker/K8s", "demand": 96 },
+      { "role": "MLOps Engineer", "skill": "Statistics", "demand": 30 },
+      { "role": "MLOps Engineer", "skill": "LLM/GenAI", "demand": 45 },
+      { "role": "MLOps Engineer", "skill": "Computer Vision", "demand": 18 },
+
+      { "role": "NLP Engineer", "skill": "Python", "demand": 93 },
+      { "role": "NLP Engineer", "skill": "TensorFlow", "demand": 70 },
+      { "role": "NLP Engineer", "skill": "PyTorch", "demand": 88 },
+      { "role": "NLP Engineer", "skill": "SQL", "demand": 42 },
+      { "role": "NLP Engineer", "skill": "Cloud (AWS/GCP)", "demand": 58 },
+      { "role": "NLP Engineer", "skill": "NLP", "demand": 98 },
+      { "role": "NLP Engineer", "skill": "Docker/K8s", "demand": 55 },
+      { "role": "NLP Engineer", "skill": "Statistics", "demand": 65 },
+      { "role": "NLP Engineer", "skill": "LLM/GenAI", "demand": 96 },
+      { "role": "NLP Engineer", "skill": "Computer Vision", "demand": 15 },
+
+      { "role": "CV Engineer", "skill": "Python", "demand": 91 },
+      { "role": "CV Engineer", "skill": "TensorFlow", "demand": 80 },
+      { "role": "CV Engineer", "skill": "PyTorch", "demand": 92 },
+      { "role": "CV Engineer", "skill": "SQL", "demand": 35 },
+      { "role": "CV Engineer", "skill": "Cloud (AWS/GCP)", "demand": 55 },
+      { "role": "CV Engineer", "skill": "NLP", "demand": 15 },
+      { "role": "CV Engineer", "skill": "Docker/K8s", "demand": 60 },
+      { "role": "CV Engineer", "skill": "Statistics", "demand": 62 },
+      { "role": "CV Engineer", "skill": "LLM/GenAI", "demand": 38 },
+      { "role": "CV Engineer", "skill": "Computer Vision", "demand": 98 },
+
+      { "role": "AI Product Manager", "skill": "Python", "demand": 40 },
+      { "role": "AI Product Manager", "skill": "TensorFlow", "demand": 15 },
+      { "role": "AI Product Manager", "skill": "PyTorch", "demand": 12 },
+      { "role": "AI Product Manager", "skill": "SQL", "demand": 55 },
+      { "role": "AI Product Manager", "skill": "Cloud (AWS/GCP)", "demand": 48 },
+      { "role": "AI Product Manager", "skill": "NLP", "demand": 35 },
+      { "role": "AI Product Manager", "skill": "Docker/K8s", "demand": 10 },
+      { "role": "AI Product Manager", "skill": "Statistics", "demand": 50 },
+      { "role": "AI Product Manager", "skill": "LLM/GenAI", "demand": 72 },
+      { "role": "AI Product Manager", "skill": "Computer Vision", "demand": 20 }
+    ]
+  },
+  "mark": {
+    "type": "rect",
+    "cornerRadius": 3,
+    "stroke": "#0e0f1a",
+    "strokeWidth": 2.5
+  },
+  "encoding": {
+    "x": {
+      "field": "skill",
+      "type": "nominal",
+      "sort": ["Python", "PyTorch", "TensorFlow", "LLM/GenAI", "NLP", "Computer Vision", "SQL", "Cloud (AWS/GCP)", "Docker/K8s", "Statistics"],
+      "axis": {
+        "orient": "top",
+        "title": null,
+        "labelAngle": -35,
+        "labelPadding": 8
+      }
+    },
+    "y": {
+      "field": "role",
+      "type": "nominal",
+      "sort": ["ML Engineer", "AI Researcher", "NLP Engineer", "CV Engineer", "Data Scientist", "Data Engineer", "MLOps Engineer", "AI Product Manager"],
+      "axis": {
+        "title": null,
+        "labelPadding": 12,
+        "labelFontSize": 12
+      }
+    },
+    "color": {
+      "field": "demand",
+      "type": "quantitative",
+      "scale": {
+        "domain": [0, 10, 20, 30, 45, 55, 65, 75, 85, 100],
+        "range": [
+          "#1B1F3B",
+          "#2A4A7F",
+          "#3C78B5",
+          "#5BAACC",
+          "#8ED1C0",
+          "#F0F0D0",
+          "#FDD576",
+          "#F5A623",
+          "#E8712B",
+          "#D13B29",
+          "#7A0C1E"
+        ],
+        "interpolate": "lab"
+      },
+      "legend": {
+        "title": "Demand Score",
+        "titleColor": "#9a9aaa",
+        "titleFontSize": 11,
+        "labelColor": "#7a7a8a",
+        "labelFontSize": 10,
+        "gradientLength": 260,
+        "gradientThickness": 12,
+        "orient": "bottom",
+        "direction": "horizontal",
+        "offset": 16
+      }
+    },
+    "tooltip": [
+      { "field": "role", "type": "nominal", "title": "Role" },
+      { "field": "skill", "type": "nominal", "title": "Skill" },
+      { "field": "demand", "type": "quantitative", "title": "Demand Score" }
+    ]
+  }
+}

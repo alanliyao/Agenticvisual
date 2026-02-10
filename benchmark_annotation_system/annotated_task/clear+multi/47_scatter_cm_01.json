@@ -1,0 +1,105 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "47_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/47_candy_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What's the relationship between pricepercent and winpercent?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The relationship between them is weak positive relationship."
+        },
+        "key_insights": [
+          "The correlation is 0.3338611144196428, showing the relationship is weak."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "We care about pricepercent and winpercent, so we change encoding."
+          },
+          {
+            "iteration": 2,
+            "tool": "show_regression",
+            "reasoning": "We want to find the relationship, so we draw the regression line"
+          },
+          {
+            "iteration": 3,
+            "tool": "calculate_correlation",
+            "reasoning": "We want to detect whether the relationship is strong or not."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "channel": "x",
+                  "field": "pricepercent"
+                }
+              }
+            },
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "linear"
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "pricepercent",
+            "y": "winpercent",
+            "color": "chocolate"
+          }
+        }
+      }
+    }
+  ],
+  "iterations": [
+    {
+      "tool_name": "change_encoding",
+      "parameters": {
+        "channel": "x",
+        "field": "pricepercent"
+      }
+    },
+    {
+      "tool_name": "show_regression",
+      "parameters": {
+        "method": "linear"
+      }
+    },
+    {
+      "tool_name": "calculate_correlation",
+      "parameters": {
+        "method": "pearson"
+      }
+    }
+  ]
+}

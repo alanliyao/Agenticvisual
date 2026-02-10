@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "42_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/42_pokemon_stats_2025_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "which type has highest attack sum?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "water",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "we want to know attack value sum of different types."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "attack",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "type_1",
+            "y": "attack",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

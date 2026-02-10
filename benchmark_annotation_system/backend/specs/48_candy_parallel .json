@@ -1,0 +1,1904 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: candy",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "_index": 0,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7316561887803315
+      },
+      {
+        "_index": 1,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 2,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.9140461615398486
+      },
+      {
+        "_index": 3,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.45178197897191147
+      },
+      {
+        "_index": 4,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 5,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.292452824354258
+      },
+      {
+        "_index": 6,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.9140461615398486
+      },
+      {
+        "_index": 7,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 8,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 9,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7316561887803315
+      },
+      {
+        "_index": 10,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.01257861454583807
+      },
+      {
+        "_index": 11,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7316561887803315
+      },
+      {
+        "_index": 12,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7316561887803315
+      },
+      {
+        "_index": 13,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.09748427688118877
+      },
+      {
+        "_index": 14,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7316561887803315
+      },
+      {
+        "_index": 15,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.9140461615398486
+      },
+      {
+        "_index": 16,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.45178197897191147
+      },
+      {
+        "_index": 17,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.45178197897191147
+      },
+      {
+        "_index": 18,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.45178197897191147
+      },
+      {
+        "_index": 19,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.45178197897191147
+      },
+      {
+        "_index": 20,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.09748427688118877
+      },
+      {
+        "_index": 21,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.41509435758079233
+      },
+      {
+        "_index": 22,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.41509435758079233
+      },
+      {
+        "_index": 23,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.41509435758079233
+      },
+      {
+        "_index": 24,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.06184486515784804
+      },
+      {
+        "_index": 25,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.17085954062778805
+      },
+      {
+        "_index": 26,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.292452824354258
+      },
+      {
+        "_index": 27,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.19496855585881365
+      },
+      {
+        "_index": 28,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.01257861454583807
+      },
+      {
+        "_index": 29,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.244234793892207
+      },
+      {
+        "_index": 30,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.8291404677579564
+      },
+      {
+        "_index": 31,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.8291404677579564
+      },
+      {
+        "_index": 32,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.8784067057913496
+      },
+      {
+        "_index": 33,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.2809224257655067
+      },
+      {
+        "_index": 34,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 35,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7316561887803315
+      },
+      {
+        "_index": 36,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.9758909742867939
+      },
+      {
+        "_index": 37,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.292452824354258
+      },
+      {
+        "_index": 38,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.292452824354258
+      },
+      {
+        "_index": 39,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.8532494829889818
+      },
+      {
+        "_index": 40,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 41,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.292452824354258
+      },
+      {
+        "_index": 42,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.17085954062778805
+      },
+      {
+        "_index": 43,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.19496855585881365
+      },
+      {
+        "_index": 44,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.45178197897191147
+      },
+      {
+        "_index": 45,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5859538793406556
+      },
+      {
+        "_index": 46,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.06184486515784804
+      },
+      {
+        "_index": 47,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 48,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5733752417340203
+      },
+      {
+        "_index": 49,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 50,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7190776140667794
+      },
+      {
+        "_index": 51,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.38993710333188286
+      },
+      {
+        "_index": 52,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 53,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7316561887803315
+      },
+      {
+        "_index": 54,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.8658281205956171
+      },
+      {
+        "_index": 55,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.7316561887803315
+      },
+      {
+        "_index": 56,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.8784067057913496
+      },
+      {
+        "_index": 57,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.19496855585881365
+      },
+      {
+        "_index": 58,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.9507337514844261
+      },
+      {
+        "_index": 59,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.9507337514844261
+      },
+      {
+        "_index": 60,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.244234793892207
+      },
+      {
+        "_index": 61,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.244234793892207
+      },
+      {
+        "_index": 62,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5366876413072622
+      },
+      {
+        "_index": 63,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 64,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.03668762768042736
+      },
+      {
+        "_index": 65,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.03668762768042736
+      },
+      {
+        "_index": 66,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.12264149968355659
+      },
+      {
+        "_index": 67,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5607966670204683
+      },
+      {
+        "_index": 68,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.9758909742867939
+      },
+      {
+        "_index": 69,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.4025157409385181
+      },
+      {
+        "_index": 70,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.13417190875448845
+      },
+      {
+        "_index": 71,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 72,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5974842569650458
+      },
+      {
+        "_index": 73,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.292452824354258
+      },
+      {
+        "_index": 74,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.1467505149145821
+      },
+      {
+        "_index": 75,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.45178197897191147
+      },
+      {
+        "_index": 76,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.292452824354258
+      },
+      {
+        "_index": 77,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.5366876413072622
+      },
+      {
+        "_index": 78,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.19496855585881365
+      },
+      {
+        "_index": 79,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.06184486515784804
+      },
+      {
+        "_index": 80,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.292452824354258
+      },
+      {
+        "_index": 81,
+        "chocolate": "No",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.1593291420390368
+      },
+      {
+        "_index": 82,
+        "chocolate": "Yes",
+        "dimension": "sugarpercent",
+        "normalized_value": 0.8784067057913496
+      },
+      {
+        "_index": 0,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.8797927473596606
+      },
+      {
+        "_index": 1,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 2,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 3,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.7834197017262207
+      },
+      {
+        "_index": 4,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.7834197017262207
+      },
+      {
+        "_index": 5,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 6,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 7,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 8,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 9,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 10,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 11,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 12,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.023834198716744057
+      },
+      {
+        "_index": 13,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.023834198716744057
+      },
+      {
+        "_index": 14,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 15,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.4580310936991596
+      },
+      {
+        "_index": 16,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.4704663163682247
+      },
+      {
+        "_index": 17,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.4704663163682247
+      },
+      {
+        "_index": 18,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.4704663163682247
+      },
+      {
+        "_index": 19,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.4704663163682247
+      },
+      {
+        "_index": 20,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.084974094456227
+      },
+      {
+        "_index": 21,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.9398963425917478
+      },
+      {
+        "_index": 22,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.9398963425917478
+      },
+      {
+        "_index": 23,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.9398963425917478
+      },
+      {
+        "_index": 24,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 25,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 26,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 27,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.10880828902789327
+      },
+      {
+        "_index": 28,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.09637305599613413
+      },
+      {
+        "_index": 29,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.2777202147386506
+      },
+      {
+        "_index": 30,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 31,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 32,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 33,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 34,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 35,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.44559586066740037
+      },
+      {
+        "_index": 36,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.8797927473596606
+      },
+      {
+        "_index": 37,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.8797927473596606
+      },
+      {
+        "_index": 38,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.9398963425917478
+      },
+      {
+        "_index": 39,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 40,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.7834197017262207
+      },
+      {
+        "_index": 41,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.7834197017262207
+      },
+      {
+        "_index": 42,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 43,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 44,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.7834197017262207
+      },
+      {
+        "_index": 45,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 46,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.012435233031759243
+      },
+      {
+        "_index": 47,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.8559585507154555
+      },
+      {
+        "_index": 48,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.10880828902789327
+      },
+      {
+        "_index": 49,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.2777202147386506
+      },
+      {
+        "_index": 50,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 51,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 52,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 53,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.9886009949367772
+      },
+      {
+        "_index": 54,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.8797927473596606
+      },
+      {
+        "_index": 55,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.06010362424763073
+      },
+      {
+        "_index": 56,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.2777202147386506
+      },
+      {
+        "_index": 57,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.07253885935192893
+      },
+      {
+        "_index": 58,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.21658030863647348
+      },
+      {
+        "_index": 59,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.21658030863647348
+      },
+      {
+        "_index": 60,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 61,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.10880828902789327
+      },
+      {
+        "_index": 62,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 63,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.6632124490858814
+      },
+      {
+        "_index": 64,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.10880828902789327
+      },
+      {
+        "_index": 65,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.10880828902789327
+      },
+      {
+        "_index": 66,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.21658030863647348
+      },
+      {
+        "_index": 67,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.04870466063518487
+      },
+      {
+        "_index": 68,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.7834197017262207
+      },
+      {
+        "_index": 69,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 70,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.10880828902789327
+      },
+      {
+        "_index": 71,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.7709844479690731
+      },
+      {
+        "_index": 72,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 73,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.5181346889312467
+      },
+      {
+        "_index": 74,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 75,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.3253885873016727
+      },
+      {
+        "_index": 76,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.25284973831243795
+      },
+      {
+        "_index": 77,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.9274611510107653
+      },
+      {
+        "_index": 78,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.10880828902789327
+      },
+      {
+        "_index": 79,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.10880828902789327
+      },
+      {
+        "_index": 80,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.31295335426991344
+      },
+      {
+        "_index": 81,
+        "chocolate": "No",
+        "dimension": "pricepercent",
+        "normalized_value": 0.265284960981503
+      },
+      {
+        "_index": 82,
+        "chocolate": "Yes",
+        "dimension": "pricepercent",
+        "normalized_value": 0.867357493602513
+      },
+      {
+        "_index": 0,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.7212508428572607
+      },
+      {
+        "_index": 1,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.7314753754797789
+      },
+      {
+        "_index": 2,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.48426579246060447
+      },
+      {
+        "_index": 3,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.45196773386821787
+      },
+      {
+        "_index": 4,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.5583418559234575
+      },
+      {
+        "_index": 5,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.015752552091684736
+      },
+      {
+        "_index": 6,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.25213630613026017
+      },
+      {
+        "_index": 7,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.19555114559177822
+      },
+      {
+        "_index": 8,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.2677526468840203
+      },
+      {
+        "_index": 9,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.21984770733349115
+      },
+      {
+        "_index": 10,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.033686704754546756
+      },
+      {
+        "_index": 11,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.3211590083276816
+      },
+      {
+        "_index": 12,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.2756172196724419
+      },
+      {
+        "_index": 13,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.33439054108556887
+      },
+      {
+        "_index": 14,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.2711618665142171
+      },
+      {
+        "_index": 15,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.3942338560934099
+      },
+      {
+        "_index": 16,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.5616656296257733
+      },
+      {
+        "_index": 17,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.18974044993541664
+      },
+      {
+        "_index": 18,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.46921702324561737
+      },
+      {
+        "_index": 19,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.3196476439949759
+      },
+      {
+        "_index": 20,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.5334111963063257
+      },
+      {
+        "_index": 21,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.6453255513339778
+      },
+      {
+        "_index": 22,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.5514730400117445
+      },
+      {
+        "_index": 23,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.5959473782022562
+      },
+      {
+        "_index": 24,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.09204021534058453
+      },
+      {
+        "_index": 25,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.5632775204851955
+      },
+      {
+        "_index": 26,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.8799433688687425
+      },
+      {
+        "_index": 27,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.3068637183129447
+      },
+      {
+        "_index": 28,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.27044186915907226
+      },
+      {
+        "_index": 29,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.49349762968136585
+      },
+      {
+        "_index": 30,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.7940349800888311
+      },
+      {
+        "_index": 31,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.7148178578717219
+      },
+      {
+        "_index": 32,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.38821405683837207
+      },
+      {
+        "_index": 33,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.528367343431352
+      },
+      {
+        "_index": 34,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.820511166211541
+      },
+      {
+        "_index": 35,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.6212908671877253
+      },
+      {
+        "_index": 36,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.6788375090420825
+      },
+      {
+        "_index": 37,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.41118383364988287
+      },
+      {
+        "_index": 38,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.5196588078496671
+      },
+      {
+        "_index": 39,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.5330644235245096
+      },
+      {
+        "_index": 40,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.7822198087504697
+      },
+      {
+        "_index": 41,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.7131347755709655
+      },
+      {
+        "_index": 42,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 43,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.2753943961304642
+      },
+      {
+        "_index": 44,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.3863493270238224
+      },
+      {
+        "_index": 45,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.7619419431285187
+      },
+      {
+        "_index": 46,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.24746104512048758
+      },
+      {
+        "_index": 47,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.3048543864513438
+      },
+      {
+        "_index": 48,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.2414059012181253
+      },
+      {
+        "_index": 49,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.962516645150221
+      },
+      {
+        "_index": 50,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 51,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.8259446201210922
+      },
+      {
+        "_index": 52,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.8170827192227857
+      },
+      {
+        "_index": 53,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.2080736310319136
+      },
+      {
+        "_index": 54,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.7009148902026305
+      },
+      {
+        "_index": 55,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.1175727868504435
+      },
+      {
+        "_index": 56,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.3305065174671158
+      },
+      {
+        "_index": 57,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.19886076199722788
+      },
+      {
+        "_index": 58,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.6582948501342408
+      },
+      {
+        "_index": 59,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.5290091678864106
+      },
+      {
+        "_index": 60,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.25013136400258473
+      },
+      {
+        "_index": 61,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.38147737029798146
+      },
+      {
+        "_index": 62,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.8784074803398637
+      },
+      {
+        "_index": 63,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.6006955638693409
+      },
+      {
+        "_index": 64,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.6061178895604173
+      },
+      {
+        "_index": 65,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.4921135676324929
+      },
+      {
+        "_index": 66,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.7223183581151091
+      },
+      {
+        "_index": 67,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.1965442621488194
+      },
+      {
+        "_index": 68,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.17805488103667183
+      },
+      {
+        "_index": 69,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.15851076510972742
+      },
+      {
+        "_index": 70,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.07869973295029367
+      },
+      {
+        "_index": 71,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.5250797242903692
+      },
+      {
+        "_index": 72,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.4298587822596241
+      },
+      {
+        "_index": 73,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.33406613812866354
+      },
+      {
+        "_index": 74,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.3772807360705846
+      },
+      {
+        "_index": 75,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.44072543090624405
+      },
+      {
+        "_index": 76,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.4005492577632161
+      },
+      {
+        "_index": 77,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.9588988726628738
+      },
+      {
+        "_index": 78,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.37289965202692565
+      },
+      {
+        "_index": 79,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.2683497316892575
+      },
+      {
+        "_index": 80,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.3552311673570832
+      },
+      {
+        "_index": 81,
+        "chocolate": "No",
+        "dimension": "winpercent",
+        "normalized_value": 0.31520179922720926
+      },
+      {
+        "_index": 82,
+        "chocolate": "Yes",
+        "dimension": "winpercent",
+        "normalized_value": 0.4386295354354306
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "sugarpercent",
+        "pricepercent",
+        "winpercent"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "sugarpercent"
+          },
+          {
+            "dimension": "pricepercent"
+          },
+          {
+            "dimension": "winpercent"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "chocolate",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "chocolate",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.034000002
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.98799998
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.011
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.97600001
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 22.445341
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 48.982651
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 84.18029
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.034000002
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.98799998
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.011
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.97600001
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 22.445341
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 48.982651
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 84.18029
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.034000002
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "sugarpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.98799998
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.011
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 0.465
+          },
+          {
+            "dimension": "pricepercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 0.97600001
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 22.445341
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 48.982651
+          },
+          {
+            "dimension": "winpercent",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 84.18029
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  }
+}

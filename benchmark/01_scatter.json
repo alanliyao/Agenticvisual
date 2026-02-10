@@ -1,0 +1,150 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "01_scatter",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/01_scatter_cars.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "First, use the change encoding tool to map point color to Cylinders. Then, use the brush region tool to select all points with 8 cylinders (yellow points), and finally use the calculate correlation tool to compute the Pearson correlation between Horsepower and MPG only for this subset. ",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": "-0.53",
+        "key_insights": [
+          "Vehicles with 3–4 cylinders (dark purple to light blue) dominate the high-MPG, low-horsepower region of the plot. This shows that fewer cylinders strongly correlate with better fuel efficiency.",
+          "Vehicles with 8 cylinders (yellow) are clustered in the low-MPG, high-horsepower region, indicating a clear trade-off between raw power and fuel economy.",
+          "The trend across all cylinder counts is consistent: as horsepower increases, MPG decreases. The color gradient (cylinders) confirms this is a fundamental relationship, not just a pattern for specific engine types.",
+          "The color encoding makes it immediately clear that cylinder count is a powerful predictor of both horsepower and MPG. Vehicles with the same cylinder count cluster tightly together, highlighting the role of engine configuration in performance.",
+          "After precise separation, the 8-cylinder vehicles exhibit distinct clustering characteristics: they are entirely concentrated in the high horsepower and low fuel consumption range, with minimal overlap with vehicles of other cylinder counts.",
+          "The horsepower and fuel consumption of 8-cylinder vehicles exhibit a steeper negative correlation than the overall data set, with each increase in horsepower resulting in a more pronounced decrease in fuel consumption compared to the entire sample.",
+          "The high density of cylinder-based vehicle clusters indicates that this model type exhibits a highly uniform performance orientation, with virtually no exceptions that balance high horsepower with high fuel consumption.",
+          "The correlation coefficient for 8-cylinder vehicles is -0.527, indicating a moderately strong negative correlation. This is weaker than the global data's coefficient of -0.778.",
+          "This finding indicates that in large-displacement vehicles such as 8-cylinder cars, the correlation between horsepower and fuel consumption is not as strong as in the overall sample. This may be because the design of such vehicles prioritizes power performance over efficiency.",
+          "Comparing correlations across the entire dataset versus subsets reveals that the number of engine cylinders influences the strength of the relationship between horsepower and fuel consumption. This provides a quantitative basis for evaluating the performance-efficiency trade-offs across different vehicle models."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "The current view has been color-coded by cylinder count using the Change Encoding tool. This color coding clearly distinguishes the high-horsepower, low-fuel-consumption vehicle group, eliminating errors from manual filtering. Next, we will use the Brush Region tool to precisely select all yellow data points representing 8-cylinder vehicles."
+          },
+          {
+            "iteration": 2,
+            "tool": "brush_region",
+            "reasoning": "The brush region tool precisely isolated the subset of 8-cylinder vehicles, eliminating visual interference caused by mixed cylinder counts in the original view. This allows us to focus on the efficiency characteristics of these high-performance models. This step provides an accurate data foundation for subsequent correlation calculations, eliminating reliance on global trends. Next, the calculate correlation tool can be used to quantitatively validate the stronger negative correlation observed in 8-cylinder vehicles."
+          },
+          {
+            "iteration": 3,
+            "tool": "calculate_correlation",
+            "reasoning": "The correlation calculation tool provides precise statistical validation for the 8-cylinder vehicle subset, quantifying the trends observed in our filtered view. The results not only confirm the existence of correlations but also reveal the impact of engine type on the performance-efficiency relationship through comparison with global data. This fully addresses our core questions, eliminating the need for additional tool operations."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "field": "Cylinders",
+                "channel": "color"
+              }
+            },
+            {
+              "tool": "brush_region",
+              "param_eval": {
+                "x_range": [
+                  122.130859375,
+                  238.17333984375003
+                ],
+                "y_range": [
+                  6.96728515625,
+                  24.111083984375
+                ]
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "method": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              119.57470703125,
+              238.7666015625
+            ],
+            "y": [
+              6.299316406250002,
+              24.466308593750004
+            ]
+          },
+          "encoding": {
+            "x": "Horsepower",
+            "y": "Miles_per_Gallon",
+            "color": "Cylinders"
+          }
+        }
+      }
+    },
+    {
+      "qid": "cs_01",
+      "question": "Use the zoom dense area tool to zoom into the densest cluster of points . Which car origin is most dominant in that zoomed region?\n",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": "Japan",
+        "key_insights": [
+          "Japanese vehicles dominate this high fuel efficiency segment in the enlarged area, with the largest number and most concentrated distribution.",
+          "American vehicles are primarily concentrated in the inefficient range with MPG below 28, and even at equivalent horsepower, their fuel efficiency significantly lags behind Japanese vehicles.",
+          "European vehicles fall within the mid-range efficiency bracket, lacking both the high fuel efficiency of Japanese cars and the low efficiency characteristic of American vehicles.",
+          "The enlarged view clearly reveals efficiency differences among models from various origins, with Japanese vehicles demonstrating the strongest fuel economy advantage in this densely populated area."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "The Zoom Dense Area tool precisely focuses on the most concentrated data clusters, resolving visual confusion caused by overlapping data points in the original view. Upon magnification, Japanese vehicles' dominance in the high fuel efficiency range becomes immediately apparent, enabling direct answers to questions without requiring additional tools."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "x_range": [
+                  59.91162109375,
+                  101.4765625
+                ],
+                "y_range": [
+                  16.5693359375,
+                  38.369140625
+                ]
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              59.91162109375,
+              101.4765625
+            ],
+            "y": [
+              16.5693359375,
+              38.369140625
+            ]
+          },
+          "encoding": {
+            "x": "Horsepower",
+            "y": "Miles_per_Gallon",
+            "color": "Origin"
+          }
+        }
+      }
+    }
+  ]
+}

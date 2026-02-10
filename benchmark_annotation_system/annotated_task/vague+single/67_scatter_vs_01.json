@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "67_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/67_vitamin_deficiency_disease_dataset_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Is ve related to illness?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "No matter how ve changes, the distribution of symptom numbers is extremely uniform. Therefore, vitamin_e have no related to illness"
+        },
+        "key_insights": [
+          "No matter how ve changes, the distribution of symptom numbers is extremely uniform."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the data of ve and symptoms"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "symptoms_count",
+                  "channel": "x"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "symptoms_count",
+            "y": "vitamin_e_percent_rda",
+            "color": "gender"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1236 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "Cloud Cost Allocation Sankey — FinOps Cost Attribution (Data-Driven Architecture)",
+    "width": 1050,
+    "height": 520,
+    "padding": {
+      "left": 110,
+      "right": 140,
+      "top": 55,
+      "bottom": 50
+    },
+    "background": "white",
+    "_metadata": {
+      "chart_type": "sankey_multi_stage",
+      "title": "Sankey AWS Cloud Cost Allocation (FinOps)",
+      "topic": "cloud_cost_finops",
+      "architecture": "data-driven layout via Vega transform pipeline",
+      "value_unit": "Thousands USD per month",
+      "notes": "$500K/mo total — EC2 dominates at 55%; Engineering bears 47% of all costs"
+    },
+    "signals": [
+      {
+        "name": "nodeWidth",
+        "value": 15
+      },
+      {
+        "name": "nodeGap",
+        "value": 150
+      },
+      {
+        "name": "threshold",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 30,
+          "step": 2,
+          "name": "Min Flow ($K/mo): "
+        }
+      },
+      {
+        "name": "nodeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:mouseover",
+            "update": "datum.name"
+          },
+          {
+            "events": "@nodeRect:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "edgeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@edgeMark:mouseover",
+            "update": "datum.linkId"
+          },
+          {
+            "events": "@edgeMark:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "selectedNode",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:click!",
+            "update": "selectedNode === datum.name ? null : datum.name"
+          },
+          {
+            "events": [
+              {
+                "type": "click",
+                "markname": "resetBtn"
+              },
+              {
+                "type": "dblclick"
+              }
+            ],
+            "update": "null"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "name": "rawLinks",
+        "values": [
+          {
+            "source": "On-Demand",
+            "target": "EC2",
+            "value": 82
+          },
+          {
+            "source": "On-Demand",
+            "target": "RDS",
+            "value": 28
+          },
+          {
+            "source": "On-Demand",
+            "target": "Lambda",
+            "value": 22
+          },
+          {
+            "source": "On-Demand",
+            "target": "S3",
+            "value": 15
+          },
+          {
+            "source": "On-Demand",
+            "target": "K8s",
+            "value": 18
+          },
+          {
+            "source": "On-Demand",
+            "target": "Other Svc",
+            "value": 10
+          },
+          {
+            "source": "Reserved",
+            "target": "EC2",
+            "value": 110
+          },
+          {
+            "source": "Reserved",
+            "target": "RDS",
+            "value": 45
+          },
+          {
+            "source": "Reserved",
+            "target": "S3",
+            "value": 12
+          },
+          {
+            "source": "Reserved",
+            "target": "K8s",
+            "value": 30
+          },
+          {
+            "source": "Spot",
+            "target": "EC2",
+            "value": 48
+          },
+          {
+            "source": "Spot",
+            "target": "Lambda",
+            "value": 8
+          },
+          {
+            "source": "Spot",
+            "target": "K8s",
+            "value": 22
+          },
+          {
+            "source": "Savings Plan",
+            "target": "EC2",
+            "value": 35
+          },
+          {
+            "source": "Savings Plan",
+            "target": "Lambda",
+            "value": 15
+          },
+          {
+            "source": "EC2",
+            "target": "us-east-1",
+            "value": 125
+          },
+          {
+            "source": "EC2",
+            "target": "eu-west-1",
+            "value": 85
+          },
+          {
+            "source": "EC2",
+            "target": "ap-northeast-1",
+            "value": 65
+          },
+          {
+            "source": "RDS",
+            "target": "us-east-1",
+            "value": 40
+          },
+          {
+            "source": "RDS",
+            "target": "eu-west-1",
+            "value": 20
+          },
+          {
+            "source": "RDS",
+            "target": "ap-northeast-1",
+            "value": 13
+          },
+          {
+            "source": "Lambda",
+            "target": "us-east-1",
+            "value": 25
+          },
+          {
+            "source": "Lambda",
+            "target": "eu-west-1",
+            "value": 12
+          },
+          {
+            "source": "Lambda",
+            "target": "ap-northeast-1",
+            "value": 8
+          },
+          {
+            "source": "S3",
+            "target": "us-east-1",
+            "value": 15
+          },
+          {
+            "source": "S3",
+            "target": "eu-west-1",
+            "value": 8
+          },
+          {
+            "source": "S3",
+            "target": "ap-northeast-1",
+            "value": 4
+          },
+          {
+            "source": "K8s",
+            "target": "us-east-1",
+            "value": 32
+          },
+          {
+            "source": "K8s",
+            "target": "eu-west-1",
+            "value": 22
+          },
+          {
+            "source": "K8s",
+            "target": "ap-northeast-1",
+            "value": 16
+          },
+          {
+            "source": "Other Svc",
+            "target": "us-east-1",
+            "value": 5
+          },
+          {
+            "source": "Other Svc",
+            "target": "eu-west-1",
+            "value": 3
+          },
+          {
+            "source": "Other Svc",
+            "target": "ap-northeast-1",
+            "value": 2
+          },
+          {
+            "source": "us-east-1",
+            "target": "Proj Alpha",
+            "value": 80
+          },
+          {
+            "source": "us-east-1",
+            "target": "Proj Beta",
+            "value": 62
+          },
+          {
+            "source": "us-east-1",
+            "target": "Shared Infra",
+            "value": 55
+          },
+          {
+            "source": "us-east-1",
+            "target": "Proj Gamma",
+            "value": 45
+          },
+          {
+            "source": "eu-west-1",
+            "target": "Proj Alpha",
+            "value": 40
+          },
+          {
+            "source": "eu-west-1",
+            "target": "Proj Beta",
+            "value": 35
+          },
+          {
+            "source": "eu-west-1",
+            "target": "Shared Infra",
+            "value": 42
+          },
+          {
+            "source": "eu-west-1",
+            "target": "Proj Gamma",
+            "value": 33
+          },
+          {
+            "source": "ap-northeast-1",
+            "target": "Proj Alpha",
+            "value": 25
+          },
+          {
+            "source": "ap-northeast-1",
+            "target": "Proj Beta",
+            "value": 28
+          },
+          {
+            "source": "ap-northeast-1",
+            "target": "Shared Infra",
+            "value": 30
+          },
+          {
+            "source": "ap-northeast-1",
+            "target": "Proj Gamma",
+            "value": 25
+          },
+          {
+            "source": "Proj Alpha",
+            "target": "Engineering",
+            "value": 95
+          },
+          {
+            "source": "Proj Alpha",
+            "target": "Data Team",
+            "value": 50
+          },
+          {
+            "source": "Proj Beta",
+            "target": "Engineering",
+            "value": 55
+          },
+          {
+            "source": "Proj Beta",
+            "target": "Data Team",
+            "value": 40
+          },
+          {
+            "source": "Proj Beta",
+            "target": "Finance Dept",
+            "value": 30
+          },
+          {
+            "source": "Shared Infra",
+            "target": "Engineering",
+            "value": 50
+          },
+          {
+            "source": "Shared Infra",
+            "target": "Data Team",
+            "value": 32
+          },
+          {
+            "source": "Shared Infra",
+            "target": "Finance Dept",
+            "value": 25
+          },
+          {
+            "source": "Shared Infra",
+            "target": "Platform Ops",
+            "value": 20
+          },
+          {
+            "source": "Proj Gamma",
+            "target": "Engineering",
+            "value": 35
+          },
+          {
+            "source": "Proj Gamma",
+            "target": "Data Team",
+            "value": 38
+          },
+          {
+            "source": "Proj Gamma",
+            "target": "Finance Dept",
+            "value": 15
+          },
+          {
+            "source": "Proj Gamma",
+            "target": "Platform Ops",
+            "value": 15
+          }
+        ]
+      },
+      {
+        "name": "nodeConfig",
+        "values": [
+          {
+            "name": "On-Demand",
+            "depth": 0,
+            "order": 0
+          },
+          {
+            "name": "Reserved",
+            "depth": 0,
+            "order": 1
+          },
+          {
+            "name": "Spot",
+            "depth": 0,
+            "order": 2
+          },
+          {
+            "name": "Savings Plan",
+            "depth": 0,
+            "order": 3
+          },
+          {
+            "name": "EC2",
+            "depth": 1,
+            "order": 0
+          },
+          {
+            "name": "RDS",
+            "depth": 1,
+            "order": 1
+          },
+          {
+            "name": "Lambda",
+            "depth": 1,
+            "order": 2
+          },
+          {
+            "name": "S3",
+            "depth": 1,
+            "order": 3
+          },
+          {
+            "name": "K8s",
+            "depth": 1,
+            "order": 4
+          },
+          {
+            "name": "Other Svc",
+            "depth": 1,
+            "order": 5
+          },
+          {
+            "name": "us-east-1",
+            "depth": 2,
+            "order": 0
+          },
+          {
+            "name": "eu-west-1",
+            "depth": 2,
+            "order": 1
+          },
+          {
+            "name": "ap-northeast-1",
+            "depth": 2,
+            "order": 2
+          },
+          {
+            "name": "Proj Alpha",
+            "depth": 3,
+            "order": 0
+          },
+          {
+            "name": "Proj Beta",
+            "depth": 3,
+            "order": 1
+          },
+          {
+            "name": "Shared Infra",
+            "depth": 3,
+            "order": 2
+          },
+          {
+            "name": "Proj Gamma",
+            "depth": 3,
+            "order": 3
+          },
+          {
+            "name": "Engineering",
+            "depth": 4,
+            "order": 0
+          },
+          {
+            "name": "Data Team",
+            "depth": 4,
+            "order": 1
+          },
+          {
+            "name": "Finance Dept",
+            "depth": 4,
+            "order": 2
+          },
+          {
+            "name": "Platform Ops",
+            "depth": 4,
+            "order": 3
+          }
+        ]
+      },
+      {
+        "name": "depthLabelsData",
+        "values": [
+          {
+            "depth": 0,
+            "label": "Purchase Option"
+          },
+          {
+            "depth": 1,
+            "label": "AWS Service"
+          },
+          {
+            "depth": 2,
+            "label": "Region"
+          },
+          {
+            "depth": 3,
+            "label": "Project / Tag"
+          },
+          {
+            "depth": 4,
+            "label": "Cost Center"
+          }
+        ]
+      },
+      {
+        "name": "filteredLinks",
+        "source": "rawLinks",
+        "transform": [
+          {
+            "type": "filter",
+            "expr": "datum.value >= threshold"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.source + ' → ' + datum.target",
+            "as": "linkId"
+          }
+        ]
+      },
+      {
+        "name": "linksWithOrder",
+        "source": "filteredLinks",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcConfig"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtConfig"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.order",
+            "as": "srcOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.order",
+            "as": "tgtOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.depth",
+            "as": "srcDepth"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.depth",
+            "as": "tgtDepth"
+          }
+        ]
+      },
+      {
+        "name": "outTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "source"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalOut"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "inTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "target"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalIn"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nodePositions",
+        "source": "nodeConfig",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "outTotals",
+            "key": "source",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "outInfo"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "inTotals",
+            "key": "target",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "inInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+            "as": "totalOut"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+            "as": "totalIn"
+          },
+          {
+            "type": "formula",
+            "expr": "max(datum.totalOut, datum.totalIn)",
+            "as": "total"
+          },
+          {
+            "type": "filter",
+            "expr": "datum.total > 0"
+          },
+          {
+            "type": "stack",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "field": "total"
+          },
+          {
+            "type": "window",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "ops": [
+              "row_number"
+            ],
+            "as": [
+              "rankInDepth"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y0g"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y1g"
+          }
+        ]
+      },
+      {
+        "name": "sourceStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "source"
+            ],
+            "sort": {
+              "field": "tgtOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "srcCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcCumEnd - datum.value",
+            "as": "srcCumStart"
+          }
+        ]
+      },
+      {
+        "name": "targetStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "target"
+            ],
+            "sort": {
+              "field": "srcOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "tgtCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtCumEnd - datum.value",
+            "as": "tgtCumStart"
+          }
+        ]
+      },
+      {
+        "name": "edges",
+        "source": "sourceStacked",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "targetStacked",
+            "key": "linkId",
+            "fields": [
+              "linkId"
+            ],
+            "as": [
+              "tgtInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+            "as": "tgtCumStart"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+            "as": "tgtCumEnd"
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcNode"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtNode"
+            ]
+          },
+          {
+            "type": "filter",
+            "expr": "datum.srcNode && datum.tgtNode"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumStart",
+            "as": "absSy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+            "as": "absSy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+            "as": "absTy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+            "as": "absTy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+            "as": "srcPct"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+            "as": "tgtPct"
+          }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "x",
+        "type": "point",
+        "range": "width",
+        "domain": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "padding": 0.5
+      },
+      {
+        "name": "y",
+        "type": "linear",
+        "range": [
+          0,
+          {
+            "signal": "height"
+          }
+        ],
+        "domain": {
+          "data": "nodePositions",
+          "field": "y1g"
+        }
+      },
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {
+          "data": "nodeConfig",
+          "field": "name"
+        },
+        "range": {
+          "scheme": "category20b"
+        }
+      }
+    ],
+    "marks": [
+      {
+        "type": "path",
+        "name": "edgeMark",
+        "from": {
+          "data": "edges"
+        },
+        "encode": {
+          "update": {
+            "path": {
+              "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "source"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.35"
+            },
+            "stroke": {
+              "scale": "color",
+              "field": "source"
+            },
+            "strokeWidth": {
+              "value": 0.5
+            },
+            "strokeOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': $' + format(datum.value, ',d') + 'K (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ')'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          },
+          "hover": {
+            "fillOpacity": {
+              "value": 0.8
+            }
+          }
+        }
+      },
+      {
+        "type": "rect",
+        "name": "nodeRect",
+        "from": {
+          "data": "nodePositions"
+        },
+        "encode": {
+          "enter": {
+            "width": {
+              "signal": "nodeWidth"
+            },
+            "cornerRadius": {
+              "value": 2
+            }
+          },
+          "update": {
+            "x": {
+              "scale": "x",
+              "field": "depth"
+            },
+            "y": {
+              "scale": "y",
+              "field": "y0g"
+            },
+            "y2": {
+              "scale": "y",
+              "field": "y1g"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "name"
+            },
+            "stroke": {
+              "value": "#333"
+            },
+            "strokeWidth": {
+              "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 0.5"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+            },
+            "tooltip": {
+              "signal": "datum.name + ': $' + format(datum.total, ',d') + 'K'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "field": "name"
+            },
+            "fontSize": {
+              "value": 10
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#333"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 12"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 18 ? '$' + format(datum.total, ',d') + 'K' : ''"
+            },
+            "fontSize": {
+              "value": 9
+            },
+            "fill": {
+              "value": "#888"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "depthLabelsData"
+        },
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "x": {
+              "signal": "scale('x', datum.depth) + nodeWidth / 2"
+            },
+            "y": {
+              "signal": "height + 25"
+            },
+            "text": {
+              "field": "label"
+            },
+            "fontSize": {
+              "value": 11
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#555"
+            },
+            "baseline": {
+              "value": "top"
+            },
+            "align": {
+              "value": "center"
+            }
+          }
+        }
+      },
+      {
+        "type": "group",
+        "data": [
+          {
+            "name": "showResetData",
+            "values": [
+              {}
+            ],
+            "transform": [
+              {
+                "type": "filter",
+                "expr": "selectedNode"
+              }
+            ]
+          }
+        ],
+        "encode": {
+          "enter": {
+            "xc": {
+              "signal": "width / 2"
+            },
+            "y": {
+              "value": -35
+            },
+            "width": {
+              "value": 100
+            },
+            "height": {
+              "value": 26
+            }
+          }
+        },
+        "marks": [
+          {
+            "type": "group",
+            "name": "resetBtn",
+            "from": {
+              "data": "showResetData"
+            },
+            "encode": {
+              "enter": {
+                "cornerRadius": {
+                  "value": 5
+                },
+                "fill": {
+                  "value": "#f5f5f5"
+                },
+                "stroke": {
+                  "value": "#bbb"
+                },
+                "strokeWidth": {
+                  "value": 1.5
+                },
+                "height": {
+                  "field": {
+                    "group": "height"
+                  }
+                },
+                "width": {
+                  "field": {
+                    "group": "width"
+                  }
+                },
+                "cursor": {
+                  "value": "pointer"
+                }
+              },
+              "update": {
+                "opacity": {
+                  "value": 1
+                }
+              },
+              "hover": {
+                "opacity": {
+                  "value": 0.7
+                }
+              }
+            },
+            "marks": [
+              {
+                "type": "text",
+                "interactive": false,
+                "encode": {
+                  "enter": {
+                    "xc": {
+                      "field": {
+                        "group": "width"
+                      },
+                      "mult": 0.5
+                    },
+                    "yc": {
+                      "field": {
+                        "group": "height"
+                      },
+                      "mult": 0.5,
+                      "offset": 1
+                    },
+                    "align": {
+                      "value": "center"
+                    },
+                    "baseline": {
+                      "value": "middle"
+                    },
+                    "fontWeight": {
+                      "value": "bold"
+                    },
+                    "fontSize": {
+                      "value": 11
+                    },
+                    "text": {
+                      "value": "Show All"
+                    },
+                    "fill": {
+                      "value": "#555"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "title": {
+      "text": "Sankey AWS Cloud Cost Allocation: Purchase → Service → Region → Project → Team ($K/mo)",
+      "subtitle": "Hover to trace cost  |  Click node to isolate  |  $500K/mo total spend across 3 regions",
+      "fontSize": 16,
+      "subtitleFontSize": 11,
+      "subtitleColor": "#999",
+      "anchor": "start"
+    }
+  }

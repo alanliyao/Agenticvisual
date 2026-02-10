@@ -1,0 +1,78 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "104_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/104_gender_gap_in_life_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "in 1967,what was the contribution number of Germany?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "1.0",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "Zoomed to time range: 1966 to 1968,and we can see 1967 clearly."
+          },
+          {
+            "iteration": 2,
+            "tool": "focus_lines",
+            "reasoning": "Focused on line of Germany,and we can see the number is very near 1.0"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "1966",
+                  "end": "1968"
+                }
+              }
+            },
+            {
+              "tool": "focus_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "dim",
+                  "lines": [
+                    "Germany"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "1966",
+              "1968"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Contribution of gender in life expectancy gap (years) - Age group: 15-39",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

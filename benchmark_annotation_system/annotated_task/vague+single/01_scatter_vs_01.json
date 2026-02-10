@@ -1,0 +1,53 @@
+{
+  "task_type": "vague_single",
+  "task_id": "01_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/01_scatter_cars.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "How do vehicle origin groups relate to the pattern of miles per gallon and horsepower?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Clusters appear to align strongly with vehicle origin, with USA-origin cars forming a distinct low-MPG, high-horsepower cluster."
+        },
+        "key_insights": [
+          "The densest cluster is dominated by USA cars, while European and Japanese cars form smaller, separate clusters in the higher-MPG, lower-horsepower range.",
+          "There is a clear negative correlation between MPG and horsepower within each identified cluster, though the slope varies slightly by origin."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "identify_clusters",
+            "reasoning": "The identify clusters tool is ideal here because the question is vague and exploratory, seeking to uncover hidden groupings rather than a precise value. This tool helps reveal how origin acts as a latent driver of the relationship between MPG and horsepower, a pattern that is not obvious from the raw scatter plot alone. The gap between the initial view and the insight is closed by formalizing the visual groupings into distinct clusters."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "numeric",
+                "param": "n_clusters",
+                "target": 3,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Horsepower",
+            "y": "Miles_per_Gallon",
+            "color": "cluster_3"
+          }
+        }
+      }
+    }
+  ]
+}

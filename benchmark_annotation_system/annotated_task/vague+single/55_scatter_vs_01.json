@@ -1,0 +1,56 @@
+{
+  "task_type": "vague_single",
+  "task_id": "55_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/55_Ecommerce_Delivery_Analytics_New_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What is the average quality of service for low-priced, medium-priced and high-priced products?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The average quality of services for high-priced goods is around 4.; The quality of services for mid-range priced goods is not significantly different from that of high-end products on average. However, there are many more low-end products.; The cheap orders are highly polarized, consisting of half of high-quality items and half of low-quality ones."
+        },
+        "key_insights": [
+          "The average quality of services for high-priced goods is around 4.",
+          "The quality of services for mid-range priced goods is not significantly different from that of high-end products on average. However, there are many more low-end products.",
+          "The cheap orders are highly polarized, consisting of half of high-quality items and half of low-quality ones."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "identify_clusters",
+            "reasoning": "Classified by price"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n_clusters": 3,
+                  "method": "kmeans"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Delivery Time (Minutes)",
+            "y": "Order Value (INR)",
+            "color": "cluster_3"
+          }
+        }
+      }
+    }
+  ]
+}

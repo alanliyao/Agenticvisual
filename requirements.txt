@@ -1,5 +1,6 @@
 # Core Dependencies
 python-dotenv==1.0.0
+kaggle==1.6.0
 numpy==1.24.3
 scipy==1.10.1
 
@@ -31,6 +32,10 @@ pydantic==2.3.0          # 数据验证
 pytest==7.4.0
 pytest-cov==4.1.0
 
+# Evaluation (Optional - for semantic matching)
+bert-score>=0.3.13  # BERTScore for semantic answer matching
+# Note: bert-score requires torch and transformers
+
 # Code Quality (Optional, for development)
 # black==23.7.0
 # flake8==6.1.0
@@ -42,3 +47,4 @@ pytest-cov==4.1.0
 # 3. 如需图表渲染：
 #    - Python方式（推荐）：已包含 vl-convert-python
 #    - Node.js方式：npm install -g vega vega-lite vega-cli canvas
+streamlit>=1.28.0

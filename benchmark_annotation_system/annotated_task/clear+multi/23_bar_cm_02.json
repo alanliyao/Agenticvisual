@@ -1,0 +1,106 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "23_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/23_Mobiles Dataset (2025)_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "Analyze whether the equipment of these companies showed a trend of \"high-capacity centralization\" from 2021 to 2023",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "YES"
+        },
+        "key_insights": [
+          "The average data for 2021 was 4800, while for 2022 it was 5100 and for 2023 it was 5400. Therefore, the answer is \"YES\""
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "Filter out the data from other years to obtain the data for 2021."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_subcategories",
+            "reasoning": "Filter out the data from other years to obtain the data for 2022."
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_subcategories",
+            "reasoning": "Filter out the data from other years to obtain the data for 2023."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Year 2024",
+                    "Year 2023",
+                    "Year 2022",
+                    "Year 2020",
+                    "Year 2025"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Year 2021",
+                    "Year 2020",
+                    "Year 2025",
+                    "Year 2023",
+                    "Year 2024"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Year 2024",
+                    "Year 2022",
+                    "Year 2021",
+                    "Year 2020",
+                    "Year 2025"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Company Name",
+            "y": "Battery Capacity(mAh)",
+            "color": "Launched Year"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Launched Year'] != \"Year 2024\" && datum['Launched Year'] != \"Year 2022\" && datum['Launched Year'] != \"Year 2021\" && datum['Launched Year'] != \"Year 2020\" && datum['Launched Year'] != \"Year 2025\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "28_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/28_silver_prices_data_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which time period after 2020 saw the greatest stock price growth?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Fourth Quarter of 2025",
+          "alternatives": [
+            "2025 Q4"
+          ]
+        },
+        "key_insights": [
+          "The closing prices of silver remained relatively stable from 2020 to 2025.",
+          "After April 2025, volatility will increase.",
+          "The observed steep slope of the trendline in both the third and fourth quarters of 2025 indicates significant growth during these two quarters.",
+          "However, the slope of the line in the fourth quarter of 2025 is still steeper than that in the third quarter of 2025.",
+          "Therefore, it can be said that the average closing price in the fourth quarter of 2025 saw the largest increase."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "First, use the Zoom Time Range tool to focus on data after 2020, where a period of sharp growth is observed. Next, try zoom into the end of 2025 and the begin of 2026 to see the exact date."
+          },
+          {
+            "iteration": 2,
+            "tool": "resample_time",
+            "reasoning": "After using the resample time tool, you can precisely locate the segment with the steepest slope, identifying the point of greatest change. No further tools are required."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "categorical",
+                "param": "start",
+                "target": {
+                  "start": "2020/1/3",
+                  "end": "2026/1/9"
+                }
+              }
+            },
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "categorical",
+                "param": "granularity",
+                "target": "quarter"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2020/1/3",
+              "2026/1/9"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "Close",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

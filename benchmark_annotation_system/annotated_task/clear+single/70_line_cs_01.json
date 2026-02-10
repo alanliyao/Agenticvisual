@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "70_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/70_one_person_ai_work_and_burnout_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the peak around day 90 to check the exact percentage of AI tool usage and the number of bugs introduced at that point.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "47%.",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "Zooming in provides the precise values needed to quantify both the usage spike and its associated bugs."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "88",
+                  "end": "92"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "88",
+              "92"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Day",
+            "y": "AI_Tool_Usage_%",
+            "color": "Bugs_Introduced"
+          }
+        }
+      }
+    }
+  ]
+}

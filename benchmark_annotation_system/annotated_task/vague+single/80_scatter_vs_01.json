@@ -1,0 +1,63 @@
+{
+  "task_type": "vague_single",
+  "task_id": "80_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/80_gym_members_exercise_tracking_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What are the patterns regarding the duration of exercise for people who do yoga?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "People who practice yoga usually spend more than one hour per session. Moreover, it has been observed that those who spend a longer duration on each yoga session tend to do yoga more frequently."
+        },
+        "key_insights": [
+          "it could find that many of them do more than 1 hour",
+          "the longer they use in yoga, the more frequent they will spend on it"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "filter other type"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "Cardio",
+                    "HIIT",
+                    "Strength"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Session_Duration (hours)",
+            "y": "Calories_Burned",
+            "color": "Workout_Type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Cardio\", \"HIIT\", \"Strength\"], datum['Workout_Type']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

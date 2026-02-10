@@ -1,0 +1,81 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "29_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/29_students_ai_usage_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "examining AI usage differences between AI users and non-users in this subgroup.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "positive correlation between AI usage and academic performance."
+        },
+        "key_insights": [
+          "top post-AI grades are dominated by students combining AI usage with high study hours and balanced screen time",
+          "Resetting the highlight restores the full dataset’s density, validating the uniqueness of the high-achieving subgroup and the specificity of the observed interaction pattern."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "reset_view",
+            "reasoning": "highlighting isolates the high post-AI grade subgroup, focusing analysis on a critical academic outcome group"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "Then examining the subgroup unpacks the interplay of screen time and study hours with AI usage, addressing the vague multi-variable exploration goal."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "reset_view",
+              "param_eval": {}
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "uses_ai",
+                  "values": [
+                    "No"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"No\"], datum['uses_ai']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

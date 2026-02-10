@@ -1,0 +1,78 @@
+{
+  "task_type": "clear_single",
+  "task_id": "12_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/12_sankey_microsoft.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What is Microsoft's gross profit margin?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "0.67",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "get the revenue inflow is 52.7 and there are 35.2 go to gross, so the reason is 0.67"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Revenue"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Server Products",
+            "Office Products",
+            "LinkedIn",
+            "Windows",
+            "Gaming",
+            "Others (Layer 0)",
+            "Intelligent Cloud",
+            "Productivity",
+            "Personal Computing",
+            "Revenue",
+            "Gross Profit",
+            "Cost of Revenue",
+            "Operating Profit",
+            "Operating Expenses",
+            "Product Costs",
+            "Service Costs",
+            "Net Profit",
+            "Tax",
+            "R&D",
+            "S&M",
+            "G&A"
+          ],
+          "collapsed_nodes": [
+            "Others (Layer 0)"
+          ]
+        }
+      }
+    }
+  ]
+}

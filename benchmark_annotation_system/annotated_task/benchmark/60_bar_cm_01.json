@@ -1,0 +1,100 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "60_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/60_Berlin_crimes_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "If I want to choose to live in the Treptow-Köpenick district but don't want too much robbery, which location should I choose to live in?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Schmockwitz, Karolinenhof and Rauchfangswerder.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "To focus on the Treptow-Köpenick district, the filter categories tool should be used to filter out all districts except Treptow-Köpenick district."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "To select the location, it's necessary to use the change encoding tool to switch the field to location."
+          },
+          {
+            "iteration": 3,
+            "tool": "toggle_stack_mode",
+            "reasoning": "To compare robberies at different locations, it's necessary to use toggle stack mode to switch the mode to grouped.. filter_categories."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Mitte",
+                    "Friedrichshain-Kreuzberg",
+                    "Pankow",
+                    "Charlottenburg-Wilmersdorf",
+                    "Spandau",
+                    "Steglitz-Zehlendorf",
+                    "Tempelhof-Schöneberg",
+                    "Neukölln",
+                    "Marzahn-Hellersdorf",
+                    "Lichtenberg",
+                    "Reinickendorf"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Location",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "District",
+            "y": "Fire",
+            "color": "Location"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Mitte\",\"Friedrichshain-Kreuzberg\",\"Pankow\",\"Charlottenburg-Wilmersdorf\",\"Spandau\",\"Steglitz-Zehlendorf\",\"Tempelhof-Schöneberg\",\"Neukölln\",\"Marzahn-Hellersdorf\",\"Lichtenberg\",\"Reinickendorf\"], datum['District']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "79_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/79_ign_scores_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "For all Xbox platforms,do they have any specific characteristics in their activity data?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "maximum is 7.70,minimum is 6.72,mean is 7.08 and median is 6.82."
+        },
+        "key_insights": [
+          "there are three platforms",
+          "the max value is Xbox one,the min value Xbox 360 and median is Xbox."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Filtered 18 categories,and we can see three Xbox platforms."
+          },
+          {
+            "iteration": 2,
+            "tool": "sort_bars",
+            "reasoning": "Sorted those three bars in descending order,and we can calculate their maximum,minimum,mean and median."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "PlayStation 3",
+                    "PlayStation 4",
+                    "PlayStation Portable",
+                    "PlayStation Vita",
+                    "Wii",
+                    "Wireless",
+                    "iPhone",
+                    "PlayStation 2",
+                    "PlayStation",
+                    "Dreamcast",
+                    "Game Boy Advance",
+                    "Game Boy Color",
+                    "GameCube",
+                    "Nintendo 3DS",
+                    "Nintendo 64",
+                    "Nintendo DS",
+                    "Nintendo DSi",
+                    "PC"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Action",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"PlayStation 3\",\"PlayStation 4\",\"PlayStation Portable\",\"PlayStation Vita\",\"Wii\",\"Wireless\",\"iPhone\",\"PlayStation 2\",\"PlayStation\",\"Dreamcast\",\"Game Boy Advance\",\"Game Boy Color\",\"GameCube\",\"Nintendo 3DS\",\"Nintendo 64\",\"Nintendo DS\",\"Nintendo DSi\",\"PC\"], datum['Platform']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

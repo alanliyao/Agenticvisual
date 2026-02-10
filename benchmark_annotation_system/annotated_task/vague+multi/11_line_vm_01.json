@@ -1,0 +1,93 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "11_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/11_apple_time_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "Analyze the overall audience of Apple products and the regular audience excluding the specific year group.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It is very clear to see that, overall, the MacBook is the most popular while the iPad is the least popular. However, after excluding the special 2022 model, it can be observed that the sales volume of the MacBook is far lower than that of the iPhone and other flagship products."
+        },
+        "key_insights": [
+          "find macbook have the most revenue and ipad the least"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the charts of revenue and product"
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_time_range",
+            "reasoning": "get the chats in 2027 to 2021"
+          },
+          {
+            "iteration": 3,
+            "tool": "zoom_time_range",
+            "reasoning": "get the data in 2023 to 2025"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2007",
+                  "end": "2021"
+                }
+              }
+            },
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2022",
+                  "end": "2025"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2022",
+              "2025"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Revenue_Billions",
+            "color": "Product"
+          }
+        }
+      }
+    }
+  ]
+}

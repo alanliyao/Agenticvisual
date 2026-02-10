@@ -1,0 +1,117 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "clear_multi",
+      "chart_type": "line",
+      "meta": {
+        "chart_type": "line",
+        "title": "11_line_stocks",
+        "filename": "11_line_stocks.json",
+        "data_points": 26,
+        "total_points": 26,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "cl_02",
+          "question": "Why did Google's stock price rise significantly from 2004 to 2010 and ultimately far exceed that of the other four companies?",
+          "ground_truth": {
+            "answer": "Because Google has introduced many barrier-breaking technological achievements over these years.",
+            "key_insights": [
+              "There are two types of companies: those with rapidly rising stock prices and those with steadily growing stock prices.",
+              "The 2007-2008 financial crisis had a structurally different impact on technology stocks."
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "zoom_time_range",
+                "reasoning": "From the given line chart and using the zoom time range tool,we observe that there are two types of stock price growth rates that are significantly different"
+              },
+              {
+                "iteration": 2,
+                "tool": "highlight_trend",
+                "reasoning": "Using the highlight trend tool,we can observe that during 2007-2008, the stocks of all companies declined to varying degrees, with Google's stock experiencing the largest drop, while the rest declined slowly."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "zoom_time_range",
+                "highlight_trend"
+              ],
+              "param_eval": [
+                {
+                  "tool": "zoom_time_range",
+                  "params": {
+                    "start": "2004",
+                    "end": "2010"
+                  }
+                },
+                {
+                  "tool": "highlight_trend",
+                  "params": {
+                    "trend_type": "decreasing"
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": null,
+                "y": null,
+                "color": null
+              },
+              "layers": {
+                "count": 2,
+                "types": [
+                  "line",
+                  "line"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "zoom_time_range",
+          "parameters": {
+            "start": "2004",
+            "end": "2010"
+          },
+          "result": {
+            "operation": "zoom_time_range",
+            "message": "Zoomed to time range: 2004 to 2010",
+            "details": [
+              "View zoomed to show time range between 2004 and 2010"
+            ]
+          },
+          "key_insights": [
+            "There are two types of companies: those with rapidly rising stock prices and those with steadily growing stock prices."
+          ],
+          "reasoning": "From the given line chart and using the zoom time range tool,we observe that there are two types of stock price growth rates that are significantly different"
+        },
+        {
+          "tool_name": "highlight_trend",
+          "parameters": {
+            "trend_type": "decreasing"
+          },
+          "result": {
+            "operation": "highlight_trend",
+            "message": "Added decreasing regression trend line",
+            "details": [
+              "Trend line shows overall decreasing pattern"
+            ]
+          },
+          "key_insights": [
+            "The 2007-2008 financial crisis had a structurally different impact on technology stocks."
+          ],
+          "reasoning": "Using the highlight trend tool,we can observe that during 2007-2008, the stocks of all companies declined to varying degrees, with Google's stock experiencing the largest drop, while the rest declined slowly."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-22T12:44:25.688Z"
+}

@@ -1,0 +1,90 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "104_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/104_gender_gap_in_life_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What was the trend of Russia's contribution changes between 2000 and 2010?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "First decrease, then increase, then decrease again, with the changes staying within 1.0."
+        },
+        "key_insights": [
+          "There have been both increases and decreases, but the changes are not significant.",
+          "First decreased, then increased, then decreased again.",
+          "bu the changes were  staying within 1.0."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "View zoomed to show time range between 2000 and 2010,and roughly analyse the line of Russia."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_lines",
+            "reasoning": "Filtered out lines,and analyse detailedly.we can see the changes had three stages."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2000",
+                  "end": "2010"
+                }
+              }
+            },
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Australia",
+                    "Germany",
+                    "Japan",
+                    "New Zealand",
+                    "United Kingdom",
+                    "United States"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2000",
+              "2010"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Contribution of gender in life expectancy gap (years) - Age group: 15-39",
+            "color": "Entity"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Australia\", \"Germany\", \"Japan\", \"New Zealand\", \"United Kingdom\", \"United States\"], datum['Entity']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

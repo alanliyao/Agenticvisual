@@ -1,0 +1,62 @@
+{
+  "task_type": "clear_single",
+  "task_id": "28_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/28_silver_prices_data_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the time range of 2025 to 2026 to pinpoint the exact date when silver closing price first surpasses 80.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "December28 2025",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "resolves the dense price fluctuation data in this period, revealing the precise timing of the 80 threshold breach."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "A single zoom action narrows the temporal scope to isolate the critical price movement, directly answering the clear, single-target question"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2025/6/10",
+                  "end": "2026/1/9"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2025/6/10",
+              "2026/1/9"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "Close",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

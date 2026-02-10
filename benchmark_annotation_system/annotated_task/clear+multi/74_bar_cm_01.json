@@ -1,0 +1,93 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "74_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/74_StudentsPerformance_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "Among all the groups, which group has made the greatest contribution from families with a master's degree?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "E",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "get the groped bar"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_subcategories",
+            "reasoning": "get the chart only have master's degree"
+          },
+          {
+            "iteration": 3,
+            "tool": "sort_bars",
+            "reasoning": "get the top one"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "bachelor's degree",
+                    "some college",
+                    "associate's degree",
+                    "high school",
+                    "some high school"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "math score",
+            "color": "parental level of education"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['parental level of education'] != \"bachelor's degree\" && datum['parental level of education'] != \"some college\" && datum['parental level of education'] != \"associate's degree\" && datum['parental level of education'] != \"high school\" && datum['parental level of education'] != \"some high school\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

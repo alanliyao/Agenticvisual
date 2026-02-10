@@ -1,0 +1,55 @@
+{
+  "task_type": "vague_single",
+  "task_id": "79_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/79_ign_scores_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "sort the bars to show what is the feature of the mean of action by different platform?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "the maximum value is 7.703,the miminmum value is 5.9,the Median value is 6.719"
+        },
+        "key_insights": [
+          "the maximum value is 7.703(Xbox One)",
+          "the miminmum value is 5.9(Nintendo DS)",
+          "the Median value is 6.719(Xbox 360)"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sorted bars in ascending order,and we can see some feature of the data."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "ascending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Action",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

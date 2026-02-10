@@ -1,0 +1,74 @@
+{
+  "task_id": "07_bar",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/07_bar_synthetic_mental_health.json",
+  "metadata": { "chart_type": "bar" },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Sort the bars by total sleep_hours in descending order. Which diet_quality category has the highest total?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "good",
+          "alternatives": ["Good"]
+        },
+        "key_insights": [
+          "Bars sorted descending by sleep_hours",
+          "good has the highest aggregated sleep_hours among diet_quality categories"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sort bars by value descending to see which category has highest total sleep_hours."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {}
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    },
+    {
+      "qid": "vs_01",
+      "question": "Explore the relationship between diet quality and sleep hours. What patterns do you notice?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Better diet quality tends to associate with higher total sleep hours. The good category shows the highest aggregate."
+        },
+        "key_insights": [
+          "good diet_quality has highest total sleep_hours",
+          "poor and average are lower; stacking by weather adds detail"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sort to compare totals across diet_quality."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {}
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {}
+        }
+      }
+    }
+  ]
+}

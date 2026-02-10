@@ -1,0 +1,81 @@
+{
+  "task_type": "clear_single",
+  "task_id": "29_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/29_students_ai_usage_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the peak segment of daily screen time hours to analyze the categorical distribution of AI usage status within this specific time range.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "AI usage and non-usage are nearly equal",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The zoomed view resolves line overlap, clarifying the threshold effect of screen time on AI usage behavior."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "This single zoom action isolates the high-impact range, bridging the gap between the dense original view and targeted categorical distribution analysis."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "grades_before_ai",
+                    "grades_after_ai"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "study_hours_per_day",
+              "daily_screen_time_hours"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"study_hours_per_day\", \"daily_screen_time_hours\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

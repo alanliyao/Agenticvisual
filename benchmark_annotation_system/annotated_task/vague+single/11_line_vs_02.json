@@ -1,0 +1,58 @@
+{
+  "task_type": "vague_single",
+  "task_id": "11_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/11_apple_time_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "what are the characteristics of the line of AirPods?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The line increased first, then stayed the same, then decreased, and then stayed the same again."
+        },
+        "key_insights": [
+          "Remained unchanged from 2022 to 2023,from 2024 to 2035.",
+          "increased since 2018",
+          "decreased from 2023 to 2024"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "focus_lines",
+            "reasoning": "focus on the AirPods,and we can see the changes had four steps"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "focus_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "dim",
+                  "lines": [
+                    "AirPods"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Revenue_Billions",
+            "color": "Product"
+          }
+        }
+      }
+    }
+  ]
+}

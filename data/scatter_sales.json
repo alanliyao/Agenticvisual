@@ -1,0 +1,210 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "data": {
+      "values": [
+        {
+          "category": "Electronics",
+          "subcategory": "Phones",
+          "value": 1200,
+          "count": 150,
+          "date": "2024-01",
+          "region": "North"
+        },
+        {
+          "category": "Electronics",
+          "subcategory": "Laptops",
+          "value": 2500,
+          "count": 80,
+          "date": "2024-01",
+          "region": "North"
+        },
+        {
+          "category": "Electronics",
+          "subcategory": "Tablets",
+          "value": 800,
+          "count": 120,
+          "date": "2024-01",
+          "region": "South"
+        },
+        {
+          "category": "Electronics",
+          "subcategory": "Phones",
+          "value": 1300,
+          "count": 160,
+          "date": "2024-02",
+          "region": "North"
+        },
+        {
+          "category": "Electronics",
+          "subcategory": "Laptops",
+          "value": 2400,
+          "count": 85,
+          "date": "2024-02",
+          "region": "South"
+        },
+        {
+          "category": "Electronics",
+          "subcategory": "Tablets",
+          "value": 850,
+          "count": 110,
+          "date": "2024-02",
+          "region": "East"
+        },
+        {
+          "category": "Clothing",
+          "subcategory": "Shirts",
+          "value": 50,
+          "count": 500,
+          "date": "2024-01",
+          "region": "North"
+        },
+        {
+          "category": "Clothing",
+          "subcategory": "Pants",
+          "value": 80,
+          "count": 300,
+          "date": "2024-01",
+          "region": "South"
+        },
+        {
+          "category": "Clothing",
+          "subcategory": "Shoes",
+          "value": 120,
+          "count": 200,
+          "date": "2024-01",
+          "region": "East"
+        },
+        {
+          "category": "Clothing",
+          "subcategory": "Shirts",
+          "value": 55,
+          "count": 520,
+          "date": "2024-02",
+          "region": "South"
+        },
+        {
+          "category": "Clothing",
+          "subcategory": "Pants",
+          "value": 85,
+          "count": 280,
+          "date": "2024-02",
+          "region": "West"
+        },
+        {
+          "category": "Clothing",
+          "subcategory": "Shoes",
+          "value": 115,
+          "count": 210,
+          "date": "2024-02",
+          "region": "North"
+        },
+        {
+          "category": "Food",
+          "subcategory": "Fruits",
+          "value": 30,
+          "count": 800,
+          "date": "2024-01",
+          "region": "East"
+        },
+        {
+          "category": "Food",
+          "subcategory": "Vegetables",
+          "value": 25,
+          "count": 900,
+          "date": "2024-01",
+          "region": "West"
+        },
+        {
+          "category": "Food",
+          "subcategory": "Dairy",
+          "value": 40,
+          "count": 600,
+          "date": "2024-01",
+          "region": "North"
+        },
+        {
+          "category": "Food",
+          "subcategory": "Fruits",
+          "value": 32,
+          "count": 850,
+          "date": "2024-02",
+          "region": "West"
+        },
+        {
+          "category": "Food",
+          "subcategory": "Vegetables",
+          "value": 28,
+          "count": 920,
+          "date": "2024-02",
+          "region": "East"
+        },
+        {
+          "category": "Food",
+          "subcategory": "Dairy",
+          "value": 42,
+          "count": 580,
+          "date": "2024-02",
+          "region": "South"
+        },
+        {
+          "category": "Furniture",
+          "subcategory": "Chairs",
+          "value": 200,
+          "count": 100,
+          "date": "2024-01",
+          "region": "West"
+        },
+        {
+          "category": "Furniture",
+          "subcategory": "Tables",
+          "value": 500,
+          "count": 50,
+          "date": "2024-01",
+          "region": "East"
+        },
+        {
+          "category": "Furniture",
+          "subcategory": "Sofas",
+          "value": 1500,
+          "count": 30,
+          "date": "2024-01",
+          "region": "North"
+        },
+        {
+          "category": "Furniture",
+          "subcategory": "Chairs",
+          "value": 210,
+          "count": 95,
+          "date": "2024-02",
+          "region": "North"
+        },
+        {
+          "category": "Furniture",
+          "subcategory": "Tables",
+          "value": 480,
+          "count": 55,
+          "date": "2024-02",
+          "region": "South"
+        },
+        {
+          "category": "Furniture",
+          "subcategory": "Sofas",
+          "value": 1450,
+          "count": 35,
+          "date": "2024-02",
+          "region": "West"
+        }
+      ]
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "field": "value",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "count",
+        "type": "quantitative"
+      }
+    }
+  }

@@ -1,0 +1,48 @@
+{
+  "task_type": "vague_single",
+  "task_id": "90_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/89_Sleep_health_and_lifestyle_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Examine the full heatmap to uncover the overarching relationship between BMI category, stress level, and mean sleep duration.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Normal Weight individuals having the longest sleep duration across all stress levels",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The Normal BMI group shows the most stable and highest sleep duration across stress levels, with minimal decline as stress rise"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_view_spec",
+            "reasoning": "A broad view of the full heatmap (single tool) is used to move beyond isolated subgroup analysis and identify cross-factor interaction patterns."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_view_spec",
+              "param_eval": {}
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Stress Level",
+            "y": "BMI Category",
+            "color": "Sleep Duration"
+          }
+        }
+      }
+    }
+  ]
+}

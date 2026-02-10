@@ -1,0 +1,87 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "36_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/36_cancer_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "First use the change encoding tool to set color encoding to diagnosis, then brush the region where Radius mean is between 10 and 15, and finally use get data summary, what is the dominant diagnosis category in this brushed region?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": null,
+          "alternatives": []
+        },
+        "key_insights": [
+          "The scatter plot now displays points colored by two diagnosis categories: blue and orange .",
+          "Blue points are concentrated in the lower to mid range of Radius mean values.",
+          "Orange points are more spread across higher Radius mean values.",
+          "There is overlap between B and M points in the mid Radius mean range (around 10 to 15).",
+          "The brushed region contains a mix of blue and orange diagnosis points.",
+          "Blue points are more densely concentrated within this brushed area compared to orange points.",
+          "Benign is the dominant diagnosis in this region making up about 84 percent of the points here."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "The change_encoding tool was selected to add color coding for the diagnosis field, which is required to later identify the dominant diagnosis category in the brushed region. The operation successfully made the two diagnosis categories visually distinguishable. No need to reset; proceed to brush the region where Radius mean is 10 to 15 next."
+          },
+          {
+            "iteration": 2,
+            "tool": "brush_region",
+            "reasoning": "The brush_region tool was selected to isolate the specific Radius mean range targeted by the question. This operation successfully highlights the relevant subset of points, setting up the next step of retrieving the diagnosis distribution for this area. No need to reset; proceed to use get_data_summary on the brushed region."
+          },
+          {
+            "iteration": 3,
+            "tool": "get_data_summary",
+            "reasoning": "This result is useful for practical reference For a mean radius between 10 and 15 most cases are benign This links a specific tumor size range to a more common non cancerous classification which supports preliminary risk assessment for tumors of this size."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Diagnosis"
+              }
+            },
+            {
+              "tool": "brush_region",
+              "param_eval": {
+                "type": "list",
+                "param": "x_range",
+                "target": [
+                  9.99444485982259,
+                  15.252222162882486
+                ]
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "categorical",
+                "param": "scope",
+                "target": "visible"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Radius (mean)",
+            "y": "Texture (mean)",
+            "color": "Diagnosis"
+          }
+        }
+      }
+    }
+  ]
+}

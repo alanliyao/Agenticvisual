@@ -1,0 +1,64 @@
+{
+  "task_type": "vague_single",
+  "task_id": "29_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/29_students_ai_usage_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Explore the relationship between pre-AI and post-AI academic grades and AI usage status across the full dataset to identify implicit behavioral trends.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Top academic performance is AI-driven",
+          "alternatives": []
+        },
+        "key_insights": [
+          "AI usage correlates with improved academic outcomes"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data",
+            "reasoning": "A single exploratory scan of the full parallel coordinate plot (using get data to access raw data and visual inspection) addresses the vague goal of identifying cross-variable trends."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

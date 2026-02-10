@@ -1,0 +1,105 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "58_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/58_Train_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What is the relationship between customer care call and cost in medium importance product group",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "There is a negative correlation between the cost of the product and the number of customer cart calls"
+        },
+        "key_insights": [
+          "There is a distinct cluster of products characterized by low cost, low popularity, and low ratings: Many lines dip to the bottom (value 1) on the rating axis and also stay low on the Prior_purchases axis (value 2).",
+          "the heavy concentration of lines at the bottom of the Customer_rating axis (value 1).",
+          "There is a negative correlation between the cost of the product and the number of customer cart calls"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "We only ffocus on the group of medium importance product."
+          },
+          {
+            "iteration": 2,
+            "tool": "hide_dimensions",
+            "reasoning": "we care two dimensions: customer care call and cost"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product_importance",
+                  "values": [
+                    "low",
+                    "high"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Customer_rating",
+                    "Prior_purchases",
+                    "Discount_offered"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "Customer_care_calls",
+              "Cost_of_the_Product"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Customer_care_calls\", \"Cost_of_the_Product\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            },
+            {
+              "filter": "indexof([\"low\",\"high\"], datum['Product_importance']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "task_type": "vague_single",
+  "task_id": "11_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/11_apple_time_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Analyze the changes in 2022",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was discovered that almost all the products gained popularity after the explosion, just as the instructions for the products had stated that they would suddenly become more popular. However, the revenue from the service side decreased. It can be seen that the rapidly growing products are all physical hardware items such as iPhone. This indicates that in 2022, Apple made significant improvements in the hardware sector, which attracted users to purchase their products. Perhaps this is because the hardware upgrade consumed a lot of resources and financial investment. As a result, there was no significant breakthrough in the software service aspect, and therefore it was not as favored by the market."
+        },
+        "key_insights": [
+          "find that almost all the product have a dramatic increase",
+          "but services have a decrease trend"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "get the data in 2022"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2022",
+                  "end": "2023"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2022",
+              "2023"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Revenue_Billions",
+            "color": "Product"
+          }
+        }
+      }
+    }
+  ]
+}

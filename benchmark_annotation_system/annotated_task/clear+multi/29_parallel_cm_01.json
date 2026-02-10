@@ -1,0 +1,88 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "29_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/29_students_ai_usage_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Filter the dataset to examine AI usage variation across study hour levels.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "highest adoption among high-study-hour students",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The filtered subset has reduced line overlap, making AI usage patterns for high academic performers more distinguishable.",
+          "highlighting a synergistic effect of academic performance and study time on AI adoption."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "reorder_dimensions",
+            "reasoning": "filtering narrows the dataset to high pre-AI grade students"
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_category",
+            "reasoning": "reducing noise and focusing analysis"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "grades_before_ai",
+                    "grades_after_ai",
+                    "study_hours_per_day",
+                    "daily_screen_time_hours"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "uses_ai",
+                  "values": [
+                    "Yes"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

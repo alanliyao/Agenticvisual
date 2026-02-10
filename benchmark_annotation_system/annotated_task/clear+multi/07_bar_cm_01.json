@@ -1,0 +1,78 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "07_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/07_bar_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Among the group with average dietary quality, which subcategory contributes the longest sleep duration?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Rainy",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The contribution values across different weather conditions are similar, making precise determination difficult.",
+          "Rainy days contribute the longest sleep duration, which is consistent with the overall trend."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Filtering out 'good' and 'poor' dietary quality allows for a better focus on the relationship between 'average' dietary quality and sleep duration."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Changing the bars to a non-stacked format allows for more intuitive data comparison."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "good",
+                    "poor"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "sleep_hours",
+            "color": "weather"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"good\",\"poor\"], datum['diet_quality']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

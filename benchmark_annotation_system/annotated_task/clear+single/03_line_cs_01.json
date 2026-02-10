@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "03_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/03_line_stocks.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What was the average stock price of TechCorp in Q3 2023?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "201",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "After resampling to quarterly intervals, TechCorp’s average stock price in Q3 (July–September) 2023 is approximately 201, which is higher than the Q2 average of ~186, confirming a clear acceleration in its price growth during the third quarter."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "resample_time",
+            "reasoning": "The original monthly granularity makes it hard to see the aggregated quarterly performance. Resampling time is the right tool here because it condenses the data into a higher-level summary that directly answers the question about quarterly averages."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "categorical",
+                "param": "granularity",
+                "target": "quarter"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "date",
+            "y": "price",
+            "color": "company"
+          }
+        }
+      }
+    }
+  ]
+}

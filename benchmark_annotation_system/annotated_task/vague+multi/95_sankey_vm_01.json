@@ -1,0 +1,63 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "95_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/95_sankey_supply.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore how material flows shift when filtering different value thresholds, then compare the distribution of final sales across channels before and after filtering.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Glass-derived materials reach the Direct Stores, Dealers, and E-Commerce sales channels, with the largest portion going to Direct Stores via East China DC."
+        },
+        "key_insights": [
+          "High-value flow  dominate the view, highlighting the most critical supply chain links.",
+          "Smaller flows (e.g., Lithium to Battery Plant) that were hidden at the $100M"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_flow",
+            "reasoning": "Iterative filtering at different thresholds reveals both the critical high-value pathways and the supporting mid/low-value flows that sustain the network."
+          },
+          {
+            "iteration": 2,
+            "tool": "reset_view",
+            "reasoning": "Comparing views ensures we do not overlook channels dependent on smaller, aggregated flows, which is vital for a resilient supply chain analysis."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_flow",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 100
+                }
+              }
+            },
+            {
+              "tool": "reset_view",
+              "param_eval": {}
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

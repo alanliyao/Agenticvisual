@@ -1,0 +1,55 @@
+{
+  "task_type": "vague_single",
+  "task_id": "42_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/42_pokemon_stats_2025_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Explore the relationship between hp and pokedex_id?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The data suggests that Pokedex ID does not predict HP. The relationship is random and non-linear. "
+        },
+        "key_insights": [
+          "No Clear Linear Trend: There is no discernible linear relationship between a Pokémon's Pokedex ID (its order of introduction) and its HP stat.",
+          "There are a few significant outliers where HP reaches its maximum value (around 250)."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "We want to research the data that have not been shown yet."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "hp",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "pokedex_id",
+            "y": "hp",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

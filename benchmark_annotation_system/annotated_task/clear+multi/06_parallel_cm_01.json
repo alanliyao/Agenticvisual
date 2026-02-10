@@ -1,0 +1,95 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "06_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/06_parallel_penguins.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which two measurements of Adelie penguins show the strongest negative correlation?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Beak Depth and Beak Length",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Adelie penguins show a wide range in body weight, while beak length is relatively concentrated.",
+          "There is a positive correlation trend between body mass and beak depth.",
+          "Both beak depth and flipper length show negative correlations with beak length, but the negative correlation with beak depth is stronger."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "Filtering the data for Adelie penguins makes their characteristics more visually apparent."
+          },
+          {
+            "iteration": 2,
+            "tool": "reorder_dimensions",
+            "reasoning": "By reordering the dimensions, we can more easily explore the correlations between various characteristics of Adelie penguins."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Species",
+                  "values": [
+                    "Chinstrap",
+                    "Gentoo"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "Beak Depth (mm)",
+                    "Beak Length (mm)",
+                    "Flipper Length (mm)",
+                    "Body Mass (g)"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Chinstrap\",\"Gentoo\"], datum['Species']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

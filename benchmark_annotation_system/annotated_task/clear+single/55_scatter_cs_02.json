@@ -1,0 +1,68 @@
+{
+  "task_type": "clear_single",
+  "task_id": "55_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/55_Ecommerce_Delivery_Analytics_New_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Did the most expensive item receive a rating higher than level 4?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "NO"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "go to the top order value to see the service rating"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.05,
+                    60
+                  ],
+                  "y_range": [
+                    1837.0001220703125,
+                    1997.0001220703125
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.05,
+              60
+            ],
+            "y": [
+              1837.0001220703125,
+              1997.0001220703125
+            ]
+          },
+          "encoding": {
+            "x": "Delivery Time (Minutes)",
+            "y": "Order Value (INR)",
+            "color": "Service Rating"
+          }
+        }
+      }
+    }
+  ]
+}

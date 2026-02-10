@@ -1,0 +1,85 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "109_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/109_sankey_seo.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "Analyzing the main trends from the solution hub to the conversion layer.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Most of them will choose exit."
+        },
+        "key_insights": [
+          "The main flow of the solution hub is towards pricing and demo requests.",
+          "The main flow of the pricing is towards exit.",
+          "The main flow of the demo request is towards exit."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Analyze the destination of Solution Hub using tools."
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Analyze the destination of pricing using tools."
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Analyze the destination of demo request using tools."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Solutions Hub"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Pricing"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Demo Request"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1247 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "Insurance Claims Adjudication Sankey — Full Claims Lifecycle (Data-Driven Architecture)",
+    "width": 1150,
+    "height": 580,
+    "padding": {
+      "left": 130,
+      "right": 145,
+      "top": 55,
+      "bottom": 50
+    },
+    "background": "white",
+    "_metadata": {
+      "chart_type": "sankey_multi_stage",
+      "title": "Sankey Insurance Claims Full Adjudication Flow",
+      "topic": "insurance_claims_adjudication",
+      "architecture": "data-driven layout via Vega transform pipeline",
+      "value_unit": "Claim count",
+      "notes": "10,000 claims — 51% auto-approved via App; High Risk denial rate 56%; Instant payment rate 74%"
+    },
+    "signals": [
+      {
+        "name": "nodeWidth",
+        "value": 15
+      },
+      {
+        "name": "nodeGap",
+        "value": 100
+      },
+      {
+        "name": "threshold",
+        "value": 0,
+        "bind": {
+          "input": "range",
+          "min": 0,
+          "max": 500,
+          "step": 50,
+          "name": "Min Flow (claims): "
+        }
+      },
+      {
+        "name": "nodeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:mouseover",
+            "update": "datum.name"
+          },
+          {
+            "events": "@nodeRect:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "edgeHover",
+        "value": null,
+        "on": [
+          {
+            "events": "@edgeMark:mouseover",
+            "update": "datum.linkId"
+          },
+          {
+            "events": "@edgeMark:mouseout",
+            "update": "null"
+          }
+        ]
+      },
+      {
+        "name": "selectedNode",
+        "value": null,
+        "on": [
+          {
+            "events": "@nodeRect:click!",
+            "update": "selectedNode === datum.name ? null : datum.name"
+          },
+          {
+            "events": [
+              {
+                "type": "click",
+                "markname": "resetBtn"
+              },
+              {
+                "type": "dblclick"
+              }
+            ],
+            "update": "null"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "name": "rawLinks",
+        "values": [
+          {
+            "source": "App Self-Service",
+            "target": "Auto-Approve",
+            "value": 1800
+          },
+          {
+            "source": "App Self-Service",
+            "target": "Simple Manual",
+            "value": 1000
+          },
+          {
+            "source": "App Self-Service",
+            "target": "Complex Manual",
+            "value": 500
+          },
+          {
+            "source": "App Self-Service",
+            "target": "Investigation",
+            "value": 200
+          },
+          {
+            "source": "Call Center",
+            "target": "Auto-Approve",
+            "value": 700
+          },
+          {
+            "source": "Call Center",
+            "target": "Simple Manual",
+            "value": 1200
+          },
+          {
+            "source": "Call Center",
+            "target": "Complex Manual",
+            "value": 600
+          },
+          {
+            "source": "Call Center",
+            "target": "Investigation",
+            "value": 300
+          },
+          {
+            "source": "Agent Submitted",
+            "target": "Auto-Approve",
+            "value": 400
+          },
+          {
+            "source": "Agent Submitted",
+            "target": "Simple Manual",
+            "value": 900
+          },
+          {
+            "source": "Agent Submitted",
+            "target": "Complex Manual",
+            "value": 600
+          },
+          {
+            "source": "Agent Submitted",
+            "target": "Investigation",
+            "value": 300
+          },
+          {
+            "source": "Partner API",
+            "target": "Auto-Approve",
+            "value": 900
+          },
+          {
+            "source": "Partner API",
+            "target": "Simple Manual",
+            "value": 400
+          },
+          {
+            "source": "Partner API",
+            "target": "Complex Manual",
+            "value": 150
+          },
+          {
+            "source": "Partner API",
+            "target": "Investigation",
+            "value": 50
+          },
+          {
+            "source": "Auto-Approve",
+            "target": "Doc Review",
+            "value": 3800
+          },
+          {
+            "source": "Simple Manual",
+            "target": "Doc Review",
+            "value": 2200
+          },
+          {
+            "source": "Simple Manual",
+            "target": "Field Inspection",
+            "value": 700
+          },
+          {
+            "source": "Simple Manual",
+            "target": "Medical Review",
+            "value": 600
+          },
+          {
+            "source": "Complex Manual",
+            "target": "Doc Review",
+            "value": 450
+          },
+          {
+            "source": "Complex Manual",
+            "target": "Field Inspection",
+            "value": 800
+          },
+          {
+            "source": "Complex Manual",
+            "target": "Medical Review",
+            "value": 600
+          },
+          {
+            "source": "Investigation",
+            "target": "Field Inspection",
+            "value": 400
+          },
+          {
+            "source": "Investigation",
+            "target": "Medical Review",
+            "value": 300
+          },
+          {
+            "source": "Investigation",
+            "target": "Special Invest",
+            "value": 150
+          },
+          {
+            "source": "Doc Review",
+            "target": "Low Risk",
+            "value": 5400
+          },
+          {
+            "source": "Doc Review",
+            "target": "Medium Risk",
+            "value": 800
+          },
+          {
+            "source": "Doc Review",
+            "target": "High Risk",
+            "value": 250
+          },
+          {
+            "source": "Field Inspection",
+            "target": "Low Risk",
+            "value": 1000
+          },
+          {
+            "source": "Field Inspection",
+            "target": "Medium Risk",
+            "value": 600
+          },
+          {
+            "source": "Field Inspection",
+            "target": "High Risk",
+            "value": 300
+          },
+          {
+            "source": "Medical Review",
+            "target": "Low Risk",
+            "value": 900
+          },
+          {
+            "source": "Medical Review",
+            "target": "Medium Risk",
+            "value": 450
+          },
+          {
+            "source": "Medical Review",
+            "target": "High Risk",
+            "value": 150
+          },
+          {
+            "source": "Special Invest",
+            "target": "Medium Risk",
+            "value": 50
+          },
+          {
+            "source": "Special Invest",
+            "target": "High Risk",
+            "value": 100
+          },
+          {
+            "source": "Low Risk",
+            "target": "Full Payout",
+            "value": 6400
+          },
+          {
+            "source": "Low Risk",
+            "target": "Partial Payout",
+            "value": 700
+          },
+          {
+            "source": "Low Risk",
+            "target": "Withdrawn",
+            "value": 200
+          },
+          {
+            "source": "Medium Risk",
+            "target": "Full Payout",
+            "value": 1100
+          },
+          {
+            "source": "Medium Risk",
+            "target": "Partial Payout",
+            "value": 500
+          },
+          {
+            "source": "Medium Risk",
+            "target": "Denied",
+            "value": 200
+          },
+          {
+            "source": "Medium Risk",
+            "target": "Withdrawn",
+            "value": 100
+          },
+          {
+            "source": "High Risk",
+            "target": "Full Payout",
+            "value": 100
+          },
+          {
+            "source": "High Risk",
+            "target": "Partial Payout",
+            "value": 150
+          },
+          {
+            "source": "High Risk",
+            "target": "Denied",
+            "value": 450
+          },
+          {
+            "source": "High Risk",
+            "target": "Withdrawn",
+            "value": 100
+          },
+          {
+            "source": "Full Payout",
+            "target": "Instant Payment",
+            "value": 5800
+          },
+          {
+            "source": "Full Payout",
+            "target": "Delayed Payment",
+            "value": 1600
+          },
+          {
+            "source": "Full Payout",
+            "target": "Payment Failed",
+            "value": 200
+          },
+          {
+            "source": "Partial Payout",
+            "target": "Instant Payment",
+            "value": 800
+          },
+          {
+            "source": "Partial Payout",
+            "target": "Delayed Payment",
+            "value": 450
+          },
+          {
+            "source": "Partial Payout",
+            "target": "Payment Failed",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "name": "nodeConfig",
+        "values": [
+          {
+            "name": "App Self-Service",
+            "depth": 0,
+            "order": 0
+          },
+          {
+            "name": "Call Center",
+            "depth": 0,
+            "order": 1
+          },
+          {
+            "name": "Agent Submitted",
+            "depth": 0,
+            "order": 2
+          },
+          {
+            "name": "Partner API",
+            "depth": 0,
+            "order": 3
+          },
+          {
+            "name": "Auto-Approve",
+            "depth": 1,
+            "order": 0
+          },
+          {
+            "name": "Simple Manual",
+            "depth": 1,
+            "order": 1
+          },
+          {
+            "name": "Complex Manual",
+            "depth": 1,
+            "order": 2
+          },
+          {
+            "name": "Investigation",
+            "depth": 1,
+            "order": 3
+          },
+          {
+            "name": "Doc Review",
+            "depth": 2,
+            "order": 0
+          },
+          {
+            "name": "Field Inspection",
+            "depth": 2,
+            "order": 1
+          },
+          {
+            "name": "Medical Review",
+            "depth": 2,
+            "order": 2
+          },
+          {
+            "name": "Special Invest",
+            "depth": 2,
+            "order": 3
+          },
+          {
+            "name": "Low Risk",
+            "depth": 3,
+            "order": 0
+          },
+          {
+            "name": "Medium Risk",
+            "depth": 3,
+            "order": 1
+          },
+          {
+            "name": "High Risk",
+            "depth": 3,
+            "order": 2
+          },
+          {
+            "name": "Full Payout",
+            "depth": 4,
+            "order": 0
+          },
+          {
+            "name": "Partial Payout",
+            "depth": 4,
+            "order": 1
+          },
+          {
+            "name": "Denied",
+            "depth": 4,
+            "order": 2
+          },
+          {
+            "name": "Withdrawn",
+            "depth": 4,
+            "order": 3
+          },
+          {
+            "name": "Instant Payment",
+            "depth": 5,
+            "order": 0
+          },
+          {
+            "name": "Delayed Payment",
+            "depth": 5,
+            "order": 1
+          },
+          {
+            "name": "Payment Failed",
+            "depth": 5,
+            "order": 2
+          }
+        ]
+      },
+      {
+        "name": "depthLabelsData",
+        "values": [
+          {
+            "depth": 0,
+            "label": "FNOL Channel"
+          },
+          {
+            "depth": 1,
+            "label": "Triage"
+          },
+          {
+            "depth": 2,
+            "label": "Assessment"
+          },
+          {
+            "depth": 3,
+            "label": "Fraud Check"
+          },
+          {
+            "depth": 4,
+            "label": "Decision"
+          },
+          {
+            "depth": 5,
+            "label": "Payment Status"
+          }
+        ]
+      },
+      {
+        "name": "filteredLinks",
+        "source": "rawLinks",
+        "transform": [
+          {
+            "type": "filter",
+            "expr": "datum.value >= threshold"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.source + ' → ' + datum.target",
+            "as": "linkId"
+          }
+        ]
+      },
+      {
+        "name": "linksWithOrder",
+        "source": "filteredLinks",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcConfig"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodeConfig",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtConfig"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.order",
+            "as": "srcOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.order",
+            "as": "tgtOrder"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcConfig.depth",
+            "as": "srcDepth"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtConfig.depth",
+            "as": "tgtDepth"
+          }
+        ]
+      },
+      {
+        "name": "outTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "source"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalOut"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "inTotals",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "aggregate",
+            "groupby": [
+              "target"
+            ],
+            "fields": [
+              "value"
+            ],
+            "ops": [
+              "sum"
+            ],
+            "as": [
+              "totalIn"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nodePositions",
+        "source": "nodeConfig",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "outTotals",
+            "key": "source",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "outInfo"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "inTotals",
+            "key": "target",
+            "fields": [
+              "name"
+            ],
+            "as": [
+              "inInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+            "as": "totalOut"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+            "as": "totalIn"
+          },
+          {
+            "type": "formula",
+            "expr": "max(datum.totalOut, datum.totalIn)",
+            "as": "total"
+          },
+          {
+            "type": "filter",
+            "expr": "datum.total > 0"
+          },
+          {
+            "type": "stack",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "field": "total"
+          },
+          {
+            "type": "window",
+            "groupby": [
+              "depth"
+            ],
+            "sort": {
+              "field": "order",
+              "order": "ascending"
+            },
+            "ops": [
+              "row_number"
+            ],
+            "as": [
+              "rankInDepth"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y0g"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+            "as": "y1g"
+          }
+        ]
+      },
+      {
+        "name": "sourceStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "source"
+            ],
+            "sort": {
+              "field": "tgtOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "srcCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcCumEnd - datum.value",
+            "as": "srcCumStart"
+          }
+        ]
+      },
+      {
+        "name": "targetStacked",
+        "source": "linksWithOrder",
+        "transform": [
+          {
+            "type": "window",
+            "groupby": [
+              "target"
+            ],
+            "sort": {
+              "field": "srcOrder",
+              "order": "ascending"
+            },
+            "ops": [
+              "sum"
+            ],
+            "fields": [
+              "value"
+            ],
+            "frame": [
+              null,
+              0
+            ],
+            "as": [
+              "tgtCumEnd"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtCumEnd - datum.value",
+            "as": "tgtCumStart"
+          }
+        ]
+      },
+      {
+        "name": "edges",
+        "source": "sourceStacked",
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "targetStacked",
+            "key": "linkId",
+            "fields": [
+              "linkId"
+            ],
+            "as": [
+              "tgtInfo"
+            ]
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+            "as": "tgtCumStart"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+            "as": "tgtCumEnd"
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "source"
+            ],
+            "as": [
+              "srcNode"
+            ]
+          },
+          {
+            "type": "lookup",
+            "from": "nodePositions",
+            "key": "name",
+            "fields": [
+              "target"
+            ],
+            "as": [
+              "tgtNode"
+            ]
+          },
+          {
+            "type": "filter",
+            "expr": "datum.srcNode && datum.tgtNode"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumStart",
+            "as": "absSy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+            "as": "absSy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+            "as": "absTy0"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+            "as": "absTy1"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+            "as": "srcPct"
+          },
+          {
+            "type": "formula",
+            "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+            "as": "tgtPct"
+          }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "x",
+        "type": "point",
+        "range": "width",
+        "domain": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "padding": 0.5
+      },
+      {
+        "name": "y",
+        "type": "linear",
+        "range": [
+          0,
+          {
+            "signal": "height"
+          }
+        ],
+        "domain": {
+          "data": "nodePositions",
+          "field": "y1g"
+        }
+      },
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {
+          "data": "nodeConfig",
+          "field": "name"
+        },
+        "range": [
+          "#0077B6",
+          "#00B4D8",
+          "#90E0EF",
+          "#CAF0F8",
+          "#2A9D8F",
+          "#40916C",
+          "#52B788",
+          "#74C69D",
+          "#118AB2",
+          "#073B4C",
+          "#06D6A0",
+          "#BB3E03",
+          "#52B788",
+          "#FFD166",
+          "#EF476F",
+          "#1D3557",
+          "#457B9D",
+          "#E63946",
+          "#A8DADC",
+          "#2EC4B6",
+          "#CBF3F0",
+          "#FF6B6B"
+        ]
+      }
+    ],
+    "marks": [
+      {
+        "type": "path",
+        "name": "edgeMark",
+        "from": {
+          "data": "edges"
+        },
+        "encode": {
+          "update": {
+            "path": {
+              "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "source"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.35"
+            },
+            "stroke": {
+              "scale": "color",
+              "field": "source"
+            },
+            "strokeWidth": {
+              "value": 0.5
+            },
+            "strokeOpacity": {
+              "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',d') + ' claims (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ')'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          },
+          "hover": {
+            "fillOpacity": {
+              "value": 0.8
+            }
+          }
+        }
+      },
+      {
+        "type": "rect",
+        "name": "nodeRect",
+        "from": {
+          "data": "nodePositions"
+        },
+        "encode": {
+          "enter": {
+            "width": {
+              "signal": "nodeWidth"
+            },
+            "cornerRadius": {
+              "value": 2
+            }
+          },
+          "update": {
+            "x": {
+              "scale": "x",
+              "field": "depth"
+            },
+            "y": {
+              "scale": "y",
+              "field": "y0g"
+            },
+            "y2": {
+              "scale": "y",
+              "field": "y1g"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "name"
+            },
+            "stroke": {
+              "value": "#333"
+            },
+            "strokeWidth": {
+              "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 0.5"
+            },
+            "fillOpacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+            },
+            "tooltip": {
+              "signal": "datum.name + ': ' + format(datum.total, ',d') + ' claims'"
+            },
+            "cursor": {
+              "value": "pointer"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "field": "name"
+            },
+            "fontSize": {
+              "value": 10
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#333"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodePositions"
+        },
+        "interactive": false,
+        "encode": {
+          "update": {
+            "x": {
+              "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+            },
+            "y": {
+              "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 12"
+            },
+            "align": {
+              "signal": "datum.depth === 0 ? 'right' : 'left'"
+            },
+            "text": {
+              "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 18 ? '' + format(datum.total, ',d') + ' claims' : ''"
+            },
+            "fontSize": {
+              "value": 9
+            },
+            "fill": {
+              "value": "#888"
+            },
+            "baseline": {
+              "value": "middle"
+            },
+            "opacity": {
+              "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "depthLabelsData"
+        },
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "x": {
+              "signal": "scale('x', datum.depth) + nodeWidth / 2"
+            },
+            "y": {
+              "signal": "height + 25"
+            },
+            "text": {
+              "field": "label"
+            },
+            "fontSize": {
+              "value": 11
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#555"
+            },
+            "baseline": {
+              "value": "top"
+            },
+            "align": {
+              "value": "center"
+            }
+          }
+        }
+      },
+      {
+        "type": "group",
+        "data": [
+          {
+            "name": "showResetData",
+            "values": [
+              {}
+            ],
+            "transform": [
+              {
+                "type": "filter",
+                "expr": "selectedNode"
+              }
+            ]
+          }
+        ],
+        "encode": {
+          "enter": {
+            "xc": {
+              "signal": "width / 2"
+            },
+            "y": {
+              "value": -35
+            },
+            "width": {
+              "value": 100
+            },
+            "height": {
+              "value": 26
+            }
+          }
+        },
+        "marks": [
+          {
+            "type": "group",
+            "name": "resetBtn",
+            "from": {
+              "data": "showResetData"
+            },
+            "encode": {
+              "enter": {
+                "cornerRadius": {
+                  "value": 5
+                },
+                "fill": {
+                  "value": "#f5f5f5"
+                },
+                "stroke": {
+                  "value": "#bbb"
+                },
+                "strokeWidth": {
+                  "value": 1.5
+                },
+                "height": {
+                  "field": {
+                    "group": "height"
+                  }
+                },
+                "width": {
+                  "field": {
+                    "group": "width"
+                  }
+                },
+                "cursor": {
+                  "value": "pointer"
+                }
+              },
+              "update": {
+                "opacity": {
+                  "value": 1
+                }
+              },
+              "hover": {
+                "opacity": {
+                  "value": 0.7
+                }
+              }
+            },
+            "marks": [
+              {
+                "type": "text",
+                "interactive": false,
+                "encode": {
+                  "enter": {
+                    "xc": {
+                      "field": {
+                        "group": "width"
+                      },
+                      "mult": 0.5
+                    },
+                    "yc": {
+                      "field": {
+                        "group": "height"
+                      },
+                      "mult": 0.5,
+                      "offset": 1
+                    },
+                    "align": {
+                      "value": "center"
+                    },
+                    "baseline": {
+                      "value": "middle"
+                    },
+                    "fontWeight": {
+                      "value": "bold"
+                    },
+                    "fontSize": {
+                      "value": 11
+                    },
+                    "text": {
+                      "value": "Show All"
+                    },
+                    "fill": {
+                      "value": "#555"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "title": {
+      "text": "Sankey Insurance Claims Adjudication: FNOL → Triage → Assessment → Fraud → Decision → Payment",
+      "subtitle": "Hover to trace claim path  |  Click to isolate  |  10,000 claims; App: 51% auto-approved; High Risk → Denied = 56%",
+      "fontSize": 16,
+      "subtitleFontSize": 11,
+      "subtitleColor": "#999",
+      "anchor": "start"
+    }
+  }

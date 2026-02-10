@@ -1,0 +1,57 @@
+{
+  "task_type": "clear_single",
+  "task_id": "25_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/25_gym_members_exercise_tracking_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Expand the bars to see which type of exercise is the most efficient for burning fat among people with an experience level of 4.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Cardio",
+          "alternatives": [
+            "cardio",
+            "CARDIO"
+          ]
+        },
+        "key_insights": [
+          "Among individuals with an experience level of 3, those practicing yoga have the highest body fat percentage.",
+          "Among individuals at experience level 3, those engaging in HIIT and strength training exhibit very similar fat percentages, both of which are slightly higher than those performing cardio exercises.",
+          "It can be inferred that among individuals with an experience level of 4, cardio may be the most efficient exercise type for fat burning."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "The stacked chart made it difficult to discern which group—HIIT, Strength, or Cardio—had a higher fat percentage among participants with an experience level of 4. Therefore, the toggle stacked mode tool was used to expand each bar. By comparing them against the reference line, the answer was finally determined without needing to call the tool again."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          }
+        }
+      }
+    }
+  ]
+}

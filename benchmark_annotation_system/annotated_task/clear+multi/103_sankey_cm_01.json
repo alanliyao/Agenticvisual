@@ -1,0 +1,97 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "102_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/103_sankey_university.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_04",
+      "question": "Starting from the Engineering College, what is the most typical career path?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Engineering - Computer Science - On-Time Grad - Tech/Internet > $20,000/month",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main destinations of the engineering college using tools"
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main destinations of the Computer Sci using tools"
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main destinations of the on-time grad using tools"
+          },
+          {
+            "iteration": 4,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main destinations of the tech/internet college using tools"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Engineering"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Computer Sci"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "On-Time Grad"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Tech/Internet"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

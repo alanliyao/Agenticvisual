@@ -130,13 +130,24 @@ class PromptManager:
         file_path = self.prompts_dir / 'modes' / 'autonomous_exploration.txt'
         return self._load_prompt_file(file_path)
     
+    def get_benchmark_answer_instruction(self) -> str:
+        """
+        获取 Benchmark 评估格式要求提示词
+        
+        Returns:
+            Benchmark 评估格式要求提示词
+        """
+        file_path = self.prompts_dir / 'modes' / 'benchmark_answer_instruction.txt'
+        return self._load_prompt_file(file_path)
+    
     def assemble_system_prompt(
         self,
         chart_type: Optional[ChartType] = None,
         intent_type: Optional[IntentType] = None,
         mode: Optional[str] = None,
         include_tools: bool = False,
-        tools_description: str = ""
+        tools_description: str = "",
+        benchmark_mode: bool = False
     ) -> str:
         """
         组装完整的系统提示词
@@ -147,6 +158,7 @@ class PromptManager:
             mode: 模式字符串 ("goal_oriented" 或 "autonomous_exploration")，会被转换为intent_type
             include_tools: 是否包含工具描述
             tools_description: 工具描述文本
+            benchmark_mode: 是否在 benchmark 评估模式（会添加 ANSWER 字段要求）
             
         Returns:
             组装后的完整系统提示词
@@ -198,6 +210,13 @@ class PromptManager:
             parts.append("# 可用工具列表")
             parts.append("="*60)
             parts.append(tools_description)
+        
+        # 5. Benchmark 评估格式要求（仅在 benchmark_mode 时添加）
+        if benchmark_mode:
+            parts.append("\n\n" + "="*60)
+            parts.append("# Benchmark 评估格式要求")
+            parts.append("="*60)
+            parts.append(self.get_benchmark_answer_instruction())
         
         # 组装所有部分
         full_prompt = "\n".join(parts)

@@ -1,0 +1,104 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "68_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/68_supply_chain_data_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore the relationship between Revenue generated and shipping costs of skincare type",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The Skincare category demonstrates an efficient supply chain for top-performing products. High revenue is synonymous with low shipping costs, while poor sales performance correlates with expensive logistics."
+        },
+        "key_insights": [
+          "There is no strong positive correlation between revenue and shipping costs across the entire dataset.",
+          "Strong Negative Correlation：The vast majority of the blue lines show a distinct downward slope from left to right.",
+          "Conversely, lines starting at the bottom of the Revenue axis (near 1061.61) generally trend upwards towards the top of the Shipping costs axis (near 9.92)."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We only care two dimensions:Revenue generated and shipping costs"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "We want to research the lines of skincare type"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Price",
+                    "Number of products sold"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product type",
+                  "values": [
+                    "cosmetics",
+                    "haircare"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "Revenue generated",
+              "Shipping costs"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"cosmetics\",\"haircare\"], datum['Product type']) < 0"
+            },
+            {
+              "filter": "indexof([\"Revenue generated\", \"Shipping costs\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

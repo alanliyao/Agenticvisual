@@ -1,0 +1,78 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "28_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/28_silver_prices_data_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Filter the time range to retain only 2020-2022 data,  analyze the average price trend in this period.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The core price trend of 2020-2022 is a moderate volatility cycle with no extreme spikes or crashes",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The moving average of 2020-2022 silver prices fluctuates between 20 and 30, reflecting moderate volatility in this phase.",
+          "The moving average reveals that the 2020-2022 period lacks the extreme volatility of 2025-2026, representing a stable market phase."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "filter lines narrows the dataset to the target 2020-2022 period to eliminate irrelevant data noise"
+          },
+          {
+            "iteration": 2,
+            "tool": "show_moving_average",
+            "reasoning": "show moving average smooths short-term price fluctuations to uncover the underlying trend"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2020/1/2",
+                  "end": "2022/12/30"
+                }
+              }
+            },
+            {
+              "tool": "show_moving_average",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "window_size": 3
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

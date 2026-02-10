@@ -1,0 +1,75 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "31_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/31_TSLA_Stock_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What are the similarities and differences between the daily, monthly, and quarterly trends in the TSLA stock close data?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Both the daily close price chart (first image) and the monthly sum of close prices chart (second image) show a period of sustained growth from around mid-2021 to November 2021. Both display volatility, with the daily chart showing frequent ups and downs, and the monthly chart reflecting this volatility through fluctuations in the summed values.The daily close price chart (first image) shows high-frequency, day-to-day fluctuations, revealing short-term volatility and intra-month price swings (e.g., drops in May 2021 and February 2022).\nThe monthly sum chart (second image) smooths out daily noise, presenting a more aggregated, longer-term trend with less frequent, larger-scale movements.The quarterly chart tracks the sum of daily closing prices in a quarter (scale: 0–22,000), an even larger cumulative measure."
+        },
+        "key_insights": [
+          "The daily price rises from ~$200 to a peak near $400, while the monthly sum increases from ~4,000 to a peak near 8,000.",
+          "Both charts reach their peak around November 2021, followed by a subsequent decline into early 2022.",
+          "The daily chart tracks the level of the closing price (in dollars per share), so the scale is from $0 to $450.",
+          "The monthly chart tracks the sum of all daily closing prices in a month, so the scale is from 0 to 8,000, which is a cumulative measure rather than a per-share price.",
+          "Only the largest, most enduring trends are visible in the quarterly chart, making the overall growth and decline phases the most prominent.",
+          "Least volatile, with very smooth, gradual movements between quarters."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "resample_time",
+            "reasoning": "The monthly chart highlights the broader, cumulative momentum of the stock over longer periods, making the overall growth and decline phases easier to see at a glance."
+          },
+          {
+            "iteration": 2,
+            "tool": "resample_time",
+            "reasoning": "Aggregates data over 3 months, eliminating most short-term noise to reveal only the broadest, most sustained trends."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "granularity": "month",
+                  "agg": "sum"
+                }
+              }
+            },
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "granularity": "quarter",
+                  "agg": "sum"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Date",
+            "y": "Close",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

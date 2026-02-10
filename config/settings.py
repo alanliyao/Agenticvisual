@@ -17,10 +17,10 @@ class Settings:
     
     # ==================== API 配置 ====================
     DASHSCOPE_API_KEY: str = os.getenv('DASHSCOPE_API_KEY', '')
-    VLM_MODEL: str = os.getenv('VLM_MODEL', 'qwen-vl-plus')
+    VLM_MODEL: str = os.getenv('VLM_MODEL', 'qwen-vl-max')
     
     # ==================== 系统配置 ====================
-    MAX_ITERATIONS: int = int(os.getenv('MAX_ITERATIONS', '10'))
+    MAX_ITERATIONS: int = int(os.getenv('MAX_ITERATIONS', '8'))
     LOG_LEVEL: str = os.getenv('LOG_LEVEL', 'INFO')
     LOG_DIR: Path = Path(os.getenv('LOG_DIR', './logs'))
     
@@ -37,7 +37,7 @@ class Settings:
     LOGS_DIR: Path = PROJECT_ROOT / 'logs'
     
     # ==================== VLM 参数配置 ====================
-    VLM_TEMPERATURE: float = 0.7
+    VLM_TEMPERATURE: float = 0
     VLM_MAX_TOKENS: int = 2000
     VLM_TOP_P: float = 0.9
     
@@ -52,9 +52,9 @@ class Settings:
     ERROR_LOG_FILE: Path = PROJECT_ROOT / 'logs' / 'error.log'
     
     # ==================== 模式配置 ====================
-    MAX_GOAL_ORIENTED_ITERATIONS: int = int(os.getenv('MAX_GOAL_ORIENTED_ITERATIONS', '10'))
+    MAX_GOAL_ORIENTED_ITERATIONS: int = int(os.getenv('MAX_GOAL_ORIENTED_ITERATIONS', '8'))
     GOAL_ACHIEVEMENT_THRESHOLD: float = float(os.getenv('GOAL_ACHIEVEMENT_THRESHOLD', '0.9'))
-    MAX_EXPLORATION_ITERATIONS: int = int(os.getenv('MAX_EXPLORATION_ITERATIONS', '10'))
+    MAX_EXPLORATION_ITERATIONS: int = int(os.getenv('MAX_EXPLORATION_ITERATIONS', '8'))
     
     # ==================== Vega 默认尺寸配置 ====================
     VEGA_DEFAULT_WIDTH: int = int(os.getenv('VEGA_DEFAULT_WIDTH', '800'))

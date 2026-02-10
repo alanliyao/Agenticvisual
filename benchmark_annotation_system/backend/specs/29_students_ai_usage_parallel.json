@@ -1,0 +1,2868 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: students_ai_usage",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "_index": 0,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.35
+      },
+      {
+        "_index": 1,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.05
+      },
+      {
+        "_index": 2,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 3,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 4,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 5,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.15
+      },
+      {
+        "_index": 6,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.85
+      },
+      {
+        "_index": 7,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.9
+      },
+      {
+        "_index": 8,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.35
+      },
+      {
+        "_index": 9,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 10,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 11,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 12,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.05
+      },
+      {
+        "_index": 13,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 14,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.3
+      },
+      {
+        "_index": 15,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 16,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.9
+      },
+      {
+        "_index": 17,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.75
+      },
+      {
+        "_index": 18,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.95
+      },
+      {
+        "_index": 19,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 20,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.15
+      },
+      {
+        "_index": 21,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.15
+      },
+      {
+        "_index": 22,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 23,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 24,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 25,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.75
+      },
+      {
+        "_index": 26,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.35
+      },
+      {
+        "_index": 27,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.75
+      },
+      {
+        "_index": 28,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.85
+      },
+      {
+        "_index": 29,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.3
+      },
+      {
+        "_index": 30,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 31,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.15
+      },
+      {
+        "_index": 32,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.35
+      },
+      {
+        "_index": 33,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.05
+      },
+      {
+        "_index": 34,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.3
+      },
+      {
+        "_index": 35,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.35
+      },
+      {
+        "_index": 36,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.55
+      },
+      {
+        "_index": 37,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 38,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.3
+      },
+      {
+        "_index": 39,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.7
+      },
+      {
+        "_index": 40,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.85
+      },
+      {
+        "_index": 41,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.75
+      },
+      {
+        "_index": 42,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 43,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 44,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.85
+      },
+      {
+        "_index": 45,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 46,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.95
+      },
+      {
+        "_index": 47,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.05
+      },
+      {
+        "_index": 48,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 49,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 50,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.95
+      },
+      {
+        "_index": 51,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 52,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.45
+      },
+      {
+        "_index": 53,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.95
+      },
+      {
+        "_index": 54,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.15
+      },
+      {
+        "_index": 55,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 56,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.3
+      },
+      {
+        "_index": 57,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 58,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.05
+      },
+      {
+        "_index": 59,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 60,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.85
+      },
+      {
+        "_index": 61,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.55
+      },
+      {
+        "_index": 62,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.05
+      },
+      {
+        "_index": 63,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 64,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 65,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.35
+      },
+      {
+        "_index": 66,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.75
+      },
+      {
+        "_index": 67,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.3
+      },
+      {
+        "_index": 68,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.55
+      },
+      {
+        "_index": 69,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 70,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.05
+      },
+      {
+        "_index": 71,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 72,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 73,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.1
+      },
+      {
+        "_index": 74,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 75,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.85
+      },
+      {
+        "_index": 76,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 77,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.3
+      },
+      {
+        "_index": 78,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.7
+      },
+      {
+        "_index": 79,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 80,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.1
+      },
+      {
+        "_index": 81,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.05
+      },
+      {
+        "_index": 82,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 83,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 84,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.35
+      },
+      {
+        "_index": 85,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 86,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.7
+      },
+      {
+        "_index": 87,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.85
+      },
+      {
+        "_index": 88,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.7
+      },
+      {
+        "_index": 89,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 90,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.1
+      },
+      {
+        "_index": 91,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 92,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 93,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 94,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.9
+      },
+      {
+        "_index": 95,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.75
+      },
+      {
+        "_index": 96,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 97,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 98,
+        "uses_ai": "No",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 99,
+        "uses_ai": "Yes",
+        "dimension": "grades_before_ai",
+        "normalized_value": 0.9
+      },
+      {
+        "_index": 0,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.09999999999999998
+      },
+      {
+        "_index": 1,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.725
+      },
+      {
+        "_index": 2,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.22499999999999998
+      },
+      {
+        "_index": 3,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.44999999999999996
+      },
+      {
+        "_index": 4,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.42500000000000004
+      },
+      {
+        "_index": 5,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.09999999999999998
+      },
+      {
+        "_index": 6,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 7,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.55
+      },
+      {
+        "_index": 8,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.07500000000000001
+      },
+      {
+        "_index": 9,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.44999999999999996
+      },
+      {
+        "_index": 10,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 11,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.625
+      },
+      {
+        "_index": 12,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.55
+      },
+      {
+        "_index": 13,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 14,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.925
+      },
+      {
+        "_index": 15,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 16,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 17,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 18,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.15000000000000002
+      },
+      {
+        "_index": 19,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 20,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.8500000000000001
+      },
+      {
+        "_index": 21,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.7749999999999999
+      },
+      {
+        "_index": 22,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.15000000000000002
+      },
+      {
+        "_index": 23,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.925
+      },
+      {
+        "_index": 24,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 25,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.925
+      },
+      {
+        "_index": 26,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.925
+      },
+      {
+        "_index": 27,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.875
+      },
+      {
+        "_index": 28,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.125
+      },
+      {
+        "_index": 29,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.525
+      },
+      {
+        "_index": 30,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.7
+      },
+      {
+        "_index": 31,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.375
+      },
+      {
+        "_index": 32,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.07500000000000001
+      },
+      {
+        "_index": 33,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.07500000000000001
+      },
+      {
+        "_index": 34,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 35,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.725
+      },
+      {
+        "_index": 36,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 37,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.875
+      },
+      {
+        "_index": 38,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.725
+      },
+      {
+        "_index": 39,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.42500000000000004
+      },
+      {
+        "_index": 40,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.44999999999999996
+      },
+      {
+        "_index": 41,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.175
+      },
+      {
+        "_index": 42,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.8999999999999999
+      },
+      {
+        "_index": 43,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.42500000000000004
+      },
+      {
+        "_index": 44,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.22499999999999998
+      },
+      {
+        "_index": 45,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.04999999999999999
+      },
+      {
+        "_index": 46,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.04999999999999999
+      },
+      {
+        "_index": 47,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 48,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 49,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.725
+      },
+      {
+        "_index": 50,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.44999999999999996
+      },
+      {
+        "_index": 51,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.55
+      },
+      {
+        "_index": 52,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.875
+      },
+      {
+        "_index": 53,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.825
+      },
+      {
+        "_index": 54,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 55,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.125
+      },
+      {
+        "_index": 56,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 57,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.8500000000000001
+      },
+      {
+        "_index": 58,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.625
+      },
+      {
+        "_index": 59,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.7749999999999999
+      },
+      {
+        "_index": 60,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.55
+      },
+      {
+        "_index": 61,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.07500000000000001
+      },
+      {
+        "_index": 62,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.42500000000000004
+      },
+      {
+        "_index": 63,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 64,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.925
+      },
+      {
+        "_index": 65,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.925
+      },
+      {
+        "_index": 66,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.7749999999999999
+      },
+      {
+        "_index": 67,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.35
+      },
+      {
+        "_index": 68,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.875
+      },
+      {
+        "_index": 69,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 70,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.175
+      },
+      {
+        "_index": 71,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.42500000000000004
+      },
+      {
+        "_index": 72,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.125
+      },
+      {
+        "_index": 73,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.675
+      },
+      {
+        "_index": 74,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.32499999999999996
+      },
+      {
+        "_index": 75,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.32499999999999996
+      },
+      {
+        "_index": 76,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.42500000000000004
+      },
+      {
+        "_index": 77,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.30000000000000004
+      },
+      {
+        "_index": 78,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 79,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.22499999999999998
+      },
+      {
+        "_index": 80,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.275
+      },
+      {
+        "_index": 81,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.30000000000000004
+      },
+      {
+        "_index": 82,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.8500000000000001
+      },
+      {
+        "_index": 83,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.7
+      },
+      {
+        "_index": 84,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.65
+      },
+      {
+        "_index": 85,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.475
+      },
+      {
+        "_index": 86,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 87,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.8999999999999999
+      },
+      {
+        "_index": 88,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.75
+      },
+      {
+        "_index": 89,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.8500000000000001
+      },
+      {
+        "_index": 90,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.25
+      },
+      {
+        "_index": 91,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.22499999999999998
+      },
+      {
+        "_index": 92,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.15000000000000002
+      },
+      {
+        "_index": 93,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 94,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.825
+      },
+      {
+        "_index": 95,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.8500000000000001
+      },
+      {
+        "_index": 96,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.30000000000000004
+      },
+      {
+        "_index": 97,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.725
+      },
+      {
+        "_index": 98,
+        "uses_ai": "No",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 99,
+        "uses_ai": "Yes",
+        "dimension": "study_hours_per_day",
+        "normalized_value": 0.9750000000000001
+      },
+      {
+        "_index": 0,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 1,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 2,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 3,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 4,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 5,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 6,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 7,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 8,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 9,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 10,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 11,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 12,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 13,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 14,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 15,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 16,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 17,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 18,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 19,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 20,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 21,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 22,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 23,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 24,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 25,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 26,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 27,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 28,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 29,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 30,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 31,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 32,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 33,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 34,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 35,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 36,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 37,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 38,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 39,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 40,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 41,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 42,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 43,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 44,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 45,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 46,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 47,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 48,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 49,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 50,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 51,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 52,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 53,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 54,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 55,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 56,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 57,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 58,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 59,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 60,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 61,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 62,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 63,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 64,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 65,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 66,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 67,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 68,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 69,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 70,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 71,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 72,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 73,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 74,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 75,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 76,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 77,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 78,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 79,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 80,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 81,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 82,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 83,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 84,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 85,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 86,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 87,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 88,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 89,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 90,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 91,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 92,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 93,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 94,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 95,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 96,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 97,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 98,
+        "uses_ai": "No",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 99,
+        "uses_ai": "Yes",
+        "dimension": "daily_screen_time_hours",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 0,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.20588235294117646
+      },
+      {
+        "_index": 1,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.17647058823529413
+      },
+      {
+        "_index": 2,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.9705882352941176
+      },
+      {
+        "_index": 3,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 4,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.11764705882352941
+      },
+      {
+        "_index": 5,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.08823529411764706
+      },
+      {
+        "_index": 6,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6764705882352942
+      },
+      {
+        "_index": 7,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5294117647058824
+      },
+      {
+        "_index": 8,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.38235294117647056
+      },
+      {
+        "_index": 9,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.14705882352941177
+      },
+      {
+        "_index": 10,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5882352941176471
+      },
+      {
+        "_index": 11,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6176470588235294
+      },
+      {
+        "_index": 12,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.029411764705882353
+      },
+      {
+        "_index": 13,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.23529411764705882
+      },
+      {
+        "_index": 14,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.17647058823529413
+      },
+      {
+        "_index": 15,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.11764705882352941
+      },
+      {
+        "_index": 16,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5294117647058824
+      },
+      {
+        "_index": 17,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6176470588235294
+      },
+      {
+        "_index": 18,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.7352941176470589
+      },
+      {
+        "_index": 19,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.47058823529411764
+      },
+      {
+        "_index": 20,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5294117647058824
+      },
+      {
+        "_index": 21,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.08823529411764706
+      },
+      {
+        "_index": 22,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6176470588235294
+      },
+      {
+        "_index": 23,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5882352941176471
+      },
+      {
+        "_index": 24,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.14705882352941177
+      },
+      {
+        "_index": 25,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4411764705882353
+      },
+      {
+        "_index": 26,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.20588235294117646
+      },
+      {
+        "_index": 27,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6176470588235294
+      },
+      {
+        "_index": 28,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 29,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.17647058823529413
+      },
+      {
+        "_index": 30,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.35294117647058826
+      },
+      {
+        "_index": 31,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.08823529411764706
+      },
+      {
+        "_index": 32,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6176470588235294
+      },
+      {
+        "_index": 33,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.3235294117647059
+      },
+      {
+        "_index": 34,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.17647058823529413
+      },
+      {
+        "_index": 35,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.20588235294117646
+      },
+      {
+        "_index": 36,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6470588235294118
+      },
+      {
+        "_index": 37,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.7647058823529411
+      },
+      {
+        "_index": 38,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5588235294117647
+      },
+      {
+        "_index": 39,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4117647058823529
+      },
+      {
+        "_index": 40,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6470588235294118
+      },
+      {
+        "_index": 41,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4411764705882353
+      },
+      {
+        "_index": 42,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6176470588235294
+      },
+      {
+        "_index": 43,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.11764705882352941
+      },
+      {
+        "_index": 44,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6470588235294118
+      },
+      {
+        "_index": 45,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.47058823529411764
+      },
+      {
+        "_index": 46,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.7352941176470589
+      },
+      {
+        "_index": 47,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4411764705882353
+      },
+      {
+        "_index": 48,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.23529411764705882
+      },
+      {
+        "_index": 49,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5588235294117647
+      },
+      {
+        "_index": 50,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.9705882352941176
+      },
+      {
+        "_index": 51,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.11764705882352941
+      },
+      {
+        "_index": 52,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.2647058823529412
+      },
+      {
+        "_index": 53,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5588235294117647
+      },
+      {
+        "_index": 54,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.08823529411764706
+      },
+      {
+        "_index": 55,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.38235294117647056
+      },
+      {
+        "_index": 56,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.17647058823529413
+      },
+      {
+        "_index": 57,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.23529411764705882
+      },
+      {
+        "_index": 58,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.029411764705882353
+      },
+      {
+        "_index": 59,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.14705882352941177
+      },
+      {
+        "_index": 60,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 61,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.7352941176470589
+      },
+      {
+        "_index": 62,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.3235294117647059
+      },
+      {
+        "_index": 63,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.7941176470588235
+      },
+      {
+        "_index": 64,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5294117647058824
+      },
+      {
+        "_index": 65,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.20588235294117646
+      },
+      {
+        "_index": 66,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.6764705882352942
+      },
+      {
+        "_index": 67,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 68,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.3235294117647059
+      },
+      {
+        "_index": 69,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 70,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.029411764705882353
+      },
+      {
+        "_index": 71,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.38235294117647056
+      },
+      {
+        "_index": 72,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5294117647058824
+      },
+      {
+        "_index": 73,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 74,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.7352941176470589
+      },
+      {
+        "_index": 75,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 76,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.14705882352941177
+      },
+      {
+        "_index": 77,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 78,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4117647058823529
+      },
+      {
+        "_index": 79,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.14705882352941177
+      },
+      {
+        "_index": 80,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.058823529411764705
+      },
+      {
+        "_index": 81,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.2647058823529412
+      },
+      {
+        "_index": 82,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 83,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.35294117647058826
+      },
+      {
+        "_index": 84,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4117647058823529
+      },
+      {
+        "_index": 85,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.47058823529411764
+      },
+      {
+        "_index": 86,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4117647058823529
+      },
+      {
+        "_index": 87,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 88,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4117647058823529
+      },
+      {
+        "_index": 89,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.47058823529411764
+      },
+      {
+        "_index": 90,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.058823529411764705
+      },
+      {
+        "_index": 91,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.29411764705882354
+      },
+      {
+        "_index": 92,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.35294117647058826
+      },
+      {
+        "_index": 93,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.38235294117647056
+      },
+      {
+        "_index": 94,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5294117647058824
+      },
+      {
+        "_index": 95,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.4411764705882353
+      },
+      {
+        "_index": 96,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.38235294117647056
+      },
+      {
+        "_index": 97,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.5588235294117647
+      },
+      {
+        "_index": 98,
+        "uses_ai": "No",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.14705882352941177
+      },
+      {
+        "_index": 99,
+        "uses_ai": "Yes",
+        "dimension": "grades_after_ai",
+        "normalized_value": 0.9705882352941176
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "grades_before_ai",
+        "study_hours_per_day",
+        "daily_screen_time_hours",
+        "grades_after_ai"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "grades_before_ai"
+          },
+          {
+            "dimension": "study_hours_per_day"
+          },
+          {
+            "dimension": "daily_screen_time_hours"
+          },
+          {
+            "dimension": "grades_after_ai"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "uses_ai",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "uses_ai",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 63.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 75.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.8
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 69.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 89.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 63.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 75.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.8
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 69.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 89.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 63.0
+          },
+          {
+            "dimension": "grades_before_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 75.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.8
+          },
+          {
+            "dimension": "study_hours_per_day",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 2.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "daily_screen_time_hours",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 55.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 69.0
+          },
+          {
+            "dimension": "grades_after_ai",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 89.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  }
+}

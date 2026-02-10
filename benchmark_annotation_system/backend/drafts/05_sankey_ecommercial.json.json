@@ -1,0 +1,1695 @@
+{
+  "filename": "05_sankey_ecommercial.json",
+  "spec_index": 4,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "E-commerce User Flow",
+    "width": 900,
+    "height": 450,
+    "padding": {
+      "left": 10,
+      "right": 120,
+      "top": 30,
+      "bottom": 30
+    },
+    "_metadata": {
+      "chart_type": "sankey",
+      "title": "E-commerce User Journey",
+      "topic": "user_flow"
+    },
+    "data": [
+      {
+        "name": "nodes",
+        "values": [
+          {
+            "name": "Google Ads",
+            "depth": 0,
+            "x": 0,
+            "y": 10,
+            "dy": 118.8679245283019
+          },
+          {
+            "name": "Facebook",
+            "depth": 0,
+            "x": 0,
+            "y": 133.8679245283019,
+            "dy": 92.45283018867924
+          },
+          {
+            "name": "Other",
+            "depth": 0,
+            "x": 0,
+            "y": 231.32075471698113,
+            "dy": 138.67924528301887,
+            "_is_aggregate": true,
+            "_collapsed_nodes": [
+              "Organic",
+              "Email"
+            ]
+          },
+          {
+            "name": "Landing Page",
+            "depth": 1,
+            "x": 180,
+            "y": 10,
+            "dy": 171.69811320754718
+          },
+          {
+            "name": "Product List",
+            "depth": 1,
+            "x": 180,
+            "y": 186.69811320754718,
+            "dy": 125.47169811320755
+          },
+          {
+            "name": "Search",
+            "depth": 1,
+            "x": 180,
+            "y": 317.1698113207547,
+            "dy": 52.83018867924528
+          },
+          {
+            "name": "Product Detail",
+            "depth": 2,
+            "x": 360,
+            "y": 10,
+            "dy": 273.5632183908046
+          },
+          {
+            "name": "Exit",
+            "depth": 2,
+            "x": 360,
+            "y": 288.5632183908046,
+            "dy": 76.4367816091954
+          },
+          {
+            "name": "Add to Cart",
+            "depth": 3,
+            "x": 540,
+            "y": 10,
+            "dy": 252
+          },
+          {
+            "name": "Bounce",
+            "depth": 3,
+            "x": 540,
+            "y": 267,
+            "dy": 98
+          },
+          {
+            "name": "Purchase",
+            "depth": 4,
+            "x": 720,
+            "y": 10,
+            "dy": 350
+          }
+        ]
+      },
+      {
+        "name": "links",
+        "values": [
+          {
+            "source": "Google Ads",
+            "target": "Landing Page",
+            "value": 5000,
+            "sy0": 10,
+            "sy1": 76.03773584905662,
+            "ty0": 10,
+            "ty1": 43.01886792452831
+          },
+          {
+            "source": "Google Ads",
+            "target": "Product List",
+            "value": 4000,
+            "sy0": 76.03773584905662,
+            "sy1": 128.8679245283019,
+            "ty0": 186.69811320754718,
+            "ty1": 213.11320754716982
+          },
+          {
+            "source": "Facebook",
+            "target": "Landing Page",
+            "value": 4500,
+            "sy0": 133.8679245283019,
+            "sy1": 193.30188679245285,
+            "ty0": 43.01886792452831,
+            "ty1": 72.73584905660378
+          },
+          {
+            "source": "Facebook",
+            "target": "Product List",
+            "value": 2500,
+            "sy0": 193.30188679245285,
+            "sy1": 226.32075471698116,
+            "ty0": 213.11320754716982,
+            "ty1": 229.62264150943398
+          },
+          {
+            "source": "Other",
+            "target": "Landing Page",
+            "value": 3500,
+            "sy0": 231.32075471698113,
+            "sy1": 277.54716981132077,
+            "ty0": 72.73584905660378,
+            "ty1": 95.84905660377359
+          },
+          {
+            "source": "Other",
+            "target": "Search",
+            "value": 4000,
+            "sy0": 277.54716981132077,
+            "sy1": 330.37735849056605,
+            "ty0": 317.1698113207547,
+            "ty1": 343.58490566037733
+          },
+          {
+            "source": "Other",
+            "target": "Product List",
+            "value": 3000,
+            "sy0": 330.37735849056605,
+            "sy1": 370,
+            "ty0": 229.62264150943398,
+            "ty1": 249.43396226415095
+          },
+          {
+            "source": "Landing Page",
+            "target": "Product Detail",
+            "value": 8000,
+            "sy0": 10,
+            "sy1": 62.83018867924529,
+            "ty0": 10,
+            "ty1": 74.36781609195403
+          },
+          {
+            "source": "Landing Page",
+            "target": "Exit",
+            "value": 5000,
+            "sy0": 62.83018867924529,
+            "sy1": 95.84905660377359,
+            "ty0": 288.5632183908046,
+            "ty1": 328.7931034482759
+          },
+          {
+            "source": "Product List",
+            "target": "Product Detail",
+            "value": 6000,
+            "sy0": 186.69811320754718,
+            "sy1": 226.32075471698113,
+            "ty0": 74.36781609195403,
+            "ty1": 122.64367816091954
+          },
+          {
+            "source": "Product List",
+            "target": "Exit",
+            "value": 3500,
+            "sy0": 226.32075471698113,
+            "sy1": 249.43396226415095,
+            "ty0": 328.7931034482759,
+            "ty1": 356.95402298850576
+          },
+          {
+            "source": "Search",
+            "target": "Product Detail",
+            "value": 3000,
+            "sy0": 317.1698113207547,
+            "sy1": 336.9811320754717,
+            "ty0": 122.64367816091954,
+            "ty1": 146.7816091954023
+          },
+          {
+            "source": "Search",
+            "target": "Exit",
+            "value": 1000,
+            "sy0": 336.9811320754717,
+            "sy1": 343.58490566037733,
+            "ty0": 356.95402298850576,
+            "ty1": 365
+          },
+          {
+            "source": "Product Detail",
+            "target": "Add to Cart",
+            "value": 10000,
+            "sy0": 10,
+            "sy1": 90.45977011494253,
+            "ty0": 10,
+            "ty1": 150
+          },
+          {
+            "source": "Product Detail",
+            "target": "Bounce",
+            "value": 7000,
+            "sy0": 90.45977011494253,
+            "sy1": 146.7816091954023,
+            "ty0": 267,
+            "ty1": 365
+          },
+          {
+            "source": "Add to Cart",
+            "target": "Purchase",
+            "value": 8000,
+            "sy0": 10,
+            "sy1": 122,
+            "ty0": 10,
+            "ty1": 360
+          }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {
+          "data": "nodes",
+          "field": "depth"
+        },
+        "range": [
+          "#3498db",
+          "#e74c3c",
+          "#2ecc71",
+          "#f39c12",
+          "#9b59b6"
+        ]
+      }
+    ],
+    "marks": [
+      {
+        "type": "path",
+        "from": {
+          "data": "links"
+        },
+        "encode": {
+          "enter": {
+            "path": {
+              "signal": "'M' + (datum.sx + 15) + ',' + datum.sy0 + ' C' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.sy0 + ' ' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.ty0 + ' ' + datum.tx + ',' + datum.ty0 + ' L' + datum.tx + ',' + datum.ty1 + ' C' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.ty1 + ' ' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.sy1 + ' ' + (datum.sx + 15) + ',' + datum.sy1 + ' Z'"
+            },
+            "fill": {
+              "value": "#6699cc"
+            },
+            "fillOpacity": {
+              "value": 0.35
+            },
+            "stroke": {
+              "value": "#4477aa"
+            },
+            "strokeWidth": {
+              "value": 0.5
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',') + ' users'"
+            }
+          },
+          "hover": {
+            "fillOpacity": {
+              "value": 0.7
+            }
+          }
+        }
+      },
+      {
+        "type": "rect",
+        "from": {
+          "data": "nodes"
+        },
+        "encode": {
+          "enter": {
+            "x": {
+              "field": "x"
+            },
+            "width": {
+              "value": 15
+            },
+            "y": {
+              "field": "y"
+            },
+            "height": {
+              "field": "dy"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "depth"
+            },
+            "stroke": {
+              "value": "#333"
+            },
+            "strokeWidth": {
+              "value": 1
+            },
+            "cornerRadius": {
+              "value": 2
+            },
+            "tooltip": {
+              "signal": "datum.name + ' (Layer ' + datum.depth + ')'"
+            },
+            "fillOpacity": {
+              "signal": "datum.name == 'Facebook' ? 1.0 : 0.4"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodes"
+        },
+        "encode": {
+          "enter": {
+            "x": {
+              "signal": "datum.x + 20"
+            },
+            "y": {
+              "signal": "datum.y + datum.dy / 2"
+            },
+            "text": {
+              "field": "name"
+            },
+            "fontSize": {
+              "value": 11
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#333"
+            },
+            "baseline": {
+              "value": "middle"
+            }
+          }
+        }
+      }
+    ],
+    "title": {
+      "text": "E-commerce Conversion Funnel",
+      "fontSize": 16,
+      "anchor": "start"
+    }
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "E-commerce User Flow",
+    "width": 900,
+    "height": 450,
+    "padding": {
+      "left": 10,
+      "right": 120,
+      "top": 30,
+      "bottom": 30
+    },
+    "_metadata": {
+      "chart_type": "sankey",
+      "title": "E-commerce User Journey",
+      "topic": "user_flow"
+    },
+    "data": [
+      {
+        "name": "nodes",
+        "values": [
+          {
+            "name": "Google Ads",
+            "depth": 0,
+            "x": 0,
+            "y": 0,
+            "dy": 90
+          },
+          {
+            "name": "Facebook",
+            "depth": 0,
+            "x": 0,
+            "y": 100,
+            "dy": 70
+          },
+          {
+            "name": "Organic",
+            "depth": 0,
+            "x": 0,
+            "y": 180,
+            "dy": 60
+          },
+          {
+            "name": "Email",
+            "depth": 0,
+            "x": 0,
+            "y": 250,
+            "dy": 45
+          },
+          {
+            "name": "Landing Page",
+            "depth": 1,
+            "x": 220,
+            "y": 10,
+            "dy": 130
+          },
+          {
+            "name": "Product List",
+            "depth": 1,
+            "x": 220,
+            "y": 150,
+            "dy": 100
+          },
+          {
+            "name": "Search",
+            "depth": 1,
+            "x": 220,
+            "y": 260,
+            "dy": 50
+          },
+          {
+            "name": "Product Detail",
+            "depth": 2,
+            "x": 440,
+            "y": 20,
+            "dy": 150
+          },
+          {
+            "name": "Exit",
+            "depth": 2,
+            "x": 440,
+            "y": 180,
+            "dy": 120
+          },
+          {
+            "name": "Add to Cart",
+            "depth": 3,
+            "x": 660,
+            "y": 30,
+            "dy": 100
+          },
+          {
+            "name": "Bounce",
+            "depth": 3,
+            "x": 660,
+            "y": 140,
+            "dy": 70
+          },
+          {
+            "name": "Purchase",
+            "depth": 4,
+            "x": 880,
+            "y": 40,
+            "dy": 80
+          }
+        ]
+      },
+      {
+        "name": "links",
+        "values": [
+          {
+            "source": "Google Ads",
+            "target": "Landing Page",
+            "value": 5000,
+            "sx": 0,
+            "tx": 220,
+            "sy0": 0,
+            "sy1": 50,
+            "ty0": 10,
+            "ty1": 60
+          },
+          {
+            "source": "Google Ads",
+            "target": "Product List",
+            "value": 4000,
+            "sx": 0,
+            "tx": 220,
+            "sy0": 50,
+            "sy1": 90,
+            "ty0": 150,
+            "ty1": 190
+          },
+          {
+            "source": "Facebook",
+            "target": "Landing Page",
+            "value": 4500,
+            "sx": 0,
+            "tx": 220,
+            "sy0": 100,
+            "sy1": 145,
+            "ty0": 60,
+            "ty1": 105
+          },
+          {
+            "source": "Facebook",
+            "target": "Product List",
+            "value": 2500,
+            "sx": 0,
+            "tx": 220,
+            "sy0": 145,
+            "sy1": 170,
+            "ty0": 190,
+            "ty1": 215
+          },
+          {
+            "source": "Organic",
+            "target": "Landing Page",
+            "value": 3500,
+            "sx": 0,
+            "tx": 220,
+            "sy0": 180,
+            "sy1": 215,
+            "ty0": 105,
+            "ty1": 140
+          },
+          {
+            "source": "Organic",
+            "target": "Search",
+            "value": 2500,
+            "sx": 0,
+            "tx": 220,
+            "sy0": 215,
+            "sy1": 240,
+            "ty0": 260,
+            "ty1": 285
+          },
+          {
+            "source": "Email",
+            "target": "Product List",
+            "value": 3000,
+            "sx": 0,
+            "tx": 220,
+            "sy0": 250,
+            "sy1": 280,
+            "ty0": 215,
+            "ty1": 245
+          },
+          {
+            "source": "Email",
+            "target": "Search",
+            "value": 1500,
+            "sx": 0,
+            "tx": 220,
+            "sy0": 280,
+            "sy1": 295,
+            "ty0": 285,
+            "ty1": 300
+          },
+          {
+            "source": "Landing Page",
+            "target": "Product Detail",
+            "value": 8000,
+            "sx": 220,
+            "tx": 440,
+            "sy0": 10,
+            "sy1": 90,
+            "ty0": 20,
+            "ty1": 100
+          },
+          {
+            "source": "Landing Page",
+            "target": "Exit",
+            "value": 5000,
+            "sx": 220,
+            "tx": 440,
+            "sy0": 90,
+            "sy1": 140,
+            "ty0": 180,
+            "ty1": 230
+          },
+          {
+            "source": "Product List",
+            "target": "Product Detail",
+            "value": 6000,
+            "sx": 220,
+            "tx": 440,
+            "sy0": 150,
+            "sy1": 210,
+            "ty0": 100,
+            "ty1": 160
+          },
+          {
+            "source": "Product List",
+            "target": "Exit",
+            "value": 3500,
+            "sx": 220,
+            "tx": 440,
+            "sy0": 210,
+            "sy1": 245,
+            "ty0": 230,
+            "ty1": 265
+          },
+          {
+            "source": "Search",
+            "target": "Product Detail",
+            "value": 3000,
+            "sx": 220,
+            "tx": 440,
+            "sy0": 260,
+            "sy1": 290,
+            "ty0": 160,
+            "ty1": 170
+          },
+          {
+            "source": "Search",
+            "target": "Exit",
+            "value": 1000,
+            "sx": 220,
+            "tx": 440,
+            "sy0": 290,
+            "sy1": 300,
+            "ty0": 265,
+            "ty1": 275
+          },
+          {
+            "source": "Product Detail",
+            "target": "Add to Cart",
+            "value": 10000,
+            "sx": 440,
+            "tx": 660,
+            "sy0": 20,
+            "sy1": 120,
+            "ty0": 30,
+            "ty1": 130
+          },
+          {
+            "source": "Product Detail",
+            "target": "Bounce",
+            "value": 7000,
+            "sx": 440,
+            "tx": 660,
+            "sy0": 120,
+            "sy1": 170,
+            "ty0": 140,
+            "ty1": 210
+          },
+          {
+            "source": "Add to Cart",
+            "target": "Purchase",
+            "value": 8000,
+            "sx": 660,
+            "tx": 880,
+            "sy0": 30,
+            "sy1": 110,
+            "ty0": 40,
+            "ty1": 120
+          }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": {
+          "data": "nodes",
+          "field": "depth"
+        },
+        "range": [
+          "#3498db",
+          "#e74c3c",
+          "#2ecc71",
+          "#f39c12",
+          "#9b59b6"
+        ]
+      }
+    ],
+    "marks": [
+      {
+        "type": "path",
+        "from": {
+          "data": "links"
+        },
+        "encode": {
+          "enter": {
+            "path": {
+              "signal": "'M' + (datum.sx + 15) + ',' + datum.sy0 + ' C' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.sy0 + ' ' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.ty0 + ' ' + datum.tx + ',' + datum.ty0 + ' L' + datum.tx + ',' + datum.ty1 + ' C' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.ty1 + ' ' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.sy1 + ' ' + (datum.sx + 15) + ',' + datum.sy1 + ' Z'"
+            },
+            "fill": {
+              "value": "#6699cc"
+            },
+            "fillOpacity": {
+              "value": 0.35
+            },
+            "stroke": {
+              "value": "#4477aa"
+            },
+            "strokeWidth": {
+              "value": 0.5
+            },
+            "tooltip": {
+              "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',') + ' users'"
+            }
+          },
+          "hover": {
+            "fillOpacity": {
+              "value": 0.7
+            }
+          }
+        }
+      },
+      {
+        "type": "rect",
+        "from": {
+          "data": "nodes"
+        },
+        "encode": {
+          "enter": {
+            "x": {
+              "field": "x"
+            },
+            "width": {
+              "value": 15
+            },
+            "y": {
+              "field": "y"
+            },
+            "height": {
+              "field": "dy"
+            },
+            "fill": {
+              "scale": "color",
+              "field": "depth"
+            },
+            "stroke": {
+              "value": "#333"
+            },
+            "strokeWidth": {
+              "value": 1
+            },
+            "cornerRadius": {
+              "value": 2
+            },
+            "tooltip": {
+              "signal": "datum.name + ' (Layer ' + datum.depth + ')'"
+            }
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {
+          "data": "nodes"
+        },
+        "encode": {
+          "enter": {
+            "x": {
+              "signal": "datum.x + 20"
+            },
+            "y": {
+              "signal": "datum.y + datum.dy / 2"
+            },
+            "text": {
+              "field": "name"
+            },
+            "fontSize": {
+              "value": 11
+            },
+            "fontWeight": {
+              "value": "bold"
+            },
+            "fill": {
+              "value": "#333"
+            },
+            "baseline": {
+              "value": "middle"
+            }
+          }
+        }
+      }
+    ],
+    "title": {
+      "text": "E-commerce Conversion Funnel",
+      "fontSize": 16,
+      "anchor": "start"
+    }
+  },
+  "spec_history": [
+    {
+      "$schema": "https://vega.github.io/schema/vega/v5.json",
+      "description": "E-commerce User Flow",
+      "width": 900,
+      "height": 450,
+      "padding": {
+        "left": 10,
+        "right": 120,
+        "top": 30,
+        "bottom": 30
+      },
+      "_metadata": {
+        "chart_type": "sankey",
+        "title": "E-commerce User Journey",
+        "topic": "user_flow"
+      },
+      "data": [
+        {
+          "name": "nodes",
+          "values": [
+            {
+              "name": "Google Ads",
+              "depth": 0,
+              "x": 0,
+              "y": 0,
+              "dy": 90
+            },
+            {
+              "name": "Facebook",
+              "depth": 0,
+              "x": 0,
+              "y": 100,
+              "dy": 70
+            },
+            {
+              "name": "Organic",
+              "depth": 0,
+              "x": 0,
+              "y": 180,
+              "dy": 60
+            },
+            {
+              "name": "Email",
+              "depth": 0,
+              "x": 0,
+              "y": 250,
+              "dy": 45
+            },
+            {
+              "name": "Landing Page",
+              "depth": 1,
+              "x": 220,
+              "y": 10,
+              "dy": 130
+            },
+            {
+              "name": "Product List",
+              "depth": 1,
+              "x": 220,
+              "y": 150,
+              "dy": 100
+            },
+            {
+              "name": "Search",
+              "depth": 1,
+              "x": 220,
+              "y": 260,
+              "dy": 50
+            },
+            {
+              "name": "Product Detail",
+              "depth": 2,
+              "x": 440,
+              "y": 20,
+              "dy": 150
+            },
+            {
+              "name": "Exit",
+              "depth": 2,
+              "x": 440,
+              "y": 180,
+              "dy": 120
+            },
+            {
+              "name": "Add to Cart",
+              "depth": 3,
+              "x": 660,
+              "y": 30,
+              "dy": 100
+            },
+            {
+              "name": "Bounce",
+              "depth": 3,
+              "x": 660,
+              "y": 140,
+              "dy": 70
+            },
+            {
+              "name": "Purchase",
+              "depth": 4,
+              "x": 880,
+              "y": 40,
+              "dy": 80
+            }
+          ]
+        },
+        {
+          "name": "links",
+          "values": [
+            {
+              "source": "Google Ads",
+              "target": "Landing Page",
+              "value": 5000,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 0,
+              "sy1": 50,
+              "ty0": 10,
+              "ty1": 60
+            },
+            {
+              "source": "Google Ads",
+              "target": "Product List",
+              "value": 4000,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 50,
+              "sy1": 90,
+              "ty0": 150,
+              "ty1": 190
+            },
+            {
+              "source": "Facebook",
+              "target": "Landing Page",
+              "value": 4500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 100,
+              "sy1": 145,
+              "ty0": 60,
+              "ty1": 105
+            },
+            {
+              "source": "Facebook",
+              "target": "Product List",
+              "value": 2500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 145,
+              "sy1": 170,
+              "ty0": 190,
+              "ty1": 215
+            },
+            {
+              "source": "Organic",
+              "target": "Landing Page",
+              "value": 3500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 180,
+              "sy1": 215,
+              "ty0": 105,
+              "ty1": 140
+            },
+            {
+              "source": "Organic",
+              "target": "Search",
+              "value": 2500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 215,
+              "sy1": 240,
+              "ty0": 260,
+              "ty1": 285
+            },
+            {
+              "source": "Email",
+              "target": "Product List",
+              "value": 3000,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 250,
+              "sy1": 280,
+              "ty0": 215,
+              "ty1": 245
+            },
+            {
+              "source": "Email",
+              "target": "Search",
+              "value": 1500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 280,
+              "sy1": 295,
+              "ty0": 285,
+              "ty1": 300
+            },
+            {
+              "source": "Landing Page",
+              "target": "Product Detail",
+              "value": 8000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 10,
+              "sy1": 90,
+              "ty0": 20,
+              "ty1": 100
+            },
+            {
+              "source": "Landing Page",
+              "target": "Exit",
+              "value": 5000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 90,
+              "sy1": 140,
+              "ty0": 180,
+              "ty1": 230
+            },
+            {
+              "source": "Product List",
+              "target": "Product Detail",
+              "value": 6000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 150,
+              "sy1": 210,
+              "ty0": 100,
+              "ty1": 160
+            },
+            {
+              "source": "Product List",
+              "target": "Exit",
+              "value": 3500,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 210,
+              "sy1": 245,
+              "ty0": 230,
+              "ty1": 265
+            },
+            {
+              "source": "Search",
+              "target": "Product Detail",
+              "value": 3000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 260,
+              "sy1": 290,
+              "ty0": 160,
+              "ty1": 170
+            },
+            {
+              "source": "Search",
+              "target": "Exit",
+              "value": 1000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 290,
+              "sy1": 300,
+              "ty0": 265,
+              "ty1": 275
+            },
+            {
+              "source": "Product Detail",
+              "target": "Add to Cart",
+              "value": 10000,
+              "sx": 440,
+              "tx": 660,
+              "sy0": 20,
+              "sy1": 120,
+              "ty0": 30,
+              "ty1": 130
+            },
+            {
+              "source": "Product Detail",
+              "target": "Bounce",
+              "value": 7000,
+              "sx": 440,
+              "tx": 660,
+              "sy0": 120,
+              "sy1": 170,
+              "ty0": 140,
+              "ty1": 210
+            },
+            {
+              "source": "Add to Cart",
+              "target": "Purchase",
+              "value": 8000,
+              "sx": 660,
+              "tx": 880,
+              "sy0": 30,
+              "sy1": 110,
+              "ty0": 40,
+              "ty1": 120
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "name": "color",
+          "type": "ordinal",
+          "domain": {
+            "data": "nodes",
+            "field": "depth"
+          },
+          "range": [
+            "#3498db",
+            "#e74c3c",
+            "#2ecc71",
+            "#f39c12",
+            "#9b59b6"
+          ]
+        }
+      ],
+      "marks": [
+        {
+          "type": "path",
+          "from": {
+            "data": "links"
+          },
+          "encode": {
+            "enter": {
+              "path": {
+                "signal": "'M' + (datum.sx + 15) + ',' + datum.sy0 + ' C' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.sy0 + ' ' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.ty0 + ' ' + datum.tx + ',' + datum.ty0 + ' L' + datum.tx + ',' + datum.ty1 + ' C' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.ty1 + ' ' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.sy1 + ' ' + (datum.sx + 15) + ',' + datum.sy1 + ' Z'"
+              },
+              "fill": {
+                "value": "#6699cc"
+              },
+              "fillOpacity": {
+                "value": 0.35
+              },
+              "stroke": {
+                "value": "#4477aa"
+              },
+              "strokeWidth": {
+                "value": 0.5
+              },
+              "tooltip": {
+                "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',') + ' users'"
+              }
+            },
+            "hover": {
+              "fillOpacity": {
+                "value": 0.7
+              }
+            }
+          }
+        },
+        {
+          "type": "rect",
+          "from": {
+            "data": "nodes"
+          },
+          "encode": {
+            "enter": {
+              "x": {
+                "field": "x"
+              },
+              "width": {
+                "value": 15
+              },
+              "y": {
+                "field": "y"
+              },
+              "height": {
+                "field": "dy"
+              },
+              "fill": {
+                "scale": "color",
+                "field": "depth"
+              },
+              "stroke": {
+                "value": "#333"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "cornerRadius": {
+                "value": 2
+              },
+              "tooltip": {
+                "signal": "datum.name + ' (Layer ' + datum.depth + ')'"
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "from": {
+            "data": "nodes"
+          },
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x + 20"
+              },
+              "y": {
+                "signal": "datum.y + datum.dy / 2"
+              },
+              "text": {
+                "field": "name"
+              },
+              "fontSize": {
+                "value": 11
+              },
+              "fontWeight": {
+                "value": "bold"
+              },
+              "fill": {
+                "value": "#333"
+              },
+              "baseline": {
+                "value": "middle"
+              }
+            }
+          }
+        }
+      ],
+      "title": {
+        "text": "E-commerce Conversion Funnel",
+        "fontSize": 16,
+        "anchor": "start"
+      }
+    },
+    {
+      "$schema": "https://vega.github.io/schema/vega/v5.json",
+      "description": "E-commerce User Flow",
+      "width": 900,
+      "height": 450,
+      "padding": {
+        "left": 10,
+        "right": 120,
+        "top": 30,
+        "bottom": 30
+      },
+      "_metadata": {
+        "chart_type": "sankey",
+        "title": "E-commerce User Journey",
+        "topic": "user_flow"
+      },
+      "data": [
+        {
+          "name": "nodes",
+          "values": [
+            {
+              "name": "Google Ads",
+              "depth": 0,
+              "x": 0,
+              "y": 0,
+              "dy": 90
+            },
+            {
+              "name": "Facebook",
+              "depth": 0,
+              "x": 0,
+              "y": 100,
+              "dy": 70
+            },
+            {
+              "name": "Organic",
+              "depth": 0,
+              "x": 0,
+              "y": 180,
+              "dy": 60
+            },
+            {
+              "name": "Email",
+              "depth": 0,
+              "x": 0,
+              "y": 250,
+              "dy": 45
+            },
+            {
+              "name": "Landing Page",
+              "depth": 1,
+              "x": 220,
+              "y": 10,
+              "dy": 130
+            },
+            {
+              "name": "Product List",
+              "depth": 1,
+              "x": 220,
+              "y": 150,
+              "dy": 100
+            },
+            {
+              "name": "Search",
+              "depth": 1,
+              "x": 220,
+              "y": 260,
+              "dy": 50
+            },
+            {
+              "name": "Product Detail",
+              "depth": 2,
+              "x": 440,
+              "y": 20,
+              "dy": 150
+            },
+            {
+              "name": "Exit",
+              "depth": 2,
+              "x": 440,
+              "y": 180,
+              "dy": 120
+            },
+            {
+              "name": "Add to Cart",
+              "depth": 3,
+              "x": 660,
+              "y": 30,
+              "dy": 100
+            },
+            {
+              "name": "Bounce",
+              "depth": 3,
+              "x": 660,
+              "y": 140,
+              "dy": 70
+            },
+            {
+              "name": "Purchase",
+              "depth": 4,
+              "x": 880,
+              "y": 40,
+              "dy": 80
+            }
+          ]
+        },
+        {
+          "name": "links",
+          "values": [
+            {
+              "source": "Google Ads",
+              "target": "Landing Page",
+              "value": 5000,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 0,
+              "sy1": 50,
+              "ty0": 10,
+              "ty1": 60
+            },
+            {
+              "source": "Google Ads",
+              "target": "Product List",
+              "value": 4000,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 50,
+              "sy1": 90,
+              "ty0": 150,
+              "ty1": 190
+            },
+            {
+              "source": "Facebook",
+              "target": "Landing Page",
+              "value": 4500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 100,
+              "sy1": 145,
+              "ty0": 60,
+              "ty1": 105
+            },
+            {
+              "source": "Facebook",
+              "target": "Product List",
+              "value": 2500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 145,
+              "sy1": 170,
+              "ty0": 190,
+              "ty1": 215
+            },
+            {
+              "source": "Organic",
+              "target": "Landing Page",
+              "value": 3500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 180,
+              "sy1": 215,
+              "ty0": 105,
+              "ty1": 140
+            },
+            {
+              "source": "Organic",
+              "target": "Search",
+              "value": 2500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 215,
+              "sy1": 240,
+              "ty0": 260,
+              "ty1": 285
+            },
+            {
+              "source": "Email",
+              "target": "Product List",
+              "value": 3000,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 250,
+              "sy1": 280,
+              "ty0": 215,
+              "ty1": 245
+            },
+            {
+              "source": "Email",
+              "target": "Search",
+              "value": 1500,
+              "sx": 0,
+              "tx": 220,
+              "sy0": 280,
+              "sy1": 295,
+              "ty0": 285,
+              "ty1": 300
+            },
+            {
+              "source": "Landing Page",
+              "target": "Product Detail",
+              "value": 8000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 10,
+              "sy1": 90,
+              "ty0": 20,
+              "ty1": 100
+            },
+            {
+              "source": "Landing Page",
+              "target": "Exit",
+              "value": 5000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 90,
+              "sy1": 140,
+              "ty0": 180,
+              "ty1": 230
+            },
+            {
+              "source": "Product List",
+              "target": "Product Detail",
+              "value": 6000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 150,
+              "sy1": 210,
+              "ty0": 100,
+              "ty1": 160
+            },
+            {
+              "source": "Product List",
+              "target": "Exit",
+              "value": 3500,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 210,
+              "sy1": 245,
+              "ty0": 230,
+              "ty1": 265
+            },
+            {
+              "source": "Search",
+              "target": "Product Detail",
+              "value": 3000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 260,
+              "sy1": 290,
+              "ty0": 160,
+              "ty1": 170
+            },
+            {
+              "source": "Search",
+              "target": "Exit",
+              "value": 1000,
+              "sx": 220,
+              "tx": 440,
+              "sy0": 290,
+              "sy1": 300,
+              "ty0": 265,
+              "ty1": 275
+            },
+            {
+              "source": "Product Detail",
+              "target": "Add to Cart",
+              "value": 10000,
+              "sx": 440,
+              "tx": 660,
+              "sy0": 20,
+              "sy1": 120,
+              "ty0": 30,
+              "ty1": 130
+            },
+            {
+              "source": "Product Detail",
+              "target": "Bounce",
+              "value": 7000,
+              "sx": 440,
+              "tx": 660,
+              "sy0": 120,
+              "sy1": 170,
+              "ty0": 140,
+              "ty1": 210
+            },
+            {
+              "source": "Add to Cart",
+              "target": "Purchase",
+              "value": 8000,
+              "sx": 660,
+              "tx": 880,
+              "sy0": 30,
+              "sy1": 110,
+              "ty0": 40,
+              "ty1": 120
+            }
+          ]
+        }
+      ],
+      "scales": [
+        {
+          "name": "color",
+          "type": "ordinal",
+          "domain": {
+            "data": "nodes",
+            "field": "depth"
+          },
+          "range": [
+            "#3498db",
+            "#e74c3c",
+            "#2ecc71",
+            "#f39c12",
+            "#9b59b6"
+          ]
+        }
+      ],
+      "marks": [
+        {
+          "type": "path",
+          "from": {
+            "data": "links"
+          },
+          "encode": {
+            "enter": {
+              "path": {
+                "signal": "'M' + (datum.sx + 15) + ',' + datum.sy0 + ' C' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.sy0 + ' ' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.ty0 + ' ' + datum.tx + ',' + datum.ty0 + ' L' + datum.tx + ',' + datum.ty1 + ' C' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.ty1 + ' ' + ((datum.sx + 15 + datum.tx) / 2) + ',' + datum.sy1 + ' ' + (datum.sx + 15) + ',' + datum.sy1 + ' Z'"
+              },
+              "fill": {
+                "value": "#6699cc"
+              },
+              "fillOpacity": {
+                "value": 0.35
+              },
+              "stroke": {
+                "value": "#4477aa"
+              },
+              "strokeWidth": {
+                "value": 0.5
+              },
+              "tooltip": {
+                "signal": "datum.source + ' → ' + datum.target + ': ' + format(datum.value, ',') + ' users'"
+              }
+            },
+            "hover": {
+              "fillOpacity": {
+                "value": 0.7
+              }
+            }
+          }
+        },
+        {
+          "type": "rect",
+          "from": {
+            "data": "nodes"
+          },
+          "encode": {
+            "enter": {
+              "x": {
+                "field": "x"
+              },
+              "width": {
+                "value": 15
+              },
+              "y": {
+                "field": "y"
+              },
+              "height": {
+                "field": "dy"
+              },
+              "fill": {
+                "scale": "color",
+                "field": "depth"
+              },
+              "stroke": {
+                "value": "#333"
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "cornerRadius": {
+                "value": 2
+              },
+              "tooltip": {
+                "signal": "datum.name + ' (Layer ' + datum.depth + ')'"
+              },
+              "fillOpacity": {
+                "signal": "datum.name == 'Facebook' ? 1.0 : 0.4"
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "from": {
+            "data": "nodes"
+          },
+          "encode": {
+            "enter": {
+              "x": {
+                "signal": "datum.x + 20"
+              },
+              "y": {
+                "signal": "datum.y + datum.dy / 2"
+              },
+              "text": {
+                "field": "name"
+              },
+              "fontSize": {
+                "value": 11
+              },
+              "fontWeight": {
+                "value": "bold"
+              },
+              "fill": {
+                "value": "#333"
+              },
+              "baseline": {
+                "value": "middle"
+              }
+            }
+          }
+        }
+      ],
+      "title": {
+        "text": "E-commerce Conversion Funnel",
+        "fontSize": 16,
+        "anchor": "start"
+      }
+    }
+  ],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "sankey",
+  "chart_meta": {
+    "chart_type": "sankey",
+    "title": {
+      "text": "E-commerce Conversion Funnel",
+      "fontSize": 16,
+      "anchor": "start"
+    },
+    "filename": "05_sankey_ecommercial.json",
+    "data_points": 12,
+    "total_points": 12,
+    "is_sampled": false,
+    "is_vega_full": true,
+    "sampling_info": null,
+    "collapse_info": {
+      "layers": {},
+      "collapsed_nodes": []
+    }
+  },
+  "updated_at": "2026-01-28T14:59:23.762495Z"
+}

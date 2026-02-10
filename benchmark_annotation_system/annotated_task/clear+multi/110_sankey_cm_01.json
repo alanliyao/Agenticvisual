@@ -1,0 +1,71 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "110_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/110_sankey_trash.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "What is the conversion rate of the Recycled Plant to produce recycled products?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Approximately 0.73.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "collapse_nodes",
+            "reasoning": "Combine the \"Recycled metal\" and \"Recycled plastic\" nodes into the \"recycled product\" node."
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "Calculate the conversion rate of Recycled Plant to recycled products using tools"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "collapse_nodes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "aggregate_name": "recycled product",
+                  "nodes_to_collapse": [
+                    "Recycled Plastic",
+                    "Recycled Metal"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "recycled product"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

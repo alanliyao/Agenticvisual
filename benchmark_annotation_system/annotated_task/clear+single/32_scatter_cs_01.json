@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "32_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/32_insurance_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Is there a clear relationship between the insured person's location and health insurance premiums?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "no"
+        },
+        "key_insights": [
+          "All four regions are evenly distributed across the entire charge range — from the lowest charges to the highest , every color appears throughout. There is no visible vertical stratification by region.",
+          "The dense cluster between BMI 25-40 and charges 3,000-15,000 contains a well-mixed distribution of all four colors, indicating that the majority of policyholders across all regions fall into similar charge brackets regardless of geographic location.",
+          "The high-charge outlier region  shows no regional dominance — blue, orange, red, and cyan points are all present in roughly similar proportions, suggesting that factors driving extreme charges (likely smoking + high BMI) operate independently of region.",
+          "Regional differences, if any, are too subtle to detect visually — unlike the smoking variable which created clear vertical separation in the earlier clustered view, region creates no discernible pattern. This suggests region is a weak predictor of insurance charges compared to behavioral factors like smoking."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "The change encoding tool has successfully identified the problem answers, so there is no need to continue investigating with additional tools."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "region"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "bmi",
+            "y": "charges",
+            "color": "region"
+          }
+        }
+      }
+    }
+  ]
+}

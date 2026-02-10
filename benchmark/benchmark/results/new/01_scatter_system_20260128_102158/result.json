@@ -1,0 +1,86 @@
+{
+  "task_id": "01_scatter",
+  "model": "system",
+  "model_name": "My System",
+  "timestamp": "2026-01-28T10:22:00.291175",
+  "questions_count": 1,
+  "success_count": 0,
+  "results": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the densest region. Which country dominates?",
+      "success": false,
+      "error": "Connection error.",
+      "answer": "",
+      "question_type": "unknown",
+      "key_insights": [],
+      "reasoning_rounds": [],
+      "reasoning": "",
+      "tool_calls": [],
+      "final_spec": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "description": "Automotive Performance-Efficiency Analysis: Horsepower vs MPG by Origin",
+        "data": {
+          "_values_omitted": "392 items"
+        },
+        "mark": "point",
+        "encoding": {
+          "x": {
+            "field": "Horsepower",
+            "type": "quantitative",
+            "scale": {
+              "zero": false
+            }
+          },
+          "y": {
+            "field": "Miles_per_Gallon",
+            "type": "quantitative",
+            "scale": {
+              "zero": false
+            }
+          },
+          "color": {
+            "field": "Origin",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Europe",
+                "Japan",
+                "USA"
+              ],
+              "range": [
+                "#4c78a8",
+                "#f58518",
+                "#e45756"
+              ]
+            },
+            "legend": {
+              "title": "Origin"
+            }
+          },
+          "tooltip": [
+            {
+              "field": "Horsepower",
+              "type": "quantitative"
+            },
+            {
+              "field": "Miles_per_Gallon",
+              "type": "quantitative"
+            },
+            {
+              "field": "Origin",
+              "type": "nominal"
+            },
+            {
+              "field": "Name",
+              "type": "nominal"
+            }
+          ]
+        },
+        "width": 400,
+        "height": 300
+      },
+      "iterations": 0
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "task_type": "clear_single",
+  "task_id": "92_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/92_sankey_b2b.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Filter to show only leads from Channel Partner and observe which product line receives the largest amount of signed value.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Enterprise SaaS Platform ",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The Enterprise SaaS Platform receives the largest share of signed value from Channel Partner leads."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_path",
+            "reasoning": "Filtering to isolate Channel Partner leads simplifies the view, making it easier to trace and compare the flow of value to each product line."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_path",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "path": [
+                    "Channel Partner",
+                    "Enterprise SaaS Platform",
+                    "Data Middleware Product",
+                    "Maintenance Service"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

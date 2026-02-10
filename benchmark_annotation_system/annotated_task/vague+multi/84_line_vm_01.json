@@ -1,0 +1,83 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "84_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/83_global-data-on-sustainable-energy-filtered_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What are the common characteristics of the top two countries in terms of electricity from renewables?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Countries with high electricity generation also have high consumption levels, and they use a greater amount of fossil fuels."
+        },
+        "key_insights": [
+          "The figure shows the top two countries in terms of electricity generation.",
+          "Generating electricity mainly from fossil fuels can meet people's electricity demands."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "By using tools, let's study what common characteristics the top two countries in terms of electricity generation have."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "It was discovered that there is a correlation between the generation capacity and the usage volume. Therefore, tools were used to prove this."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Austria",
+                    "Egypt",
+                    "France",
+                    "Germany",
+                    "Japan",
+                    "New Zealand",
+                    "United Kingdom"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Electricity from fossil fuels (TWh)",
+                  "channel": "color"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Electricity from renewables (TWh)",
+            "color": "Electricity from fossil fuels (TWh)"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Austria\", \"Egypt\", \"France\", \"Germany\", \"Japan\", \"New Zealand\", \"United Kingdom\"], datum['Entity']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "task_type": "vague_single",
+  "task_id": "89_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/89_Sleep_health_and_lifestyle_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "At which Stress Level does sleep duration appear to be most negatively affected, based on the overall color pattern of the heatmap?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Subjectively, Stress Levels 7 and 8 appear to have the highest concentration of lower sleep duration values across the board, suggesting sleep is most negatively affected at the highest stress levels."
+        },
+        "key_insights": [
+          "The visual pattern highlights that higher stress is correlated with poorer sleep, regardless of BMI category, though the severity may differ. This supports the general understanding of stress as a key sleep disruptor."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region",
+            "reasoning": "Use this tool to visually emphasize columns (Stress Levels) with consistently lower sleep duration values (e.g., shades representing 6.0-6.5 hours)."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_values": [
+                    7,
+                    8
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Stress Level",
+            "y": "BMI Category",
+            "color": "Sleep Duration"
+          }
+        }
+      }
+    }
+  ]
+}

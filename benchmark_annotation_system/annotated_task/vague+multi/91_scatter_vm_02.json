@@ -1,0 +1,120 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "91_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/91_supply_chain_data_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_04",
+      "question": "After separately magnifying the low-price range and the high-price range, do you think the impact of Price on Revenue generated is consistent in both ranges, or is it more pronounced only in a certain price segment?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was discovered that the effects of the two regions were completely opposite. In the low-price area, the higher the product price, the lower the income. However, when the product price reached the high-price area, the higher the price, the higher the income."
+        },
+        "key_insights": [
+          "find when the price be more expansive, the revenue will decrease in the low price area",
+          "It is the opposite of the low-price area"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "get the charts with low price"
+          },
+          {
+            "iteration": 2,
+            "tool": "show_regression",
+            "reasoning": "get the regression"
+          },
+          {
+            "iteration": 3,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the high price area"
+          },
+          {
+            "iteration": 4,
+            "tool": "show_regression",
+            "reasoning": "get the regreesion"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0,
+                    29.666666666666668
+                  ],
+                  "y_range": [
+                    58.332824707031385,
+                    10000
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "linear"
+                }
+              }
+            },
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    70.44444402058919,
+                    100
+                  ],
+                  "y_range": [
+                    0,
+                    9958.333587646484
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "linear"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "point",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

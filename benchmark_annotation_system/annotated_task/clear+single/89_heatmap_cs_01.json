@@ -1,0 +1,59 @@
+{
+  "task_type": "clear_single",
+  "task_id": "89_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/88_patient_churn_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Filter the cell corresponding to female patients with chronic disease to confirm the exact mean value of total bill amount for this subgroup.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "25000",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "Female patients with chronic conditions drive the peak healthcare expenditure in the dataset."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region",
+            "reasoning": "Filtering the target cell is necessary to move beyond approximate color-scale estimation and retrieve the precise numerical value of the mean total bill."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_values": [
+                    "Female"
+                  ],
+                  "y_values": [
+                    "Yes"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Gender",
+            "y": "Chronic_Disease",
+            "color": "Total_Bill_Amount"
+          }
+        }
+      }
+    }
+  ]
+}

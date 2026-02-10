@@ -1,0 +1,70 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "25_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/25_gym_members_exercise_tracking_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Highlight the top 2 workout types by total fat percentage, then expand the stack to explore whether the workout types with higher overall fat percentage also show a larger gap between beginners and experienced practitioners.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "yes, workout types with higher overall fat percentage (Cardio and Strength) do show larger gaps between beginners and experienced practitioners. The expanded view also revealed an unexpected finding  the Strength Level 2 anomaly, which was completely hidden in the stacked representation. This demonstrates the analytical value of toggling between stacked and expanded views when exploring compositional data."
+        },
+        "key_insights": [
+          "Cardio and Strength are the top 2 workout types with highest total fat percentage sums, both reaching approximately 6,500, while HIIT and Yoga are noticeably lower at around 5,300 and 5,800 respectively.",
+          "The highlighted workout types show similar internal structure patterns — both Cardio and Strength have a large Level 2 segment dominating the middle portion, suggesting intermediate exercisers contribute most to the total in high-fat-sum categories.",
+          "Level 3 segments appear proportionally similar across the highlighted bars ,both Cardio and Strength show roughly 600-700 in the darkest segment, indicating that expert-level fat percentage contribution is consistent regardless of total bar height.",
+          "higher total fat percentage may be driven more by the number of beginners and intermediates rather than differences in experienced practitioners' outcomes.",
+          "Level 3 consistently sits around 650-800 regardless of exercise type, while the variation mainly comes from Level 1 and Level 2 differences. This suggests that long-term commitment to ANY exercise type leads to similar fat reduction outcomes.",
+          "Strength training shows the highest Level 2 value, even exceeding its own Level 1. This is an anomaly worth investigating — intermediate strength trainers appear to have higher total fat percentage than beginners, which could indicate sample size differences or a confounding variable."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_top_n",
+            "reasoning": "The highlight operation successfully isolated Cardio and Strength as the two workout types with highest overall fat percentage sums. However, visual comparison of the experience level proportions within these highlighted bars is difficult in stacked mode — the segments sit on top of each other, making direct gap comparison challenging. To properly answer whether these high-fat workout types show larger beginner-to-expert gaps, I need to expand the stack to see each experience level as separate comparable bars. This will allow me to directly measure the difference between Level 1 and Level 3 within each highlighted workout type."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "The expand operation successfully transformed the stacked view into grouped bars, enabling direct visual comparison of experience levels within each workout type. The answer to the original question is now clear"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_top_n",
+              "param_eval": {
+                "type": "numeric",
+                "param": "n",
+                "target": 2,
+                "tolerance": 0.1
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          }
+        }
+      }
+    }
+  ]
+}

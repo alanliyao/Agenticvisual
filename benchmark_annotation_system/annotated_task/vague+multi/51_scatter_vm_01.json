@@ -1,0 +1,133 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "51_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/51_Train_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_04",
+      "question": "Zoom in the area where weight is larger than 4000 and lower than 6000, what is the relationship between cost and weight in ship mode.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Since the correlation is only -0.07, it may tell us that there does not exists linear relationship between cost and weight in this area."
+        },
+        "key_insights": [
+          "The cost does not show a strong relation with weight.",
+          "The data of ship mode does not show a great difference compared to whole data in the area.",
+          "The correlation is -0.07"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "As mentions in the question, so we do the zoom step first."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "We just cares about the data of ship mode."
+          },
+          {
+            "iteration": 3,
+            "tool": "select_region",
+            "reasoning": "Selecting for next step."
+          },
+          {
+            "iteration": 4,
+            "tool": "calculate_correlation",
+            "reasoning": "Correlation is a good parameter to show relationship."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    3998.6669921875,
+                    6025.333658854167
+                  ],
+                  "y_range": [
+                    47.774978637695334,
+                    301.17501068115234
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Mode_of_Shipment",
+                  "categories_to_remove": [
+                    "Road",
+                    "Flight"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    4003.7336588541666,
+                    6025.333658854167
+                  ],
+                  "y_range": [
+                    85.78498344421389,
+                    299.1478026916494
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              3998.6669921875,
+              6025.333658854167
+            ],
+            "y": [
+              47.774978637695334,
+              301.17501068115234
+            ]
+          },
+          "encoding": {
+            "x": "Weight_in_gms",
+            "y": "Cost_of_the_Product",
+            "color": "Mode_of_Shipment"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Road\", \"Flight\"], datum['Mode_of_Shipment']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

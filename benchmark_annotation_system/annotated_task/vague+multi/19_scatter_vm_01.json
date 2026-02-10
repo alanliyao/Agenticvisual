@@ -1,0 +1,79 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "19_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/19_Heart_Disease_Prediction_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Is there any significant relationship between the types of chest pain and heart disease?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Strong relationship.The points representing Type 3 and 4 chest pain are more prevalant in the view, which means chest pain typeis significantly associated with heart disease.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The type of chest pain associated with heart disease is relatively common.",
+          "Type 4 chest pain is more prevalent in cases of heart disease."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "The points representing the types of chest pain in the figure are all relatively large."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "The point representing type 4 of chest pain is the most numerous in the figure."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Heart Disease",
+                  "categories_to_remove": [
+                    "Absence"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Chest pain type",
+                  "channel": "color"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Age",
+            "y": "Cholesterol",
+            "color": "Chest pain type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Absence\"], datum['Heart Disease']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

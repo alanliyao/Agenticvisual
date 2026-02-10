@@ -1,0 +1,1156 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: ign_scores",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "_index": 0,
+        "Platform": "Dreamcast",
+        "dimension": "Action",
+        "normalized_value": 0.5442542707233424
+      },
+      {
+        "_index": 1,
+        "Platform": "Game Boy Advance",
+        "dimension": "Action",
+        "normalized_value": 0.26092480970559634
+      },
+      {
+        "_index": 2,
+        "Platform": "Game Boy Color",
+        "dimension": "Action",
+        "normalized_value": 0.20515173094796404
+      },
+      {
+        "_index": 3,
+        "Platform": "GameCube",
+        "dimension": "Action",
+        "normalized_value": 0.349576995065133
+      },
+      {
+        "_index": 4,
+        "Platform": "Nintendo 3DS",
+        "dimension": "Action",
+        "normalized_value": 0.42641409304597183
+      },
+      {
+        "_index": 5,
+        "Platform": "Nintendo 64",
+        "dimension": "Action",
+        "normalized_value": 0.41431085951613306
+      },
+      {
+        "_index": 6,
+        "Platform": "Nintendo DS",
+        "dimension": "Action",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 7,
+        "Platform": "Nintendo DSi",
+        "dimension": "Action",
+        "normalized_value": 0.5132245916323709
+      },
+      {
+        "_index": 8,
+        "Platform": "PC",
+        "dimension": "Action",
+        "normalized_value": 0.5014216769821648
+      },
+      {
+        "_index": 9,
+        "Platform": "PlayStation",
+        "dimension": "Action",
+        "normalized_value": 0.06269171700676918
+      },
+      {
+        "_index": 10,
+        "Platform": "PlayStation 2",
+        "dimension": "Action",
+        "normalized_value": 0.3133267804798649
+      },
+      {
+        "_index": 11,
+        "Platform": "PlayStation 3",
+        "dimension": "Action",
+        "normalized_value": 0.5281154816506455
+      },
+      {
+        "_index": 12,
+        "Platform": "PlayStation 4",
+        "dimension": "Action",
+        "normalized_value": 0.9150439145773472
+      },
+      {
+        "_index": 13,
+        "Platform": "PlayStation Portable",
+        "dimension": "Action",
+        "normalized_value": 0.3135688254017647
+      },
+      {
+        "_index": 14,
+        "Platform": "PlayStation Vita",
+        "dimension": "Action",
+        "normalized_value": 0.705554789487702
+      },
+      {
+        "_index": 15,
+        "Platform": "Wii",
+        "dimension": "Action",
+        "normalized_value": 0.19958857472325892
+      },
+      {
+        "_index": 16,
+        "Platform": "Wireless",
+        "dimension": "Action",
+        "normalized_value": 0.6325364974040182
+      },
+      {
+        "_index": 17,
+        "Platform": "Xbox",
+        "dimension": "Action",
+        "normalized_value": 0.5090479421848452
+      },
+      {
+        "_index": 18,
+        "Platform": "Xbox 360",
+        "dimension": "Action",
+        "normalized_value": 0.4532109891489107
+      },
+      {
+        "_index": 19,
+        "Platform": "Xbox One",
+        "dimension": "Action",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 20,
+        "Platform": "iPhone",
+        "dimension": "Action",
+        "normalized_value": 0.5345768343645837
+      },
+      {
+        "_index": 0,
+        "Platform": "Dreamcast",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.5821596244131451
+      },
+      {
+        "_index": 1,
+        "Platform": "Game Boy Advance",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.5807150595882997
+      },
+      {
+        "_index": 2,
+        "Platform": "Game Boy Color",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.8591549295774645
+      },
+      {
+        "_index": 3,
+        "Platform": "GameCube",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.6232394366197186
+      },
+      {
+        "_index": 4,
+        "Platform": "Nintendo 3DS",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.56978233034571
+      },
+      {
+        "_index": 5,
+        "Platform": "Nintendo 64",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.8943661971830986
+      },
+      {
+        "_index": 6,
+        "Platform": "Nintendo DS",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.4676056338028165
+      },
+      {
+        "_index": 7,
+        "Platform": "Nintendo DSi",
+        "dimension": "Action, Adventure",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 8,
+        "Platform": "PC",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.5076390546669848
+      },
+      {
+        "_index": 9,
+        "Platform": "PlayStation",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.7605633802816902
+      },
+      {
+        "_index": 10,
+        "Platform": "PlayStation 2",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.4718309859154925
+      },
+      {
+        "_index": 11,
+        "Platform": "PlayStation 3",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.49555796316359674
+      },
+      {
+        "_index": 12,
+        "Platform": "PlayStation 4",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.7191383595691799
+      },
+      {
+        "_index": 13,
+        "Platform": "PlayStation Portable",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.36619718309859145
+      },
+      {
+        "_index": 14,
+        "Platform": "PlayStation Vita",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 15,
+        "Platform": "Wii",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.4906941649899394
+      },
+      {
+        "_index": 16,
+        "Platform": "Wireless",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.4982394366197182
+      },
+      {
+        "_index": 17,
+        "Platform": "Xbox",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.5686051794638801
+      },
+      {
+        "_index": 18,
+        "Platform": "Xbox 360",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.42443852303007246
+      },
+      {
+        "_index": 19,
+        "Platform": "Xbox One",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.6056338028169016
+      },
+      {
+        "_index": 20,
+        "Platform": "iPhone",
+        "dimension": "Action, Adventure",
+        "normalized_value": 0.6891348088531186
+      },
+      {
+        "_index": 0,
+        "Platform": "Dreamcast",
+        "dimension": "Adventure",
+        "normalized_value": 0.3542983794782352
+      },
+      {
+        "_index": 1,
+        "Platform": "Game Boy Advance",
+        "dimension": "Adventure",
+        "normalized_value": 0.2725819344524379
+      },
+      {
+        "_index": 2,
+        "Platform": "Game Boy Color",
+        "dimension": "Adventure",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 3,
+        "Platform": "GameCube",
+        "dimension": "Adventure",
+        "normalized_value": 0.5259792166266983
+      },
+      {
+        "_index": 4,
+        "Platform": "Nintendo 3DS",
+        "dimension": "Adventure",
+        "normalized_value": 0.7661870503597112
+      },
+      {
+        "_index": 5,
+        "Platform": "Nintendo 64",
+        "dimension": "Adventure",
+        "normalized_value": 0.6155075939248598
+      },
+      {
+        "_index": 6,
+        "Platform": "Nintendo DS",
+        "dimension": "Adventure",
+        "normalized_value": 0.3462915941756397
+      },
+      {
+        "_index": 7,
+        "Platform": "Nintendo DSi",
+        "dimension": "Adventure",
+        "normalized_value": 0.2848630186759682
+      },
+      {
+        "_index": 8,
+        "Platform": "PC",
+        "dimension": "Adventure",
+        "normalized_value": 0.6652621722846442
+      },
+      {
+        "_index": 9,
+        "Platform": "PlayStation",
+        "dimension": "Adventure",
+        "normalized_value": 0.3659033557467755
+      },
+      {
+        "_index": 10,
+        "Platform": "PlayStation 2",
+        "dimension": "Adventure",
+        "normalized_value": 0.36642201390402857
+      },
+      {
+        "_index": 11,
+        "Platform": "PlayStation 3",
+        "dimension": "Adventure",
+        "normalized_value": 0.5503991868233804
+      },
+      {
+        "_index": 12,
+        "Platform": "PlayStation 4",
+        "dimension": "Adventure",
+        "normalized_value": 0.7568345323741004
+      },
+      {
+        "_index": 13,
+        "Platform": "PlayStation Portable",
+        "dimension": "Adventure",
+        "normalized_value": 0.5929922728483874
+      },
+      {
+        "_index": 14,
+        "Platform": "PlayStation Vita",
+        "dimension": "Adventure",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 15,
+        "Platform": "Wii",
+        "dimension": "Adventure",
+        "normalized_value": 0.33692195180026185
+      },
+      {
+        "_index": 16,
+        "Platform": "Wireless",
+        "dimension": "Adventure",
+        "normalized_value": 0.6054742412966175
+      },
+      {
+        "_index": 17,
+        "Platform": "Xbox",
+        "dimension": "Adventure",
+        "normalized_value": 0.5505595523581132
+      },
+      {
+        "_index": 18,
+        "Platform": "Xbox 360",
+        "dimension": "Adventure",
+        "normalized_value": 0.5636255701321287
+      },
+      {
+        "_index": 19,
+        "Platform": "Xbox One",
+        "dimension": "Adventure",
+        "normalized_value": 0.7080880749945492
+      },
+      {
+        "_index": 20,
+        "Platform": "iPhone",
+        "dimension": "Adventure",
+        "normalized_value": 0.8867739142019714
+      },
+      {
+        "_index": 0,
+        "Platform": "Dreamcast",
+        "dimension": "Fighting",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 1,
+        "Platform": "Game Boy Advance",
+        "dimension": "Fighting",
+        "normalized_value": 0.46657183499288774
+      },
+      {
+        "_index": 2,
+        "Platform": "Game Boy Color",
+        "dimension": "Fighting",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 3,
+        "Platform": "GameCube",
+        "dimension": "Fighting",
+        "normalized_value": 0.7897897897897898
+      },
+      {
+        "_index": 4,
+        "Platform": "Nintendo 3DS",
+        "dimension": "Fighting",
+        "normalized_value": 0.5714285714285714
+      },
+      {
+        "_index": 5,
+        "Platform": "Nintendo 64",
+        "dimension": "Fighting",
+        "normalized_value": 0.3192567567567567
+      },
+      {
+        "_index": 6,
+        "Platform": "Nintendo DS",
+        "dimension": "Fighting",
+        "normalized_value": 0.4918918918918921
+      },
+      {
+        "_index": 7,
+        "Platform": "Nintendo DSi",
+        "dimension": "Fighting",
+        "normalized_value": 0.810810810810811
+      },
+      {
+        "_index": 8,
+        "Platform": "PC",
+        "dimension": "Fighting",
+        "normalized_value": 0.7207207207207209
+      },
+      {
+        "_index": 9,
+        "Platform": "PlayStation",
+        "dimension": "Fighting",
+        "normalized_value": 0.5550625252117792
+      },
+      {
+        "_index": 10,
+        "Platform": "PlayStation 2",
+        "dimension": "Fighting",
+        "normalized_value": 0.7584727584727591
+      },
+      {
+        "_index": 11,
+        "Platform": "PlayStation 3",
+        "dimension": "Fighting",
+        "normalized_value": 0.8678209459459464
+      },
+      {
+        "_index": 12,
+        "Platform": "PlayStation 4",
+        "dimension": "Fighting",
+        "normalized_value": 0.7513513513513513
+      },
+      {
+        "_index": 13,
+        "Platform": "PlayStation Portable",
+        "dimension": "Fighting",
+        "normalized_value": 0.6276276276276277
+      },
+      {
+        "_index": 14,
+        "Platform": "PlayStation Vita",
+        "dimension": "Fighting",
+        "normalized_value": 0.8181818181818183
+      },
+      {
+        "_index": 15,
+        "Platform": "Wii",
+        "dimension": "Fighting",
+        "normalized_value": 0.6036036036036038
+      },
+      {
+        "_index": 16,
+        "Platform": "Wireless",
+        "dimension": "Fighting",
+        "normalized_value": 0.6054054054054053
+      },
+      {
+        "_index": 17,
+        "Platform": "Xbox",
+        "dimension": "Fighting",
+        "normalized_value": 0.6836836836836839
+      },
+      {
+        "_index": 18,
+        "Platform": "Xbox 360",
+        "dimension": "Fighting",
+        "normalized_value": 0.8249294070189594
+      },
+      {
+        "_index": 19,
+        "Platform": "Xbox One",
+        "dimension": "Fighting",
+        "normalized_value": 0.722007722007722
+      },
+      {
+        "_index": 20,
+        "Platform": "iPhone",
+        "dimension": "Fighting",
+        "normalized_value": 0.4290540540540542
+      },
+      {
+        "_index": 0,
+        "Platform": "Dreamcast",
+        "dimension": "Platformer",
+        "normalized_value": 0.8967645594823296
+      },
+      {
+        "_index": 1,
+        "Platform": "Game Boy Advance",
+        "dimension": "Platformer",
+        "normalized_value": 0.27874564459930334
+      },
+      {
+        "_index": 2,
+        "Platform": "Game Boy Color",
+        "dimension": "Platformer",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 3,
+        "Platform": "GameCube",
+        "dimension": "Platformer",
+        "normalized_value": 0.14115527744198772
+      },
+      {
+        "_index": 4,
+        "Platform": "Nintendo 3DS",
+        "dimension": "Platformer",
+        "normalized_value": 0.5192266982486861
+      },
+      {
+        "_index": 5,
+        "Platform": "Nintendo 64",
+        "dimension": "Platformer",
+        "normalized_value": 0.242220353238016
+      },
+      {
+        "_index": 6,
+        "Platform": "Nintendo DS",
+        "dimension": "Platformer",
+        "normalized_value": 0.2198108511697359
+      },
+      {
+        "_index": 7,
+        "Platform": "Nintendo DSi",
+        "dimension": "Platformer",
+        "normalized_value": 0.4048448647751785
+      },
+      {
+        "_index": 8,
+        "Platform": "PC",
+        "dimension": "Platformer",
+        "normalized_value": 0.47747635639621727
+      },
+      {
+        "_index": 9,
+        "Platform": "PlayStation",
+        "dimension": "Platformer",
+        "normalized_value": 0.10205239214233613
+      },
+      {
+        "_index": 10,
+        "Platform": "PlayStation 2",
+        "dimension": "Platformer",
+        "normalized_value": 0.32289783692681234
+      },
+      {
+        "_index": 11,
+        "Platform": "PlayStation 3",
+        "dimension": "Platformer",
+        "normalized_value": 0.6240489227049703
+      },
+      {
+        "_index": 12,
+        "Platform": "PlayStation 4",
+        "dimension": "Platformer",
+        "normalized_value": 0.9197399580674842
+      },
+      {
+        "_index": 13,
+        "Platform": "PlayStation Portable",
+        "dimension": "Platformer",
+        "normalized_value": 0.37990446499524066
+      },
+      {
+        "_index": 14,
+        "Platform": "PlayStation Vita",
+        "dimension": "Platformer",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 15,
+        "Platform": "Wii",
+        "dimension": "Platformer",
+        "normalized_value": 0.3165048063854496
+      },
+      {
+        "_index": 16,
+        "Platform": "Wireless",
+        "dimension": "Platformer",
+        "normalized_value": 0.5217732325746264
+      },
+      {
+        "_index": 17,
+        "Platform": "Xbox",
+        "dimension": "Platformer",
+        "normalized_value": 0.42896620380700723
+      },
+      {
+        "_index": 18,
+        "Platform": "Xbox 360",
+        "dimension": "Platformer",
+        "normalized_value": 0.544556587554586
+      },
+      {
+        "_index": 19,
+        "Platform": "Xbox One",
+        "dimension": "Platformer",
+        "normalized_value": 0.17167192080084046
+      },
+      {
+        "_index": 20,
+        "Platform": "iPhone",
+        "dimension": "Platformer",
+        "normalized_value": 0.5050023432565158
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Action",
+        "Action, Adventure",
+        "Adventure",
+        "Fighting",
+        "Platformer"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Action"
+          },
+          {
+            "dimension": "Action, Adventure"
+          },
+          {
+            "dimension": "Adventure"
+          },
+          {
+            "dimension": "Fighting"
+          },
+          {
+            "dimension": "Platformer"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Platform",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Platform",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Action",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.90360824742268
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.719047619047618
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.702857142857144
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.133333333333334
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.481818181818181
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.5
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.3076923076923075
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.821428571428571
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.057142857142859
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.5
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.02962962962963
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.352941176470588
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.25
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.56875
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Action",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.90360824742268
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.719047619047618
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.702857142857144
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.133333333333334
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.481818181818181
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.5
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.3076923076923075
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.821428571428571
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.057142857142859
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.5
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.02962962962963
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.352941176470588
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.25
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.56875
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Action",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.90360824742268
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.719047619047618
+          },
+          {
+            "dimension": "Action",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 7.702857142857144
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.133333333333334
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.481818181818181
+          },
+          {
+            "dimension": "Action, Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.5
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.3076923076923075
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.821428571428571
+          },
+          {
+            "dimension": "Adventure",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.057142857142859
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.5
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.02962962962963
+          },
+          {
+            "dimension": "Fighting",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 6.352941176470588
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 7.25
+          },
+          {
+            "dimension": "Platformer",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 8.56875
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "task_type": "vague_single",
+  "task_id": "22_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/22_Employee_Attrition_DataSet_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Zoom into the dense area to see what are the characteristics of those whose monthly salary is less than 6000?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Their salaries are all no less than 3000 yuan, and most of them have just started working in this company. Most people are unable to balance work and life."
+        },
+        "key_insights": [
+          "The vast majority of people in this group have worked for less than one year.",
+          "No one's salary is less than 3000.",
+          "Most of them are unable to balance work and life."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "to find the answer"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.04166666666666667,
+                    50
+                  ],
+                  "y_range": [
+                    0,
+                    6009.999084472657
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.04166666666666667,
+              50
+            ],
+            "y": [
+              0,
+              6009.999084472657
+            ]
+          },
+          "encoding": {
+            "x": "DistanceFromHome",
+            "y": "MonthlyIncome",
+            "color": "WorkLifeBalance"
+          }
+        }
+      }
+    }
+  ]
+}

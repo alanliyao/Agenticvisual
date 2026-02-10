@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "105_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/105_gini_filter_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "in 2010,which country had the lowest gini coefficient?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Iraly",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "zoomed to show time range between 2009 and 2011,and we can see clearly of 2010.the lowest line was the green one."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2009",
+                  "end": "2011"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2009",
+              "2011"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Gini coefficient of lifespan inequality - Sex: female",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

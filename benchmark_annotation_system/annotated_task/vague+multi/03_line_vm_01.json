@@ -1,0 +1,66 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "03_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/03_line_stocks.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore whether there are any unusual price movements in either company’s stock, and then compare their volatility across different time intervals.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "TechCorp’s largest price jump occurred between August and September, which is a natural part of its upward trend, not an anomaly.\nQuarterly resampling makes the divergence in their growth rates more visually striking.\nThe absence of anomalies confirms RetailInc’s price movement is consistently stable throughout the period.\nRetailInc’s quarterly price growth remains nearly identical across all four quarters, showing extremely low volatility.\n"
+        },
+        "key_insights": [
+          "No extreme outliers or sudden abnormal spikes/drops are detected in either company’s price series.",
+          "TechCorp’s quarterly price growth accelerated in the second half of the year, while RetailInc’s quarterly growth remained constant."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "Starting with anomaly detection ensures we rule out irregular events before analyzing volatility."
+          },
+          {
+            "iteration": 2,
+            "tool": "resample_time",
+            "reasoning": "Resampling to quarterly intervals simplifies comparing volatility across periods, as it reduces noise and highlights broader trends. The two tools together provide a robust way to explore the vague question of unusual movements and volatility."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "numeric",
+                "param": "threshold",
+                "target": 2,
+                "tolerance": 0.1
+              }
+            },
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "categorical",
+                "param": "granularity",
+                "target": "quarter"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "date",
+            "y": "price",
+            "color": "company"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "99_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/99_sankey_cloud.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Isolate the On-Demand purchase option to see which AWS service consumes the largest portion of its associated costs.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "EC2",
+          "alternatives": []
+        },
+        "key_insights": [
+          "On-Demand purchasing is a primary driver of EC2 costs."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "The trace node tool directly isolates the On-Demand node, eliminating all unrelated cost flows"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "On-Demand"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

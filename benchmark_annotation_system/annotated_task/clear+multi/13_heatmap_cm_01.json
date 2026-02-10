@@ -1,0 +1,87 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "13_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/13_supply_chain_data_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "First, use 'filter cells' to filter out cells with prices above 40, then use 'cluster rows cols' to cluster these high-price regions, and finally use 'add marginal bars' to display the average price for each row and column.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "High-priced markets are concentrated in the electronics sector, particularly driven by male customers; female customers spend a moderate amount on clothing, and overall prices for food are relatively low.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_cells",
+            "reasoning": "Isolates only cells where price exceeds 40, removing all lower‑price entries from view. This leaves only the high‑value segments of the heatmap visible, focusing the analysis on premium product‑demographic combinations."
+          },
+          {
+            "iteration": 2,
+            "tool": "cluster_rows_cols",
+            "reasoning": "Groups rows (product types) and columns (customer demographics) that show similar high‑price patterns. Rows or columns with comparable price profiles across the filtered set are placed near each other, revealing which product categories and customer groups share similar premium pricing behavior."
+          },
+          {
+            "iteration": 3,
+            "tool": "add_marginal_bars",
+            "reasoning": "Calculates and displays the average price for each row and each column in the current (filtered and clustered) view. The row‑margin bars show the average price per product type, while the column‑margin bars show the average price per demographic group, providing a summary of central tendency along both dimensions."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_cells",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 40,
+                  "max_value": 60
+                }
+              }
+            },
+            {
+              "tool": "cluster_rows_cols",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "cluster_rows": true,
+                  "cluster_cols": true,
+                  "method": "sum"
+                }
+              }
+            },
+            {
+              "tool": "add_marginal_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "show_top": true,
+                  "show_right": true,
+                  "op": "mean"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

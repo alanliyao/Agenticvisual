@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "115_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/115_sport_life_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What is their average sales volume?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "2.5",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data_summary",
+            "reasoning": "obtain data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "brand",
+            "y": "units_sold",
+            "color": "customer_income_level"
+          }
+        }
+      }
+    }
+  ]
+}

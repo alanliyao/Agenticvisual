@@ -1,0 +1,4764 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "China annual death rate in each Age group",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1950,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.716,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.513,
+        "Population - Sex: all - Age: all - Variant: estimates": 8176751
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1951,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.591,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.076,
+        "Population - Sex: all - Age: all - Variant: estimates": 8418614
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1952,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.042,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.45,
+        "Population - Sex: all - Age: all - Variant: estimates": 8630704
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1953,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.556,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.064,
+        "Population - Sex: all - Age: all - Variant: estimates": 8816084
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1954,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.788,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.177,
+        "Population - Sex: all - Age: all - Variant: estimates": 8999382
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1955,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.251,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.339,
+        "Population - Sex: all - Age: all - Variant: estimates": 9205190
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1956,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.055,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.289,
+        "Population - Sex: all - Age: all - Variant: estimates": 9424661
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1957,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.46,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.448,
+        "Population - Sex: all - Age: all - Variant: estimates": 9638771
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1958,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.028,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.955,
+        "Population - Sex: all - Age: all - Variant: estimates": 9847636
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1959,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.74,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.442,
+        "Population - Sex: all - Age: all - Variant: estimates": 10060034
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1960,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.048,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.945,
+        "Population - Sex: all - Age: all - Variant: estimates": 10280815
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1961,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.518,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.045,
+        "Population - Sex: all - Age: all - Variant: estimates": 10500443
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1962,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.294,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.817,
+        "Population - Sex: all - Age: all - Variant: estimates": 10707235
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1963,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.304,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.898,
+        "Population - Sex: all - Age: all - Variant: estimates": 10913271
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1964,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.973,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.481,
+        "Population - Sex: all - Age: all - Variant: estimates": 11128257
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1965,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.242,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.66,
+        "Population - Sex: all - Age: all - Variant: estimates": 11357478
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1966,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.068,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.575,
+        "Population - Sex: all - Age: all - Variant: estimates": 11592486
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1967,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.561,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.831,
+        "Population - Sex: all - Age: all - Variant: estimates": 11810519
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1968,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.23,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.459,
+        "Population - Sex: all - Age: all - Variant: estimates": 12030011
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1969,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.689,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.765,
+        "Population - Sex: all - Age: all - Variant: estimates": 12272387
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1970,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.178,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.427,
+        "Population - Sex: all - Age: all - Variant: estimates": 12599414
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1971,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.901,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.25,
+        "Population - Sex: all - Age: all - Variant: estimates": 12997962
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1972,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.316,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.48,
+        "Population - Sex: all - Age: all - Variant: estimates": 13304896
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1973,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.709,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.677,
+        "Population - Sex: all - Age: all - Variant: estimates": 13518687
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1974,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.506,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.467,
+        "Population - Sex: all - Age: all - Variant: estimates": 13719499
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1975,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.421,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.375,
+        "Population - Sex: all - Age: all - Variant: estimates": 13893985
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1976,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.409,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.404,
+        "Population - Sex: all - Age: all - Variant: estimates": 14046757
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1977,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.063,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.074,
+        "Population - Sex: all - Age: all - Variant: estimates": 14203512
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1978,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.333,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.331,
+        "Population - Sex: all - Age: all - Variant: estimates": 14367097
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1979,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.991,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.846,
+        "Population - Sex: all - Age: all - Variant: estimates": 14533034
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1980,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.229,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.087,
+        "Population - Sex: all - Age: all - Variant: estimates": 14721343
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1981,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.435,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.301,
+        "Population - Sex: all - Age: all - Variant: estimates": 14949209
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1982,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.29,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.313,
+        "Population - Sex: all - Age: all - Variant: estimates": 15192485
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1983,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.825,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.149,
+        "Population - Sex: all - Age: all - Variant: estimates": 15414891
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1984,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.844,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.27,
+        "Population - Sex: all - Age: all - Variant: estimates": 15620650
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1985,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.674,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.276,
+        "Population - Sex: all - Age: all - Variant: estimates": 15835742
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1986,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.315,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.9,
+        "Population - Sex: all - Age: all - Variant: estimates": 16069630
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1987,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.339,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.916,
+        "Population - Sex: all - Age: all - Variant: estimates": 16322272
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1988,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.592,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.176,
+        "Population - Sex: all - Age: all - Variant: estimates": 16594102
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1989,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.369,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.115,
+        "Population - Sex: all - Age: all - Variant: estimates": 16869361
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1990,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.147,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.978,
+        "Population - Sex: all - Age: all - Variant: estimates": 17126301
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1991,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.491,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.491,
+        "Population - Sex: all - Age: all - Variant: estimates": 17353191
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1992,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.486,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.493,
+        "Population - Sex: all - Age: all - Variant: estimates": 17549282
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1993,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.99,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.037,
+        "Population - Sex: all - Age: all - Variant: estimates": 17722905
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1994,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.821,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.917,
+        "Population - Sex: all - Age: all - Variant: estimates": 17897430
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1995,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.129,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.39,
+        "Population - Sex: all - Age: all - Variant: estimates": 18095338
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1996,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.253,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.452,
+        "Population - Sex: all - Age: all - Variant: estimates": 18305299
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1997,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.383,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.865,
+        "Population - Sex: all - Age: all - Variant: estimates": 18504909
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1998,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.857,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.179,
+        "Population - Sex: all - Age: all - Variant: estimates": 18701707
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 1999,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.043,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.501,
+        "Population - Sex: all - Age: all - Variant: estimates": 18909979
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2000,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.272,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.946,
+        "Population - Sex: all - Age: all - Variant: estimates": 19132473
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2001,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.601,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.384,
+        "Population - Sex: all - Age: all - Variant: estimates": 19365437
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2002,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.531,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.541,
+        "Population - Sex: all - Age: all - Variant: estimates": 19595357
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2003,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.907,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.943,
+        "Population - Sex: all - Age: all - Variant: estimates": 19819450
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2004,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.166,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.265,
+        "Population - Sex: all - Age: all - Variant: estimates": 20046680
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2005,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.474,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.671,
+        "Population - Sex: all - Age: all - Variant: estimates": 20294490
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2006,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.574,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.904,
+        "Population - Sex: all - Age: all - Variant: estimates": 20590565
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2007,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.531,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.914,
+        "Population - Sex: all - Age: all - Variant: estimates": 20954545
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2008,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.695,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.142,
+        "Population - Sex: all - Age: all - Variant: estimates": 21370595
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2009,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.994,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.445,
+        "Population - Sex: all - Age: all - Variant: estimates": 21783014
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2010,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.195,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.806,
+        "Population - Sex: all - Age: all - Variant: estimates": 22141583
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2011,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.252,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.917,
+        "Population - Sex: all - Age: all - Variant: estimates": 22479778
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2012,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.299,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.268,
+        "Population - Sex: all - Age: all - Variant: estimates": 22852649
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2013,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.621,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.464,
+        "Population - Sex: all - Age: all - Variant: estimates": 23236271
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2014,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.495,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.522,
+        "Population - Sex: all - Age: all - Variant: estimates": 23595599
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2015,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.626,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.575,
+        "Population - Sex: all - Age: all - Variant: estimates": 23947998
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2016,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.847,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.752,
+        "Population - Sex: all - Age: all - Variant: estimates": 24329961
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2017,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.747,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.685,
+        "Population - Sex: all - Age: all - Variant: estimates": 24731044
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2018,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.292,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.215,
+        "Population - Sex: all - Age: all - Variant: estimates": 25119700
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2019,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.275,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.205,
+        "Population - Sex: all - Age: all - Variant: estimates": 25482714
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2020,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.69,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.629,
+        "Population - Sex: all - Age: all - Variant: estimates": 25743787
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2021,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.474,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.649,
+        "Population - Sex: all - Age: all - Variant: estimates": 25956416
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2022,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.864,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.731,
+        "Population - Sex: all - Age: all - Variant: estimates": 26200987
+      },
+      {
+        "Entity": "Australia",
+        "Code": "AUS",
+        "Year": 2023,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.737,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 82.098,
+        "Population - Sex: all - Age: all - Variant: estimates": 26451125
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1950,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 50.916,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.369,
+        "Population - Sex: all - Age: all - Variant: estimates": 53408551
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1951,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 51.485,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.836,
+        "Population - Sex: all - Age: all - Variant: estimates": 55018849
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1952,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 52.045,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 47.295,
+        "Population - Sex: all - Age: all - Variant: estimates": 56694871
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1953,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 52.426,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 47.772,
+        "Population - Sex: all - Age: all - Variant: estimates": 58433756
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1954,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 52.849,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 48.232,
+        "Population - Sex: all - Age: all - Variant: estimates": 60235123
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1955,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 53.284,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 48.697,
+        "Population - Sex: all - Age: all - Variant: estimates": 62101394
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1956,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 53.734,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.156,
+        "Population - Sex: all - Age: all - Variant: estimates": 64033997
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1957,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 54.185,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.625,
+        "Population - Sex: all - Age: all - Variant: estimates": 66031498
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1958,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 54.614,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 50.078,
+        "Population - Sex: all - Age: all - Variant: estimates": 68092148
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1959,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.057,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 50.541,
+        "Population - Sex: all - Age: all - Variant: estimates": 70214470
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1960,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.509,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.002,
+        "Population - Sex: all - Age: all - Variant: estimates": 72388123
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1961,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.954,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.42,
+        "Population - Sex: all - Age: all - Variant: estimates": 74605442
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1962,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 56.397,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.821,
+        "Population - Sex: all - Age: all - Variant: estimates": 76865320
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1963,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 56.857,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.231,
+        "Population - Sex: all - Age: all - Variant: estimates": 79164239
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1964,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 57.281,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.601,
+        "Population - Sex: all - Age: all - Variant: estimates": 81488598
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1965,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 57.709,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.963,
+        "Population - Sex: all - Age: all - Variant: estimates": 83817586
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1966,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 58.102,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 53.331,
+        "Population - Sex: all - Age: all - Variant: estimates": 86139354
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1967,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 58.497,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 53.712,
+        "Population - Sex: all - Age: all - Variant: estimates": 88446120
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1968,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 58.958,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.157,
+        "Population - Sex: all - Age: all - Variant: estimates": 90741242
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1969,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 59.395,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.572,
+        "Population - Sex: all - Age: all - Variant: estimates": 93045769
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1970,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 59.837,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.005,
+        "Population - Sex: all - Age: all - Variant: estimates": 95375656
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1971,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.289,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.443,
+        "Population - Sex: all - Age: all - Variant: estimates": 97739280
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1972,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.761,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.906,
+        "Population - Sex: all - Age: all - Variant: estimates": 100146796
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1973,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.172,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.338,
+        "Population - Sex: all - Age: all - Variant: estimates": 102600971
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1974,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.541,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.76,
+        "Population - Sex: all - Age: all - Variant: estimates": 105089675
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1975,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.987,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.255,
+        "Population - Sex: all - Age: all - Variant: estimates": 107619568
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1976,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.405,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.73,
+        "Population - Sex: all - Age: all - Variant: estimates": 110213352
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1977,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.83,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 58.205,
+        "Population - Sex: all - Age: all - Variant: estimates": 112875286
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1978,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.275,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 58.674,
+        "Population - Sex: all - Age: all - Variant: estimates": 115600942
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1979,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.73,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 59.103,
+        "Population - Sex: all - Age: all - Variant: estimates": 118380820
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1980,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 64.195,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 59.543,
+        "Population - Sex: all - Age: all - Variant: estimates": 121207450
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1981,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 64.656,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 59.969,
+        "Population - Sex: all - Age: all - Variant: estimates": 124063113
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1982,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 65.121,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 60.382,
+        "Population - Sex: all - Age: all - Variant: estimates": 126923156
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1983,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 65.572,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 60.781,
+        "Population - Sex: all - Age: all - Variant: estimates": 129790082
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1984,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 65.997,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 61.194,
+        "Population - Sex: all - Age: all - Variant: estimates": 132658862
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1985,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 66.441,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 61.601,
+        "Population - Sex: all - Age: all - Variant: estimates": 135515593
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1986,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 66.869,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 61.989,
+        "Population - Sex: all - Age: all - Variant: estimates": 138336371
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1987,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 67.286,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 62.364,
+        "Population - Sex: all - Age: all - Variant: estimates": 141104946
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1988,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 67.734,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 62.674,
+        "Population - Sex: all - Age: all - Variant: estimates": 143826358
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1989,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 68.221,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 62.907,
+        "Population - Sex: all - Age: all - Variant: estimates": 146502977
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1990,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 68.706,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.133,
+        "Population - Sex: all - Age: all - Variant: estimates": 149143224
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1991,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 69.187,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.348,
+        "Population - Sex: all - Age: all - Variant: estimates": 151724253
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1992,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 69.667,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.557,
+        "Population - Sex: all - Age: all - Variant: estimates": 154275077
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1993,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.108,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.831,
+        "Population - Sex: all - Age: all - Variant: estimates": 156794574
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1994,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.527,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 64.21,
+        "Population - Sex: all - Age: all - Variant: estimates": 159265011
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1995,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.947,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 64.6,
+        "Population - Sex: all - Age: all - Variant: estimates": 161735079
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1996,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.367,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 64.992,
+        "Population - Sex: all - Age: all - Variant: estimates": 164202549
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1997,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.779,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.37,
+        "Population - Sex: all - Age: all - Variant: estimates": 166661663
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1998,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.152,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.683,
+        "Population - Sex: all - Age: all - Variant: estimates": 169159651
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 1999,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.546,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.014,
+        "Population - Sex: all - Age: all - Variant: estimates": 171641544
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2000,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.96,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.347,
+        "Population - Sex: all - Age: all - Variant: estimates": 174018276
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2001,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.4,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.699,
+        "Population - Sex: all - Age: all - Variant: estimates": 176301200
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2002,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.843,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.085,
+        "Population - Sex: all - Age: all - Variant: estimates": 178503483
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2003,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.337,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.558,
+        "Population - Sex: all - Age: all - Variant: estimates": 180622688
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2004,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.824,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.019,
+        "Population - Sex: all - Age: all - Variant: estimates": 182675143
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2005,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.292,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.485,
+        "Population - Sex: all - Age: all - Variant: estimates": 184688101
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2006,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.744,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.953,
+        "Population - Sex: all - Age: all - Variant: estimates": 186653099
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2007,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.191,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.368,
+        "Population - Sex: all - Age: all - Variant: estimates": 188552310
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2008,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.585,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.733,
+        "Population - Sex: all - Age: all - Variant: estimates": 190367297
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2009,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.93,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.076,
+        "Population - Sex: all - Age: all - Variant: estimates": 192079956
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2010,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.257,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.392,
+        "Population - Sex: all - Age: all - Variant: estimates": 193701931
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2011,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.532,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.654,
+        "Population - Sex: all - Age: all - Variant: estimates": 195284736
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2012,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.816,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.945,
+        "Population - Sex: all - Age: all - Variant: estimates": 196876114
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2013,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.062,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.246,
+        "Population - Sex: all - Age: all - Variant: estimates": 198478291
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2014,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.273,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.462,
+        "Population - Sex: all - Age: all - Variant: estimates": 200085126
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2015,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.472,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.818,
+        "Population - Sex: all - Age: all - Variant: estimates": 201675534
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2016,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.539,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.716,
+        "Population - Sex: all - Age: all - Variant: estimates": 203218108
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2017,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.781,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.069,
+        "Population - Sex: all - Age: all - Variant: estimates": 204703440
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2018,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.977,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.365,
+        "Population - Sex: all - Age: all - Variant: estimates": 206107265
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2019,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.023,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.653,
+        "Population - Sex: all - Age: all - Variant: estimates": 207455459
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2020,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.599,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.537,
+        "Population - Sex: all - Age: all - Variant: estimates": 208660845
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2021,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.401,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.81,
+        "Population - Sex: all - Age: all - Variant: estimates": 209550291
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2022,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.094,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.73,
+        "Population - Sex: all - Age: all - Variant: estimates": 210306411
+      },
+      {
+        "Entity": "Brazil",
+        "Code": "BRA",
+        "Year": 2023,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.983,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.76,
+        "Population - Sex: all - Age: all - Variant: estimates": 211140731
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1950,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.582,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.153,
+        "Population - Sex: all - Age: all - Variant: estimates": 13741739
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1951,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.872,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.435,
+        "Population - Sex: all - Age: all - Variant: estimates": 14083297
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1952,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.391,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.328,
+        "Population - Sex: all - Age: all - Variant: estimates": 14482799
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1953,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.798,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.683,
+        "Population - Sex: all - Age: all - Variant: estimates": 14897875
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1954,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.698,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.545,
+        "Population - Sex: all - Age: all - Variant: estimates": 15318985
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1955,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.883,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.513,
+        "Population - Sex: all - Age: all - Variant: estimates": 15728280
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1956,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.819,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.508,
+        "Population - Sex: all - Age: all - Variant: estimates": 16159621
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1957,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.976,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.292,
+        "Population - Sex: all - Age: all - Variant: estimates": 16641328
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1958,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.68,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.902,
+        "Population - Sex: all - Age: all - Variant: estimates": 17104090
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1959,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.645,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.986,
+        "Population - Sex: all - Age: all - Variant: estimates": 17515523
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1960,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.154,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.224,
+        "Population - Sex: all - Age: all - Variant: estimates": 17898792
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1961,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.468,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.402,
+        "Population - Sex: all - Age: all - Variant: estimates": 18263079
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1962,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.44,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.45,
+        "Population - Sex: all - Age: all - Variant: estimates": 18613596
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1963,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.522,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.423,
+        "Population - Sex: all - Age: all - Variant: estimates": 18964256
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1964,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.085,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.634,
+        "Population - Sex: all - Age: all - Variant: estimates": 19321670
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1965,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.156,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.766,
+        "Population - Sex: all - Age: all - Variant: estimates": 19685519
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1966,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.39,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.775,
+        "Population - Sex: all - Age: all - Variant: estimates": 20053665
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1967,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.659,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.926,
+        "Population - Sex: all - Age: all - Variant: estimates": 20408776
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1968,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.785,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.093,
+        "Population - Sex: all - Age: all - Variant: estimates": 20734171
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1969,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.021,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.164,
+        "Population - Sex: all - Age: all - Variant: estimates": 21037620
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1970,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.27,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.331,
+        "Population - Sex: all - Age: all - Variant: estimates": 21440020
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1971,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.65,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.622,
+        "Population - Sex: all - Age: all - Variant: estimates": 21895693
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1972,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.544,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.474,
+        "Population - Sex: all - Age: all - Variant: estimates": 22230876
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1973,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.83,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.669,
+        "Population - Sex: all - Age: all - Variant: estimates": 22512230
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1974,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.892,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.733,
+        "Population - Sex: all - Age: all - Variant: estimates": 22824083
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1975,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.228,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.998,
+        "Population - Sex: all - Age: all - Variant: estimates": 23148980
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1976,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.674,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.382,
+        "Population - Sex: all - Age: all - Variant: estimates": 23455783
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1977,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.963,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.632,
+        "Population - Sex: all - Age: all - Variant: estimates": 23730341
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1978,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.321,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.913,
+        "Population - Sex: all - Age: all - Variant: estimates": 23978742
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1979,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.59,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.308,
+        "Population - Sex: all - Age: all - Variant: estimates": 24237173
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1980,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.719,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.595,
+        "Population - Sex: all - Age: all - Variant: estimates": 24533779
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1981,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.114,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.012,
+        "Population - Sex: all - Age: all - Variant: estimates": 24844977
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1982,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.228,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.291,
+        "Population - Sex: all - Age: all - Variant: estimates": 25140164
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1983,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.547,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.688,
+        "Population - Sex: all - Age: all - Variant: estimates": 25412604
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1984,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.77,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.013,
+        "Population - Sex: all - Age: all - Variant: estimates": 25670376
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1985,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.729,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.032,
+        "Population - Sex: all - Age: all - Variant: estimates": 25927463
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1986,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.79,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.228,
+        "Population - Sex: all - Age: all - Variant: estimates": 26211035
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1987,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.105,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.51,
+        "Population - Sex: all - Age: all - Variant: estimates": 26540914
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1988,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.183,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.567,
+        "Population - Sex: all - Age: all - Variant: estimates": 26927938
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1989,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.385,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.868,
+        "Population - Sex: all - Age: all - Variant: estimates": 27366047
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1990,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.621,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.227,
+        "Population - Sex: all - Age: all - Variant: estimates": 27789436
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1991,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.723,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.439,
+        "Population - Sex: all - Age: all - Variant: estimates": 28157153
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1992,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.976,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.693,
+        "Population - Sex: all - Age: all - Variant: estimates": 28500065
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1993,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.785,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.629,
+        "Population - Sex: all - Age: all - Variant: estimates": 28830635
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1994,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.883,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.867,
+        "Population - Sex: all - Age: all - Variant: estimates": 29147382
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1995,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.976,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.009,
+        "Population - Sex: all - Age: all - Variant: estimates": 29459136
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1996,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.094,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.374,
+        "Population - Sex: all - Age: all - Variant: estimates": 29767210
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1997,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.192,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.654,
+        "Population - Sex: all - Age: all - Variant: estimates": 30059087
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1998,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.355,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.904,
+        "Population - Sex: all - Age: all - Variant: estimates": 30329968
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 1999,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.566,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.115,
+        "Population - Sex: all - Age: all - Variant: estimates": 30599458
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2000,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.772,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.581,
+        "Population - Sex: all - Age: all - Variant: estimates": 30891800
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2001,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.936,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.847,
+        "Population - Sex: all - Age: all - Variant: estimates": 31213577
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2002,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.94,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.072,
+        "Population - Sex: all - Age: all - Variant: estimates": 31535580
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2003,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.144,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.216,
+        "Population - Sex: all - Age: all - Variant: estimates": 31836484
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2004,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.363,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.577,
+        "Population - Sex: all - Age: all - Variant: estimates": 32132680
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2005,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.432,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.712,
+        "Population - Sex: all - Age: all - Variant: estimates": 32440173
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2006,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.805,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.147,
+        "Population - Sex: all - Age: all - Variant: estimates": 32759174
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2007,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.801,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.176,
+        "Population - Sex: all - Age: all - Variant: estimates": 33092172
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2008,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.946,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.402,
+        "Population - Sex: all - Age: all - Variant: estimates": 33449089
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2009,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.227,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.786,
+        "Population - Sex: all - Age: all - Variant: estimates": 33826369
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2010,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.45,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.108,
+        "Population - Sex: all - Age: all - Variant: estimates": 34196901
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2011,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.582,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.335,
+        "Population - Sex: all - Age: all - Variant: estimates": 34555450
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2012,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.74,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.559,
+        "Population - Sex: all - Age: all - Variant: estimates": 34922512
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2013,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.782,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.695,
+        "Population - Sex: all - Age: all - Variant: estimates": 35293420
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2014,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.872,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.723,
+        "Population - Sex: all - Age: all - Variant: estimates": 35634265
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2015,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.895,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.845,
+        "Population - Sex: all - Age: all - Variant: estimates": 35962236
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2016,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.04,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.949,
+        "Population - Sex: all - Age: all - Variant: estimates": 36353345
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2017,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.034,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.761,
+        "Population - Sex: all - Age: all - Variant: estimates": 36808500
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2018,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.005,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.81,
+        "Population - Sex: all - Age: all - Variant: estimates": 37294997
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2019,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.364,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.173,
+        "Population - Sex: all - Age: all - Variant: estimates": 37782931
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2020,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.909,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.406,
+        "Population - Sex: all - Age: all - Variant: estimates": 38171901
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2021,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.368,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.609,
+        "Population - Sex: all - Age: all - Variant: estimates": 38454058
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2022,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.116,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.501,
+        "Population - Sex: all - Age: all - Variant: estimates": 38821260
+      },
+      {
+        "Entity": "Canada",
+        "Code": "CAN",
+        "Year": 2023,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.83,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.427,
+        "Population - Sex: all - Age: all - Variant: estimates": 39299099
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1950,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 45.727,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 42.179,
+        "Population - Sex: all - Age: all - Variant: estimates": 544044354
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1951,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 46.397,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 42.94,
+        "Population - Sex: all - Age: all - Variant: estimates": 553758251
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1952,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 47.207,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 43.698,
+        "Population - Sex: all - Age: all - Variant: estimates": 565131436
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1953,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 47.652,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 44.355,
+        "Population - Sex: all - Age: all - Variant: estimates": 577557142
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1954,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 48.571,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 45.148,
+        "Population - Sex: all - Age: all - Variant: estimates": 590113861
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1955,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 49.233,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 45.473,
+        "Population - Sex: all - Age: all - Variant: estimates": 603547012
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1956,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 49.787,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.047,
+        "Population - Sex: all - Age: all - Variant: estimates": 616558585
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1957,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 50.399,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.578,
+        "Population - Sex: all - Age: all - Variant: estimates": 630356210
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1958,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 50.929,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.969,
+        "Population - Sex: all - Age: all - Variant: estimates": 644219484
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1959,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 41.976,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 38.594,
+        "Population - Sex: all - Age: all - Variant: estimates": 652708210
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1960,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 34.858,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 32.166,
+        "Population - Sex: all - Age: all - Variant: estimates": 654802066
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1961,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 41.897,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 38.621,
+        "Population - Sex: all - Age: all - Variant: estimates": 655773482
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1962,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 53.189,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 48.945,
+        "Population - Sex: all - Age: all - Variant: estimates": 665073692
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1963,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 53.87,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.664,
+        "Population - Sex: all - Age: all - Variant: estimates": 684552645
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1964,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 54.532,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 50.333,
+        "Population - Sex: all - Age: all - Variant: estimates": 704798265
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1965,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.224,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 50.954,
+        "Population - Sex: all - Age: all - Variant: estimates": 723415737
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1966,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.803,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.669,
+        "Population - Sex: all - Age: all - Variant: estimates": 742402209
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1967,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 56.502,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.427,
+        "Population - Sex: all - Age: all - Variant: estimates": 761026025
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1968,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 57.226,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 53.261,
+        "Population - Sex: all - Age: all - Variant: estimates": 781011031
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1969,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 57.99,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.076,
+        "Population - Sex: all - Age: all - Variant: estimates": 802140343
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1970,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 58.779,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.941,
+        "Population - Sex: all - Age: all - Variant: estimates": 823308968
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1971,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 59.605,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.901,
+        "Population - Sex: all - Age: all - Variant: estimates": 844069870
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1972,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.469,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.727,
+        "Population - Sex: all - Age: all - Variant: estimates": 863677811
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1973,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.484,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.553,
+        "Population - Sex: all - Age: all - Variant: estimates": 882576941
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1974,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.347,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 58.195,
+        "Population - Sex: all - Age: all - Variant: estimates": 900307583
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1975,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.114,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 58.856,
+        "Population - Sex: all - Age: all - Variant: estimates": 916116795
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1976,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.276,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 59.224,
+        "Population - Sex: all - Age: all - Variant: estimates": 930372293
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1977,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 64.671,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 60.313,
+        "Population - Sex: all - Age: all - Variant: estimates": 943546379
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1978,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 65.332,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 60.939,
+        "Population - Sex: all - Age: all - Variant: estimates": 956161484
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1979,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 65.95,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 61.528,
+        "Population - Sex: all - Age: all - Variant: estimates": 969288069
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1980,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 66.508,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 62.051,
+        "Population - Sex: all - Age: all - Variant: estimates": 983163545
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1981,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 67.077,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 62.556,
+        "Population - Sex: all - Age: all - Variant: estimates": 997721068
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1982,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 67.572,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.009,
+        "Population - Sex: all - Age: all - Variant: estimates": 1013588169
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1983,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 68.071,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.47,
+        "Population - Sex: all - Age: all - Variant: estimates": 1029064952
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1984,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 68.51,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.875,
+        "Population - Sex: all - Age: all - Variant: estimates": 1043849645
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1985,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 68.924,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 64.236,
+        "Population - Sex: all - Age: all - Variant: estimates": 1059807821
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1986,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 69.317,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 64.563,
+        "Population - Sex: all - Age: all - Variant: estimates": 1077233612
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1987,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 69.746,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 64.896,
+        "Population - Sex: all - Age: all - Variant: estimates": 1096217446
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1988,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.117,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.219,
+        "Population - Sex: all - Age: all - Variant: estimates": 1115244161
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1989,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.419,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.561,
+        "Population - Sex: all - Age: all - Variant: estimates": 1133991005
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1990,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.561,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.861,
+        "Population - Sex: all - Age: all - Variant: estimates": 1153582718
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1991,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.049,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.288,
+        "Population - Sex: all - Age: all - Variant: estimates": 1170788527
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1992,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.476,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.755,
+        "Population - Sex: all - Age: all - Variant: estimates": 1184574240
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1993,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.01,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.108,
+        "Population - Sex: all - Age: all - Variant: estimates": 1197308569
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1994,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.41,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.409,
+        "Population - Sex: all - Age: all - Variant: estimates": 1209003100
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1995,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.02,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.866,
+        "Population - Sex: all - Age: all - Variant: estimates": 1220133927
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1996,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.483,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.323,
+        "Population - Sex: all - Age: all - Variant: estimates": 1230944812
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1997,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.887,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.731,
+        "Population - Sex: all - Age: all - Variant: estimates": 1241139619
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1998,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.242,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.124,
+        "Population - Sex: all - Age: all - Variant: estimates": 1250847121
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 1999,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.54,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.522,
+        "Population - Sex: all - Age: all - Variant: estimates": 1260176650
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2000,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.895,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.85,
+        "Population - Sex: all - Age: all - Variant: estimates": 1269581164
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2001,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.287,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.235,
+        "Population - Sex: all - Age: all - Variant: estimates": 1278725057
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2002,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.657,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.587,
+        "Population - Sex: all - Age: all - Variant: estimates": 1286866839
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2003,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.022,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.931,
+        "Population - Sex: all - Age: all - Variant: estimates": 1294517315
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2004,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.37,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.27,
+        "Population - Sex: all - Age: all - Variant: estimates": 1302100319
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2005,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.769,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.595,
+        "Population - Sex: all - Age: all - Variant: estimates": 1310027138
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2006,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.1,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.904,
+        "Population - Sex: all - Age: all - Variant: estimates": 1318054037
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2007,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.436,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.326,
+        "Population - Sex: all - Age: all - Variant: estimates": 1325813580
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2008,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.498,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.361,
+        "Population - Sex: all - Age: all - Variant: estimates": 1333821009
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2009,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.033,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.801,
+        "Population - Sex: all - Age: all - Variant: estimates": 1342522709
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2010,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.329,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.191,
+        "Population - Sex: all - Age: all - Variant: estimates": 1351561511
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2011,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.65,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.334,
+        "Population - Sex: all - Age: all - Variant: estimates": 1360250657
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2012,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.981,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.624,
+        "Population - Sex: all - Age: all - Variant: estimates": 1369520865
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2013,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.223,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.881,
+        "Population - Sex: all - Age: all - Variant: estimates": 1379008046
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2014,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.51,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.119,
+        "Population - Sex: all - Age: all - Variant: estimates": 1387951973
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2015,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.785,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.365,
+        "Population - Sex: all - Age: all - Variant: estimates": 1396134164
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2016,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.052,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.575,
+        "Population - Sex: all - Age: all - Variant: estimates": 1404052626
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2017,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.27,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.448,
+        "Population - Sex: all - Age: all - Variant: estimates": 1412354742
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2018,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.573,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.034,
+        "Population - Sex: all - Age: all - Variant: estimates": 1419008963
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2019,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.747,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.303,
+        "Population - Sex: all - Age: all - Variant: estimates": 1423520354
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2020,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.999,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.245,
+        "Population - Sex: all - Age: all - Variant: estimates": 1426106083
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2021,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.912,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.486,
+        "Population - Sex: all - Age: all - Variant: estimates": 1426437276
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2022,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.133,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.467,
+        "Population - Sex: all - Age: all - Variant: estimates": 1425179562
+      },
+      {
+        "Entity": "China",
+        "Code": "CHN",
+        "Year": 2023,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.926,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.201,
+        "Population - Sex: all - Age: all - Variant: estimates": 1422584937
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1950,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.885,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.566,
+        "Population - Sex: all - Age: all - Variant: estimates": 86443279
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1951,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.613,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 59.304,
+        "Population - Sex: all - Age: all - Variant: estimates": 87849930
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1952,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 64.67,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 61.259,
+        "Population - Sex: all - Age: all - Variant: estimates": 89135134
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1953,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 65.066,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 61.539,
+        "Population - Sex: all - Age: all - Variant: estimates": 90324185
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1954,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 66.568,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 62.465,
+        "Population - Sex: all - Age: all - Variant: estimates": 91407672
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1955,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 67.766,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.614,
+        "Population - Sex: all - Age: all - Variant: estimates": 92425476
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1956,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 67.667,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.43,
+        "Population - Sex: all - Age: all - Variant: estimates": 93342005
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1957,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 67.62,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 63.266,
+        "Population - Sex: all - Age: all - Variant: estimates": 94108980
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1958,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 69.308,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 64.755,
+        "Population - Sex: all - Age: all - Variant: estimates": 94846958
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1959,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 69.784,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.116,
+        "Population - Sex: all - Age: all - Variant: estimates": 95622973
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1960,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.139,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.302,
+        "Population - Sex: all - Age: all - Variant: estimates": 96399754
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1961,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.83,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.909,
+        "Population - Sex: all - Age: all - Variant: estimates": 97217594
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1962,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.139,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.204,
+        "Population - Sex: all - Age: all - Variant: estimates": 98076406
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1963,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.282,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.2,
+        "Population - Sex: all - Age: all - Variant: estimates": 98958230
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1964,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.761,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.628,
+        "Population - Sex: all - Age: all - Variant: estimates": 99890178
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1965,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.846,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.679,
+        "Population - Sex: all - Age: all - Variant: estimates": 100916017
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1966,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.65,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.448,
+        "Population - Sex: all - Age: all - Variant: estimates": 101887833
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1967,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.993,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.792,
+        "Population - Sex: all - Age: all - Variant: estimates": 102965529
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1968,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.283,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.044,
+        "Population - Sex: all - Age: all - Variant: estimates": 104237475
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1969,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.629,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.21,
+        "Population - Sex: all - Age: all - Variant: estimates": 105475170
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1970,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.683,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.318,
+        "Population - Sex: all - Age: all - Variant: estimates": 106712370
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1971,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.482,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.129,
+        "Population - Sex: all - Age: all - Variant: estimates": 107952031
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1972,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.939,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.527,
+        "Population - Sex: all - Age: all - Variant: estimates": 109238963
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1973,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.024,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.758,
+        "Population - Sex: all - Age: all - Variant: estimates": 110614742
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1974,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.365,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.251,
+        "Population - Sex: all - Age: all - Variant: estimates": 112009690
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1975,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.873,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.745,
+        "Population - Sex: all - Age: all - Variant: estimates": 113321198
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1976,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.288,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.129,
+        "Population - Sex: all - Age: all - Variant: estimates": 114502794
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1977,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.862,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.668,
+        "Population - Sex: all - Age: all - Variant: estimates": 115574280
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1978,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.221,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.965,
+        "Population - Sex: all - Age: all - Variant: estimates": 116576941
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1979,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.761,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.432,
+        "Population - Sex: all - Age: all - Variant: estimates": 117521561
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1980,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.765,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.383,
+        "Population - Sex: all - Age: all - Variant: estimates": 118358761
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1981,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.17,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.807,
+        "Population - Sex: all - Age: all - Variant: estimates": 118994055
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1982,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.725,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.261,
+        "Population - Sex: all - Age: all - Variant: estimates": 119485773
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1983,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.83,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.239,
+        "Population - Sex: all - Age: all - Variant: estimates": 119948942
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1984,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.26,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.599,
+        "Population - Sex: all - Age: all - Variant: estimates": 120384396
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1985,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.545,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.893,
+        "Population - Sex: all - Age: all - Variant: estimates": 120832158
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1986,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.979,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.273,
+        "Population - Sex: all - Age: all - Variant: estimates": 121366733
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1987,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.431,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.647,
+        "Population - Sex: all - Age: all - Variant: estimates": 121943589
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1988,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.328,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.586,
+        "Population - Sex: all - Age: all - Variant: estimates": 122476957
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1989,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.8,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.968,
+        "Population - Sex: all - Age: all - Variant: estimates": 122947411
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1990,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.865,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.942,
+        "Population - Sex: all - Age: all - Variant: estimates": 123399767
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1991,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.177,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.16,
+        "Population - Sex: all - Age: all - Variant: estimates": 123889870
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1992,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.297,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.131,
+        "Population - Sex: all - Age: all - Variant: estimates": 124383707
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1993,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.448,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.266,
+        "Population - Sex: all - Age: all - Variant: estimates": 124839954
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1994,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.9,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.586,
+        "Population - Sex: all - Age: all - Variant: estimates": 125286862
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1995,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.78,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.416,
+        "Population - Sex: all - Age: all - Variant: estimates": 125672659
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1996,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.497,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.033,
+        "Population - Sex: all - Age: all - Variant: estimates": 125975305
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1997,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.732,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.242,
+        "Population - Sex: all - Age: all - Variant: estimates": 126265926
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1998,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.921,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.211,
+        "Population - Sex: all - Age: all - Variant: estimates": 126549181
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 1999,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.916,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.171,
+        "Population - Sex: all - Age: all - Variant: estimates": 126801566
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2000,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.519,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.682,
+        "Population - Sex: all - Age: all - Variant: estimates": 127027796
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2001,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 84.844,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.014,
+        "Population - Sex: all - Age: all - Variant: estimates": 127260144
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2002,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.143,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.283,
+        "Population - Sex: all - Age: all - Variant: estimates": 127484599
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2003,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.243,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.323,
+        "Population - Sex: all - Age: all - Variant: estimates": 127671255
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2004,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.501,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.609,
+        "Population - Sex: all - Age: all - Variant: estimates": 127815770
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2005,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.408,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.496,
+        "Population - Sex: all - Age: all - Variant: estimates": 127913331
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2006,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.696,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.917,
+        "Population - Sex: all - Age: all - Variant: estimates": 127997248
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2007,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.878,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.101,
+        "Population - Sex: all - Age: all - Variant: estimates": 128087684
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2008,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.949,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.21,
+        "Population - Sex: all - Age: all - Variant: estimates": 128155991
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2009,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 86.321,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.511,
+        "Population - Sex: all - Age: all - Variant: estimates": 128192471
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2010,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 86.232,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.511,
+        "Population - Sex: all - Age: all - Variant: estimates": 128185273
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2011,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 85.85,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.406,
+        "Population - Sex: all - Age: all - Variant: estimates": 128096431
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2012,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 86.351,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.903,
+        "Population - Sex: all - Age: all - Variant: estimates": 127928283
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2013,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 86.549,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.173,
+        "Population - Sex: all - Age: all - Variant: estimates": 127723641
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2014,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 86.754,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.448,
+        "Population - Sex: all - Age: all - Variant: estimates": 127486600
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2015,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 86.962,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.721,
+        "Population - Sex: all - Age: all - Variant: estimates": 127275868
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2016,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 87.106,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 80.933,
+        "Population - Sex: all - Age: all - Variant: estimates": 127159949
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2017,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 87.26,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.061,
+        "Population - Sex: all - Age: all - Variant: estimates": 127064685
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2018,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 87.31,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.215,
+        "Population - Sex: all - Age: all - Variant: estimates": 126913433
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2019,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 87.429,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.365,
+        "Population - Sex: all - Age: all - Variant: estimates": 126699422
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2020,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 87.727,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.578,
+        "Population - Sex: all - Age: all - Variant: estimates": 126304536
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2021,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 87.591,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.499,
+        "Population - Sex: all - Age: all - Variant: estimates": 125679341
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2022,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 87.087,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.06,
+        "Population - Sex: all - Age: all - Variant: estimates": 124997586
+      },
+      {
+        "Entity": "Japan",
+        "Code": "JPN",
+        "Year": 2023,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 87.741,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 81.688,
+        "Population - Sex: all - Age: all - Variant: estimates": 124370947
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1950,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.923,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.24,
+        "Population - Sex: all - Age: all - Variant: estimates": 50121020
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1951,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 70.683,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.714,
+        "Population - Sex: all - Age: all - Variant: estimates": 50346822
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1952,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.107,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.832,
+        "Population - Sex: all - Age: all - Variant: estimates": 50496231
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1953,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.366,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.117,
+        "Population - Sex: all - Age: all - Variant: estimates": 50727037
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1954,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.805,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.414,
+        "Population - Sex: all - Age: all - Variant: estimates": 50958246
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1955,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.773,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.374,
+        "Population - Sex: all - Age: all - Variant: estimates": 51176749
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1956,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.102,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.586,
+        "Population - Sex: all - Age: all - Variant: estimates": 51400459
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1957,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.316,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.61,
+        "Population - Sex: all - Age: all - Variant: estimates": 51655911
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1958,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.494,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.792,
+        "Population - Sex: all - Age: all - Variant: estimates": 51935639
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1959,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.602,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.921,
+        "Population - Sex: all - Age: all - Variant: estimates": 52226466
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1960,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.883,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.038,
+        "Population - Sex: all - Age: all - Variant: estimates": 52538549
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1961,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.654,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.812,
+        "Population - Sex: all - Age: all - Variant: estimates": 52884952
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1962,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.788,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.825,
+        "Population - Sex: all - Age: all - Variant: estimates": 53272836
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1963,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.724,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.713,
+        "Population - Sex: all - Age: all - Variant: estimates": 53652940
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1964,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.563,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.41,
+        "Population - Sex: all - Age: all - Variant: estimates": 54009131
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1965,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.58,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.362,
+        "Population - Sex: all - Age: all - Variant: estimates": 54359022
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1966,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.501,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.282,
+        "Population - Sex: all - Age: all - Variant: estimates": 54676346
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1967,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.086,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.933,
+        "Population - Sex: all - Age: all - Variant: estimates": 54973659
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1968,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.715,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.563,
+        "Population - Sex: all - Age: all - Variant: estimates": 55240654
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1969,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.785,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.466,
+        "Population - Sex: all - Age: all - Variant: estimates": 55456208
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1970,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.986,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.696,
+        "Population - Sex: all - Age: all - Variant: estimates": 55663801
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1971,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.326,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.045,
+        "Population - Sex: all - Age: all - Variant: estimates": 55890372
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1972,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.07,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.835,
+        "Population - Sex: all - Age: all - Variant: estimates": 56079239
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1973,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.285,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.01,
+        "Population - Sex: all - Age: all - Variant: estimates": 56188788
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1974,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.452,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.222,
+        "Population - Sex: all - Age: all - Variant: estimates": 56224550
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1975,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.709,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.507,
+        "Population - Sex: all - Age: all - Variant: estimates": 56220138
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1976,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.675,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.525,
+        "Population - Sex: all - Age: all - Variant: estimates": 56201144
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1977,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.137,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.995,
+        "Population - Sex: all - Age: all - Variant: estimates": 56175831
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1978,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.069,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.937,
+        "Population - Sex: all - Age: all - Variant: estimates": 56175552
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1979,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.189,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.06,
+        "Population - Sex: all - Age: all - Variant: estimates": 56218759
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1980,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.574,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.514,
+        "Population - Sex: all - Age: all - Variant: estimates": 56282102
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1981,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.885,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.85,
+        "Population - Sex: all - Age: all - Variant: estimates": 56304591
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1982,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.944,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.032,
+        "Population - Sex: all - Age: all - Variant: estimates": 56292761
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1983,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.215,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.272,
+        "Population - Sex: all - Age: all - Variant: estimates": 56332059
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1984,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.553,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.678,
+        "Population - Sex: all - Age: all - Variant: estimates": 56451312
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1985,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.36,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.612,
+        "Population - Sex: all - Age: all - Variant: estimates": 56606416
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1986,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.672,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.819,
+        "Population - Sex: all - Age: all - Variant: estimates": 56751925
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1987,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.958,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.211,
+        "Population - Sex: all - Age: all - Variant: estimates": 56886020
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1988,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.062,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.34,
+        "Population - Sex: all - Age: all - Variant: estimates": 57026540
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1989,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.083,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.579,
+        "Population - Sex: all - Age: all - Variant: estimates": 57182137
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1990,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.504,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.841,
+        "Population - Sex: all - Age: all - Variant: estimates": 57367867
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1991,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.614,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.081,
+        "Population - Sex: all - Age: all - Variant: estimates": 57555199
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1992,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.962,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.512,
+        "Population - Sex: all - Age: all - Variant: estimates": 57719272
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1993,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.768,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.441,
+        "Population - Sex: all - Age: all - Variant: estimates": 57861036
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1994,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.307,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.995,
+        "Population - Sex: all - Age: all - Variant: estimates": 58003200
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1995,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.186,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.924,
+        "Population - Sex: all - Age: all - Variant: estimates": 58154632
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1996,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.403,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.219,
+        "Population - Sex: all - Age: all - Variant: estimates": 58298563
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1997,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.582,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.566,
+        "Population - Sex: all - Age: all - Variant: estimates": 58447090
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1998,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.713,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.714,
+        "Population - Sex: all - Age: all - Variant: estimates": 58626822
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 1999,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.76,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.871,
+        "Population - Sex: all - Age: all - Variant: estimates": 58838660
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2000,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.192,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.376,
+        "Population - Sex: all - Age: all - Variant: estimates": 59057336
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2001,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.417,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.692,
+        "Population - Sex: all - Age: all - Variant: estimates": 59288095
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2002,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.513,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.843,
+        "Population - Sex: all - Age: all - Variant: estimates": 59540763
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2003,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.484,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.059,
+        "Population - Sex: all - Age: all - Variant: estimates": 59820385
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2004,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.053,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.62,
+        "Population - Sex: all - Age: all - Variant: estimates": 60169964
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2005,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.189,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.896,
+        "Population - Sex: all - Age: all - Variant: estimates": 60596108
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2006,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.468,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.103,
+        "Population - Sex: all - Age: all - Variant: estimates": 61051093
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2007,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.614,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.339,
+        "Population - Sex: all - Age: all - Variant: estimates": 61535860
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2008,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.67,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 77.535,
+        "Population - Sex: all - Age: all - Variant: estimates": 62027303
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2009,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.19,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.009,
+        "Population - Sex: all - Age: all - Variant: estimates": 62506221
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2010,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.333,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.34,
+        "Population - Sex: all - Age: all - Variant: estimates": 63006484
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2011,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.719,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.764,
+        "Population - Sex: all - Age: all - Variant: estimates": 63509285
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2012,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.666,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.954,
+        "Population - Sex: all - Age: all - Variant: estimates": 63960487
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2013,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.769,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.99,
+        "Population - Sex: all - Age: all - Variant: estimates": 64389386
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2014,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.983,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.235,
+        "Population - Sex: all - Age: all - Variant: estimates": 64865914
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2015,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.727,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.042,
+        "Population - Sex: all - Age: all - Variant: estimates": 65382107
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2016,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.871,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.194,
+        "Population - Sex: all - Age: all - Variant: estimates": 65893359
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2017,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.984,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.284,
+        "Population - Sex: all - Age: all - Variant: estimates": 66354474
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2018,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.944,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.249,
+        "Population - Sex: all - Age: all - Variant: estimates": 66752473
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2019,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.275,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.554,
+        "Population - Sex: all - Age: all - Variant: estimates": 67110958
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2020,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.4,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.362,
+        "Population - Sex: all - Age: all - Variant: estimates": 67351860
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2021,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 82.671,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 78.72,
+        "Population - Sex: all - Age: all - Variant: estimates": 67668789
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2022,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.018,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.1,
+        "Population - Sex: all - Age: all - Variant: estimates": 68179315
+      },
+      {
+        "Entity": "United Kingdom",
+        "Code": "GBR",
+        "Year": 2023,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 83.208,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 79.362,
+        "Population - Sex: all - Age: all - Variant: estimates": 68682965
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1950,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.013,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.397,
+        "Population - Sex: all - Age: all - Variant: estimates": 154202683
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1951,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.218,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.411,
+        "Population - Sex: all - Age: all - Variant: estimates": 156481322
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1952,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.496,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.545,
+        "Population - Sex: all - Age: all - Variant: estimates": 158794225
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1953,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 71.915,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 65.796,
+        "Population - Sex: all - Age: all - Variant: estimates": 161168319
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1954,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.695,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.573,
+        "Population - Sex: all - Age: all - Variant: estimates": 163636304
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1955,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.804,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.58,
+        "Population - Sex: all - Age: all - Variant: estimates": 166200030
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1956,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.948,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.61,
+        "Population - Sex: all - Age: all - Variant: estimates": 168824963
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1957,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 72.746,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.363,
+        "Population - Sex: all - Age: all - Variant: estimates": 171499235
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1958,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.0,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.603,
+        "Population - Sex: all - Age: all - Variant: estimates": 174215305
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1959,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.31,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.752,
+        "Population - Sex: all - Age: all - Variant: estimates": 177145772
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1960,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.305,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.617,
+        "Population - Sex: all - Age: all - Variant: estimates": 180274554
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1961,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.709,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.039,
+        "Population - Sex: all - Age: all - Variant: estimates": 183489491
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1962,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.59,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.88,
+        "Population - Sex: all - Age: all - Variant: estimates": 186724277
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1963,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.502,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.634,
+        "Population - Sex: all - Age: all - Variant: estimates": 189825228
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1964,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.811,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.82,
+        "Population - Sex: all - Age: all - Variant: estimates": 192819456
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1965,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.936,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.803,
+        "Population - Sex: all - Age: all - Variant: estimates": 195653775
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1966,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 73.966,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.691,
+        "Population - Sex: all - Age: all - Variant: estimates": 198265397
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1967,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.332,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.935,
+        "Population - Sex: all - Age: all - Variant: estimates": 200699913
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1968,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.083,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.552,
+        "Population - Sex: all - Age: all - Variant: estimates": 203011021
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1969,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.397,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 66.77,
+        "Population - Sex: all - Age: all - Variant: estimates": 205300032
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1970,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.646,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.016,
+        "Population - Sex: all - Age: all - Variant: estimates": 207796339
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1971,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 74.974,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.388,
+        "Population - Sex: all - Age: all - Variant: estimates": 210426424
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1972,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.108,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.416,
+        "Population - Sex: all - Age: all - Variant: estimates": 212842574
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1973,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.323,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 67.618,
+        "Population - Sex: all - Age: all - Variant: estimates": 215006548
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1974,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 75.845,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.185,
+        "Population - Sex: all - Age: all - Variant: estimates": 217076474
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1975,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.455,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 68.721,
+        "Population - Sex: all - Age: all - Variant: estimates": 219129300
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1976,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 76.675,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.077,
+        "Population - Sex: all - Age: all - Variant: estimates": 221168756
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1977,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.086,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.411,
+        "Population - Sex: all - Age: all - Variant: estimates": 223259417
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1978,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.224,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.619,
+        "Population - Sex: all - Age: all - Variant: estimates": 225396098
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1979,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.661,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.008,
+        "Population - Sex: all - Age: all - Variant: estimates": 227575083
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1980,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.473,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 69.981,
+        "Population - Sex: all - Age: all - Variant: estimates": 229858654
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1981,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 77.798,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.406,
+        "Population - Sex: all - Age: all - Variant: estimates": 232201613
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1982,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.075,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.801,
+        "Population - Sex: all - Age: all - Variant: estimates": 234583158
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1983,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.084,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 70.966,
+        "Population - Sex: all - Age: all - Variant: estimates": 236986362
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1984,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.168,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.119,
+        "Population - Sex: all - Age: all - Variant: estimates": 239353968
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1985,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.173,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.078,
+        "Population - Sex: all - Age: all - Variant: estimates": 241690439
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1986,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.265,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.144,
+        "Population - Sex: all - Age: all - Variant: estimates": 243953810
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1987,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.354,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.312,
+        "Population - Sex: all - Age: all - Variant: estimates": 246161292
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1988,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.301,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.318,
+        "Population - Sex: all - Age: all - Variant: estimates": 248393235
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1989,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.562,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.6,
+        "Population - Sex: all - Age: all - Variant: estimates": 250675047
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1990,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.843,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 71.85,
+        "Population - Sex: all - Age: all - Variant: estimates": 253373385
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1991,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.966,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.032,
+        "Population - Sex: all - Age: all - Variant: estimates": 256471425
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1992,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.18,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.324,
+        "Population - Sex: all - Age: all - Variant: estimates": 259606020
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1993,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 78.932,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.171,
+        "Population - Sex: all - Age: all - Variant: estimates": 262633235
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1994,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.053,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.388,
+        "Population - Sex: all - Age: all - Variant: estimates": 265474811
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1995,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.085,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 72.584,
+        "Population - Sex: all - Age: all - Variant: estimates": 268205794
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1996,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.222,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.071,
+        "Population - Sex: all - Age: all - Variant: estimates": 270860696
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1997,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.378,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.543,
+        "Population - Sex: all - Age: all - Variant: estimates": 273468014
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1998,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.431,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.809,
+        "Population - Sex: all - Age: all - Variant: estimates": 276119323
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 1999,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.346,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.92,
+        "Population - Sex: all - Age: all - Variant: estimates": 278785482
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2000,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.426,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.118,
+        "Population - Sex: all - Age: all - Variant: estimates": 281484127
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2001,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.516,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.265,
+        "Population - Sex: all - Age: all - Variant: estimates": 284279629
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2002,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.581,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.347,
+        "Population - Sex: all - Age: all - Variant: estimates": 287084336
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2003,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.702,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.527,
+        "Population - Sex: all - Age: all - Variant: estimates": 289908091
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2004,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.057,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.96,
+        "Population - Sex: all - Age: all - Variant: estimates": 292786247
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2005,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.067,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.95,
+        "Population - Sex: all - Age: all - Variant: estimates": 295716665
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2006,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.326,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.235,
+        "Population - Sex: all - Age: all - Variant: estimates": 298730210
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2007,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.555,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.507,
+        "Population - Sex: all - Age: all - Variant: estimates": 301844227
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2008,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.586,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.644,
+        "Population - Sex: all - Age: all - Variant: estimates": 304970328
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2009,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.905,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.015,
+        "Population - Sex: all - Age: all - Variant: estimates": 308023451
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2010,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.066,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.244,
+        "Population - Sex: all - Age: all - Variant: estimates": 311062786
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2011,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.065,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.321,
+        "Population - Sex: all - Age: all - Variant: estimates": 314105078
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2012,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.181,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.445,
+        "Population - Sex: all - Age: all - Variant: estimates": 317115348
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2013,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.194,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.446,
+        "Population - Sex: all - Age: all - Variant: estimates": 320110753
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2014,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.271,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.501,
+        "Population - Sex: all - Age: all - Variant: estimates": 323115378
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2015,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.145,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.334,
+        "Population - Sex: all - Age: all - Variant: estimates": 326126498
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2016,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.193,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.234,
+        "Population - Sex: all - Age: all - Variant: estimates": 329179421
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2017,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.183,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.186,
+        "Population - Sex: all - Age: all - Variant: estimates": 332204656
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2018,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.347,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.335,
+        "Population - Sex: all - Age: all - Variant: estimates": 335056495
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2019,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.469,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.454,
+        "Population - Sex: all - Age: all - Variant: estimates": 337790068
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2020,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.874,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 74.339,
+        "Population - Sex: all - Age: all - Variant: estimates": 339436157
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2021,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 79.365,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 73.62,
+        "Population - Sex: all - Age: all - Variant: estimates": 340161441
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2022,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 80.792,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 75.331,
+        "Population - Sex: all - Age: all - Variant: estimates": 341534041
+      },
+      {
+        "Entity": "United States",
+        "Code": "USA",
+        "Year": 2023,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 81.849,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 76.864,
+        "Population - Sex: all - Age: all - Variant: estimates": 343477332
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1950,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 51.716,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 47.202,
+        "Population - Sex: all - Age: all - Variant: estimates": 2790907
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1951,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 52.121,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 47.629,
+        "Population - Sex: all - Age: all - Variant: estimates": 2880901
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1952,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 52.524,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 48.029,
+        "Population - Sex: all - Age: all - Variant: estimates": 2972914
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1953,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 52.925,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 48.412,
+        "Population - Sex: all - Age: all - Variant: estimates": 3067169
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1954,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 53.328,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 48.787,
+        "Population - Sex: all - Age: all - Variant: estimates": 3163885
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1955,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 53.743,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.144,
+        "Population - Sex: all - Age: all - Variant: estimates": 3263220
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1956,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 54.158,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.508,
+        "Population - Sex: all - Age: all - Variant: estimates": 3365534
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1957,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 54.579,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.875,
+        "Population - Sex: all - Age: all - Variant: estimates": 3471158
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1958,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.018,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 50.21,
+        "Population - Sex: all - Age: all - Variant: estimates": 3580186
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1959,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.475,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 50.629,
+        "Population - Sex: all - Age: all - Variant: estimates": 3692810
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1960,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.963,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.077,
+        "Population - Sex: all - Age: all - Variant: estimates": 3809393
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1961,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 56.47,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.516,
+        "Population - Sex: all - Age: all - Variant: estimates": 3930400
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1962,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 56.993,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.965,
+        "Population - Sex: all - Age: all - Variant: estimates": 4055968
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1963,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 57.519,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.413,
+        "Population - Sex: all - Age: all - Variant: estimates": 4185876
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1964,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 58.042,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.866,
+        "Population - Sex: all - Age: all - Variant: estimates": 4320003
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1965,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 58.548,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 53.305,
+        "Population - Sex: all - Age: all - Variant: estimates": 4458460
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1966,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 59.033,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 53.724,
+        "Population - Sex: all - Age: all - Variant: estimates": 4601225
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1967,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 59.475,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.089,
+        "Population - Sex: all - Age: all - Variant: estimates": 4748308
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1968,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 59.893,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.423,
+        "Population - Sex: all - Age: all - Variant: estimates": 4900440
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1969,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.191,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.783,
+        "Population - Sex: all - Age: all - Variant: estimates": 5058186
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1970,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.467,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.057,
+        "Population - Sex: all - Age: all - Variant: estimates": 5215918
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1971,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.708,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.298,
+        "Population - Sex: all - Age: all - Variant: estimates": 5374719
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1972,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.892,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.485,
+        "Population - Sex: all - Age: all - Variant: estimates": 5542444
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1973,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.023,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.211,
+        "Population - Sex: all - Age: all - Variant: estimates": 5720412
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1974,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.143,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.312,
+        "Population - Sex: all - Age: all - Variant: estimates": 5908337
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1975,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.223,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.351,
+        "Population - Sex: all - Age: all - Variant: estimates": 6098655
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1976,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.252,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.168,
+        "Population - Sex: all - Age: all - Variant: estimates": 6287108
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1977,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.29,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.972,
+        "Population - Sex: all - Age: all - Variant: estimates": 6449517
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1978,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.166,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.017,
+        "Population - Sex: all - Age: all - Variant: estimates": 6543572
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1979,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.278,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.153,
+        "Population - Sex: all - Age: all - Variant: estimates": 6647557
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1980,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.153,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.177,
+        "Population - Sex: all - Age: all - Variant: estimates": 7041304
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1981,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.522,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.397,
+        "Population - Sex: all - Age: all - Variant: estimates": 7498642
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1982,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.985,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.75,
+        "Population - Sex: all - Age: all - Variant: estimates": 7796501
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1983,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.262,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.721,
+        "Population - Sex: all - Age: all - Variant: estimates": 8098407
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1984,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.91,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.345,
+        "Population - Sex: all - Age: all - Variant: estimates": 8391496
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1985,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 64.323,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.51,
+        "Population - Sex: all - Age: all - Variant: estimates": 8686815
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1986,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 64.492,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.518,
+        "Population - Sex: all - Age: all - Variant: estimates": 8982580
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1987,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 64.315,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.193,
+        "Population - Sex: all - Age: all - Variant: estimates": 9284650
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1988,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.836,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.754,
+        "Population - Sex: all - Age: all - Variant: estimates": 9583100
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1989,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.949,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.062,
+        "Population - Sex: all - Age: all - Variant: estimates": 9864797
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1990,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.569,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.161,
+        "Population - Sex: all - Age: all - Variant: estimates": 10137286
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1991,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.052,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.098,
+        "Population - Sex: all - Age: all - Variant: estimates": 10404820
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1992,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 58.353,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.908,
+        "Population - Sex: all - Age: all - Variant: estimates": 10702697
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1993,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 56.467,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.629,
+        "Population - Sex: all - Age: all - Variant: estimates": 10860286
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1994,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 54.78,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 50.402,
+        "Population - Sex: all - Age: all - Variant: estimates": 10873145
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1995,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 53.194,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.181,
+        "Population - Sex: all - Age: all - Variant: estimates": 10974606
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1996,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 51.135,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.94,
+        "Population - Sex: all - Age: all - Variant: estimates": 11158363
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1997,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 50.13,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 47.001,
+        "Population - Sex: all - Age: all - Variant: estimates": 11369833
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1998,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 49.159,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.024,
+        "Population - Sex: all - Age: all - Variant: estimates": 11594299
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 1999,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 47.811,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 45.031,
+        "Population - Sex: all - Age: all - Variant: estimates": 11783451
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2000,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 47.298,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 44.834,
+        "Population - Sex: all - Age: all - Variant: estimates": 11892057
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2001,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 45.127,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 43.997,
+        "Population - Sex: all - Age: all - Variant: estimates": 11971904
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2002,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 46.793,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 45.135,
+        "Population - Sex: all - Age: all - Variant: estimates": 12087661
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2003,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 45.834,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 44.987,
+        "Population - Sex: all - Age: all - Variant: estimates": 12232324
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2004,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 46.507,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 45.655,
+        "Population - Sex: all - Age: all - Variant: estimates": 12365901
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2005,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 47.005,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.198,
+        "Population - Sex: all - Age: all - Variant: estimates": 12483433
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2006,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 47.351,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 46.856,
+        "Population - Sex: all - Age: all - Variant: estimates": 12636443
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2007,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 47.641,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 47.644,
+        "Population - Sex: all - Age: all - Variant: estimates": 12804062
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2008,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 48.749,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 48.246,
+        "Population - Sex: all - Age: all - Variant: estimates": 12959154
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2009,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 50.289,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 49.245,
+        "Population - Sex: all - Age: all - Variant: estimates": 13142793
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2010,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 52.655,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 51.197,
+        "Population - Sex: all - Age: all - Variant: estimates": 13356552
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2011,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 55.218,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 52.508,
+        "Population - Sex: all - Age: all - Variant: estimates": 13595422
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2012,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 56.609,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 54.066,
+        "Population - Sex: all - Age: all - Variant: estimates": 13817886
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2013,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 58.171,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 55.397,
+        "Population - Sex: all - Age: all - Variant: estimates": 14013810
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2014,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 59.508,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 56.569,
+        "Population - Sex: all - Age: all - Variant: estimates": 14207367
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2015,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 60.49,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.33,
+        "Population - Sex: all - Age: all - Variant: estimates": 14399009
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2016,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 61.401,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.94,
+        "Population - Sex: all - Age: all - Variant: estimates": 14600297
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2017,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.016,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 58.304,
+        "Population - Sex: all - Age: all - Variant: estimates": 14812484
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2018,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.741,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 58.852,
+        "Population - Sex: all - Age: all - Variant: estimates": 15034457
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2019,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.049,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 58.83,
+        "Population - Sex: all - Age: all - Variant: estimates": 15271377
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2020,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 63.747,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 59.091,
+        "Population - Sex: all - Age: all - Variant: estimates": 15526888
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2021,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 62.289,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 57.717,
+        "Population - Sex: all - Age: all - Variant: estimates": 15797220
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2022,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 64.544,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 59.88,
+        "Population - Sex: all - Age: all - Variant: estimates": 16069061
+      },
+      {
+        "Entity": "Zimbabwe",
+        "Code": "ZWE",
+        "Year": 2023,
+        "Life expectancy - Sex: female - Age: 0 - Variant: estimates": 65.013,
+        "Life expectancy - Sex: male - Age: 0 - Variant: estimates": 60.226,
+        "Population - Sex: all - Age: all - Variant: estimates": 16340829
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Life expectancy - Sex: female - Age: 0 - Variant: estimates",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal"
+    }
+  }
+}

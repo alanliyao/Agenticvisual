@@ -1,0 +1,56 @@
+{
+  "task_type": "vague_single",
+  "task_id": "45_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/45_ign_scores_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Is it PS4 peforms better than PS",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "boolean",
+          "value": "yes"
+        },
+        "key_insights": [
+          "Overall, PS4 peform better than PS in almost every kind of game"
+        ],
+        "reasoning": [],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Platform"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Dreamcast\",\"Game Boy Advance\",\"Game Boy Color\",\"GameCube\",\"Nintendo 3DS\",\"Nintendo 64\",\"Nintendo DS\",\"Nintendo DSi\",\"PC\",\"PlayStation 2\",\"PlayStation 3\",\"PlayStation Portable\",\"PlayStation Vita\",\"Xbox\",\"Wireless\",\"Wii\",\"Xbox 360\",\"Xbox One\",\"iPhone\"], datum['Platform']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 1,
+            "types": [
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

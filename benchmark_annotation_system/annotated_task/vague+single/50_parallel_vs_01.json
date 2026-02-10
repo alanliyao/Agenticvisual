@@ -1,0 +1,70 @@
+{
+  "task_type": "vague_single",
+  "task_id": "50_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/50_supply_chain_data_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "how skincare's manufacturing lead time, manufacturing costs, production volumes, and defect rates are distributed across all dimensions",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The data exhibits a wide and varied distribution across all metrics, but with specific structural patterns regarding correlations and clustering.\nWide Spread: Data points are not clustered in a single \"sweet spot\" but are spread out, indicating diversity in how these skincare products are manufactured and sold.\nHigh Variance in Costs: Manufacturing costs show a significant range, with many low-cost items but also several outliers at the higher end.\nBimodal Tendency in Volume/Time: There appears to be a split in the data regarding production volume and lead time. Some products are \"high volume, low time,\" while others are \"low volume, high time.\""
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "We focus on the data of skincare"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product type",
+                  "values": [
+                    "haircare",
+                    "cosmetics"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"haircare\",\"cosmetics\"], datum['Product type']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

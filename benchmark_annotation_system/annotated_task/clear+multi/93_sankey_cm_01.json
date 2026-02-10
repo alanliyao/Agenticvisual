@@ -1,0 +1,70 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "93_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/93_sankey_financial.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "filter the financial products to only show Consumer Credit and Wealth Products, then sort the remaining traffic entries by their total conversion volume to see which entry is the top contributor.\n",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Alipay/WeChat Entry",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Alipay/WeChat Entry and Bank App Push are the dominant sources of traffic for both Consumer Credit and Wealth Products.",
+          "The gap between Alipay/WeChat Entry and the second-place Bank App Push is substantial, highlighting the scale of this traffic source."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "filtering to the two target products narrows the focus to a high-value subset of financial offerings."
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "Sorting the traffic entries by their combined conversion volume then quantifies which channel drives the most activity in this high-value segment"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Wealth Products"
+                }
+              }
+            },
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Wealth Products"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

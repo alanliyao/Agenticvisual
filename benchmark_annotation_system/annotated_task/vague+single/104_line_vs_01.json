@@ -1,0 +1,67 @@
+{
+  "task_type": "vague_single",
+  "task_id": "104_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/104_gender_gap_in_life_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "what are the characteristics of the contribution of United Kingdom？",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The changes roughly have four stages: first fluctuating, then increasing, then decreasing, and finally fluctuating again in the last stage."
+        },
+        "key_insights": [
+          "from 1920 to 1938 and from 1947 to 2020,it fluctuated",
+          "from 1938 to 1944 it increased.",
+          "from 1944 to 1947,it decreased."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "from the line,we can roughly take take changes into four stages."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "New Zealand",
+                    "United States",
+                    "Russia",
+                    "Japan",
+                    "Australia",
+                    "Germany"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Contribution of gender in life expectancy gap (years) - Age group: 15-39",
+            "color": "Entity"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"New Zealand\", \"United States\", \"Russia\", \"Japan\", \"Australia\", \"Germany\"], datum['Entity']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

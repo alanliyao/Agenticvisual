@@ -1,0 +1,1559 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Government Fiscal Budget Flow Sankey — Revenue to Expenditure (Data-Driven Architecture)",
+  "width": 1200,
+  "height": 620,
+  "padding": {
+    "left": 150,
+    "right": 140,
+    "top": 55,
+    "bottom": 50
+  },
+  "background": "white",
+  "_metadata": {
+    "chart_type": "sankey_multi_stage",
+    "title": "Sankey Government Fiscal Budget & Expenditure",
+    "topic": "government_budget_audit",
+    "architecture": "data-driven layout via Vega transform pipeline",
+    "value_unit": "Billions USD",
+    "notes": "$3,000B total budget — Transport gets most bond funding (47%); Infrastructure largest expense category (18%)"
+  },
+  "signals": [
+    {
+      "name": "nodeWidth",
+      "value": 15
+    },
+    {
+      "name": "nodeGap",
+      "value": 50
+    },
+    {
+      "name": "threshold",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 100,
+        "step": 10,
+        "name": "Min Flow ($B): "
+      }
+    },
+    {
+      "name": "nodeHover",
+      "value": null,
+      "on": [
+        {
+          "events": "@nodeRect:mouseover",
+          "update": "datum.name"
+        },
+        {
+          "events": "@nodeRect:mouseout",
+          "update": "null"
+        }
+      ]
+    },
+    {
+      "name": "edgeHover",
+      "value": null,
+      "on": [
+        {
+          "events": "@edgeMark:mouseover",
+          "update": "datum.linkId"
+        },
+        {
+          "events": "@edgeMark:mouseout",
+          "update": "null"
+        }
+      ]
+    },
+    {
+      "name": "selectedNode",
+      "value": null,
+      "on": [
+        {
+          "events": "@nodeRect:click!",
+          "update": "selectedNode === datum.name ? null : datum.name"
+        },
+        {
+          "events": [
+            {
+              "type": "click",
+              "markname": "resetBtn"
+            },
+            {
+              "type": "dblclick"
+            }
+          ],
+          "update": "null"
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "rawLinks",
+      "values": [
+        {
+          "source": "Personal Income Tax",
+          "target": "Defense",
+          "value": 200
+        },
+        {
+          "source": "Personal Income Tax",
+          "target": "Education",
+          "value": 350
+        },
+        {
+          "source": "Personal Income Tax",
+          "target": "Healthcare",
+          "value": 300
+        },
+        {
+          "source": "Personal Income Tax",
+          "target": "Transport",
+          "value": 100
+        },
+        {
+          "source": "Personal Income Tax",
+          "target": "Social Welfare",
+          "value": 150
+        },
+        {
+          "source": "Corporate Tax",
+          "target": "Defense",
+          "value": 250
+        },
+        {
+          "source": "Corporate Tax",
+          "target": "Education",
+          "value": 200
+        },
+        {
+          "source": "Corporate Tax",
+          "target": "Healthcare",
+          "value": 180
+        },
+        {
+          "source": "Corporate Tax",
+          "target": "Transport",
+          "value": 170
+        },
+        {
+          "source": "Corporate Tax",
+          "target": "Social Welfare",
+          "value": 100
+        },
+        {
+          "source": "Bond Issuance",
+          "target": "Defense",
+          "value": 100
+        },
+        {
+          "source": "Bond Issuance",
+          "target": "Education",
+          "value": 80
+        },
+        {
+          "source": "Bond Issuance",
+          "target": "Healthcare",
+          "value": 70
+        },
+        {
+          "source": "Bond Issuance",
+          "target": "Transport",
+          "value": 280
+        },
+        {
+          "source": "Bond Issuance",
+          "target": "Social Welfare",
+          "value": 70
+        },
+        {
+          "source": "Fees & Fines",
+          "target": "Defense",
+          "value": 50
+        },
+        {
+          "source": "Fees & Fines",
+          "target": "Education",
+          "value": 70
+        },
+        {
+          "source": "Fees & Fines",
+          "target": "Healthcare",
+          "value": 50
+        },
+        {
+          "source": "Fees & Fines",
+          "target": "Transport",
+          "value": 150
+        },
+        {
+          "source": "Fees & Fines",
+          "target": "Social Welfare",
+          "value": 80
+        },
+        {
+          "source": "Defense",
+          "target": "Military Operations",
+          "value": 360
+        },
+        {
+          "source": "Defense",
+          "target": "Defense R&D",
+          "value": 160
+        },
+        {
+          "source": "Defense",
+          "target": "Veterans Affairs",
+          "value": 80
+        },
+        {
+          "source": "Education",
+          "target": "K-12 Funding",
+          "value": 400
+        },
+        {
+          "source": "Education",
+          "target": "Higher Education",
+          "value": 200
+        },
+        {
+          "source": "Education",
+          "target": "Research Grants",
+          "value": 100
+        },
+        {
+          "source": "Healthcare",
+          "target": "Medicare Subsidy",
+          "value": 360
+        },
+        {
+          "source": "Healthcare",
+          "target": "Hospital Funding",
+          "value": 160
+        },
+        {
+          "source": "Healthcare",
+          "target": "Pharma Programs",
+          "value": 80
+        },
+        {
+          "source": "Transport",
+          "target": "Highway Projects",
+          "value": 380
+        },
+        {
+          "source": "Transport",
+          "target": "Rail Projects",
+          "value": 220
+        },
+        {
+          "source": "Transport",
+          "target": "Aviation Safety",
+          "value": 100
+        },
+        {
+          "source": "Social Welfare",
+          "target": "Pension Payments",
+          "value": 260
+        },
+        {
+          "source": "Social Welfare",
+          "target": "Unemployment Aid",
+          "value": 100
+        },
+        {
+          "source": "Social Welfare",
+          "target": "Housing Subsidy",
+          "value": 40
+        },
+        {
+          "source": "Military Operations",
+          "target": "Defense Corp A",
+          "value": 200
+        },
+        {
+          "source": "Military Operations",
+          "target": "Defense Corp B",
+          "value": 120
+        },
+        {
+          "source": "Military Operations",
+          "target": "Personnel Costs",
+          "value": 40
+        },
+        {
+          "source": "Defense R&D",
+          "target": "Defense Corp A",
+          "value": 100
+        },
+        {
+          "source": "Defense R&D",
+          "target": "Research Inst",
+          "value": 60
+        },
+        {
+          "source": "Veterans Affairs",
+          "target": "Healthcare Prov",
+          "value": 50
+        },
+        {
+          "source": "Veterans Affairs",
+          "target": "Personnel Costs",
+          "value": 30
+        },
+        {
+          "source": "K-12 Funding",
+          "target": "School Districts",
+          "value": 300
+        },
+        {
+          "source": "K-12 Funding",
+          "target": "Textbook Publ",
+          "value": 60
+        },
+        {
+          "source": "K-12 Funding",
+          "target": "Personnel Costs",
+          "value": 40
+        },
+        {
+          "source": "Higher Education",
+          "target": "State Univ",
+          "value": 140
+        },
+        {
+          "source": "Higher Education",
+          "target": "Research Inst",
+          "value": 60
+        },
+        {
+          "source": "Research Grants",
+          "target": "Research Inst",
+          "value": 60
+        },
+        {
+          "source": "Research Grants",
+          "target": "State Univ",
+          "value": 40
+        },
+        {
+          "source": "Medicare Subsidy",
+          "target": "Healthcare Prov",
+          "value": 240
+        },
+        {
+          "source": "Medicare Subsidy",
+          "target": "Pharma Co",
+          "value": 120
+        },
+        {
+          "source": "Hospital Funding",
+          "target": "Healthcare Prov",
+          "value": 100
+        },
+        {
+          "source": "Hospital Funding",
+          "target": "Equipment Vendor",
+          "value": 60
+        },
+        {
+          "source": "Pharma Programs",
+          "target": "Pharma Co",
+          "value": 80
+        },
+        {
+          "source": "Highway Projects",
+          "target": "Construct Co A",
+          "value": 220
+        },
+        {
+          "source": "Highway Projects",
+          "target": "Construct Co B",
+          "value": 130
+        },
+        {
+          "source": "Highway Projects",
+          "target": "Equipment Vendor",
+          "value": 30
+        },
+        {
+          "source": "Rail Projects",
+          "target": "Construct Co A",
+          "value": 120
+        },
+        {
+          "source": "Rail Projects",
+          "target": "Construct Co B",
+          "value": 70
+        },
+        {
+          "source": "Rail Projects",
+          "target": "Equipment Vendor",
+          "value": 30
+        },
+        {
+          "source": "Aviation Safety",
+          "target": "Aviation Corp",
+          "value": 60
+        },
+        {
+          "source": "Aviation Safety",
+          "target": "Personnel Costs",
+          "value": 40
+        },
+        {
+          "source": "Pension Payments",
+          "target": "Direct Transfer",
+          "value": 260
+        },
+        {
+          "source": "Unemployment Aid",
+          "target": "Direct Transfer",
+          "value": 100
+        },
+        {
+          "source": "Housing Subsidy",
+          "target": "Direct Transfer",
+          "value": 40
+        },
+        {
+          "source": "Defense Corp A",
+          "target": "Equipment Purch",
+          "value": 200
+        },
+        {
+          "source": "Defense Corp A",
+          "target": "R&D Expense",
+          "value": 100
+        },
+        {
+          "source": "Defense Corp B",
+          "target": "Equipment Purch",
+          "value": 80
+        },
+        {
+          "source": "Defense Corp B",
+          "target": "Infrastructure",
+          "value": 40
+        },
+        {
+          "source": "Research Inst",
+          "target": "R&D Expense",
+          "value": 130
+        },
+        {
+          "source": "Research Inst",
+          "target": "Salaries",
+          "value": 50
+        },
+        {
+          "source": "Personnel Costs",
+          "target": "Salaries",
+          "value": 150
+        },
+        {
+          "source": "Healthcare Prov",
+          "target": "Salaries",
+          "value": 200
+        },
+        {
+          "source": "Healthcare Prov",
+          "target": "Equipment Purch",
+          "value": 100
+        },
+        {
+          "source": "Healthcare Prov",
+          "target": "Operations",
+          "value": 90
+        },
+        {
+          "source": "Pharma Co",
+          "target": "R&D Expense",
+          "value": 100
+        },
+        {
+          "source": "Pharma Co",
+          "target": "Operations",
+          "value": 100
+        },
+        {
+          "source": "School Districts",
+          "target": "Salaries",
+          "value": 200
+        },
+        {
+          "source": "School Districts",
+          "target": "Infrastructure",
+          "value": 60
+        },
+        {
+          "source": "School Districts",
+          "target": "Operations",
+          "value": 40
+        },
+        {
+          "source": "Textbook Publ",
+          "target": "Operations",
+          "value": 60
+        },
+        {
+          "source": "State Univ",
+          "target": "Salaries",
+          "value": 100
+        },
+        {
+          "source": "State Univ",
+          "target": "R&D Expense",
+          "value": 50
+        },
+        {
+          "source": "State Univ",
+          "target": "Infrastructure",
+          "value": 30
+        },
+        {
+          "source": "Equipment Vendor",
+          "target": "Equipment Purch",
+          "value": 120
+        },
+        {
+          "source": "Construct Co A",
+          "target": "Infrastructure",
+          "value": 260
+        },
+        {
+          "source": "Construct Co A",
+          "target": "Equipment Purch",
+          "value": 80
+        },
+        {
+          "source": "Construct Co B",
+          "target": "Infrastructure",
+          "value": 160
+        },
+        {
+          "source": "Construct Co B",
+          "target": "Equipment Purch",
+          "value": 40
+        },
+        {
+          "source": "Aviation Corp",
+          "target": "Equipment Purch",
+          "value": 40
+        },
+        {
+          "source": "Aviation Corp",
+          "target": "Operations",
+          "value": 20
+        },
+        {
+          "source": "Direct Transfer",
+          "target": "Citizen Benefit",
+          "value": 400
+        }
+      ]
+    },
+    {
+      "name": "nodeConfig",
+      "values": [
+        {
+          "name": "Personal Income Tax",
+          "depth": 0,
+          "order": 0
+        },
+        {
+          "name": "Corporate Tax",
+          "depth": 0,
+          "order": 1
+        },
+        {
+          "name": "Bond Issuance",
+          "depth": 0,
+          "order": 2
+        },
+        {
+          "name": "Fees & Fines",
+          "depth": 0,
+          "order": 3
+        },
+        {
+          "name": "Defense",
+          "depth": 1,
+          "order": 0
+        },
+        {
+          "name": "Education",
+          "depth": 1,
+          "order": 1
+        },
+        {
+          "name": "Healthcare",
+          "depth": 1,
+          "order": 2
+        },
+        {
+          "name": "Transport",
+          "depth": 1,
+          "order": 3
+        },
+        {
+          "name": "Social Welfare",
+          "depth": 1,
+          "order": 4
+        },
+        {
+          "name": "Military Operations",
+          "depth": 2,
+          "order": 0
+        },
+        {
+          "name": "Defense R&D",
+          "depth": 2,
+          "order": 1
+        },
+        {
+          "name": "Veterans Affairs",
+          "depth": 2,
+          "order": 2
+        },
+        {
+          "name": "K-12 Funding",
+          "depth": 2,
+          "order": 3
+        },
+        {
+          "name": "Higher Education",
+          "depth": 2,
+          "order": 4
+        },
+        {
+          "name": "Research Grants",
+          "depth": 2,
+          "order": 5
+        },
+        {
+          "name": "Medicare Subsidy",
+          "depth": 2,
+          "order": 6
+        },
+        {
+          "name": "Hospital Funding",
+          "depth": 2,
+          "order": 7
+        },
+        {
+          "name": "Pharma Programs",
+          "depth": 2,
+          "order": 8
+        },
+        {
+          "name": "Highway Projects",
+          "depth": 2,
+          "order": 9
+        },
+        {
+          "name": "Rail Projects",
+          "depth": 2,
+          "order": 10
+        },
+        {
+          "name": "Aviation Safety",
+          "depth": 2,
+          "order": 11
+        },
+        {
+          "name": "Pension Payments",
+          "depth": 2,
+          "order": 12
+        },
+        {
+          "name": "Unemployment Aid",
+          "depth": 2,
+          "order": 13
+        },
+        {
+          "name": "Housing Subsidy",
+          "depth": 2,
+          "order": 14
+        },
+        {
+          "name": "Defense Corp A",
+          "depth": 3,
+          "order": 0
+        },
+        {
+          "name": "Defense Corp B",
+          "depth": 3,
+          "order": 1
+        },
+        {
+          "name": "Research Inst",
+          "depth": 3,
+          "order": 2
+        },
+        {
+          "name": "Personnel Costs",
+          "depth": 3,
+          "order": 3
+        },
+        {
+          "name": "Healthcare Prov",
+          "depth": 3,
+          "order": 4
+        },
+        {
+          "name": "Pharma Co",
+          "depth": 3,
+          "order": 5
+        },
+        {
+          "name": "School Districts",
+          "depth": 3,
+          "order": 6
+        },
+        {
+          "name": "Textbook Publ",
+          "depth": 3,
+          "order": 7
+        },
+        {
+          "name": "State Univ",
+          "depth": 3,
+          "order": 8
+        },
+        {
+          "name": "Equipment Vendor",
+          "depth": 3,
+          "order": 9
+        },
+        {
+          "name": "Construct Co A",
+          "depth": 3,
+          "order": 10
+        },
+        {
+          "name": "Construct Co B",
+          "depth": 3,
+          "order": 11
+        },
+        {
+          "name": "Aviation Corp",
+          "depth": 3,
+          "order": 12
+        },
+        {
+          "name": "Direct Transfer",
+          "depth": 3,
+          "order": 13
+        },
+        {
+          "name": "Equipment Purch",
+          "depth": 4,
+          "order": 0
+        },
+        {
+          "name": "Infrastructure",
+          "depth": 4,
+          "order": 1
+        },
+        {
+          "name": "R&D Expense",
+          "depth": 4,
+          "order": 2
+        },
+        {
+          "name": "Salaries",
+          "depth": 4,
+          "order": 3
+        },
+        {
+          "name": "Operations",
+          "depth": 4,
+          "order": 4
+        },
+        {
+          "name": "Citizen Benefit",
+          "depth": 4,
+          "order": 5
+        }
+      ]
+    },
+    {
+      "name": "depthLabelsData",
+      "values": [
+        {
+          "depth": 0,
+          "label": "Revenue Source"
+        },
+        {
+          "depth": 1,
+          "label": "Ministry / Dept"
+        },
+        {
+          "depth": 2,
+          "label": "Major Programs"
+        },
+        {
+          "depth": 3,
+          "label": "Contractor / Recipient"
+        },
+        {
+          "depth": 4,
+          "label": "Expense Type"
+        }
+      ]
+    },
+    {
+      "name": "filteredLinks",
+      "source": "rawLinks",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.value >= threshold"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.source + ' → ' + datum.target",
+          "as": "linkId"
+        }
+      ]
+    },
+    {
+      "name": "linksWithOrder",
+      "source": "filteredLinks",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "nodeConfig",
+          "key": "name",
+          "fields": [
+            "source"
+          ],
+          "as": [
+            "srcConfig"
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "nodeConfig",
+          "key": "name",
+          "fields": [
+            "target"
+          ],
+          "as": [
+            "tgtConfig"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.srcConfig.order",
+          "as": "srcOrder"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.tgtConfig.order",
+          "as": "tgtOrder"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.srcConfig.depth",
+          "as": "srcDepth"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.tgtConfig.depth",
+          "as": "tgtDepth"
+        }
+      ]
+    },
+    {
+      "name": "outTotals",
+      "source": "linksWithOrder",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "source"
+          ],
+          "fields": [
+            "value"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "totalOut"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "inTotals",
+      "source": "linksWithOrder",
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": [
+            "target"
+          ],
+          "fields": [
+            "value"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "totalIn"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "nodePositions",
+      "source": "nodeConfig",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "outTotals",
+          "key": "source",
+          "fields": [
+            "name"
+          ],
+          "as": [
+            "outInfo"
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "inTotals",
+          "key": "target",
+          "fields": [
+            "name"
+          ],
+          "as": [
+            "inInfo"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.outInfo ? datum.outInfo.totalOut : 0",
+          "as": "totalOut"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.inInfo ? datum.inInfo.totalIn : 0",
+          "as": "totalIn"
+        },
+        {
+          "type": "formula",
+          "expr": "max(datum.totalOut, datum.totalIn)",
+          "as": "total"
+        },
+        {
+          "type": "filter",
+          "expr": "datum.total > 0"
+        },
+        {
+          "type": "stack",
+          "groupby": [
+            "depth"
+          ],
+          "sort": {
+            "field": "order",
+            "order": "ascending"
+          },
+          "field": "total"
+        },
+        {
+          "type": "window",
+          "groupby": [
+            "depth"
+          ],
+          "sort": {
+            "field": "order",
+            "order": "ascending"
+          },
+          "ops": [
+            "row_number"
+          ],
+          "as": [
+            "rankInDepth"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.y0 + (datum.rankInDepth - 1) * nodeGap",
+          "as": "y0g"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.y1 + (datum.rankInDepth - 1) * nodeGap",
+          "as": "y1g"
+        }
+      ]
+    },
+    {
+      "name": "sourceStacked",
+      "source": "linksWithOrder",
+      "transform": [
+        {
+          "type": "window",
+          "groupby": [
+            "source"
+          ],
+          "sort": {
+            "field": "tgtOrder",
+            "order": "ascending"
+          },
+          "ops": [
+            "sum"
+          ],
+          "fields": [
+            "value"
+          ],
+          "frame": [
+            null,
+            0
+          ],
+          "as": [
+            "srcCumEnd"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.srcCumEnd - datum.value",
+          "as": "srcCumStart"
+        }
+      ]
+    },
+    {
+      "name": "targetStacked",
+      "source": "linksWithOrder",
+      "transform": [
+        {
+          "type": "window",
+          "groupby": [
+            "target"
+          ],
+          "sort": {
+            "field": "srcOrder",
+            "order": "ascending"
+          },
+          "ops": [
+            "sum"
+          ],
+          "fields": [
+            "value"
+          ],
+          "frame": [
+            null,
+            0
+          ],
+          "as": [
+            "tgtCumEnd"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.tgtCumEnd - datum.value",
+          "as": "tgtCumStart"
+        }
+      ]
+    },
+    {
+      "name": "edges",
+      "source": "sourceStacked",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "targetStacked",
+          "key": "linkId",
+          "fields": [
+            "linkId"
+          ],
+          "as": [
+            "tgtInfo"
+          ]
+        },
+        {
+          "type": "formula",
+          "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumStart : 0",
+          "as": "tgtCumStart"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.tgtInfo ? datum.tgtInfo.tgtCumEnd : datum.value",
+          "as": "tgtCumEnd"
+        },
+        {
+          "type": "lookup",
+          "from": "nodePositions",
+          "key": "name",
+          "fields": [
+            "source"
+          ],
+          "as": [
+            "srcNode"
+          ]
+        },
+        {
+          "type": "lookup",
+          "from": "nodePositions",
+          "key": "name",
+          "fields": [
+            "target"
+          ],
+          "as": [
+            "tgtNode"
+          ]
+        },
+        {
+          "type": "filter",
+          "expr": "datum.srcNode && datum.tgtNode"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.srcNode.y0g + datum.srcCumStart",
+          "as": "absSy0"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.srcNode.y0g + datum.srcCumEnd",
+          "as": "absSy1"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.tgtNode.y0g + datum.tgtCumStart",
+          "as": "absTy0"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.tgtNode.y0g + datum.tgtCumEnd",
+          "as": "absTy1"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.srcNode.total > 0 ? datum.value / datum.srcNode.total : 0",
+          "as": "srcPct"
+        },
+        {
+          "type": "formula",
+          "expr": "datum.tgtNode.total > 0 ? datum.value / datum.tgtNode.total : 0",
+          "as": "tgtPct"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "point",
+      "range": "width",
+      "domain": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "padding": 0.5
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "range": [
+        0,
+        {
+          "signal": "height"
+        }
+      ],
+      "domain": {
+        "data": "nodePositions",
+        "field": "y1g"
+      }
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {
+        "data": "nodeConfig",
+        "field": "name"
+      },
+      "range": [
+        "#003F5C",
+        "#2F4B7C",
+        "#665191",
+        "#A05195",
+        "#1A535C",
+        "#4ECDC4",
+        "#FF6B6B",
+        "#FFE66D",
+        "#95E1D3",
+        "#0B3954",
+        "#087E8B",
+        "#BFD7EA",
+        "#FF5A5F",
+        "#C81D25",
+        "#3C6E71",
+        "#284B63",
+        "#D9D9D9",
+        "#353535",
+        "#FFDDD2",
+        "#1D3557",
+        "#457B9D",
+        "#A8DADC",
+        "#F1FAEE",
+        "#E63946",
+        "#264653",
+        "#2A9D8F",
+        "#E9C46A",
+        "#F4A261",
+        "#E76F51",
+        "#6A0572",
+        "#AB83A1",
+        "#118AB2",
+        "#073B4C",
+        "#073B4C",
+        "#118AB2",
+        "#06D6A0",
+        "#FFD166",
+        "#EF476F",
+        "#F78C6B"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "name": "edgeMark",
+      "from": {
+        "data": "edges"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "signal": "'M' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy0) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy0) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy0) + ' ' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy0) + ' L' + scale('x', datum.tgtDepth) + ',' + scale('y', datum.absTy1) + ' C' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absTy1) + ' ' + ((scale('x', datum.srcDepth) + nodeWidth + scale('x', datum.tgtDepth)) / 2) + ',' + scale('y', datum.absSy1) + ' ' + (scale('x', datum.srcDepth) + nodeWidth) + ',' + scale('y', datum.absSy1) + ' Z'"
+          },
+          "fill": {
+            "scale": "color",
+            "field": "source"
+          },
+          "fillOpacity": {
+            "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.65 : 0.04) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.65 : 0.08) : edgeHover === datum.linkId ? 0.75 : 0.35"
+          },
+          "stroke": {
+            "scale": "color",
+            "field": "source"
+          },
+          "strokeWidth": {
+            "value": 0.5
+          },
+          "strokeOpacity": {
+            "signal": "selectedNode ? (datum.source === selectedNode || datum.target === selectedNode ? 0.4 : 0) : nodeHover ? (datum.source === nodeHover || datum.target === nodeHover ? 0.4 : 0) : edgeHover === datum.linkId ? 0.5 : 0.1"
+          },
+          "tooltip": {
+            "signal": "datum.source + ' → ' + datum.target + ': $' + format(datum.value, ',d') + 'B (' + format(datum.srcPct, '.0%') + ' of ' + datum.source + ')'"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        },
+        "hover": {
+          "fillOpacity": {
+            "value": 0.8
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "name": "nodeRect",
+      "from": {
+        "data": "nodePositions"
+      },
+      "encode": {
+        "enter": {
+          "width": {
+            "signal": "nodeWidth"
+          },
+          "cornerRadius": {
+            "value": 2
+          }
+        },
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "depth"
+          },
+          "y": {
+            "scale": "y",
+            "field": "y0g"
+          },
+          "y2": {
+            "scale": "y",
+            "field": "y1g"
+          },
+          "fill": {
+            "scale": "color",
+            "field": "name"
+          },
+          "stroke": {
+            "value": "#333"
+          },
+          "strokeWidth": {
+            "signal": "selectedNode === datum.name || nodeHover === datum.name ? 2 : 0.5"
+          },
+          "fillOpacity": {
+            "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : nodeHover === datum.name ? 1 : 0.85"
+          },
+          "tooltip": {
+            "signal": "datum.name + ': $' + format(datum.total, ',d') + 'B'"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "nodePositions"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+          },
+          "y": {
+            "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2"
+          },
+          "align": {
+            "signal": "datum.depth === 0 ? 'right' : 'left'"
+          },
+          "text": {
+            "field": "name"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#333"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "opacity": {
+            "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "nodePositions"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.depth === 0 ? scale('x', datum.depth) - 6 : scale('x', datum.depth) + nodeWidth + 6"
+          },
+          "y": {
+            "signal": "(scale('y', datum.y0g) + scale('y', datum.y1g)) / 2 + 12"
+          },
+          "align": {
+            "signal": "datum.depth === 0 ? 'right' : 'left'"
+          },
+          "text": {
+            "signal": "abs(scale('y', datum.y0g) - scale('y', datum.y1g)) > 18 ? '$' + format(datum.total, ',d') + 'B' : ''"
+          },
+          "fontSize": {
+            "value": 9
+          },
+          "fill": {
+            "value": "#888"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "opacity": {
+            "signal": "selectedNode ? (datum.name === selectedNode ? 1 : 0.25) : 1"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "depthLabelsData"
+      },
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "scale('x', datum.depth) + nodeWidth / 2"
+          },
+          "y": {
+            "signal": "height + 25"
+          },
+          "text": {
+            "field": "label"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#555"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "align": {
+            "value": "center"
+          }
+        }
+      }
+    },
+    {
+      "type": "group",
+      "data": [
+        {
+          "name": "showResetData",
+          "values": [
+            {}
+          ],
+          "transform": [
+            {
+              "type": "filter",
+              "expr": "selectedNode"
+            }
+          ]
+        }
+      ],
+      "encode": {
+        "enter": {
+          "xc": {
+            "signal": "width / 2"
+          },
+          "y": {
+            "value": -35
+          },
+          "width": {
+            "value": 100
+          },
+          "height": {
+            "value": 26
+          }
+        }
+      },
+      "marks": [
+        {
+          "type": "group",
+          "name": "resetBtn",
+          "from": {
+            "data": "showResetData"
+          },
+          "encode": {
+            "enter": {
+              "cornerRadius": {
+                "value": 5
+              },
+              "fill": {
+                "value": "#f5f5f5"
+              },
+              "stroke": {
+                "value": "#bbb"
+              },
+              "strokeWidth": {
+                "value": 1.5
+              },
+              "height": {
+                "field": {
+                  "group": "height"
+                }
+              },
+              "width": {
+                "field": {
+                  "group": "width"
+                }
+              },
+              "cursor": {
+                "value": "pointer"
+              }
+            },
+            "update": {
+              "opacity": {
+                "value": 1
+              }
+            },
+            "hover": {
+              "opacity": {
+                "value": 0.7
+              }
+            }
+          },
+          "marks": [
+            {
+              "type": "text",
+              "interactive": false,
+              "encode": {
+                "enter": {
+                  "xc": {
+                    "field": {
+                      "group": "width"
+                    },
+                    "mult": 0.5
+                  },
+                  "yc": {
+                    "field": {
+                      "group": "height"
+                    },
+                    "mult": 0.5,
+                    "offset": 1
+                  },
+                  "align": {
+                    "value": "center"
+                  },
+                  "baseline": {
+                    "value": "middle"
+                  },
+                  "fontWeight": {
+                    "value": "bold"
+                  },
+                  "fontSize": {
+                    "value": 11
+                  },
+                  "text": {
+                    "value": "Show All"
+                  },
+                  "fill": {
+                    "value": "#555"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "title": {
+    "text": "Sankey Government Fiscal Budget: Revenue → Ministry → Programs → Contractors → Expense ($B)",
+    "subtitle": "Hover to trace funds  |  Click to isolate  |  $3T budget; Transport = largest bond-funded sector (47%)",
+    "fontSize": 16,
+    "subtitleFontSize": 11,
+    "subtitleColor": "#999",
+    "anchor": "start"
+  }
+}

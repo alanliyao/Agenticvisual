@@ -1,0 +1,59 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "description": "Monthly revenue by product line (USD, thousands)",
+    "data": {
+      "values": [
+        {"month": "2023-01", "product": "A", "revenue": 120},
+        {"month": "2023-02", "product": "A", "revenue": 135},
+        {"month": "2023-03", "product": "A", "revenue": 142},
+        {"month": "2023-04", "product": "A", "revenue": 150},
+        {"month": "2023-05", "product": "A", "revenue": 165},
+        {"month": "2023-06", "product": "A", "revenue": 172},
+        {"month": "2023-07", "product": "A", "revenue": 180},
+        {"month": "2023-08", "product": "A", "revenue": 176},
+        {"month": "2023-09", "product": "A", "revenue": 182},
+        {"month": "2023-10", "product": "A", "revenue": 190},
+        {"month": "2023-11", "product": "A", "revenue": 205},
+        {"month": "2023-12", "product": "A", "revenue": 215},
+  
+        {"month": "2023-01", "product": "B", "revenue": 95},
+        {"month": "2023-02", "product": "B", "revenue": 100},
+        {"month": "2023-03", "product": "B", "revenue": 110},
+        {"month": "2023-04", "product": "B", "revenue": 118},
+        {"month": "2023-05", "product": "B", "revenue": 122},
+        {"month": "2023-06", "product": "B", "revenue": 130},
+        {"month": "2023-07", "product": "B", "revenue": 138},
+        {"month": "2023-08", "product": "B", "revenue": 140},
+        {"month": "2023-09", "product": "B", "revenue": 145},
+        {"month": "2023-10", "product": "B", "revenue": 150},
+        {"month": "2023-11", "product": "B", "revenue": 158},
+        {"month": "2023-12", "product": "B", "revenue": 165},
+  
+        {"month": "2023-01", "product": "C", "revenue": 60},
+        {"month": "2023-02", "product": "C", "revenue": 65},
+        {"month": "2023-03", "product": "C", "revenue": 70},
+        {"month": "2023-04", "product": "C", "revenue": 75},
+        {"month": "2023-05", "product": "C", "revenue": 78},
+        {"month": "2023-06", "product": "C", "revenue": 82},
+        {"month": "2023-07", "product": "C", "revenue": 88},
+        {"month": "2023-08", "product": "C", "revenue": 90},
+        {"month": "2023-09", "product": "C", "revenue": 92},
+        {"month": "2023-10", "product": "C", "revenue": 96},
+        {"month": "2023-11", "product": "C", "revenue": 100},
+        {"month": "2023-12", "product": "C", "revenue": 105}
+      ]
+    },
+    "mark": {"type": "line", "point": true},
+    "encoding": {
+      "x": {"field": "month", "type": "ordinal", "title": "Month", "sort": null},
+      "y": {"field": "revenue", "type": "quantitative", "title": "Revenue (K USD)"},
+      "color": {"field": "product", "type": "nominal", "title": "Product"},
+      "tooltip": [
+        {"field": "month", "type": "ordinal", "title": "Month"},
+        {"field": "product", "type": "nominal", "title": "Product"},
+        {"field": "revenue", "type": "quantitative", "title": "Revenue (K USD)"}
+      ]
+    },
+    "width": 700,
+    "height": 400
+  }

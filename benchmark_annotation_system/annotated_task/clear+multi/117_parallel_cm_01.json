@@ -1,0 +1,94 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "117_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/117_startup_funding_dataset_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "At the seed stage, do companies have the ability to raise a larger amount of funds or is it different during the IPO stage?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "IPO",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "get the data of seed period company"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "get the data of IPO period company"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Funding Stage",
+                  "values": [
+                    "Series B",
+                    "IPO",
+                    "Series C",
+                    "Series A"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Funding Stage",
+                  "values": [
+                    "Series B",
+                    "Series C",
+                    "Series A",
+                    "Seed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Series B\",\"Series C\",\"Series A\",\"Seed\"], datum['Funding Stage']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

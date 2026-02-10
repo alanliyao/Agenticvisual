@@ -1,0 +1,91 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "34_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/34_bmw_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "What are the core characteristics of the cluster with the lowest price values in the scatter plot?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The cluster with the lowest price values is dominated by 1 Series and 3 Series models, which together account for more than half of the vehicles in the cluster. The average price of this cluster is 14223.28. Its average mpg is 60.04, ranging from 22.8 to 141.2, and the average engine size is 1.9962. Most vehicles in this cluster use diesel as fuel. Manual is the most common transmission type, followed by Automatic and Semi-Auto."
+        },
+        "key_insights": [
+          "The scatter plot is divided into three distinct color coded clusters blue orange and green.",
+          "The blue cluster is concentrated in the lowest price range compared to the other two clusters.",
+          "Points in the blue cluster mostly align with smaller engine size values on the axis.",
+          "Zooming into the blue cluster confirms it covers the price range from 2000 to 21300.",
+          "The cluster has a dense concentration of points around 50 to 70 mpg.",
+          "A small number of points in this cluster have mpg values above 100.",
+          "Most points in the zoomed view correspond to small engine sizes.",
+          "1 Series and 3 Series are the two most common models in the cluster, with 148 and 135 instances respectively.",
+          "The cluster’s mpg has a mean of 60.04, a median of 59.5, and a range from 22.8 to 141.2.",
+          "The average engine size is 1.9962, with a median of 2, and most vehicles have engine sizes of 2 or smaller.",
+          "Diesel is the dominant fuel type with 361 instances, and Manual is the most prevalent transmission type."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "identify_clusters",
+            "reasoning": "The identify_clusters tool with kmeans method and three clusters was selected to segment the data into meaningful groups based on price and related variables This step is necessary to locate the cluster with the lowest price values The operation successfully created clear separation between price based clusters which aligns with the goal of analyzing the low price group No need to reset."
+          },
+          {
+            "iteration": 2,
+            "tool": "select_region",
+            "reasoning": "Selecting the blue cluster narrows the view to only the low-price vehicles, eliminating interference from other clusters. This allows for targeted analysis of the group’s characteristics. The zoomed view reinforces the cluster’s distinct price range and mpg distribution, supporting the next step of retrieving detailed data. No need to reset."
+          },
+          {
+            "iteration": 3,
+            "tool": "get_data_summary",
+            "reasoning": "The get_data_summary tool with specified fields was used to extract updated quantitative and categorical information about the visible low-price cluster. This step provides revised concrete data, including adjusted model counts, transmission distribution, and numeric averages, to accurately describe the cluster’s core characteristics. The retrieved summary fully addresses the question’s focus on the low-price cluster’s features. Reset is recommended to return to the full view for any future analyses."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "numeric",
+                "param": "n_clusters",
+                "target": 3,
+                "tolerance": 0.1
+              }
+            },
+            {
+              "tool": "select_region",
+              "param_eval": {
+                "type": "list",
+                "param": "x_range",
+                "target": [
+                  1600.0005086263022,
+                  20444.444274902344
+                ]
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "categorical",
+                "param": "scope",
+                "target": "visible"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "price",
+            "y": "mpg",
+            "color": "cluster_3"
+          }
+        }
+      }
+    }
+  ]
+}

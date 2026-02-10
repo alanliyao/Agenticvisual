@@ -1,0 +1,69 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "08_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/08_heatmap_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "How many hours is the difference between the group that sleeps the least and the group that sleeps the most?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "0.35",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "find_extremes",
+            "reasoning": "get the max of sleep_hour is 7.21"
+          },
+          {
+            "iteration": 2,
+            "tool": "find_extremes",
+            "reasoning": "get the min of sleep_hours is 6.86. so the answer is 0.35"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 1,
+                  "mode": "max"
+                }
+              }
+            },
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 1,
+                  "mode": "min"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "weather",
+            "color": "sleep_hours"
+          }
+        }
+      }
+    }
+  ]
+}

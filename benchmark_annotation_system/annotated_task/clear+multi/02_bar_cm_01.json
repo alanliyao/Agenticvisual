@@ -1,0 +1,77 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "02_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/02_bar_sales.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which region has the higher total sales: West or South?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "South.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Filtering out the East and North regions removes high-performing outliers and excessive visual clutter, allowing full focus on the direct comparison between West and South.",
+          "The new stacked view reveals that the total sales of South and West regions are nearly identical, with South slightly exceeding West.",
+          "In the South region, Electronics and Clothing contribute roughly equally to total sales. In contrast, Electronics dominates the West region's sales, accounting for over half of its total.",
+          "he reorganized stacked layout makes it easier to spot that the West region relies more heavily on Electronics, while the South has a more balanced product mix.",
+          "The stacked presentation eliminates the need for manual addition, allowing for a direct visual comparison of both total sales and product-level contributions at a glance."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Filtering out the East and North regions focuses the analysis on comparing the West and South, reduces visual clutter, and improves the accuracy and efficiency of the comparison."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Changing the stack mode is a targeted action to transform how data is visually encoded. The original side-by-side bars required manual calculation to compare totals, but stacking combines the values into a single bar per region. This simplifies both the total sales comparison and the analysis of product contribution ratios. The goal was to quickly identify whether one region’s total was higher and to understand the product-level drivers behind that difference, which the stacked view achieves immediately. No further tools are needed as the key comparisons are now visually self-evident."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "list",
+                "param": "categories",
+                "target": [
+                  "East",
+                  "North"
+                ]
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "stacked"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "region",
+            "y": "sales",
+            "color": "product"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"East\",\"North\"], datum['region']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

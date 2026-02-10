@@ -1,0 +1,530 @@
+[
+  {
+    "task_type": "clear_single",
+    "question_id": "cs_01",
+    "scores": {
+      "answer": 1.0,
+      "tool": 0.5,
+      "state": 1.0,
+      "total": 0.8400000000000001
+    },
+    "details": {
+      "answer": {
+        "score": 1.0,
+        "matched": true,
+        "details": {
+          "predicted": "Negative",
+          "target": "Negative.",
+          "alternatives": [],
+          "normalized_predicted": "negative",
+          "match_method": "bertscore",
+          "bertscore": 0.9451379776000977,
+          "bertscore_matched_with": "negative.",
+          "bertscore_threshold": 0.8
+        }
+      },
+      "tool": {
+        "tool_match_score": 1.0,
+        "param_score": 0.0,
+        "total_score": 0.5,
+        "details": {
+          "expected_tools": [
+            "show_regression"
+          ],
+          "called_tools": [
+            "show_regression"
+          ],
+          "tool_matched": true,
+          "param_eval": [
+            {
+              "type": "categorical",
+              "param": null,
+              "called": "linear",
+              "target": null,
+              "alternatives": [],
+              "matched": false
+            }
+          ]
+        }
+      },
+      "state": {
+        "score": 1.0,
+        "passed": true,
+        "details": {
+          "components": {
+            "encoding": {
+              "color_field": {
+                "actual": null,
+                "expected": null,
+                "matched": true
+              },
+              "x_field": {
+                "actual": null,
+                "expected": null,
+                "matched": true
+              },
+              "y_field": {
+                "actual": null,
+                "expected": null,
+                "matched": true
+              }
+            },
+            "layers": {
+              "layer_count": {
+                "expected": 2,
+                "actual": 2,
+                "matched": true
+              }
+            }
+          },
+          "component_scores": [
+            1.0,
+            1.0
+          ],
+          "actual_state": {
+            "resolve_scale": {},
+            "transforms": [],
+            "has_filter": false,
+            "filter_conditions": [],
+            "time_unit_transforms": [],
+            "aggregate_transforms": [],
+            "layer_count": 2,
+            "has_layer": true,
+            "layer_marks": [
+              "point",
+              "line"
+            ],
+            "layer_details": [
+              {
+                "type": "point",
+                "color": "",
+                "point": false
+              },
+              {
+                "type": "line",
+                "color": "red",
+                "point": false
+              }
+            ],
+            "params": [],
+            "has_selection": false,
+            "selection_names": [],
+            "data_count": 0,
+            "mark_type": "",
+            "mark_config": {},
+            "encoding_fields": [],
+            "encoding_field_count": 0
+          }
+        }
+      }
+    },
+    "eval_weights": {
+      "tool_call": 0.8,
+      "final_state": 0.2
+    },
+    "question_idx": 0,
+    "qid": "cs_01"
+  },
+  {
+    "task_type": "clear_multi",
+    "question_id": "cm_02",
+    "scores": {
+      "answer": 1.0,
+      "tool": 0.0,
+      "state": 1.0,
+      "total": 0.72
+    },
+    "details": {
+      "answer": {
+        "score": 1.0,
+        "matched": true,
+        "details": {
+          "predicted": "Cannot determine yet - need to calculate correlation coefficient",
+          "target": "Yes.",
+          "alternatives": [],
+          "normalized_predicted": "cannot determine yet - need to calculate correlation coefficient",
+          "match_method": "bertscore",
+          "bertscore": 0.8673295378684998,
+          "bertscore_matched_with": "yes.",
+          "bertscore_threshold": 0.8
+        }
+      },
+      "tool": {
+        "tool_match_score": 0.0,
+        "param_score": 0.0,
+        "total_score": 0.0,
+        "details": {
+          "expected_tools": [
+            "filter_categorical",
+            "calculate_correlation"
+          ],
+          "called_tools": [
+            "filter_categorical"
+          ],
+          "tool_matched": false,
+          "param_eval": [
+            {
+              "type": "categorical",
+              "param": null,
+              "called": "",
+              "target": null,
+              "alternatives": [],
+              "matched": false
+            },
+            {
+              "note": "tool not called"
+            }
+          ]
+        }
+      },
+      "state": {
+        "score": 1.0,
+        "passed": true,
+        "details": {
+          "components": {
+            "encoding": {
+              "color_field": {
+                "actual": "transmission",
+                "expected": "transmission",
+                "matched": true
+              },
+              "x_field": {
+                "actual": "price",
+                "expected": "price",
+                "matched": true
+              },
+              "y_field": {
+                "actual": "mpg",
+                "expected": "mpg",
+                "matched": true
+              }
+            }
+          },
+          "component_scores": [
+            1.0
+          ],
+          "actual_state": {
+            "color_field": "transmission",
+            "size_field": "engineSize",
+            "x_field": "price",
+            "y_field": "mpg",
+            "resolve_scale": {},
+            "transforms": [
+              {
+                "filter": "indexof([\"Automatic\", \"Semi-Auto\"], datum['transmission']) < 0"
+              }
+            ],
+            "has_filter": true,
+            "filter_conditions": [
+              "indexof([\"Automatic\", \"Semi-Auto\"], datum['transmission']) < 0"
+            ],
+            "time_unit_transforms": [],
+            "aggregate_transforms": [],
+            "layer_count": 0,
+            "has_layer": false,
+            "layer_marks": [],
+            "layer_details": [],
+            "params": [],
+            "has_selection": false,
+            "selection_names": [],
+            "data_count": 0,
+            "mark_type": "point",
+            "mark_config": {
+              "type": "point",
+              "filled": true,
+              "opacity": 0.7
+            },
+            "encoding_fields": [
+              "price",
+              "mpg",
+              "transmission",
+              "engineSize"
+            ],
+            "encoding_field_count": 4
+          }
+        }
+      }
+    },
+    "eval_weights": {
+      "tool_call": 0.7,
+      "final_state": 0.3
+    },
+    "question_idx": 1,
+    "qid": "cm_02"
+  },
+  {
+    "task_type": "vague_single",
+    "question_id": "vs_01",
+    "scores": {
+      "answer": 0.9333333333333333,
+      "tool": 0.5,
+      "state": 1.0,
+      "total": 0.8916666666666666
+    },
+    "details": {
+      "answer": {
+        "insight_score": 0.9333333333333333,
+        "reasoning_score": 0.9333333333333333,
+        "total_score": 0.9333333333333333,
+        "insight_details": {
+          "groundedness": 5,
+          "depth": 4,
+          "clarity": 5,
+          "average_score": 0.9333333333333333,
+          "details": {
+            "explanation": "The agent captures the core GT point that the expensive-car cluster is distinct and tied to lower fuel efficiency, explicitly noting Cluster 2 is most expensive and has significantly lower mpg. However, it does not clearly describe the GT’s additional nuance that the other clusters span a wider range of efficiencies at lower prices. The insights are data-supported (e.g., average price $52,806, mpg 38.5, count 743) and provide some interpretation (inverse relationship), and they are stated clearly and unambiguously.",
+            "is_fully_subjective": true
+          }
+        },
+        "reasoning_rounds": 1
+      },
+      "tool": {
+        "tool_match_score": 1.0,
+        "param_score": 0.0,
+        "total_score": 0.5,
+        "details": {
+          "expected_tools": [
+            "identify_clusters"
+          ],
+          "called_tools": [
+            "identify_clusters"
+          ],
+          "tool_matched": true,
+          "param_eval": [
+            {
+              "type": "categorical",
+              "param": null,
+              "called": "kmeans",
+              "target": null,
+              "alternatives": [],
+              "matched": false
+            }
+          ]
+        }
+      },
+      "state": {
+        "score": 1.0,
+        "passed": true,
+        "details": {
+          "components": {
+            "encoding": {
+              "color_field": {
+                "actual": "cluster_3",
+                "expected": "cluster_3",
+                "matched": true
+              },
+              "x_field": {
+                "actual": "price",
+                "expected": "price",
+                "matched": true
+              },
+              "y_field": {
+                "actual": "mpg",
+                "expected": "mpg",
+                "matched": true
+              }
+            }
+          },
+          "component_scores": [
+            1.0
+          ],
+          "actual_state": {
+            "color_field": "cluster_3",
+            "size_field": "engineSize",
+            "x_field": "price",
+            "y_field": "mpg",
+            "resolve_scale": {},
+            "transforms": [],
+            "has_filter": false,
+            "filter_conditions": [],
+            "time_unit_transforms": [],
+            "aggregate_transforms": [],
+            "layer_count": 0,
+            "has_layer": false,
+            "layer_marks": [],
+            "layer_details": [],
+            "params": [],
+            "has_selection": false,
+            "selection_names": [],
+            "data_count": 0,
+            "mark_type": "point",
+            "mark_config": {
+              "type": "point",
+              "filled": true,
+              "opacity": 0.7
+            },
+            "encoding_fields": [
+              "price",
+              "mpg",
+              "cluster_3",
+              "engineSize"
+            ],
+            "encoding_field_count": 4
+          }
+        }
+      }
+    },
+    "eval_weights": {
+      "tool_call": 0.3,
+      "final_state": 0.7
+    },
+    "question_idx": 2,
+    "qid": "vs_01"
+  },
+  {
+    "task_type": "vague_multi",
+    "question_id": "vm_02",
+    "scores": {
+      "answer": 0.7866666666666666,
+      "tool": 0.0,
+      "state": 0.8122221191724142,
+      "total": 0.7182221810022991
+    },
+    "details": {
+      "answer": {
+        "insight_score": 0.7333333333333333,
+        "reasoning_score": 0.8666666666666666,
+        "total_score": 0.7866666666666666,
+        "insight_details": {
+          "groundedness": 5,
+          "depth": 2,
+          "clarity": 4,
+          "average_score": 0.7333333333333333,
+          "details": {
+            "explanation": "The ground truth emphasizes a clear stratification by fuel technology (Petrol <50 mpg, Diesel 50–75 mpg, Hybrids >80 mpg). The agent’s insights instead discuss market share of a “mass market segment” and transmission-type distributions, with no mention of fuel types or the stated mpg tiering—so it covers essentially none of the required GT content (1/5). Depth is limited: only one concrete figure (90.8%) is provided, while the rest is qualitative and not tied to the GT dimensions (2/5). The statements are generally easy to understand and internally coherent, with minor ambiguity around what defines the “mass market segment” (4/5).",
+            "is_fully_subjective": true
+          }
+        },
+        "reasoning_rounds": 1
+      },
+      "tool": {
+        "tool_match_score": 0.0,
+        "param_score": 0.0,
+        "total_score": 0.0,
+        "details": {
+          "expected_tools": [
+            "zoom_dense_area",
+            "change_encoding"
+          ],
+          "called_tools": [
+            "zoom_dense_area"
+          ],
+          "tool_matched": false,
+          "param_eval": [
+            {
+              "type": "categorical",
+              "param": null,
+              "called": "",
+              "target": null,
+              "alternatives": [],
+              "matched": false
+            },
+            {
+              "note": "tool not called"
+            }
+          ]
+        }
+      },
+      "state": {
+        "score": 0.8122221191724142,
+        "passed": true,
+        "details": {
+          "components": {
+            "visible_domain": {
+              "x_domain": {
+                "actual": [
+                  0.0,
+                  40000.0
+                ],
+                "expected": [
+                  577.7780532836914,
+                  39866.67079925537
+                ],
+                "iou": 0.982222318649292
+              },
+              "y_domain": {
+                "actual": [
+                  0.0,
+                  100.0
+                ],
+                "expected": [
+                  3.7499999999999756,
+                  97.08328247070314
+                ],
+                "iou": 0.9333328247070317
+              }
+            },
+            "encoding": {
+              "color_field": {
+                "actual": "transmission",
+                "expected": "fuelType",
+                "matched": false
+              },
+              "x_field": {
+                "actual": "price",
+                "expected": "price",
+                "matched": true
+              },
+              "y_field": {
+                "actual": "mpg",
+                "expected": "mpg",
+                "matched": true
+              }
+            }
+          },
+          "component_scores": [
+            0.9577775716781618,
+            0.6666666666666666
+          ],
+          "actual_state": {
+            "x_domain": [
+              0.0,
+              40000.0
+            ],
+            "y_domain": [
+              0.0,
+              100.0
+            ],
+            "color_field": "transmission",
+            "size_field": "engineSize",
+            "x_field": "price",
+            "y_field": "mpg",
+            "resolve_scale": {},
+            "transforms": [],
+            "has_filter": false,
+            "filter_conditions": [],
+            "time_unit_transforms": [],
+            "aggregate_transforms": [],
+            "layer_count": 0,
+            "has_layer": false,
+            "layer_marks": [],
+            "layer_details": [],
+            "params": [],
+            "has_selection": false,
+            "selection_names": [],
+            "data_count": 0,
+            "mark_type": "point",
+            "mark_config": {
+              "type": "point",
+              "filled": true,
+              "opacity": 0.7
+            },
+            "encoding_fields": [
+              "price",
+              "mpg",
+              "transmission",
+              "engineSize"
+            ],
+            "encoding_field_count": 4
+          }
+        }
+      }
+    },
+    "eval_weights": {
+      "tool_call": 0.2,
+      "final_state": 0.8
+    },
+    "question_idx": 3,
+    "qid": "vm_02"
+  }
+]

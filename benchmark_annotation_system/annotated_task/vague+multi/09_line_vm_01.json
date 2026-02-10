@@ -1,0 +1,73 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "09_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/09_museum_visitors_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What are the similarities and differences between the monthly, quarterly, and annual trends in the number of America Tropical Interpretive Center Visitor?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The period from 2014 to 2015 was a growth phase, with visitor numbers peaking in 2015.\nAn overall downward trend emerged after 2015, with a particularly sharp decline between 2017 and 2018.\nAll three scales show a peak in 2015, a secondary peak in 2016, and then a sustained decline, indicating that the cyclical changes in visitor numbers are synchronized across different time granularities."
+        },
+        "key_insights": [
+          "Both graphs show an overall downward trend from 2017 to 2018 after a growth period from 2014 to 2016.",
+          "Both graphs have obvious peaks in the middle of 2015 (2015 Q2-Q3) and the middle of 2016 (2016 Q3), indicating that the peaks in the number of tourists coincide on both time scales.",
+          "It further smooths out all short-term fluctuations, only showing changes in the annual total.",
+          "The overall line is the flattest, and only the long-term trend of \"peaking in 2015 and declining year by year thereafter\" can be observed."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "resample_time",
+            "reasoning": "Quarterly trend: The vertical axis represents the total number of tourists in a single quarter, ranging from 0 to 35,000. The values are the accumulation of daily data, so the magnitude is larger.These daily details are lost, but it shows more clearly the overall trend of tourist volume in the annual cycle."
+          },
+          {
+            "iteration": 2,
+            "tool": "resample_time",
+            "reasoning": "Suitable for grasping long-term strategic trends, such as judging the annual rise and fall of visitor numbers.The vertical axis represents the total annual number of visitors, ranging from 0 to 110,000. It is the accumulation of the full year's data and has the largest magnitude."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "granularity": "quarter",
+                  "agg": "sum"
+                }
+              }
+            },
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "granularity": "year",
+                  "agg": "sum"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Date",
+            "y": "America Tropical Interpretive Center",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

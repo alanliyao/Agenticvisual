@@ -1,0 +1,76 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "34_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/34_bmw_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "To analyze the price-MPG relationship among mainstream transmission types, first filter out the less common Semi-Auto category. Then, calculate the Pearson correlation coefficient on the remaining data. After filtering, what is the strength and direction of the correlation, and what is the approximate coefficient value?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The correlation is weak and negative. The Pearson correlation coefficient is approximately -0.209.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The Semi-Auto transmission data points have been successfully removed from the scatter plot. The legend now only shows Automatic and Manual types.",
+          "The view is simplified. The visual overlap and potential interference from the less common category are eliminated.",
+          "This operation defines a clearer subset of mainstream transmission data for subsequent analysis.",
+          "The calculated Pearson correlation coefficient is negative 0.209. This confirms a weak negative linear relationship between price and mpg within the filtered data.",
+          "The very low p value indicates this weak negative correlation is statistically significant."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "The filter operation achieved its goal. The view is now ready for calculating the correlation on the defined subset. No need to reset before proceeding to the next step."
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_correlation",
+            "reasoning": "The calculate correlation tool provided the definitive quantitative answer. The two-step process to examine the relationship in a purified dataset is complete. No need to reset."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "list",
+                "param": "categories_to_remove",
+                "target": [
+                  "Semi-Auto"
+                ]
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "price",
+            "y": "mpg",
+            "color": "transmission"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Semi-Auto\"], datum['transmission']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

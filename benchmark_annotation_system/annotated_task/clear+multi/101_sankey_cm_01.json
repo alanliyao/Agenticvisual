@@ -1,0 +1,82 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "101_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/101_sankey_credit.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What was the main migration trend of AAA Orig's loans over a period of 3 years?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The AAA rating is highly stable overall, and the majority of the loans maintain a high credit rating for three years.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Use tools to observe where the AAA Orig funds will go one year later."
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Use tools to observe where the AAA Y1 funds will go one year later."
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Use tools to observe where the AAA Y2 funds will go one year later."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "AAA Orig"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "AAA Y1"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "AAA Y2"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

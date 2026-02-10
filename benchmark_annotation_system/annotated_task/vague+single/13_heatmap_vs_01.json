@@ -1,0 +1,51 @@
+{
+  "task_type": "vague_single",
+  "task_id": "13_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/13_supply_chain_data_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Use \"adjust color scale\" to modify the color mapping of the heatmap in a way that better reflects our visual interpretation of the price distribution.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": null
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "adjust_color_scale",
+            "reasoning": "The adjust color scale tool allows you to subjectively change the color gradient, color range, or segmentation applied to the heatmap’s values. You might, for example, switch from a continuous gradient to a discrete three‑color scheme, shift the hue toward cooler or warmer tones, or adjust the breakpoints between colors. The outcome depends on your personal perception of clarity, emphasis, or visual appeal, and there is no objectively correct setting."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "adjust_color_scale",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scheme": "magma"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Product type",
+            "y": "Customer demographics",
+            "color": "Price"
+          }
+        }
+      }
+    }
+  ]
+}

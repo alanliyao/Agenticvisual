@@ -1,0 +1,72 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "28_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/28_silver_prices_data_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What are the similarities and differences between the daily, quarterly, and annual trends in silver prices?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The magnitude of daily peaks averages 3.2% above the weekly mean, while quarterly peaks average 18% above the annual mean, revealing that time scale compression amplifies relative deviation.Annual aggregation reveals a definitive regime change in 2020 where prices jumped from a stable 2,000-3,000 range to a new 9,000-11,000 plateau, representing a 300% permanent"
+        },
+        "key_insights": [
+          "A distinct quarterly cycle appears: Q1 trough, Q2 recovery, Q3 peak (industrial demand), Q4 decline (profit-taking), invisible in annual aggregation",
+          "The 2016-2019 baseline shows virtually no growth trend (2% annualized), establishing that pre-pandemic silver was in a decade-long consolidation phase",
+          "Post-2020 volatility measured annually drops to 15% compared to 45% quarterly, indicating the high volatility seen at finer resolutions is mostly short-term noise around a stable new equilibrium"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "resample_time",
+            "reasoning": "The quarterly view exposes that 2020's apparently uniform crisis actually had Q2 as the extreme outlier while Q3-Q4 returned to historical seasonal patterns, suggesting rapid market normalization"
+          },
+          {
+            "iteration": 2,
+            "tool": "resample_time",
+            "reasoning": "Resampling to annual view filters out geopolitical event noise and COVID-era trading panics to expose fundamental value shifts invisible at daily/quarterly scales."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "granularity": "quarter",
+                  "agg": "sum"
+                }
+              }
+            },
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "granularity": "year",
+                  "agg": "sum"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Date",
+            "y": "Close",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

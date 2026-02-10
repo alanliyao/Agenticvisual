@@ -1,0 +1,6124 @@
+{
+  "filename": "71_one_person_ai_work_and_burnout_parallel.json",
+  "spec_index": 69,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Parallel Coordinates Plot",
+    "width": 800,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5692963752665245
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.39872068230277186
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.48614072494669514
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.396588486140725
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.579957356076759
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.3880597014925373
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4264392324093817
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.8933901918976546
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.46055437100213226
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.21321961620469085
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7057569296375267
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.39232409381663114
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6332622601279317
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7057569296375267
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.15138592750533048
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.21748400852878463
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4200426439232409
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4690831556503198
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2345415778251599
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.582089552238806
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5607675906183369
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.8571428571428572
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5415778251599147
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5266524520255863
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.21535181236673773
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.513859275053305
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5842217484008528
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.1535181236673774
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7547974413646056
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5671641791044777
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.27505330490405117
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.279317697228145
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.33688699360341157
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.3603411513859275
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5245202558635395
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2260127931769723
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.255863539445629
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4456289978678038
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.55863539445629
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.031982942430703626
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5756929637526652
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.18123667377398722
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.36460554371002135
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.232409381663113
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4221748400852879
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.8294243070362474
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.26652452025586354
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5522388059701493
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4669509594882729
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.19189765458422176
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.48614072494669514
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.373134328358209
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4690831556503198
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.31982942430703626
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7121535181236673
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6140724946695096
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5159914712153518
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2068230277185501
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5181236673773988
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.08102345415778252
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.34968017057569295
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2537313432835821
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4200426439232409
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.513859275053305
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4754797441364606
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6140724946695096
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6417910447761195
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.1002132196162047
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.3795309168443497
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.26652452025586354
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5437100213219617
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2878464818763326
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7505330490405118
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7526652452025586
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.36247334754797444
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.582089552238806
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5437100213219617
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.43923240938166314
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6631130063965885
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.49253731343283585
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.30277185501066095
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.371002132196162
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.24520255863539447
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.17270788912579957
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.40298507462686567
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.41151385927505335
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6950959488272922
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5181236673773988
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6396588486140725
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.21321961620469085
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7292110874200427
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7611940298507464
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.12366737739872068
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.8230277185501067
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.44349680170575695
+        },
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7901234567901233
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5185185185185185
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.0987654320987654
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4320987654320986
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.38271604938271603
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.24691358024691354
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.11111111111111102
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7530864197530863
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.24691358024691354
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1728395061728394
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4320987654320986
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.40740740740740733
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6296296296296295
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5555555555555554
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.9506172839506172
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5308641975308641
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.20987654320987653
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.45679012345679004
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.45679012345679004
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3703703703703702
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7407407407407405
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1728395061728394
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.38271604938271603
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6049382716049381
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5432098765432097
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7530864197530863
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4320987654320986
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3703703703703702
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.22222222222222215
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.28395061728395055
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.20987654320987653
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3703703703703702
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.08641975308641976
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2592592592592592
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2345679012345678
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2345679012345678
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1728395061728394
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.28395061728395055
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5679012345679012
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.38271604938271603
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6419753086419753
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6049382716049381
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.48148148148148134
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5555555555555554
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.8024691358024689
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1975308641975308
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.49382716049382697
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.22222222222222215
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2592592592592592
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5802469135802468
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.35802469135802456
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4691358024691357
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.20987654320987653
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.18518518518518515
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.34567901234567894
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.41975308641975295
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.49382716049382697
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.41975308641975295
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.40740740740740733
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3703703703703702
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.18518518518518515
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.691358024691358
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.691358024691358
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.34567901234567894
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2345679012345678
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.48148148148148134
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1728395061728394
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.35802469135802456
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5555555555555554
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.35802469135802456
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5925925925925924
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6790123456790121
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.40740740740740733
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7407407407407405
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5432098765432097
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5061728395061729
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.48148148148148134
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6419753086419753
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.48148148148148134
+        },
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4952076677316295
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9329073482428113
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5367412140575081
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5175718849840255
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5399361022364217
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7859424920127793
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.48242811501597455
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.20447284345047936
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7220447284345048
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6389776357827475
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.43450479233226835
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.23322683706070296
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9456869009584665
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.46645367412140565
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.34504792332268364
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.680511182108626
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6964856230031949
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6645367412140574
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.875399361022364
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8019169329073482
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 1
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.571884984025559
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8242811501597442
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4025559105431311
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7284345047923322
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5207667731629392
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7220447284345048
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6261980830670925
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9233226837060703
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.34185303514376997
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6485623003194887
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8466453674121405
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.792332268370607
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.936102236421725
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5335463258785941
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7028753993610223
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6134185303514376
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.40894568690095845
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.571884984025559
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.47603833865814693
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.39297124600638983
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5974440894568689
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.1916932907348244
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5015974440894568
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.463258785942492
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.41853035143769973
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.437699680511182
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.3482428115015973
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.49840255591054317
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4952076677316295
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8274760383386579
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6166134185303515
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4888178913738019
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8785942492012777
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8562300319488815
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7348242811501597
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8338658146964852
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9776357827476038
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.3801916932907349
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7476038338658144
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4121405750798721
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4472843450479233
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8306709265175716
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5974440894568689
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7284345047923322
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4057507987220448
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.3642172523961662
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5942492012779552
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.65814696485623
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7667731629392971
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.65814696485623
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6645367412140574
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6134185303514376
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.33546325878594263
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9233226837060703
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5367412140575081
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9297124600638976
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.49840255591054317
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5910543130990416
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.41533546325878606
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7539936102236421
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5335463258785941
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5239616613418531
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.3322683706070287
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6134185303514376
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5207667731629392
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8083067092651756
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5974440894568689
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8338658146964852
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5239616613418531
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9073482428115013
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6741214057507987
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4952076677316295
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5814696485623002
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.926517571884984
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8274760383386579
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7859424920127793
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7252396166134185
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9073482428115013
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7476038338658144
+        }
+      ]
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "opacity": 0.5,
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "dimension",
+            "type": "nominal",
+            "sort": [
+              "AI_Tool_Usage_%",
+              "Hours_Coded",
+              "Code_Complexity_Score",
+              "Bugs_Introduced",
+              "Tasks_Completed"
+            ],
+            "axis": {
+              "title": null,
+              "labelAngle": 0
+            }
+          },
+          "y": {
+            "field": "normalized_value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Normalized Value"
+            }
+          },
+          "detail": {
+            "field": "_index",
+            "type": "nominal"
+          },
+          "color": {
+            "field": "Experience_Level",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Parallel Coordinates Plot",
+    "width": 800,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5692963752665245
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.39872068230277186
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.48614072494669514
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.396588486140725
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.579957356076759
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.3880597014925373
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4264392324093817
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.8933901918976546
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.46055437100213226
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.21321961620469085
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7057569296375267
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.39232409381663114
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6332622601279317
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7057569296375267
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.15138592750533048
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.21748400852878463
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4200426439232409
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4690831556503198
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2345415778251599
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.582089552238806
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5607675906183369
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.8571428571428572
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5415778251599147
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5266524520255863
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.21535181236673773
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.513859275053305
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5842217484008528
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.1535181236673774
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7547974413646056
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5671641791044777
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.27505330490405117
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.279317697228145
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.33688699360341157
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.3603411513859275
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5245202558635395
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2260127931769723
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.255863539445629
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4456289978678038
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.55863539445629
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.031982942430703626
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5756929637526652
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.18123667377398722
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.36460554371002135
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.232409381663113
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4221748400852879
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.8294243070362474
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.26652452025586354
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5522388059701493
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4669509594882729
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.19189765458422176
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.48614072494669514
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.373134328358209
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4690831556503198
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.31982942430703626
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7121535181236673
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6140724946695096
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5159914712153518
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2068230277185501
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5181236673773988
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.08102345415778252
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.34968017057569295
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2537313432835821
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4200426439232409
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.513859275053305
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.4754797441364606
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6140724946695096
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6417910447761195
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.1002132196162047
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.3795309168443497
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.26652452025586354
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5437100213219617
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.2878464818763326
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7505330490405118
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7526652452025586
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.36247334754797444
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.582089552238806
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5437100213219617
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.43923240938166314
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6631130063965885
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.49253731343283585
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.30277185501066095
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.371002132196162
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.24520255863539447
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.17270788912579957
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.40298507462686567
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.41151385927505335
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6950959488272922
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.5181236673773988
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.6396588486140725
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.21321961620469085
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7292110874200427
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.7611940298507464
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.12366737739872068
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.8230277185501067
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "AI_Tool_Usage_%",
+          "normalized_value": 0.44349680170575695
+        },
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7901234567901233
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5185185185185185
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.0987654320987654
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4320987654320986
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.38271604938271603
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.24691358024691354
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.11111111111111102
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7530864197530863
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.24691358024691354
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1728395061728394
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4320987654320986
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.40740740740740733
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6296296296296295
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5555555555555554
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.9506172839506172
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5308641975308641
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.20987654320987653
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.45679012345679004
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.45679012345679004
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3703703703703702
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7407407407407405
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1728395061728394
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.38271604938271603
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6049382716049381
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5432098765432097
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7530864197530863
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4320987654320986
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3703703703703702
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.22222222222222215
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.28395061728395055
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.20987654320987653
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3703703703703702
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.08641975308641976
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2592592592592592
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2345679012345678
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2345679012345678
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1728395061728394
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.28395061728395055
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5679012345679012
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.38271604938271603
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6419753086419753
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6049382716049381
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.48148148148148134
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5555555555555554
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.8024691358024689
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1975308641975308
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.49382716049382697
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.22222222222222215
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2592592592592592
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5802469135802468
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.35802469135802456
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.4691358024691357
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.20987654320987653
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.18518518518518515
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.34567901234567894
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.41975308641975295
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.49382716049382697
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.41975308641975295
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.40740740740740733
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3703703703703702
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.18518518518518515
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.691358024691358
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3086419753086419
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.691358024691358
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.34567901234567894
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2345679012345678
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.48148148148148134
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.1728395061728394
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.35802469135802456
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5555555555555554
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.35802469135802456
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5925925925925924
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.29629629629629617
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6790123456790121
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.40740740740740733
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.2716049382716049
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.7407407407407405
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5432098765432097
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.5061728395061729
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.48148148148148134
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.6419753086419753
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "Hours_Coded",
+          "normalized_value": 0.48148148148148134
+        },
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 1
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.5555555555555556
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.8888888888888888
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.7777777777777778
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.1111111111111111
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.2222222222222222
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.4444444444444444
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "Code_Complexity_Score",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.6
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.2
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.8
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "Bugs_Introduced",
+          "normalized_value": 0.4
+        },
+        {
+          "_index": 0,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4952076677316295
+        },
+        {
+          "_index": 1,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9329073482428113
+        },
+        {
+          "_index": 2,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5367412140575081
+        },
+        {
+          "_index": 4,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5175718849840255
+        },
+        {
+          "_index": 7,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5399361022364217
+        },
+        {
+          "_index": 9,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7859424920127793
+        },
+        {
+          "_index": 10,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.48242811501597455
+        },
+        {
+          "_index": 11,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.20447284345047936
+        },
+        {
+          "_index": 12,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7220447284345048
+        },
+        {
+          "_index": 13,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6389776357827475
+        },
+        {
+          "_index": 15,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.43450479233226835
+        },
+        {
+          "_index": 16,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.23322683706070296
+        },
+        {
+          "_index": 17,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9456869009584665
+        },
+        {
+          "_index": 18,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.46645367412140565
+        },
+        {
+          "_index": 19,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.34504792332268364
+        },
+        {
+          "_index": 20,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.680511182108626
+        },
+        {
+          "_index": 22,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6964856230031949
+        },
+        {
+          "_index": 23,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6645367412140574
+        },
+        {
+          "_index": 25,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.875399361022364
+        },
+        {
+          "_index": 26,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8019169329073482
+        },
+        {
+          "_index": 27,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 1
+        },
+        {
+          "_index": 28,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.571884984025559
+        },
+        {
+          "_index": 31,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8242811501597442
+        },
+        {
+          "_index": 33,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4025559105431311
+        },
+        {
+          "_index": 34,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7284345047923322
+        },
+        {
+          "_index": 37,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5207667731629392
+        },
+        {
+          "_index": 39,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7220447284345048
+        },
+        {
+          "_index": 40,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6261980830670925
+        },
+        {
+          "_index": 41,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9233226837060703
+        },
+        {
+          "_index": 43,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.34185303514376997
+        },
+        {
+          "_index": 44,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6485623003194887
+        },
+        {
+          "_index": 45,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8466453674121405
+        },
+        {
+          "_index": 50,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.792332268370607
+        },
+        {
+          "_index": 51,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.936102236421725
+        },
+        {
+          "_index": 56,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5335463258785941
+        },
+        {
+          "_index": 57,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7028753993610223
+        },
+        {
+          "_index": 58,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6134185303514376
+        },
+        {
+          "_index": 59,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.40894568690095845
+        },
+        {
+          "_index": 60,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.571884984025559
+        },
+        {
+          "_index": 61,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.47603833865814693
+        },
+        {
+          "_index": 67,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.39297124600638983
+        },
+        {
+          "_index": 70,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5974440894568689
+        },
+        {
+          "_index": 72,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.1916932907348244
+        },
+        {
+          "_index": 74,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5015974440894568
+        },
+        {
+          "_index": 76,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.463258785942492
+        },
+        {
+          "_index": 79,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.41853035143769973
+        },
+        {
+          "_index": 81,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.437699680511182
+        },
+        {
+          "_index": 82,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.3482428115015973
+        },
+        {
+          "_index": 83,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.49840255591054317
+        },
+        {
+          "_index": 84,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4952076677316295
+        },
+        {
+          "_index": 85,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8274760383386579
+        },
+        {
+          "_index": 86,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6166134185303515
+        },
+        {
+          "_index": 89,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4888178913738019
+        },
+        {
+          "_index": 90,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8785942492012777
+        },
+        {
+          "_index": 91,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8562300319488815
+        },
+        {
+          "_index": 92,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7348242811501597
+        },
+        {
+          "_index": 94,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8338658146964852
+        },
+        {
+          "_index": 95,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9776357827476038
+        },
+        {
+          "_index": 98,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.3801916932907349
+        },
+        {
+          "_index": 100,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7476038338658144
+        },
+        {
+          "_index": 102,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4121405750798721
+        },
+        {
+          "_index": 104,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4472843450479233
+        },
+        {
+          "_index": 105,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8306709265175716
+        },
+        {
+          "_index": 107,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5974440894568689
+        },
+        {
+          "_index": 109,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7284345047923322
+        },
+        {
+          "_index": 111,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4057507987220448
+        },
+        {
+          "_index": 113,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.3642172523961662
+        },
+        {
+          "_index": 115,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5942492012779552
+        },
+        {
+          "_index": 116,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.65814696485623
+        },
+        {
+          "_index": 117,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7667731629392971
+        },
+        {
+          "_index": 121,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.65814696485623
+        },
+        {
+          "_index": 122,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6645367412140574
+        },
+        {
+          "_index": 126,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6134185303514376
+        },
+        {
+          "_index": 131,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.33546325878594263
+        },
+        {
+          "_index": 133,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9233226837060703
+        },
+        {
+          "_index": 134,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5367412140575081
+        },
+        {
+          "_index": 136,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9297124600638976
+        },
+        {
+          "_index": 138,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.49840255591054317
+        },
+        {
+          "_index": 142,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5910543130990416
+        },
+        {
+          "_index": 143,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.41533546325878606
+        },
+        {
+          "_index": 144,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7539936102236421
+        },
+        {
+          "_index": 146,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5335463258785941
+        },
+        {
+          "_index": 148,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5239616613418531
+        },
+        {
+          "_index": 149,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.3322683706070287
+        },
+        {
+          "_index": 150,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6134185303514376
+        },
+        {
+          "_index": 156,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5207667731629392
+        },
+        {
+          "_index": 157,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8083067092651756
+        },
+        {
+          "_index": 158,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5974440894568689
+        },
+        {
+          "_index": 160,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8338658146964852
+        },
+        {
+          "_index": 161,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5239616613418531
+        },
+        {
+          "_index": 162,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9073482428115013
+        },
+        {
+          "_index": 165,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.6741214057507987
+        },
+        {
+          "_index": 167,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.4952076677316295
+        },
+        {
+          "_index": 169,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.5814696485623002
+        },
+        {
+          "_index": 170,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.926517571884984
+        },
+        {
+          "_index": 171,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.8274760383386579
+        },
+        {
+          "_index": 173,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7859424920127793
+        },
+        {
+          "_index": 175,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7252396166134185
+        },
+        {
+          "_index": 177,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.9073482428115013
+        },
+        {
+          "_index": 179,
+          "Experience_Level": "Junior",
+          "dimension": "Tasks_Completed",
+          "normalized_value": 0.7476038338658144
+        }
+      ]
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "opacity": 0.5,
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "dimension",
+            "type": "nominal",
+            "sort": [
+              "AI_Tool_Usage_%",
+              "Hours_Coded",
+              "Code_Complexity_Score",
+              "Bugs_Introduced",
+              "Tasks_Completed"
+            ],
+            "axis": {
+              "title": null,
+              "labelAngle": 0
+            }
+          },
+          "y": {
+            "field": "normalized_value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Normalized Value"
+            }
+          },
+          "detail": {
+            "field": "_index",
+            "type": "nominal"
+          },
+          "color": {
+            "field": "Experience_Level",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "parallel",
+  "chart_meta": {
+    "chart_type": "parallel",
+    "title": "Parallel Coordinates Plot",
+    "filename": "71_one_person_ai_work_and_burnout_parallel.json",
+    "data_points": 500,
+    "total_points": 900,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:50:34.768580Z"
+}

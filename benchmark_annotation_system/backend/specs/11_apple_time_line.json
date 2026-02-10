@@ -1,0 +1,693 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Revenue_Billions over Year",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "Year": 2007,
+        "Product": "iPhone",
+        "Revenue_Billions": 0.95
+      },
+      {
+        "Year": 2008,
+        "Product": "iPhone",
+        "Revenue_Billions": 5.22
+      },
+      {
+        "Year": 2009,
+        "Product": "iPhone",
+        "Revenue_Billions": 9.94
+      },
+      {
+        "Year": 2010,
+        "Product": "iPhone",
+        "Revenue_Billions": 21.95
+      },
+      {
+        "Year": 2011,
+        "Product": "iPhone",
+        "Revenue_Billions": 44.1
+      },
+      {
+        "Year": 2012,
+        "Product": "iPhone",
+        "Revenue_Billions": 78.81
+      },
+      {
+        "Year": 2013,
+        "Product": "iPhone",
+        "Revenue_Billions": 97.63
+      },
+      {
+        "Year": 2014,
+        "Product": "iPhone",
+        "Revenue_Billions": 116.75
+      },
+      {
+        "Year": 2015,
+        "Product": "iPhone",
+        "Revenue_Billions": 165.32
+      },
+      {
+        "Year": 2016,
+        "Product": "iPhone",
+        "Revenue_Billions": 141.97
+      },
+      {
+        "Year": 2017,
+        "Product": "iPhone",
+        "Revenue_Billions": 165.85
+      },
+      {
+        "Year": 2018,
+        "Product": "iPhone",
+        "Revenue_Billions": 164.01
+      },
+      {
+        "Year": 2019,
+        "Product": "iPhone",
+        "Revenue_Billions": 159.79
+      },
+      {
+        "Year": 2020,
+        "Product": "iPhone",
+        "Revenue_Billions": 170.23
+      },
+      {
+        "Year": 2021,
+        "Product": "iPhone",
+        "Revenue_Billions": 193.84
+      },
+      {
+        "Year": 2022,
+        "Product": "iPhone",
+        "Revenue_Billions": 895.0
+      },
+      {
+        "Year": 2023,
+        "Product": "iPhone",
+        "Revenue_Billions": 915.0
+      },
+      {
+        "Year": 2024,
+        "Product": "iPhone",
+        "Revenue_Billions": 210.9
+      },
+      {
+        "Year": 2025,
+        "Product": "iPhone",
+        "Revenue_Billions": 218.3
+      },
+      {
+        "Year": 2007,
+        "Product": "MacBook",
+        "Revenue_Billions": 16.0
+      },
+      {
+        "Year": 2008,
+        "Product": "MacBook",
+        "Revenue_Billions": 19.46
+      },
+      {
+        "Year": 2009,
+        "Product": "MacBook",
+        "Revenue_Billions": 22.75
+      },
+      {
+        "Year": 2010,
+        "Product": "MacBook",
+        "Revenue_Billions": 26.93
+      },
+      {
+        "Year": 2011,
+        "Product": "MacBook",
+        "Revenue_Billions": 29.9
+      },
+      {
+        "Year": 2012,
+        "Product": "MacBook",
+        "Revenue_Billions": 32.25
+      },
+      {
+        "Year": 2013,
+        "Product": "MacBook",
+        "Revenue_Billions": 33.98
+      },
+      {
+        "Year": 2014,
+        "Product": "MacBook",
+        "Revenue_Billions": 36.18
+      },
+      {
+        "Year": 2015,
+        "Product": "MacBook",
+        "Revenue_Billions": 37.41
+      },
+      {
+        "Year": 2016,
+        "Product": "MacBook",
+        "Revenue_Billions": 36.26
+      },
+      {
+        "Year": 2017,
+        "Product": "MacBook",
+        "Revenue_Billions": 38.85
+      },
+      {
+        "Year": 2018,
+        "Product": "MacBook",
+        "Revenue_Billions": 40.46
+      },
+      {
+        "Year": 2019,
+        "Product": "MacBook",
+        "Revenue_Billions": 42.88
+      },
+      {
+        "Year": 2020,
+        "Product": "MacBook",
+        "Revenue_Billions": 48.68
+      },
+      {
+        "Year": 2021,
+        "Product": "MacBook",
+        "Revenue_Billions": 52.42
+      },
+      {
+        "Year": 2022,
+        "Product": "MacBook",
+        "Revenue_Billions": 1720.0
+      },
+      {
+        "Year": 2023,
+        "Product": "MacBook",
+        "Revenue_Billions": 1750.0
+      },
+      {
+        "Year": 2024,
+        "Product": "MacBook",
+        "Revenue_Billions": 53.4
+      },
+      {
+        "Year": 2025,
+        "Product": "MacBook",
+        "Revenue_Billions": 55.44
+      },
+      {
+        "Year": 2007,
+        "Product": "iPad",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2008,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2009,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2010,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 4.13
+      },
+      {
+        "Year": 2011,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 18.14
+      },
+      {
+        "Year": 2012,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 30.9
+      },
+      {
+        "Year": 2013,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 34.79
+      },
+      {
+        "Year": 2014,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 29.8
+      },
+      {
+        "Year": 2015,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 24.66
+      },
+      {
+        "Year": 2016,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 20.06
+      },
+      {
+        "Year": 2017,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 18.79
+      },
+      {
+        "Year": 2018,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 19.14
+      },
+      {
+        "Year": 2019,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 20.21
+      },
+      {
+        "Year": 2020,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 25.34
+      },
+      {
+        "Year": 2021,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 30.7
+      },
+      {
+        "Year": 2022,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 530.0
+      },
+      {
+        "Year": 2023,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 540.0
+      },
+      {
+        "Year": 2024,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 32.73
+      },
+      {
+        "Year": 2025,
+        "Product": "Revenue_Billions",
+        "Revenue_Billions": 34.16
+      },
+      {
+        "Year": 2007,
+        "Product": "Watch",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2008,
+        "Product": "Watch",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2009,
+        "Product": "Watch",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2010,
+        "Product": "Watch",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2011,
+        "Product": "Watch",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2012,
+        "Product": "Watch",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2013,
+        "Product": "Watch",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2014,
+        "Product": "Watch",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2015,
+        "Product": "Watch",
+        "Revenue_Billions": 4.75
+      },
+      {
+        "Year": 2016,
+        "Product": "Watch",
+        "Revenue_Billions": 6.73
+      },
+      {
+        "Year": 2017,
+        "Product": "Watch",
+        "Revenue_Billions": 9.04
+      },
+      {
+        "Year": 2018,
+        "Product": "Watch",
+        "Revenue_Billions": 12.0
+      },
+      {
+        "Year": 2019,
+        "Product": "Watch",
+        "Revenue_Billions": 15.12
+      },
+      {
+        "Year": 2020,
+        "Product": "Watch",
+        "Revenue_Billions": 17.63
+      },
+      {
+        "Year": 2021,
+        "Product": "Watch",
+        "Revenue_Billions": 20.84
+      },
+      {
+        "Year": 2022,
+        "Product": "Watch",
+        "Revenue_Billions": 410.0
+      },
+      {
+        "Year": 2023,
+        "Product": "Watch",
+        "Revenue_Billions": 420.0
+      },
+      {
+        "Year": 2024,
+        "Product": "Watch",
+        "Revenue_Billions": 25.93
+      },
+      {
+        "Year": 2025,
+        "Product": "Watch",
+        "Revenue_Billions": 27.52
+      },
+      {
+        "Year": 2007,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2008,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2009,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2010,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2011,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2012,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2013,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2014,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2015,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.0
+      },
+      {
+        "Year": 2016,
+        "Product": "AirPods",
+        "Revenue_Billions": 0.33
+      },
+      {
+        "Year": 2017,
+        "Product": "AirPods",
+        "Revenue_Billions": 1.99
+      },
+      {
+        "Year": 2018,
+        "Product": "AirPods",
+        "Revenue_Billions": 4.62
+      },
+      {
+        "Year": 2019,
+        "Product": "AirPods",
+        "Revenue_Billions": 9.35
+      },
+      {
+        "Year": 2020,
+        "Product": "AirPods",
+        "Revenue_Billions": 14.88
+      },
+      {
+        "Year": 2021,
+        "Product": "AirPods",
+        "Revenue_Billions": 19.69
+      },
+      {
+        "Year": 2022,
+        "Product": "AirPods",
+        "Revenue_Billions": 185.0
+      },
+      {
+        "Year": 2023,
+        "Product": "AirPods",
+        "Revenue_Billions": 189.0
+      },
+      {
+        "Year": 2024,
+        "Product": "AirPods",
+        "Revenue_Billions": 26.22
+      },
+      {
+        "Year": 2025,
+        "Product": "AirPods",
+        "Revenue_Billions": 27.55
+      },
+      {
+        "Year": 2007,
+        "Product": "Services",
+        "Revenue_Billions": 6.13
+      },
+      {
+        "Year": 2008,
+        "Product": "Services",
+        "Revenue_Billions": 9.11
+      },
+      {
+        "Year": 2009,
+        "Product": "Services",
+        "Revenue_Billions": 11.32
+      },
+      {
+        "Year": 2010,
+        "Product": "Services",
+        "Revenue_Billions": 15.22
+      },
+      {
+        "Year": 2011,
+        "Product": "Services",
+        "Revenue_Billions": 21.11
+      },
+      {
+        "Year": 2012,
+        "Product": "Services",
+        "Revenue_Billions": 24.55
+      },
+      {
+        "Year": 2013,
+        "Product": "Services",
+        "Revenue_Billions": 28.51
+      },
+      {
+        "Year": 2014,
+        "Product": "Services",
+        "Revenue_Billions": 32.07
+      },
+      {
+        "Year": 2015,
+        "Product": "Services",
+        "Revenue_Billions": 40.58
+      },
+      {
+        "Year": 2016,
+        "Product": "Services",
+        "Revenue_Billions": 48.29
+      },
+      {
+        "Year": 2017,
+        "Product": "Services",
+        "Revenue_Billions": 55.71
+      },
+      {
+        "Year": 2018,
+        "Product": "Services",
+        "Revenue_Billions": 60.37
+      },
+      {
+        "Year": 2019,
+        "Product": "Services",
+        "Revenue_Billions": 68.82
+      },
+      {
+        "Year": 2020,
+        "Product": "Services",
+        "Revenue_Billions": 75.76
+      },
+      {
+        "Year": 2021,
+        "Product": "Services",
+        "Revenue_Billions": 82.33
+      },
+      {
+        "Year": 2022,
+        "Product": "Services",
+        "Revenue_Billions": 23.13
+      },
+      {
+        "Year": 2023,
+        "Product": "Services",
+        "Revenue_Billions": 24.95
+      },
+      {
+        "Year": 2024,
+        "Product": "Services",
+        "Revenue_Billions": 98.5
+      },
+      {
+        "Year": 2025,
+        "Product": "Services",
+        "Revenue_Billions": 105.13
+      },
+      {
+        "Year": 2007,
+        "Product": "Other_Products",
+        "Revenue_Billions": 1.5
+      },
+      {
+        "Year": 2008,
+        "Product": "Other_Products",
+        "Revenue_Billions": 3.7
+      },
+      {
+        "Year": 2009,
+        "Product": "Other_Products",
+        "Revenue_Billions": 4.9
+      },
+      {
+        "Year": 2010,
+        "Product": "Other_Products",
+        "Revenue_Billions": 7.0
+      },
+      {
+        "Year": 2011,
+        "Product": "Other_Products",
+        "Revenue_Billions": 5.0
+      },
+      {
+        "Year": 2012,
+        "Product": "Other_Products",
+        "Revenue_Billions": 10.0
+      },
+      {
+        "Year": 2013,
+        "Product": "Other_Products",
+        "Revenue_Billions": 6.0
+      },
+      {
+        "Year": 2014,
+        "Product": "Other_Products",
+        "Revenue_Billions": 8.0
+      },
+      {
+        "Year": 2015,
+        "Product": "Other_Products",
+        "Revenue_Billions": 11.0
+      },
+      {
+        "Year": 2016,
+        "Product": "Other_Products",
+        "Revenue_Billions": 12.0
+      },
+      {
+        "Year": 2017,
+        "Product": "Other_Products",
+        "Revenue_Billions": 9.0
+      },
+      {
+        "Year": 2018,
+        "Product": "Other_Products",
+        "Revenue_Billions": 15.0
+      },
+      {
+        "Year": 2019,
+        "Product": "Other_Products",
+        "Revenue_Billions": 14.0
+      },
+      {
+        "Year": 2020,
+        "Product": "Other_Products",
+        "Revenue_Billions": 22.0
+      },
+      {
+        "Year": 2021,
+        "Product": "Other_Products",
+        "Revenue_Billions": 26.0
+      },
+      {
+        "Year": 2022,
+        "Product": "Other_Products",
+        "Revenue_Billions": 91.03
+      },
+      {
+        "Year": 2023,
+        "Product": "Other_Products",
+        "Revenue_Billions": 94.09
+      },
+      {
+        "Year": 2024,
+        "Product": "Other_Products",
+        "Revenue_Billions": 23.0
+      },
+      {
+        "Year": 2025,
+        "Product": "Other_Products",
+        "Revenue_Billions": 24.0
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Revenue_Billions",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Product",
+      "type": "nominal"
+    }
+  }
+}

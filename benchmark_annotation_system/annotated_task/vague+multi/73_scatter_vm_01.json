@@ -1,0 +1,94 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "73_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/73_StudentsPerformance_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "After separately magnifying the low-scoring area and the high-scoring area, do you think the test preparation has the same impact on the distribution of these two areas, or is it more pronounced in a certain score range?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "For the lower sections, the majority of people were unprepared and both scores were low. For the high-scoring areas, they also achieved high scores in both subjects. However, it can be observed that those who prepared performed better in mathematics, but there was no significant impact on the reading scores for those who did not prepare."
+        },
+        "key_insights": [
+          "find that more people in this area are no preparation",
+          "for reading score, no matter people if completed or not, all of them get a good grade",
+          "for math people in this area who get a higher score are completed"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the low price area"
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_dense_area",
+            "reasoning": "get the high score area data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0,
+                    35.01666768391927
+                  ],
+                  "y_range": [
+                    0.250007629394533,
+                    99.20001220703125
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    79.94999694824219,
+                    100
+                  ],
+                  "y_range": [
+                    0,
+                    99.8499984741211
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              79.94999694824219,
+              100
+            ],
+            "y": [
+              0,
+              99.8499984741211
+            ]
+          },
+          "encoding": {
+            "x": "math score",
+            "y": "reading score",
+            "color": "test preparation course"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "08_heatmap_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/08_heatmap_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "How does the weather affect sleep?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "On rainy days, people tend to sleep the most. Therefore, this can indicate that the sound of rain is beneficial for sleep.It can be seen that sleeping on a sunny day is the best, so it can be concluded that the sun is not conducive to sleep."
+        },
+        "key_insights": [
+          "find the hours are very different in different weather",
+          "find there are only little different in different weather"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "obtain the chart of weather and sleep_hours"
+          },
+          {
+            "iteration": 2,
+            "tool": "add_marginal_bars",
+            "reasoning": "get the data in different weather"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "sleep_hours",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "add_marginal_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "show_top": false,
+                  "show_right": true,
+                  "op": "mean"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

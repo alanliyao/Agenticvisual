@@ -1,0 +1,65 @@
+{
+  "task_type": "vague_single",
+  "task_id": "83_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/82_Online Sales Data_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What are the characteristics of changes in clothing?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The changes within each month are complex, showing a pattern of decreasing, then increasing, then decreasing, and then increasing between months."
+        },
+        "key_insights": [
+          "The changes within each month are complex",
+          "Decreased from January to March, decreased from April to May, decreased from July to August, increased from March to April, increased from May to July, increased in August"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "filter the lines and analyse the trend"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Electronics",
+                    "Home Appliances",
+                    "Beauty Products",
+                    "Books",
+                    "Sports"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Date",
+            "y": "Total Revenue",
+            "color": "Product Category"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Electronics\", \"Home Appliances\", \"Beauty Products\", \"Books\", \"Sports\"], datum['Product Category']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

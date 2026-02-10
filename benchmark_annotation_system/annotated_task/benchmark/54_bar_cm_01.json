@@ -1,0 +1,91 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "54_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/54_Ecommerce_Delivery_Analytics_New_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "For orders that requested refunds, which platform has the longest average delivery time?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Swiggy Instamart.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "To discuss the impact of requested refunds on delivery times, you first need to use the change encoding tool to switch the filed to refund requested."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_subcategories",
+            "reasoning": "Discuss the impact of requested refunds on delivery time, using the filter subcategories tool to exclude cases where no refund was requested."
+          },
+          {
+            "iteration": 3,
+            "tool": "highlight_top_n",
+            "reasoning": "To find the platform with the longest average delivery time when a refund is requested, you should use the 'highlight top n' tool, select top 1, and identify the platform with the longest delivery time."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Refund Requested",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "No"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "highlight_top_n",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n": 1,
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Delivery Time (Minutes)",
+            "color": "Refund Requested"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Refund Requested'] != \"No\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

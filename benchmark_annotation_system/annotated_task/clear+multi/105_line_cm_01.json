@@ -1,0 +1,81 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "105_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/105_gini_filter_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which products have maintained an increasing trend from 1950 to 1970?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "China.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "only one country had an increasing trend.",
+          "only China had an increasing trend."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "View zoomed to show time range between 1950 and 1970."
+          },
+          {
+            "iteration": 2,
+            "tool": "focus_lines",
+            "reasoning": "Focused on line of China since the last step,and it was the only line increased between that time."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "1950",
+                  "end": "1970"
+                }
+              }
+            },
+            {
+              "tool": "focus_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "dim",
+                  "lines": [
+                    "China"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "1950",
+              "1970"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Gini coefficient of lifespan inequality - Sex: female",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

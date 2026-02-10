@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "52_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/52_years of economic new_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the 2014 to 2016 period to see the exact percentage values of the sharp dip and recovery in electricity access.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "The dip in 2015 drops to approximately 71%, which is a 19% fall from the 2014 peak of 90%.\nThe recovery is rapid, with access rebounding to 98% by 2016, surpassing the previous peak.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "The sharp fluctuation between 2014 and 2016 is a critical event that requires precise values to understand its severity. A single zoom action provides the exact percentage points needed to quantify the disruption and recovery."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2014",
+                  "end": "2016"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2014",
+              "2016"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Access to electricity (% of population)",
+            "color": "Entity"
+          }
+        }
+      }
+    }
+  ]
+}

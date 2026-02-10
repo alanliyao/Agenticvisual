@@ -1,165 +1,46 @@
-你需要识别用户查询的意图类型。
+# Intent Classification
 
-# 任务说明
-分析用户的查询，结合当前的可视化图表，判断用户的意图属于以下哪一类：
+## Task Definition
+Classify user queries into one of three intent categories based on analytical specificity.
 
-## 1. CHITCHAT（闲聊）- 最高优先级
-**特征**：
-- 问候、寒暄（如：你好、Hi、Hello、嗨、早上好、晚上好）
-- 礼貌用语（如：谢谢、再见、不客气、拜拜）
-- 询问系统功能（如：你能做什么、怎么使用、你是谁）
-- 一般性话题，与当前图表完全无关
-- 不涉及任何数据分析需求
-- **注意：只要是问候或礼貌用语，无论后面跟什么，都应该识别为CHITCHAT**
+## Intent Categories
 
-**示例**：
-- "你好"
-- "Hi"
-- "谢谢"
-- "你好，请问你能帮我做什么？"
-- "早上好，这个系统怎么用？"
-- "再见"
+CHITCHAT
+- Greetings, acknowledgments, farewells
+- System capability inquiries
+- Off-topic or non-analytical discussion
+- Indicators: hello, hi, thanks, bye, what can you do, how to use
 
-## 2. EXPLICIT_ANALYSIS（明确分析意图）
-**特征**：
-- 有明确的操作目标或分析需求
-- 包含具体的条件、范围或参数（时间、数值、类别等）
-- 明确要求某种数据操作或视图变化
-- **包含明确的动作词**：筛选、过滤、放大、缩小、显示、隐藏、对比、排序、高亮、聚焦等
-- 有可执行的具体指令
-- **关键判断标准**：用户知道自己想要什么具体的操作或结果
+EXPLICIT_ANALYSIS
+- Queries with concrete analytical targets
+- Contains specific operations, parameters, or transformations
+- Indicators: action verbs (filter, zoom, highlight, sort, show, compare), explicit ranges, named attributes, specific categories
+- User knows what outcome they want
 
-**示例**：
-- "帮我筛选出2020年到2022年的数据"
-- "放大左下角的高密度区域"
-- "高亮显示销售额最高的前10个类别"
-- "对比一下A组和B组的表现"
-- "只显示大于100的数据点"
-- "帮我放大这个柱状图"  ← 明确操作：放大
-- "筛选出销售额前十的商品"  ← 明确操作：筛选 + 明确范围：前十
-- "显示2020年的数据"  ← 明确操作：显示 + 明确范围：2020年
+VAGUE_EXPLORATION
+- Data-related but lacking specific targets
+- Open-ended pattern discovery requests
+- Indicators: what patterns, anything interesting, analyze this, explore, what do you see
+- User wants system to discover insights autonomously
 
-## 3. VAGUE_EXPLORATION（模糊探索意图）
-**特征**：
-- 与数据分析相关，但意图不明确，没有具体目标
-- 开放式的询问或探索请求
-- 请求系统主动发现洞察或模式
-- 包含：有什么、什么样、帮我看看、分析一下、探索、发现等词汇
-- **没有具体的操作指令或参数**
-- **关键判断标准**：用户不确定具体要什么，需要系统主动探索和发现
+## Classification Procedure
 
-**示例**：
-- "这个图有什么有意思的地方？"
-- "帮我分析一下这些数据"  ← 没有明确分析什么
-- "有什么值得关注的趋势吗？"
-- "看看能发现什么模式"
-- "这些数据有什么特点？"
-- "帮我看看这个图"  ← 没有明确要看什么
+1. Check for conversational markers. If present, return CHITCHAT.
+2. Check for action verbs with specific parameters. If present, return EXPLICIT_ANALYSIS.
+3. If query relates to data but lacks specific operations, return VAGUE_EXPLORATION.
 
-# 输出格式
-请以 JSON 格式输出你的判断：
+## Output Format
 
 ```json
 {
   "intent_type": "chitchat | explicit_analysis | vague_exploration",
   "confidence": 0.0-1.0,
-  "reasoning": "判断理由",
-  "key_indicators": ["识别到的关键指标1", "关键指标2"],
-  "extracted_params": {
-    // 如果是明确意图，提取的参数
-    // 例如：时间范围、类别、数值范围等
-  }
+  "reasoning": "classification justification",
+  "key_indicators": ["indicator_1", "indicator_2"],
+  "extracted_params": {}
 }
 ```
 
-**重要：intent_type 的值必须是小写，使用下划线连接**
+Note: intent_type must be lowercase with underscores.
 
-# 判断流程（严格按此顺序）
-1. **第一步：检查是否为闲聊（CHITCHAT）**
-   - 是否包含问候语？（你好、Hi、Hello等）→ CHITCHAT
-   - 是否是礼貌用语？（谢谢、再见等）→ CHITCHAT
-   - 是否询问系统功能？（你能做什么、怎么用等）→ CHITCHAT
-   - **如果是上述任一情况，直接判定为CHITCHAT，不再继续判断**
-
-2. **第二步：检查是否包含明确操作动作词**
-   - 是否包含明确的操作动作词？（放大、筛选、显示、高亮等）→ 继续第3步
-   - 如果没有明确动作词 → 跳到第4步
-
-3. **第三步：判断是否为明确分析（EXPLICIT_ANALYSIS）**
-   - 包含操作动作词 + 有具体目标/范围/条件 → EXPLICIT_ANALYSIS
-   - 包含操作动作词 + 目标明确（如"放大这个图"） → EXPLICIT_ANALYSIS
-   - **示例**：
-     - "放大这个柱状图" → EXPLICIT_ANALYSIS（动作：放大，目标：柱状图）
-     - "筛选2020年的数据" → EXPLICIT_ANALYSIS（动作：筛选，范围：2020年）
-     - "高亮最大值" → EXPLICIT_ANALYSIS（动作：高亮，目标：最大值）
-
-4. **第四步：判断是否为模糊探索（VAGUE_EXPLORATION）**
-   - 涉及数据分析但没有明确操作 → VAGUE_EXPLORATION
-   - 开放式询问（有什么、什么样、如何等） → VAGUE_EXPLORATION
-   - **示例**：
-     - "帮我分析一下这个图" → VAGUE_EXPLORATION（没有明确分析什么）
-     - "这个图有什么特点？" → VAGUE_EXPLORATION（开放式询问）
-     - "看看这些数据" → VAGUE_EXPLORATION（没有明确看什么）
-
-5. **第五步：提供判断依据**
-   - 提供置信度评分（0-1）
-   - 说明判断理由
-   - 列出关键指标
-   - 如果是明确意图，尽可能提取具体参数
-
-# 关键判断原则
-
-**原则1：动作词优先**
-- 如果包含明确的操作动作词（见上方动作词识别表），优先考虑 EXPLICIT_ANALYSIS
-
-**原则2：具体性判断**
-- 有具体目标、范围、条件 → EXPLICIT_ANALYSIS
-- 目标模糊、开放式询问 → VAGUE_EXPLORATION
-
-**原则3：用户意图明确性**
-- 用户清楚知道想要什么 → EXPLICIT_ANALYSIS
-- 用户不确定，需要系统探索 → VAGUE_EXPLORATION
-
-# 注意事项
-- **最优先原则：问候和礼貌用语必须识别为CHITCHAT**
-- 优先考虑用户的明确表述
-- 结合图表类型理解用户意图
-- 对于涉及数据但目标模糊的表述，选择 VAGUE_EXPLORATION
-- 置信度应该反映判断的确定程度
-- 提取的参数要准确，不确定时留空
-
-# 常见问候语识别表
-以下用户输入必须识别为 CHITCHAT（置信度 ≥ 0.95）：
-- 你好、您好、hi、hello、hey、嗨
-- 早上好、中午好、下午好、晚上好
-- 谢谢、多谢、thanks、thank you
-- 再见、拜拜、bye、goodbye
-- 你是谁、你叫什么、你能做什么
-- 怎么用、怎么使用、如何使用
-
-# 明确操作动作词识别表
-以下动作词出现时，通常表示 EXPLICIT_ANALYSIS（置信度 ≥ 0.85）：
-
-**数据筛选类**：
-- 筛选、过滤、filter、select、选择、挑选、找出、提取
-
-**视图操作类**：
-- 放大、缩小、zoom、scale、聚焦、focus
-- 显示、隐藏、show、hide、展示、呈现
-- 调整、修改、adjust、modify、change
-
-**数据突出类**：
-- 高亮、突出、highlight、emphasize、标记、mark
-- 对比、比较、compare、contrast
-
-**数据排序类**：
-- 排序、sort、order、排列、按...排序
-
-**数据操作类**：
-- 只看、只显示、only show、仅显示
-- 去掉、删除、remove、delete、排除
-- 添加、增加、add、包含
-- 改成、换成、change to、替换
-- 设置为、set to
-
-**重要提示**：如果用户查询中包含上述任何动作词，且没有其他矛盾信息，应优先识别为 EXPLICIT_ANALYSIS。
+For EXPLICIT_ANALYSIS, populate extracted_params with identified parameters (time ranges, value thresholds, category names, operation targets).

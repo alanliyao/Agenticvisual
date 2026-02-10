@@ -1,0 +1,123 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "75_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/75_Refined_Employment_Telecom_Services_2024_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Filter the chart to display only countries from Asia and North America, then sort the bars in descending order, and finally discover the exact number of mean employment in the country with second to largest mean employment .",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": null,
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "First, filtering isolates the target continents to reduce visual clutter."
+          },
+          {
+            "iteration": 2,
+            "tool": "sort_bars",
+            "reasoning": "Sorting then organizes the data to easily identify top performers."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Argentina",
+                    "Australia",
+                    "Austria",
+                    "Belarus",
+                    "Belgium",
+                    "Bolivia",
+                    "Botswana",
+                    "Brazil",
+                    "Bulgaria",
+                    "Colombia",
+                    "Croatia",
+                    "Czechia",
+                    "Denmark",
+                    "Ecuador",
+                    "Estonia",
+                    "Fiji",
+                    "Finland",
+                    "France",
+                    "Greece",
+                    "Germany",
+                    "Honduras",
+                    "Hungary",
+                    "Iceland",
+                    "Ireland",
+                    "Italy",
+                    "Kosovo",
+                    "Latvia",
+                    "Lesotho",
+                    "Lithuania",
+                    "Luxembourg",
+                    "Malta",
+                    "Netherlands",
+                    "North Macedonia",
+                    "Nigeria",
+                    "Norway",
+                    "Peru",
+                    "Poland",
+                    "Portugal",
+                    "Romania",
+                    "Rwanda",
+                    "Senegal",
+                    "Seychelles",
+                    "Slovak Republic",
+                    "Slovenia",
+                    "Spain",
+                    "Sweden",
+                    "Switzerland",
+                    "Thailand",
+                    "United Kingdom",
+                    "Uruguay"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Country",
+            "y": "Employment_Thousands",
+            "color": "Continent"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Argentina\",\"Australia\",\"Austria\",\"Belarus\",\"Belgium\",\"Bolivia\",\"Botswana\",\"Brazil\",\"Bulgaria\",\"Colombia\",\"Croatia\",\"Czechia\",\"Denmark\",\"Ecuador\",\"Estonia\",\"Fiji\",\"Finland\",\"France\",\"Greece\",\"Germany\",\"Honduras\",\"Hungary\",\"Iceland\",\"Ireland\",\"Italy\",\"Kosovo\",\"Latvia\",\"Lesotho\",\"Lithuania\",\"Luxembourg\",\"Malta\",\"Netherlands\",\"North Macedonia\",\"Nigeria\",\"Norway\",\"Peru\",\"Poland\",\"Portugal\",\"Romania\",\"Rwanda\",\"Senegal\",\"Seychelles\",\"Slovak Republic\",\"Slovenia\",\"Spain\",\"Sweden\",\"Switzerland\",\"Thailand\",\"United Kingdom\",\"Uruguay\"], datum['Country']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

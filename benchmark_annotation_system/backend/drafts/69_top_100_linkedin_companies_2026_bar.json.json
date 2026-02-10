@@ -1,0 +1,280 @@
+{
+  "filename": "69_top_100_linkedin_companies_2026_bar.json",
+  "spec_index": 67,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Bar Chart: followers by company",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "rank": 1,
+          "company": "Google",
+          "followers": 40000000
+        },
+        {
+          "rank": 2,
+          "company": "Amazon",
+          "followers": 36000000
+        },
+        {
+          "rank": 3,
+          "company": "LinkedIn",
+          "followers": 33000000
+        },
+        {
+          "rank": 4,
+          "company": "Microsoft",
+          "followers": 27000000
+        },
+        {
+          "rank": 5,
+          "company": "Ted Conferences",
+          "followers": 24000000
+        },
+        {
+          "rank": 6,
+          "company": "Unilever",
+          "followers": 21000000
+        },
+        {
+          "rank": 7,
+          "company": "Deloitte",
+          "followers": 21000000
+        },
+        {
+          "rank": 8,
+          "company": "LinkedIn News",
+          "followers": 20000000
+        },
+        {
+          "rank": 9,
+          "company": "IBM",
+          "followers": 19000000
+        },
+        {
+          "rank": 10,
+          "company": "Apple",
+          "followers": 18000000
+        },
+        {
+          "rank": 11,
+          "company": "Forbes Magazine",
+          "followers": 18000000
+        },
+        {
+          "rank": 12,
+          "company": "Tata Consultancy Services",
+          "followers": 18000000
+        },
+        {
+          "rank": 13,
+          "company": "Nestle",
+          "followers": 17000000
+        },
+        {
+          "rank": 14,
+          "company": "Harvard Business Review",
+          "followers": 15000000
+        },
+        {
+          "rank": 15,
+          "company": "Accenture",
+          "followers": 14000000
+        },
+        {
+          "rank": 16,
+          "company": "The Economist",
+          "followers": 13000000
+        },
+        {
+          "rank": 17,
+          "company": "Tesla Motors",
+          "followers": 12000000
+        },
+        {
+          "rank": 18,
+          "company": "Meta",
+          "followers": 12000000
+        },
+        {
+          "rank": 19,
+          "company": "Netflix",
+          "followers": 12000000
+        },
+        {
+          "rank": 20,
+          "company": "Wipro",
+          "followers": 11000000
+        }
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "company",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "followers",
+        "type": "quantitative"
+      },
+      "color": {
+        "aggregate": "mean",
+        "field": "followers",
+        "type": "quantitative",
+        "scale": {
+          "scheme": "red"
+        }
+      }
+    }
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Bar Chart: followers by company",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "rank": 1,
+          "company": "Google",
+          "followers": 40000000
+        },
+        {
+          "rank": 2,
+          "company": "Amazon",
+          "followers": 36000000
+        },
+        {
+          "rank": 3,
+          "company": "LinkedIn",
+          "followers": 33000000
+        },
+        {
+          "rank": 4,
+          "company": "Microsoft",
+          "followers": 27000000
+        },
+        {
+          "rank": 5,
+          "company": "Ted Conferences",
+          "followers": 24000000
+        },
+        {
+          "rank": 6,
+          "company": "Unilever",
+          "followers": 21000000
+        },
+        {
+          "rank": 7,
+          "company": "Deloitte",
+          "followers": 21000000
+        },
+        {
+          "rank": 8,
+          "company": "LinkedIn News",
+          "followers": 20000000
+        },
+        {
+          "rank": 9,
+          "company": "IBM",
+          "followers": 19000000
+        },
+        {
+          "rank": 10,
+          "company": "Apple",
+          "followers": 18000000
+        },
+        {
+          "rank": 11,
+          "company": "Forbes Magazine",
+          "followers": 18000000
+        },
+        {
+          "rank": 12,
+          "company": "Tata Consultancy Services",
+          "followers": 18000000
+        },
+        {
+          "rank": 13,
+          "company": "Nestle",
+          "followers": 17000000
+        },
+        {
+          "rank": 14,
+          "company": "Harvard Business Review",
+          "followers": 15000000
+        },
+        {
+          "rank": 15,
+          "company": "Accenture",
+          "followers": 14000000
+        },
+        {
+          "rank": 16,
+          "company": "The Economist",
+          "followers": 13000000
+        },
+        {
+          "rank": 17,
+          "company": "Tesla Motors",
+          "followers": 12000000
+        },
+        {
+          "rank": 18,
+          "company": "Meta",
+          "followers": 12000000
+        },
+        {
+          "rank": 19,
+          "company": "Netflix",
+          "followers": 12000000
+        },
+        {
+          "rank": 20,
+          "company": "Wipro",
+          "followers": 11000000
+        }
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "company",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "followers",
+        "type": "quantitative"
+      },
+      "color": {
+        "aggregate": "mean",
+        "field": "followers",
+        "type": "quantitative",
+        "scale": {
+          "scheme": "red"
+        }
+      }
+    }
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "bar",
+  "chart_meta": {
+    "chart_type": "bar",
+    "title": "Bar Chart: followers by company",
+    "filename": "69_top_100_linkedin_companies_2026_bar.json",
+    "data_points": 20,
+    "total_points": 20,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:50:35.813555Z"
+}

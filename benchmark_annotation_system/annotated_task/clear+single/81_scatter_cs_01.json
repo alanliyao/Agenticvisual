@@ -1,0 +1,69 @@
+{
+  "task_type": "clear_single",
+  "task_id": "81_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/80_gym_members_exercise_tracking_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "zoom to see what is the most common workout type when burning  around 600 calories?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "cardio",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the area around 600 calories and select the workout type happens most frequently"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.7113580243616927,
+                    1.062938300700247
+                  ],
+                  "y_range": [
+                    563.2348847579904,
+                    620.9849348831194
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.7113580243616927,
+              1.062938300700247
+            ],
+            "y": [
+              563.2348847579904,
+              620.9849348831194
+            ]
+          },
+          "encoding": {
+            "x": "Session_Duration (hours)",
+            "y": "Calories_Burned",
+            "color": "Workout_Type"
+          }
+        }
+      }
+    }
+  ]
+}

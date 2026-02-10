@@ -1,0 +1,117 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "59_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/59_health care diabetes_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_04",
+      "question": "What is the exact mean blood pressure for patients with Outcome=1 and Pregnancies=1, and how does it compare to the overall mean blood pressure for all patients with Outcome=1 (i.e., across both Pregnancies=0 and Pregnancies=1)?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The mean blood pressure for patients with Outcome=1 and Pregnancies=1 is 130. This is 10 higher than the overall mean blood pressure (120) for all patients with Outcome=1.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region",
+            "reasoning": "Since the heatmap has two dimensions (Pregnancies and Outcome), we use this tool  to view only the column (or row) corresponding to Outcome=1. This simplifies the dataset to focus on the target subgroup"
+          },
+          {
+            "iteration": 2,
+            "tool": "adjust_color_scale",
+            "reasoning": "We use this tool to better see the difference in each case."
+          },
+          {
+            "iteration": 3,
+            "tool": "get_data",
+            "reasoning": "To retrieve the precise numerical values for mean blood pressure for Pregnancies=0 and Pregnancies=1 under Outcome=1. This step provides the exact numbers needed for comparison."
+          },
+          {
+            "iteration": 4,
+            "tool": "get_data_summary",
+            "reasoning": "To calculate the overall mean blood pressure for the filtered dataset (Outcome=1). If the tool provides a summary statistic for the visible data after filtering, it can give the mean directly. Otherwise, we manually average the two values obtained in step 2."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_values": [
+                    6,
+                    1,
+                    8,
+                    5,
+                    3,
+                    10,
+                    2,
+                    14,
+                    4,
+                    7,
+                    9,
+                    11,
+                    13,
+                    15,
+                    17,
+                    12
+                  ],
+                  "y_values": [
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "adjust_color_scale",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scheme": "viridis"
+                }
+              }
+            },
+            {
+              "tool": "get_data",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Pregnancies",
+            "y": "Outcome",
+            "color": "BloodPressure"
+          }
+        }
+      }
+    }
+  ]
+}

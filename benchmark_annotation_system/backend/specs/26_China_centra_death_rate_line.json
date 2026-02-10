@@ -1,0 +1,2188 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "China annual death rate in each Age group",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "Year": 1950,
+        "Age_Group": " Age: 0",
+        "Central death rate": 145.22017
+      },
+      {
+        "Year": 1951,
+        "Age_Group": " Age: 0",
+        "Central death rate": 141.26305
+      },
+      {
+        "Year": 1952,
+        "Age_Group": " Age: 0",
+        "Central death rate": 137.1543
+      },
+      {
+        "Year": 1953,
+        "Age_Group": " Age: 0",
+        "Central death rate": 133.56381
+      },
+      {
+        "Year": 1954,
+        "Age_Group": " Age: 0",
+        "Central death rate": 131.57709
+      },
+      {
+        "Year": 1955,
+        "Age_Group": " Age: 0",
+        "Central death rate": 128.09969
+      },
+      {
+        "Year": 1956,
+        "Age_Group": " Age: 0",
+        "Central death rate": 124.76507
+      },
+      {
+        "Year": 1957,
+        "Age_Group": " Age: 0",
+        "Central death rate": 121.65889
+      },
+      {
+        "Year": 1958,
+        "Age_Group": " Age: 0",
+        "Central death rate": 118.30128
+      },
+      {
+        "Year": 1959,
+        "Age_Group": " Age: 0",
+        "Central death rate": 176.41481
+      },
+      {
+        "Year": 1960,
+        "Age_Group": " Age: 0",
+        "Central death rate": 229.25061
+      },
+      {
+        "Year": 1961,
+        "Age_Group": " Age: 0",
+        "Central death rate": 171.86049
+      },
+      {
+        "Year": 1962,
+        "Age_Group": " Age: 0",
+        "Central death rate": 107.6561
+      },
+      {
+        "Year": 1963,
+        "Age_Group": " Age: 0",
+        "Central death rate": 104.97503
+      },
+      {
+        "Year": 1964,
+        "Age_Group": " Age: 0",
+        "Central death rate": 101.64198
+      },
+      {
+        "Year": 1965,
+        "Age_Group": " Age: 0",
+        "Central death rate": 98.12511
+      },
+      {
+        "Year": 1966,
+        "Age_Group": " Age: 0",
+        "Central death rate": 94.77981
+      },
+      {
+        "Year": 1967,
+        "Age_Group": " Age: 0",
+        "Central death rate": 91.91544
+      },
+      {
+        "Year": 1968,
+        "Age_Group": " Age: 0",
+        "Central death rate": 89.21479
+      },
+      {
+        "Year": 1969,
+        "Age_Group": " Age: 0",
+        "Central death rate": 86.43613
+      },
+      {
+        "Year": 1970,
+        "Age_Group": " Age: 0",
+        "Central death rate": 82.54007
+      },
+      {
+        "Year": 1971,
+        "Age_Group": " Age: 0",
+        "Central death rate": 78.69964
+      },
+      {
+        "Year": 1972,
+        "Age_Group": " Age: 0",
+        "Central death rate": 75.00949
+      },
+      {
+        "Year": 1973,
+        "Age_Group": " Age: 0",
+        "Central death rate": 71.32404
+      },
+      {
+        "Year": 1974,
+        "Age_Group": " Age: 0",
+        "Central death rate": 67.6588
+      },
+      {
+        "Year": 1975,
+        "Age_Group": " Age: 0",
+        "Central death rate": 64.123436
+      },
+      {
+        "Year": 1976,
+        "Age_Group": " Age: 0",
+        "Central death rate": 60.26392
+      },
+      {
+        "Year": 1977,
+        "Age_Group": " Age: 0",
+        "Central death rate": 56.83945
+      },
+      {
+        "Year": 1978,
+        "Age_Group": " Age: 0",
+        "Central death rate": 53.70507
+      },
+      {
+        "Year": 1979,
+        "Age_Group": " Age: 0",
+        "Central death rate": 50.92128
+      },
+      {
+        "Year": 1980,
+        "Age_Group": " Age: 0",
+        "Central death rate": 48.6067
+      },
+      {
+        "Year": 1981,
+        "Age_Group": " Age: 0",
+        "Central death rate": 46.57975
+      },
+      {
+        "Year": 1982,
+        "Age_Group": " Age: 0",
+        "Central death rate": 44.9819
+      },
+      {
+        "Year": 1983,
+        "Age_Group": " Age: 0",
+        "Central death rate": 43.7758
+      },
+      {
+        "Year": 1984,
+        "Age_Group": " Age: 0",
+        "Central death rate": 42.978428
+      },
+      {
+        "Year": 1985,
+        "Age_Group": " Age: 0",
+        "Central death rate": 42.53406
+      },
+      {
+        "Year": 1986,
+        "Age_Group": " Age: 0",
+        "Central death rate": 42.32853
+      },
+      {
+        "Year": 1987,
+        "Age_Group": " Age: 0",
+        "Central death rate": 42.33363
+      },
+      {
+        "Year": 1988,
+        "Age_Group": " Age: 0",
+        "Central death rate": 42.408802
+      },
+      {
+        "Year": 1989,
+        "Age_Group": " Age: 0",
+        "Central death rate": 42.41172
+      },
+      {
+        "Year": 1990,
+        "Age_Group": " Age: 0",
+        "Central death rate": 42.21038
+      },
+      {
+        "Year": 1991,
+        "Age_Group": " Age: 0",
+        "Central death rate": 41.843708
+      },
+      {
+        "Year": 1992,
+        "Age_Group": " Age: 0",
+        "Central death rate": 41.12243
+      },
+      {
+        "Year": 1993,
+        "Age_Group": " Age: 0",
+        "Central death rate": 40.169518
+      },
+      {
+        "Year": 1994,
+        "Age_Group": " Age: 0",
+        "Central death rate": 38.99937
+      },
+      {
+        "Year": 1995,
+        "Age_Group": " Age: 0",
+        "Central death rate": 37.71274
+      },
+      {
+        "Year": 1996,
+        "Age_Group": " Age: 0",
+        "Central death rate": 36.2983
+      },
+      {
+        "Year": 1997,
+        "Age_Group": " Age: 0",
+        "Central death rate": 34.77367
+      },
+      {
+        "Year": 1998,
+        "Age_Group": " Age: 0",
+        "Central death rate": 33.22944
+      },
+      {
+        "Year": 1999,
+        "Age_Group": " Age: 0",
+        "Central death rate": 31.50173
+      },
+      {
+        "Year": 2000,
+        "Age_Group": " Age: 0",
+        "Central death rate": 29.63406
+      },
+      {
+        "Year": 2001,
+        "Age_Group": " Age: 0",
+        "Central death rate": 27.67008
+      },
+      {
+        "Year": 2002,
+        "Age_Group": " Age: 0",
+        "Central death rate": 25.64788
+      },
+      {
+        "Year": 2003,
+        "Age_Group": " Age: 0",
+        "Central death rate": 23.59909
+      },
+      {
+        "Year": 2004,
+        "Age_Group": " Age: 0",
+        "Central death rate": 21.638
+      },
+      {
+        "Year": 2005,
+        "Age_Group": " Age: 0",
+        "Central death rate": 19.81136
+      },
+      {
+        "Year": 2006,
+        "Age_Group": " Age: 0",
+        "Central death rate": 18.153461
+      },
+      {
+        "Year": 2007,
+        "Age_Group": " Age: 0",
+        "Central death rate": 16.68204
+      },
+      {
+        "Year": 2008,
+        "Age_Group": " Age: 0",
+        "Central death rate": 15.48969
+      },
+      {
+        "Year": 2009,
+        "Age_Group": " Age: 0",
+        "Central death rate": 14.20485
+      },
+      {
+        "Year": 2010,
+        "Age_Group": " Age: 0",
+        "Central death rate": 13.177019
+      },
+      {
+        "Year": 2011,
+        "Age_Group": " Age: 0",
+        "Central death rate": 12.19148
+      },
+      {
+        "Year": 2012,
+        "Age_Group": " Age: 0",
+        "Central death rate": 11.29397
+      },
+      {
+        "Year": 2013,
+        "Age_Group": " Age: 0",
+        "Central death rate": 10.45982
+      },
+      {
+        "Year": 2014,
+        "Age_Group": " Age: 0",
+        "Central death rate": 9.68471
+      },
+      {
+        "Year": 2015,
+        "Age_Group": " Age: 0",
+        "Central death rate": 8.96716
+      },
+      {
+        "Year": 2016,
+        "Age_Group": " Age: 0",
+        "Central death rate": 8.31015
+      },
+      {
+        "Year": 2017,
+        "Age_Group": " Age: 0",
+        "Central death rate": 7.6901298
+      },
+      {
+        "Year": 2018,
+        "Age_Group": " Age: 0",
+        "Central death rate": 7.12281
+      },
+      {
+        "Year": 2019,
+        "Age_Group": " Age: 0",
+        "Central death rate": 6.59678
+      },
+      {
+        "Year": 2020,
+        "Age_Group": " Age: 0",
+        "Central death rate": 6.11568
+      },
+      {
+        "Year": 2021,
+        "Age_Group": " Age: 0",
+        "Central death rate": 5.68203
+      },
+      {
+        "Year": 1950,
+        "Age_Group": "Age: 10",
+        "Central death rate": 6.42055
+      },
+      {
+        "Year": 1951,
+        "Age_Group": "Age: 10",
+        "Central death rate": 6.06491
+      },
+      {
+        "Year": 1952,
+        "Age_Group": "Age: 10",
+        "Central death rate": 5.75667
+      },
+      {
+        "Year": 1953,
+        "Age_Group": "Age: 10",
+        "Central death rate": 5.43468
+      },
+      {
+        "Year": 1954,
+        "Age_Group": "Age: 10",
+        "Central death rate": 5.19661
+      },
+      {
+        "Year": 1955,
+        "Age_Group": "Age: 10",
+        "Central death rate": 5.07403
+      },
+      {
+        "Year": 1956,
+        "Age_Group": "Age: 10",
+        "Central death rate": 4.9110103
+      },
+      {
+        "Year": 1957,
+        "Age_Group": "Age: 10",
+        "Central death rate": 4.7789702
+      },
+      {
+        "Year": 1958,
+        "Age_Group": "Age: 10",
+        "Central death rate": 4.69272
+      },
+      {
+        "Year": 1959,
+        "Age_Group": "Age: 10",
+        "Central death rate": 8.19783
+      },
+      {
+        "Year": 1960,
+        "Age_Group": "Age: 10",
+        "Central death rate": 10.96672
+      },
+      {
+        "Year": 1961,
+        "Age_Group": "Age: 10",
+        "Central death rate": 7.66149
+      },
+      {
+        "Year": 1962,
+        "Age_Group": "Age: 10",
+        "Central death rate": 4.0286403
+      },
+      {
+        "Year": 1963,
+        "Age_Group": "Age: 10",
+        "Central death rate": 3.92847
+      },
+      {
+        "Year": 1964,
+        "Age_Group": "Age: 10",
+        "Central death rate": 3.79933
+      },
+      {
+        "Year": 1965,
+        "Age_Group": "Age: 10",
+        "Central death rate": 3.63661
+      },
+      {
+        "Year": 1966,
+        "Age_Group": "Age: 10",
+        "Central death rate": 3.51301
+      },
+      {
+        "Year": 1967,
+        "Age_Group": "Age: 10",
+        "Central death rate": 3.37557
+      },
+      {
+        "Year": 1968,
+        "Age_Group": "Age: 10",
+        "Central death rate": 3.2391698
+      },
+      {
+        "Year": 1969,
+        "Age_Group": "Age: 10",
+        "Central death rate": 3.12319
+      },
+      {
+        "Year": 1970,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.99752
+      },
+      {
+        "Year": 1971,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.84993
+      },
+      {
+        "Year": 1972,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.7191799
+      },
+      {
+        "Year": 1973,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.56879
+      },
+      {
+        "Year": 1974,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.47668
+      },
+      {
+        "Year": 1975,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.37001
+      },
+      {
+        "Year": 1976,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.2356
+      },
+      {
+        "Year": 1977,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.1325998
+      },
+      {
+        "Year": 1978,
+        "Age_Group": "Age: 10",
+        "Central death rate": 2.03402
+      },
+      {
+        "Year": 1979,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.9280399
+      },
+      {
+        "Year": 1980,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.82673
+      },
+      {
+        "Year": 1981,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.73041
+      },
+      {
+        "Year": 1982,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.64573
+      },
+      {
+        "Year": 1983,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.5872099
+      },
+      {
+        "Year": 1984,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.50326
+      },
+      {
+        "Year": 1985,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.42312
+      },
+      {
+        "Year": 1986,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.3436999
+      },
+      {
+        "Year": 1987,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.27007
+      },
+      {
+        "Year": 1988,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.20262
+      },
+      {
+        "Year": 1989,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.1456
+      },
+      {
+        "Year": 1990,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.10585
+      },
+      {
+        "Year": 1991,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.07382
+      },
+      {
+        "Year": 1992,
+        "Age_Group": "Age: 10",
+        "Central death rate": 1.016
+      },
+      {
+        "Year": 1993,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.97725004
+      },
+      {
+        "Year": 1994,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.96329
+      },
+      {
+        "Year": 1995,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.93759996
+      },
+      {
+        "Year": 1996,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.93872
+      },
+      {
+        "Year": 1997,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.92996
+      },
+      {
+        "Year": 1998,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.91824
+      },
+      {
+        "Year": 1999,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.9257
+      },
+      {
+        "Year": 2000,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.91171
+      },
+      {
+        "Year": 2001,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.87369
+      },
+      {
+        "Year": 2002,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.85779
+      },
+      {
+        "Year": 2003,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.82463
+      },
+      {
+        "Year": 2004,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.77697
+      },
+      {
+        "Year": 2005,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.73687
+      },
+      {
+        "Year": 2006,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.70589
+      },
+      {
+        "Year": 2007,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.70307004
+      },
+      {
+        "Year": 2008,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.74987
+      },
+      {
+        "Year": 2009,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.68193
+      },
+      {
+        "Year": 2010,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.65984
+      },
+      {
+        "Year": 2011,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.63271
+      },
+      {
+        "Year": 2012,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.58523
+      },
+      {
+        "Year": 2013,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.53608
+      },
+      {
+        "Year": 2014,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.48812
+      },
+      {
+        "Year": 2015,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.44484
+      },
+      {
+        "Year": 2016,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.40896
+      },
+      {
+        "Year": 2017,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.38445
+      },
+      {
+        "Year": 2018,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.34712
+      },
+      {
+        "Year": 2019,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.32329
+      },
+      {
+        "Year": 2020,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.30293003
+      },
+      {
+        "Year": 2021,
+        "Age_Group": "Age: 10",
+        "Central death rate": 0.28251
+      },
+      {
+        "Year": 1950,
+        "Age_Group": "Age: 25",
+        "Central death rate": 6.8726497
+      },
+      {
+        "Year": 1951,
+        "Age_Group": "Age: 25",
+        "Central death rate": 6.537
+      },
+      {
+        "Year": 1952,
+        "Age_Group": "Age: 25",
+        "Central death rate": 6.27762
+      },
+      {
+        "Year": 1953,
+        "Age_Group": "Age: 25",
+        "Central death rate": 5.99563
+      },
+      {
+        "Year": 1954,
+        "Age_Group": "Age: 25",
+        "Central death rate": 5.79182
+      },
+      {
+        "Year": 1955,
+        "Age_Group": "Age: 25",
+        "Central death rate": 5.72097
+      },
+      {
+        "Year": 1956,
+        "Age_Group": "Age: 25",
+        "Central death rate": 5.58902
+      },
+      {
+        "Year": 1957,
+        "Age_Group": "Age: 25",
+        "Central death rate": 5.4383597
+      },
+      {
+        "Year": 1958,
+        "Age_Group": "Age: 25",
+        "Central death rate": 5.30825
+      },
+      {
+        "Year": 1959,
+        "Age_Group": "Age: 25",
+        "Central death rate": 7.1899
+      },
+      {
+        "Year": 1960,
+        "Age_Group": "Age: 25",
+        "Central death rate": 8.64487
+      },
+      {
+        "Year": 1961,
+        "Age_Group": "Age: 25",
+        "Central death rate": 6.79026
+      },
+      {
+        "Year": 1962,
+        "Age_Group": "Age: 25",
+        "Central death rate": 4.75204
+      },
+      {
+        "Year": 1963,
+        "Age_Group": "Age: 25",
+        "Central death rate": 4.57608
+      },
+      {
+        "Year": 1964,
+        "Age_Group": "Age: 25",
+        "Central death rate": 4.36613
+      },
+      {
+        "Year": 1965,
+        "Age_Group": "Age: 25",
+        "Central death rate": 4.15951
+      },
+      {
+        "Year": 1966,
+        "Age_Group": "Age: 25",
+        "Central death rate": 3.9898303
+      },
+      {
+        "Year": 1967,
+        "Age_Group": "Age: 25",
+        "Central death rate": 3.80036
+      },
+      {
+        "Year": 1968,
+        "Age_Group": "Age: 25",
+        "Central death rate": 3.6096802
+      },
+      {
+        "Year": 1969,
+        "Age_Group": "Age: 25",
+        "Central death rate": 3.44336
+      },
+      {
+        "Year": 1970,
+        "Age_Group": "Age: 25",
+        "Central death rate": 3.26087
+      },
+      {
+        "Year": 1971,
+        "Age_Group": "Age: 25",
+        "Central death rate": 3.07636
+      },
+      {
+        "Year": 1972,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.94431
+      },
+      {
+        "Year": 1973,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.8095
+      },
+      {
+        "Year": 1974,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.76036
+      },
+      {
+        "Year": 1975,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.47899
+      },
+      {
+        "Year": 1976,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.35757
+      },
+      {
+        "Year": 1977,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.27957
+      },
+      {
+        "Year": 1978,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.22324
+      },
+      {
+        "Year": 1979,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.16417
+      },
+      {
+        "Year": 1980,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.0952199
+      },
+      {
+        "Year": 1981,
+        "Age_Group": "Age: 25",
+        "Central death rate": 2.02881
+      },
+      {
+        "Year": 1982,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.9723101
+      },
+      {
+        "Year": 1983,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.9183099
+      },
+      {
+        "Year": 1984,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.86797
+      },
+      {
+        "Year": 1985,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.82351
+      },
+      {
+        "Year": 1986,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.78122
+      },
+      {
+        "Year": 1987,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.72828
+      },
+      {
+        "Year": 1988,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.6798999
+      },
+      {
+        "Year": 1989,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.6371
+      },
+      {
+        "Year": 1990,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.6036
+      },
+      {
+        "Year": 1991,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.57279
+      },
+      {
+        "Year": 1992,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.49121
+      },
+      {
+        "Year": 1993,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.42128
+      },
+      {
+        "Year": 1994,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.36874
+      },
+      {
+        "Year": 1995,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.29837
+      },
+      {
+        "Year": 1996,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.2515501
+      },
+      {
+        "Year": 1997,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.19796
+      },
+      {
+        "Year": 1998,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.15591
+      },
+      {
+        "Year": 1999,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.11829
+      },
+      {
+        "Year": 2000,
+        "Age_Group": "Age: 25",
+        "Central death rate": 1.06372
+      },
+      {
+        "Year": 2001,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.98805004
+      },
+      {
+        "Year": 2002,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.94722
+      },
+      {
+        "Year": 2003,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.90805
+      },
+      {
+        "Year": 2004,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.87343
+      },
+      {
+        "Year": 2005,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.84279
+      },
+      {
+        "Year": 2006,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.81229
+      },
+      {
+        "Year": 2007,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.79854
+      },
+      {
+        "Year": 2008,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.82898
+      },
+      {
+        "Year": 2009,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.77775997
+      },
+      {
+        "Year": 2010,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.77566
+      },
+      {
+        "Year": 2011,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.77099997
+      },
+      {
+        "Year": 2012,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.7721
+      },
+      {
+        "Year": 2013,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.77568
+      },
+      {
+        "Year": 2014,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.77709997
+      },
+      {
+        "Year": 2015,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.77352
+      },
+      {
+        "Year": 2016,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.76884
+      },
+      {
+        "Year": 2017,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.77467
+      },
+      {
+        "Year": 2018,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.72652996
+      },
+      {
+        "Year": 2019,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.68688005
+      },
+      {
+        "Year": 2020,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.65856004
+      },
+      {
+        "Year": 2021,
+        "Age_Group": "Age: 25",
+        "Central death rate": 0.63495
+      },
+      {
+        "Year": 1950,
+        "Age_Group": "Age: 45",
+        "Central death rate": 15.30931
+      },
+      {
+        "Year": 1951,
+        "Age_Group": "Age: 45",
+        "Central death rate": 14.76406
+      },
+      {
+        "Year": 1952,
+        "Age_Group": "Age: 45",
+        "Central death rate": 14.32673
+      },
+      {
+        "Year": 1953,
+        "Age_Group": "Age: 45",
+        "Central death rate": 13.79429
+      },
+      {
+        "Year": 1954,
+        "Age_Group": "Age: 45",
+        "Central death rate": 13.41072
+      },
+      {
+        "Year": 1955,
+        "Age_Group": "Age: 45",
+        "Central death rate": 13.34544
+      },
+      {
+        "Year": 1956,
+        "Age_Group": "Age: 45",
+        "Central death rate": 13.09475
+      },
+      {
+        "Year": 1957,
+        "Age_Group": "Age: 45",
+        "Central death rate": 12.83716
+      },
+      {
+        "Year": 1958,
+        "Age_Group": "Age: 45",
+        "Central death rate": 12.59684
+      },
+      {
+        "Year": 1959,
+        "Age_Group": "Age: 45",
+        "Central death rate": 16.41037
+      },
+      {
+        "Year": 1960,
+        "Age_Group": "Age: 45",
+        "Central death rate": 19.65049
+      },
+      {
+        "Year": 1961,
+        "Age_Group": "Age: 45",
+        "Central death rate": 15.749419
+      },
+      {
+        "Year": 1962,
+        "Age_Group": "Age: 45",
+        "Central death rate": 11.50218
+      },
+      {
+        "Year": 1963,
+        "Age_Group": "Age: 45",
+        "Central death rate": 11.1335
+      },
+      {
+        "Year": 1964,
+        "Age_Group": "Age: 45",
+        "Central death rate": 10.68391
+      },
+      {
+        "Year": 1965,
+        "Age_Group": "Age: 45",
+        "Central death rate": 10.2447195
+      },
+      {
+        "Year": 1966,
+        "Age_Group": "Age: 45",
+        "Central death rate": 9.81895
+      },
+      {
+        "Year": 1967,
+        "Age_Group": "Age: 45",
+        "Central death rate": 9.3925
+      },
+      {
+        "Year": 1968,
+        "Age_Group": "Age: 45",
+        "Central death rate": 8.97737
+      },
+      {
+        "Year": 1969,
+        "Age_Group": "Age: 45",
+        "Central death rate": 8.60826
+      },
+      {
+        "Year": 1970,
+        "Age_Group": "Age: 45",
+        "Central death rate": 8.214971
+      },
+      {
+        "Year": 1971,
+        "Age_Group": "Age: 45",
+        "Central death rate": 7.79776
+      },
+      {
+        "Year": 1972,
+        "Age_Group": "Age: 45",
+        "Central death rate": 7.4724298
+      },
+      {
+        "Year": 1973,
+        "Age_Group": "Age: 45",
+        "Central death rate": 7.09369
+      },
+      {
+        "Year": 1974,
+        "Age_Group": "Age: 45",
+        "Central death rate": 6.85517
+      },
+      {
+        "Year": 1975,
+        "Age_Group": "Age: 45",
+        "Central death rate": 6.6371603
+      },
+      {
+        "Year": 1976,
+        "Age_Group": "Age: 45",
+        "Central death rate": 6.37565
+      },
+      {
+        "Year": 1977,
+        "Age_Group": "Age: 45",
+        "Central death rate": 6.15482
+      },
+      {
+        "Year": 1978,
+        "Age_Group": "Age: 45",
+        "Central death rate": 5.96144
+      },
+      {
+        "Year": 1979,
+        "Age_Group": "Age: 45",
+        "Central death rate": 5.7659
+      },
+      {
+        "Year": 1980,
+        "Age_Group": "Age: 45",
+        "Central death rate": 5.5890102
+      },
+      {
+        "Year": 1981,
+        "Age_Group": "Age: 45",
+        "Central death rate": 5.40553
+      },
+      {
+        "Year": 1982,
+        "Age_Group": "Age: 45",
+        "Central death rate": 5.2372904
+      },
+      {
+        "Year": 1983,
+        "Age_Group": "Age: 45",
+        "Central death rate": 5.0715504
+      },
+      {
+        "Year": 1984,
+        "Age_Group": "Age: 45",
+        "Central death rate": 4.89628
+      },
+      {
+        "Year": 1985,
+        "Age_Group": "Age: 45",
+        "Central death rate": 4.72858
+      },
+      {
+        "Year": 1986,
+        "Age_Group": "Age: 45",
+        "Central death rate": 4.56033
+      },
+      {
+        "Year": 1987,
+        "Age_Group": "Age: 45",
+        "Central death rate": 4.39118
+      },
+      {
+        "Year": 1988,
+        "Age_Group": "Age: 45",
+        "Central death rate": 4.23377
+      },
+      {
+        "Year": 1989,
+        "Age_Group": "Age: 45",
+        "Central death rate": 4.1011896
+      },
+      {
+        "Year": 1990,
+        "Age_Group": "Age: 45",
+        "Central death rate": 4.0124197
+      },
+      {
+        "Year": 1991,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.9385
+      },
+      {
+        "Year": 1992,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.7727602
+      },
+      {
+        "Year": 1993,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.67254
+      },
+      {
+        "Year": 1994,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.66775
+      },
+      {
+        "Year": 1995,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.3124
+      },
+      {
+        "Year": 1996,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.2871802
+      },
+      {
+        "Year": 1997,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.22498
+      },
+      {
+        "Year": 1998,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.16281
+      },
+      {
+        "Year": 1999,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.1588001
+      },
+      {
+        "Year": 2000,
+        "Age_Group": "Age: 45",
+        "Central death rate": 3.0822802
+      },
+      {
+        "Year": 2001,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.95187
+      },
+      {
+        "Year": 2002,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.91647
+      },
+      {
+        "Year": 2003,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.87875
+      },
+      {
+        "Year": 2004,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.8456998
+      },
+      {
+        "Year": 2005,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.81106
+      },
+      {
+        "Year": 2006,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.76777
+      },
+      {
+        "Year": 2007,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.74313
+      },
+      {
+        "Year": 2008,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.76433
+      },
+      {
+        "Year": 2009,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.6645901
+      },
+      {
+        "Year": 2010,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.6222
+      },
+      {
+        "Year": 2011,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.5690901
+      },
+      {
+        "Year": 2012,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.5133
+      },
+      {
+        "Year": 2013,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.45132
+      },
+      {
+        "Year": 2014,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.37428
+      },
+      {
+        "Year": 2015,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.28705
+      },
+      {
+        "Year": 2016,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.21569
+      },
+      {
+        "Year": 2017,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.19823
+      },
+      {
+        "Year": 2018,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.09813
+      },
+      {
+        "Year": 2019,
+        "Age_Group": "Age: 45",
+        "Central death rate": 2.02249
+      },
+      {
+        "Year": 2020,
+        "Age_Group": "Age: 45",
+        "Central death rate": 1.95965
+      },
+      {
+        "Year": 2021,
+        "Age_Group": "Age: 45",
+        "Central death rate": 1.8805599
+      },
+      {
+        "Year": 1950,
+        "Age_Group": "Age: 65",
+        "Central death rate": 67.21733
+      },
+      {
+        "Year": 1951,
+        "Age_Group": "Age: 65",
+        "Central death rate": 65.420746
+      },
+      {
+        "Year": 1952,
+        "Age_Group": "Age: 65",
+        "Central death rate": 64.00618
+      },
+      {
+        "Year": 1953,
+        "Age_Group": "Age: 65",
+        "Central death rate": 62.17857
+      },
+      {
+        "Year": 1954,
+        "Age_Group": "Age: 65",
+        "Central death rate": 61.02921
+      },
+      {
+        "Year": 1955,
+        "Age_Group": "Age: 65",
+        "Central death rate": 61.34971
+      },
+      {
+        "Year": 1956,
+        "Age_Group": "Age: 65",
+        "Central death rate": 60.70937
+      },
+      {
+        "Year": 1957,
+        "Age_Group": "Age: 65",
+        "Central death rate": 60.16502
+      },
+      {
+        "Year": 1958,
+        "Age_Group": "Age: 65",
+        "Central death rate": 59.58366
+      },
+      {
+        "Year": 1959,
+        "Age_Group": "Age: 65",
+        "Central death rate": 71.53044
+      },
+      {
+        "Year": 1960,
+        "Age_Group": "Age: 65",
+        "Central death rate": 81.92916
+      },
+      {
+        "Year": 1961,
+        "Age_Group": "Age: 65",
+        "Central death rate": 69.55885
+      },
+      {
+        "Year": 1962,
+        "Age_Group": "Age: 65",
+        "Central death rate": 56.1789
+      },
+      {
+        "Year": 1963,
+        "Age_Group": "Age: 65",
+        "Central death rate": 54.862648
+      },
+      {
+        "Year": 1964,
+        "Age_Group": "Age: 65",
+        "Central death rate": 53.20426
+      },
+      {
+        "Year": 1965,
+        "Age_Group": "Age: 65",
+        "Central death rate": 51.67056
+      },
+      {
+        "Year": 1966,
+        "Age_Group": "Age: 65",
+        "Central death rate": 50.12589
+      },
+      {
+        "Year": 1967,
+        "Age_Group": "Age: 65",
+        "Central death rate": 48.79176
+      },
+      {
+        "Year": 1968,
+        "Age_Group": "Age: 65",
+        "Central death rate": 47.522167
+      },
+      {
+        "Year": 1969,
+        "Age_Group": "Age: 65",
+        "Central death rate": 46.38683
+      },
+      {
+        "Year": 1970,
+        "Age_Group": "Age: 65",
+        "Central death rate": 44.98262
+      },
+      {
+        "Year": 1971,
+        "Age_Group": "Age: 65",
+        "Central death rate": 43.322178
+      },
+      {
+        "Year": 1972,
+        "Age_Group": "Age: 65",
+        "Central death rate": 41.981552
+      },
+      {
+        "Year": 1973,
+        "Age_Group": "Age: 65",
+        "Central death rate": 40.210228
+      },
+      {
+        "Year": 1974,
+        "Age_Group": "Age: 65",
+        "Central death rate": 39.06
+      },
+      {
+        "Year": 1975,
+        "Age_Group": "Age: 65",
+        "Central death rate": 38.1159
+      },
+      {
+        "Year": 1976,
+        "Age_Group": "Age: 65",
+        "Central death rate": 37.1205
+      },
+      {
+        "Year": 1977,
+        "Age_Group": "Age: 65",
+        "Central death rate": 36.059143
+      },
+      {
+        "Year": 1978,
+        "Age_Group": "Age: 65",
+        "Central death rate": 35.11651
+      },
+      {
+        "Year": 1979,
+        "Age_Group": "Age: 65",
+        "Central death rate": 34.15889
+      },
+      {
+        "Year": 1980,
+        "Age_Group": "Age: 65",
+        "Central death rate": 33.289368
+      },
+      {
+        "Year": 1981,
+        "Age_Group": "Age: 65",
+        "Central death rate": 32.32358
+      },
+      {
+        "Year": 1982,
+        "Age_Group": "Age: 65",
+        "Central death rate": 31.425652
+      },
+      {
+        "Year": 1983,
+        "Age_Group": "Age: 65",
+        "Central death rate": 30.56518
+      },
+      {
+        "Year": 1984,
+        "Age_Group": "Age: 65",
+        "Central death rate": 29.68926
+      },
+      {
+        "Year": 1985,
+        "Age_Group": "Age: 65",
+        "Central death rate": 28.87074
+      },
+      {
+        "Year": 1986,
+        "Age_Group": "Age: 65",
+        "Central death rate": 28.032091
+      },
+      {
+        "Year": 1987,
+        "Age_Group": "Age: 65",
+        "Central death rate": 27.18442
+      },
+      {
+        "Year": 1988,
+        "Age_Group": "Age: 65",
+        "Central death rate": 26.37628
+      },
+      {
+        "Year": 1989,
+        "Age_Group": "Age: 65",
+        "Central death rate": 25.70597
+      },
+      {
+        "Year": 1990,
+        "Age_Group": "Age: 65",
+        "Central death rate": 25.35652
+      },
+      {
+        "Year": 1991,
+        "Age_Group": "Age: 65",
+        "Central death rate": 25.06495
+      },
+      {
+        "Year": 1992,
+        "Age_Group": "Age: 65",
+        "Central death rate": 24.04088
+      },
+      {
+        "Year": 1993,
+        "Age_Group": "Age: 65",
+        "Central death rate": 23.28189
+      },
+      {
+        "Year": 1994,
+        "Age_Group": "Age: 65",
+        "Central death rate": 22.93898
+      },
+      {
+        "Year": 1995,
+        "Age_Group": "Age: 65",
+        "Central death rate": 22.2787
+      },
+      {
+        "Year": 1996,
+        "Age_Group": "Age: 65",
+        "Central death rate": 22.12993
+      },
+      {
+        "Year": 1997,
+        "Age_Group": "Age: 65",
+        "Central death rate": 21.68681
+      },
+      {
+        "Year": 1998,
+        "Age_Group": "Age: 65",
+        "Central death rate": 21.096891
+      },
+      {
+        "Year": 1999,
+        "Age_Group": "Age: 65",
+        "Central death rate": 20.972591
+      },
+      {
+        "Year": 2000,
+        "Age_Group": "Age: 65",
+        "Central death rate": 20.48461
+      },
+      {
+        "Year": 2001,
+        "Age_Group": "Age: 65",
+        "Central death rate": 19.562891
+      },
+      {
+        "Year": 2002,
+        "Age_Group": "Age: 65",
+        "Central death rate": 19.27458
+      },
+      {
+        "Year": 2003,
+        "Age_Group": "Age: 65",
+        "Central death rate": 18.952019
+      },
+      {
+        "Year": 2004,
+        "Age_Group": "Age: 65",
+        "Central death rate": 18.57228
+      },
+      {
+        "Year": 2005,
+        "Age_Group": "Age: 65",
+        "Central death rate": 18.14654
+      },
+      {
+        "Year": 2006,
+        "Age_Group": "Age: 65",
+        "Central death rate": 17.63577
+      },
+      {
+        "Year": 2007,
+        "Age_Group": "Age: 65",
+        "Central death rate": 17.34233
+      },
+      {
+        "Year": 2008,
+        "Age_Group": "Age: 65",
+        "Central death rate": 17.09952
+      },
+      {
+        "Year": 2009,
+        "Age_Group": "Age: 65",
+        "Central death rate": 16.61968
+      },
+      {
+        "Year": 2010,
+        "Age_Group": "Age: 65",
+        "Central death rate": 16.298359
+      },
+      {
+        "Year": 2011,
+        "Age_Group": "Age: 65",
+        "Central death rate": 15.99171
+      },
+      {
+        "Year": 2012,
+        "Age_Group": "Age: 65",
+        "Central death rate": 15.801569
+      },
+      {
+        "Year": 2013,
+        "Age_Group": "Age: 65",
+        "Central death rate": 15.721301
+      },
+      {
+        "Year": 2014,
+        "Age_Group": "Age: 65",
+        "Central death rate": 15.772911
+      },
+      {
+        "Year": 2015,
+        "Age_Group": "Age: 65",
+        "Central death rate": 14.52012
+      },
+      {
+        "Year": 2016,
+        "Age_Group": "Age: 65",
+        "Central death rate": 14.42251
+      },
+      {
+        "Year": 2017,
+        "Age_Group": "Age: 65",
+        "Central death rate": 14.65662
+      },
+      {
+        "Year": 2018,
+        "Age_Group": "Age: 65",
+        "Central death rate": 14.224501
+      },
+      {
+        "Year": 2019,
+        "Age_Group": "Age: 65",
+        "Central death rate": 14.16306
+      },
+      {
+        "Year": 2020,
+        "Age_Group": "Age: 65",
+        "Central death rate": 14.06876
+      },
+      {
+        "Year": 2021,
+        "Age_Group": "Age: 65",
+        "Central death rate": 13.9666195
+      },
+      {
+        "Year": 1950,
+        "Age_Group": "Age: 80",
+        "Central death rate": 185.28659
+      },
+      {
+        "Year": 1951,
+        "Age_Group": "Age: 80",
+        "Central death rate": 183.97386
+      },
+      {
+        "Year": 1952,
+        "Age_Group": "Age: 80",
+        "Central death rate": 183.08478
+      },
+      {
+        "Year": 1953,
+        "Age_Group": "Age: 80",
+        "Central death rate": 181.16322
+      },
+      {
+        "Year": 1954,
+        "Age_Group": "Age: 80",
+        "Central death rate": 180.1911
+      },
+      {
+        "Year": 1955,
+        "Age_Group": "Age: 80",
+        "Central death rate": 182.5899
+      },
+      {
+        "Year": 1956,
+        "Age_Group": "Age: 80",
+        "Central death rate": 182.33987
+      },
+      {
+        "Year": 1957,
+        "Age_Group": "Age: 80",
+        "Central death rate": 182.09453
+      },
+      {
+        "Year": 1958,
+        "Age_Group": "Age: 80",
+        "Central death rate": 182.0063
+      },
+      {
+        "Year": 1959,
+        "Age_Group": "Age: 80",
+        "Central death rate": 209.23535
+      },
+      {
+        "Year": 1960,
+        "Age_Group": "Age: 80",
+        "Central death rate": 233.61987
+      },
+      {
+        "Year": 1961,
+        "Age_Group": "Age: 80",
+        "Central death rate": 209.49852
+      },
+      {
+        "Year": 1962,
+        "Age_Group": "Age: 80",
+        "Central death rate": 183.18253
+      },
+      {
+        "Year": 1963,
+        "Age_Group": "Age: 80",
+        "Central death rate": 182.46648
+      },
+      {
+        "Year": 1964,
+        "Age_Group": "Age: 80",
+        "Central death rate": 180.00537
+      },
+      {
+        "Year": 1965,
+        "Age_Group": "Age: 80",
+        "Central death rate": 176.74055
+      },
+      {
+        "Year": 1966,
+        "Age_Group": "Age: 80",
+        "Central death rate": 172.94534
+      },
+      {
+        "Year": 1967,
+        "Age_Group": "Age: 80",
+        "Central death rate": 169.10875
+      },
+      {
+        "Year": 1968,
+        "Age_Group": "Age: 80",
+        "Central death rate": 165.36807
+      },
+      {
+        "Year": 1969,
+        "Age_Group": "Age: 80",
+        "Central death rate": 162.09218
+      },
+      {
+        "Year": 1970,
+        "Age_Group": "Age: 80",
+        "Central death rate": 157.89194
+      },
+      {
+        "Year": 1971,
+        "Age_Group": "Age: 80",
+        "Central death rate": 152.96138
+      },
+      {
+        "Year": 1972,
+        "Age_Group": "Age: 80",
+        "Central death rate": 148.61478
+      },
+      {
+        "Year": 1973,
+        "Age_Group": "Age: 80",
+        "Central death rate": 142.66199
+      },
+      {
+        "Year": 1974,
+        "Age_Group": "Age: 80",
+        "Central death rate": 138.49231
+      },
+      {
+        "Year": 1975,
+        "Age_Group": "Age: 80",
+        "Central death rate": 135.19954
+      },
+      {
+        "Year": 1976,
+        "Age_Group": "Age: 80",
+        "Central death rate": 131.79956
+      },
+      {
+        "Year": 1977,
+        "Age_Group": "Age: 80",
+        "Central death rate": 128.14655
+      },
+      {
+        "Year": 1978,
+        "Age_Group": "Age: 80",
+        "Central death rate": 125.10506
+      },
+      {
+        "Year": 1979,
+        "Age_Group": "Age: 80",
+        "Central death rate": 122.25773
+      },
+      {
+        "Year": 1980,
+        "Age_Group": "Age: 80",
+        "Central death rate": 120.01495
+      },
+      {
+        "Year": 1981,
+        "Age_Group": "Age: 80",
+        "Central death rate": 117.82277
+      },
+      {
+        "Year": 1982,
+        "Age_Group": "Age: 80",
+        "Central death rate": 116.13206
+      },
+      {
+        "Year": 1983,
+        "Age_Group": "Age: 80",
+        "Central death rate": 114.61245
+      },
+      {
+        "Year": 1984,
+        "Age_Group": "Age: 80",
+        "Central death rate": 113.253075
+      },
+      {
+        "Year": 1985,
+        "Age_Group": "Age: 80",
+        "Central death rate": 111.94489
+      },
+      {
+        "Year": 1986,
+        "Age_Group": "Age: 80",
+        "Central death rate": 110.56239
+      },
+      {
+        "Year": 1987,
+        "Age_Group": "Age: 80",
+        "Central death rate": 108.92754
+      },
+      {
+        "Year": 1988,
+        "Age_Group": "Age: 80",
+        "Central death rate": 107.37468
+      },
+      {
+        "Year": 1989,
+        "Age_Group": "Age: 80",
+        "Central death rate": 106.2553
+      },
+      {
+        "Year": 1990,
+        "Age_Group": "Age: 80",
+        "Central death rate": 106.410866
+      },
+      {
+        "Year": 1991,
+        "Age_Group": "Age: 80",
+        "Central death rate": 106.88916
+      },
+      {
+        "Year": 1992,
+        "Age_Group": "Age: 80",
+        "Central death rate": 102.97728
+      },
+      {
+        "Year": 1993,
+        "Age_Group": "Age: 80",
+        "Central death rate": 99.96917
+      },
+      {
+        "Year": 1994,
+        "Age_Group": "Age: 80",
+        "Central death rate": 99.10971
+      },
+      {
+        "Year": 1995,
+        "Age_Group": "Age: 80",
+        "Central death rate": 96.108284
+      },
+      {
+        "Year": 1996,
+        "Age_Group": "Age: 80",
+        "Central death rate": 95.55559
+      },
+      {
+        "Year": 1997,
+        "Age_Group": "Age: 80",
+        "Central death rate": 93.58582
+      },
+      {
+        "Year": 1998,
+        "Age_Group": "Age: 80",
+        "Central death rate": 90.57491
+      },
+      {
+        "Year": 1999,
+        "Age_Group": "Age: 80",
+        "Central death rate": 90.598175
+      },
+      {
+        "Year": 2000,
+        "Age_Group": "Age: 80",
+        "Central death rate": 88.24253
+      },
+      {
+        "Year": 2001,
+        "Age_Group": "Age: 80",
+        "Central death rate": 83.46787
+      },
+      {
+        "Year": 2002,
+        "Age_Group": "Age: 80",
+        "Central death rate": 82.06922
+      },
+      {
+        "Year": 2003,
+        "Age_Group": "Age: 80",
+        "Central death rate": 80.72
+      },
+      {
+        "Year": 2004,
+        "Age_Group": "Age: 80",
+        "Central death rate": 79.42476
+      },
+      {
+        "Year": 2005,
+        "Age_Group": "Age: 80",
+        "Central death rate": 78.14498
+      },
+      {
+        "Year": 2006,
+        "Age_Group": "Age: 80",
+        "Central death rate": 76.79029
+      },
+      {
+        "Year": 2007,
+        "Age_Group": "Age: 80",
+        "Central death rate": 76.35727
+      },
+      {
+        "Year": 2008,
+        "Age_Group": "Age: 80",
+        "Central death rate": 75.88466
+      },
+      {
+        "Year": 2009,
+        "Age_Group": "Age: 80",
+        "Central death rate": 74.889755
+      },
+      {
+        "Year": 2010,
+        "Age_Group": "Age: 80",
+        "Central death rate": 74.27601
+      },
+      {
+        "Year": 2011,
+        "Age_Group": "Age: 80",
+        "Central death rate": 73.466515
+      },
+      {
+        "Year": 2012,
+        "Age_Group": "Age: 80",
+        "Central death rate": 72.55333
+      },
+      {
+        "Year": 2013,
+        "Age_Group": "Age: 80",
+        "Central death rate": 71.80877
+      },
+      {
+        "Year": 2014,
+        "Age_Group": "Age: 80",
+        "Central death rate": 70.88168
+      },
+      {
+        "Year": 2015,
+        "Age_Group": "Age: 80",
+        "Central death rate": 69.85217
+      },
+      {
+        "Year": 2016,
+        "Age_Group": "Age: 80",
+        "Central death rate": 68.92091
+      },
+      {
+        "Year": 2017,
+        "Age_Group": "Age: 80",
+        "Central death rate": 69.29946
+      },
+      {
+        "Year": 2018,
+        "Age_Group": "Age: 80",
+        "Central death rate": 66.6098
+      },
+      {
+        "Year": 2019,
+        "Age_Group": "Age: 80",
+        "Central death rate": 65.47539
+      },
+      {
+        "Year": 2020,
+        "Age_Group": "Age: 80",
+        "Central death rate": 65.58294
+      },
+      {
+        "Year": 2021,
+        "Age_Group": "Age: 80",
+        "Central death rate": 65.439415
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Central death rate",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Age_Group",
+      "type": "nominal"
+    }
+  }
+}

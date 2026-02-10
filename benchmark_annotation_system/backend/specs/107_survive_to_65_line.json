@@ -1,0 +1,3004 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "China annual death rate in each Age group",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "Entity": "Belgium",
+        "Year": 1960,
+        "Survival to age 65, female (% of cohort)": 80.02715,
+        "Survival to age 65, male (% of cohort)": 65.642555
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1961,
+        "Survival to age 65, female (% of cohort)": 81.122925,
+        "Survival to age 65, male (% of cohort)": 67.09596
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1962,
+        "Survival to age 65, female (% of cohort)": 80.639114,
+        "Survival to age 65, male (% of cohort)": 66.70172
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1963,
+        "Survival to age 65, female (% of cohort)": 80.73329,
+        "Survival to age 65, male (% of cohort)": 66.268875
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1964,
+        "Survival to age 65, female (% of cohort)": 81.466545,
+        "Survival to age 65, male (% of cohort)": 67.30763
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1965,
+        "Survival to age 65, female (% of cohort)": 81.084496,
+        "Survival to age 65, male (% of cohort)": 66.812256
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1966,
+        "Survival to age 65, female (% of cohort)": 81.20165,
+        "Survival to age 65, male (% of cohort)": 67.262276
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1967,
+        "Survival to age 65, female (% of cohort)": 81.78309,
+        "Survival to age 65, male (% of cohort)": 67.50629
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1968,
+        "Survival to age 65, female (% of cohort)": 81.59596,
+        "Survival to age 65, male (% of cohort)": 67.17035
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1969,
+        "Survival to age 65, female (% of cohort)": 81.69952,
+        "Survival to age 65, male (% of cohort)": 67.06098
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1970,
+        "Survival to age 65, female (% of cohort)": 81.7311,
+        "Survival to age 65, male (% of cohort)": 67.76344
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1971,
+        "Survival to age 65, female (% of cohort)": 82.18755,
+        "Survival to age 65, male (% of cohort)": 67.94265
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1972,
+        "Survival to age 65, female (% of cohort)": 82.49544,
+        "Survival to age 65, male (% of cohort)": 68.49012
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1973,
+        "Survival to age 65, female (% of cohort)": 82.891205,
+        "Survival to age 65, male (% of cohort)": 69.25689
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1974,
+        "Survival to age 65, female (% of cohort)": 83.285286,
+        "Survival to age 65, male (% of cohort)": 69.98834
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1975,
+        "Survival to age 65, female (% of cohort)": 83.359406,
+        "Survival to age 65, male (% of cohort)": 70.22375
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1976,
+        "Survival to age 65, female (% of cohort)": 83.67051,
+        "Survival to age 65, male (% of cohort)": 70.132
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1977,
+        "Survival to age 65, female (% of cohort)": 84.10797,
+        "Survival to age 65, male (% of cohort)": 71.16245
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1978,
+        "Survival to age 65, female (% of cohort)": 84.13522,
+        "Survival to age 65, male (% of cohort)": 70.97609
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1979,
+        "Survival to age 65, female (% of cohort)": 84.74922,
+        "Survival to age 65, male (% of cohort)": 71.80555
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1980,
+        "Survival to age 65, female (% of cohort)": 84.98646,
+        "Survival to age 65, male (% of cohort)": 71.7131
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1981,
+        "Survival to age 65, female (% of cohort)": 85.31258,
+        "Survival to age 65, male (% of cohort)": 73.03092
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1982,
+        "Survival to age 65, female (% of cohort)": 85.44947,
+        "Survival to age 65, male (% of cohort)": 73.288284
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1983,
+        "Survival to age 65, female (% of cohort)": 85.59518,
+        "Survival to age 65, male (% of cohort)": 73.59577
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1984,
+        "Survival to age 65, female (% of cohort)": 86.29,
+        "Survival to age 65, male (% of cohort)": 74.29448
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1985,
+        "Survival to age 65, female (% of cohort)": 86.551216,
+        "Survival to age 65, male (% of cohort)": 74.4263
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1986,
+        "Survival to age 65, female (% of cohort)": 86.65467,
+        "Survival to age 65, male (% of cohort)": 75.30206
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1987,
+        "Survival to age 65, female (% of cohort)": 87.28988,
+        "Survival to age 65, male (% of cohort)": 75.9778
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1988,
+        "Survival to age 65, female (% of cohort)": 87.60112,
+        "Survival to age 65, male (% of cohort)": 76.64956
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1989,
+        "Survival to age 65, female (% of cohort)": 87.64438,
+        "Survival to age 65, male (% of cohort)": 77.3403
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1990,
+        "Survival to age 65, female (% of cohort)": 88.02112,
+        "Survival to age 65, male (% of cohort)": 77.81768
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1991,
+        "Survival to age 65, female (% of cohort)": 88.234634,
+        "Survival to age 65, male (% of cohort)": 77.98916
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1992,
+        "Survival to age 65, female (% of cohort)": 88.246864,
+        "Survival to age 65, male (% of cohort)": 78.21162
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1993,
+        "Survival to age 65, female (% of cohort)": 88.68539,
+        "Survival to age 65, male (% of cohort)": 78.528366
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1994,
+        "Survival to age 65, female (% of cohort)": 88.51437,
+        "Survival to age 65, male (% of cohort)": 78.88682
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1995,
+        "Survival to age 65, female (% of cohort)": 88.70957,
+        "Survival to age 65, male (% of cohort)": 78.84764
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1996,
+        "Survival to age 65, female (% of cohort)": 89.2077,
+        "Survival to age 65, male (% of cohort)": 79.66113
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1997,
+        "Survival to age 65, female (% of cohort)": 89.1196,
+        "Survival to age 65, male (% of cohort)": 80.12369
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1998,
+        "Survival to age 65, female (% of cohort)": 89.06158,
+        "Survival to age 65, male (% of cohort)": 80.285545
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 1999,
+        "Survival to age 65, female (% of cohort)": 89.51589,
+        "Survival to age 65, male (% of cohort)": 80.02904
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2000,
+        "Survival to age 65, female (% of cohort)": 89.36393,
+        "Survival to age 65, male (% of cohort)": 80.549225
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2001,
+        "Survival to age 65, female (% of cohort)": 89.6556,
+        "Survival to age 65, male (% of cohort)": 80.73222
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2002,
+        "Survival to age 65, female (% of cohort)": 89.6161,
+        "Survival to age 65, male (% of cohort)": 81.1085
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2003,
+        "Survival to age 65, female (% of cohort)": 89.75147,
+        "Survival to age 65, male (% of cohort)": 81.51171
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2004,
+        "Survival to age 65, female (% of cohort)": 90.297935,
+        "Survival to age 65, male (% of cohort)": 82.18762
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2005,
+        "Survival to age 65, female (% of cohort)": 90.18509,
+        "Survival to age 65, male (% of cohort)": 82.33735
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2006,
+        "Survival to age 65, female (% of cohort)": 90.414536,
+        "Survival to age 65, male (% of cohort)": 82.76256
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2007,
+        "Survival to age 65, female (% of cohort)": 90.20404,
+        "Survival to age 65, male (% of cohort)": 83.067795
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2008,
+        "Survival to age 65, female (% of cohort)": 90.386444,
+        "Survival to age 65, male (% of cohort)": 82.70047
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2009,
+        "Survival to age 65, female (% of cohort)": 90.44061,
+        "Survival to age 65, male (% of cohort)": 83.4372
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2010,
+        "Survival to age 65, female (% of cohort)": 90.59267,
+        "Survival to age 65, male (% of cohort)": 83.87734
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2011,
+        "Survival to age 65, female (% of cohort)": 90.58363,
+        "Survival to age 65, male (% of cohort)": 84.22936
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2012,
+        "Survival to age 65, female (% of cohort)": 90.92305,
+        "Survival to age 65, male (% of cohort)": 84.217766
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2013,
+        "Survival to age 65, female (% of cohort)": 90.87576,
+        "Survival to age 65, male (% of cohort)": 84.89579
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2014,
+        "Survival to age 65, female (% of cohort)": 91.44731,
+        "Survival to age 65, male (% of cohort)": 85.56828
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2015,
+        "Survival to age 65, female (% of cohort)": 91.05493,
+        "Survival to age 65, male (% of cohort)": 85.589615
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2016,
+        "Survival to age 65, female (% of cohort)": 91.58541,
+        "Survival to age 65, male (% of cohort)": 85.98518
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2017,
+        "Survival to age 65, female (% of cohort)": 91.7524,
+        "Survival to age 65, male (% of cohort)": 86.459404
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2018,
+        "Survival to age 65, female (% of cohort)": 91.67264,
+        "Survival to age 65, male (% of cohort)": 86.81902
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2019,
+        "Survival to age 65, female (% of cohort)": 92.06306,
+        "Survival to age 65, male (% of cohort)": 87.30219
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2020,
+        "Survival to age 65, female (% of cohort)": 91.961815,
+        "Survival to age 65, male (% of cohort)": 86.595985
+      },
+      {
+        "Entity": "Belgium",
+        "Year": 2021,
+        "Survival to age 65, female (% of cohort)": 92.42372,
+        "Survival to age 65, male (% of cohort)": 87.27187
+      },
+      {
+        "Entity": "China",
+        "Year": 1960,
+        "Survival to age 65, female (% of cohort)": 23.309843,
+        "Survival to age 65, male (% of cohort)": 15.889074
+      },
+      {
+        "Entity": "China",
+        "Year": 1961,
+        "Survival to age 65, female (% of cohort)": 32.51377,
+        "Survival to age 65, male (% of cohort)": 23.334438
+      },
+      {
+        "Entity": "China",
+        "Year": 1962,
+        "Survival to age 65, female (% of cohort)": 47.0875,
+        "Survival to age 65, male (% of cohort)": 35.506058
+      },
+      {
+        "Entity": "China",
+        "Year": 1963,
+        "Survival to age 65, female (% of cohort)": 47.971832,
+        "Survival to age 65, male (% of cohort)": 36.537758
+      },
+      {
+        "Entity": "China",
+        "Year": 1964,
+        "Survival to age 65, female (% of cohort)": 49.124416,
+        "Survival to age 65, male (% of cohort)": 37.83935
+      },
+      {
+        "Entity": "China",
+        "Year": 1965,
+        "Survival to age 65, female (% of cohort)": 50.416924,
+        "Survival to age 65, male (% of cohort)": 39.049362
+      },
+      {
+        "Entity": "China",
+        "Year": 1966,
+        "Survival to age 65, female (% of cohort)": 51.420444,
+        "Survival to age 65, male (% of cohort)": 40.5051
+      },
+      {
+        "Entity": "China",
+        "Year": 1967,
+        "Survival to age 65, female (% of cohort)": 52.53242,
+        "Survival to age 65, male (% of cohort)": 41.89706
+      },
+      {
+        "Entity": "China",
+        "Year": 1968,
+        "Survival to age 65, female (% of cohort)": 53.614788,
+        "Survival to age 65, male (% of cohort)": 43.33664
+      },
+      {
+        "Entity": "China",
+        "Year": 1969,
+        "Survival to age 65, female (% of cohort)": 54.69527,
+        "Survival to age 65, male (% of cohort)": 44.665436
+      },
+      {
+        "Entity": "China",
+        "Year": 1970,
+        "Survival to age 65, female (% of cohort)": 56.055725,
+        "Survival to age 65, male (% of cohort)": 46.28836
+      },
+      {
+        "Entity": "China",
+        "Year": 1971,
+        "Survival to age 65, female (% of cohort)": 57.48167,
+        "Survival to age 65, male (% of cohort)": 48.250214
+      },
+      {
+        "Entity": "China",
+        "Year": 1972,
+        "Survival to age 65, female (% of cohort)": 58.955017,
+        "Survival to age 65, male (% of cohort)": 49.75538
+      },
+      {
+        "Entity": "China",
+        "Year": 1973,
+        "Survival to age 65, female (% of cohort)": 60.722675,
+        "Survival to age 65, male (% of cohort)": 51.490265
+      },
+      {
+        "Entity": "China",
+        "Year": 1974,
+        "Survival to age 65, female (% of cohort)": 62.22895,
+        "Survival to age 65, male (% of cohort)": 52.626522
+      },
+      {
+        "Entity": "China",
+        "Year": 1975,
+        "Survival to age 65, female (% of cohort)": 63.546288,
+        "Survival to age 65, male (% of cohort)": 53.843216
+      },
+      {
+        "Entity": "China",
+        "Year": 1976,
+        "Survival to age 65, female (% of cohort)": 64.9901,
+        "Survival to age 65, male (% of cohort)": 55.334522
+      },
+      {
+        "Entity": "China",
+        "Year": 1977,
+        "Survival to age 65, female (% of cohort)": 66.28926,
+        "Survival to age 65, male (% of cohort)": 56.59931
+      },
+      {
+        "Entity": "China",
+        "Year": 1978,
+        "Survival to age 65, female (% of cohort)": 67.48386,
+        "Survival to age 65, male (% of cohort)": 57.734264
+      },
+      {
+        "Entity": "China",
+        "Year": 1979,
+        "Survival to age 65, female (% of cohort)": 68.61307,
+        "Survival to age 65, male (% of cohort)": 58.867092
+      },
+      {
+        "Entity": "China",
+        "Year": 1980,
+        "Survival to age 65, female (% of cohort)": 69.62584,
+        "Survival to age 65, male (% of cohort)": 59.833363
+      },
+      {
+        "Entity": "China",
+        "Year": 1981,
+        "Survival to age 65, female (% of cohort)": 70.65367,
+        "Survival to age 65, male (% of cohort)": 60.831448
+      },
+      {
+        "Entity": "China",
+        "Year": 1982,
+        "Survival to age 65, female (% of cohort)": 71.55625,
+        "Survival to age 65, male (% of cohort)": 61.755836
+      },
+      {
+        "Entity": "China",
+        "Year": 1983,
+        "Survival to age 65, female (% of cohort)": 72.4268,
+        "Survival to age 65, male (% of cohort)": 62.572636
+      },
+      {
+        "Entity": "China",
+        "Year": 1984,
+        "Survival to age 65, female (% of cohort)": 73.16913,
+        "Survival to age 65, male (% of cohort)": 63.395744
+      },
+      {
+        "Entity": "China",
+        "Year": 1985,
+        "Survival to age 65, female (% of cohort)": 73.87633,
+        "Survival to age 65, male (% of cohort)": 64.07757
+      },
+      {
+        "Entity": "China",
+        "Year": 1986,
+        "Survival to age 65, female (% of cohort)": 74.547066,
+        "Survival to age 65, male (% of cohort)": 64.74109
+      },
+      {
+        "Entity": "China",
+        "Year": 1987,
+        "Survival to age 65, female (% of cohort)": 75.26094,
+        "Survival to age 65, male (% of cohort)": 65.32706
+      },
+      {
+        "Entity": "China",
+        "Year": 1988,
+        "Survival to age 65, female (% of cohort)": 75.8256,
+        "Survival to age 65, male (% of cohort)": 65.9547
+      },
+      {
+        "Entity": "China",
+        "Year": 1989,
+        "Survival to age 65, female (% of cohort)": 76.2781,
+        "Survival to age 65, male (% of cohort)": 66.524254
+      },
+      {
+        "Entity": "China",
+        "Year": 1990,
+        "Survival to age 65, female (% of cohort)": 76.48181,
+        "Survival to age 65, male (% of cohort)": 66.98401
+      },
+      {
+        "Entity": "China",
+        "Year": 1991,
+        "Survival to age 65, female (% of cohort)": 76.38521,
+        "Survival to age 65, male (% of cohort)": 67.726585
+      },
+      {
+        "Entity": "China",
+        "Year": 1992,
+        "Survival to age 65, female (% of cohort)": 77.404106,
+        "Survival to age 65, male (% of cohort)": 68.66666
+      },
+      {
+        "Entity": "China",
+        "Year": 1993,
+        "Survival to age 65, female (% of cohort)": 78.30804,
+        "Survival to age 65, male (% of cohort)": 69.36398
+      },
+      {
+        "Entity": "China",
+        "Year": 1994,
+        "Survival to age 65, female (% of cohort)": 78.61019,
+        "Survival to age 65, male (% of cohort)": 70.05295
+      },
+      {
+        "Entity": "China",
+        "Year": 1995,
+        "Survival to age 65, female (% of cohort)": 79.45856,
+        "Survival to age 65, male (% of cohort)": 70.759674
+      },
+      {
+        "Entity": "China",
+        "Year": 1996,
+        "Survival to age 65, female (% of cohort)": 79.768616,
+        "Survival to age 65, male (% of cohort)": 71.264275
+      },
+      {
+        "Entity": "China",
+        "Year": 1997,
+        "Survival to age 65, female (% of cohort)": 80.380486,
+        "Survival to age 65, male (% of cohort)": 71.92607
+      },
+      {
+        "Entity": "China",
+        "Year": 1998,
+        "Survival to age 65, female (% of cohort)": 81.33625,
+        "Survival to age 65, male (% of cohort)": 72.48473
+      },
+      {
+        "Entity": "China",
+        "Year": 1999,
+        "Survival to age 65, female (% of cohort)": 81.365845,
+        "Survival to age 65, male (% of cohort)": 73.22923
+      },
+      {
+        "Entity": "China",
+        "Year": 2000,
+        "Survival to age 65, female (% of cohort)": 82.21589,
+        "Survival to age 65, male (% of cohort)": 73.7361
+      },
+      {
+        "Entity": "China",
+        "Year": 2001,
+        "Survival to age 65, female (% of cohort)": 83.624985,
+        "Survival to age 65, male (% of cohort)": 74.41799
+      },
+      {
+        "Entity": "China",
+        "Year": 2002,
+        "Survival to age 65, female (% of cohort)": 84.14683,
+        "Survival to age 65, male (% of cohort)": 74.97475
+      },
+      {
+        "Entity": "China",
+        "Year": 2003,
+        "Survival to age 65, female (% of cohort)": 84.68751,
+        "Survival to age 65, male (% of cohort)": 75.5233
+      },
+      {
+        "Entity": "China",
+        "Year": 2004,
+        "Survival to age 65, female (% of cohort)": 85.20043,
+        "Survival to age 65, male (% of cohort)": 76.06242
+      },
+      {
+        "Entity": "China",
+        "Year": 2005,
+        "Survival to age 65, female (% of cohort)": 85.69888,
+        "Survival to age 65, male (% of cohort)": 76.56583
+      },
+      {
+        "Entity": "China",
+        "Year": 2006,
+        "Survival to age 65, female (% of cohort)": 86.1407,
+        "Survival to age 65, male (% of cohort)": 77.209015
+      },
+      {
+        "Entity": "China",
+        "Year": 2007,
+        "Survival to age 65, female (% of cohort)": 86.55137,
+        "Survival to age 65, male (% of cohort)": 77.47703
+      },
+      {
+        "Entity": "China",
+        "Year": 2008,
+        "Survival to age 65, female (% of cohort)": 86.53824,
+        "Survival to age 65, male (% of cohort)": 77.61242
+      },
+      {
+        "Entity": "China",
+        "Year": 2009,
+        "Survival to age 65, female (% of cohort)": 87.25883,
+        "Survival to age 65, male (% of cohort)": 78.29073
+      },
+      {
+        "Entity": "China",
+        "Year": 2010,
+        "Survival to age 65, female (% of cohort)": 87.56683,
+        "Survival to age 65, male (% of cohort)": 78.61839
+      },
+      {
+        "Entity": "China",
+        "Year": 2011,
+        "Survival to age 65, female (% of cohort)": 87.95468,
+        "Survival to age 65, male (% of cohort)": 79.00925
+      },
+      {
+        "Entity": "China",
+        "Year": 2012,
+        "Survival to age 65, female (% of cohort)": 88.35457,
+        "Survival to age 65, male (% of cohort)": 79.332245
+      },
+      {
+        "Entity": "China",
+        "Year": 2013,
+        "Survival to age 65, female (% of cohort)": 88.65602,
+        "Survival to age 65, male (% of cohort)": 79.719765
+      },
+      {
+        "Entity": "China",
+        "Year": 2014,
+        "Survival to age 65, female (% of cohort)": 89.00408,
+        "Survival to age 65, male (% of cohort)": 80.12307
+      },
+      {
+        "Entity": "China",
+        "Year": 2015,
+        "Survival to age 65, female (% of cohort)": 89.26152,
+        "Survival to age 65, male (% of cohort)": 80.444374
+      },
+      {
+        "Entity": "China",
+        "Year": 2016,
+        "Survival to age 65, female (% of cohort)": 89.51958,
+        "Survival to age 65, male (% of cohort)": 80.71757
+      },
+      {
+        "Entity": "China",
+        "Year": 2017,
+        "Survival to age 65, female (% of cohort)": 89.76528,
+        "Survival to age 65, male (% of cohort)": 80.444695
+      },
+      {
+        "Entity": "China",
+        "Year": 2018,
+        "Survival to age 65, female (% of cohort)": 90.058266,
+        "Survival to age 65, male (% of cohort)": 81.393776
+      },
+      {
+        "Entity": "China",
+        "Year": 2019,
+        "Survival to age 65, female (% of cohort)": 90.22856,
+        "Survival to age 65, male (% of cohort)": 81.7819
+      },
+      {
+        "Entity": "China",
+        "Year": 2020,
+        "Survival to age 65, female (% of cohort)": 90.48134,
+        "Survival to age 65, male (% of cohort)": 81.90313
+      },
+      {
+        "Entity": "China",
+        "Year": 2021,
+        "Survival to age 65, female (% of cohort)": 90.671104,
+        "Survival to age 65, male (% of cohort)": 82.27277
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1960,
+        "Survival to age 65, female (% of cohort)": 81.73097,
+        "Survival to age 65, male (% of cohort)": 74.39703
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1961,
+        "Survival to age 65, female (% of cohort)": 82.46849,
+        "Survival to age 65, male (% of cohort)": 74.34335
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1962,
+        "Survival to age 65, female (% of cohort)": 82.616974,
+        "Survival to age 65, male (% of cohort)": 73.56254
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1963,
+        "Survival to age 65, female (% of cohort)": 82.35124,
+        "Survival to age 65, male (% of cohort)": 73.7624
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1964,
+        "Survival to age 65, female (% of cohort)": 83.047195,
+        "Survival to age 65, male (% of cohort)": 73.20903
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1965,
+        "Survival to age 65, female (% of cohort)": 82.54091,
+        "Survival to age 65, male (% of cohort)": 73.04776
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1966,
+        "Survival to age 65, female (% of cohort)": 82.95828,
+        "Survival to age 65, male (% of cohort)": 73.40283
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1967,
+        "Survival to age 65, female (% of cohort)": 82.95119,
+        "Survival to age 65, male (% of cohort)": 73.4417
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1968,
+        "Survival to age 65, female (% of cohort)": 83.11954,
+        "Survival to age 65, male (% of cohort)": 74.1254
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1969,
+        "Survival to age 65, female (% of cohort)": 83.09488,
+        "Survival to age 65, male (% of cohort)": 74.1306
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1970,
+        "Survival to age 65, female (% of cohort)": 82.89509,
+        "Survival to age 65, male (% of cohort)": 73.92939
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1971,
+        "Survival to age 65, female (% of cohort)": 83.20371,
+        "Survival to age 65, male (% of cohort)": 73.50504
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1972,
+        "Survival to age 65, female (% of cohort)": 83.315506,
+        "Survival to age 65, male (% of cohort)": 73.518196
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1973,
+        "Survival to age 65, female (% of cohort)": 83.60023,
+        "Survival to age 65, male (% of cohort)": 73.78122
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1974,
+        "Survival to age 65, female (% of cohort)": 83.89685,
+        "Survival to age 65, male (% of cohort)": 73.72308
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1975,
+        "Survival to age 65, female (% of cohort)": 83.928795,
+        "Survival to age 65, male (% of cohort)": 74.339966
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1976,
+        "Survival to age 65, female (% of cohort)": 83.54547,
+        "Survival to age 65, male (% of cohort)": 73.44109
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1977,
+        "Survival to age 65, female (% of cohort)": 84.567986,
+        "Survival to age 65, male (% of cohort)": 74.73991
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1978,
+        "Survival to age 65, female (% of cohort)": 84.2974,
+        "Survival to age 65, male (% of cohort)": 74.53811
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1979,
+        "Survival to age 65, female (% of cohort)": 84.01172,
+        "Survival to age 65, male (% of cohort)": 73.868286
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1980,
+        "Survival to age 65, female (% of cohort)": 83.53696,
+        "Survival to age 65, male (% of cohort)": 73.58529
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1981,
+        "Survival to age 65, female (% of cohort)": 83.81281,
+        "Survival to age 65, male (% of cohort)": 73.643845
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1982,
+        "Survival to age 65, female (% of cohort)": 83.88745,
+        "Survival to age 65, male (% of cohort)": 74.273766
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1983,
+        "Survival to age 65, female (% of cohort)": 83.805145,
+        "Survival to age 65, male (% of cohort)": 73.81057
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1984,
+        "Survival to age 65, female (% of cohort)": 83.87966,
+        "Survival to age 65, male (% of cohort)": 74.260254
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1985,
+        "Survival to age 65, female (% of cohort)": 83.52844,
+        "Survival to age 65, male (% of cohort)": 74.18669
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1986,
+        "Survival to age 65, female (% of cohort)": 83.36932,
+        "Survival to age 65, male (% of cohort)": 74.48098
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1987,
+        "Survival to age 65, female (% of cohort)": 83.726425,
+        "Survival to age 65, male (% of cohort)": 74.13827
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1988,
+        "Survival to age 65, female (% of cohort)": 83.715004,
+        "Survival to age 65, male (% of cohort)": 75.17291
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1989,
+        "Survival to age 65, female (% of cohort)": 83.90095,
+        "Survival to age 65, male (% of cohort)": 74.86055
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1990,
+        "Survival to age 65, female (% of cohort)": 83.81433,
+        "Survival to age 65, male (% of cohort)": 75.43061
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1991,
+        "Survival to age 65, female (% of cohort)": 84.287575,
+        "Survival to age 65, male (% of cohort)": 76.261665
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1992,
+        "Survival to age 65, female (% of cohort)": 84.3948,
+        "Survival to age 65, male (% of cohort)": 76.40572
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1993,
+        "Survival to age 65, female (% of cohort)": 84.37973,
+        "Survival to age 65, male (% of cohort)": 76.89642
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1994,
+        "Survival to age 65, female (% of cohort)": 84.91474,
+        "Survival to age 65, male (% of cohort)": 76.77511
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1995,
+        "Survival to age 65, female (% of cohort)": 84.56548,
+        "Survival to age 65, male (% of cohort)": 77.06869
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1996,
+        "Survival to age 65, female (% of cohort)": 85.21412,
+        "Survival to age 65, male (% of cohort)": 77.65614
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1997,
+        "Survival to age 65, female (% of cohort)": 85.548485,
+        "Survival to age 65, male (% of cohort)": 78.746025
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1998,
+        "Survival to age 65, female (% of cohort)": 86.274315,
+        "Survival to age 65, male (% of cohort)": 79.1524
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 1999,
+        "Survival to age 65, female (% of cohort)": 86.35819,
+        "Survival to age 65, male (% of cohort)": 80.01761
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2000,
+        "Survival to age 65, female (% of cohort)": 86.795265,
+        "Survival to age 65, male (% of cohort)": 80.39739
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2001,
+        "Survival to age 65, female (% of cohort)": 87.19508,
+        "Survival to age 65, male (% of cohort)": 80.85898
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2002,
+        "Survival to age 65, female (% of cohort)": 87.610016,
+        "Survival to age 65, male (% of cohort)": 80.87029
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2003,
+        "Survival to age 65, female (% of cohort)": 88.06323,
+        "Survival to age 65, male (% of cohort)": 81.06143
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2004,
+        "Survival to age 65, female (% of cohort)": 88.25901,
+        "Survival to age 65, male (% of cohort)": 81.46358
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2005,
+        "Survival to age 65, female (% of cohort)": 88.61971,
+        "Survival to age 65, male (% of cohort)": 82.63952
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2006,
+        "Survival to age 65, female (% of cohort)": 88.82198,
+        "Survival to age 65, male (% of cohort)": 81.940636
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2007,
+        "Survival to age 65, female (% of cohort)": 88.67862,
+        "Survival to age 65, male (% of cohort)": 82.203354
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2008,
+        "Survival to age 65, female (% of cohort)": 89.129875,
+        "Survival to age 65, male (% of cohort)": 83.0868
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2009,
+        "Survival to age 65, female (% of cohort)": 89.40466,
+        "Survival to age 65, male (% of cohort)": 83.32281
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2010,
+        "Survival to age 65, female (% of cohort)": 89.741066,
+        "Survival to age 65, male (% of cohort)": 83.77534
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2011,
+        "Survival to age 65, female (% of cohort)": 90.215294,
+        "Survival to age 65, male (% of cohort)": 84.80914
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2012,
+        "Survival to age 65, female (% of cohort)": 90.49222,
+        "Survival to age 65, male (% of cohort)": 85.35196
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2013,
+        "Survival to age 65, female (% of cohort)": 90.8159,
+        "Survival to age 65, male (% of cohort)": 85.44501
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2014,
+        "Survival to age 65, female (% of cohort)": 91.02,
+        "Survival to age 65, male (% of cohort)": 85.667366
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2015,
+        "Survival to age 65, female (% of cohort)": 91.0742,
+        "Survival to age 65, male (% of cohort)": 86.17024
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2016,
+        "Survival to age 65, female (% of cohort)": 91.09133,
+        "Survival to age 65, male (% of cohort)": 86.32758
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2017,
+        "Survival to age 65, female (% of cohort)": 91.861664,
+        "Survival to age 65, male (% of cohort)": 86.86418
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2018,
+        "Survival to age 65, female (% of cohort)": 91.73772,
+        "Survival to age 65, male (% of cohort)": 86.959755
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2019,
+        "Survival to age 65, female (% of cohort)": 92.18913,
+        "Survival to age 65, male (% of cohort)": 87.38631
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2020,
+        "Survival to age 65, female (% of cohort)": 92.23392,
+        "Survival to age 65, male (% of cohort)": 87.99314
+      },
+      {
+        "Entity": "Denmark",
+        "Year": 2021,
+        "Survival to age 65, female (% of cohort)": 92.43369,
+        "Survival to age 65, male (% of cohort)": 88.28707
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1960,
+        "Survival to age 65, female (% of cohort)": 79.130035,
+        "Survival to age 65, male (% of cohort)": 66.713745
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1961,
+        "Survival to age 65, female (% of cohort)": 79.79143,
+        "Survival to age 65, male (% of cohort)": 67.45801
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1962,
+        "Survival to age 65, female (% of cohort)": 80.13804,
+        "Survival to age 65, male (% of cohort)": 67.59308
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1963,
+        "Survival to age 65, female (% of cohort)": 80.29214,
+        "Survival to age 65, male (% of cohort)": 67.634125
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1964,
+        "Survival to age 65, female (% of cohort)": 80.84721,
+        "Survival to age 65, male (% of cohort)": 68.16727
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1965,
+        "Survival to age 65, female (% of cohort)": 80.84582,
+        "Survival to age 65, male (% of cohort)": 68.32106
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1966,
+        "Survival to age 65, female (% of cohort)": 81.09302,
+        "Survival to age 65, male (% of cohort)": 68.44235
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1967,
+        "Survival to age 65, female (% of cohort)": 81.40859,
+        "Survival to age 65, male (% of cohort)": 68.86855
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1968,
+        "Survival to age 65, female (% of cohort)": 81.20402,
+        "Survival to age 65, male (% of cohort)": 68.33825
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1969,
+        "Survival to age 65, female (% of cohort)": 80.89056,
+        "Survival to age 65, male (% of cohort)": 67.82131
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1970,
+        "Survival to age 65, female (% of cohort)": 81.30071,
+        "Survival to age 65, male (% of cohort)": 68.34052
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1971,
+        "Survival to age 65, female (% of cohort)": 81.70751,
+        "Survival to age 65, male (% of cohort)": 68.89279
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1972,
+        "Survival to age 65, female (% of cohort)": 82.11472,
+        "Survival to age 65, male (% of cohort)": 69.0859
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1973,
+        "Survival to age 65, female (% of cohort)": 82.42573,
+        "Survival to age 65, male (% of cohort)": 69.56163
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1974,
+        "Survival to age 65, female (% of cohort)": 82.807785,
+        "Survival to age 65, male (% of cohort)": 70.234535
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1975,
+        "Survival to age 65, female (% of cohort)": 82.79689,
+        "Survival to age 65, male (% of cohort)": 69.71947
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1976,
+        "Survival to age 65, female (% of cohort)": 83.26183,
+        "Survival to age 65, male (% of cohort)": 70.49392
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1977,
+        "Survival to age 65, female (% of cohort)": 83.99046,
+        "Survival to age 65, male (% of cohort)": 71.30769
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1978,
+        "Survival to age 65, female (% of cohort)": 84.04612,
+        "Survival to age 65, male (% of cohort)": 71.09338
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1979,
+        "Survival to age 65, female (% of cohort)": 84.42551,
+        "Survival to age 65, male (% of cohort)": 71.56554
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1980,
+        "Survival to age 65, female (% of cohort)": 84.70429,
+        "Survival to age 65, male (% of cohort)": 71.89904
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1981,
+        "Survival to age 65, female (% of cohort)": 84.95211,
+        "Survival to age 65, male (% of cohort)": 72.22394
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1982,
+        "Survival to age 65, female (% of cohort)": 85.2599,
+        "Survival to age 65, male (% of cohort)": 72.73283
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1983,
+        "Survival to age 65, female (% of cohort)": 85.69529,
+        "Survival to age 65, male (% of cohort)": 73.136246
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1984,
+        "Survival to age 65, female (% of cohort)": 86.02661,
+        "Survival to age 65, male (% of cohort)": 73.76011
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1985,
+        "Survival to age 65, female (% of cohort)": 86.35209,
+        "Survival to age 65, male (% of cohort)": 74.2237
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1986,
+        "Survival to age 65, female (% of cohort)": 86.62355,
+        "Survival to age 65, male (% of cohort)": 74.64347
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1987,
+        "Survival to age 65, female (% of cohort)": 87.01054,
+        "Survival to age 65, male (% of cohort)": 75.09918
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1988,
+        "Survival to age 65, female (% of cohort)": 87.226234,
+        "Survival to age 65, male (% of cohort)": 75.39983
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1989,
+        "Survival to age 65, female (% of cohort)": 87.415634,
+        "Survival to age 65, male (% of cohort)": 75.73059
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1990,
+        "Survival to age 65, female (% of cohort)": 87.310715,
+        "Survival to age 65, male (% of cohort)": 75.30899
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1991,
+        "Survival to age 65, female (% of cohort)": 87.50723,
+        "Survival to age 65, male (% of cohort)": 75.408875
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1992,
+        "Survival to age 65, female (% of cohort)": 87.97214,
+        "Survival to age 65, male (% of cohort)": 76.04481
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1993,
+        "Survival to age 65, female (% of cohort)": 88.08295,
+        "Survival to age 65, male (% of cohort)": 76.37851
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1994,
+        "Survival to age 65, female (% of cohort)": 88.40852,
+        "Survival to age 65, male (% of cohort)": 76.915695
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1995,
+        "Survival to age 65, female (% of cohort)": 88.61735,
+        "Survival to age 65, male (% of cohort)": 77.42575
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1996,
+        "Survival to age 65, female (% of cohort)": 88.86933,
+        "Survival to age 65, male (% of cohort)": 78.01715
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1997,
+        "Survival to age 65, female (% of cohort)": 89.26652,
+        "Survival to age 65, male (% of cohort)": 78.89659
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1998,
+        "Survival to age 65, female (% of cohort)": 89.643074,
+        "Survival to age 65, male (% of cohort)": 79.76599
+      },
+      {
+        "Entity": "Germany",
+        "Year": 1999,
+        "Survival to age 65, female (% of cohort)": 89.82252,
+        "Survival to age 65, male (% of cohort)": 80.2765
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2000,
+        "Survival to age 65, female (% of cohort)": 90.00591,
+        "Survival to age 65, male (% of cohort)": 80.633705
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2001,
+        "Survival to age 65, female (% of cohort)": 90.250114,
+        "Survival to age 65, male (% of cohort)": 81.18385
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2002,
+        "Survival to age 65, female (% of cohort)": 90.30794,
+        "Survival to age 65, male (% of cohort)": 81.47089
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2003,
+        "Survival to age 65, female (% of cohort)": 90.47332,
+        "Survival to age 65, male (% of cohort)": 81.661804
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2004,
+        "Survival to age 65, female (% of cohort)": 90.76149,
+        "Survival to age 65, male (% of cohort)": 82.395935
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2005,
+        "Survival to age 65, female (% of cohort)": 90.78955,
+        "Survival to age 65, male (% of cohort)": 82.69718
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2006,
+        "Survival to age 65, female (% of cohort)": 91.022285,
+        "Survival to age 65, male (% of cohort)": 83.15322
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2007,
+        "Survival to age 65, female (% of cohort)": 91.120636,
+        "Survival to age 65, male (% of cohort)": 83.371445
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2008,
+        "Survival to age 65, female (% of cohort)": 91.09322,
+        "Survival to age 65, male (% of cohort)": 83.58921
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2009,
+        "Survival to age 65, female (% of cohort)": 91.2181,
+        "Survival to age 65, male (% of cohort)": 83.75655
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2010,
+        "Survival to age 65, female (% of cohort)": 91.29935,
+        "Survival to age 65, male (% of cohort)": 83.96367
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2011,
+        "Survival to age 65, female (% of cohort)": 91.28841,
+        "Survival to age 65, male (% of cohort)": 84.372765
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2012,
+        "Survival to age 65, female (% of cohort)": 91.58188,
+        "Survival to age 65, male (% of cohort)": 84.68628
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2013,
+        "Survival to age 65, female (% of cohort)": 91.4894,
+        "Survival to age 65, male (% of cohort)": 84.74476
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2014,
+        "Survival to age 65, female (% of cohort)": 91.82028,
+        "Survival to age 65, male (% of cohort)": 85.151634
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2015,
+        "Survival to age 65, female (% of cohort)": 91.625854,
+        "Survival to age 65, male (% of cohort)": 84.8906
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2016,
+        "Survival to age 65, female (% of cohort)": 91.71205,
+        "Survival to age 65, male (% of cohort)": 85.190025
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2017,
+        "Survival to age 65, female (% of cohort)": 91.87907,
+        "Survival to age 65, male (% of cohort)": 85.64952
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2018,
+        "Survival to age 65, female (% of cohort)": 91.796394,
+        "Survival to age 65, male (% of cohort)": 85.513435
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2019,
+        "Survival to age 65, female (% of cohort)": 92.07772,
+        "Survival to age 65, male (% of cohort)": 86.017746
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2020,
+        "Survival to age 65, female (% of cohort)": 92.042496,
+        "Survival to age 65, male (% of cohort)": 85.66816
+      },
+      {
+        "Entity": "Germany",
+        "Year": 2021,
+        "Survival to age 65, female (% of cohort)": 91.611885,
+        "Survival to age 65, male (% of cohort)": 84.73192
+      },
+      {
+        "Entity": "India",
+        "Year": 1960,
+        "Survival to age 65, female (% of cohort)": 36.851288,
+        "Survival to age 65, male (% of cohort)": 37.02816
+      },
+      {
+        "Entity": "India",
+        "Year": 1961,
+        "Survival to age 65, female (% of cohort)": 37.051376,
+        "Survival to age 65, male (% of cohort)": 37.250862
+      },
+      {
+        "Entity": "India",
+        "Year": 1962,
+        "Survival to age 65, female (% of cohort)": 37.385464,
+        "Survival to age 65, male (% of cohort)": 37.645287
+      },
+      {
+        "Entity": "India",
+        "Year": 1963,
+        "Survival to age 65, female (% of cohort)": 37.758305,
+        "Survival to age 65, male (% of cohort)": 38.06776
+      },
+      {
+        "Entity": "India",
+        "Year": 1964,
+        "Survival to age 65, female (% of cohort)": 38.08285,
+        "Survival to age 65, male (% of cohort)": 38.412445
+      },
+      {
+        "Entity": "India",
+        "Year": 1965,
+        "Survival to age 65, female (% of cohort)": 36.57173,
+        "Survival to age 65, male (% of cohort)": 36.60717
+      },
+      {
+        "Entity": "India",
+        "Year": 1966,
+        "Survival to age 65, female (% of cohort)": 37.042225,
+        "Survival to age 65, male (% of cohort)": 36.985638
+      },
+      {
+        "Entity": "India",
+        "Year": 1967,
+        "Survival to age 65, female (% of cohort)": 37.485165,
+        "Survival to age 65, male (% of cohort)": 37.299908
+      },
+      {
+        "Entity": "India",
+        "Year": 1968,
+        "Survival to age 65, female (% of cohort)": 39.804688,
+        "Survival to age 65, male (% of cohort)": 39.725548
+      },
+      {
+        "Entity": "India",
+        "Year": 1969,
+        "Survival to age 65, female (% of cohort)": 40.29697,
+        "Survival to age 65, male (% of cohort)": 40.150307
+      },
+      {
+        "Entity": "India",
+        "Year": 1970,
+        "Survival to age 65, female (% of cohort)": 40.78304,
+        "Survival to age 65, male (% of cohort)": 40.64023
+      },
+      {
+        "Entity": "India",
+        "Year": 1971,
+        "Survival to age 65, female (% of cohort)": 41.253796,
+        "Survival to age 65, male (% of cohort)": 41.257244
+      },
+      {
+        "Entity": "India",
+        "Year": 1972,
+        "Survival to age 65, female (% of cohort)": 41.794067,
+        "Survival to age 65, male (% of cohort)": 41.915443
+      },
+      {
+        "Entity": "India",
+        "Year": 1973,
+        "Survival to age 65, female (% of cohort)": 42.49903,
+        "Survival to age 65, male (% of cohort)": 42.744804
+      },
+      {
+        "Entity": "India",
+        "Year": 1974,
+        "Survival to age 65, female (% of cohort)": 43.512806,
+        "Survival to age 65, male (% of cohort)": 43.779716
+      },
+      {
+        "Entity": "India",
+        "Year": 1975,
+        "Survival to age 65, female (% of cohort)": 44.421432,
+        "Survival to age 65, male (% of cohort)": 44.48953
+      },
+      {
+        "Entity": "India",
+        "Year": 1976,
+        "Survival to age 65, female (% of cohort)": 45.44201,
+        "Survival to age 65, male (% of cohort)": 45.05727
+      },
+      {
+        "Entity": "India",
+        "Year": 1977,
+        "Survival to age 65, female (% of cohort)": 46.440746,
+        "Survival to age 65, male (% of cohort)": 45.453655
+      },
+      {
+        "Entity": "India",
+        "Year": 1978,
+        "Survival to age 65, female (% of cohort)": 47.61047,
+        "Survival to age 65, male (% of cohort)": 45.86783
+      },
+      {
+        "Entity": "India",
+        "Year": 1979,
+        "Survival to age 65, female (% of cohort)": 48.75865,
+        "Survival to age 65, male (% of cohort)": 46.284924
+      },
+      {
+        "Entity": "India",
+        "Year": 1980,
+        "Survival to age 65, female (% of cohort)": 49.89104,
+        "Survival to age 65, male (% of cohort)": 46.74036
+      },
+      {
+        "Entity": "India",
+        "Year": 1981,
+        "Survival to age 65, female (% of cohort)": 51.0088,
+        "Survival to age 65, male (% of cohort)": 47.347523
+      },
+      {
+        "Entity": "India",
+        "Year": 1982,
+        "Survival to age 65, female (% of cohort)": 52.08398,
+        "Survival to age 65, male (% of cohort)": 48.07729
+      },
+      {
+        "Entity": "India",
+        "Year": 1983,
+        "Survival to age 65, female (% of cohort)": 53.115307,
+        "Survival to age 65, male (% of cohort)": 48.885426
+      },
+      {
+        "Entity": "India",
+        "Year": 1984,
+        "Survival to age 65, female (% of cohort)": 54.084515,
+        "Survival to age 65, male (% of cohort)": 49.7326
+      },
+      {
+        "Entity": "India",
+        "Year": 1985,
+        "Survival to age 65, female (% of cohort)": 55.009068,
+        "Survival to age 65, male (% of cohort)": 50.55834
+      },
+      {
+        "Entity": "India",
+        "Year": 1986,
+        "Survival to age 65, female (% of cohort)": 55.884335,
+        "Survival to age 65, male (% of cohort)": 51.319214
+      },
+      {
+        "Entity": "India",
+        "Year": 1987,
+        "Survival to age 65, female (% of cohort)": 56.710148,
+        "Survival to age 65, male (% of cohort)": 51.988605
+      },
+      {
+        "Entity": "India",
+        "Year": 1988,
+        "Survival to age 65, female (% of cohort)": 57.51248,
+        "Survival to age 65, male (% of cohort)": 52.56644
+      },
+      {
+        "Entity": "India",
+        "Year": 1989,
+        "Survival to age 65, female (% of cohort)": 58.264164,
+        "Survival to age 65, male (% of cohort)": 53.128654
+      },
+      {
+        "Entity": "India",
+        "Year": 1990,
+        "Survival to age 65, female (% of cohort)": 58.93452,
+        "Survival to age 65, male (% of cohort)": 53.61522
+      },
+      {
+        "Entity": "India",
+        "Year": 1991,
+        "Survival to age 65, female (% of cohort)": 59.526142,
+        "Survival to age 65, male (% of cohort)": 54.11334
+      },
+      {
+        "Entity": "India",
+        "Year": 1992,
+        "Survival to age 65, female (% of cohort)": 60.055847,
+        "Survival to age 65, male (% of cohort)": 54.64526
+      },
+      {
+        "Entity": "India",
+        "Year": 1993,
+        "Survival to age 65, female (% of cohort)": 60.4863,
+        "Survival to age 65, male (% of cohort)": 55.147385
+      },
+      {
+        "Entity": "India",
+        "Year": 1994,
+        "Survival to age 65, female (% of cohort)": 60.999954,
+        "Survival to age 65, male (% of cohort)": 55.698067
+      },
+      {
+        "Entity": "India",
+        "Year": 1995,
+        "Survival to age 65, female (% of cohort)": 61.49416,
+        "Survival to age 65, male (% of cohort)": 56.196342
+      },
+      {
+        "Entity": "India",
+        "Year": 1996,
+        "Survival to age 65, female (% of cohort)": 62.054504,
+        "Survival to age 65, male (% of cohort)": 56.655518
+      },
+      {
+        "Entity": "India",
+        "Year": 1997,
+        "Survival to age 65, female (% of cohort)": 62.68599,
+        "Survival to age 65, male (% of cohort)": 57.10366
+      },
+      {
+        "Entity": "India",
+        "Year": 1998,
+        "Survival to age 65, female (% of cohort)": 63.373573,
+        "Survival to age 65, male (% of cohort)": 57.5295
+      },
+      {
+        "Entity": "India",
+        "Year": 1999,
+        "Survival to age 65, female (% of cohort)": 64.157,
+        "Survival to age 65, male (% of cohort)": 57.941784
+      },
+      {
+        "Entity": "India",
+        "Year": 2000,
+        "Survival to age 65, female (% of cohort)": 65.010284,
+        "Survival to age 65, male (% of cohort)": 58.494297
+      },
+      {
+        "Entity": "India",
+        "Year": 2001,
+        "Survival to age 65, female (% of cohort)": 65.798386,
+        "Survival to age 65, male (% of cohort)": 59.052277
+      },
+      {
+        "Entity": "India",
+        "Year": 2002,
+        "Survival to age 65, female (% of cohort)": 66.79089,
+        "Survival to age 65, male (% of cohort)": 59.865555
+      },
+      {
+        "Entity": "India",
+        "Year": 2003,
+        "Survival to age 65, female (% of cohort)": 67.71395,
+        "Survival to age 65, male (% of cohort)": 60.64381
+      },
+      {
+        "Entity": "India",
+        "Year": 2004,
+        "Survival to age 65, female (% of cohort)": 68.59008,
+        "Survival to age 65, male (% of cohort)": 61.327805
+      },
+      {
+        "Entity": "India",
+        "Year": 2005,
+        "Survival to age 65, female (% of cohort)": 69.51878,
+        "Survival to age 65, male (% of cohort)": 62.079166
+      },
+      {
+        "Entity": "India",
+        "Year": 2006,
+        "Survival to age 65, female (% of cohort)": 70.3786,
+        "Survival to age 65, male (% of cohort)": 62.672855
+      },
+      {
+        "Entity": "India",
+        "Year": 2007,
+        "Survival to age 65, female (% of cohort)": 71.1594,
+        "Survival to age 65, male (% of cohort)": 63.133694
+      },
+      {
+        "Entity": "India",
+        "Year": 2008,
+        "Survival to age 65, female (% of cohort)": 71.90464,
+        "Survival to age 65, male (% of cohort)": 63.491707
+      },
+      {
+        "Entity": "India",
+        "Year": 2009,
+        "Survival to age 65, female (% of cohort)": 72.57693,
+        "Survival to age 65, male (% of cohort)": 63.825924
+      },
+      {
+        "Entity": "India",
+        "Year": 2010,
+        "Survival to age 65, female (% of cohort)": 73.16681,
+        "Survival to age 65, male (% of cohort)": 64.217354
+      },
+      {
+        "Entity": "India",
+        "Year": 2011,
+        "Survival to age 65, female (% of cohort)": 73.67739,
+        "Survival to age 65, male (% of cohort)": 64.72812
+      },
+      {
+        "Entity": "India",
+        "Year": 2012,
+        "Survival to age 65, female (% of cohort)": 74.07645,
+        "Survival to age 65, male (% of cohort)": 65.448685
+      },
+      {
+        "Entity": "India",
+        "Year": 2013,
+        "Survival to age 65, female (% of cohort)": 74.35983,
+        "Survival to age 65, male (% of cohort)": 66.3144
+      },
+      {
+        "Entity": "India",
+        "Year": 2014,
+        "Survival to age 65, female (% of cohort)": 74.62675,
+        "Survival to age 65, male (% of cohort)": 67.27818
+      },
+      {
+        "Entity": "India",
+        "Year": 2015,
+        "Survival to age 65, female (% of cohort)": 74.861404,
+        "Survival to age 65, male (% of cohort)": 68.16346
+      },
+      {
+        "Entity": "India",
+        "Year": 2016,
+        "Survival to age 65, female (% of cohort)": 75.14389,
+        "Survival to age 65, male (% of cohort)": 68.89108
+      },
+      {
+        "Entity": "India",
+        "Year": 2017,
+        "Survival to age 65, female (% of cohort)": 75.52848,
+        "Survival to age 65, male (% of cohort)": 69.36324
+      },
+      {
+        "Entity": "India",
+        "Year": 2018,
+        "Survival to age 65, female (% of cohort)": 76.006775,
+        "Survival to age 65, male (% of cohort)": 69.6327
+      },
+      {
+        "Entity": "India",
+        "Year": 2019,
+        "Survival to age 65, female (% of cohort)": 76.478516,
+        "Survival to age 65, male (% of cohort)": 69.84934
+      },
+      {
+        "Entity": "India",
+        "Year": 2020,
+        "Survival to age 65, female (% of cohort)": 75.57225,
+        "Survival to age 65, male (% of cohort)": 68.19582
+      },
+      {
+        "Entity": "India",
+        "Year": 2021,
+        "Survival to age 65, female (% of cohort)": 69.98346,
+        "Survival to age 65, male (% of cohort)": 61.849964
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1960,
+        "Survival to age 65, female (% of cohort)": 77.15805,
+        "Survival to age 65, male (% of cohort)": 57.57329
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1961,
+        "Survival to age 65, female (% of cohort)": 77.5224,
+        "Survival to age 65, male (% of cohort)": 57.724407
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1962,
+        "Survival to age 65, female (% of cohort)": 77.079285,
+        "Survival to age 65, male (% of cohort)": 57.12234
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1963,
+        "Survival to age 65, female (% of cohort)": 77.75649,
+        "Survival to age 65, male (% of cohort)": 58.055157
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1964,
+        "Survival to age 65, female (% of cohort)": 78.56314,
+        "Survival to age 65, male (% of cohort)": 59.245148
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1965,
+        "Survival to age 65, female (% of cohort)": 78.18044,
+        "Survival to age 65, male (% of cohort)": 58.145042
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1966,
+        "Survival to age 65, female (% of cohort)": 78.48193,
+        "Survival to age 65, male (% of cohort)": 57.920334
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1967,
+        "Survival to age 65, female (% of cohort)": 78.1052,
+        "Survival to age 65, male (% of cohort)": 57.29222
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1968,
+        "Survival to age 65, female (% of cohort)": 78.231476,
+        "Survival to age 65, male (% of cohort)": 56.75108
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1969,
+        "Survival to age 65, female (% of cohort)": 77.47691,
+        "Survival to age 65, male (% of cohort)": 55.38816
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1970,
+        "Survival to age 65, female (% of cohort)": 77.644775,
+        "Survival to age 65, male (% of cohort)": 55.635113
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1971,
+        "Survival to age 65, female (% of cohort)": 77.85373,
+        "Survival to age 65, male (% of cohort)": 55.54225
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1972,
+        "Survival to age 65, female (% of cohort)": 77.70265,
+        "Survival to age 65, male (% of cohort)": 55.59707
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1973,
+        "Survival to age 65, female (% of cohort)": 77.63645,
+        "Survival to age 65, male (% of cohort)": 55.708344
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1974,
+        "Survival to age 65, female (% of cohort)": 77.918846,
+        "Survival to age 65, male (% of cohort)": 55.439007
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1975,
+        "Survival to age 65, female (% of cohort)": 77.35514,
+        "Survival to age 65, male (% of cohort)": 54.263165
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1976,
+        "Survival to age 65, female (% of cohort)": 77.18562,
+        "Survival to age 65, male (% of cohort)": 53.66713
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1977,
+        "Survival to age 65, female (% of cohort)": 77.44325,
+        "Survival to age 65, male (% of cohort)": 53.263615
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1978,
+        "Survival to age 65, female (% of cohort)": 77.375244,
+        "Survival to age 65, male (% of cohort)": 52.827015
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1979,
+        "Survival to age 65, female (% of cohort)": 76.93794,
+        "Survival to age 65, male (% of cohort)": 51.814075
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1980,
+        "Survival to age 65, female (% of cohort)": 76.83153,
+        "Survival to age 65, male (% of cohort)": 51.45919
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1981,
+        "Survival to age 65, female (% of cohort)": 77.09163,
+        "Survival to age 65, male (% of cohort)": 51.99025
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1982,
+        "Survival to age 65, female (% of cohort)": 77.43577,
+        "Survival to age 65, male (% of cohort)": 52.793213
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1983,
+        "Survival to age 65, female (% of cohort)": 77.33743,
+        "Survival to age 65, male (% of cohort)": 52.295673
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1984,
+        "Survival to age 65, female (% of cohort)": 76.754845,
+        "Survival to age 65, male (% of cohort)": 51.19224
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1985,
+        "Survival to age 65, female (% of cohort)": 76.95305,
+        "Survival to age 65, male (% of cohort)": 52.946213
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1986,
+        "Survival to age 65, female (% of cohort)": 79.2553,
+        "Survival to age 65, male (% of cohort)": 57.483932
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1987,
+        "Survival to age 65, female (% of cohort)": 79.25308,
+        "Survival to age 65, male (% of cohort)": 57.359142
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1988,
+        "Survival to age 65, female (% of cohort)": 79.13411,
+        "Survival to age 65, male (% of cohort)": 56.800545
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1989,
+        "Survival to age 65, female (% of cohort)": 79.775475,
+        "Survival to age 65, male (% of cohort)": 56.035793
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1990,
+        "Survival to age 65, female (% of cohort)": 79.40419,
+        "Survival to age 65, male (% of cohort)": 54.787964
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1991,
+        "Survival to age 65, female (% of cohort)": 79.51283,
+        "Survival to age 65, male (% of cohort)": 54.103996
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1992,
+        "Survival to age 65, female (% of cohort)": 79.020706,
+        "Survival to age 65, male (% of cohort)": 51.25147
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1993,
+        "Survival to age 65, female (% of cohort)": 76.57591,
+        "Survival to age 65, male (% of cohort)": 44.31405
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1994,
+        "Survival to age 65, female (% of cohort)": 75.61901,
+        "Survival to age 65, male (% of cohort)": 41.001747
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1995,
+        "Survival to age 65, female (% of cohort)": 75.7907,
+        "Survival to age 65, male (% of cohort)": 41.49308
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1996,
+        "Survival to age 65, female (% of cohort)": 76.87807,
+        "Survival to age 65, male (% of cohort)": 45.014694
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1997,
+        "Survival to age 65, female (% of cohort)": 77.360756,
+        "Survival to age 65, male (% of cohort)": 47.851746
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1998,
+        "Survival to age 65, female (% of cohort)": 77.7939,
+        "Survival to age 65, male (% of cohort)": 48.782833
+      },
+      {
+        "Entity": "Russia",
+        "Year": 1999,
+        "Survival to age 65, female (% of cohort)": 76.823814,
+        "Survival to age 65, male (% of cohort)": 45.266003
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2000,
+        "Survival to age 65, female (% of cohort)": 76.81515,
+        "Survival to age 65, male (% of cohort)": 43.586525
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2001,
+        "Survival to age 65, female (% of cohort)": 77.04221,
+        "Survival to age 65, male (% of cohort)": 43.52272
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2002,
+        "Survival to age 65, female (% of cohort)": 76.686195,
+        "Survival to age 65, male (% of cohort)": 42.433186
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2003,
+        "Survival to age 65, female (% of cohort)": 76.766106,
+        "Survival to age 65, male (% of cohort)": 42.26515
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2004,
+        "Survival to age 65, female (% of cohort)": 77.767075,
+        "Survival to age 65, male (% of cohort)": 43.528473
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2005,
+        "Survival to age 65, female (% of cohort)": 77.931725,
+        "Survival to age 65, male (% of cohort)": 43.669476
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2006,
+        "Survival to age 65, female (% of cohort)": 78.959946,
+        "Survival to age 65, male (% of cohort)": 47.006687
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2007,
+        "Survival to age 65, female (% of cohort)": 79.98369,
+        "Survival to age 65, male (% of cohort)": 49.334236
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2008,
+        "Survival to age 65, female (% of cohort)": 80.229126,
+        "Survival to age 65, male (% of cohort)": 49.804855
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2009,
+        "Survival to age 65, female (% of cohort)": 80.93355,
+        "Survival to age 65, male (% of cohort)": 51.595936
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2010,
+        "Survival to age 65, female (% of cohort)": 80.96606,
+        "Survival to age 65, male (% of cohort)": 51.98872
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2011,
+        "Survival to age 65, female (% of cohort)": 82.15769,
+        "Survival to age 65, male (% of cohort)": 54.24682
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2012,
+        "Survival to age 65, female (% of cohort)": 82.5103,
+        "Survival to age 65, male (% of cohort)": 55.538147
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2013,
+        "Survival to age 65, female (% of cohort)": 83.01304,
+        "Survival to age 65, male (% of cohort)": 56.77438
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2014,
+        "Survival to age 65, female (% of cohort)": 83.516556,
+        "Survival to age 65, male (% of cohort)": 57.517464
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2015,
+        "Survival to age 65, female (% of cohort)": 84.41489,
+        "Survival to age 65, male (% of cohort)": 59.171432
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2016,
+        "Survival to age 65, female (% of cohort)": 85.32989,
+        "Survival to age 65, male (% of cohort)": 60.792583
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2017,
+        "Survival to age 65, female (% of cohort)": 86.158356,
+        "Survival to age 65, male (% of cohort)": 63.004932
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2018,
+        "Survival to age 65, female (% of cohort)": 86.56056,
+        "Survival to age 65, male (% of cohort)": 63.566093
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2019,
+        "Survival to age 65, female (% of cohort)": 87.15632,
+        "Survival to age 65, male (% of cohort)": 64.81635
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2020,
+        "Survival to age 65, female (% of cohort)": 81.733826,
+        "Survival to age 65, male (% of cohort)": 59.47772
+      },
+      {
+        "Entity": "Russia",
+        "Year": 2021,
+        "Survival to age 65, female (% of cohort)": 79.94213,
+        "Survival to age 65, male (% of cohort)": 53.84912
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1960,
+        "Survival to age 65, female (% of cohort)": 80.91532,
+        "Survival to age 65, male (% of cohort)": 68.272316
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1961,
+        "Survival to age 65, female (% of cohort)": 80.720726,
+        "Survival to age 65, male (% of cohort)": 67.81733
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1962,
+        "Survival to age 65, female (% of cohort)": 80.786896,
+        "Survival to age 65, male (% of cohort)": 67.898125
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1963,
+        "Survival to age 65, female (% of cohort)": 80.73239,
+        "Survival to age 65, male (% of cohort)": 67.5865
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1964,
+        "Survival to age 65, female (% of cohort)": 81.51768,
+        "Survival to age 65, male (% of cohort)": 68.66248
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1965,
+        "Survival to age 65, female (% of cohort)": 81.5897,
+        "Survival to age 65, male (% of cohort)": 68.6917
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1966,
+        "Survival to age 65, female (% of cohort)": 81.61253,
+        "Survival to age 65, male (% of cohort)": 68.77052
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1967,
+        "Survival to age 65, female (% of cohort)": 82.19433,
+        "Survival to age 65, male (% of cohort)": 70.01296
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1968,
+        "Survival to age 65, female (% of cohort)": 81.84929,
+        "Survival to age 65, male (% of cohort)": 69.607475
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1969,
+        "Survival to age 65, female (% of cohort)": 81.59642,
+        "Survival to age 65, male (% of cohort)": 69.0713
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1970,
+        "Survival to age 65, female (% of cohort)": 81.95401,
+        "Survival to age 65, male (% of cohort)": 69.639755
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1971,
+        "Survival to age 65, female (% of cohort)": 82.29597,
+        "Survival to age 65, male (% of cohort)": 70.39992
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1972,
+        "Survival to age 65, female (% of cohort)": 81.99148,
+        "Survival to age 65, male (% of cohort)": 70.04754
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1973,
+        "Survival to age 65, female (% of cohort)": 82.37484,
+        "Survival to age 65, male (% of cohort)": 70.40259
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1974,
+        "Survival to age 65, female (% of cohort)": 82.43225,
+        "Survival to age 65, male (% of cohort)": 70.82889
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1975,
+        "Survival to age 65, female (% of cohort)": 82.7366,
+        "Survival to age 65, male (% of cohort)": 71.4308
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1976,
+        "Survival to age 65, female (% of cohort)": 82.726166,
+        "Survival to age 65, male (% of cohort)": 71.36111
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1977,
+        "Survival to age 65, female (% of cohort)": 83.22658,
+        "Survival to age 65, male (% of cohort)": 72.17899
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1978,
+        "Survival to age 65, female (% of cohort)": 83.040115,
+        "Survival to age 65, male (% of cohort)": 72.03132
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1979,
+        "Survival to age 65, female (% of cohort)": 83.18106,
+        "Survival to age 65, male (% of cohort)": 72.226456
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1980,
+        "Survival to age 65, female (% of cohort)": 83.691284,
+        "Survival to age 65, male (% of cohort)": 73.07121
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1981,
+        "Survival to age 65, female (% of cohort)": 84.16112,
+        "Survival to age 65, male (% of cohort)": 73.79893
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1982,
+        "Survival to age 65, female (% of cohort)": 84.2689,
+        "Survival to age 65, male (% of cohort)": 74.324524
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1983,
+        "Survival to age 65, female (% of cohort)": 84.6156,
+        "Survival to age 65, male (% of cohort)": 74.68454
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1984,
+        "Survival to age 65, female (% of cohort)": 84.84926,
+        "Survival to age 65, male (% of cohort)": 75.283264
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1985,
+        "Survival to age 65, female (% of cohort)": 84.89667,
+        "Survival to age 65, male (% of cohort)": 75.542496
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1986,
+        "Survival to age 65, female (% of cohort)": 85.38013,
+        "Survival to age 65, male (% of cohort)": 75.91919
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1987,
+        "Survival to age 65, female (% of cohort)": 85.49798,
+        "Survival to age 65, male (% of cohort)": 76.65589
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1988,
+        "Survival to age 65, female (% of cohort)": 85.74703,
+        "Survival to age 65, male (% of cohort)": 76.96071
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1989,
+        "Survival to age 65, female (% of cohort)": 85.997536,
+        "Survival to age 65, male (% of cohort)": 77.76024
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1990,
+        "Survival to age 65, female (% of cohort)": 86.35764,
+        "Survival to age 65, male (% of cohort)": 78.17869
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1991,
+        "Survival to age 65, female (% of cohort)": 86.8241,
+        "Survival to age 65, male (% of cohort)": 78.73931
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1992,
+        "Survival to age 65, female (% of cohort)": 87.22504,
+        "Survival to age 65, male (% of cohort)": 79.406235
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1993,
+        "Survival to age 65, female (% of cohort)": 87.226746,
+        "Survival to age 65, male (% of cohort)": 79.52292
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1994,
+        "Survival to age 65, female (% of cohort)": 87.752495,
+        "Survival to age 65, male (% of cohort)": 80.403275
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1995,
+        "Survival to age 65, female (% of cohort)": 87.80516,
+        "Survival to age 65, male (% of cohort)": 80.437065
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1996,
+        "Survival to age 65, female (% of cohort)": 88.08484,
+        "Survival to age 65, male (% of cohort)": 80.81604
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1997,
+        "Survival to age 65, female (% of cohort)": 88.302605,
+        "Survival to age 65, male (% of cohort)": 81.43971
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1998,
+        "Survival to age 65, female (% of cohort)": 88.48375,
+        "Survival to age 65, male (% of cohort)": 81.56603
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 1999,
+        "Survival to age 65, female (% of cohort)": 88.57583,
+        "Survival to age 65, male (% of cohort)": 81.93561
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2000,
+        "Survival to age 65, female (% of cohort)": 88.874825,
+        "Survival to age 65, male (% of cohort)": 82.51021
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2001,
+        "Survival to age 65, female (% of cohort)": 89.09906,
+        "Survival to age 65, male (% of cohort)": 82.87486
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2002,
+        "Survival to age 65, female (% of cohort)": 89.304085,
+        "Survival to age 65, male (% of cohort)": 83.04577
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2003,
+        "Survival to age 65, female (% of cohort)": 89.33013,
+        "Survival to age 65, male (% of cohort)": 83.31438
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2004,
+        "Survival to age 65, female (% of cohort)": 89.780495,
+        "Survival to age 65, male (% of cohort)": 84.030556
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2005,
+        "Survival to age 65, female (% of cohort)": 89.916115,
+        "Survival to age 65, male (% of cohort)": 84.366554
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2006,
+        "Survival to age 65, female (% of cohort)": 90.01332,
+        "Survival to age 65, male (% of cohort)": 84.347084
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2007,
+        "Survival to age 65, female (% of cohort)": 90.17091,
+        "Survival to age 65, male (% of cohort)": 84.68343
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2008,
+        "Survival to age 65, female (% of cohort)": 90.215965,
+        "Survival to age 65, male (% of cohort)": 84.95226
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2009,
+        "Survival to age 65, female (% of cohort)": 90.55581,
+        "Survival to age 65, male (% of cohort)": 85.43186
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2010,
+        "Survival to age 65, female (% of cohort)": 90.71168,
+        "Survival to age 65, male (% of cohort)": 85.821335
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2011,
+        "Survival to age 65, female (% of cohort)": 90.98685,
+        "Survival to age 65, male (% of cohort)": 86.33702
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2012,
+        "Survival to age 65, female (% of cohort)": 91.146194,
+        "Survival to age 65, male (% of cohort)": 86.75407
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2013,
+        "Survival to age 65, female (% of cohort)": 91.2492,
+        "Survival to age 65, male (% of cohort)": 86.61181
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2014,
+        "Survival to age 65, female (% of cohort)": 91.27206,
+        "Survival to age 65, male (% of cohort)": 86.81381
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2015,
+        "Survival to age 65, female (% of cohort)": 91.25101,
+        "Survival to age 65, male (% of cohort)": 86.663826
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2016,
+        "Survival to age 65, female (% of cohort)": 91.09697,
+        "Survival to age 65, male (% of cohort)": 86.65336
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2017,
+        "Survival to age 65, female (% of cohort)": 91.36975,
+        "Survival to age 65, male (% of cohort)": 86.81211
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2018,
+        "Survival to age 65, female (% of cohort)": 91.2109,
+        "Survival to age 65, male (% of cohort)": 86.639496
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2019,
+        "Survival to age 65, female (% of cohort)": 91.49701,
+        "Survival to age 65, male (% of cohort)": 87.25462
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2020,
+        "Survival to age 65, female (% of cohort)": 90.62662,
+        "Survival to age 65, male (% of cohort)": 85.25072
+      },
+      {
+        "Entity": "United Kingdom",
+        "Year": 2021,
+        "Survival to age 65, female (% of cohort)": 90.38788,
+        "Survival to age 65, male (% of cohort)": 84.92971
+      },
+      {
+        "Entity": "United States",
+        "Year": 1960,
+        "Survival to age 65, female (% of cohort)": 78.217354,
+        "Survival to age 65, male (% of cohort)": 63.763317
+      },
+      {
+        "Entity": "United States",
+        "Year": 1961,
+        "Survival to age 65, female (% of cohort)": 78.8423,
+        "Survival to age 65, male (% of cohort)": 64.60586
+      },
+      {
+        "Entity": "United States",
+        "Year": 1962,
+        "Survival to age 65, female (% of cohort)": 78.614494,
+        "Survival to age 65, male (% of cohort)": 64.2507
+      },
+      {
+        "Entity": "United States",
+        "Year": 1963,
+        "Survival to age 65, female (% of cohort)": 78.39853,
+        "Survival to age 65, male (% of cohort)": 63.734077
+      },
+      {
+        "Entity": "United States",
+        "Year": 1964,
+        "Survival to age 65, female (% of cohort)": 78.67882,
+        "Survival to age 65, male (% of cohort)": 63.900074
+      },
+      {
+        "Entity": "United States",
+        "Year": 1965,
+        "Survival to age 65, female (% of cohort)": 78.90577,
+        "Survival to age 65, male (% of cohort)": 63.874157
+      },
+      {
+        "Entity": "United States",
+        "Year": 1966,
+        "Survival to age 65, female (% of cohort)": 79.08444,
+        "Survival to age 65, male (% of cohort)": 63.63284
+      },
+      {
+        "Entity": "United States",
+        "Year": 1967,
+        "Survival to age 65, female (% of cohort)": 79.448875,
+        "Survival to age 65, male (% of cohort)": 64.072044
+      },
+      {
+        "Entity": "United States",
+        "Year": 1968,
+        "Survival to age 65, female (% of cohort)": 79.03019,
+        "Survival to age 65, male (% of cohort)": 63.332195
+      },
+      {
+        "Entity": "United States",
+        "Year": 1969,
+        "Survival to age 65, female (% of cohort)": 79.485344,
+        "Survival to age 65, male (% of cohort)": 63.841305
+      },
+      {
+        "Entity": "United States",
+        "Year": 1970,
+        "Survival to age 65, female (% of cohort)": 79.62183,
+        "Survival to age 65, male (% of cohort)": 64.231804
+      },
+      {
+        "Entity": "United States",
+        "Year": 1971,
+        "Survival to age 65, female (% of cohort)": 80.06383,
+        "Survival to age 65, male (% of cohort)": 65.02277
+      },
+      {
+        "Entity": "United States",
+        "Year": 1972,
+        "Survival to age 65, female (% of cohort)": 80.35563,
+        "Survival to age 65, male (% of cohort)": 65.03068
+      },
+      {
+        "Entity": "United States",
+        "Year": 1973,
+        "Survival to age 65, female (% of cohort)": 80.5773,
+        "Survival to age 65, male (% of cohort)": 65.57727
+      },
+      {
+        "Entity": "United States",
+        "Year": 1974,
+        "Survival to age 65, female (% of cohort)": 81.269684,
+        "Survival to age 65, male (% of cohort)": 66.74113
+      },
+      {
+        "Entity": "United States",
+        "Year": 1975,
+        "Survival to age 65, female (% of cohort)": 81.938965,
+        "Survival to age 65, male (% of cohort)": 67.73708
+      },
+      {
+        "Entity": "United States",
+        "Year": 1976,
+        "Survival to age 65, female (% of cohort)": 82.264435,
+        "Survival to age 65, male (% of cohort)": 68.4409
+      },
+      {
+        "Entity": "United States",
+        "Year": 1977,
+        "Survival to age 65, female (% of cohort)": 82.66518,
+        "Survival to age 65, male (% of cohort)": 69.11277
+      },
+      {
+        "Entity": "United States",
+        "Year": 1978,
+        "Survival to age 65, female (% of cohort)": 82.900826,
+        "Survival to age 65, male (% of cohort)": 69.56496
+      },
+      {
+        "Entity": "United States",
+        "Year": 1979,
+        "Survival to age 65, female (% of cohort)": 83.48361,
+        "Survival to age 65, male (% of cohort)": 70.34525
+      },
+      {
+        "Entity": "United States",
+        "Year": 1980,
+        "Survival to age 65, female (% of cohort)": 83.412445,
+        "Survival to age 65, male (% of cohort)": 70.51952
+      },
+      {
+        "Entity": "United States",
+        "Year": 1981,
+        "Survival to age 65, female (% of cohort)": 83.701065,
+        "Survival to age 65, male (% of cohort)": 71.223976
+      },
+      {
+        "Entity": "United States",
+        "Year": 1982,
+        "Survival to age 65, female (% of cohort)": 84.067375,
+        "Survival to age 65, male (% of cohort)": 72.03028
+      },
+      {
+        "Entity": "United States",
+        "Year": 1983,
+        "Survival to age 65, female (% of cohort)": 84.134415,
+        "Survival to age 65, male (% of cohort)": 72.440895
+      },
+      {
+        "Entity": "United States",
+        "Year": 1984,
+        "Survival to age 65, female (% of cohort)": 84.26737,
+        "Survival to age 65, male (% of cohort)": 72.67514
+      },
+      {
+        "Entity": "United States",
+        "Year": 1985,
+        "Survival to age 65, female (% of cohort)": 84.335495,
+        "Survival to age 65, male (% of cohort)": 72.70647
+      },
+      {
+        "Entity": "United States",
+        "Year": 1986,
+        "Survival to age 65, female (% of cohort)": 84.4712,
+        "Survival to age 65, male (% of cohort)": 72.91003
+      },
+      {
+        "Entity": "United States",
+        "Year": 1987,
+        "Survival to age 65, female (% of cohort)": 84.58359,
+        "Survival to age 65, male (% of cohort)": 73.17942
+      },
+      {
+        "Entity": "United States",
+        "Year": 1988,
+        "Survival to age 65, female (% of cohort)": 84.554,
+        "Survival to age 65, male (% of cohort)": 73.25774
+      },
+      {
+        "Entity": "United States",
+        "Year": 1989,
+        "Survival to age 65, female (% of cohort)": 84.859,
+        "Survival to age 65, male (% of cohort)": 73.63233
+      },
+      {
+        "Entity": "United States",
+        "Year": 1990,
+        "Survival to age 65, female (% of cohort)": 85.14508,
+        "Survival to age 65, male (% of cohort)": 74.10699
+      },
+      {
+        "Entity": "United States",
+        "Year": 1991,
+        "Survival to age 65, female (% of cohort)": 85.266685,
+        "Survival to age 65, male (% of cohort)": 74.41415
+      },
+      {
+        "Entity": "United States",
+        "Year": 1992,
+        "Survival to age 65, female (% of cohort)": 85.55179,
+        "Survival to age 65, male (% of cohort)": 74.883316
+      },
+      {
+        "Entity": "United States",
+        "Year": 1993,
+        "Survival to age 65, female (% of cohort)": 85.38844,
+        "Survival to age 65, male (% of cohort)": 74.73136
+      },
+      {
+        "Entity": "United States",
+        "Year": 1994,
+        "Survival to age 65, female (% of cohort)": 85.54219,
+        "Survival to age 65, male (% of cohort)": 74.98417
+      },
+      {
+        "Entity": "United States",
+        "Year": 1995,
+        "Survival to age 65, female (% of cohort)": 85.59419,
+        "Survival to age 65, male (% of cohort)": 75.34624
+      },
+      {
+        "Entity": "United States",
+        "Year": 1996,
+        "Survival to age 65, female (% of cohort)": 85.861595,
+        "Survival to age 65, male (% of cohort)": 76.294624
+      },
+      {
+        "Entity": "United States",
+        "Year": 1997,
+        "Survival to age 65, female (% of cohort)": 86.122086,
+        "Survival to age 65, male (% of cohort)": 77.361725
+      },
+      {
+        "Entity": "United States",
+        "Year": 1998,
+        "Survival to age 65, female (% of cohort)": 86.39387,
+        "Survival to age 65, male (% of cohort)": 77.8888
+      },
+      {
+        "Entity": "United States",
+        "Year": 1999,
+        "Survival to age 65, female (% of cohort)": 86.40846,
+        "Survival to age 65, male (% of cohort)": 78.13213
+      },
+      {
+        "Entity": "United States",
+        "Year": 2000,
+        "Survival to age 65, female (% of cohort)": 86.51562,
+        "Survival to age 65, male (% of cohort)": 78.37781
+      },
+      {
+        "Entity": "United States",
+        "Year": 2001,
+        "Survival to age 65, female (% of cohort)": 86.54666,
+        "Survival to age 65, male (% of cohort)": 78.507904
+      },
+      {
+        "Entity": "United States",
+        "Year": 2002,
+        "Survival to age 65, female (% of cohort)": 86.6593,
+        "Survival to age 65, male (% of cohort)": 78.5378
+      },
+      {
+        "Entity": "United States",
+        "Year": 2003,
+        "Survival to age 65, female (% of cohort)": 86.69912,
+        "Survival to age 65, male (% of cohort)": 78.674614
+      },
+      {
+        "Entity": "United States",
+        "Year": 2004,
+        "Survival to age 65, female (% of cohort)": 87.05359,
+        "Survival to age 65, male (% of cohort)": 79.21375
+      },
+      {
+        "Entity": "United States",
+        "Year": 2005,
+        "Survival to age 65, female (% of cohort)": 87.09978,
+        "Survival to age 65, male (% of cohort)": 79.11089
+      },
+      {
+        "Entity": "United States",
+        "Year": 2006,
+        "Survival to age 65, female (% of cohort)": 87.27154,
+        "Survival to age 65, male (% of cohort)": 79.4065
+      },
+      {
+        "Entity": "United States",
+        "Year": 2007,
+        "Survival to age 65, female (% of cohort)": 87.54689,
+        "Survival to age 65, male (% of cohort)": 79.752686
+      },
+      {
+        "Entity": "United States",
+        "Year": 2008,
+        "Survival to age 65, female (% of cohort)": 87.64929,
+        "Survival to age 65, male (% of cohort)": 79.962585
+      },
+      {
+        "Entity": "United States",
+        "Year": 2009,
+        "Survival to age 65, female (% of cohort)": 87.75443,
+        "Survival to age 65, male (% of cohort)": 80.290215
+      },
+      {
+        "Entity": "United States",
+        "Year": 2010,
+        "Survival to age 65, female (% of cohort)": 88.06642,
+        "Survival to age 65, male (% of cohort)": 80.70621
+      },
+      {
+        "Entity": "United States",
+        "Year": 2011,
+        "Survival to age 65, female (% of cohort)": 88.02853,
+        "Survival to age 65, male (% of cohort)": 80.710976
+      },
+      {
+        "Entity": "United States",
+        "Year": 2012,
+        "Survival to age 65, female (% of cohort)": 88.08134,
+        "Survival to age 65, male (% of cohort)": 80.72549
+      },
+      {
+        "Entity": "United States",
+        "Year": 2013,
+        "Survival to age 65, female (% of cohort)": 88.04167,
+        "Survival to age 65, male (% of cohort)": 80.66495
+      },
+      {
+        "Entity": "United States",
+        "Year": 2014,
+        "Survival to age 65, female (% of cohort)": 87.88685,
+        "Survival to age 65, male (% of cohort)": 80.55042
+      },
+      {
+        "Entity": "United States",
+        "Year": 2015,
+        "Survival to age 65, female (% of cohort)": 87.75513,
+        "Survival to age 65, male (% of cohort)": 80.25134
+      },
+      {
+        "Entity": "United States",
+        "Year": 2016,
+        "Survival to age 65, female (% of cohort)": 87.54738,
+        "Survival to age 65, male (% of cohort)": 79.84868
+      },
+      {
+        "Entity": "United States",
+        "Year": 2017,
+        "Survival to age 65, female (% of cohort)": 87.55521,
+        "Survival to age 65, male (% of cohort)": 79.779205
+      },
+      {
+        "Entity": "United States",
+        "Year": 2018,
+        "Survival to age 65, female (% of cohort)": 87.7357,
+        "Survival to age 65, male (% of cohort)": 79.93169
+      },
+      {
+        "Entity": "United States",
+        "Year": 2019,
+        "Survival to age 65, female (% of cohort)": 87.79978,
+        "Survival to age 65, male (% of cohort)": 79.977234
+      },
+      {
+        "Entity": "United States",
+        "Year": 2020,
+        "Survival to age 65, female (% of cohort)": 86.45015,
+        "Survival to age 65, male (% of cohort)": 77.11367
+      },
+      {
+        "Entity": "United States",
+        "Year": 2021,
+        "Survival to age 65, female (% of cohort)": 85.23758,
+        "Survival to age 65, male (% of cohort)": 75.3835
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Survival to age 65, male (% of cohort)",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal"
+    }
+  }
+}

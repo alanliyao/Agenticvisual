@@ -1,0 +1,2868 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: supply_chain_data",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "_index": 0,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9655172413793104
+      },
+      {
+        "_index": 1,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 2,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.896551724137931
+      },
+      {
+        "_index": 3,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5862068965517241
+      },
+      {
+        "_index": 4,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.06896551724137931
+      },
+      {
+        "_index": 5,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5517241379310345
+      },
+      {
+        "_index": 6,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7931034482758621
+      },
+      {
+        "_index": 7,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 8,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.2413793103448276
+      },
+      {
+        "_index": 9,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7586206896551724
+      },
+      {
+        "_index": 10,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.13793103448275862
+      },
+      {
+        "_index": 11,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3448275862068966
+      },
+      {
+        "_index": 12,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.06896551724137931
+      },
+      {
+        "_index": 13,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3103448275862069
+      },
+      {
+        "_index": 14,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.4482758620689655
+      },
+      {
+        "_index": 15,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.20689655172413793
+      },
+      {
+        "_index": 16,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.6896551724137931
+      },
+      {
+        "_index": 17,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5172413793103449
+      },
+      {
+        "_index": 18,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5517241379310345
+      },
+      {
+        "_index": 19,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5172413793103449
+      },
+      {
+        "_index": 20,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.1724137931034483
+      },
+      {
+        "_index": 21,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.10344827586206896
+      },
+      {
+        "_index": 22,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9310344827586207
+      },
+      {
+        "_index": 23,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9655172413793104
+      },
+      {
+        "_index": 24,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.06896551724137931
+      },
+      {
+        "_index": 25,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7586206896551724
+      },
+      {
+        "_index": 26,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.10344827586206896
+      },
+      {
+        "_index": 27,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.10344827586206896
+      },
+      {
+        "_index": 28,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.20689655172413793
+      },
+      {
+        "_index": 29,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.20689655172413793
+      },
+      {
+        "_index": 30,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 31,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.2413793103448276
+      },
+      {
+        "_index": 32,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.20689655172413793
+      },
+      {
+        "_index": 33,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7586206896551724
+      },
+      {
+        "_index": 34,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3103448275862069
+      },
+      {
+        "_index": 35,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.034482758620689655
+      },
+      {
+        "_index": 36,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.6206896551724138
+      },
+      {
+        "_index": 37,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.4827586206896552
+      },
+      {
+        "_index": 38,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3793103448275862
+      },
+      {
+        "_index": 39,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.1724137931034483
+      },
+      {
+        "_index": 40,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 41,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.20689655172413793
+      },
+      {
+        "_index": 42,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.20689655172413793
+      },
+      {
+        "_index": 43,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7586206896551724
+      },
+      {
+        "_index": 44,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5862068965517241
+      },
+      {
+        "_index": 45,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.8275862068965517
+      },
+      {
+        "_index": 46,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7586206896551724
+      },
+      {
+        "_index": 47,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.6551724137931034
+      },
+      {
+        "_index": 48,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5862068965517241
+      },
+      {
+        "_index": 49,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9310344827586207
+      },
+      {
+        "_index": 50,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.6896551724137931
+      },
+      {
+        "_index": 51,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9310344827586207
+      },
+      {
+        "_index": 52,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.896551724137931
+      },
+      {
+        "_index": 53,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5517241379310345
+      },
+      {
+        "_index": 54,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9655172413793104
+      },
+      {
+        "_index": 55,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.13793103448275862
+      },
+      {
+        "_index": 56,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9310344827586207
+      },
+      {
+        "_index": 57,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.8275862068965517
+      },
+      {
+        "_index": 58,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.20689655172413793
+      },
+      {
+        "_index": 59,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.10344827586206896
+      },
+      {
+        "_index": 60,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7931034482758621
+      },
+      {
+        "_index": 61,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3793103448275862
+      },
+      {
+        "_index": 62,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.4482758620689655
+      },
+      {
+        "_index": 63,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3103448275862069
+      },
+      {
+        "_index": 64,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.1724137931034483
+      },
+      {
+        "_index": 65,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.6896551724137931
+      },
+      {
+        "_index": 66,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9310344827586207
+      },
+      {
+        "_index": 67,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3448275862068966
+      },
+      {
+        "_index": 68,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5862068965517241
+      },
+      {
+        "_index": 69,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.20689655172413793
+      },
+      {
+        "_index": 70,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5172413793103449
+      },
+      {
+        "_index": 71,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3103448275862069
+      },
+      {
+        "_index": 72,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3448275862068966
+      },
+      {
+        "_index": 73,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.10344827586206896
+      },
+      {
+        "_index": 74,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.27586206896551724
+      },
+      {
+        "_index": 75,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3448275862068966
+      },
+      {
+        "_index": 76,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7931034482758621
+      },
+      {
+        "_index": 77,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.13793103448275862
+      },
+      {
+        "_index": 78,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.6896551724137931
+      },
+      {
+        "_index": 79,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3793103448275862
+      },
+      {
+        "_index": 80,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.13793103448275862
+      },
+      {
+        "_index": 81,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 82,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.8620689655172413
+      },
+      {
+        "_index": 83,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.13793103448275862
+      },
+      {
+        "_index": 84,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.7241379310344828
+      },
+      {
+        "_index": 85,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.034482758620689655
+      },
+      {
+        "_index": 86,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5862068965517241
+      },
+      {
+        "_index": 87,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.5517241379310345
+      },
+      {
+        "_index": 88,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3448275862068966
+      },
+      {
+        "_index": 89,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.3448275862068966
+      },
+      {
+        "_index": 90,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.2413793103448276
+      },
+      {
+        "_index": 91,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9310344827586207
+      },
+      {
+        "_index": 92,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9655172413793104
+      },
+      {
+        "_index": 93,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.6551724137931034
+      },
+      {
+        "_index": 94,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.4482758620689655
+      },
+      {
+        "_index": 95,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.8620689655172413
+      },
+      {
+        "_index": 96,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.9310344827586207
+      },
+      {
+        "_index": 97,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.41379310344827586
+      },
+      {
+        "_index": 98,
+        "Product type": "skincare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.27586206896551724
+      },
+      {
+        "_index": 99,
+        "Product type": "haircare",
+        "dimension": "Manufacturing lead time",
+        "normalized_value": 0.034482758620689655
+      },
+      {
+        "_index": 0,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.4593853719710283
+      },
+      {
+        "_index": 1,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.33067042565209875
+      },
+      {
+        "_index": 2,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.30090097409483446
+      },
+      {
+        "_index": 3,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.351080582352016
+      },
+      {
+        "_index": 4,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.9247726187654892
+      },
+      {
+        "_index": 5,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.5659770111049311
+      },
+      {
+        "_index": 6,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 7,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 8,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.10508080181307915
+      },
+      {
+        "_index": 9,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.47643868218063
+      },
+      {
+        "_index": 10,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.9701288396903284
+      },
+      {
+        "_index": 11,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.2694349897898273
+      },
+      {
+        "_index": 12,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.3175024134024
+      },
+      {
+        "_index": 13,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.983360020458618
+      },
+      {
+        "_index": 14,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.04783816128238577
+      },
+      {
+        "_index": 15,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.9761658663974871
+      },
+      {
+        "_index": 16,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.7727228122611943
+      },
+      {
+        "_index": 17,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.4736137347466513
+      },
+      {
+        "_index": 18,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.2645114574542033
+      },
+      {
+        "_index": 19,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.8262593279182692
+      },
+      {
+        "_index": 20,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.65664269270347
+      },
+      {
+        "_index": 21,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6164872862047999
+      },
+      {
+        "_index": 22,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.49842704474803023
+      },
+      {
+        "_index": 23,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.9912975979863675
+      },
+      {
+        "_index": 24,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.3994396798382288
+      },
+      {
+        "_index": 25,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.7846564187788677
+      },
+      {
+        "_index": 26,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.15132144549852225
+      },
+      {
+        "_index": 27,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.09598573563758242
+      },
+      {
+        "_index": 28,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.5930442819158431
+      },
+      {
+        "_index": 29,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.3883655529893724
+      },
+      {
+        "_index": 30,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.5138167355523615
+      },
+      {
+        "_index": 31,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6013971500154527
+      },
+      {
+        "_index": 32,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.29078162392136353
+      },
+      {
+        "_index": 33,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.23143035421700808
+      },
+      {
+        "_index": 34,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.09828320824926681
+      },
+      {
+        "_index": 35,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.5785639027141668
+      },
+      {
+        "_index": 36,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.45177704618907466
+      },
+      {
+        "_index": 37,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.33805506512220607
+      },
+      {
+        "_index": 38,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.0492536475957769
+      },
+      {
+        "_index": 39,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.08051082664359144
+      },
+      {
+        "_index": 40,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.8852756436049095
+      },
+      {
+        "_index": 41,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.9579792605018465
+      },
+      {
+        "_index": 42,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.9690663164063409
+      },
+      {
+        "_index": 43,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.2560686223589009
+      },
+      {
+        "_index": 44,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.21822332884342807
+      },
+      {
+        "_index": 45,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6630086025503928
+      },
+      {
+        "_index": 46,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.7749184661506727
+      },
+      {
+        "_index": 47,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.189344657621698
+      },
+      {
+        "_index": 48,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.22404006915618746
+      },
+      {
+        "_index": 49,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.13277707645574924
+      },
+      {
+        "_index": 50,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.4481929581126961
+      },
+      {
+        "_index": 51,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.1332092013913676
+      },
+      {
+        "_index": 52,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.08214774489287843
+      },
+      {
+        "_index": 53,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.8361264568218889
+      },
+      {
+        "_index": 54,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.29579840583281825
+      },
+      {
+        "_index": 55,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.2971962552634245
+      },
+      {
+        "_index": 56,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.11944594201467154
+      },
+      {
+        "_index": 57,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6779208107012651
+      },
+      {
+        "_index": 58,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6501491192102816
+      },
+      {
+        "_index": 59,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.008291167420576053
+      },
+      {
+        "_index": 60,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.8754531281207503
+      },
+      {
+        "_index": 61,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.7889459734564521
+      },
+      {
+        "_index": 62,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.20292095050712836
+      },
+      {
+        "_index": 63,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.1930243408636284
+      },
+      {
+        "_index": 64,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.07733170795572
+      },
+      {
+        "_index": 65,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.005205821907214519
+      },
+      {
+        "_index": 66,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.4167405442608524
+      },
+      {
+        "_index": 67,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.0607109619427306
+      },
+      {
+        "_index": 68,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.9760875973731971
+      },
+      {
+        "_index": 69,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.7780228509141491
+      },
+      {
+        "_index": 70,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.10526127036870156
+      },
+      {
+        "_index": 71,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.300633220568184
+      },
+      {
+        "_index": 72,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.555751639815506
+      },
+      {
+        "_index": 73,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.4653861172051174
+      },
+      {
+        "_index": 74,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.8080396747114856
+      },
+      {
+        "_index": 75,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.47752812995448923
+      },
+      {
+        "_index": 76,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.642791834729034
+      },
+      {
+        "_index": 77,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.42556346390453365
+      },
+      {
+        "_index": 78,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.7119404930726667
+      },
+      {
+        "_index": 79,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.5772030295148064
+      },
+      {
+        "_index": 80,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.7712477874598725
+      },
+      {
+        "_index": 81,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.1901232632410681
+      },
+      {
+        "_index": 82,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.034358346528839026
+      },
+      {
+        "_index": 83,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.9823592553761773
+      },
+      {
+        "_index": 84,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.33262067500311965
+      },
+      {
+        "_index": 85,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.699771794700326
+      },
+      {
+        "_index": 86,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.7473381192167629
+      },
+      {
+        "_index": 87,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.2806631058688765
+      },
+      {
+        "_index": 88,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6820404669868961
+      },
+      {
+        "_index": 89,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.46267862990999836
+      },
+      {
+        "_index": 90,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.8598292388143726
+      },
+      {
+        "_index": 91,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.3932446121669159
+      },
+      {
+        "_index": 92,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6254012135341941
+      },
+      {
+        "_index": 93,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.35117115820093736
+      },
+      {
+        "_index": 94,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6027818980646392
+      },
+      {
+        "_index": 95,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.5875686735881069
+      },
+      {
+        "_index": 96,
+        "Product type": "cosmetics",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.16993810754617206
+      },
+      {
+        "_index": 97,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.6574446390729285
+      },
+      {
+        "_index": 98,
+        "Product type": "skincare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.045939972714480345
+      },
+      {
+        "_index": 99,
+        "Product type": "haircare",
+        "dimension": "Manufacturing costs",
+        "normalized_value": 0.3759650227142509
+      },
+      {
+        "_index": 0,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.12599318955732122
+      },
+      {
+        "_index": 1,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.46878547105561863
+      },
+      {
+        "_index": 2,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.9841089670828603
+      },
+      {
+        "_index": 3,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.945516458569807
+      },
+      {
+        "_index": 4,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3518728717366629
+      },
+      {
+        "_index": 5,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 6,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.2383654937570942
+      },
+      {
+        "_index": 7,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5221339387060159
+      },
+      {
+        "_index": 8,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7548240635641317
+      },
+      {
+        "_index": 9,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.9750283768444948
+      },
+      {
+        "_index": 10,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8240635641316686
+      },
+      {
+        "_index": 11,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.29284903518728717
+      },
+      {
+        "_index": 12,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5209988649262202
+      },
+      {
+        "_index": 13,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.07832009080590238
+      },
+      {
+        "_index": 14,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5153234960272418
+      },
+      {
+        "_index": 15,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5402951191827469
+      },
+      {
+        "_index": 16,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3348467650397276
+      },
+      {
+        "_index": 17,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3961407491486947
+      },
+      {
+        "_index": 18,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3064699205448354
+      },
+      {
+        "_index": 19,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.6696935300794552
+      },
+      {
+        "_index": 20,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.23269012485811577
+      },
+      {
+        "_index": 21,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7797956867196367
+      },
+      {
+        "_index": 22,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7673098751418842
+      },
+      {
+        "_index": 23,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5266742338251986
+      },
+      {
+        "_index": 24,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.38933030646992056
+      },
+      {
+        "_index": 25,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.94211123723042
+      },
+      {
+        "_index": 26,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.07604994324631101
+      },
+      {
+        "_index": 27,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.2122587968217934
+      },
+      {
+        "_index": 28,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.07604994324631101
+      },
+      {
+        "_index": 29,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.25539160045402953
+      },
+      {
+        "_index": 30,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7968217934165721
+      },
+      {
+        "_index": 31,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.4052213393870602
+      },
+      {
+        "_index": 32,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7185017026106697
+      },
+      {
+        "_index": 33,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.16685584562996594
+      },
+      {
+        "_index": 34,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.39500567536889897
+      },
+      {
+        "_index": 35,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.2985244040862656
+      },
+      {
+        "_index": 36,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.6435868331441543
+      },
+      {
+        "_index": 37,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8660612939841089
+      },
+      {
+        "_index": 38,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8365493757094211
+      },
+      {
+        "_index": 39,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7797956867196367
+      },
+      {
+        "_index": 40,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7820658342792282
+      },
+      {
+        "_index": 41,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8944381384790011
+      },
+      {
+        "_index": 42,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.0851305334846765
+      },
+      {
+        "_index": 43,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.11577752553916004
+      },
+      {
+        "_index": 44,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8286038592508513
+      },
+      {
+        "_index": 45,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7832009080590239
+      },
+      {
+        "_index": 46,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8694665153234961
+      },
+      {
+        "_index": 47,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.9761634506242906
+      },
+      {
+        "_index": 48,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.0056753688989784334
+      },
+      {
+        "_index": 49,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.08286038592508513
+      },
+      {
+        "_index": 50,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.2292849035187287
+      },
+      {
+        "_index": 51,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.6458569807037458
+      },
+      {
+        "_index": 52,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7071509648127128
+      },
+      {
+        "_index": 53,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5981838819523269
+      },
+      {
+        "_index": 54,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.4460839954597049
+      },
+      {
+        "_index": 55,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.923950056753689
+      },
+      {
+        "_index": 56,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8195232690124858
+      },
+      {
+        "_index": 57,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5493757094211124
+      },
+      {
+        "_index": 58,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3314415437003405
+      },
+      {
+        "_index": 59,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.08172531214528944
+      },
+      {
+        "_index": 60,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.9364358683314415
+      },
+      {
+        "_index": 61,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.4267877412031782
+      },
+      {
+        "_index": 62,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7343927355278093
+      },
+      {
+        "_index": 63,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.717366628830874
+      },
+      {
+        "_index": 64,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.2542565266742338
+      },
+      {
+        "_index": 65,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.2883087400681044
+      },
+      {
+        "_index": 66,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8660612939841089
+      },
+      {
+        "_index": 67,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.10669693530079455
+      },
+      {
+        "_index": 68,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3076049943246311
+      },
+      {
+        "_index": 69,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8603859250851306
+      },
+      {
+        "_index": 70,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7616345062429057
+      },
+      {
+        "_index": 71,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.17480136208853575
+      },
+      {
+        "_index": 72,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.05448354143019296
+      },
+      {
+        "_index": 73,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3859250851305335
+      },
+      {
+        "_index": 74,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.9250851305334846
+      },
+      {
+        "_index": 75,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.7434733257661748
+      },
+      {
+        "_index": 76,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 77,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.26106696935300794
+      },
+      {
+        "_index": 78,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8558456299659478
+      },
+      {
+        "_index": 79,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.14074914869466515
+      },
+      {
+        "_index": 80,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.1112372304199773
+      },
+      {
+        "_index": 81,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.674233825198638
+      },
+      {
+        "_index": 82,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.9659477866061293
+      },
+      {
+        "_index": 83,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3847900113507378
+      },
+      {
+        "_index": 84,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5505107832009081
+      },
+      {
+        "_index": 85,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.12145289443813848
+      },
+      {
+        "_index": 86,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5278093076049943
+      },
+      {
+        "_index": 87,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.47559591373439275
+      },
+      {
+        "_index": 88,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.963677639046538
+      },
+      {
+        "_index": 89,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.30192962542565266
+      },
+      {
+        "_index": 90,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5459704880817253
+      },
+      {
+        "_index": 91,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.11691259931895573
+      },
+      {
+        "_index": 92,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.6435868331441543
+      },
+      {
+        "_index": 93,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.8172531214528944
+      },
+      {
+        "_index": 94,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.9125993189557321
+      },
+      {
+        "_index": 95,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.3927355278093076
+      },
+      {
+        "_index": 96,
+        "Product type": "cosmetics",
+        "dimension": "Production volumes",
+        "normalized_value": 0.6174801362088536
+      },
+      {
+        "_index": 97,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.489216799091941
+      },
+      {
+        "_index": 98,
+        "Product type": "skincare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.5414301929625426
+      },
+      {
+        "_index": 99,
+        "Product type": "haircare",
+        "dimension": "Production volumes",
+        "normalized_value": 0.927355278093076
+      },
+      {
+        "_index": 0,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.04223078037724362
+      },
+      {
+        "_index": 1,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.9826877949687679
+      },
+      {
+        "_index": 2,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.9271106793742261
+      },
+      {
+        "_index": 3,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.9608574563971327
+      },
+      {
+        "_index": 4,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.6354797442343433
+      },
+      {
+        "_index": 5,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5610208453176513
+      },
+      {
+        "_index": 6,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.19962881054925455
+      },
+      {
+        "_index": 7,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.07713814130617627
+      },
+      {
+        "_index": 8,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5469310700700845
+      },
+      {
+        "_index": 9,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.777541317338372
+      },
+      {
+        "_index": 10,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.3472523248181585
+      },
+      {
+        "_index": 11,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.0005207147284796744
+      },
+      {
+        "_index": 12,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.43543986511878163
+      },
+      {
+        "_index": 13,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.32769398539998074
+      },
+      {
+        "_index": 14,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.016679772377114398
+      },
+      {
+        "_index": 15,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.4564029617458016
+      },
+      {
+        "_index": 16,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.20199688699256665
+      },
+      {
+        "_index": 17,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.016951668157699405
+      },
+      {
+        "_index": 18,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.4498049176853026
+      },
+      {
+        "_index": 19,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.7372694619675328
+      },
+      {
+        "_index": 20,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.8561492804967542
+      },
+      {
+        "_index": 21,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 22,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5228311497703666
+      },
+      {
+        "_index": 23,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.2690060476073709
+      },
+      {
+        "_index": 24,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.7463860315240858
+      },
+      {
+        "_index": 25,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.7679118408263103
+      },
+      {
+        "_index": 26,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.4269178141188469
+      },
+      {
+        "_index": 27,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5783913890262783
+      },
+      {
+        "_index": 28,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.1620009309474174
+      },
+      {
+        "_index": 29,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.784346205580639
+      },
+      {
+        "_index": 30,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.19241107907048144
+      },
+      {
+        "_index": 31,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.6036588285630164
+      },
+      {
+        "_index": 32,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.39170220284888413
+      },
+      {
+        "_index": 33,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.7158485314025418
+      },
+      {
+        "_index": 34,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.1276248630972306
+      },
+      {
+        "_index": 35,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.10619466380422792
+      },
+      {
+        "_index": 36,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.7695990500312603
+      },
+      {
+        "_index": 37,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5266949930517898
+      },
+      {
+        "_index": 38,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.12086200135738374
+      },
+      {
+        "_index": 39,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.2912959263983721
+      },
+      {
+        "_index": 40,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.8524613223300754
+      },
+      {
+        "_index": 41,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.0054250367595659295
+      },
+      {
+        "_index": 42,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 43,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.07188021179515086
+      },
+      {
+        "_index": 44,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5982990288586623
+      },
+      {
+        "_index": 45,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.6505235135607546
+      },
+      {
+        "_index": 46,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.7377083731112754
+      },
+      {
+        "_index": 47,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.07356064477815913
+      },
+      {
+        "_index": 48,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.34131786470288245
+      },
+      {
+        "_index": 49,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5704953040621987
+      },
+      {
+        "_index": 50,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.9625141862598824
+      },
+      {
+        "_index": 51,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.35652696635222736
+      },
+      {
+        "_index": 52,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.4275583562989865
+      },
+      {
+        "_index": 53,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.2828367498263059
+      },
+      {
+        "_index": 54,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.49996759520386846
+      },
+      {
+        "_index": 55,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.9206739333198933
+      },
+      {
+        "_index": 56,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.23475525850569265
+      },
+      {
+        "_index": 57,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5065526743459373
+      },
+      {
+        "_index": 58,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.34787435502166153
+      },
+      {
+        "_index": 59,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.08709959991742419
+      },
+      {
+        "_index": 60,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.576038605024909
+      },
+      {
+        "_index": 61,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.8837988852612143
+      },
+      {
+        "_index": 62,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.3770629278131077
+      },
+      {
+        "_index": 63,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.7345040587510314
+      },
+      {
+        "_index": 64,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.02863012251122049
+      },
+      {
+        "_index": 65,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.9942773115704872
+      },
+      {
+        "_index": 66,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.6969520915062196
+      },
+      {
+        "_index": 67,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.02303515372524913
+      },
+      {
+        "_index": 68,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.3993092812073683
+      },
+      {
+        "_index": 69,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.2730901493488245
+      },
+      {
+        "_index": 70,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.3682377064409491
+      },
+      {
+        "_index": 71,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.41867314163865715
+      },
+      {
+        "_index": 72,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.6492482739984852
+      },
+      {
+        "_index": 73,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.9352302293968885
+      },
+      {
+        "_index": 74,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.07682020293110388
+      },
+      {
+        "_index": 75,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.408779826374783
+      },
+      {
+        "_index": 76,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.43925718858743384
+      },
+      {
+        "_index": 77,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.6171005166095582
+      },
+      {
+        "_index": 78,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.8288083187590947
+      },
+      {
+        "_index": 79,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.029927779471269855
+      },
+      {
+        "_index": 80,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5753418637952741
+      },
+      {
+        "_index": 81,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5139444433565195
+      },
+      {
+        "_index": 82,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.8371396845622245
+      },
+      {
+        "_index": 83,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.1533128582276285
+      },
+      {
+        "_index": 84,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.9805312802429933
+      },
+      {
+        "_index": 85,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.27553718717380155
+      },
+      {
+        "_index": 86,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.4131377571419099
+      },
+      {
+        "_index": 87,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.7468793599125807
+      },
+      {
+        "_index": 88,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.1429886620923082
+      },
+      {
+        "_index": 89,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.3839043706116031
+      },
+      {
+        "_index": 90,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.24402776318415295
+      },
+      {
+        "_index": 91,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.12343787343024516
+      },
+      {
+        "_index": 92,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.06398024720420102
+      },
+      {
+        "_index": 93,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.8428106344826497
+      },
+      {
+        "_index": 94,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.2936605123504067
+      },
+      {
+        "_index": 95,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.2423003290538731
+      },
+      {
+        "_index": 96,
+        "Product type": "cosmetics",
+        "dimension": "Defect rates",
+        "normalized_value": 0.783116437580678
+      },
+      {
+        "_index": 97,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.6823553437415105
+      },
+      {
+        "_index": 98,
+        "Product type": "skincare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.5872224076099752
+      },
+      {
+        "_index": 99,
+        "Product type": "haircare",
+        "dimension": "Defect rates",
+        "normalized_value": 0.06653996417541112
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Manufacturing lead time",
+        "Manufacturing costs",
+        "Production volumes",
+        "Defect rates"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Manufacturing lead time"
+          },
+          {
+            "dimension": "Manufacturing costs"
+          },
+          {
+            "dimension": "Production volumes"
+          },
+          {
+            "dimension": "Defect rates"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Product type",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Product type",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 14.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0850685695870688
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 45.90562173883524
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.46610860359912
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 104.0
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 568.5
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 985.0
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0186075676310149
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.141862683349868
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.939255288620948
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 14.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0850685695870688
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 45.90562173883524
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.46610860359912
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 104.0
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 568.5
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 985.0
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0186075676310149
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.141862683349868
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.939255288620948
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 14.0
+          },
+          {
+            "dimension": "Manufacturing lead time",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 30.0
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0850685695870688
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 45.90562173883524
+          },
+          {
+            "dimension": "Manufacturing costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.46610860359912
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 104.0
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 568.5
+          },
+          {
+            "dimension": "Production volumes",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 985.0
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0186075676310149
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.141862683349868
+          },
+          {
+            "dimension": "Defect rates",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 4.939255288620948
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  }
+}

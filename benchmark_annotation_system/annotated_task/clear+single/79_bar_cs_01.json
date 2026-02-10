@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "79_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/79_ign_scores_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "sort the bars to see what is the most active platform?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Xbox One",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "sort the bars in descending order,and we can see the bar of Xbox One is the highest"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Action",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

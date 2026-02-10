@@ -1,0 +1,63 @@
+{
+  "task_type": "clear_single",
+  "task_id": "82_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/82_Online Sales Data_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "filter to show that where was the highest point of clothing?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Jan 09,2024",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "filter out lines and we can select the highest point and then write down the date."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Electronics",
+                    "Home Appliances",
+                    "Books",
+                    "Beauty Products",
+                    "Sports"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Date",
+            "y": "Total Revenue",
+            "color": "Product Category"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Electronics\", \"Home Appliances\", \"Books\", \"Beauty Products\", \"Sports\"], datum['Product Category']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

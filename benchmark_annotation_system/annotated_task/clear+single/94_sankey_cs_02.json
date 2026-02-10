@@ -1,0 +1,55 @@
+{
+  "task_type": "clear_single",
+  "task_id": "94_sankey_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/94_samkey_retail.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "color the flows to see which source gives the most flow to fresh food?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "fresh supermarket",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "color_flows",
+            "reasoning": "color the flows to frsh food by another color,and we can see the flow from fresh supermarket."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "color_flows",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "color": "#e74c3c",
+                  "nodes": [
+                    "Fresh Food"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "01_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/01_scatter_cars.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Use the \"calculate correlation\" tool to calculate the correlation coefficient between horsepower and miles per gallon. Then, use the \"identify clusters\" tool to identify the main clusters of the data points in the graph. Do these clusters correspond highly to the \"Origin\" label?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "Yes."
+        },
+        "key_insights": [
+          "The Spearman correlation coefficient between Horsepower and Miles_per_Gallon is -0.85, which indicates a strong negative monotonic relationship. This means that as horsepower increases, fuel efficiency (miles per gallon) decreases in a very consistent fashion.",
+          "The clustering results divided the data into three groups: \"High horsepower with low fuel consumption\", \"Medium horsepower with medium fuel consumption\", and \"Low horsepower with high fuel consumption\".",
+          "These three groups precisely correspond to the three production regions of the United States, Japan and Europe."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "The overall trend is that the higher the horsepower, the lower the fuel consumption. However, it is not a strict straight line; there is a certain curve shape involved."
+          },
+          {
+            "iteration": 2,
+            "tool": "identify_clusters",
+            "reasoning": "The Spearman correlation tells us that \"the higher the horsepower, the lower the fuel consumption\" is a very significant rule.It is precisely because the vehicles from different origins follow this strong correlation pattern in terms of horsepower and fuel consumption that clusters corresponding to the origin have been formed."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "spearman"
+              }
+            },
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "type": "numeric",
+                "param": "n_clusters",
+                "target": 3,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Horsepower",
+            "y": "Miles_per_Gallon",
+            "color": "cluster_3"
+          }
+        }
+      }
+    }
+  ]
+}

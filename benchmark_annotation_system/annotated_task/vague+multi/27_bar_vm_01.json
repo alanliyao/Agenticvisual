@@ -1,0 +1,115 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "27_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/27_coffee_sales_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_04",
+      "question": "First, focus on the two types of coffee with similar mean of money. Then, analyze what common characteristics there are in their mean of money within a week",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The mean of money of Cappuccino and Cocoa were similar except on Monday and Thursday during the week."
+        },
+        "key_insights": [
+          "The image shows two types of coffee with similar sales mean of money.",
+          "The mean of money for the week are shown on the chart.",
+          "In the chart, the two types of coffee are presented in two different colors.",
+          "The mean of money of the two types of coffee were similar except on Monday and Thursday during the week."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Select the two types of coffee that have similar sales figures."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "Mapping each day of the week onto the x-axis makes it convenient to study the changes in the mean of coffee over the course of a week."
+          },
+          {
+            "iteration": 3,
+            "tool": "change_encoding",
+            "reasoning": "Use tools to map different colors to different types of coffee, which is convenient for research."
+          },
+          {
+            "iteration": 4,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Switch to the group mode using the tool for easier research."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Latte",
+                    "Hot Chocolate",
+                    "Americano",
+                    "Americano with Milk",
+                    "Cortado",
+                    "Espresso"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Weekday",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "coffee_name",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Weekday",
+            "y": "money",
+            "color": "coffee_name"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Latte\",\"Hot Chocolate\",\"Americano\",\"Americano with Milk\",\"Cortado\",\"Espresso\"], datum['coffee_name']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

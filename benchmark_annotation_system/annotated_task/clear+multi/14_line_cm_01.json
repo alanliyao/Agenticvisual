@@ -1,0 +1,85 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "14_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/14_museum_visitors_line_multi.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First filter the chart to only show Firehouse Museum, and then identify if there is a consistent underlying monthly visitor trend.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "Yes."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "Filtering isolates Avila Adobe’s data to avoid visual clutter from other museums."
+          },
+          {
+            "iteration": 2,
+            "tool": "show_moving_average",
+            "reasoning": "Applying a moving average is essential to cut through weekly volatility and uncover the longer-term trend."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Firehouse Museum",
+                    "Chinese American Museum",
+                    "America Tropical Interpretive Center"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "show_moving_average",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "window_size": 5
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Firehouse Museum\", \"Chinese American Museum\", \"America Tropical Interpretive Center\"], datum['Museum']) < 0"
+            },
+            {
+              "filter": "indexof([\"Firehouse Museum\", \"Chinese American Museum\", \"America Tropical Interpretive Center\"], datum['Museum']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,4922 @@
+{
+  "filename": "43_iris_parallel.json",
+  "spec_index": 42,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Parallel Coordinates Plot",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "_index": 0,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 3,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.08333333333333327
+        },
+        {
+          "_index": 4,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 6,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.08333333333333327
+        },
+        {
+          "_index": 7,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 8,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.027777777777777922
+        },
+        {
+          "_index": 9,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.1666666666666668
+        },
+        {
+          "_index": 10,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.30555555555555564
+        },
+        {
+          "_index": 12,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.13888888888888887
+        },
+        {
+          "_index": 15,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 17,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 18,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 19,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 21,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 24,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.13888888888888887
+        },
+        {
+          "_index": 25,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 26,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 27,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.25000000000000006
+        },
+        {
+          "_index": 28,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.25000000000000006
+        },
+        {
+          "_index": 29,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.11111111111111119
+        },
+        {
+          "_index": 30,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.13888888888888887
+        },
+        {
+          "_index": 32,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.25000000000000006
+        },
+        {
+          "_index": 36,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 37,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.1666666666666668
+        },
+        {
+          "_index": 38,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.027777777777777922
+        },
+        {
+          "_index": 39,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 40,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 41,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.055555555555555594
+        },
+        {
+          "_index": 42,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.027777777777777922
+        },
+        {
+          "_index": 43,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 45,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.13888888888888887
+        },
+        {
+          "_index": 46,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 47,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.08333333333333327
+        },
+        {
+          "_index": 48,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.27777777777777773
+        },
+        {
+          "_index": 50,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7499999999999999
+        },
+        {
+          "_index": 52,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7222222222222222
+        },
+        {
+          "_index": 53,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 55,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 57,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.1666666666666668
+        },
+        {
+          "_index": 60,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 61,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.44444444444444453
+        },
+        {
+          "_index": 63,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4999999999999999
+        },
+        {
+          "_index": 64,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.361111111111111
+        },
+        {
+          "_index": 65,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 66,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.361111111111111
+        },
+        {
+          "_index": 67,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 69,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.361111111111111
+        },
+        {
+          "_index": 70,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.44444444444444453
+        },
+        {
+          "_index": 71,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4999999999999999
+        },
+        {
+          "_index": 72,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5555555555555555
+        },
+        {
+          "_index": 74,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 75,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6388888888888887
+        },
+        {
+          "_index": 78,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4722222222222222
+        },
+        {
+          "_index": 79,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 81,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 84,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.30555555555555564
+        },
+        {
+          "_index": 85,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4722222222222222
+        },
+        {
+          "_index": 86,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 88,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.361111111111111
+        },
+        {
+          "_index": 90,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 91,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4999999999999999
+        },
+        {
+          "_index": 92,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 96,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 97,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5277777777777778
+        },
+        {
+          "_index": 98,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 99,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 102,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7777777777777776
+        },
+        {
+          "_index": 104,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.611111111111111
+        },
+        {
+          "_index": 105,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.9166666666666665
+        },
+        {
+          "_index": 106,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.1666666666666668
+        },
+        {
+          "_index": 107,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8333333333333333
+        },
+        {
+          "_index": 109,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8055555555555556
+        },
+        {
+          "_index": 111,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 112,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6944444444444443
+        },
+        {
+          "_index": 113,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 115,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 116,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.611111111111111
+        },
+        {
+          "_index": 118,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.9444444444444444
+        },
+        {
+          "_index": 120,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7222222222222222
+        },
+        {
+          "_index": 122,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.9444444444444444
+        },
+        {
+          "_index": 124,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 125,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8055555555555556
+        },
+        {
+          "_index": 126,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5277777777777778
+        },
+        {
+          "_index": 128,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 129,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8055555555555556
+        },
+        {
+          "_index": 130,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8611111111111112
+        },
+        {
+          "_index": 133,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5555555555555555
+        },
+        {
+          "_index": 134,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4999999999999999
+        },
+        {
+          "_index": 136,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5555555555555555
+        },
+        {
+          "_index": 137,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 138,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4722222222222222
+        },
+        {
+          "_index": 139,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7222222222222222
+        },
+        {
+          "_index": 140,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 141,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7222222222222222
+        },
+        {
+          "_index": 142,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 143,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6944444444444443
+        },
+        {
+          "_index": 144,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 146,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5555555555555555
+        },
+        {
+          "_index": 147,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.611111111111111
+        },
+        {
+          "_index": 148,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5277777777777778
+        },
+        {
+          "_index": 0,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 3,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 4,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 6,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 7,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 8,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 9,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 10,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7083333333333333
+        },
+        {
+          "_index": 12,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 15,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 1
+        },
+        {
+          "_index": 17,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 18,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7499999999999998
+        },
+        {
+          "_index": 19,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7499999999999998
+        },
+        {
+          "_index": 21,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7083333333333333
+        },
+        {
+          "_index": 24,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 25,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 26,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 27,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 28,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 29,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 30,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 32,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.8749999999999998
+        },
+        {
+          "_index": 36,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 37,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 38,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 39,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 40,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 41,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.1249999999999999
+        },
+        {
+          "_index": 42,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 43,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 45,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 46,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7499999999999998
+        },
+        {
+          "_index": 47,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 48,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7083333333333333
+        },
+        {
+          "_index": 50,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 52,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 53,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.1249999999999999
+        },
+        {
+          "_index": 55,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 57,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.1666666666666666
+        },
+        {
+          "_index": 60,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 61,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 63,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 64,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 65,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 66,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 67,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.2916666666666667
+        },
+        {
+          "_index": 69,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 70,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 71,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 72,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 74,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 75,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 78,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 79,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 81,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.1666666666666666
+        },
+        {
+          "_index": 84,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 85,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 86,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 88,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 90,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 91,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 92,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 96,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 97,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 98,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 99,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 102,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 104,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 105,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 106,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 107,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 109,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 111,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.2916666666666667
+        },
+        {
+          "_index": 112,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 113,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 115,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 116,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 118,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 120,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 122,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 124,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5416666666666665
+        },
+        {
+          "_index": 125,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 126,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 128,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 129,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 130,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 133,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 134,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 136,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 137,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 138,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 139,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 140,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 141,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 142,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.2916666666666667
+        },
+        {
+          "_index": 143,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 144,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5416666666666665
+        },
+        {
+          "_index": 146,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 147,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 148,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 0,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 3,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 4,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 6,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 7,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 8,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 9,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 10,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 12,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 15,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 17,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 18,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.11864406779661016
+        },
+        {
+          "_index": 19,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 21,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 24,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.15254237288135591
+        },
+        {
+          "_index": 25,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 26,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 27,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 28,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 29,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 30,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 32,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 36,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 37,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 38,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 39,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 40,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 41,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 42,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 43,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 45,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 46,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 47,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 48,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 50,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6271186440677966
+        },
+        {
+          "_index": 52,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6610169491525424
+        },
+        {
+          "_index": 53,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5084745762711864
+        },
+        {
+          "_index": 55,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 57,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.38983050847457623
+        },
+        {
+          "_index": 60,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.423728813559322
+        },
+        {
+          "_index": 61,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5423728813559322
+        },
+        {
+          "_index": 63,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6271186440677966
+        },
+        {
+          "_index": 64,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.4406779661016949
+        },
+        {
+          "_index": 65,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.576271186440678
+        },
+        {
+          "_index": 66,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 67,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5254237288135593
+        },
+        {
+          "_index": 69,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.4915254237288135
+        },
+        {
+          "_index": 70,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6440677966101694
+        },
+        {
+          "_index": 71,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5084745762711864
+        },
+        {
+          "_index": 72,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6610169491525424
+        },
+        {
+          "_index": 74,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.559322033898305
+        },
+        {
+          "_index": 75,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.576271186440678
+        },
+        {
+          "_index": 78,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 79,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.423728813559322
+        },
+        {
+          "_index": 81,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.4576271186440678
+        },
+        {
+          "_index": 84,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 85,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 86,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6271186440677966
+        },
+        {
+          "_index": 88,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5254237288135593
+        },
+        {
+          "_index": 90,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.576271186440678
+        },
+        {
+          "_index": 91,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6101694915254237
+        },
+        {
+          "_index": 92,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5084745762711864
+        },
+        {
+          "_index": 96,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5423728813559322
+        },
+        {
+          "_index": 97,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.559322033898305
+        },
+        {
+          "_index": 98,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.3389830508474576
+        },
+        {
+          "_index": 99,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5254237288135593
+        },
+        {
+          "_index": 102,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8305084745762712
+        },
+        {
+          "_index": 104,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8135593220338982
+        },
+        {
+          "_index": 105,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.9491525423728813
+        },
+        {
+          "_index": 106,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 107,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8983050847457626
+        },
+        {
+          "_index": 109,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8644067796610169
+        },
+        {
+          "_index": 111,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7288135593220338
+        },
+        {
+          "_index": 112,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7627118644067796
+        },
+        {
+          "_index": 113,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6779661016949152
+        },
+        {
+          "_index": 115,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7288135593220338
+        },
+        {
+          "_index": 116,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7627118644067796
+        },
+        {
+          "_index": 118,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 1
+        },
+        {
+          "_index": 120,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7966101694915254
+        },
+        {
+          "_index": 122,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.9661016949152542
+        },
+        {
+          "_index": 124,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7966101694915254
+        },
+        {
+          "_index": 125,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.847457627118644
+        },
+        {
+          "_index": 126,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6440677966101694
+        },
+        {
+          "_index": 128,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7796610169491525
+        },
+        {
+          "_index": 129,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8135593220338982
+        },
+        {
+          "_index": 130,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8644067796610169
+        },
+        {
+          "_index": 133,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6949152542372881
+        },
+        {
+          "_index": 134,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7796610169491525
+        },
+        {
+          "_index": 136,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7796610169491525
+        },
+        {
+          "_index": 137,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7627118644067796
+        },
+        {
+          "_index": 138,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6440677966101694
+        },
+        {
+          "_index": 139,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7457627118644068
+        },
+        {
+          "_index": 140,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7796610169491525
+        },
+        {
+          "_index": 141,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6949152542372881
+        },
+        {
+          "_index": 142,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6949152542372881
+        },
+        {
+          "_index": 143,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8305084745762712
+        },
+        {
+          "_index": 144,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7966101694915254
+        },
+        {
+          "_index": 146,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6779661016949152
+        },
+        {
+          "_index": 147,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.711864406779661
+        },
+        {
+          "_index": 148,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7457627118644068
+        },
+        {
+          "_index": 0,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 3,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 4,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 6,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 7,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 8,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 9,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 10,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 12,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 15,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.12500000000000003
+        },
+        {
+          "_index": 17,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 18,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 19,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 21,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.12500000000000003
+        },
+        {
+          "_index": 24,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 25,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 26,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.12500000000000003
+        },
+        {
+          "_index": 27,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 28,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 29,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 30,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 32,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 36,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 37,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 38,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 39,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 40,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 41,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 42,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 43,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.20833333333333334
+        },
+        {
+          "_index": 45,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 46,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 47,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 48,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 50,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 52,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 53,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 55,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 57,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 60,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 61,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 63,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 64,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 65,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 66,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 67,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 69,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.4166666666666667
+        },
+        {
+          "_index": 70,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 71,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 72,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 74,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 75,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 78,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 79,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 81,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 84,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 85,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.625
+        },
+        {
+          "_index": 86,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 88,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 90,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 91,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 92,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 96,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 97,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 98,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.4166666666666667
+        },
+        {
+          "_index": 99,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 102,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 104,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8750000000000001
+        },
+        {
+          "_index": 105,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 106,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 107,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 109,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 1
+        },
+        {
+          "_index": 111,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.75
+        },
+        {
+          "_index": 112,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 113,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7916666666666666
+        },
+        {
+          "_index": 115,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 116,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 118,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 120,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 122,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7916666666666666
+        },
+        {
+          "_index": 124,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 125,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 126,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 128,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 129,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.625
+        },
+        {
+          "_index": 130,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.75
+        },
+        {
+          "_index": 133,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 134,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 136,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9583333333333333
+        },
+        {
+          "_index": 137,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 138,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 139,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 140,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9583333333333333
+        },
+        {
+          "_index": 141,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 142,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.75
+        },
+        {
+          "_index": 143,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 144,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 1
+        },
+        {
+          "_index": 146,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.75
+        },
+        {
+          "_index": 147,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7916666666666666
+        },
+        {
+          "_index": 148,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        }
+      ]
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "opacity": 0.5,
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "dimension",
+            "type": "nominal",
+            "sort": [
+              "Sepal Length (cm)",
+              "Sepal Width (cm)",
+              "Petal Length (cm)",
+              "Petal Width (cm)"
+            ],
+            "axis": {
+              "title": null,
+              "labelAngle": 0
+            }
+          },
+          "y": {
+            "field": "normalized_value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Normalized Value"
+            }
+          },
+          "detail": {
+            "field": "_index",
+            "type": "nominal"
+          },
+          "color": {
+            "field": "Species",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Parallel Coordinates Plot",
+    "width": 600,
+    "height": 400,
+    "data": {
+      "values": [
+        {
+          "_index": 0,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 3,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.08333333333333327
+        },
+        {
+          "_index": 4,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 6,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.08333333333333327
+        },
+        {
+          "_index": 7,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 8,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.027777777777777922
+        },
+        {
+          "_index": 9,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.1666666666666668
+        },
+        {
+          "_index": 10,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.30555555555555564
+        },
+        {
+          "_index": 12,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.13888888888888887
+        },
+        {
+          "_index": 15,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 17,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 18,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 19,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 21,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 24,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.13888888888888887
+        },
+        {
+          "_index": 25,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 26,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 27,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.25000000000000006
+        },
+        {
+          "_index": 28,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.25000000000000006
+        },
+        {
+          "_index": 29,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.11111111111111119
+        },
+        {
+          "_index": 30,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.13888888888888887
+        },
+        {
+          "_index": 32,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.25000000000000006
+        },
+        {
+          "_index": 36,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 37,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.1666666666666668
+        },
+        {
+          "_index": 38,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.027777777777777922
+        },
+        {
+          "_index": 39,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 40,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 41,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.055555555555555594
+        },
+        {
+          "_index": 42,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.027777777777777922
+        },
+        {
+          "_index": 43,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 45,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.13888888888888887
+        },
+        {
+          "_index": 46,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 47,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.08333333333333327
+        },
+        {
+          "_index": 48,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.27777777777777773
+        },
+        {
+          "_index": 50,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7499999999999999
+        },
+        {
+          "_index": 52,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7222222222222222
+        },
+        {
+          "_index": 53,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 55,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 57,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.1666666666666668
+        },
+        {
+          "_index": 60,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.19444444444444448
+        },
+        {
+          "_index": 61,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.44444444444444453
+        },
+        {
+          "_index": 63,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4999999999999999
+        },
+        {
+          "_index": 64,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.361111111111111
+        },
+        {
+          "_index": 65,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 66,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.361111111111111
+        },
+        {
+          "_index": 67,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 69,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.361111111111111
+        },
+        {
+          "_index": 70,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.44444444444444453
+        },
+        {
+          "_index": 71,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4999999999999999
+        },
+        {
+          "_index": 72,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5555555555555555
+        },
+        {
+          "_index": 74,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 75,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6388888888888887
+        },
+        {
+          "_index": 78,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4722222222222222
+        },
+        {
+          "_index": 79,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 81,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 84,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.30555555555555564
+        },
+        {
+          "_index": 85,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4722222222222222
+        },
+        {
+          "_index": 86,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 88,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.361111111111111
+        },
+        {
+          "_index": 90,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.3333333333333333
+        },
+        {
+          "_index": 91,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4999999999999999
+        },
+        {
+          "_index": 92,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 96,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 97,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5277777777777778
+        },
+        {
+          "_index": 98,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.22222222222222213
+        },
+        {
+          "_index": 99,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 102,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7777777777777776
+        },
+        {
+          "_index": 104,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.611111111111111
+        },
+        {
+          "_index": 105,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.9166666666666665
+        },
+        {
+          "_index": 106,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.1666666666666668
+        },
+        {
+          "_index": 107,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8333333333333333
+        },
+        {
+          "_index": 109,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8055555555555556
+        },
+        {
+          "_index": 111,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 112,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6944444444444443
+        },
+        {
+          "_index": 113,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.38888888888888895
+        },
+        {
+          "_index": 115,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 116,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.611111111111111
+        },
+        {
+          "_index": 118,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.9444444444444444
+        },
+        {
+          "_index": 120,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7222222222222222
+        },
+        {
+          "_index": 122,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.9444444444444444
+        },
+        {
+          "_index": 124,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 125,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8055555555555556
+        },
+        {
+          "_index": 126,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5277777777777778
+        },
+        {
+          "_index": 128,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 129,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8055555555555556
+        },
+        {
+          "_index": 130,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.8611111111111112
+        },
+        {
+          "_index": 133,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5555555555555555
+        },
+        {
+          "_index": 134,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4999999999999999
+        },
+        {
+          "_index": 136,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5555555555555555
+        },
+        {
+          "_index": 137,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 138,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.4722222222222222
+        },
+        {
+          "_index": 139,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7222222222222222
+        },
+        {
+          "_index": 140,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 141,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.7222222222222222
+        },
+        {
+          "_index": 142,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 143,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6944444444444443
+        },
+        {
+          "_index": 144,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 146,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5555555555555555
+        },
+        {
+          "_index": 147,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.611111111111111
+        },
+        {
+          "_index": 148,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Length (cm)",
+          "normalized_value": 0.5277777777777778
+        },
+        {
+          "_index": 0,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 3,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 4,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 6,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 7,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 8,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 9,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 10,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7083333333333333
+        },
+        {
+          "_index": 12,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 15,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 1
+        },
+        {
+          "_index": 17,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 18,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7499999999999998
+        },
+        {
+          "_index": 19,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7499999999999998
+        },
+        {
+          "_index": 21,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7083333333333333
+        },
+        {
+          "_index": 24,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 25,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 26,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 27,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 28,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 29,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 30,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 32,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.8749999999999998
+        },
+        {
+          "_index": 36,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 37,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 38,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 39,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 40,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 41,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.1249999999999999
+        },
+        {
+          "_index": 42,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 43,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6249999999999999
+        },
+        {
+          "_index": 45,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 46,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7499999999999998
+        },
+        {
+          "_index": 47,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 48,
+          "Species": "Iris-setosa",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.7083333333333333
+        },
+        {
+          "_index": 50,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 52,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 53,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.1249999999999999
+        },
+        {
+          "_index": 55,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 57,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.1666666666666666
+        },
+        {
+          "_index": 60,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 61,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 63,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 64,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 65,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 66,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 67,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.2916666666666667
+        },
+        {
+          "_index": 69,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 70,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 71,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 72,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 74,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 75,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 78,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 79,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 81,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.1666666666666666
+        },
+        {
+          "_index": 84,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 85,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 86,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 88,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 90,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 91,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 92,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 96,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 97,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 98,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 99,
+          "Species": "Iris-versicolor",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 102,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 104,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 105,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 106,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 107,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3749999999999999
+        },
+        {
+          "_index": 109,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 111,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.2916666666666667
+        },
+        {
+          "_index": 112,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 113,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 115,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 116,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 118,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 120,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 122,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 124,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5416666666666665
+        },
+        {
+          "_index": 125,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 126,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 128,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 129,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 130,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 133,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.3333333333333332
+        },
+        {
+          "_index": 134,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.25
+        },
+        {
+          "_index": 136,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 137,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 138,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 139,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 140,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 141,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 142,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.2916666666666667
+        },
+        {
+          "_index": 143,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 144,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5416666666666665
+        },
+        {
+          "_index": 146,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.20833333333333331
+        },
+        {
+          "_index": 147,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.41666666666666663
+        },
+        {
+          "_index": 148,
+          "Species": "Iris-virginica",
+          "dimension": "Sepal Width (cm)",
+          "normalized_value": 0.5833333333333333
+        },
+        {
+          "_index": 0,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 3,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 4,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 6,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 7,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 8,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 9,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 10,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 12,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 15,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 17,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 18,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.11864406779661016
+        },
+        {
+          "_index": 19,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 21,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 24,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.15254237288135591
+        },
+        {
+          "_index": 25,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 26,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 27,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 28,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 29,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 30,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 32,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 36,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 37,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 38,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 39,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 40,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 41,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 42,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.05084745762711865
+        },
+        {
+          "_index": 43,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 45,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 46,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.1016949152542373
+        },
+        {
+          "_index": 47,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.06779661016949151
+        },
+        {
+          "_index": 48,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.0847457627118644
+        },
+        {
+          "_index": 50,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6271186440677966
+        },
+        {
+          "_index": 52,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6610169491525424
+        },
+        {
+          "_index": 53,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5084745762711864
+        },
+        {
+          "_index": 55,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 57,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.38983050847457623
+        },
+        {
+          "_index": 60,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.423728813559322
+        },
+        {
+          "_index": 61,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5423728813559322
+        },
+        {
+          "_index": 63,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6271186440677966
+        },
+        {
+          "_index": 64,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.4406779661016949
+        },
+        {
+          "_index": 65,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.576271186440678
+        },
+        {
+          "_index": 66,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 67,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5254237288135593
+        },
+        {
+          "_index": 69,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.4915254237288135
+        },
+        {
+          "_index": 70,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6440677966101694
+        },
+        {
+          "_index": 71,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5084745762711864
+        },
+        {
+          "_index": 72,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6610169491525424
+        },
+        {
+          "_index": 74,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.559322033898305
+        },
+        {
+          "_index": 75,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.576271186440678
+        },
+        {
+          "_index": 78,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 79,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.423728813559322
+        },
+        {
+          "_index": 81,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.4576271186440678
+        },
+        {
+          "_index": 84,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 85,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 86,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6271186440677966
+        },
+        {
+          "_index": 88,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5254237288135593
+        },
+        {
+          "_index": 90,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.576271186440678
+        },
+        {
+          "_index": 91,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6101694915254237
+        },
+        {
+          "_index": 92,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5084745762711864
+        },
+        {
+          "_index": 96,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5423728813559322
+        },
+        {
+          "_index": 97,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.559322033898305
+        },
+        {
+          "_index": 98,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.3389830508474576
+        },
+        {
+          "_index": 99,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5254237288135593
+        },
+        {
+          "_index": 102,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8305084745762712
+        },
+        {
+          "_index": 104,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8135593220338982
+        },
+        {
+          "_index": 105,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.9491525423728813
+        },
+        {
+          "_index": 106,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.5932203389830508
+        },
+        {
+          "_index": 107,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8983050847457626
+        },
+        {
+          "_index": 109,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8644067796610169
+        },
+        {
+          "_index": 111,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7288135593220338
+        },
+        {
+          "_index": 112,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7627118644067796
+        },
+        {
+          "_index": 113,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6779661016949152
+        },
+        {
+          "_index": 115,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7288135593220338
+        },
+        {
+          "_index": 116,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7627118644067796
+        },
+        {
+          "_index": 118,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 1
+        },
+        {
+          "_index": 120,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7966101694915254
+        },
+        {
+          "_index": 122,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.9661016949152542
+        },
+        {
+          "_index": 124,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7966101694915254
+        },
+        {
+          "_index": 125,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.847457627118644
+        },
+        {
+          "_index": 126,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6440677966101694
+        },
+        {
+          "_index": 128,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7796610169491525
+        },
+        {
+          "_index": 129,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8135593220338982
+        },
+        {
+          "_index": 130,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8644067796610169
+        },
+        {
+          "_index": 133,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6949152542372881
+        },
+        {
+          "_index": 134,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7796610169491525
+        },
+        {
+          "_index": 136,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7796610169491525
+        },
+        {
+          "_index": 137,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7627118644067796
+        },
+        {
+          "_index": 138,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6440677966101694
+        },
+        {
+          "_index": 139,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7457627118644068
+        },
+        {
+          "_index": 140,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7796610169491525
+        },
+        {
+          "_index": 141,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6949152542372881
+        },
+        {
+          "_index": 142,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6949152542372881
+        },
+        {
+          "_index": 143,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.8305084745762712
+        },
+        {
+          "_index": 144,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7966101694915254
+        },
+        {
+          "_index": 146,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.6779661016949152
+        },
+        {
+          "_index": 147,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.711864406779661
+        },
+        {
+          "_index": 148,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Length (cm)",
+          "normalized_value": 0.7457627118644068
+        },
+        {
+          "_index": 0,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 3,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 4,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 6,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 7,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 8,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 9,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 10,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 12,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 15,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.12500000000000003
+        },
+        {
+          "_index": 17,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 18,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 19,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 21,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.12500000000000003
+        },
+        {
+          "_index": 24,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 25,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 26,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.12500000000000003
+        },
+        {
+          "_index": 27,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 28,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 29,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 30,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 32,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 36,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 37,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0
+        },
+        {
+          "_index": 38,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 39,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 40,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 41,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 42,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 43,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.20833333333333334
+        },
+        {
+          "_index": 45,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.08333333333333333
+        },
+        {
+          "_index": 46,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 47,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 48,
+          "Species": "Iris-setosa",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.04166666666666667
+        },
+        {
+          "_index": 50,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 52,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 53,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 55,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 57,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 60,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 61,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 63,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 64,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 65,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 66,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 67,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 69,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.4166666666666667
+        },
+        {
+          "_index": 70,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 71,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 72,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 74,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 75,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 78,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 79,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 81,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.375
+        },
+        {
+          "_index": 84,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 85,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.625
+        },
+        {
+          "_index": 86,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 88,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 90,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 91,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 92,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.4583333333333333
+        },
+        {
+          "_index": 96,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 97,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 98,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.4166666666666667
+        },
+        {
+          "_index": 99,
+          "Species": "Iris-versicolor",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5
+        },
+        {
+          "_index": 102,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 104,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8750000000000001
+        },
+        {
+          "_index": 105,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 106,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.6666666666666666
+        },
+        {
+          "_index": 107,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 109,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 1
+        },
+        {
+          "_index": 111,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.75
+        },
+        {
+          "_index": 112,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 113,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7916666666666666
+        },
+        {
+          "_index": 115,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 116,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 118,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 120,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 122,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7916666666666666
+        },
+        {
+          "_index": 124,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 125,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 126,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 128,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 129,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.625
+        },
+        {
+          "_index": 130,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.75
+        },
+        {
+          "_index": 133,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5833333333333334
+        },
+        {
+          "_index": 134,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.5416666666666666
+        },
+        {
+          "_index": 136,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9583333333333333
+        },
+        {
+          "_index": 137,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 138,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7083333333333334
+        },
+        {
+          "_index": 139,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.8333333333333334
+        },
+        {
+          "_index": 140,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9583333333333333
+        },
+        {
+          "_index": 141,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 142,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.75
+        },
+        {
+          "_index": 143,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        },
+        {
+          "_index": 144,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 1
+        },
+        {
+          "_index": 146,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.75
+        },
+        {
+          "_index": 147,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.7916666666666666
+        },
+        {
+          "_index": 148,
+          "Species": "Iris-virginica",
+          "dimension": "Petal Width (cm)",
+          "normalized_value": 0.9166666666666666
+        }
+      ]
+    },
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "opacity": 0.5,
+          "strokeWidth": 1
+        },
+        "encoding": {
+          "x": {
+            "field": "dimension",
+            "type": "nominal",
+            "sort": [
+              "Sepal Length (cm)",
+              "Sepal Width (cm)",
+              "Petal Length (cm)",
+              "Petal Width (cm)"
+            ],
+            "axis": {
+              "title": null,
+              "labelAngle": 0
+            }
+          },
+          "y": {
+            "field": "normalized_value",
+            "type": "quantitative",
+            "axis": {
+              "title": "Normalized Value"
+            }
+          },
+          "detail": {
+            "field": "_index",
+            "type": "nominal"
+          },
+          "color": {
+            "field": "Species",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "parallel",
+  "chart_meta": {
+    "chart_type": "parallel",
+    "title": "Parallel Coordinates Plot",
+    "filename": "43_iris_parallel.json",
+    "data_points": 400,
+    "total_points": 600,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:43:45.126874Z"
+}

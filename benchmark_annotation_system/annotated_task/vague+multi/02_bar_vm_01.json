@@ -1,0 +1,74 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "02_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/02_bar_sales.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Show only Electronics sales.What are the exact sales differences between the top two regions?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The eastern region has the highest sales volume of electronic products, approximately 1300, significantly outperforming the second-place northern region with a sales volume of about 1200.\nThe eastern and northern regions together constitute the top sales group of electronic products, and have a significant gap compared to the subsequent regions. Among them, the leading position of the eastern region is particularly prominent.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Only the Electronics bars remain, simplifying region-to-region comparison.",
+          "The sorted view confirms East (≈1300) and North (≈1200) are the top two regions for Electronics. The sales difference between East and North is approximately 100. The sorted order makes the hierarchy of Electronics performance across regions immediately clear. The gap between the top two regions is smaller than the gap between North and the third-place region.",
+          "The sales difference between East and North is approximately 100."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "Filter is first used to isolate Electronics sales, removing the Clothing data that would otherwise obscure the Electronics-only comparison."
+          },
+          {
+            "iteration": 2,
+            "tool": "sort_bars",
+            "reasoning": "Sort is then applied to reorder the bars by value, which directly reveals the rank of each region and makes the numeric difference between the top two regions easy to read."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "list",
+                "param": "subcategories_to_remove",
+                "target": [
+                  "Clothing"
+                ]
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "categorical",
+                "param": "order",
+                "target": "descending"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "region",
+            "y": "sales",
+            "color": "product"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['product'] != \"Clothing\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

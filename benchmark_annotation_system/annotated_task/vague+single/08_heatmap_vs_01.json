@@ -1,0 +1,53 @@
+{
+  "task_type": "vague_single",
+  "task_id": "08_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/08_heatmap_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "The influence of dietary habits on sleep duration",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "It can be seen that people with bad dietary quality have a higher average sleep duration than those with poor dietary quality. Therefore, it can be concluded that the quality of diet has a positive correlation with sleep duration.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the chart of sleep_hours and diet_quality"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "sleep_hours",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "sleep_hours",
+            "color": "sleep_hours"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "task_type": "clear_single",
+  "task_id": "72_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/72_StudentsPerformance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which ethnic group has the highest mean writing score?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Group D.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region",
+            "reasoning": "The initial view only shows relative color differences, not precise values. This single action clarifies which group performs best, directly answering the question."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_values": [
+                    "group D",
+                    "group E",
+                    "group B",
+                    "group C",
+                    "group A"
+                  ],
+                  "y_values": [
+                    "master's degree"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "parental level of education",
+            "color": "writing score"
+          }
+        }
+      }
+    }
+  ]
+}

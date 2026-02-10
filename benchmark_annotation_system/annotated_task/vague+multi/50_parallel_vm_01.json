@@ -1,0 +1,104 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "50_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/50_supply_chain_data_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What is the relationship between manufacturing lead time and defect rates for haircare type product?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "There exists a negative correlation between lead time and defect rates."
+        },
+        "key_insights": [
+          "Both blue and orange lines show similar patterns of crossing. There isn't a distinct \"cluster\" for either group that suggests one category is significantly better or worse than the other regarding the trade-off between time and defects.",
+          "There is no clear correlation between how fast a product is made and the defect rate in a view of three types products.",
+          "There exists a negative correlation between lead time and defect rates."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We focus on the data of manufacturing lead time and defect rates."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "we only care about  data of haircare type product."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Manufacturing costs",
+                    "Production volumes"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product type",
+                  "values": [
+                    "skincare",
+                    "cosmetics"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "Manufacturing lead time",
+              "Defect rates"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"skincare\",\"cosmetics\"], datum['Product type']) < 0"
+            },
+            {
+              "filter": "indexof([\"Manufacturing lead time\", \"Defect rates\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

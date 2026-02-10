@@ -1,0 +1,80 @@
+{
+  "task_type": "vague_single",
+  "task_id": "12_sankey_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/12_sankey_microsoft.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Which group of users, individual users or enterprise users, is the main user base for Microsoft?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "It is clearly evident that Microsoft earns much more money from enterprise users than from individual users. Therefore, it is believed that enterprise users are the main users of Microsoft."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "collapse_nodes",
+            "reasoning": "obtain the income from enterprise users"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "collapse_nodes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "aggregate_name": "company",
+                  "nodes_to_collapse": [
+                    "Intelligent Cloud",
+                    "Productivity"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Server Products",
+            "Office Products",
+            "LinkedIn",
+            "Windows",
+            "Gaming",
+            "Others (Layer 0)",
+            "Personal Computing",
+            "company",
+            "Revenue",
+            "Gross Profit",
+            "Cost of Revenue",
+            "Operating Profit",
+            "Operating Expenses",
+            "Product Costs",
+            "Service Costs",
+            "Net Profit",
+            "Tax",
+            "R&D",
+            "S&M",
+            "G&A"
+          ],
+          "collapsed_nodes": [
+            "Others (Layer 0)"
+          ]
+        }
+      }
+    }
+  ]
+}

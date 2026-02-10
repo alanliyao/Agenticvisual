@@ -1,0 +1,67 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "21_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/21_Number of trees sold over Yea_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Which has a stronger correlation with fake tree sales: the number of trees sold or the average price, and why?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "average tree price，Since both it and sales show an overall upward trend and experienced a significant decline in 2013-2014, it can be inferred that the relationship between sales volume and price is stronger."
+        },
+        "key_insights": [
+          "The average price of fake trees has generally shown an upward trend.",
+          "However, it experienced a significant decline between 2013 and 2014, falling from over 80 to over 60.",
+          "Sales of fake trees have also shown an overall upward trend.",
+          "However, it also experienced a significant decline between 2013 and 2014, falling from 12 billion to 9 billion."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "I have already used the change encoding tool to examine the trend in average prices. Next, I will use the change encoding tool to examine the trend in the number of trees sold."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "By exploring the trends in average prices and sales using change encoding, combined with the trend in the number of trees from the initial view, we can already derive the results."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Average Tree Price"
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "Sales"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Sales",
+            "color": "Type of tree"
+          }
+        }
+      }
+    }
+  ]
+}

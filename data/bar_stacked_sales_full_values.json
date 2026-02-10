@@ -1,0 +1,24 @@
+{
+  "values": [
+    {"region": "east_china", "product": "electronics", "quarter": "Q1", "sales": 1520},
+    {"region": "east_china", "product": "electronics", "quarter": "Q2", "sales": 1680},
+    {"region": "east_china", "product": "clothings", "quarter": "Q1", "sales": 890},
+    {"region": "east_china", "product": "clothings", "quarter": "Q2", "sales": 1120},
+
+    {"region": "south_china", "product": "electronics", "quarter": "Q1", "sales": 1850},
+    {"region": "south_china", "product": "electronics", "quarter": "Q2", "sales": 2100},
+    {"region": "south_china", "product": "clothings", "quarter": "Q1", "sales": 1100},
+    {"region": "south_china", "product": "clothings", "quarter": "Q2", "sales": 1380},
+
+    {"region": "north_china", "product": "electronics", "quarter": "Q1", "sales": 1320},
+    {"region": "north_china", "product": "electronics", "quarter": "Q2", "sales": 1480},
+    {"region": "north_china", "product": "clothings", "quarter": "Q1", "sales": 780},
+    {"region": "north_china", "product": "clothings", "quarter": "Q2", "sales": 920},
+
+    {"region": "north_east_china", "product": "electronics", "quarter": "Q1", "sales": 760},
+    {"region": "north_east_china", "product": "electronics", "quarter": "Q2", "sales": 840},
+    {"region": "north_east_china", "product": "clothings", "quarter": "Q1", "sales": 540},
+    {"region": "north_east_china", "product": "clothings", "quarter": "Q2", "sales": 610}
+  ]
+}
+

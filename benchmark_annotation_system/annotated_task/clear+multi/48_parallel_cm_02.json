@@ -1,0 +1,92 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "48_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/48_candy_parallel .json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "Which kind of candy is more popular?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Chocolate candy",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "highlighting help us to observe the paragram"
+          },
+          {
+            "iteration": 2,
+            "tool": "reset_view",
+            "reasoning": "reset for following steps."
+          },
+          {
+            "iteration": 3,
+            "tool": "highlight_category",
+            "reasoning": "highlighting can also help to compare"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "chocolate",
+                  "values": [
+                    "Yes"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "reset_view",
+              "param_eval": {}
+            },
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "chocolate",
+                  "values": [
+                    "No"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

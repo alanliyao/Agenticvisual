@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "84_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/84_starbucks_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Are beverages with high calories due to the addition of sugar or because the beverages themselves have a high energy content?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "It can be seen that there are certain reasons for the differences in beverages, such as the distinction between coffee and smoothies. However, the main reason is the amount of sugar added to the beverages. The same drink can have a difference of over 400 calories depending on the amount of sugar added."
+        },
+        "key_insights": [
+          "It was discovered that the calories of the same beverage varied."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the chart of calories and the category"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Beverage_category",
+                  "channel": "x"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Beverage_category",
+            "y": "Calories",
+            "color": "Beverage_category"
+          }
+        }
+      }
+    }
+  ]
+}

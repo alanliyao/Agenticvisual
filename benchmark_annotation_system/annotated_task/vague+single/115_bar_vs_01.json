@@ -1,0 +1,63 @@
+{
+  "task_type": "vague_single",
+  "task_id": "115_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/115_sport_life_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "When only the Low income customers are observed, what characteristics do the sales differences among various brands present?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Their sales figures are very close. Nike has the lowest sales, while Puma has the highest."
+        },
+        "key_insights": [
+          "puma have the best units sold",
+          "nike have the worst units sold",
+          "very uniform"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "get data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Medium",
+                    "High"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "brand",
+            "y": "units_sold",
+            "color": "customer_income_level"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['customer_income_level'] != \"Medium\" && datum['customer_income_level'] != \"High\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "86_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/85_supply_chain_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Which type of customers spends more on enhancing their appearance? Which type of customers spends more on maintenance products?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "for the product which can enhance appearence, male spend more money than other people.\nfor the maintenance products, the unknown group use more money in it."
+        },
+        "key_insights": [
+          "Men are more willing to spend money on improving their appearance.",
+          "the average price of unknown group is the most"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "Cosmetics are products designed to enhance one's appearance. Therefore, they should be filtered out from other products."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_subcategories",
+            "reasoning": "Hair care and skin care are both types of maintenance products, so filtering cosmetics"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "haircare",
+                    "skincare"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "cosmetics"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Customer demographics",
+            "y": "Price",
+            "color": "Product type"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Product type'] != \"cosmetics\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "91_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/91_supply_chain_data_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Is there any product with a high price but a low revenue generated, and do these instances mainly cluster under the same product type?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "There are indeed these points, but they have nothing to do with the types.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "find it is indeed some price with low revenue",
+          "NO"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the high price area"
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "find if these istances maiinly cluster under the same product type"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    74.88889185587566,
+                    100
+                  ],
+                  "y_range": [
+                    0,
+                    9908.333587646484
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product type",
+                  "channel": "x"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": null,
+            "y": [
+              0,
+              9908.333587646484
+            ]
+          },
+          "encoding": {
+            "x": "Product type",
+            "y": "Revenue generated",
+            "color": "Product type"
+          }
+        }
+      }
+    }
+  ]
+}

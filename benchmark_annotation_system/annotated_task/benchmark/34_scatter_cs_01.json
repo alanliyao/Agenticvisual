@@ -1,0 +1,61 @@
+{
+  "task_type": "clear_single",
+  "task_id": "34_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/34_bmw_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use the show_regression tool with linear method on the entire scatter plot. After adding the regression line, does it show a positive or negative trend between price and mpg?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Negative.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "A clear downward-sloping regression line has been added to the scatter plot, confirming a negative correlation between price and mpg across the entire dataset.",
+          "The trend indicates that, generally, vehicles with higher prices tend to have lower fuel efficiency. This aligns with the common association of higher costs with larger, more powerful, or luxury vehicles that typically consume more fuel.",
+          "This single visual transformation effectively summarizes the primary relationship the chart is designed to explore, moving from displaying individual points to revealing the aggregate trend."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_regression",
+            "reasoning": "The show_regression tool was the correct choice to directly answer a question about the directional trend between two numeric variables. The operation successfully generated a definitive visual answer. The negative slope is immediately apparent, requiring no further tools or interpretation."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "type": "categorical",
+                "param": "method",
+                "target": "linear"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "point",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

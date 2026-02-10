@@ -1,0 +1,74 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "27_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/27_coffee_sales_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "First separate morning and night sales, then compare coffee types to identify which one shows the largest difference in average revenue between these two periods.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The mean of money changes of all coffees are basically the same, so it is impossible to determine which coffee has the greatest mean of money fluctuation over time.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "Filter out the mean of money of coffee for the morning and the evening."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Using tools to switch to the component group mode makes the comparison more intuitive."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Afternoon"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "coffee_name",
+            "y": "money",
+            "color": "Time_of_Day"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Time_of_Day'] != \"Morning\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

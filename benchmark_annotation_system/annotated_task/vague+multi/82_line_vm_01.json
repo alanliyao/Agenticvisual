@@ -1,0 +1,80 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "82_line_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/82_Online Sales Data_line.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Detect any anomalous revenue points across all categories, then resample the data to a weekly frequency to see if these anomalies are isolated events or part of a broader weekly pattern.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The results confirm they are one-off events, completing the exploration."
+        },
+        "key_insights": [
+          "The most significant anomalies are the extreme revenue spikes for Electronics (3900 in April and 2400 in August) and Home Appliances (2600 in April).",
+          "Sports also has a notable anomaly in early January with a revenue of 1900, which is far above its typical range.",
+          "The weekly resampling shows that the April Electronics and Home Appliances spikes are isolated to a single week, confirming they are likely one-off events (e.g., a major sale).",
+          "The January Sports spike also appears as an isolated weekly peak.",
+          "The rest of the weekly data shows much more stable revenue, with no other weeks showing comparable levels of anomaly."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "This is a crucial first step in the exploration, as it pinpoints the specific events that need further investigation."
+          },
+          {
+            "iteration": 2,
+            "tool": "resample_time",
+            "reasoning": "This helps determine if the anomalies are part of a recurring weekly pattern or are truly isolated."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "threshold": 3
+                }
+              }
+            },
+            {
+              "tool": "resample_time",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "granularity": "week",
+                  "agg": "mean"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "point"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

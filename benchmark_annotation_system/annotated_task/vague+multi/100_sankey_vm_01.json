@@ -1,0 +1,69 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "100_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/100_sankey_patient.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore which diagnostic tests are most strongly linked to the Surgery Tx treatment plan, then see which registration sources contribute the most patients to that combined diagnostic and treatment pathway.\n",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The diagnostic test most strongly linked to Surgery Tx is CT Scan"
+        },
+        "key_insights": [
+          "CT Scan and MRI are the top diagnostics leading to Surgery Tx.",
+          "CT Scan has the highest conversion rate  to Surgery Tx, meaning a larger share of its patients move to this treatment."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "identifies the key diagnostics"
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "calculate conversion rate quantifies their strength of link to Surgery Tx."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Surgery Tx"
+                }
+              }
+            },
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Surgery Tx"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

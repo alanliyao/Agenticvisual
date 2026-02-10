@@ -1,0 +1,74 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "17_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/17_Heart_Disease_Prediction_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_01",
+      "question": "filter categories and toggle stack mode to show that what is the relationship between chest pain type and mean of cholesterol among poeple with heart disease?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "from type 1 to 4,the mean of cholesterol gets higher and higher.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "the mean of cholesterol grows higher and higher from type 1 to 4"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "filter the categories of people with heart disease"
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "filter categories to find poeple with heart disease and toggle stack mode to show trend of mean of cholesterol"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": ["Presence"]
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Heart Disease",
+            "y": "Cholesterol",
+            "color": "Chest pain type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Absence\"], datum['Heart Disease']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

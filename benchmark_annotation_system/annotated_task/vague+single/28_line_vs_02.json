@@ -1,0 +1,61 @@
+{
+  "task_type": "vague_single",
+  "task_id": "28_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/28_silver_prices_data_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Detect anomalies in the entire silver price trend across 2016-2026 to identify periods with abnormal price movements.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "2025-2026 exponential price surge",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The anomaly detection reveals that the post-2025 surge is an outlier, while prior fluctuations are within normal market volatility bounds."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "The tool automatically identifies outlier price movements that are not visually obvious in the full chart, uncovering structural anomalies in the silver price trend."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "threshold": 2
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "point"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

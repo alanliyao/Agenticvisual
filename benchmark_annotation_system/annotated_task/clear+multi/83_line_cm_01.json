@@ -1,0 +1,85 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "83_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/82_Online Sales Data_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which category had higher revenue in summer in 2024, Beauty Products or Books?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Beauty Products.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "Filtering removes the noise from higher-revenue categories like Electronics and Home Appliances, which dominate the original chart and obscure the comparison between these two low-performing categories."
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_time_range",
+            "reasoning": "Zooming into the specific time frame magnifies the small differences between the two categories, making the revenue comparison unambiguous."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Electronics",
+                    "Home Appliances",
+                    "Clothing",
+                    "Sports"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2024-06-01",
+                  "end": "2024-08-27"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2024-06-01",
+              "2024-08-27"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "Total Revenue",
+            "color": "Product Category"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Electronics\", \"Home Appliances\", \"Clothing\", \"Sports\"], datum['Product Category']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

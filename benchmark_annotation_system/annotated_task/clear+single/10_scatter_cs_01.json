@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "10_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/10_scatter_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What is the correlation between sleep duration and screen time?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "-0.04125",
+          "tolerance": 0.005
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "After using the tool \"calculate correlation\", we found that sleep duration and screen time have a negative correlation of approximately -0.04125."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sleep_hours",
+            "y": "screen_time",
+            "color": "diet_quality"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "80_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/80_gym_members_exercise_tracking_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Is the relationship between exercise frequency and calorie consumption positively correlated?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "YES"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "get the plot of calories_burned and workout_frequency"
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_correlation",
+            "reasoning": "get the answer:spearman correlation: 0.528 (moderate positive)."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Workout_Frequency (days/week)",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "spearman"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Frequency (days/week)",
+            "y": "Calories_Burned",
+            "color": "Workout_Type"
+          }
+        }
+      }
+    }
+  ]
+}

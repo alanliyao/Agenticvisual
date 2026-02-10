@@ -1,0 +1,71 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "86_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/85_supply_chain_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which type of consumers' consumption is higher than the average of total consumption?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "male's cosmetics, non-binary's cosmetics, unknown's cosmetics, unknown's haircare, unknown's skincare",
+          "alternatives": []
+        },
+        "key_insights": [
+          "male's cosmetics price over the average",
+          "Non-binary's cosmetics price over the average",
+          "all of the unknown people's product price over the average"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data_summary",
+            "reasoning": "get the average of total consumption(49.462)"
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "An intuitive display of the average prices for different consumer and product combinations"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Customer demographics",
+            "y": "Price",
+            "color": "Product type"
+          }
+        }
+      }
+    }
+  ]
+}

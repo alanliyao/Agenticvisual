@@ -1,0 +1,170 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "open_ended_multi",
+      "chart_type": "scatter",
+      "meta": {
+        "chart_type": "scatter",
+        "title": "Parallel Coordinates Plot",
+        "filename": "18_Heart_Disease_Prediction_parallel.json",
+        "data_points": 500,
+        "total_points": 1080,
+        "is_sampled": true,
+        "is_vega_full": false,
+        "sampling_info": {
+          "sampled": true,
+          "displayed": 500,
+          "total": 1080,
+          "message": "从 1080 个点中随机采样 500 个显示",
+          "hint": "使用 zoom 工具缩放到感兴趣的区域可以看到更多数据点"
+        },
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "op_02",
+          "question": "Why is the differentiation of chest pain types much higher than that of other features?",
+          "ground_truth": {
+            "answer": "Chest pain is a direct symptom of heart disease, not an indirect risk factor.",
+            "key_insights": [
+              "The type of chest pain is a key feature in distinguishing heart disease.",
+              "Heart disease is the result of the synergistic effects of multiple factors."
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "filter_categorical",
+                "reasoning": "On the 'Chest pain type' axis, the orange line (with heart disease) is almost entirely concentrated in the high value area of 1.0, while the blue line (without heart disease) is mainly distributed in the low value range of 0.0 to 0.6. This indicates that a specific type of chest pain (corresponding to high normalised values) is strongly associated with heart disease and is the most crucial indicator for distinguishing whether someone is affected or not."
+              },
+              {
+                "iteration": 2,
+                "tool": "get_data_summary",
+                "reasoning": "Although the type of chest pain is central, the distribution of the orange line on other axes also shows that heart disease is not determined by a single feature, but is the result of the combined effect of chest pain type with features such as age, blood pressure, and cholesterol."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "filter_categorical",
+                "get_data_summary"
+              ],
+              "param_eval": [
+                {
+                  "tool": "filter_categorical",
+                  "params": {
+                    "field": "dimension",
+                    "categories_to_remove": [
+                      "Absence"
+                    ]
+                  }
+                },
+                {
+                  "tool": "get_data_summary",
+                  "params": {
+                    "scope": "all"
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": null,
+                "y": null,
+                "color": null
+              },
+              "data_filtered": [
+                {
+                  "filter": "indexof([\"Absence\"], datum.dimension) < 0"
+                }
+              ],
+              "layers": {
+                "count": 1,
+                "types": [
+                  "line"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "filter_categorical",
+          "parameters": {
+            "field": "dimension",
+            "categories_to_remove": [
+              "Absence"
+            ]
+          },
+          "result": {
+            "operation": "filter_categorical",
+            "message": "Filtered out categories: ['Absence'] from field dimension"
+          },
+          "key_insights": [
+            "The type of chest pain is a key feature in distinguishing heart disease."
+          ],
+          "reasoning": "On the 'Chest pain type' axis, the orange line (with heart disease) is almost entirely concentrated in the high value area of 1.0, while the blue line (without heart disease) is mainly distributed in the low value range of 0.0 to 0.6. This indicates that a specific type of chest pain (corresponding to high normalised values) is strongly associated with heart disease and is the most crucial indicator for distinguishing whether someone is affected or not."
+        },
+        {
+          "tool_name": "get_data_summary",
+          "parameters": {
+            "scope": "all"
+          },
+          "result": {
+            "summary": {
+              "count": 500,
+              "numeric_fields": {
+                "_index": {
+                  "mean": 135.088,
+                  "std": 78.87156810917354,
+                  "min": 0,
+                  "max": 269,
+                  "median": 133.5
+                },
+                "normalized_value": {
+                  "mean": 0.4687863681399156,
+                  "std": 0.26898576953873254,
+                  "min": 0,
+                  "max": 1,
+                  "median": 0.39622641509433965
+                }
+              },
+              "categorical_fields": {
+                "Heart Disease": {
+                  "unique_count": 2,
+                  "categories": [
+                    "Absence",
+                    "Presence"
+                  ],
+                  "distribution": {
+                    "Absence": 288,
+                    "Presence": 212
+                  }
+                },
+                "dimension": {
+                  "unique_count": 4,
+                  "categories": [
+                    "Age",
+                    "Cholesterol",
+                    "BP",
+                    "Chest pain type"
+                  ],
+                  "distribution": {
+                    "Age": 118,
+                    "Cholesterol": 126,
+                    "BP": 139,
+                    "Chest pain type": 117
+                  }
+                }
+              }
+            }
+          },
+          "key_insights": [
+            "Heart disease is the result of the synergistic effects of multiple factors."
+          ],
+          "reasoning": "Although the type of chest pain is central, the distribution of the orange line on other axes also shows that heart disease is not determined by a single feature, but is the result of the combined effect of chest pain type with features such as age, blood pressure, and cholesterol."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-22T15:34:02.405Z"
+}

@@ -1,0 +1,55 @@
+{
+  "task_type": "clear_single",
+  "task_id": "16_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/16_bar_Chocolate Sales.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which country contributes the most to their total shipments among the top 5 salespeople by number of shipping boxes?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Australia",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Among the top 5 salespeople, none have New Zealand and UK as their largest contributing country."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_top_n",
+            "reasoning": "I used the highlight top n tool to isolate the top 5 salespeople, which removes the visual clutter from the full list and makes it easier to compare contributions by country"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_top_n",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n": 5,
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Sales Person",
+            "y": "Boxes Shipped",
+            "color": "Country"
+          }
+        }
+      }
+    }
+  ]
+}

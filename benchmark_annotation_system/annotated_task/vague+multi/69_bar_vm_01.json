@@ -1,0 +1,101 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "69_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/69_top_100_linkedin_companies_2026_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "Characteristics of companies with less than 15,000,000 followers",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Companies with less than 15 million followers are generally specialized in professional fields, B2B services, knowledge-based or enterprise technology-based brands. Their target audience is precise but narrow, lacking the attributes of mass consumption and platform dissemination. Therefore, the scale of their followers on social media is naturally limited.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "change the chart"
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "The same as the previous step"
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_categories",
+            "reasoning": "get the charts which followers below 15000000"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "followers",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "company",
+                  "channel": "y"
+                }
+              }
+            },
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    40000000,
+                    36000000,
+                    33000000,
+                    27000000,
+                    24000000,
+                    21000000,
+                    20000000,
+                    19000000,
+                    18000000,
+                    17000000,
+                    15000000
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "followers",
+            "y": "company",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"40000000\",\"36000000\",\"33000000\",\"27000000\",\"24000000\",\"21000000\",\"20000000\",\"19000000\",\"18000000\",\"17000000\",\"15000000\"], datum['followers']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

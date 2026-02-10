@@ -1,0 +1,68 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "07_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/07_bar_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "How do interruptions affect sleep hours differently across the three types of diet quality?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It seems that the sleep hours of the average diet quality group are least affected by interruptions, and overall sleep hours are relatively consistent.But unlike the constituents of the average diet quality group, both the good diet quality group and the poor diet quality group show peaks in sleep duration when interruptions were more frequent."
+        },
+        "key_insights": [
+          "From this view, it can be seen that only the number of interruptions in the poor diet quality group has extreme values, around 15.",
+          "The good diet quality group seems to have fewer interruptions than the other two groups.",
+          "It seems that the sleep hours of the average diet quality group are least affected by interruptions, and overall sleep hours are relatively consistent.",
+          "Unlike the constituents of the average diet quality group, both the good diet quality group and the poor diet quality group showed peaks in sleep duration when interruptions were more frequent.",
+          "In some situations with frequent interruptions, the poor diet quality group even show extremely low sleep hours."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "To discuss the impact of interruptions on sleep hours, changing the encoding field to interruptions is first need."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "The stacked bar chart made it difficult to get comparison, so I switched to grouped mode to see the difference side by side."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "interruptions"
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "sleep_hours",
+            "color": "interruptions"
+          }
+        }
+      }
+    }
+  ]
+}

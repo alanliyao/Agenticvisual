@@ -1,0 +1,80 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "09_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/09_museum_visitors_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Soomth the line and then identify the overall direction of the latter half of the time series.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "A consistent downward overall direction.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The high-frequency spikes and dips are filtered out, revealing a clear underlying downward trend across the entire series.",
+          "The smoothed line shows that the first half of the time series had consistently higher values than the second half.",
+          "The rate of decline in the latter half appears steeper than in the first half, with values falling from around 7,000 to near 4,000 by the endpoint.",
+          "The highlighted segment confirms that the downward trend observed in the full smoothed series persists and accelerates in the later period."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_moving_average",
+            "reasoning": "The moving average reduces noise to isolate the core trend, closing the gap between raw volatility and the true directional pattern. This provides a stable baseline for analyzing the latter half."
+          },
+          {
+            "iteration": 2,
+            "tool": "zoom_time_range",
+            "reasoning": "Zooming into the latter half isolates the target segment, making the downward slope unambiguous. The two-step process of smoothing and highlighting fully answers the question about the latter half’s trend direction, so no further tools are needed."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_moving_average",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "window_size": 5
+                }
+              }
+            },
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2017-07-01",
+                  "end": "2018-11-01"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

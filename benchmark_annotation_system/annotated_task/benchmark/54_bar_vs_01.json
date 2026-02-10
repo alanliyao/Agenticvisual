@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "54_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/54_Ecommerce_Delivery_Analytics_New_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "How does a delivery delay affect the delivery time?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The overall delivery time for the three platforms with delivery delay is longer than in cases without delivery delay."
+        },
+        "key_insights": [
+          "From the view, it can be seen that the overall delivery time for the three platforms with delivery delay is longer than in cases without delivery delay."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "Using the channel encoding tool to switch the field to delivery delay can focus on the impact of delivery delay on delivery time."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Delivery Delay",
+                  "channel": "color"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Delivery Time (Minutes)",
+            "color": "Delivery Delay"
+          }
+        }
+      }
+    }
+  ]
+}

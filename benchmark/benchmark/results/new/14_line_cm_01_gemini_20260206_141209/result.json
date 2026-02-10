@@ -1,0 +1,66 @@
+{
+  "task_id": "14_line_cm_01",
+  "model": "gemini",
+  "model_name": "Gemini 2.5 Flash",
+  "timestamp": "2026-02-06T14:12:14.856374",
+  "questions_count": 1,
+  "success_count": 1,
+  "results": [
+    {
+      "qid": "cm_02",
+      "question": "First filter the chart to only show Avila Adobe, and then identify if there is a consistent underlying monthly visitor trend.",
+      "success": true,
+      "answer": "",
+      "question_type": "subjective",
+      "task_type": "clear_multi",
+      "key_insights": [],
+      "reasoning_rounds": [],
+      "reasoning": "",
+      "model": "google/gemini-2.5-flash-preview-09-2025",
+      "tool_calls": [],
+      "final_spec": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "title": "Line Chart: Visitors over Date",
+        "width": 600,
+        "height": 400,
+        "data": {
+          "_values_omitted": "236 items"
+        },
+        "mark": {
+          "type": "line",
+          "point": true
+        },
+        "encoding": {
+          "x": {
+            "field": "Date",
+            "type": "temporal"
+          },
+          "y": {
+            "field": "Visitors",
+            "type": "quantitative"
+          },
+          "color": {
+            "field": "Museum",
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Date",
+              "type": "temporal"
+            },
+            {
+              "field": "Visitors",
+              "type": "quantitative"
+            },
+            {
+              "field": "Museum",
+              "type": "nominal"
+            }
+          ]
+        }
+      },
+      "iterations": 1,
+      "final_view_path": "benchmark/results/new/14_line_cm_01_gemini_20260206_141209/images/cm_02_final.png"
+    }
+  ]
+}

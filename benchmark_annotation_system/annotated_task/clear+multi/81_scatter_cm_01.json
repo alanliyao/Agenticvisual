@@ -1,0 +1,89 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "81_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/80_gym_members_exercise_tracking_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_01",
+      "question": "zoom the area and filter categories, what is the frequency that people who choose strength and burn calories around 1000 usually work out?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "4",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "zoom the area of burning 1000 calories and filter category of strength"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "filter the category of strength"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.9022222518920898,
+                    1.6822223536173502
+                  ],
+                  "y_range": [
+                    877.4999313354492,
+                    1144.4999771118164
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": ["Strength"]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.9022222518920898,
+              1.6822223536173502
+            ],
+            "y": [
+              877.4999313354492,
+              1144.4999771118164
+            ]
+          },
+          "encoding": {
+            "x": "Session_Duration (hours)",
+            "y": "Calories_Burned",
+            "color": "Workout_Type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"HIIT\", \"Cardio\", \"Yoga\"], datum['Workout_Type']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

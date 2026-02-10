@@ -1,0 +1,126 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "89_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/89_Sleep_health_and_lifestyle_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_05",
+      "question": "What is the exact mean sleep duration for individuals in the 'Obese' BMI category at Stress Level 7, and how does it compare to the overall average sleep duration for the 'Obese' category across all stress levels?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The mean sleep duration for the 'Obese' group at Stress Level 7 is 6.8 hours, which is 0.3 hours lower than the overall average for the 'Obese' category (7.1 hours).",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data",
+            "reasoning": "Use this tool to obtain the precise numerical dataset behind the heatmap. This provides the mean sleep duration values for every cell (BMI Category x Stress Level combination)."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_cells_by_region",
+            "reasoning": "To isolate the data for the 'Obese' BMI category. This filters the view (and any subsequent data operations) to only the row for 'Obese', making comparisons within this category clearer."
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_cells_by_region",
+            "reasoning": "To isolate the data for the 'Obese' BMI category. This filters the view (and any subsequent data operations) to only the row for 'Obese', making comparisons within this category clearer."
+          },
+          {
+            "iteration": 4,
+            "tool": "filter_cells_by_region",
+            "reasoning": "To isolate the data for the 'Obese' BMI category. This filters the view (and any subsequent data operations) to only the row for 'Obese', making comparisons within this category clearer."
+          },
+          {
+            "iteration": 5,
+            "tool": "get_data_summary",
+            "reasoning": "To calculate the overall average for the filtered 'Obese' row. This provides the benchmark for comparison."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            },
+            {
+              "tool": "filter_cells_by_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "y_value": "Overweight"
+                }
+              }
+            },
+            {
+              "tool": "filter_cells_by_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "y_value": "Normal"
+                }
+              }
+            },
+            {
+              "tool": "filter_cells_by_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "y_value": "Normal Weight"
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "visible"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Stress Level",
+            "y": "BMI Category",
+            "color": "Sleep Duration"
+          },
+          "data_filtered": [
+            {
+              "filter": "!(indexof([\"Overweight\"], datum['BMI Category']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"Normal\"], datum['BMI Category']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"Normal Weight\"], datum['BMI Category']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

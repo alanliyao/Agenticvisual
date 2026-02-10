@@ -1,0 +1,98 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "71_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/71_one_person_ai_work_and_burnout_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Is there a clearer correlation between the usage of AI tools and code complexity than between the usage of AI tools and pressure values?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "No."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "Reduce visual clutter so that you can fully focus your attention on the three core indicators: AI usage, code complexity, and stress, and avoid being distracted by irrelevant information when making judgments."
+          },
+          {
+            "iteration": 2,
+            "tool": "reorder_dimensions",
+            "reasoning": "When you combine these three key dimensions, you can easily track how each line changes in relation to these three factors. At a glance, you can see if people who use AI extensively and have complex code really experience greater stress."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Hours_Coded",
+                    "Bugs_Introduced"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "reorder_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "dimension_order": [
+                    "Stress_Level_1_10",
+                    "AI_Tool_Usage_%",
+                    "Code_Complexity_Score"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "Stress_Level_1_10",
+              "AI_Tool_Usage_%",
+              "Code_Complexity_Score"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"AI_Tool_Usage_%\", \"Code_Complexity_Score\", \"Stress_Level_1_10\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

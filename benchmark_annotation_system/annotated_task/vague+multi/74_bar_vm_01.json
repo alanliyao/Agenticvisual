@@ -1,0 +1,70 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "74_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/74_StudentsPerformance_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Do those with higher educational qualifications have children who perform better in mathematics?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "No, because it can be observed that regardless of how highly educated the parents are, their children's math scores are all below the average. Moreover, it can be seen that those with a bachelor's degree have the highest average score, although those with a high school education have the lowest average score, but they are not always the lowest. Even there are cases where a doctor's degree is worse than a high school diploma."
+        },
+        "key_insights": [
+          "Regardless of the educational level of the parents, there are always their children who score below the average.",
+          "The highest score in almost every group was a bachelor's degree.",
+          "High school is not always about achieving the lowest score."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "get all data without stack"
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data_summary",
+            "reasoning": "get the mean math score:66"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "math score",
+            "color": "parental level of education"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "87_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/86_starbucks_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "What kind of drink can help maintain a healthy figure?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "categorical",
+          "value": "coffee, shakenlcedBeverages, ClassicEspressoDrinks",
+          "alternatives": []
+        },
+        "key_insights": [
+          "there are three drinks' calories less than 140, which is helpful for maintaining a healthy figure"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Conduct a more intuitive analysis to obtain the answer"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "ascending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Beverage_category",
+            "y": "Calories",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

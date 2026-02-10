@@ -1,0 +1,180 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "open_ended_single",
+      "chart_type": "line",
+      "meta": {
+        "chart_type": "line",
+        "title": "Scatter Plot: Date vs Volume",
+        "filename": "32_TSLA_Stock_scatter.json",
+        "data_points": 254,
+        "total_points": 254,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "op_01",
+          "question": "Which points in the trading volume data are abnormally fluctuating?",
+          "ground_truth": {
+            "answer": null,
+            "key_insights": [
+              "All anomalies are high and none are low."
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "detect_anomalies",
+                "reasoning": "According to abnormally fluctuating, choosing the tool of detect anomalies."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "detect_anomalies"
+              ],
+              "param_eval": [
+                {
+                  "tool": "detect_anomalies",
+                  "params": {
+                    "threshold": 2
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": null,
+                "y": null,
+                "color": null
+              },
+              "layers": {
+                "count": 2,
+                "types": [
+                  "point",
+                  "point"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "detect_anomalies",
+          "parameters": {
+            "threshold": 2
+          },
+          "result": {
+            "operation": "detect_anomalies",
+            "anomaly_count": 13,
+            "anomalies": [
+              {
+                "Unnamed: 0": 2715,
+                "Date": "2021-04-13",
+                "Close": 254.10667419433597,
+                "High": 254.3333282470703,
+                "Low": 236.8866729736328,
+                "Open": 237.5666656494141,
+                "Volume": 133958400
+              },
+              {
+                "Unnamed: 0": 2716,
+                "Date": "2021-04-14",
+                "Close": 244.07666015625,
+                "High": 260.2633361816406,
+                "Low": 242.6766662597656,
+                "Open": 256.8999938964844,
+                "Volume": 147052200
+              },
+              {
+                "Unnamed: 0": 2735,
+                "Date": "2021-05-11",
+                "Close": 205.73333740234372,
+                "High": 209.0333404541016,
+                "Low": 198.5333404541016,
+                "Open": 199.7466735839844,
+                "Volume": 139511700
+              },
+              {
+                "Unnamed: 0": 2737,
+                "Date": "2021-05-13",
+                "Close": 190.56333923339844,
+                "High": 202.15333557128903,
+                "Low": 186.5500030517578,
+                "Open": 200.51333618164065,
+                "Volume": 132554700
+              },
+              {
+                "Unnamed: 0": 2766,
+                "Date": "2021-06-24",
+                "Close": 226.60667419433597,
+                "High": 232.5399932861328,
+                "Low": 222.5366668701172,
+                "Open": 224.9966735839844,
+                "Volume": 137947200
+              },
+              {
+                "Unnamed: 0": 2851,
+                "Date": "2021-10-25",
+                "Close": 341.6199951171875,
+                "High": 348.3399963378906,
+                "Low": 314.7333374023437,
+                "Open": 316.84332275390625,
+                "Volume": 188556300
+              },
+              {
+                "Unnamed: 0": 2852,
+                "Date": "2021-10-26",
+                "Close": 339.4766540527344,
+                "High": 364.9800109863281,
+                "Low": 333.8133239746094,
+                "Open": 341.5633239746094,
+                "Volume": 187245000
+              },
+              {
+                "Unnamed: 0": 2856,
+                "Date": "2021-11-01",
+                "Close": 402.86334228515625,
+                "High": 403.25,
+                "Low": 372.88665771484375,
+                "Open": 381.6666564941406,
+                "Volume": 168146100
+              },
+              {
+                "Unnamed: 0": 2862,
+                "Date": "2021-11-09",
+                "Close": 341.1666564941406,
+                "High": 391.5,
+                "Low": 337.17333984375,
+                "Open": 391.2000122070313,
+                "Volume": 177317400
+              },
+              {
+                "Unnamed: 0": 2913,
+                "Date": "2022-01-24",
+                "Close": 310,
+                "High": 311.1700134277344,
+                "Low": 283.8233337402344,
+                "Open": 301.586669921875,
+                "Volume": 151565700
+              }
+            ],
+            "message": "Detected and highlighted 13 anomalies (threshold=2 std)",
+            "details": [
+              "Mean: 76897029.92, Std: 27588738.20",
+              "Anomalies are values beyond 2 standard deviations from mean",
+              "Anomalies marked with red points on the chart"
+            ]
+          },
+          "key_insights": [
+            "All anomalies are high and none are low."
+          ],
+          "reasoning": "According to abnormally fluctuating, choosing the tool of detect anomalies."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-23T01:10:11.661Z"
+}

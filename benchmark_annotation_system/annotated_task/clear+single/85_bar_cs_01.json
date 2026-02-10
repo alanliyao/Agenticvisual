@@ -1,0 +1,61 @@
+{
+  "task_type": "clear_single",
+  "task_id": "85_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/85_supply_chain_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Among the \"Customer demographics = Unknown\" group, which product type has the highest mean of price?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Haircare.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Use tools to filter out the data of the \"Unknown\" group for analysis."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Non-binary",
+                    "Female",
+                    "Male"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Customer demographics",
+            "y": "Price",
+            "color": "Product type"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Non-binary\",\"Female\",\"Male\"], datum['Customer demographics']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

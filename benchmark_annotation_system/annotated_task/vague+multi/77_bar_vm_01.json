@@ -1,0 +1,78 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "77_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/77_gym_bar_sum.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "filter the bar to see what are the characteristics of the mean of fat for different type of workout with experience level 2.0?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "These averages are all very close, ranging from 200 to 300. The types of exercise from highest to lowest are strength,cardio,yoga adn HIIT."
+        },
+        "key_insights": [
+          "the mean are very close to each other",
+          "the highest is strength and the lowest is HIIT.",
+          "the second highest and the third highest are yoga and cardio respectively"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "filter_subcategories 1 and 3,and we can see the mean are very close to each other."
+          },
+          {
+            "iteration": 2,
+            "tool": "sort_bars",
+            "reasoning": "Arranged from low to high, the highest is strength and the lowest is HIIT."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    3,
+                    1
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "ascending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Experience_Level'] != 3 && datum['Experience_Level'] != 1"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

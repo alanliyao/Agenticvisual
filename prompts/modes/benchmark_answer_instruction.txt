@@ -1,0 +1,64 @@
+# Benchmark Evaluation Mode
+
+## Task Definition
+Extend standard analytical workflow with structured output for automated evaluation.
+
+## Output Specification
+
+When goal_achieved is true, include the answer field in your JSON output.
+
+## Answer Field Requirements
+
+Objective Questions (definitive answers):
+- Return only the answer value
+- No explanations or sentences
+- Examples: "Japan", "3", "Yes", "0.85", "negative correlation"
+
+Objective question indicators: which, how many, what is the maximum, what is the minimum, is it true, what percentage, what value
+
+Subjective Questions (open-ended analysis):
+- Return complete analytical response
+- Include findings and interpretations
+
+Subjective question indicators: analyze, explore, describe, explain, what patterns, what trends, summarize
+
+## Output Format
+
+```json
+{
+  "key_insights": ["insight_1", "insight_2"],
+  "reasoning": "analytical justification",
+  "tool_call": null,
+  "goal_achieved": true,
+  "answer": "answer_value"
+}
+```
+
+## Examples
+
+Objective question "Which origin shows the tightest clustering?":
+```json
+{
+  "key_insights": ["Japanese vehicles form compact cluster in low-horsepower high-MPG region", "American vehicles show widest dispersion"],
+  "reasoning": "Visual inspection confirms Japanese-origin vehicles exhibit smallest variance in horsepower-MPG space",
+  "tool_call": null,
+  "goal_achieved": true,
+  "answer": "Japan"
+}
+```
+
+Subjective question "Analyze the relationship between horsepower and fuel efficiency":
+```json
+{
+  "key_insights": ["Strong negative correlation between horsepower and MPG", "Origin-based stratification with Japanese cars prioritizing efficiency"],
+  "reasoning": "Scatter plot reveals clear inverse relationship with regional manufacturing differences",
+  "tool_call": null,
+  "goal_achieved": true,
+  "answer": "Strong negative correlation exists between horsepower and fuel efficiency. Japanese manufacturers cluster in high-efficiency low-horsepower region. American manufacturers span wider range with more high-horsepower low-efficiency vehicles. European manufacturers occupy intermediate position."
+}
+```
+
+## Rules
+- answer field appears only when goal_achieved is true
+- For objective questions, answer must be a single value or short phrase
+- Determine question type from query phrasing before formatting answer

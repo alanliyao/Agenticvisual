@@ -1,0 +1,5926 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: one_person_ai_work_and_burnout",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "_index": 0,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5692963752665245
+      },
+      {
+        "_index": 1,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 2,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.39872068230277186
+      },
+      {
+        "_index": 3,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2771855010660981
+      },
+      {
+        "_index": 4,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.48614072494669514
+      },
+      {
+        "_index": 5,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5628997867803838
+      },
+      {
+        "_index": 6,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.41151385927505335
+      },
+      {
+        "_index": 7,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.396588486140725
+      },
+      {
+        "_index": 8,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6055437100213219
+      },
+      {
+        "_index": 9,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.579957356076759
+      },
+      {
+        "_index": 10,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3880597014925373
+      },
+      {
+        "_index": 11,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4264392324093817
+      },
+      {
+        "_index": 12,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8933901918976546
+      },
+      {
+        "_index": 13,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.46055437100213226
+      },
+      {
+        "_index": 14,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.22174840085287847
+      },
+      {
+        "_index": 15,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.21321961620469085
+      },
+      {
+        "_index": 16,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.7057569296375267
+      },
+      {
+        "_index": 17,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.39232409381663114
+      },
+      {
+        "_index": 18,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6332622601279317
+      },
+      {
+        "_index": 19,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.7057569296375267
+      },
+      {
+        "_index": 20,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.15138592750533048
+      },
+      {
+        "_index": 21,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3752665245202559
+      },
+      {
+        "_index": 22,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.21748400852878463
+      },
+      {
+        "_index": 23,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4200426439232409
+      },
+      {
+        "_index": 24,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.1257995735607676
+      },
+      {
+        "_index": 25,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4690831556503198
+      },
+      {
+        "_index": 26,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2345415778251599
+      },
+      {
+        "_index": 27,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.582089552238806
+      },
+      {
+        "_index": 28,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5607675906183369
+      },
+      {
+        "_index": 29,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.10660980810234542
+      },
+      {
+        "_index": 30,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.49040511727078895
+      },
+      {
+        "_index": 31,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8571428571428572
+      },
+      {
+        "_index": 32,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.08315565031982942
+      },
+      {
+        "_index": 33,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5415778251599147
+      },
+      {
+        "_index": 34,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5266524520255863
+      },
+      {
+        "_index": 35,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.1535181236673774
+      },
+      {
+        "_index": 36,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.08528784648187633
+      },
+      {
+        "_index": 37,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.21535181236673773
+      },
+      {
+        "_index": 38,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.373134328358209
+      },
+      {
+        "_index": 39,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.513859275053305
+      },
+      {
+        "_index": 40,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5842217484008528
+      },
+      {
+        "_index": 41,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.1535181236673774
+      },
+      {
+        "_index": 42,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2771855010660981
+      },
+      {
+        "_index": 43,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.7547974413646056
+      },
+      {
+        "_index": 44,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5671641791044777
+      },
+      {
+        "_index": 45,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.27505330490405117
+      },
+      {
+        "_index": 46,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5010660980810234
+      },
+      {
+        "_index": 47,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.15991471215351813
+      },
+      {
+        "_index": 48,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.04051172707889126
+      },
+      {
+        "_index": 49,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8059701492537313
+      },
+      {
+        "_index": 50,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.279317697228145
+      },
+      {
+        "_index": 51,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.33688699360341157
+      },
+      {
+        "_index": 52,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3795309168443497
+      },
+      {
+        "_index": 53,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.79317697228145
+      },
+      {
+        "_index": 54,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6950959488272922
+      },
+      {
+        "_index": 55,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4690831556503198
+      },
+      {
+        "_index": 56,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3603411513859275
+      },
+      {
+        "_index": 57,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5245202558635395
+      },
+      {
+        "_index": 58,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2260127931769723
+      },
+      {
+        "_index": 59,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.255863539445629
+      },
+      {
+        "_index": 60,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4456289978678038
+      },
+      {
+        "_index": 61,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 62,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8059701492537313
+      },
+      {
+        "_index": 63,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.14285714285714288
+      },
+      {
+        "_index": 64,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.17270788912579957
+      },
+      {
+        "_index": 65,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4520255863539446
+      },
+      {
+        "_index": 66,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4157782515991471
+      },
+      {
+        "_index": 67,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.55863539445629
+      },
+      {
+        "_index": 68,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.31556503198294245
+      },
+      {
+        "_index": 69,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2004264392324094
+      },
+      {
+        "_index": 70,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.031982942430703626
+      },
+      {
+        "_index": 71,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8123667377398721
+      },
+      {
+        "_index": 72,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5756929637526652
+      },
+      {
+        "_index": 73,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.029850746268656716
+      },
+      {
+        "_index": 74,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.18123667377398722
+      },
+      {
+        "_index": 75,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.35607675906183367
+      },
+      {
+        "_index": 76,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.36460554371002135
+      },
+      {
+        "_index": 77,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.24946695095948826
+      },
+      {
+        "_index": 78,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3390191897654584
+      },
+      {
+        "_index": 79,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.232409381663113
+      },
+      {
+        "_index": 80,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4541577825159915
+      },
+      {
+        "_index": 81,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4221748400852879
+      },
+      {
+        "_index": 82,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8294243070362474
+      },
+      {
+        "_index": 83,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.26652452025586354
+      },
+      {
+        "_index": 84,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5522388059701493
+      },
+      {
+        "_index": 85,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4669509594882729
+      },
+      {
+        "_index": 86,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.19189765458422176
+      },
+      {
+        "_index": 87,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 88,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 89,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.48614072494669514
+      },
+      {
+        "_index": 90,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.373134328358209
+      },
+      {
+        "_index": 91,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4690831556503198
+      },
+      {
+        "_index": 92,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.31982942430703626
+      },
+      {
+        "_index": 93,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.582089552238806
+      },
+      {
+        "_index": 94,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.7121535181236673
+      },
+      {
+        "_index": 95,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6140724946695096
+      },
+      {
+        "_index": 96,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.49253731343283585
+      },
+      {
+        "_index": 97,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6119402985074627
+      },
+      {
+        "_index": 98,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5159914712153518
+      },
+      {
+        "_index": 99,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4669509594882729
+      },
+      {
+        "_index": 100,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2068230277185501
+      },
+      {
+        "_index": 101,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2729211087420043
+      },
+      {
+        "_index": 102,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5181236673773988
+      },
+      {
+        "_index": 103,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.0746268656716418
+      },
+      {
+        "_index": 104,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.08102345415778252
+      },
+      {
+        "_index": 105,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.34968017057569295
+      },
+      {
+        "_index": 106,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.41791044776119407
+      },
+      {
+        "_index": 107,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2537313432835821
+      },
+      {
+        "_index": 108,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6396588486140725
+      },
+      {
+        "_index": 109,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4200426439232409
+      },
+      {
+        "_index": 110,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.24093816631130066
+      },
+      {
+        "_index": 111,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.513859275053305
+      },
+      {
+        "_index": 112,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.49680170575692967
+      },
+      {
+        "_index": 113,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.4754797441364606
+      },
+      {
+        "_index": 114,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5650319829424307
+      },
+      {
+        "_index": 115,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6140724946695096
+      },
+      {
+        "_index": 116,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 117,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6417910447761195
+      },
+      {
+        "_index": 118,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6950959488272922
+      },
+      {
+        "_index": 119,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.46055437100213226
+      },
+      {
+        "_index": 120,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3603411513859275
+      },
+      {
+        "_index": 121,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.1002132196162047
+      },
+      {
+        "_index": 122,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3795309168443497
+      },
+      {
+        "_index": 123,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.28358208955223885
+      },
+      {
+        "_index": 124,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8955223880597015
+      },
+      {
+        "_index": 125,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5415778251599147
+      },
+      {
+        "_index": 126,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.26652452025586354
+      },
+      {
+        "_index": 127,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5778251599147122
+      },
+      {
+        "_index": 128,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.0511727078891258
+      },
+      {
+        "_index": 129,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.36460554371002135
+      },
+      {
+        "_index": 130,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5948827292110874
+      },
+      {
+        "_index": 131,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 132,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.44776119402985076
+      },
+      {
+        "_index": 133,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5437100213219617
+      },
+      {
+        "_index": 134,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2878464818763326
+      },
+      {
+        "_index": 135,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3432835820895523
+      },
+      {
+        "_index": 136,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.7505330490405118
+      },
+      {
+        "_index": 137,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6162046908315565
+      },
+      {
+        "_index": 138,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.7526652452025586
+      },
+      {
+        "_index": 139,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.14072494669509594
+      },
+      {
+        "_index": 140,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.28358208955223885
+      },
+      {
+        "_index": 141,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.27505330490405117
+      },
+      {
+        "_index": 142,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.36247334754797444
+      },
+      {
+        "_index": 143,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 144,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.582089552238806
+      },
+      {
+        "_index": 145,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.15778251599147122
+      },
+      {
+        "_index": 146,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5437100213219617
+      },
+      {
+        "_index": 147,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.41151385927505335
+      },
+      {
+        "_index": 148,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.43923240938166314
+      },
+      {
+        "_index": 149,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6631130063965885
+      },
+      {
+        "_index": 150,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.49253731343283585
+      },
+      {
+        "_index": 151,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.2814498933901919
+      },
+      {
+        "_index": 152,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.39232409381663114
+      },
+      {
+        "_index": 153,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5053304904051172
+      },
+      {
+        "_index": 154,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3859275053304905
+      },
+      {
+        "_index": 155,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.13859275053304904
+      },
+      {
+        "_index": 156,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.30277185501066095
+      },
+      {
+        "_index": 157,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.371002132196162
+      },
+      {
+        "_index": 158,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.24520255863539447
+      },
+      {
+        "_index": 159,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8251599147121536
+      },
+      {
+        "_index": 160,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.17270788912579957
+      },
+      {
+        "_index": 161,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.40298507462686567
+      },
+      {
+        "_index": 162,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.41151385927505335
+      },
+      {
+        "_index": 163,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6012793176972282
+      },
+      {
+        "_index": 164,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5948827292110874
+      },
+      {
+        "_index": 165,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6950959488272922
+      },
+      {
+        "_index": 166,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.1471215351812367
+      },
+      {
+        "_index": 167,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.5181236673773988
+      },
+      {
+        "_index": 168,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6609808102345416
+      },
+      {
+        "_index": 169,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6396588486140725
+      },
+      {
+        "_index": 170,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.21321961620469085
+      },
+      {
+        "_index": 171,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.7292110874200427
+      },
+      {
+        "_index": 172,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.07036247334754797
+      },
+      {
+        "_index": 173,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.7611940298507464
+      },
+      {
+        "_index": 174,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.3432835820895523
+      },
+      {
+        "_index": 175,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.12366737739872068
+      },
+      {
+        "_index": 176,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.6545842217484008
+      },
+      {
+        "_index": 177,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.8230277185501067
+      },
+      {
+        "_index": 178,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.10874200426439232
+      },
+      {
+        "_index": 179,
+        "Burnout_Risk": "High",
+        "dimension": "AI_Tool_Usage_%",
+        "normalized_value": 0.44349680170575695
+      },
+      {
+        "_index": 0,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2716049382716049
+      },
+      {
+        "_index": 1,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.7901234567901233
+      },
+      {
+        "_index": 2,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 3,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 4,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 5,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.7407407407407405
+      },
+      {
+        "_index": 6,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.40740740740740733
+      },
+      {
+        "_index": 7,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 8,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.1604938271604938
+      },
+      {
+        "_index": 9,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5185185185185185
+      },
+      {
+        "_index": 10,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2716049382716049
+      },
+      {
+        "_index": 11,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.0987654320987654
+      },
+      {
+        "_index": 12,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4320987654320986
+      },
+      {
+        "_index": 13,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.38271604938271603
+      },
+      {
+        "_index": 14,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2345679012345678
+      },
+      {
+        "_index": 15,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.24691358024691354
+      },
+      {
+        "_index": 16,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.11111111111111102
+      },
+      {
+        "_index": 17,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.7530864197530863
+      },
+      {
+        "_index": 18,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.24691358024691354
+      },
+      {
+        "_index": 19,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.1728395061728394
+      },
+      {
+        "_index": 20,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4320987654320986
+      },
+      {
+        "_index": 21,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 22,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 23,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.40740740740740733
+      },
+      {
+        "_index": 24,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 25,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.6296296296296295
+      },
+      {
+        "_index": 26,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5555555555555554
+      },
+      {
+        "_index": 27,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.9506172839506172
+      },
+      {
+        "_index": 28,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 29,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.34567901234567894
+      },
+      {
+        "_index": 30,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 31,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5308641975308641
+      },
+      {
+        "_index": 32,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4320987654320986
+      },
+      {
+        "_index": 33,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.20987654320987653
+      },
+      {
+        "_index": 34,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.45679012345679004
+      },
+      {
+        "_index": 35,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.7777777777777776
+      },
+      {
+        "_index": 36,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 37,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 38,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 39,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.45679012345679004
+      },
+      {
+        "_index": 40,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3703703703703702
+      },
+      {
+        "_index": 41,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.7407407407407405
+      },
+      {
+        "_index": 42,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.8024691358024689
+      },
+      {
+        "_index": 43,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.1728395061728394
+      },
+      {
+        "_index": 44,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.38271604938271603
+      },
+      {
+        "_index": 45,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.6049382716049381
+      },
+      {
+        "_index": 46,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.28395061728395055
+      },
+      {
+        "_index": 47,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5432098765432097
+      },
+      {
+        "_index": 48,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 49,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5555555555555554
+      },
+      {
+        "_index": 50,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5432098765432097
+      },
+      {
+        "_index": 51,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.7530864197530863
+      },
+      {
+        "_index": 52,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.12345679012345677
+      },
+      {
+        "_index": 53,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3950617283950617
+      },
+      {
+        "_index": 54,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.28395061728395055
+      },
+      {
+        "_index": 55,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3209876543209876
+      },
+      {
+        "_index": 56,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 57,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4320987654320986
+      },
+      {
+        "_index": 58,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3703703703703702
+      },
+      {
+        "_index": 59,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.22222222222222215
+      },
+      {
+        "_index": 60,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 61,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.28395061728395055
+      },
+      {
+        "_index": 62,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4320987654320986
+      },
+      {
+        "_index": 63,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3703703703703702
+      },
+      {
+        "_index": 64,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 65,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.28395061728395055
+      },
+      {
+        "_index": 66,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 67,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.20987654320987653
+      },
+      {
+        "_index": 68,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2716049382716049
+      },
+      {
+        "_index": 69,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.8024691358024689
+      },
+      {
+        "_index": 70,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3703703703703702
+      },
+      {
+        "_index": 71,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3703703703703702
+      },
+      {
+        "_index": 72,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.08641975308641976
+      },
+      {
+        "_index": 73,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5308641975308641
+      },
+      {
+        "_index": 74,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 75,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 76,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2592592592592592
+      },
+      {
+        "_index": 77,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 78,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 79,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2345679012345678
+      },
+      {
+        "_index": 80,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 81,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2345679012345678
+      },
+      {
+        "_index": 82,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.1728395061728394
+      },
+      {
+        "_index": 83,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.28395061728395055
+      },
+      {
+        "_index": 84,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2716049382716049
+      },
+      {
+        "_index": 85,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5679012345679012
+      },
+      {
+        "_index": 86,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.38271604938271603
+      },
+      {
+        "_index": 87,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5185185185185185
+      },
+      {
+        "_index": 88,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.6419753086419753
+      },
+      {
+        "_index": 89,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2716049382716049
+      },
+      {
+        "_index": 90,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.6419753086419753
+      },
+      {
+        "_index": 91,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.6049382716049381
+      },
+      {
+        "_index": 92,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.48148148148148134
+      },
+      {
+        "_index": 93,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.07407407407407401
+      },
+      {
+        "_index": 94,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5555555555555554
+      },
+      {
+        "_index": 95,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.8024691358024689
+      },
+      {
+        "_index": 96,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 97,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4691358024691357
+      },
+      {
+        "_index": 98,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.1975308641975308
+      },
+      {
+        "_index": 99,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.20987654320987653
+      },
+      {
+        "_index": 100,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.49382716049382697
+      },
+      {
+        "_index": 101,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.28395061728395055
+      },
+      {
+        "_index": 102,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.22222222222222215
+      },
+      {
+        "_index": 103,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 104,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2592592592592592
+      },
+      {
+        "_index": 105,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5802469135802468
+      },
+      {
+        "_index": 106,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 107,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.35802469135802456
+      },
+      {
+        "_index": 108,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.38271604938271603
+      },
+      {
+        "_index": 109,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4691358024691357
+      },
+      {
+        "_index": 110,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4320987654320986
+      },
+      {
+        "_index": 111,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.20987654320987653
+      },
+      {
+        "_index": 112,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5061728395061729
+      },
+      {
+        "_index": 113,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.18518518518518515
+      },
+      {
+        "_index": 114,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.49382716049382697
+      },
+      {
+        "_index": 115,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.34567901234567894
+      },
+      {
+        "_index": 116,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 117,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.49382716049382697
+      },
+      {
+        "_index": 118,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2716049382716049
+      },
+      {
+        "_index": 119,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4691358024691357
+      },
+      {
+        "_index": 120,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.11111111111111102
+      },
+      {
+        "_index": 121,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 122,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.40740740740740733
+      },
+      {
+        "_index": 123,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.35802469135802456
+      },
+      {
+        "_index": 124,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 125,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4691358024691357
+      },
+      {
+        "_index": 126,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3703703703703702
+      },
+      {
+        "_index": 127,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.45679012345679004
+      },
+      {
+        "_index": 128,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 129,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.22222222222222215
+      },
+      {
+        "_index": 130,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 131,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.18518518518518515
+      },
+      {
+        "_index": 132,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.18518518518518515
+      },
+      {
+        "_index": 133,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.691358024691358
+      },
+      {
+        "_index": 134,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 135,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.24691358024691354
+      },
+      {
+        "_index": 136,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.691358024691358
+      },
+      {
+        "_index": 137,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3209876543209876
+      },
+      {
+        "_index": 138,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2716049382716049
+      },
+      {
+        "_index": 139,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 140,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2592592592592592
+      },
+      {
+        "_index": 141,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 142,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.34567901234567894
+      },
+      {
+        "_index": 143,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2345679012345678
+      },
+      {
+        "_index": 144,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.48148148148148134
+      },
+      {
+        "_index": 145,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2592592592592592
+      },
+      {
+        "_index": 146,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 147,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.8765432098765431
+      },
+      {
+        "_index": 148,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 149,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.1728395061728394
+      },
+      {
+        "_index": 150,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.35802469135802456
+      },
+      {
+        "_index": 151,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5802469135802468
+      },
+      {
+        "_index": 152,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.1975308641975308
+      },
+      {
+        "_index": 153,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.41975308641975295
+      },
+      {
+        "_index": 154,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.45679012345679004
+      },
+      {
+        "_index": 155,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5185185185185185
+      },
+      {
+        "_index": 156,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 157,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5555555555555554
+      },
+      {
+        "_index": 158,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.35802469135802456
+      },
+      {
+        "_index": 159,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 160,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5925925925925924
+      },
+      {
+        "_index": 161,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.29629629629629617
+      },
+      {
+        "_index": 162,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.6790123456790121
+      },
+      {
+        "_index": 163,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.7901234567901233
+      },
+      {
+        "_index": 164,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5061728395061729
+      },
+      {
+        "_index": 165,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.40740740740740733
+      },
+      {
+        "_index": 166,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.6419753086419753
+      },
+      {
+        "_index": 167,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.2716049382716049
+      },
+      {
+        "_index": 168,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5432098765432097
+      },
+      {
+        "_index": 169,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 170,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.7407407407407405
+      },
+      {
+        "_index": 171,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5432098765432097
+      },
+      {
+        "_index": 172,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5185185185185185
+      },
+      {
+        "_index": 173,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.5061728395061729
+      },
+      {
+        "_index": 174,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 175,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.48148148148148134
+      },
+      {
+        "_index": 176,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.14814814814814814
+      },
+      {
+        "_index": 177,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.6419753086419753
+      },
+      {
+        "_index": 178,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.3086419753086419
+      },
+      {
+        "_index": 179,
+        "Burnout_Risk": "High",
+        "dimension": "Hours_Coded",
+        "normalized_value": 0.48148148148148134
+      },
+      {
+        "_index": 0,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 1,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 2,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 3,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 4,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 5,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 6,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 7,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 8,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 9,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 10,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 11,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 12,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 13,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 14,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 15,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 16,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 17,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 18,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 19,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 20,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 21,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 22,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 23,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 24,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 25,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 26,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 27,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 28,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 29,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 30,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 31,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 32,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 33,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 34,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 35,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 36,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 37,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 38,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 39,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 40,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 41,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 42,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 43,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 44,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 45,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 46,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 47,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 48,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 49,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 50,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 51,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 52,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 53,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 54,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 55,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 56,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 57,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 58,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 59,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 60,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 61,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 62,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 63,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 64,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 65,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 66,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 67,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 68,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 69,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 70,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 71,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 72,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 73,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 74,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 75,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 76,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 77,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 78,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 79,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 80,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 81,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 82,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 83,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 84,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 85,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 86,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 87,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 88,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 89,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 90,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 91,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 92,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 93,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 94,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 95,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 96,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 97,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 98,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 99,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 100,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 101,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 102,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 103,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 104,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 105,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 106,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 107,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 108,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 109,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 110,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 111,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 112,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 113,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 114,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 115,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 116,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 117,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 118,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 119,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 120,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 121,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 122,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 123,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 124,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 125,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 126,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 127,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 128,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 129,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 130,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 131,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 132,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 133,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 134,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 135,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 136,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 137,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 138,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 139,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 140,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 141,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 142,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 143,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 144,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 145,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 146,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 147,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 148,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 149,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 150,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 151,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 152,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 153,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 154,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 155,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 156,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 157,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 158,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 159,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 160,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 161,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 162,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 163,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 164,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 165,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 166,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 167,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 168,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.5555555555555556
+      },
+      {
+        "_index": 169,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.7777777777777778
+      },
+      {
+        "_index": 170,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 171,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 172,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 173,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.1111111111111111
+      },
+      {
+        "_index": 174,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.8888888888888888
+      },
+      {
+        "_index": 175,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 176,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.2222222222222222
+      },
+      {
+        "_index": 177,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.4444444444444444
+      },
+      {
+        "_index": 178,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 179,
+        "Burnout_Risk": "High",
+        "dimension": "Code_Complexity_Score",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 0,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 1,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 2,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 3,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 4,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 5,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 6,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 7,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 8,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 9,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 10,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 11,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 12,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 13,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 14,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 15,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 16,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 17,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 18,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 19,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 20,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 21,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 22,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 23,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 24,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 25,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 26,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 27,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 28,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 29,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 30,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 31,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 32,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 33,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 34,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 35,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 36,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 37,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 38,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 39,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 40,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 41,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 42,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 43,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 44,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 45,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 46,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 47,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 48,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 49,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 50,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 51,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 52,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 53,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 54,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 55,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 56,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 57,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 58,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 59,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 60,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 61,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 62,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 63,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 64,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 65,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 66,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 67,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 68,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 69,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 70,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 71,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 72,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 73,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 74,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 75,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 76,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 77,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 78,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 79,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 80,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 81,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 82,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 83,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 84,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 85,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 86,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 87,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 88,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 89,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 90,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 91,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 92,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 93,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 94,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 95,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 96,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 97,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 98,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 99,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 100,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 101,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 102,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 103,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 104,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 105,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 106,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 107,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 108,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 109,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 110,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 111,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 112,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 113,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 114,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 115,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 116,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 117,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 118,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 119,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 120,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 121,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 122,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 123,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 124,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 125,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 126,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 127,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 128,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 129,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 130,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 131,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 132,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 133,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 134,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 135,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 136,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 137,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 138,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 139,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 140,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 141,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 142,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 143,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 144,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 145,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 146,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 147,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 148,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 149,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 150,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 151,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 152,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 153,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 154,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 155,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 156,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 157,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 158,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 159,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 160,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 161,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 162,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 163,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 164,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 165,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 166,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 167,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 168,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 169,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 170,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 171,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 172,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 173,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.6
+      },
+      {
+        "_index": 174,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 175,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.2
+      },
+      {
+        "_index": 176,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 177,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.8
+      },
+      {
+        "_index": 178,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 179,
+        "Burnout_Risk": "High",
+        "dimension": "Bugs_Introduced",
+        "normalized_value": 0.4
+      },
+      {
+        "_index": 0,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 1,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 2,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 3,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 4,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 5,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 6,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 7,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 8,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 9,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 10,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 11,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 12,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 13,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 14,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 15,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 16,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 17,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 18,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 19,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 20,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 21,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 22,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 23,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 24,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 25,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 26,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 27,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 28,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 29,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 30,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 31,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 32,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 33,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 34,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 35,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 36,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 37,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 38,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 39,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 40,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 41,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 42,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 43,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 44,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 45,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 46,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 47,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 48,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 49,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 50,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 51,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 52,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 53,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 54,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 55,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 56,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 57,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 58,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 59,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.8333333333333334
+      },
+      {
+        "_index": 60,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 61,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 62,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 63,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 64,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 65,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 66,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 67,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 68,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 69,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 70,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 71,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 72,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 73,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 74,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 75,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 76,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 77,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 78,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 79,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 80,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 81,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 82,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 83,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 84,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 85,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 86,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 87,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 88,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 89,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 90,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 91,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 92,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 93,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 94,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 95,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 96,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 97,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 98,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 99,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 100,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 101,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 102,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 103,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 104,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.8333333333333334
+      },
+      {
+        "_index": 105,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 106,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.6666666666666666
+      },
+      {
+        "_index": 107,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 108,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 109,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 110,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 111,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 112,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.8333333333333334
+      },
+      {
+        "_index": 113,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 114,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 115,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 116,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 117,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 118,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 119,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 120,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 121,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 122,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 123,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 124,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 125,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 126,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 127,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 128,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 129,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 130,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 131,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 132,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 133,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 134,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 135,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 136,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 137,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 138,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 139,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 140,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 141,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 142,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 143,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 144,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 145,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 146,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 147,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 148,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 149,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 150,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 151,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 152,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 153,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 154,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 155,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 156,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 157,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 158,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 159,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 160,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 161,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 162,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 163,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 164,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 165,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 166,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 167,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 168,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.8333333333333334
+      },
+      {
+        "_index": 169,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 170,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 171,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 172,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 173,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 174,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      },
+      {
+        "_index": 175,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 176,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 177,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.5
+      },
+      {
+        "_index": 178,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.16666666666666666
+      },
+      {
+        "_index": 179,
+        "Burnout_Risk": "High",
+        "dimension": "Stress_Level_1_10",
+        "normalized_value": 0.3333333333333333
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "AI_Tool_Usage_%",
+        "Hours_Coded",
+        "Code_Complexity_Score",
+        "Bugs_Introduced",
+        "Stress_Level_1_10"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "AI_Tool_Usage_%"
+          },
+          {
+            "dimension": "Hours_Coded"
+          },
+          {
+            "dimension": "Code_Complexity_Score"
+          },
+          {
+            "dimension": "Bugs_Introduced"
+          },
+          {
+            "dimension": "Stress_Level_1_10"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Burnout_Risk",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Burnout_Risk",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 19.4
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 46.9
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 13.3
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.5
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 19.4
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 46.9
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 13.3
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.5
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 19.4
+          },
+          {
+            "dimension": "AI_Tool_Usage_%",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 46.9
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 5.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 8.2
+          },
+          {
+            "dimension": "Hours_Coded",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 13.3
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Code_Complexity_Score",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 0.0
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 2.5
+          },
+          {
+            "dimension": "Bugs_Introduced",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 5.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 4.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6.0
+          },
+          {
+            "dimension": "Stress_Level_1_10",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 10.0
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  }
+}

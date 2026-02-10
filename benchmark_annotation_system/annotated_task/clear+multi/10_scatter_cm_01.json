@@ -1,0 +1,74 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "10_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/10_scatter_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Is there a negative correlation between sleep time and screen usage time when considering quality?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "NO"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "filter that only have good one"
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_correlation",
+            "reasoning": "get the answer:spearman correlation: 0.024 (weak positive)"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "average",
+                    "poor"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "spearman"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sleep_hours",
+            "y": "screen_time",
+            "color": "diet_quality"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"average\", \"poor\"], datum['diet_quality']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

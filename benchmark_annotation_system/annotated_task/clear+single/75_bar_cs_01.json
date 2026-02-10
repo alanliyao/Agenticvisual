@@ -1,0 +1,114 @@
+{
+  "task_type": "clear_single",
+  "task_id": "75_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/75_Refined_Employment_Telecom_Services_2024_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom in on the South American countries’ bars to read their exact mean employment values and identify the South American country with the highest mean employment.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Brazil",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categories",
+            "reasoning": "Zooming in is necessary because the initial view compresses the narrow yellow bars for South American countries, making exact values unreadable."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Australia",
+                    "Austria",
+                    "Bangladesh",
+                    "Belarus",
+                    "Bhutan",
+                    "Belgium",
+                    "Botswana",
+                    "Bulgaria",
+                    "Costa Rica",
+                    "Croatia",
+                    "Cyprus",
+                    "Czechia",
+                    "Denmark",
+                    "Dominican Republic",
+                    "Estonia",
+                    "Fiji",
+                    "Finland",
+                    "France",
+                    "Germany",
+                    "Greece",
+                    "Honduras",
+                    "Hungary",
+                    "Iceland",
+                    "India",
+                    "Ireland",
+                    "Israel",
+                    "Italy",
+                    "Kosovo",
+                    "Latvia",
+                    "Lesotho",
+                    "Lithuania",
+                    "Luxembourg",
+                    "Malta",
+                    "Mexico",
+                    "Netherlands",
+                    "Nigeria",
+                    "North Macedonia",
+                    "Norway",
+                    "Panama",
+                    "Poland",
+                    "Portugal",
+                    "Romania",
+                    "Rwanda",
+                    "Senegal",
+                    "Seychelles",
+                    "Singapore",
+                    "Slovak Republic",
+                    "Slovenia",
+                    "Spain",
+                    "Sweden",
+                    "Switzerland",
+                    "Thailand",
+                    "Turkiye",
+                    "United Kingdom",
+                    "United States",
+                    "West Bank and Gaza"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Country",
+            "y": "Employment_Thousands",
+            "color": "Continent"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Australia\",\"Austria\",\"Bangladesh\",\"Belarus\",\"Bhutan\",\"Belgium\",\"Botswana\",\"Bulgaria\",\"Costa Rica\",\"Croatia\",\"Cyprus\",\"Czechia\",\"Denmark\",\"Dominican Republic\",\"Estonia\",\"Fiji\",\"Finland\",\"France\",\"Germany\",\"Greece\",\"Honduras\",\"Hungary\",\"Iceland\",\"India\",\"Ireland\",\"Israel\",\"Italy\",\"Kosovo\",\"Latvia\",\"Lesotho\",\"Lithuania\",\"Luxembourg\",\"Malta\",\"Mexico\",\"Netherlands\",\"Nigeria\",\"North Macedonia\",\"Norway\",\"Panama\",\"Poland\",\"Portugal\",\"Romania\",\"Rwanda\",\"Senegal\",\"Seychelles\",\"Singapore\",\"Slovak Republic\",\"Slovenia\",\"Spain\",\"Sweden\",\"Switzerland\",\"Thailand\",\"Turkiye\",\"United Kingdom\",\"United States\",\"West Bank and Gaza\"], datum['Country']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

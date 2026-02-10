@@ -1,0 +1,51 @@
+{
+  "task_type": "vague_single",
+  "task_id": "33_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/33_bmw_bar.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "After sorting all model series by total fuel efficiency, describe the overall structure of the ranking. Does it suggest a balanced competition or a steep dominance hierarchy?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The ranking suggests a very steep dominance hierarchy. The list is extremely long. This structure implies that a very small number of top series account for the majority of total efficiency, while a vast long tail of series contributes minimally, indicating highly concentrated performance rather than balanced competition."
+        },
+        "key_insights": [
+          "The sheer length of this list visually emphasizes the existence of a massive long tail of models with low total fuel efficiency."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "The sort_bars operation transformed the view from a standard bar chart into a ranked list due to high data density. This transformed view directly answers the question about ranking structure. The extreme length of the list is clear evidence of a steep hierarchy with a dominant long tail. No further tools are needed for this high-level exploration."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "categorical",
+                "param": "order",
+                "target": "descending"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "model",
+            "y": "mpg",
+            "color": "fuelType"
+          }
+        }
+      }
+    }
+  ]
+}

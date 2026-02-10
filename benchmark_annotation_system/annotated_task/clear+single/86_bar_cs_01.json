@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "86_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/85_supply_chain_data_bar.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which gender has the highest average total consumption?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Male",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "remove_bars",
+            "reasoning": "remove the unknow gender"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "remove_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "values": [
+                    "Unknown"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Customer demographics",
+            "y": "Price",
+            "color": "Product type"
+          },
+          "data_filtered": [
+            {
+              "__avs_tool": "bar_visibility",
+              "filter": "indexof([\"Female\",\"Male\",\"Non-binary\"], datum['Customer demographics']) >= 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

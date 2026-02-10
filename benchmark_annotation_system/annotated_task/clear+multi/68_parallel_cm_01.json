@@ -1,0 +1,104 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "68_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/68_supply_chain_data_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Is there exist a significant correlation between number of products sold and shipping costs",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "yes"
+        },
+        "key_insights": [
+          "The orange (haircare) and red (skincare) lines generally slope downward from left to right.",
+          "The spread of lines indicates that Cosmetics has the widest range of shipping costs, stretching from the lowest end up to the absolute maximum.",
+          "From the trend of the lines in the graph, a very obvious negative relationship can be observed (Inverse Relationship)"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "hide_dimensions",
+            "reasoning": "We focus on two dimensions:number of products sold and shipping costs"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "we only care about skincare type"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "hide_dimensions",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "hide",
+                  "dimensions": [
+                    "Revenue generated",
+                    "Price"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product type",
+                  "values": [
+                    "haircare",
+                    "cosmetics"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "Number of products sold",
+              "Shipping costs"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"haircare\",\"cosmetics\"], datum['Product type']) < 0"
+            },
+            {
+              "filter": "indexof([\"Number of products sold\", \"Shipping costs\"], datum['dimension']) >= 0",
+              "_pc_hide_dimensions": true
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

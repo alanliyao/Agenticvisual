@@ -1,0 +1,96 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "05_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/05_sankey_ecommercial.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "How is the user relevance of Google Ads?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was found that the majority of users who clicked on Google Ads eventually made a purchase. Therefore, it can be concluded that the ad keywords accurately matched a strong purchase intention and the users had a clear goal. so high user relevance"
+        },
+        "key_insights": [
+          "find that the majority of the traffic was directed to the purchase section in the end.",
+          "It was found that the secondary majority of the traffic also eventually led to the purchase process."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_path",
+            "reasoning": "Mark the main traffic of Google Ads"
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_path",
+            "reasoning": "get the data of the secondary traffic in google ads"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_path",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "path": [
+                    "Google Ads",
+                    "Landing Page",
+                    "Product Detail",
+                    "Add to Cart",
+                    "Purchase"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "highlight_path",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "path": [
+                    "Google Ads",
+                    "Product List",
+                    "Product Detail",
+                    "Add to Cart",
+                    "Purchase"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Google Ads",
+            "Facebook",
+            "Organic",
+            "Email",
+            "Landing Page",
+            "Product List",
+            "Search",
+            "Product Detail",
+            "Exit",
+            "Add to Cart",
+            "Bounce",
+            "Purchase"
+          ],
+          "collapsed_nodes": []
+        }
+      }
+    }
+  ]
+}

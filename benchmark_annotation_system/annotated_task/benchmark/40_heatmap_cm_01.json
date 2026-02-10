@@ -1,0 +1,87 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "40_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/40_insurance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "First use the get data summary tool with scope=all to retrieve the maximum value of the charges field in the full dataset. Then use the filter_cells tool to set min_value=15000 and max_value equal to the retrieved maximum charge. Next, use the get data summary tool with scope=visible to get the mean charge of the filtered cells. Finally, calculate the percentage of this filtered mean relative to the overall mean charge. What is this percentage?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The percentage of the mean charge of the high-range cells relative to the overall mean charge is 259.2%.This means the mean charge for cells in the high-cost range is approximately 2.59 times the average charge across all cells in the dataset.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "The maximum charge value in the full dataset is 63770.42801, and the overall mean charge is 13270.422265141257",
+          "Smoking is the dominant driver of higher medical chargesThe entire row for smokers shows significantly darker colors than non-smokers, indicating that smokers have substantially higher average medical charges across all categories of children.",
+          "The mean charge of the filtered high-cost cells is 34,400 dollars, this aligns with the extreme charge values in the full dataset",
+          "(34400 / 13270.422265141257) × 100% = 259.2%, the high-cost subgroup’s mean charge is 2.59 times the overall average."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data_summary",
+            "reasoning": "Retrieving the maximum charge via get data summary first is critical, it ensures the max_value for filter_cells is data-driven  fully compliant with tool logic."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_cells",
+            "reasoning": "Filtering operation is needed to remove areas of no interest so that the percentage of areas of interest within the total area can be determined."
+          },
+          {
+            "iteration": 3,
+            "tool": "get_data_summary",
+            "reasoning": "Use get visible data summary tool to get the high-cost samples’ mean charge."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "categorical",
+                "param": "scope",
+                "target": "all"
+              }
+            },
+            {
+              "tool": "filter_cells",
+              "param_eval": {
+                "type": "numeric",
+                "param": "min_value",
+                "target": 15000,
+                "tolerance": 0.1
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "categorical",
+                "param": "scope",
+                "target": "visible"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "children",
+            "y": "smoker",
+            "color": "charges"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['charges'] >= 15000 && datum['charges'] <= 63770.42801"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

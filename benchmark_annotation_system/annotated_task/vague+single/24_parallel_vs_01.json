@@ -1,0 +1,66 @@
+{
+  "task_type": "vague_single",
+  "task_id": "24_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/24_vitamin_deficiency_disease_dataset_20260123_parallel (3).json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "In the heavy group, which type of vitamin intake (A / C / D) shows the least consistency with the trend of changes in symptoms_count?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "the graph show that when the symptoms_count is a little, the vc and bmi too. Howerver, va and vd on the contrary."
+        },
+        "key_insights": [
+          "The general trend was found to be an \"M\" shape."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "get the answer"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "alcohol_consumption",
+                  "values": [
+                    "Heavy"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

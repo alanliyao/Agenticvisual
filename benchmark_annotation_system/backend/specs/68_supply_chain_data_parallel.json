@@ -1,0 +1,2868 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Parallel: supply_chain_data",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "_index": 0,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.6987491985511854
+      },
+      {
+        "_index": 1,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.13484523305855786
+      },
+      {
+        "_index": 2,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.09869266220464011
+      },
+      {
+        "_index": 3,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.6100599345480692
+      },
+      {
+        "_index": 4,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.031860848740198316
+      },
+      {
+        "_index": 5,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 6,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.024400572939601243
+      },
+      {
+        "_index": 7,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.4232875327731347
+      },
+      {
+        "_index": 8,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.687562231670914
+      },
+      {
+        "_index": 9,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.6393238141191452
+      },
+      {
+        "_index": 10,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.14371217071310177
+      },
+      {
+        "_index": 11,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.9124268985042548
+      },
+      {
+        "_index": 12,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.7131676250467602
+      },
+      {
+        "_index": 13,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.14835556206122674
+      },
+      {
+        "_index": 14,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 15,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.36204759618568483
+      },
+      {
+        "_index": 16,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.05998886789265827
+      },
+      {
+        "_index": 17,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.8183179591488602
+      },
+      {
+        "_index": 18,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.35644987805134776
+      },
+      {
+        "_index": 19,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.507060718284778
+      },
+      {
+        "_index": 20,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.9709631997253938
+      },
+      {
+        "_index": 21,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.853521478165608
+      },
+      {
+        "_index": 22,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.26653785110228384
+      },
+      {
+        "_index": 23,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.026924476795776225
+      },
+      {
+        "_index": 24,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.025200556669214093
+      },
+      {
+        "_index": 25,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.38913349358396426
+      },
+      {
+        "_index": 26,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.9823088325513462
+      },
+      {
+        "_index": 27,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.9321444952992045
+      },
+      {
+        "_index": 28,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.007153883402189349
+      },
+      {
+        "_index": 29,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.6334946782677269
+      },
+      {
+        "_index": 30,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.06486914387042586
+      },
+      {
+        "_index": 31,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.50422422295768
+      },
+      {
+        "_index": 32,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.7952075960224525
+      },
+      {
+        "_index": 33,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.6473231086593444
+      },
+      {
+        "_index": 34,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.36695516531583816
+      },
+      {
+        "_index": 35,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.8541772383420947
+      },
+      {
+        "_index": 36,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.08323498491009307
+      },
+      {
+        "_index": 37,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.22262816873269206
+      },
+      {
+        "_index": 38,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.5168283122403914
+      },
+      {
+        "_index": 39,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.17879613632786126
+      },
+      {
+        "_index": 40,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.8088678984541785
+      },
+      {
+        "_index": 41,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.9994045735311536
+      },
+      {
+        "_index": 42,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.4599217143649648
+      },
+      {
+        "_index": 43,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.10303843634044582
+      },
+      {
+        "_index": 44,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.5094400925203905
+      },
+      {
+        "_index": 45,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.3291650434227176
+      },
+      {
+        "_index": 46,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.2604070888780888
+      },
+      {
+        "_index": 47,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.9645106724741452
+      },
+      {
+        "_index": 48,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.7626401646358618
+      },
+      {
+        "_index": 49,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.7920064215069218
+      },
+      {
+        "_index": 50,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.12827880104498646
+      },
+      {
+        "_index": 51,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.25649367004111373
+      },
+      {
+        "_index": 52,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.9883093960279188
+      },
+      {
+        "_index": 53,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.2938452573610144
+      },
+      {
+        "_index": 54,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.30210175968046843
+      },
+      {
+        "_index": 55,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.8018261799218293
+      },
+      {
+        "_index": 56,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.1978674708396176
+      },
+      {
+        "_index": 57,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.48797136857200946
+      },
+      {
+        "_index": 58,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.5964992153874664
+      },
+      {
+        "_index": 59,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.6374018689678476
+      },
+      {
+        "_index": 60,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.15725699391217182
+      },
+      {
+        "_index": 61,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.5163442645880058
+      },
+      {
+        "_index": 62,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.7294079339949834
+      },
+      {
+        "_index": 63,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.11611002070517319
+      },
+      {
+        "_index": 64,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.9021534761377019
+      },
+      {
+        "_index": 65,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.32827841546388453
+      },
+      {
+        "_index": 66,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.24966200944989198
+      },
+      {
+        "_index": 67,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.8828794719965399
+      },
+      {
+        "_index": 68,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.37171779598061405
+      },
+      {
+        "_index": 69,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.5454479810891586
+      },
+      {
+        "_index": 70,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.4741348567112638
+      },
+      {
+        "_index": 71,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.04803008291990078
+      },
+      {
+        "_index": 72,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.908004753431333
+      },
+      {
+        "_index": 73,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.8428224237710213
+      },
+      {
+        "_index": 74,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.01508171744942852
+      },
+      {
+        "_index": 75,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.9366537527346758
+      },
+      {
+        "_index": 76,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.6915757473180091
+      },
+      {
+        "_index": 77,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.5719605344939555
+      },
+      {
+        "_index": 78,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.047264217005190075
+      },
+      {
+        "_index": 79,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.5679315380012104
+      },
+      {
+        "_index": 80,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.917483341806658
+      },
+      {
+        "_index": 81,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.7296423923677817
+      },
+      {
+        "_index": 82,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.15732781286659622
+      },
+      {
+        "_index": 83,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.689548963750282
+      },
+      {
+        "_index": 84,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.8967187683823639
+      },
+      {
+        "_index": 85,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.7721552679285454
+      },
+      {
+        "_index": 86,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.1877290140517701
+      },
+      {
+        "_index": 87,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.8075609757824987
+      },
+      {
+        "_index": 88,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.7547902945913544
+      },
+      {
+        "_index": 89,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.9855214581650623
+      },
+      {
+        "_index": 90,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.12497967002049097
+      },
+      {
+        "_index": 91,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.6197922550912756
+      },
+      {
+        "_index": 92,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.4720798041974275
+      },
+      {
+        "_index": 93,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.6934432853235187
+      },
+      {
+        "_index": 94,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.01372416278981328
+      },
+      {
+        "_index": 95,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.7818086971558614
+      },
+      {
+        "_index": 96,
+        "Product type": "cosmetics",
+        "dimension": "Price",
+        "normalized_value": 0.23312650121914522
+      },
+      {
+        "_index": 97,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.018735096991088947
+      },
+      {
+        "_index": 98,
+        "Product type": "skincare",
+        "dimension": "Price",
+        "normalized_value": 0.18523010471106036
+      },
+      {
+        "_index": 99,
+        "Product type": "haircare",
+        "dimension": "Price",
+        "normalized_value": 0.6855127674553128
+      },
+      {
+        "_index": 0,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.8036437246963563
+      },
+      {
+        "_index": 1,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.7368421052631579
+      },
+      {
+        "_index": 2,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 3,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.07591093117408906
+      },
+      {
+        "_index": 4,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.8734817813765182
+      },
+      {
+        "_index": 5,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.14068825910931174
+      },
+      {
+        "_index": 6,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.057692307692307696
+      },
+      {
+        "_index": 7,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.4230769230769231
+      },
+      {
+        "_index": 8,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.1437246963562753
+      },
+      {
+        "_index": 9,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9838056680161943
+      },
+      {
+        "_index": 10,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 11,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9635627530364372
+      },
+      {
+        "_index": 12,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3319838056680162
+      },
+      {
+        "_index": 13,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.24392712550607287
+      },
+      {
+        "_index": 14,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.5607287449392713
+      },
+      {
+        "_index": 15,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.4665991902834008
+      },
+      {
+        "_index": 16,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.27530364372469635
+      },
+      {
+        "_index": 17,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.1194331983805668
+      },
+      {
+        "_index": 18,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6194331983805668
+      },
+      {
+        "_index": 19,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.1811740890688259
+      },
+      {
+        "_index": 20,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3157894736842105
+      },
+      {
+        "_index": 21,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6002024291497976
+      },
+      {
+        "_index": 22,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.8866396761133604
+      },
+      {
+        "_index": 23,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3876518218623482
+      },
+      {
+        "_index": 24,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.2034412955465587
+      },
+      {
+        "_index": 25,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.13562753036437247
+      },
+      {
+        "_index": 26,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3491902834008097
+      },
+      {
+        "_index": 27,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3481781376518219
+      },
+      {
+        "_index": 28,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.39068825910931176
+      },
+      {
+        "_index": 29,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.2479757085020243
+      },
+      {
+        "_index": 30,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3228744939271255
+      },
+      {
+        "_index": 31,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.16194331983805668
+      },
+      {
+        "_index": 32,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.7823886639676113
+      },
+      {
+        "_index": 33,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6153846153846154
+      },
+      {
+        "_index": 34,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6012145748987854
+      },
+      {
+        "_index": 35,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.44635627530364375
+      },
+      {
+        "_index": 36,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9665991902834008
+      },
+      {
+        "_index": 37,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9665991902834008
+      },
+      {
+        "_index": 38,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.7054655870445344
+      },
+      {
+        "_index": 39,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.1700404858299595
+      },
+      {
+        "_index": 40,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9362348178137652
+      },
+      {
+        "_index": 41,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.5546558704453441
+      },
+      {
+        "_index": 42,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.14878542510121456
+      },
+      {
+        "_index": 43,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.597165991902834
+      },
+      {
+        "_index": 44,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9220647773279352
+      },
+      {
+        "_index": 45,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.016194331983805668
+      },
+      {
+        "_index": 46,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.861336032388664
+      },
+      {
+        "_index": 47,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9129554655870445
+      },
+      {
+        "_index": 48,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.02125506072874494
+      },
+      {
+        "_index": 49,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.09210526315789473
+      },
+      {
+        "_index": 50,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6325910931174089
+      },
+      {
+        "_index": 51,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.14777327935222673
+      },
+      {
+        "_index": 52,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.8218623481781376
+      },
+      {
+        "_index": 53,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.23684210526315788
+      },
+      {
+        "_index": 54,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6214574898785425
+      },
+      {
+        "_index": 55,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.701417004048583
+      },
+      {
+        "_index": 56,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.0860323886639676
+      },
+      {
+        "_index": 57,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.2216599190283401
+      },
+      {
+        "_index": 58,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.8987854251012146
+      },
+      {
+        "_index": 59,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.4817813765182186
+      },
+      {
+        "_index": 60,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3765182186234818
+      },
+      {
+        "_index": 61,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.11032388663967611
+      },
+      {
+        "_index": 62,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.2651821862348178
+      },
+      {
+        "_index": 63,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.2408906882591093
+      },
+      {
+        "_index": 64,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.12753036437246965
+      },
+      {
+        "_index": 65,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.45445344129554655
+      },
+      {
+        "_index": 66,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.7044534412955465
+      },
+      {
+        "_index": 67,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.5111336032388664
+      },
+      {
+        "_index": 68,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.15688259109311742
+      },
+      {
+        "_index": 69,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.5091093117408907
+      },
+      {
+        "_index": 70,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.024291497975708502
+      },
+      {
+        "_index": 71,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6366396761133604
+      },
+      {
+        "_index": 72,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.4757085020242915
+      },
+      {
+        "_index": 73,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3714574898785425
+      },
+      {
+        "_index": 74,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9068825910931174
+      },
+      {
+        "_index": 75,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.09919028340080972
+      },
+      {
+        "_index": 76,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.23582995951417005
+      },
+      {
+        "_index": 77,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.35526315789473684
+      },
+      {
+        "_index": 78,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9493927125506073
+      },
+      {
+        "_index": 79,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.19230769230769232
+      },
+      {
+        "_index": 80,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.8744939271255061
+      },
+      {
+        "_index": 81,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.7753036437246964
+      },
+      {
+        "_index": 82,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3319838056680162
+      },
+      {
+        "_index": 83,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6629554655870445
+      },
+      {
+        "_index": 84,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6174089068825911
+      },
+      {
+        "_index": 85,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.01720647773279352
+      },
+      {
+        "_index": 86,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.21761133603238866
+      },
+      {
+        "_index": 87,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.07186234817813765
+      },
+      {
+        "_index": 88,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.7378542510121457
+      },
+      {
+        "_index": 89,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.12753036437246965
+      },
+      {
+        "_index": 90,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.3157894736842105
+      },
+      {
+        "_index": 91,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9190283400809717
+      },
+      {
+        "_index": 92,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.27125506072874495
+      },
+      {
+        "_index": 93,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.10728744939271255
+      },
+      {
+        "_index": 94,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9908906882591093
+      },
+      {
+        "_index": 95,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6720647773279352
+      },
+      {
+        "_index": 96,
+        "Product type": "cosmetics",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.31983805668016196
+      },
+      {
+        "_index": 97,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.05465587044534413
+      },
+      {
+        "_index": 98,
+        "Product type": "skincare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.9159919028340081
+      },
+      {
+        "_index": 99,
+        "Product type": "haircare",
+        "dimension": "Number of products sold",
+        "normalized_value": 0.6265182186234818
+      },
+      {
+        "_index": 0,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8632039063843299
+      },
+      {
+        "_index": 1,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7267907766822498
+      },
+      {
+        "_index": 2,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9672094433618832
+      },
+      {
+        "_index": 3,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7615371342849503
+      },
+      {
+        "_index": 4,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.18454456284768547
+      },
+      {
+        "_index": 5,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.2006542800813847
+      },
+      {
+        "_index": 6,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.767969970002011
+      },
+      {
+        "_index": 7,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8443628089151916
+      },
+      {
+        "_index": 8,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.733203511122987
+      },
+      {
+        "_index": 9,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.4440199237361514
+      },
+      {
+        "_index": 10,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.1441646048425604
+      },
+      {
+        "_index": 11,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5722218262034315
+      },
+      {
+        "_index": 12,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.20580970190540482
+      },
+      {
+        "_index": 13,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.33971287806787864
+      },
+      {
+        "_index": 14,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.86224694870127
+      },
+      {
+        "_index": 15,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.49750646373969004
+      },
+      {
+        "_index": 16,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.6124103559085403
+      },
+      {
+        "_index": 17,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.17805850838881795
+      },
+      {
+        "_index": 18,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9430095768149277
+      },
+      {
+        "_index": 19,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.16943815979960802
+      },
+      {
+        "_index": 20,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8025590025620206
+      },
+      {
+        "_index": 21,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.684331507162894
+      },
+      {
+        "_index": 22,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.1509610960145506
+      },
+      {
+        "_index": 23,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8855064835977121
+      },
+      {
+        "_index": 24,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9071661775523056
+      },
+      {
+        "_index": 25,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.1264256539107699
+      },
+      {
+        "_index": 26,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.30152424255526
+      },
+      {
+        "_index": 27,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.18453911948315938
+      },
+      {
+        "_index": 28,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5741957957262313
+      },
+      {
+        "_index": 29,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8242374597999277
+      },
+      {
+        "_index": 30,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.1936119794522362
+      },
+      {
+        "_index": 31,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9759984066933579
+      },
+      {
+        "_index": 32,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9665053835881362
+      },
+      {
+        "_index": 33,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.4643328677479556
+      },
+      {
+        "_index": 34,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9086009594015684
+      },
+      {
+        "_index": 35,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.6223516277185669
+      },
+      {
+        "_index": 36,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.739568101857104
+      },
+      {
+        "_index": 37,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.15635949354092812
+      },
+      {
+        "_index": 38,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9802214145177609
+      },
+      {
+        "_index": 39,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.0966339501835666
+      },
+      {
+        "_index": 40,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5296333782843631
+      },
+      {
+        "_index": 41,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5064922501136812
+      },
+      {
+        "_index": 42,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.08835938984400347
+      },
+      {
+        "_index": 43,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5310492176231767
+      },
+      {
+        "_index": 44,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.6917403075156882
+      },
+      {
+        "_index": 45,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.47772985897037423
+      },
+      {
+        "_index": 46,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.16980974781999572
+      },
+      {
+        "_index": 47,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.6846065322251847
+      },
+      {
+        "_index": 48,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7195414671451145
+      },
+      {
+        "_index": 49,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7882016274405789
+      },
+      {
+        "_index": 50,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5507497066641639
+      },
+      {
+        "_index": 51,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 52,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9510834370831446
+      },
+      {
+        "_index": 53,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8144055608662198
+      },
+      {
+        "_index": 54,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5708677270659162
+      },
+      {
+        "_index": 55,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.21170801276372633
+      },
+      {
+        "_index": 56,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.42083661291324725
+      },
+      {
+        "_index": 57,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.061812361009679975
+      },
+      {
+        "_index": 58,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.10897762271292459
+      },
+      {
+        "_index": 59,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 60,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.886155759913039
+      },
+      {
+        "_index": 61,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.661450547738021
+      },
+      {
+        "_index": 62,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.3223370413680865
+      },
+      {
+        "_index": 63,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.3629058678064491
+      },
+      {
+        "_index": 64,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8401182223824897
+      },
+      {
+        "_index": 65,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.828289374856297
+      },
+      {
+        "_index": 66,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8297819540726339
+      },
+      {
+        "_index": 67,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9554032650003292
+      },
+      {
+        "_index": 68,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.28263976968013005
+      },
+      {
+        "_index": 69,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.07845253524256435
+      },
+      {
+        "_index": 70,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.6761354863022175
+      },
+      {
+        "_index": 71,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8084999790447027
+      },
+      {
+        "_index": 72,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.17848163288996044
+      },
+      {
+        "_index": 73,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7778974971077711
+      },
+      {
+        "_index": 74,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5279281749346769
+      },
+      {
+        "_index": 75,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.09397722332684752
+      },
+      {
+        "_index": 76,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.4845918949868433
+      },
+      {
+        "_index": 77,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.16151804398572803
+      },
+      {
+        "_index": 78,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.026217366029128917
+      },
+      {
+        "_index": 79,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7753802872258382
+      },
+      {
+        "_index": 80,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.862031357958835
+      },
+      {
+        "_index": 81,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.3773824691757975
+      },
+      {
+        "_index": 82,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.21371902981336074
+      },
+      {
+        "_index": 83,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.15334009995511116
+      },
+      {
+        "_index": 84,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.11206004875758657
+      },
+      {
+        "_index": 85,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8657725219467036
+      },
+      {
+        "_index": 86,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.01907727718520938
+      },
+      {
+        "_index": 87,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.4624984634203571
+      },
+      {
+        "_index": 88,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9521032644824364
+      },
+      {
+        "_index": 89,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.5523167046240648
+      },
+      {
+        "_index": 90,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9688998696147774
+      },
+      {
+        "_index": 91,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.099216746974335
+      },
+      {
+        "_index": 92,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.11794767578394147
+      },
+      {
+        "_index": 93,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.39407653946818555
+      },
+      {
+        "_index": 94,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7753386372382897
+      },
+      {
+        "_index": 95,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7183254255015061
+      },
+      {
+        "_index": 96,
+        "Product type": "cosmetics",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.7537673615042975
+      },
+      {
+        "_index": 97,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.3758495839182779
+      },
+      {
+        "_index": 98,
+        "Product type": "skincare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.8477528447459283
+      },
+      {
+        "_index": 99,
+        "Product type": "haircare",
+        "dimension": "Revenue generated",
+        "normalized_value": 0.9226244778779236
+      },
+      {
+        "_index": 0,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.2179243750791089
+      },
+      {
+        "_index": 1,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9760841645028171
+      },
+      {
+        "_index": 2,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7896738847685489
+      },
+      {
+        "_index": 3,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.08031129659993438
+      },
+      {
+        "_index": 4,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.32267328074380114
+      },
+      {
+        "_index": 5,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.38475610724629145
+      },
+      {
+        "_index": 6,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.32157589950390436
+      },
+      {
+        "_index": 7,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.149708710461729
+      },
+      {
+        "_index": 8,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.2681874018824614
+      },
+      {
+        "_index": 9,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6900999566356613
+      },
+      {
+        "_index": 10,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8590670063565863
+      },
+      {
+        "_index": 11,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.393710942117505
+      },
+      {
+        "_index": 12,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.03496813770991604
+      },
+      {
+        "_index": 13,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9559759230207197
+      },
+      {
+        "_index": 14,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.11510157882000403
+      },
+      {
+        "_index": 15,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.15797454870563193
+      },
+      {
+        "_index": 16,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.3564065185958189
+      },
+      {
+        "_index": 17,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.288451917400679
+      },
+      {
+        "_index": 18,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.37299407577761956
+      },
+      {
+        "_index": 19,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.41823815975009626
+      },
+      {
+        "_index": 20,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8820723737026556
+      },
+      {
+        "_index": 21,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.5635050950228779
+      },
+      {
+        "_index": 22,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9593815687188147
+      },
+      {
+        "_index": 23,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.2143674700042211
+      },
+      {
+        "_index": 24,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9788562600558528
+      },
+      {
+        "_index": 25,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.13655698689885384
+      },
+      {
+        "_index": 26,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6161797794232168
+      },
+      {
+        "_index": 27,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7170287121425912
+      },
+      {
+        "_index": 28,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9964474466122537
+      },
+      {
+        "_index": 29,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7948883491656467
+      },
+      {
+        "_index": 30,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8906177805160754
+      },
+      {
+        "_index": 31,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.18686774253938157
+      },
+      {
+        "_index": 32,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6264481615327081
+      },
+      {
+        "_index": 33,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.43120701854686744
+      },
+      {
+        "_index": 34,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.0006730353118541729
+      },
+      {
+        "_index": 35,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.479424110372732
+      },
+      {
+        "_index": 36,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.12274834381894127
+      },
+      {
+        "_index": 37,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.058226728505422494
+      },
+      {
+        "_index": 38,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9221782019065338
+      },
+      {
+        "_index": 39,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.5101894362829511
+      },
+      {
+        "_index": 40,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6971600195711132
+      },
+      {
+        "_index": 41,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.5338269611973081
+      },
+      {
+        "_index": 42,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7304307932850648
+      },
+      {
+        "_index": 43,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.30063207606054626
+      },
+      {
+        "_index": 44,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7361732156009123
+      },
+      {
+        "_index": 45,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.47123296174505974
+      },
+      {
+        "_index": 46,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.3429067094868683
+      },
+      {
+        "_index": 47,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8933344185839245
+      },
+      {
+        "_index": 48,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6821581086958732
+      },
+      {
+        "_index": 49,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.16734850779340135
+      },
+      {
+        "_index": 50,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.5870548238140829
+      },
+      {
+        "_index": 51,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.4227652102919841
+      },
+      {
+        "_index": 52,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8543387119768817
+      },
+      {
+        "_index": 53,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.0
+      },
+      {
+        "_index": 54,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.36916724971232245
+      },
+      {
+        "_index": 55,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.4487135999778715
+      },
+      {
+        "_index": 56,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.08534264381818008
+      },
+      {
+        "_index": 57,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9137248467055317
+      },
+      {
+        "_index": 58,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.440198168959647
+      },
+      {
+        "_index": 59,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7043521557346049
+      },
+      {
+        "_index": 60,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.37772062195838785
+      },
+      {
+        "_index": 61,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8991203942519659
+      },
+      {
+        "_index": 62,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7041254696245486
+      },
+      {
+        "_index": 63,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.16200017427171362
+      },
+      {
+        "_index": 64,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.40059834378249454
+      },
+      {
+        "_index": 65,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6243661890146515
+      },
+      {
+        "_index": 66,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.1348824242651699
+      },
+      {
+        "_index": 67,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9122952236285606
+      },
+      {
+        "_index": 68,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.02027350998597208
+      },
+      {
+        "_index": 69,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9748181748280166
+      },
+      {
+        "_index": 70,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.5946652242889745
+      },
+      {
+        "_index": 71,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.9213100060821031
+      },
+      {
+        "_index": 72,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6265052767885683
+      },
+      {
+        "_index": 73,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.056015231467533254
+      },
+      {
+        "_index": 74,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.47375638137343806
+      },
+      {
+        "_index": 75,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.16379062321567828
+      },
+      {
+        "_index": 76,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6775267389278137
+      },
+      {
+        "_index": 77,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6468423967081853
+      },
+      {
+        "_index": 78,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8359452233096912
+      },
+      {
+        "_index": 79,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6149210488482683
+      },
+      {
+        "_index": 80,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.20408600610314692
+      },
+      {
+        "_index": 81,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.34238201650888633
+      },
+      {
+        "_index": 82,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.41437401266944346
+      },
+      {
+        "_index": 83,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.4414768355966017
+      },
+      {
+        "_index": 84,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8263634616416768
+      },
+      {
+        "_index": 85,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8115090400560605
+      },
+      {
+        "_index": 86,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.049439484621897484
+      },
+      {
+        "_index": 87,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6238348548775657
+      },
+      {
+        "_index": 88,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.31265853407644906
+      },
+      {
+        "_index": 89,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 1.0
+      },
+      {
+        "_index": 90,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.747050006189134
+      },
+      {
+        "_index": 91,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7242921415730088
+      },
+      {
+        "_index": 92,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.38760494333190826
+      },
+      {
+        "_index": 93,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6721314384439325
+      },
+      {
+        "_index": 94,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.6650112309980316
+      },
+      {
+        "_index": 95,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.8542587115516106
+      },
+      {
+        "_index": 96,
+        "Product type": "cosmetics",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.4866791195521749
+      },
+      {
+        "_index": 97,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.7728919065436008
+      },
+      {
+        "_index": 98,
+        "Product type": "skincare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.044448169067539844
+      },
+      {
+        "_index": 99,
+        "Product type": "haircare",
+        "dimension": "Shipping costs",
+        "normalized_value": 0.033369917974146054
+      }
+    ]
+  },
+  "encoding": {
+    "x": {
+      "field": "dimension",
+      "type": "nominal",
+      "sort": [
+        "Price",
+        "Number of products sold",
+        "Revenue generated",
+        "Shipping costs"
+      ],
+      "axis": {
+        "title": null,
+        "labelAngle": 0
+      }
+    },
+    "tooltip": [
+      {
+        "field": "dimension",
+        "type": "nominal"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Price"
+          },
+          {
+            "dimension": "Number of products sold"
+          },
+          {
+            "dimension": "Revenue generated"
+          },
+          {
+            "dimension": "Shipping costs"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#ccc"
+      },
+      "encoding": {}
+    },
+    {
+      "mark": {
+        "type": "line",
+        "opacity": 0.5,
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "normalized_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "detail": {
+          "field": "_index",
+          "type": "nominal"
+        },
+        "color": {
+          "field": "Product type",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "dimension",
+            "type": "nominal"
+          },
+          {
+            "field": "normalized_value",
+            "type": "quantitative"
+          },
+          {
+            "field": "Product type",
+            "type": "nominal"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Price",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.6999760138659377
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 51.239830500537565
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.1713286386242
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 8.0
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 392.5
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 996.0
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1061.618523013288
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6006.352023397045
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9866.465457979695
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0134865660958965
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.320534017162109
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.92981624527726
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'max'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Price",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.6999760138659377
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 51.239830500537565
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.1713286386242
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 8.0
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 392.5
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 996.0
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1061.618523013288
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6006.352023397045
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9866.465457979695
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0134865660958965
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.320534017162109
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.92981624527726
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'mid'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "dimension": "Price",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.6999760138659377
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 51.239830500537565
+          },
+          {
+            "dimension": "Price",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 99.1713286386242
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 8.0
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 392.5
+          },
+          {
+            "dimension": "Number of products sold",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 996.0
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1061.618523013288
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 6006.352023397045
+          },
+          {
+            "dimension": "Revenue generated",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9866.465457979695
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "min",
+            "tick_value": 0.0,
+            "tick_label": 1.0134865660958965
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "mid",
+            "tick_value": 0.5,
+            "tick_label": 5.320534017162109
+          },
+          {
+            "dimension": "Shipping costs",
+            "tick_level": "max",
+            "tick_value": 1.0,
+            "tick_label": 9.92981624527726
+          }
+        ]
+      },
+      "transform": [
+        {
+          "filter": "datum.tick_level === 'min'"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "tick_value",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "tick_value",
+            "type": "quantitative"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "style": "label"
+          },
+          "encoding": {
+            "text": {
+              "field": "tick_label",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "tick",
+            "style": "tick",
+            "size": 8,
+            "color": "#ccc"
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "axisX": {
+      "domain": false,
+      "labelAngle": 0,
+      "tickColor": "#ccc",
+      "title": null
+    },
+    "view": {
+      "stroke": null
+    },
+    "style": {
+      "label": {
+        "baseline": "middle",
+        "align": "right",
+        "dx": -5
+      },
+      "tick": {
+        "orient": "horizontal"
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+    "task_type": "clear_single",
+    "task_id": "33_bar",
+    "vega_spec_path": "benchmark_annotation_system/backend/specs/33_bmw_bar.json",
+    "eval_weights": {
+      "tool_call": 0.8,
+      "final_state": 0.2
+    },
+    "questions": [
+      {
+        "qid": "cs_01",
+        "question": "Which car model has the second highest total sum of mpg?",
+        "ground_truth": {
+          "task_type": "clear_single",
+          "answer": {
+            "type": "categorical",
+            "value": "1 Series",
+            "alternatives": ["1series", "1 series"]
+          },
+          "key_insights": [
+            "The 3 Series is the absolute leader in total mpg and significantly outperforms others.",
+            "The 1 Series is the clear runner up followed closely by the 5 Series and 2 Series.",
+            "There is a sharp long tail effect where models like the M series and Z series have very low total mpg compared to the top 5."
+          ],
+          "reasoning": [
+            {
+              "iteration": 1,
+              "tool": "sort_bars",
+              "reasoning": "The default view sorts by model name which makes it difficult to compare the heights of non adjacent bars like the 1 Series and 5 Series. Sorting the bars immediately organizes the data by magnitude allowing for an instant and accurate ranking to answer the second highest question without visual estimation errors."
+            }
+          ],
+          "tool_eval": {
+            "tools": [
+              {
+                "tool": "sort_bars",
+                "param_eval": {
+                  "type": "categorical",
+                  "param": "order",
+                  "target": "descending",
+                  "alternatives": ["desc", "descending order"]
+                }
+              }
+            ]
+          },
+          "state_eval": {
+            "encoding": {
+              "x": "model",
+              "y": "mpg",
+              "color": "fuelType"
+            }
+          }
+        }
+      },
+      {
+        "qid": "cm_02",
+        "question": "Which specific fuel type segment is taller the Electric segment of the i3 or the Hybrid segment of the 3 Series?",
+        "ground_truth": {
+          "task_type": "clear_multi",
+          "answer": {
+            "type": "categorical",
+            "value": "The Electric segment of the i3 is taller",
+            "alternatives": ["i3 Electric", "Electric i3", "i3's Electric segment"]
+          },
+          "key_insights": [
+            "The view is simplified to just two bars allowing for a focused comparison between a traditional best seller and a niche electric model.",
+            "The i3 bar is dominated by the orange Electric color while the 3 Series is dominated by blue Diesel.",
+            "The Hybrid segment in the 3 Series is visible but small compared to its Diesel segment.",
+            "The bars are unstacked and placed side by side on the x axis allowing for direct height comparison.",
+            "The orange Electric bar of the i3 is clearly significantly taller than the red Hybrid bar of the 3 Series.",
+            "The massive Diesel bar of the 3 Series remains the tallest individual element in this view."
+          ],
+          "reasoning": [
+            {
+              "iteration": 1,
+              "tool": "filter_categories",
+              "reasoning": "The original chart contains too many models to easily compare specific segments of the i3 and 3 Series. Filtering removes the visual noise of unrelated models like the 1 Series and X Series creating a clean workspace for detailed comparison."
+            },
+            {
+              "iteration": 2,
+              "tool": "toggle_stack_mode",
+              "reasoning": "In the stacked view the Hybrid segment of the 3 Series sits on top of other segments making its absolute height hard to judge against the baseline aligned i3. Grouping the bars aligns every fuel type to the bottom axis making the comparison between the i3 Electric volume and 3 Series Hybrid volume precise and effortless."
+            }
+          ],
+          "tool_eval": {
+            "tools": [
+              {
+                "tool": "filter_categories",
+                "param_eval": {
+                  "type": "list",
+                  "param": "categories",
+                  "target": ["3 Series", "i3"]
+                }
+              },
+              {
+                "tool": "toggle_stack_mode",
+                "param_eval": {
+                  "type": "categorical",
+                  "param": "mode",
+                  "target": "grouped",
+                  "alternatives": ["group", "side-by-side"]
+                }
+              }
+            ]
+          },
+          "state_eval": {
+            "encoding": {
+              "x": "model",
+              "y": "mpg",
+              "color": "fuelType"
+            },
+            "data_filtered": [
+              {
+                "filter": "indexof([\"3 Series\",\"i3\"], datum['model']) >= 0"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "qid": "vs_01",
+        "question": "How would you describe the fuel composition balance of the 5 Series?",
+        "ground_truth": {
+          "task_type": "vague_single",
+          "answer": {
+            "type": "open_ended",
+            "value": "The 5 Series is overwhelmingly dominated by Diesel fuel with a smaller Petrol segment and a very small Hybrid segment."
+          },
+          "key_insights": [
+            "The 5 Series bar expands to fill the view revealing the internal ratios.",
+            "Blue Diesel segments occupy the vast majority of the space indicating it is the primary choice for this car class.",
+            "The Hybrid segment which was barely visible in the total view is now clearly identifiable as a small but present fraction."
+          ],
+          "reasoning": [
+            {
+              "iteration": 1,
+              "tool": "expand_stack",
+              "reasoning": "In the global view the 5 Series is just one of many bars and its internal makeup is hard to quantify visually. Expanding this single stack focuses the entire visualization on the proportions within the 5 Series allowing for a detailed assessment of its fuel mix without distraction from other models."
+            }
+          ],
+          "tool_eval": {
+            "tools": [
+              {
+                "tool": "expand_stack",
+                "param_eval": {
+                  "type": "categorical",
+                  "param": "category",
+                  "target": "5 Series",
+                  "alternatives": ["5series", "5 series"]
+                }
+              }
+            ]
+          },
+          "state_eval": {
+            "encoding": {
+              "x": "fuelType",
+              "y": "mpg",
+              "color": "fuelType"
+            },
+            "data_filtered": [
+              {
+                "filter": "datum['model'] == \"5 Series\""
+              }
+            ]
+          }
+        }
+      },
+      {
+        "qid": "vm_02",
+        "question": "What is the relationship between car series and engine size diversity?",
+        "ground_truth": {
+          "task_type": "vague_multi",
+          "answer": {
+            "type": "open_ended",
+            "value": "The 5 Series shows a wider variety of colors indicating a more diverse range of engine sizes compared to the 1 Series which has a more uniform engine configuration."
+          },
+          "key_insights": [
+            "The view is simplified to the three most popular sedan models.",
+            "The 3 Series remains the dominant bar in terms of total volume.",
+            "The fuel type colors are currently identical across the three bars providing no new information about engine specs.",
+            "The color palette changes to represent different engine sizes.",
+            "The 5 Series bar displays more distinct color bands suggesting it is sold with a wider variety of large and small engines.",
+            "The 1 Series is more uniform in color likely indicating it primarily uses smaller standard engines."
+          ],
+          "reasoning": [
+            {
+              "iteration": 1,
+              "tool": "filter_categories",
+              "reasoning": "To analyze the technical specifications like engine size we first need to isolate the core models to avoid an overwhelmed legend and chart area. Selecting the top 3 popular series provides a good representative sample for comparison."
+            },
+            {
+              "iteration": 2,
+              "tool": "change_encoding",
+              "reasoning": "Fuel type is a broad category that hides technical details. Mapping color to engine size reveals the mechanical complexity of the lineup showing that the higher tier 5 Series offers more powertrain customization options than the entry level 1 Series."
+            }
+          ],
+          "tool_eval": {
+            "tools": [
+              {
+                "tool": "filter_categories",
+                "param_eval": {
+                  "type": "list",
+                  "param": "categories",
+                  "target": ["5 Series", "1 Series", "3 Series"]
+                }
+              },
+              {
+                "tool": "change_encoding",
+                "param_eval": {
+                  "type": "categorical",
+                  "param": "field",
+                  "target": "engineSize",
+                  "alternatives": ["engine_size", "EngineSize"]
+                }
+              }
+            ]
+          },
+          "state_eval": {
+            "encoding": {
+              "x": "model",
+              "y": "mpg",
+              "color": "engineSize"
+            },
+            "data_filtered": [
+              {
+                "filter": "indexof([\"5 Series\",\"1 Series\",\"3 Series\"], datum['model']) >= 0"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }

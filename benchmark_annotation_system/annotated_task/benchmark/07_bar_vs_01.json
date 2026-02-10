@@ -1,0 +1,53 @@
+{
+  "task_type": "vague_single",
+  "task_id": "07_bar_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/07_bar_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Which diet quality group has the most consistent sleep hours?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The average diet quality group has the most consistent sleep hours across different weather conditions."
+        },
+        "key_insights": [
+          "The average diet quality group shows the smallest variation in sleep hours across all four weather types.",
+          "The poor diet quality group exhibits the largest spread, suggesting weather has more influence on sleep for this group.",
+          "Overall, sleep hours remain relatively stable regardless of diet quality or weather, indicating these factors have limited impact on average sleep duration."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "toggle_stack_mode",
+            "reasoning": "The stacked bar chart made it difficult to compare sleep consistency within each diet quality group, so I switched to grouped mode to see individual weather categories side by side. By visually comparing the height variation of the four bars within each group, the average diet quality group clearly has the most uniform bar heights, while poor shows more pronounced differences between weather conditions. This suggests that people with good diet quality maintain more stable sleep patterns regardless of external weather factors."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "categorical",
+                "param": "mode",
+                "target": "grouped"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "sleep_hours",
+            "color": "weather"
+          }
+        }
+      }
+    }
+  ]
+}

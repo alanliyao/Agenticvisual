@@ -1,0 +1,54 @@
+{
+  "task_type": "clear_single",
+  "task_id": "15_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/15_heatmap_Chocolate Sales.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which product sells the best in all countries?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Mint Chip Choco",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "cluster_rows_cols",
+            "reasoning": "get the data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "cluster_rows_cols",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "cluster_rows": false,
+                  "cluster_cols": true,
+                  "method": "sum"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Product",
+            "y": "Country",
+            "color": "Amount"
+          }
+        }
+      }
+    }
+  ]
+}

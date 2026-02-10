@@ -1,0 +1,67 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "22_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/22_Employee_Attrition_DataSet_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Is there a statistically significant positive correlation between an employee’s tenure at a company and their monthly income?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "boolean",
+          "value": "YES"
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "Because I need to calculate the correlation between yearsatcompany and monthlyincome"
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_correlation",
+            "reasoning": "It seems that there is a positive correlation in the graph, so I use the tool to verify it. pearson correlation: 0.841 (strong positive)"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "YearsAtCompany",
+                  "channel": "x"
+                }
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "YearsAtCompany",
+            "y": "MonthlyIncome",
+            "color": "WorkLifeBalance"
+          }
+        }
+      }
+    }
+  ]
+}

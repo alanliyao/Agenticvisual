@@ -1,0 +1,55 @@
+{
+  "task_type": "vague_single",
+  "task_id": "47_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/47_candy_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Whether sugar have fruity or not can affect winpercent like chocolate?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The circle points have average higher winpercent than square points, so we can conclude that it truly affect the winpercent."
+        },
+        "key_insights": [
+          "Across all groups, as sugar content increases, the win percentage consistently rises. This confirms sugar content is a primary driver of higher win rates.",
+          "The two “Fruity” groups (dots) occupy the upper half of the plot, confirming that being fruity is a major factor in achieving high win percentages, especially when combined with high sugar."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "change the shape encoding to associate with fruity can help put fruity data with chocolate data together to compare."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "fruity",
+                  "channel": "shape"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "sugarpercent",
+            "y": "winpercent",
+            "color": "chocolate"
+          }
+        }
+      }
+    }
+  ]
+}

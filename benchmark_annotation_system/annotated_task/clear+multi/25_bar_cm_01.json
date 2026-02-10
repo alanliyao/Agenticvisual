@@ -1,0 +1,90 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "25_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/25_gym_members_exercise_tracking_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "First isolate the experience level of 3 and 1, then compare workout types to identify which one shows the largest reduction in average fat percentage with increased experience.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Cardio.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "At the second level of filtration, analyze the relationship between level one and level three."
+          },
+          {
+            "iteration": 2,
+            "tool": "toggle_stack_mode",
+            "reasoning": "Switching to the group mode is more intuitive."
+          },
+          {
+            "iteration": 3,
+            "tool": "change_encoding",
+            "reasoning": "Utilize the tool to map out different levels of fat percentage for easier comparison."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    2
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "toggle_stack_mode",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "mode": "grouped"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Avg_BPM",
+                  "channel": "color"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Avg_BPM"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Experience_Level'] != 2"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

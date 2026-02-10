@@ -1,0 +1,199 @@
+{
+  "filename": "03_line_stocks.json",
+  "spec_index": 2,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Stock Prices 2023",
+    "width": 550,
+    "height": 350,
+    "data": {
+      "values": [
+        {
+          "date": "2023-01-01",
+          "price": 150,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-03-01",
+          "price": 165,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-05-01",
+          "price": 185,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-07-01",
+          "price": 188,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-09-01",
+          "price": 210,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-11-01",
+          "price": 218,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-01-01",
+          "price": 80,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-03-01",
+          "price": 78,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-05-01",
+          "price": 90,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-07-01",
+          "price": 88,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-09-01",
+          "price": 98,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-11-01",
+          "price": 108,
+          "company": "RetailInc"
+        }
+      ]
+    },
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal"
+      },
+      "y": {
+        "field": "price",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "company",
+        "type": "nominal"
+      }
+    }
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Stock Prices 2023",
+    "width": 550,
+    "height": 350,
+    "data": {
+      "values": [
+        {
+          "date": "2023-01-01",
+          "price": 150,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-03-01",
+          "price": 165,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-05-01",
+          "price": 185,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-07-01",
+          "price": 188,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-09-01",
+          "price": 210,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-11-01",
+          "price": 218,
+          "company": "TechCorp"
+        },
+        {
+          "date": "2023-01-01",
+          "price": 80,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-03-01",
+          "price": 78,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-05-01",
+          "price": 90,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-07-01",
+          "price": 88,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-09-01",
+          "price": 98,
+          "company": "RetailInc"
+        },
+        {
+          "date": "2023-11-01",
+          "price": 108,
+          "company": "RetailInc"
+        }
+      ]
+    },
+    "mark": {
+      "type": "line",
+      "point": true
+    },
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal"
+      },
+      "y": {
+        "field": "price",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "company",
+        "type": "nominal"
+      }
+    }
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "line",
+  "chart_meta": {
+    "chart_type": "line",
+    "title": "Stock Prices 2023",
+    "topic": "Finance",
+    "data_points": 12,
+    "filename": "03_line_stocks.json",
+    "total_points": 12,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:57:21.126956Z"
+}

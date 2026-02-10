@@ -1,0 +1,86 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "26_line_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/26_China_centra_death_rate_line.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "filter to show when did the highest rate occurred among people aged 10 and 25?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "1960;1960.",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "the highest of 10 years old group happened in 1960."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_lines",
+            "reasoning": "the highest of 25 years old group happened in 1960."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    " Age: 0",
+                    "Age: 45",
+                    "Age: 65",
+                    "Age: 80"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    " Age: 0",
+                    "Age: 10",
+                    "Age: 45",
+                    "Age: 65",
+                    "Age: 80"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Central death rate",
+            "color": "Age_Group"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\" Age: 0\", \"Age: 45\", \"Age: 65\", \"Age: 80\"], datum['Age_Group']) < 0"
+            },
+            {
+              "filter": "indexof([\" Age: 0\", \"Age: 10\", \"Age: 45\", \"Age: 65\", \"Age: 80\"], datum['Age_Group']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

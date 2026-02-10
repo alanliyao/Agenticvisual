@@ -1,0 +1,61 @@
+{
+  "task_type": "vague_single",
+  "task_id": "70_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/70_one_person_ai_work_and_burnout_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Identify if there are any underlying cycles or phases in AI tool usage over the entire period.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The trend reveals three distinct phases: initial growth (days 0–60), high volatility (days 60–120), and a late decline with recovery (days 120–180).The high-volatility phase (days 60–120) is characterized by the most extreme peaks and valleys, suggesting active experimentation or instability.\nThe final recovery phase (after day 140) indicates that the initial growth was not a one-time event, and usage levels stabilized rather than collapsing."
+        },
+        "key_insights": [
+          "It transforms the chart from a collection of daily fluctuations into a narrative of distinct phases, directly answering the vague exploratory question."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_trend",
+            "reasoning": "Highlighting the trend is a powerful first step in making sense of a highly volatile dataset."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_trend",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "trend_type": "increasing"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 3,
+            "types": [
+              "line",
+              "line",
+              "line"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "task_type": "clear_single",
+  "task_id": "07_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/07_bar_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Does weather have a significant impact on people's average sleep duration",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "No"
+        },
+        "key_insights": [
+          "People tend to sleep longer on rainy days.",
+          "However, the difference in sleep duration across different weather conditions is not substantial."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "By moving weather to the x-axis, the relationship between weather and sleep duration can be observed"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "weather",
+                  "channel": "x"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "weather",
+            "y": "sleep_hours",
+            "color": "weather"
+          }
+        }
+      }
+    }
+  ]
+}

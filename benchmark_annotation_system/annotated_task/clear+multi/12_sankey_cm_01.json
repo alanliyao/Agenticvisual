@@ -1,0 +1,111 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "12_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/12_sankey_microsoft.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What percentage of Microsoft's revenue comes from its software services?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "0.48",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "collapse_nodes",
+            "reasoning": "Aggregate all software products"
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "get the software income is 25.3B"
+          },
+          {
+            "iteration": 3,
+            "tool": "calculate_conversion_rate",
+            "reasoning": "get the hole income is 52.7B. so the answer is 25.3/52.7 = 0.48"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "collapse_nodes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "aggregate_name": "software",
+                  "nodes_to_collapse": [
+                    "Office Products",
+                    "LinkedIn",
+                    "Windows",
+                    "Gaming"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "software"
+                }
+              }
+            },
+            {
+              "tool": "calculate_conversion_rate",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Revenue"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "visible_nodes": [
+            "Server Products",
+            "Others (Layer 0)",
+            "software",
+            "Intelligent Cloud",
+            "Productivity",
+            "Personal Computing",
+            "Revenue",
+            "Gross Profit",
+            "Cost of Revenue",
+            "Operating Profit",
+            "Operating Expenses",
+            "Product Costs",
+            "Service Costs",
+            "Net Profit",
+            "Tax",
+            "R&D",
+            "S&M",
+            "G&A"
+          ],
+          "collapsed_nodes": [
+            "Others (Layer 0)"
+          ]
+        }
+      }
+    }
+  ]
+}

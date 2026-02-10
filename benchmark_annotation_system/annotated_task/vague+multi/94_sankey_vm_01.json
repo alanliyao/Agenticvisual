@@ -1,0 +1,69 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "94_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/94_samkey_retail.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "Explore how GMV contributions from different acquisition channels are distributed across all business categories, then identify any unexpected patterns.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": " Brand Ads has a disproportionate focus on Electronics & Appliances, and Beauty & Skincare shows a strong dependency on Live Streaming."
+        },
+        "key_insights": [
+          "Brand Ads sends the largest share of its GMV to Electronics & Appliances",
+          "Fresh Food is the highest-GMV category, supported by multiple channels, while Beauty & Skincare relies heavily on Live Streaming."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "The first step of channel-by-channel filtering uncovers hidden dependencies"
+          },
+          {
+            "iteration": 2,
+            "tool": "auto_collapse_by_rank",
+            "reasoning": "Reordering categories then shows which business lines are most significant overall and which rely on a single channel."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Brand Ads (Elevator/Official)"
+                }
+              }
+            },
+            {
+              "tool": "auto_collapse_by_rank",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 4
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "77_bar_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/77_gym_bar_sum.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which two types pf workout are the most effective for fat loss?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "Cardio and strengh.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_top_n",
+            "reasoning": "Using the “highlight top n” tool directly isolates the top performers, which is not immediately obvious in the default view."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_top_n",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "n": 2,
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Workout_Type",
+            "y": "Fat_Percentage",
+            "color": "Experience_Level"
+          }
+        }
+      }
+    }
+  ]
+}

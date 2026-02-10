@@ -1,0 +1,53 @@
+{
+  "task_type": "vague_single",
+  "task_id": "40_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/40_insurance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "After using the change_encoding tool to set channel=color and field=bmi, what key pattern emerges about how BMI varies across children count within each smoker status group?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Children count drives meaningful BMI variation within each smoker status group—a pattern invisible when color encoded medical charges:\nIn the smoker=no group, BMI spikes to 40–50  for 4 children, while other child counts have lower BMI. In the smoker=yes group, BMI drops sharply to 20–30 for 5 children, while other child counts have higher BMI."
+        },
+        "key_insights": [
+          "For the smoker=no group: BMI varies sharply across children columns: columns 0/2/5 show dark blue, columns 1/3 show teal, and column 4 spikes to bright green.",
+          "For the smoker=yes group: BMI also varies by children count: columns 0/3/4 show teal, columns 1/2 show bright green, and column 5 drops sharply to dark purple.",
+          "The most extreme BMI values are tied to specific children counts within each smoker group: non-smokers with 4 children and smokers with 5 children."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "The change_encoding tool is critical here: it reuses the existing heatmap structure but swaps the color metric to BMI, revealing patterns hidden when color encoded charges."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "categorical",
+                "param": "field",
+                "target": "bmi"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "children",
+            "y": "smoker",
+            "color": "bmi"
+          }
+        }
+      }
+    }
+  ]
+}

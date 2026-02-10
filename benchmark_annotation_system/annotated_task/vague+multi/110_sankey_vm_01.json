@@ -1,0 +1,85 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "110_sankey_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/110_sankey_trash.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_03",
+      "question": "For the sorting facility, in which parts does the process loss mainly occur in the system?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The resource consumption in the sorting facility layer is most likely to occur in the manual sorting and magnetic sorting sections."
+        },
+        "key_insights": [
+          "The main sources of process losses are composting and recycled plants.",
+          "The main sources of composting is manual sorting.",
+          "The main sources of recycled plant are manual sorting and manual sorting."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main sources of Process Loss using tools."
+          },
+          {
+            "iteration": 2,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main sources of composting using tools."
+          },
+          {
+            "iteration": 3,
+            "tool": "trace_node",
+            "reasoning": "Analyze the main sources of recycled plant using tools."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Process Loss"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Composting"
+                }
+              }
+            },
+            {
+              "tool": "trace_node",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "node_name": "Recycling Plant"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

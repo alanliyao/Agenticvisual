@@ -1,0 +1,74 @@
+{
+  "task_type": "vague_single",
+  "task_id": "58_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/58_Train_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "how high importance product's customer cart calls, customer rating, product cost, prior purchases, and discount offered are distributed across all dimensions.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Customer_cart_calls (2 to 7)Most values are concentrated at the top half of the axis.\nCustomer_rating (1 to 5)There is a wide spread, with a concentration of lines at the very top (5/5) and another cluster in the middle (around 3).\nCost_of_the_Product (96 to 310)The lines stretch across almost the entire axis.\nDiscount_offered (1 to 65) Most lines are clustered near the bottom of the axis."
+        },
+        "key_insights": [
+          "Lines that score high on \"Customer_cart_calls\" (value 7) often correspond to lower values on \"Prior_purchases\" (value 2)",
+          "The lines show a wide spread on the \"Discount_offered\" axis. One specific line extends all the way to the maximum value of 65 (presumably 65% discount)",
+          "Several lines peak sharply at the top of the \"Customer_rating\" axis (value 5) and also reach the top of the \"Cost_of_the_Product\" axis (value 310)"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "We care about high importance product's data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Product_importance",
+                  "values": [
+                    "low",
+                    "medium"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"low\",\"medium\"], datum['Product_importance']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

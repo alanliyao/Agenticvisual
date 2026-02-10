@@ -1,0 +1,113 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "clear_single",
+      "chart_type": "scatter",
+      "meta": {
+        "chart_type": "scatter",
+        "title": "01_scatter_cars",
+        "filename": "01_scatter_cars.json",
+        "data_points": 392,
+        "total_points": 392,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "cl_01",
+          "question": "Zoom in on the high-density area of \"Horsepower 60–100, Miles_per_Gallon 20–35\" in the chart. Among the vehicles with the same horsepower, which country or region has a higher MPG?",
+          "ground_truth": {
+            "answer": "Japan",
+            "key_insights": [
+              "Within this power range (60–100 horsepower), the fuel consumption per 100 kilometers of Japanese-made vehicles (marked in orange) is generally better than that of American-made vehicles. Their average fuel economy is approximately 2–4 mpg higher; especially at typical horsepower levels (such as 80 horsepower), this advantage remains consistent.",
+              "The points of the European cars (in blue) are more densely distributed. With the same horsepower, their MPG performance lies between that of Japanese cars and American cars."
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "zoom_dense_area",
+                "reasoning": "This range encompasses the typical horsepower and fuel consumption of everyday family vehicles, making it the ideal window for \"comparing the performance differences of vehicles from different origins\". In the overall view, the overlapping of points would obscure the details. \nOnly when enlarged can the subtle MPG differences among Japanese cars, European cars and American cars at the same horsepower be clearly seen."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "zoom_dense_area"
+              ],
+              "param_eval": [
+                {
+                  "tool": "zoom_dense_area",
+                  "params": {
+                    "x_range": [
+                      59.72222137451172,
+                      101.05554962158203
+                    ],
+                    "y_range": [
+                      14.766669464111327,
+                      35.23333358764649
+                    ]
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "visible_domain": {
+                "x": [
+                  59.72222137451172,
+                  101.05554962158203
+                ],
+                "y": [
+                  14.766669464111327,
+                  35.23333358764649
+                ]
+              },
+              "encoding": {
+                "x": "Horsepower",
+                "y": "Miles_per_Gallon",
+                "color": "Origin"
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "zoom_dense_area",
+          "parameters": {
+            "x_range": [
+              59.72222137451172,
+              101.05554962158203
+            ],
+            "y_range": [
+              14.766669464111327,
+              35.23333358764649
+            ]
+          },
+          "result": {
+            "operation": "zoom_dense_area",
+            "original_count": 392,
+            "filtered_count": 201,
+            "zoom_range": {
+              "x": [
+                59.72222137451172,
+                101.05554962158203
+              ],
+              "y": [
+                14.766669464111327,
+                35.23333358764649
+              ]
+            },
+            "message": "Zoomed to dense area: showing 201 out of 392 points (51.3%)"
+          },
+          "key_insights": [
+            "Within this power range (60–100 horsepower), the fuel consumption per 100 kilometers of Japanese-made vehicles (marked in orange) is generally better than that of American-made vehicles. Their average fuel economy is approximately 2–4 mpg higher; especially at typical horsepower levels (such as 80 horsepower), this advantage remains consistent.",
+            "The points of the European cars (in blue) are more densely distributed. With the same horsepower, their MPG performance lies between that of Japanese cars and American cars."
+          ],
+          "reasoning": "This range encompasses the typical horsepower and fuel consumption of everyday family vehicles, making it the ideal window for \"comparing the performance differences of vehicles from different origins\". In the overall view, the overlapping of points would obscure the details. \nOnly when enlarged can the subtle MPG differences among Japanese cars, European cars and American cars at the same horsepower be clearly seen."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-22T11:30:10.774Z"
+}

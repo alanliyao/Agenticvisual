@@ -1,0 +1,59 @@
+{
+  "task_type": "clear_single",
+  "task_id": "76_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/76_Refined_Employment_Telecom_Services_NA_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Zoom into the 2019 to 2021 period to see if there was a synchronized dip in employment across America.",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "boolean",
+          "value": "Yes."
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "The single zoom action reveals that only the largest economy (the U.S.) showed a notable dip, while others remained stable or grew."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2019",
+                  "end": "2021"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2019",
+              "2021"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Year",
+            "y": "Employment_Thousands",
+            "color": "Country"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "clear_single",
+      "chart_type": "line",
+      "meta": {
+        "chart_type": "line",
+        "title": "E-commerce Daily Activity Heatmap (Drilldown: Year → Month → Day)",
+        "filename": "13_heatmap_commercial.json",
+        "data_points": 0,
+        "total_points": 0,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "cl_01",
+          "question": "Why is the activity level of the Partner channel much higher than that of the App and Web?",
+          "ground_truth": {
+            "answer": "It may be because the partner has a stronger ability to attract traffic.",
+            "key_insights": [
+              "The Partner channel is the most active among the three channels (darkest colour), which indicates that a large part of the core active traffic or user engagement on this e-commerce platform comes from the traffic and operational collaboration of these external partners."
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "get_view_spec",
+                "reasoning": "By observing the depth of the colour in the overall heatmap chart, we found that the partner's corresponding channel has the highest E-commerce Daily Activity."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "get_view_spec"
+              ],
+              "param_eval": [
+                {
+                  "tool": "get_view_spec",
+                  "params": {}
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": "date",
+                "y": "channel",
+                "color": "events"
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "get_view_spec",
+          "parameters": {},
+          "result": {
+            "current_spec": {
+              "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+              "title": "E-commerce Daily Activity Heatmap (Drilldown: Year → Month → Day)",
+              "width": 900,
+              "height": 220,
+              "data": {
+                "sequence": {
+                  "start": 0,
+                  "stop": 2190
+                }
+              },
+              "transform": [
+                {
+                  "calculate": "datum.data",
+                  "as": "idx"
+                },
+                {
+                  "calculate": "floor(datum.idx / 3)",
+                  "as": "day_index"
+                },
+                {
+                  "calculate": "datum.idx % 3",
+                  "as": "channel_idx"
+                },
+                {
+                  "calculate": "floor(datum.day_index / 365)",
+                  "as": "year_offset"
+                },
+                {
+                  "calculate": "datum.day_index % 365",
+                  "as": "day_of_year"
+                },
+                {
+                  "calculate": "timeOffset('day', datetime(2023 + datum.year_offset, 0, 1), datum.day_of_year)",
+                  "as": "date"
+                },
+                {
+                  "calculate": "datum.channel_idx == 0 ? 'Web' : (datum.channel_idx == 1 ? 'App' : 'Partner')",
+                  "as": "channel"
+                },
+                {
+                  "calculate": "round(120 + 25*datum.channel_idx + 18*sin((datum.day_of_year/365)*2*PI) + 8*cos((datum.day_of_year/30)*2*PI) + 10*datum.year_offset)",
+                  "as": "events"
+                }
+              ],
+              "mark": {
+                "type": "rect"
+              },
+              "encoding": {
+                "x": {
+                  "field": "date",
+                  "type": "temporal",
+                  "timeUnit": "year",
+                  "title": "Time"
+                },
+                "y": {
+                  "field": "channel",
+                  "type": "nominal",
+                  "title": "Channel"
+                },
+                "color": {
+                  "aggregate": "mean",
+                  "field": "events",
+                  "type": "quantitative",
+                  "title": "Total Events",
+                  "scale": {
+                    "scheme": "blues"
+                  }
+                },
+                "tooltip": [
+                  {
+                    "field": "date",
+                    "type": "temporal",
+                    "title": "Date"
+                  },
+                  {
+                    "field": "channel",
+                    "type": "nominal",
+                    "title": "Channel"
+                  },
+                  {
+                    "aggregate": "mean",
+                    "field": "events",
+                    "type": "quantitative",
+                    "title": "Events (sum)"
+                  }
+                ]
+              }
+            }
+          },
+          "key_insights": [
+            "The Partner channel is the most active among the three channels (darkest colour), which indicates that a large part of the core active traffic or user engagement on this e-commerce platform comes from the traffic and operational collaboration of these external partners."
+          ],
+          "reasoning": "By observing the depth of the colour in the overall heatmap chart, we found that the partner's corresponding channel has the highest E-commerce Daily Activity."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-22T13:00:12.258Z"
+}

@@ -1,0 +1,72 @@
+{
+  "task_type": "vague_single",
+  "task_id": "18_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/18_Heart_Disease_Prediction_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Explore which feature combinations are most strongly associated with heart disease presence.",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "The combination of Thallium = 7 and ST depression <= 0.8 is the strongest predictor of heart disease presence."
+        },
+        "key_insights": [
+          "A Thallium scan result of 7 (which usually indicates a \"reversible defect\" in the scan) is heavily associated with a positive diagnosis of heart disease.",
+          "The combination of Thallium = 7 and ST depression <= 0.8 is the strongest predictor of heart disease presence"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "We cares about the data of Presence"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Heart Disease",
+                  "values": [
+                    "Absence"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Absence\"], datum['Heart Disease']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

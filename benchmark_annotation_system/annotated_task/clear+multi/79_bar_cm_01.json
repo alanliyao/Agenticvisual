@@ -1,0 +1,91 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "79_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/79_ign_scores_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "sort and filter the bars,which is the most active platform among PC,Wii and iPhone?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "iPhone",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "sort_bars",
+            "reasoning": "Sorted bars in ascending order,and then we filter other platform to choose the most active one from the three mentioned in the platform."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categories",
+            "reasoning": "now,after filtering we can see the bar for iPhone is the highest,whose value is 6.865."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "ascending"
+                }
+              }
+            },
+            {
+              "tool": "filter_categories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories": [
+                    "Game Boy Advance",
+                    "Dreamcast",
+                    "Game Boy Color",
+                    "Nintendo DSi",
+                    "Nintendo DS",
+                    "Nintendo 64",
+                    "GameCube",
+                    "Nintendo 3DS",
+                    "PlayStation 2",
+                    "PlayStation",
+                    "PlayStation 3",
+                    "PlayStation 4",
+                    "PlayStation Portable",
+                    "PlayStation Vita",
+                    "Wireless",
+                    "Xbox",
+                    "Xbox 360",
+                    "Xbox One"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Platform",
+            "y": "Action",
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Game Boy Advance\",\"Dreamcast\",\"Game Boy Color\",\"Nintendo DSi\",\"Nintendo DS\",\"Nintendo 64\",\"GameCube\",\"Nintendo 3DS\",\"PlayStation 2\",\"PlayStation\",\"PlayStation 3\",\"PlayStation 4\",\"PlayStation Portable\",\"PlayStation Vita\",\"Wireless\",\"Xbox\",\"Xbox 360\",\"Xbox One\"], datum['Platform']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

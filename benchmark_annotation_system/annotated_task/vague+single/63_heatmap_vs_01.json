@@ -1,0 +1,65 @@
+{
+  "task_type": "vague_single",
+  "task_id": "63_heatmap_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/63_Berlin_crimes_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Which district appears to have the most consistently high drug-related activity over the years, based on the heatmap's color patterns?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "Based on the heatmap, the district 'Neukölln' appears to have the most consistently high drug-related activity, as its row shows dark colors for most years."
+        },
+        "key_insights": [
+          "We look for rows that have predominantly dark cells with little variation. This visual inspection leads to a subjective conclusion."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_region",
+            "reasoning": "We use the highlight region tool to visually scan each district's row. By highlighting one row at a time, we can assess the consistency of dark colors (assuming dark = high values) across the years."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_values": [
+                    2012,
+                    2013,
+                    2014,
+                    2015,
+                    2016,
+                    2017,
+                    2018,
+                    2019
+                  ],
+                  "y_values": [
+                    "Neukölln"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "District",
+            "color": "Drugs"
+          }
+        }
+      }
+    }
+  ]
+}

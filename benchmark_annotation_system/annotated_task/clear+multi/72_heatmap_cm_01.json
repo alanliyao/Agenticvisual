@@ -1,0 +1,100 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "72_heatmap_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/72_StudentsPerformance_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "What is the exact writing score for students whose parents have a ‘bachelor's degree’ and who belong to ‘group C’, and how does it compare to the average writing score for all students in ‘group C’ across all parental education levels?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "The exact writing score for group C students with parental bachelor’s degree is 85,and the average writing score for all group C students across all parental education levels is 85.Therefore, the score for this specific subgroup (bachelor’s degree) is exactly equal to the group’s overall average.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_cells_by_region",
+            "reasoning": "This removes data from other race/ethnicity groups, simplifying the view to focus on how parental education affects scores within this specific group."
+          },
+          {
+            "iteration": 2,
+            "tool": "get_data",
+            "reasoning": "To extract all writing score values for ‘group C’ across each parental education level."
+          },
+          {
+            "iteration": 3,
+            "tool": "highlight_region",
+            "reasoning": "Use this tool to visually locate and emphasize the ‘bachelor's degree’ cell within ‘group C’."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_cells_by_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_value": "group E"
+                }
+              }
+            },
+            {
+              "tool": "get_data",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "visible"
+                }
+              }
+            },
+            {
+              "tool": "highlight_region",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "race/ethnicity",
+            "y": "parental level of education",
+            "color": "writing score"
+          },
+          "data_filtered": [
+            {
+              "filter": "!(indexof([\"group B\"], datum['race/ethnicity']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"group A\"], datum['race/ethnicity']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"group D\"], datum['race/ethnicity']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            },
+            {
+              "filter": "!(indexof([\"group E\"], datum['race/ethnicity']) >= 0)",
+              "_avs_tag": "filter_cells_by_region"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

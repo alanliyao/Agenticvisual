@@ -1,0 +1,162 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "117_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/117_startup_funding_dataset_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_05",
+      "question": "Can the company grow larger and larger and also become more numerous?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was found that as the financing process progressed, initially the number of employees increased. However, starting from the A round, it was observed that the deepening of the financing did not lead to an expansion of the company's scale. And at the C round, it was discovered that the number of employees actually decreased."
+        },
+        "key_insights": [
+          "lots of them have employees between 5 and 257",
+          "half of them over 257 employees",
+          "There are companies at this stage with either a large number of employees or a small number of employees.",
+          "just like A",
+          "most of them have below 257 employees"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "get data of IPO"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "get data of seed"
+          },
+          {
+            "iteration": 3,
+            "tool": "filter_by_category",
+            "reasoning": "get data of series A companies"
+          },
+          {
+            "iteration": 4,
+            "tool": "filter_by_category",
+            "reasoning": "get data of series B one"
+          },
+          {
+            "iteration": 5,
+            "tool": "filter_by_category",
+            "reasoning": "get data of series C"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Funding Stage",
+                  "values": [
+                    "Series B",
+                    "Series C",
+                    "Series A",
+                    "Seed"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Funding Stage",
+                  "values": [
+                    "Series A",
+                    "Series C",
+                    "IPO",
+                    "Series B"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Funding Stage",
+                  "values": [
+                    "Series B",
+                    "IPO",
+                    "Series C",
+                    "Seed"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Funding Stage",
+                  "values": [
+                    "IPO",
+                    "Series C",
+                    "Series A",
+                    "Seed"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Funding Stage",
+                  "values": [
+                    "Series B",
+                    "IPO",
+                    "Series A",
+                    "Seed"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Series B\",\"IPO\",\"Series A\",\"Seed\"], datum['Funding Stage']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

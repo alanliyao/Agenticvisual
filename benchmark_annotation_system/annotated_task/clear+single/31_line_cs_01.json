@@ -1,0 +1,60 @@
+{
+  "task_type": "clear_single",
+  "task_id": "31_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/31_TSLA_Stock_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": " What is the highest closing price of TSLA stock?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "410.",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_time_range",
+            "reasoning": "Using the zoom action isolates this high-volatility period, allowing for precise identification of the peak price."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_time_range",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "start": "2021-10-01",
+                  "end": "2021-12-31"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              "2021-10-01",
+              "2021-12-31"
+            ],
+            "y": null
+          },
+          "encoding": {
+            "x": "Date",
+            "y": "Close",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

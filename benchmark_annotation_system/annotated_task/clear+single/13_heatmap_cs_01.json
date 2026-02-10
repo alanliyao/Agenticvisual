@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "13_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/13_supply_chain_data_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Using the 'find extremes' tool, which product type and customer demographic combination has the highest price on the heatmap?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "The highest price appears at the intersection of 'cosmetics' and 'Male'.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "find_extremes",
+            "reasoning": "After using the find extreme tool, we found that the highest price occurs at the intersection of \"cosmetics\" and \"Male\"."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 50,
+                  "mode": "max"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Product type",
+            "y": "Customer demographics",
+            "color": "Price"
+          }
+        }
+      }
+    }
+  ]
+}

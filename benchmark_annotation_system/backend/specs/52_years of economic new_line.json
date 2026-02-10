@@ -1,0 +1,249 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Line Chart: Access to electricity (% of population) over Year",
+  "width": 600,
+  "height": 400,
+  "data": {
+    "values": [
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2000,
+        "Access to electricity (% of population)": 4.4,
+        "Access to clean fuels and technologies for cooking (% of population)": 5.5,
+        "People using at least basic drinking water services (% of population)": "27.441.856",
+        "People using at least basic sanitation services (% of population)": "20.970.919"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2001,
+        "Access to electricity (% of population)": 9.3,
+        "Access to clean fuels and technologies for cooking (% of population)": 6.6,
+        "People using at least basic drinking water services (% of population)": "2.747.358",
+        "People using at least basic sanitation services (% of population)": "2.098.235"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2002,
+        "Access to electricity (% of population)": 14.1,
+        "Access to clean fuels and technologies for cooking (% of population)": 7.7,
+        "People using at least basic drinking water services (% of population)": "29.674.862",
+        "People using at least basic sanitation services (% of population)": "22.541.338"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2003,
+        "Access to electricity (% of population)": 19.0,
+        "Access to clean fuels and technologies for cooking (% of population)": 9.0,
+        "People using at least basic drinking water services (% of population)": "3.187.559",
+        "People using at least basic sanitation services (% of population)": "24.100.332"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2004,
+        "Access to electricity (% of population)": 23.8,
+        "Access to clean fuels and technologies for cooking (% of population)": 10.5,
+        "People using at least basic drinking water services (% of population)": "34.094.433",
+        "People using at least basic sanitation services (% of population)": "2.566.624"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2005,
+        "Access to electricity (% of population)": 28.7,
+        "Access to clean fuels and technologies for cooking (% of population)": 11.9,
+        "People using at least basic drinking water services (% of population)": "36.331.226",
+        "People using at least basic sanitation services (% of population)": "2.723.919"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2006,
+        "Access to electricity (% of population)": 33.5,
+        "Access to clean fuels and technologies for cooking (% of population)": 13.5,
+        "People using at least basic drinking water services (% of population)": "3.856.712",
+        "People using at least basic sanitation services (% of population)": "28.812.265"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2007,
+        "Access to electricity (% of population)": 38.4,
+        "Access to clean fuels and technologies for cooking (% of population)": 15.1,
+        "People using at least basic drinking water services (% of population)": "41.083.675",
+        "People using at least basic sanitation services (% of population)": "30.466.534"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2008,
+        "Access to electricity (% of population)": 42.4,
+        "Access to clean fuels and technologies for cooking (% of population)": 16.6,
+        "People using at least basic drinking water services (% of population)": "4.363.261",
+        "People using at least basic sanitation services (% of population)": "32.128.704"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2009,
+        "Access to electricity (% of population)": 48.3,
+        "Access to clean fuels and technologies for cooking (% of population)": 18.3,
+        "People using at least basic drinking water services (% of population)": "46.213.764",
+        "People using at least basic sanitation services (% of population)": "33.798.958"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2010,
+        "Access to electricity (% of population)": 42.7,
+        "Access to clean fuels and technologies for cooking (% of population)": 19.9,
+        "People using at least basic drinking water services (% of population)": "4.882.697",
+        "People using at least basic sanitation services (% of population)": "3.547.747"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2011,
+        "Access to electricity (% of population)": 43.2,
+        "Access to clean fuels and technologies for cooking (% of population)": 21.3,
+        "People using at least basic drinking water services (% of population)": "51.472.378",
+        "People using at least basic sanitation services (% of population)": "37.164.574"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2012,
+        "Access to electricity (% of population)": 69.1,
+        "Access to clean fuels and technologies for cooking (% of population)": 22.9,
+        "People using at least basic drinking water services (% of population)": "5.414.949",
+        "People using at least basic sanitation services (% of population)": "38.860.306"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2013,
+        "Access to electricity (% of population)": 68.0,
+        "Access to clean fuels and technologies for cooking (% of population)": 24.5,
+        "People using at least basic drinking water services (% of population)": "56.858.143",
+        "People using at least basic sanitation services (% of population)": "40.564.854"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2014,
+        "Access to electricity (% of population)": 89.5,
+        "Access to clean fuels and technologies for cooking (% of population)": 26.1,
+        "People using at least basic drinking water services (% of population)": "5.959.816",
+        "People using at least basic sanitation services (% of population)": "42.278.404"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2015,
+        "Access to electricity (% of population)": 71.5,
+        "Access to clean fuels and technologies for cooking (% of population)": 27.6,
+        "People using at least basic drinking water services (% of population)": "6.236.966",
+        "People using at least basic sanitation services (% of population)": "4.400.131"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2016,
+        "Access to electricity (% of population)": 97.7,
+        "Access to clean fuels and technologies for cooking (% of population)": 28.8,
+        "People using at least basic drinking water services (% of population)": "65.172.165",
+        "People using at least basic sanitation services (% of population)": "457.336"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2017,
+        "Access to electricity (% of population)": 97.7,
+        "Access to clean fuels and technologies for cooking (% of population)": 30.3,
+        "People using at least basic drinking water services (% of population)": "6.800.887",
+        "People using at least basic sanitation services (% of population)": "47.477.615"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2018,
+        "Access to electricity (% of population)": 93.4,
+        "Access to clean fuels and technologies for cooking (% of population)": 31.4,
+        "People using at least basic drinking water services (% of population)": "70.879.944",
+        "People using at least basic sanitation services (% of population)": "49.234.146"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2019,
+        "Access to electricity (% of population)": 97.7,
+        "Access to clean fuels and technologies for cooking (% of population)": 32.6,
+        "People using at least basic drinking water services (% of population)": "73.784.645",
+        "People using at least basic sanitation services (% of population)": "51.003.483"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2020,
+        "Access to electricity (% of population)": 97.7,
+        "Access to clean fuels and technologies for cooking (% of population)": 33.8,
+        "People using at least basic drinking water services (% of population)": "7.672.225",
+        "People using at least basic sanitation services (% of population)": "52.649.002"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2021,
+        "Access to electricity (% of population)": 97.7,
+        "Access to clean fuels and technologies for cooking (% of population)": 34.9,
+        "People using at least basic drinking water services (% of population)": "7.969.308",
+        "People using at least basic sanitation services (% of population)": "5.429.859"
+      },
+      {
+        "Entity": "Afghanistan",
+        "Code": "AFG",
+        "Year": 2022,
+        "Access to electricity (% of population)": 85.3,
+        "Access to clean fuels and technologies for cooking (% of population)": 36.1,
+        "People using at least basic drinking water services (% of population)": "8.217.537",
+        "People using at least basic sanitation services (% of population)": "55.951.942"
+      }
+    ]
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Access to electricity (% of population)",
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "Entity",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Year",
+        "type": "quantitative"
+      },
+      {
+        "field": "Access to electricity (% of population)",
+        "type": "quantitative"
+      },
+      {
+        "field": "Entity",
+        "type": "nominal"
+      }
+    ]
+  }
+}

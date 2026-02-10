@@ -1,0 +1,79 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "90_heatmap_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/89_Sleep_health_and_lifestyle_dataset_heatmap.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "subset the data by BMI Category to explore how stress level impacts sleep duration differently across weight groups.",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "Normal BMI Category: Stress levels 1–2 have minimal sleep duration variation; stress levels 3–8 show steady decline (8.4 → 6.1 hours)."
+        },
+        "key_insights": [
+          "Normal BMI Category: Stress levels 1–2 have minimal sleep duration variation; stress levels 3–8 show steady decline",
+          "Missing data for Obese (Stress Level 4) and Normal Weight (Stress Level 8) remains consistent across all subsets, confirming data gaps are subgroup-specific."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_cells",
+            "reasoning": "sequential subsetting isolates each BMI category to compare stress impacts"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_cells",
+            "reasoning": "filling the gap between a holistic view and nuanced, group-specific trend analysis."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_cells",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 6.4,
+                  "max_value": 8
+                }
+              }
+            },
+            {
+              "tool": "filter_cells",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 6.9,
+                  "max_value": 8
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Stress Level",
+            "y": "BMI Category",
+            "color": "Sleep Duration"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['Sleep Duration'] >= 6.4 && datum['Sleep Duration'] <= 8"
+            },
+            {
+              "filter": "datum['Sleep Duration'] >= 6.9 && datum['Sleep Duration'] <= 8"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

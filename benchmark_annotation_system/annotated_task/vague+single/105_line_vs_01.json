@@ -1,0 +1,67 @@
+{
+  "task_type": "vague_single",
+  "task_id": "105_line_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/105_gini_filter_line.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "what are the characteristics of the change of Gini coefficient of United Kingdom？",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "it fluctuated at the beiginning and then decreased for a long time,but increased a little at the end."
+        },
+        "key_insights": [
+          "it fluctuated from 1920 to 1941.",
+          "it decreased from 1941 and increased a little at the end"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_lines",
+            "reasoning": "Filtered out lines,and the line had two changing stages."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_lines",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "lines_to_remove": [
+                    "Austria",
+                    "Brazil",
+                    "China",
+                    "Egypt",
+                    "Italy",
+                    "Japan",
+                    "United States"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Gini coefficient of lifespan inequality - Sex: female",
+            "color": "Entity"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Austria\", \"Brazil\", \"China\", \"Egypt\", \"Italy\", \"Japan\", \"United States\"], datum['Entity']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

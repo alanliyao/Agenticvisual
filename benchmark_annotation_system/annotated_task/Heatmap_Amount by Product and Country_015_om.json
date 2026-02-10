@@ -1,0 +1,124 @@
+{
+  "benchmarks": [
+    {
+      "task_type": "open_ended_multi",
+      "chart_type": "heatmap",
+      "meta": {
+        "chart_type": "heatmap",
+        "title": "Heatmap: Amount by Product and Country",
+        "filename": "15_heatmap_Chocolate Sales.json",
+        "data_points": 3282,
+        "total_points": 3282,
+        "is_sampled": false,
+        "is_vega_full": false,
+        "sampling_info": null,
+        "collapse_info": null
+      },
+      "questions": [
+        {
+          "qid": "op_02",
+          "question": "Why do consumer preferences differ significantly between countries？",
+          "ground_truth": {
+            "answer": "Because each country is influenced by geographical environment, climate, and customs, this can lead to significant differences in the consumption of different types of chocolate products.",
+            "key_insights": [
+              "50% Dark Bites performs well in Australia.",
+              "There are clearly blockbuster products in the Indian market."
+            ],
+            "reasoning": [
+              {
+                "iteration": 1,
+                "tool": "highlight_region",
+                "reasoning": "Because it is evident from the provided heat map that this cell has the darkest colour, indicating the highest consumption."
+              },
+              {
+                "iteration": 2,
+                "tool": "highlight_region",
+                "reasoning": "India's 'Eclairs' and 'Raspberry Choco' are the darkest areas in the entire chart (close to 40), indicating that the sales/orders of these two products in India are much higher than other products, making them the core bestsellers locally."
+              }
+            ],
+            "tool_eval": {
+              "expected_tools": [
+                "highlight_region",
+                "highlight_region"
+              ],
+              "param_eval": [
+                {
+                  "tool": "highlight_region",
+                  "params": {
+                    "x_values": [
+                      "50% Dark Bites"
+                    ],
+                    "y_values": [
+                      "Australia"
+                    ]
+                  }
+                },
+                {
+                  "tool": "highlight_region",
+                  "params": {
+                    "x_values": [
+                      "Eclairs",
+                      "Spicy Special Slims"
+                    ],
+                    "y_values": [
+                      "India"
+                    ]
+                  }
+                }
+              ]
+            },
+            "state_eval": {
+              "encoding": {
+                "x": "Product",
+                "y": "Country",
+                "color": "Amount"
+              }
+            }
+          }
+        }
+      ],
+      "iterations": [
+        {
+          "tool_name": "highlight_region",
+          "parameters": {
+            "x_values": [
+              "50% Dark Bites"
+            ],
+            "y_values": [
+              "Australia"
+            ]
+          },
+          "result": {
+            "operation": "highlight_region",
+            "message": "Highlighted specified region"
+          },
+          "key_insights": [
+            "50% Dark Bites performs well in Australia."
+          ],
+          "reasoning": "Because it is evident from the provided heat map that this cell has the darkest colour, indicating the highest consumption."
+        },
+        {
+          "tool_name": "highlight_region",
+          "parameters": {
+            "x_values": [
+              "Eclairs",
+              "Spicy Special Slims"
+            ],
+            "y_values": [
+              "India"
+            ]
+          },
+          "result": {
+            "operation": "highlight_region",
+            "message": "Highlighted specified region"
+          },
+          "key_insights": [
+            "There are clearly blockbuster products in the Indian market."
+          ],
+          "reasoning": "India's 'Eclairs' and 'Raspberry Choco' are the darkest areas in the entire chart (close to 40), indicating that the sales/orders of these two products in India are much higher than other products, making them the core bestsellers locally."
+        }
+      ]
+    }
+  ],
+  "exported_at": "2026-01-22T15:51:16.580Z"
+}

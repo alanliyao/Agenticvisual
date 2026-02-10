@@ -1,0 +1,73 @@
+{
+  "task_type": "vague_single",
+  "task_id": "39_parallel_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/39_insurance_parallel (1).json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "Does the trend of changes in \"children\" and \"charges\" in the \"southeast\" region show a clear consistency?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "It was discovered that most of the data showed low charges, and thus it was concluded that the two were unrelated."
+        },
+        "key_insights": [
+          "find that no matter how many children they have, there charges are not very much"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_by_category",
+            "reasoning": "get the southeast area data"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "region",
+                  "values": [
+                    "southwest",
+                    "northwest",
+                    "northeast"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"southwest\",\"northwest\",\"northeast\"], datum['region']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

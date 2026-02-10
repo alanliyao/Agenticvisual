@@ -1,0 +1,96 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "84_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/84_starbucks_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "whether the coffee is a high calories drinks or not compare with the average value",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Coffee is a low calories drink",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data_summary",
+            "reasoning": "get the average calories is 193,9"
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_categorical",
+            "reasoning": "get the plot only have coffee dots"
+          },
+          {
+            "iteration": 3,
+            "tool": "get_data_summary",
+            "reasoning": "get the mean data is only 4"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            },
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "categories_to_remove": [
+                    "Classic Espresso Drinks",
+                    "Tazo® Tea Drinks",
+                    "Signature Espresso Drinks",
+                    "Shaken Iced Beverages",
+                    "Smoothies",
+                    "Frappuccino® Blended Coffee",
+                    "Frappuccino® Light Blended Coffee",
+                    "Frappuccino® Blended Crème"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "filter"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": " Sugars (g)",
+            "y": "Calories",
+            "color": "Beverage_category"
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"Classic Espresso Drinks\", \"Tazo\\u00ae Tea Drinks\", \"Signature Espresso Drinks\", \"Shaken Iced Beverages\", \"Smoothies\", \"Frappuccino\\u00ae Blended Coffee\", \"Frappuccino\\u00ae Light Blended Coffee\", \"Frappuccino\\u00ae Blended Cr\\u00e8me\"], datum['Beverage_category']) < 0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

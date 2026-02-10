@@ -1,0 +1,906 @@
+{
+  "filename": "06_parallel_penguins.json",
+  "spec_index": 5,
+  "current_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Parallel coordinate plot with embedded data",
+    "data": {
+      "values": [
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 39.1,
+          "Beak Depth (mm)": 18.7,
+          "Flipper Length (mm)": 181,
+          "Body Mass (g)": 3750
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 39.5,
+          "Beak Depth (mm)": 17.4,
+          "Flipper Length (mm)": 186,
+          "Body Mass (g)": 3800
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 40.3,
+          "Beak Depth (mm)": 18,
+          "Flipper Length (mm)": 195,
+          "Body Mass (g)": 3250
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 36.7,
+          "Beak Depth (mm)": 19.3,
+          "Flipper Length (mm)": 193,
+          "Body Mass (g)": 3450
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 39.3,
+          "Beak Depth (mm)": 20.6,
+          "Flipper Length (mm)": 190,
+          "Body Mass (g)": 3650
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 38.9,
+          "Beak Depth (mm)": 17.8,
+          "Flipper Length (mm)": 181,
+          "Body Mass (g)": 3625
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 39.2,
+          "Beak Depth (mm)": 19.6,
+          "Flipper Length (mm)": 195,
+          "Body Mass (g)": 4675
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 41.1,
+          "Beak Depth (mm)": 17.6,
+          "Flipper Length (mm)": 182,
+          "Body Mass (g)": 3200
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 38.6,
+          "Beak Depth (mm)": 21.2,
+          "Flipper Length (mm)": 191,
+          "Body Mass (g)": 3800
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 34.6,
+          "Beak Depth (mm)": 21.1,
+          "Flipper Length (mm)": 198,
+          "Body Mass (g)": 4400
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 46.5,
+          "Beak Depth (mm)": 17.9,
+          "Flipper Length (mm)": 192,
+          "Body Mass (g)": 3500
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 50,
+          "Beak Depth (mm)": 19.5,
+          "Flipper Length (mm)": 196,
+          "Body Mass (g)": 3900
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 51.3,
+          "Beak Depth (mm)": 19.2,
+          "Flipper Length (mm)": 193,
+          "Body Mass (g)": 3650
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 45.4,
+          "Beak Depth (mm)": 18.7,
+          "Flipper Length (mm)": 188,
+          "Body Mass (g)": 3525
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 52.7,
+          "Beak Depth (mm)": 19.8,
+          "Flipper Length (mm)": 197,
+          "Body Mass (g)": 3725
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 45.2,
+          "Beak Depth (mm)": 17.8,
+          "Flipper Length (mm)": 198,
+          "Body Mass (g)": 3950
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 46.1,
+          "Beak Depth (mm)": 18.2,
+          "Flipper Length (mm)": 178,
+          "Body Mass (g)": 3250
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 51.3,
+          "Beak Depth (mm)": 18.2,
+          "Flipper Length (mm)": 197,
+          "Body Mass (g)": 3750
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 46,
+          "Beak Depth (mm)": 18.9,
+          "Flipper Length (mm)": 195,
+          "Body Mass (g)": 4150
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 51.3,
+          "Beak Depth (mm)": 19.9,
+          "Flipper Length (mm)": 198,
+          "Body Mass (g)": 3700
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 46.1,
+          "Beak Depth (mm)": 13.2,
+          "Flipper Length (mm)": 211,
+          "Body Mass (g)": 4500
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 50,
+          "Beak Depth (mm)": 16.3,
+          "Flipper Length (mm)": 230,
+          "Body Mass (g)": 5700
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 48.7,
+          "Beak Depth (mm)": 14.1,
+          "Flipper Length (mm)": 210,
+          "Body Mass (g)": 4450
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 50,
+          "Beak Depth (mm)": 15.2,
+          "Flipper Length (mm)": 218,
+          "Body Mass (g)": 5700
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 47.6,
+          "Beak Depth (mm)": 14.5,
+          "Flipper Length (mm)": 215,
+          "Body Mass (g)": 5400
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 46.5,
+          "Beak Depth (mm)": 13.5,
+          "Flipper Length (mm)": 210,
+          "Body Mass (g)": 4550
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 45.4,
+          "Beak Depth (mm)": 14.6,
+          "Flipper Length (mm)": 211,
+          "Body Mass (g)": 4800
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 46.7,
+          "Beak Depth (mm)": 15.3,
+          "Flipper Length (mm)": 219,
+          "Body Mass (g)": 5200
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 43.3,
+          "Beak Depth (mm)": 13.4,
+          "Flipper Length (mm)": 209,
+          "Body Mass (g)": 4400
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 46.8,
+          "Beak Depth (mm)": 15.4,
+          "Flipper Length (mm)": 215,
+          "Body Mass (g)": 5150
+        }
+      ]
+    },
+    "width": 600,
+    "height": 300,
+    "transform": [
+      {
+        "window": [
+          {
+            "op": "count",
+            "as": "index"
+          }
+        ]
+      },
+      {
+        "fold": [
+          "Beak Length (mm)",
+          "Beak Depth (mm)",
+          "Flipper Length (mm)",
+          "Body Mass (g)"
+        ]
+      },
+      {
+        "joinaggregate": [
+          {
+            "op": "min",
+            "field": "value",
+            "as": "min"
+          },
+          {
+            "op": "max",
+            "field": "value",
+            "as": "max"
+          }
+        ],
+        "groupby": [
+          "key"
+        ]
+      },
+      {
+        "calculate": "(datum.value - datum.min) / (datum.max-datum.min)",
+        "as": "norm_val"
+      },
+      {
+        "calculate": "(datum.min + datum.max) / 2",
+        "as": "mid"
+      }
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "rule",
+          "color": "#ccc"
+        },
+        "encoding": {
+          "detail": {
+            "aggregate": "count"
+          },
+          "x": {
+            "field": "key"
+          }
+        }
+      },
+      {
+        "mark": "line",
+        "encoding": {
+          "color": {
+            "type": "nominal",
+            "field": "Species"
+          },
+          "detail": {
+            "type": "nominal",
+            "field": "index"
+          },
+          "opacity": {
+            "value": 0.3
+          },
+          "x": {
+            "type": "nominal",
+            "field": "key"
+          },
+          "y": {
+            "type": "quantitative",
+            "field": "norm_val",
+            "axis": null
+          },
+          "tooltip": [
+            {
+              "type": "quantitative",
+              "field": "Beak Length (mm)"
+            },
+            {
+              "type": "quantitative",
+              "field": "Beak Depth (mm)"
+            },
+            {
+              "type": "quantitative",
+              "field": "Flipper Length (mm)"
+            },
+            {
+              "type": "quantitative",
+              "field": "Body Mass (g)"
+            }
+          ]
+        }
+      },
+      {
+        "encoding": {
+          "x": {
+            "type": "nominal",
+            "field": "key"
+          },
+          "y": {
+            "value": 0
+          }
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "text",
+              "style": "label"
+            },
+            "encoding": {
+              "text": {
+                "aggregate": "max",
+                "field": "max"
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "tick",
+              "style": "tick",
+              "size": 8,
+              "color": "#ccc"
+            }
+          }
+        ]
+      },
+      {
+        "encoding": {
+          "x": {
+            "type": "nominal",
+            "field": "key"
+          },
+          "y": {
+            "value": 150
+          }
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "text",
+              "style": "label"
+            },
+            "encoding": {
+              "text": {
+                "aggregate": "min",
+                "field": "mid"
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "tick",
+              "style": "tick",
+              "size": 8,
+              "color": "#ccc"
+            }
+          }
+        ]
+      },
+      {
+        "encoding": {
+          "x": {
+            "type": "nominal",
+            "field": "key"
+          },
+          "y": {
+            "value": 300
+          }
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "text",
+              "style": "label"
+            },
+            "encoding": {
+              "text": {
+                "aggregate": "min",
+                "field": "min"
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "tick",
+              "style": "tick",
+              "size": 8,
+              "color": "#ccc"
+            }
+          }
+        ]
+      }
+    ],
+    "config": {
+      "axisX": {
+        "domain": false,
+        "labelAngle": 0,
+        "tickColor": "#ccc",
+        "title": null
+      },
+      "view": {
+        "stroke": null
+      },
+      "style": {
+        "label": {
+          "baseline": "middle",
+          "align": "right",
+          "dx": -5
+        },
+        "tick": {
+          "orient": "horizontal"
+        }
+      }
+    }
+  },
+  "original_spec": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Parallel coordinate plot with embedded data",
+    "data": {
+      "values": [
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 39.1,
+          "Beak Depth (mm)": 18.7,
+          "Flipper Length (mm)": 181,
+          "Body Mass (g)": 3750
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 39.5,
+          "Beak Depth (mm)": 17.4,
+          "Flipper Length (mm)": 186,
+          "Body Mass (g)": 3800
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 40.3,
+          "Beak Depth (mm)": 18,
+          "Flipper Length (mm)": 195,
+          "Body Mass (g)": 3250
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 36.7,
+          "Beak Depth (mm)": 19.3,
+          "Flipper Length (mm)": 193,
+          "Body Mass (g)": 3450
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 39.3,
+          "Beak Depth (mm)": 20.6,
+          "Flipper Length (mm)": 190,
+          "Body Mass (g)": 3650
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 38.9,
+          "Beak Depth (mm)": 17.8,
+          "Flipper Length (mm)": 181,
+          "Body Mass (g)": 3625
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 39.2,
+          "Beak Depth (mm)": 19.6,
+          "Flipper Length (mm)": 195,
+          "Body Mass (g)": 4675
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 41.1,
+          "Beak Depth (mm)": 17.6,
+          "Flipper Length (mm)": 182,
+          "Body Mass (g)": 3200
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 38.6,
+          "Beak Depth (mm)": 21.2,
+          "Flipper Length (mm)": 191,
+          "Body Mass (g)": 3800
+        },
+        {
+          "Species": "Adelie",
+          "Beak Length (mm)": 34.6,
+          "Beak Depth (mm)": 21.1,
+          "Flipper Length (mm)": 198,
+          "Body Mass (g)": 4400
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 46.5,
+          "Beak Depth (mm)": 17.9,
+          "Flipper Length (mm)": 192,
+          "Body Mass (g)": 3500
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 50,
+          "Beak Depth (mm)": 19.5,
+          "Flipper Length (mm)": 196,
+          "Body Mass (g)": 3900
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 51.3,
+          "Beak Depth (mm)": 19.2,
+          "Flipper Length (mm)": 193,
+          "Body Mass (g)": 3650
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 45.4,
+          "Beak Depth (mm)": 18.7,
+          "Flipper Length (mm)": 188,
+          "Body Mass (g)": 3525
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 52.7,
+          "Beak Depth (mm)": 19.8,
+          "Flipper Length (mm)": 197,
+          "Body Mass (g)": 3725
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 45.2,
+          "Beak Depth (mm)": 17.8,
+          "Flipper Length (mm)": 198,
+          "Body Mass (g)": 3950
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 46.1,
+          "Beak Depth (mm)": 18.2,
+          "Flipper Length (mm)": 178,
+          "Body Mass (g)": 3250
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 51.3,
+          "Beak Depth (mm)": 18.2,
+          "Flipper Length (mm)": 197,
+          "Body Mass (g)": 3750
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 46,
+          "Beak Depth (mm)": 18.9,
+          "Flipper Length (mm)": 195,
+          "Body Mass (g)": 4150
+        },
+        {
+          "Species": "Chinstrap",
+          "Beak Length (mm)": 51.3,
+          "Beak Depth (mm)": 19.9,
+          "Flipper Length (mm)": 198,
+          "Body Mass (g)": 3700
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 46.1,
+          "Beak Depth (mm)": 13.2,
+          "Flipper Length (mm)": 211,
+          "Body Mass (g)": 4500
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 50,
+          "Beak Depth (mm)": 16.3,
+          "Flipper Length (mm)": 230,
+          "Body Mass (g)": 5700
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 48.7,
+          "Beak Depth (mm)": 14.1,
+          "Flipper Length (mm)": 210,
+          "Body Mass (g)": 4450
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 50,
+          "Beak Depth (mm)": 15.2,
+          "Flipper Length (mm)": 218,
+          "Body Mass (g)": 5700
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 47.6,
+          "Beak Depth (mm)": 14.5,
+          "Flipper Length (mm)": 215,
+          "Body Mass (g)": 5400
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 46.5,
+          "Beak Depth (mm)": 13.5,
+          "Flipper Length (mm)": 210,
+          "Body Mass (g)": 4550
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 45.4,
+          "Beak Depth (mm)": 14.6,
+          "Flipper Length (mm)": 211,
+          "Body Mass (g)": 4800
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 46.7,
+          "Beak Depth (mm)": 15.3,
+          "Flipper Length (mm)": 219,
+          "Body Mass (g)": 5200
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 43.3,
+          "Beak Depth (mm)": 13.4,
+          "Flipper Length (mm)": 209,
+          "Body Mass (g)": 4400
+        },
+        {
+          "Species": "Gentoo",
+          "Beak Length (mm)": 46.8,
+          "Beak Depth (mm)": 15.4,
+          "Flipper Length (mm)": 215,
+          "Body Mass (g)": 5150
+        }
+      ]
+    },
+    "width": 600,
+    "height": 300,
+    "transform": [
+      {
+        "window": [
+          {
+            "op": "count",
+            "as": "index"
+          }
+        ]
+      },
+      {
+        "fold": [
+          "Beak Length (mm)",
+          "Beak Depth (mm)",
+          "Flipper Length (mm)",
+          "Body Mass (g)"
+        ]
+      },
+      {
+        "joinaggregate": [
+          {
+            "op": "min",
+            "field": "value",
+            "as": "min"
+          },
+          {
+            "op": "max",
+            "field": "value",
+            "as": "max"
+          }
+        ],
+        "groupby": [
+          "key"
+        ]
+      },
+      {
+        "calculate": "(datum.value - datum.min) / (datum.max-datum.min)",
+        "as": "norm_val"
+      },
+      {
+        "calculate": "(datum.min + datum.max) / 2",
+        "as": "mid"
+      }
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "rule",
+          "color": "#ccc"
+        },
+        "encoding": {
+          "detail": {
+            "aggregate": "count"
+          },
+          "x": {
+            "field": "key"
+          }
+        }
+      },
+      {
+        "mark": "line",
+        "encoding": {
+          "color": {
+            "type": "nominal",
+            "field": "Species"
+          },
+          "detail": {
+            "type": "nominal",
+            "field": "index"
+          },
+          "opacity": {
+            "value": 0.3
+          },
+          "x": {
+            "type": "nominal",
+            "field": "key"
+          },
+          "y": {
+            "type": "quantitative",
+            "field": "norm_val",
+            "axis": null
+          },
+          "tooltip": [
+            {
+              "type": "quantitative",
+              "field": "Beak Length (mm)"
+            },
+            {
+              "type": "quantitative",
+              "field": "Beak Depth (mm)"
+            },
+            {
+              "type": "quantitative",
+              "field": "Flipper Length (mm)"
+            },
+            {
+              "type": "quantitative",
+              "field": "Body Mass (g)"
+            }
+          ]
+        }
+      },
+      {
+        "encoding": {
+          "x": {
+            "type": "nominal",
+            "field": "key"
+          },
+          "y": {
+            "value": 0
+          }
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "text",
+              "style": "label"
+            },
+            "encoding": {
+              "text": {
+                "aggregate": "max",
+                "field": "max"
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "tick",
+              "style": "tick",
+              "size": 8,
+              "color": "#ccc"
+            }
+          }
+        ]
+      },
+      {
+        "encoding": {
+          "x": {
+            "type": "nominal",
+            "field": "key"
+          },
+          "y": {
+            "value": 150
+          }
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "text",
+              "style": "label"
+            },
+            "encoding": {
+              "text": {
+                "aggregate": "min",
+                "field": "mid"
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "tick",
+              "style": "tick",
+              "size": 8,
+              "color": "#ccc"
+            }
+          }
+        ]
+      },
+      {
+        "encoding": {
+          "x": {
+            "type": "nominal",
+            "field": "key"
+          },
+          "y": {
+            "value": 300
+          }
+        },
+        "layer": [
+          {
+            "mark": {
+              "type": "text",
+              "style": "label"
+            },
+            "encoding": {
+              "text": {
+                "aggregate": "min",
+                "field": "min"
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "tick",
+              "style": "tick",
+              "size": 8,
+              "color": "#ccc"
+            }
+          }
+        ]
+      }
+    ],
+    "config": {
+      "axisX": {
+        "domain": false,
+        "labelAngle": 0,
+        "tickColor": "#ccc",
+        "title": null
+      },
+      "view": {
+        "stroke": null
+      },
+      "style": {
+        "label": {
+          "baseline": "middle",
+          "align": "right",
+          "dx": -5
+        },
+        "tick": {
+          "orient": "horizontal"
+        }
+      }
+    }
+  },
+  "spec_history": [],
+  "iterations": [],
+  "current_question": "",
+  "current_answer": "",
+  "task_type": "clear_single",
+  "chart_type": "parallel",
+  "chart_meta": {
+    "chart_type": "parallel",
+    "title": "06_parallel_penguins",
+    "filename": "06_parallel_penguins.json",
+    "data_points": 30,
+    "total_points": 30,
+    "is_sampled": false,
+    "is_vega_full": false,
+    "sampling_info": null,
+    "collapse_info": null
+  },
+  "updated_at": "2026-01-28T14:57:23.010075Z"
+}

@@ -1,0 +1,73 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "92_sankey_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/92_sankey_b2b.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "filter to exclude SDR Cold Call leads, then highlight the flow from Old Customer Referral to identify which product lines it contributes to most significantly.",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": " Maintenance Service and Enterprise SaaS Platform.",
+          "alternatives": []
+        },
+        "key_insights": [
+          "Channel Partner still being the dominant lead source",
+          "has a notable but smaller contribution to the API Open Platform"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_flow",
+            "reasoning": "eliminates a low-volume lead source to reduce visual noise, improving the clarity of the remaining data"
+          },
+          {
+            "iteration": 2,
+            "tool": "highlight_path",
+            "reasoning": "because overlapping flows in the original view obscure the Old Customer Referral flow"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_flow",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "min_value": 2850
+                }
+              }
+            },
+            {
+              "tool": "highlight_path",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "path": [
+                    "Old Customer Referral",
+                    "Enterprise SaaS Platform"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

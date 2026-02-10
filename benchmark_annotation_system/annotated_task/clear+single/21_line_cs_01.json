@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "21_line_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/21_Number of trees sold over Yea_line.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "How many abnormal number of tree sold values are there?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "0",
+          "tolerance": 0.05
+        },
+        "key_insights": [
+          "The view shows no highlighted changes, indicating no outliers in number of tree sold values within two standard deviations."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "detect_anomalies",
+            "reasoning": "Using the detect anomalies function reveals no number of tree sold outliers within the two-standard-deviation offset range, so the answer is 0. No further tool invocation is required."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "detect_anomalies",
+              "param_eval": {
+                "type": "numeric",
+                "param": "threshold",
+                "target": 2,
+                "tolerance": 0.1
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Year",
+            "y": "Number of trees sold",
+            "color": "Type of tree"
+          }
+        }
+      }
+    }
+  ]
+}

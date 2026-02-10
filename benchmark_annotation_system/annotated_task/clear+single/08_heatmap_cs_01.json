@@ -1,0 +1,53 @@
+{
+  "task_type": "clear_single",
+  "task_id": "08_heatmap_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/08_heatmap_synthetic_mental_health.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Which combination resulted in the longest average sleep duration?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "sunney weather and poor diet_quality",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "find_extremes",
+            "reasoning": "find the answer"
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "find_extremes",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "top_n": 1,
+                  "mode": "max"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "diet_quality",
+            "y": "weather",
+            "color": "sleep_hours"
+          }
+        }
+      }
+    }
+  ]
+}

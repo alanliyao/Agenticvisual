@@ -1,0 +1,216 @@
+{
+  "task_type": "clear_single",
+  "task_id": "34_scatter",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/34_bmw_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "Use the show regression tool with the linear method to display the trend line. What is the direction of the relationship between price and mpg?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": "Negative.",
+        "key_insights": [
+          "The regression line slopes downward from left to right indicating an inverse relationship.",
+          "Most data points are concentrated in the lower left region representing low price and moderate mpg.",
+          "There are a few high price outliers but they follow the general trend of having lower mpg."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "show_regression",
+            "reasoning": "Visually estimating the correlation in a scattered cloud of points can be subjective especially with outliers present. Adding a linear regression line mathematically summarizes the trend providing a definitive visual confirmation that as price increases fuel efficiency generally decreases."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "show_regression",
+              "param_eval": {
+                "method": "linear"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": null,
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 2,
+            "types": [
+              "point",
+              "line"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "qid": "cm_02",
+      "question": "First use filter categorical to remove Automatic and Semi Auto cars keeping only Manual ones. Second use calculate correlation with the pearson method. Is the correlation coefficient value negative?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": "Yes.",
+        "key_insights": [
+          "The scatter plot becomes much sparser as the majority of cars which are Automatic are removed.",
+          "The remaining Manual cars are clustered almost exclusively in the lower price range.",
+          "The high price luxury segment disappears entirely as these vehicles do not typically have manual transmissions.",
+          "A correlation coefficient value appears confirming the negative relationship.",
+          "The value provides a precise metric for the strength of the relationship which might be weaker than the total dataset due to the narrower price range.",
+          "It confirms that even within the economy manual segment paying more still tends to yield lower mpg."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_categorical",
+            "reasoning": "Transmission type is a major variable in car pricing. To analyze the relationship specifically for manual transmission vehicles we must remove the other types that would confound the data and obscure the specific trend we are looking for."
+          },
+          {
+            "iteration": 2,
+            "tool": "calculate_correlation",
+            "reasoning": "While the visual trend suggested a negative relationship calculating the Pearson correlation provides a statistical confirmation. This ensures the observation is supported by data and allows for a quantitative assessment of the tradeoff between price and efficiency in manual cars."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_categorical",
+              "param_eval": {
+                "categories_to_remove": [
+                  "Automatic",
+                  "Semi-Auto"
+                ]
+              }
+            },
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "method": "pearson"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "price",
+            "y": "mpg",
+            "color": "transmission"
+          }
+        }
+      }
+    },
+    {
+      "qid": "vs_01",
+      "question": "Use the identify clusters tool with 3 clusters and the kmeans method to group the data. How does the cluster containing the most expensive cars differ from the other groups?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": "The cluster with the expensive cars is distinct for having consistently low mpg values while the other clusters cover a wider range of efficiencies at lower prices.",
+        "key_insights": [
+          "The algorithm separates the data into distinct zones likely splitting the mass market from the luxury market.",
+          "The high price cluster is very flat on the y axis indicating that luxury cars uniformly suffer from poor fuel economy.",
+          "The low price clusters show much more vertical variance meaning affordable cars come in both high and low efficiency varieties."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "identify_clusters",
+            "reasoning": "The dataset contains thousands of overlapping points making it difficult to spot natural groupings manually. Using k means clustering automatically segments the data based on price and mpg proximity revealing distinct market behaviors that define the economy versus luxury sectors."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "identify_clusters",
+              "param_eval": {
+                "n_clusters": 3,
+                "method": "kmeans"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "price",
+            "y": "mpg",
+            "color": "cluster_3"
+          }
+        }
+      }
+    },
+    {
+      "qid": "vm_02",
+      "question": "First use the zoom dense area tool to focus on the main market segment (X range 0 to 40000, Y range 0 to 100). Second, use the change encoding tool to map the color channel to the fuelType field. What are the distinct efficiency characteristics of the different fuel types in the mass market?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": "The market is strictly stratified by fuel technology: Petrol cars occupy the low-efficiency tier (<50 mpg), Diesel cars form a distinct middle tier (50-75 mpg), and Hybrids sit at the very top (>80 mpg) as high-efficiency outliers.",
+        "key_insights": [
+          "The view focuses on the dense blob at the bottom left resolving the heavy overplotting.",
+          "We can now distinguish individual data points that were previously hidden.",
+          "The extreme outliers are excluded allowing for a detailed inspection of the vehicles that represent the majority of sales.",
+          "Strict Efficiency Stratification: There is a sharp visual separation between the fuel types. Petrol cars are almost entirely confined to the bottom band (30-50 mpg), while Diesel cars form a distinct upper band (50-75 mpg).",
+          "The Hybrid Gap: Hybrids appear as isolated outliers at the absolute top of the chart (>80 mpg), visibly separated from the main cluster, indicating a massive efficiency leap that even the best Diesels cannot match.",
+          "Price-Efficiency Stability in Diesels: Unlike the Petrol group, which shows a slight downward trend (lower mpg as price increases), the Diesel cluster is relatively flat across the price spectrum. This suggests that paying more for a Diesel car does not penalize fuel economy as significantly as it does for Petrol cars."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "The default view is dominated by a few high price outliers which compresses the bulk of the data into a small unreadable area. Zooming into the defined coordinates spreads out the mass market data enabling a meaningful analysis of the most common car configurations."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "Changing the encoding to  transforms the scatter plot from a simple correlation view into a decision-making tool. It reveals that the vertical variance in MPG is not random but structural. This proves to the user that if their goal is >50 MPG, they must switch technologies from Petrol to Diesel or Hybrid, as no amount of searching within the Petrol segment will yield those results."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "x_range": [
+                  577.7780532836914,
+                  39866.67079925537
+                ],
+                "y_range": [
+                  3.7499999999999756,
+                  97.08328247070314
+                ]
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "field": "fuelType",
+                "channel": "color"
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              577.7780532836914,
+              39866.67079925537
+            ],
+            "y": [
+              3.7499999999999756,
+              97.08328247070314
+            ]
+          },
+          "encoding": {
+            "x": "price",
+            "y": "mpg",
+            "color": "fuelType"
+          }
+        }
+      }
+    }
+  ]
+}
