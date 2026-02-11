@@ -48,3 +48,6 @@ bert-score>=0.3.13  # BERTScore for semantic answer matching
 #    - Python方式（推荐）：已包含 vl-convert-python
 #    - Node.js方式：npm install -g vega vega-lite vega-cli canvas
 streamlit>=1.28.0
+
+
+#Test push --Zixin 20260211 
