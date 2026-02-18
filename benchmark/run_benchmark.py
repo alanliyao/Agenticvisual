@@ -941,6 +941,8 @@ async def run_task_async(
     with open(result_path, "w", encoding="utf-8") as f:
         json.dump(final_result, f, indent=2, ensure_ascii=False)
     
+    final_result["_output_dir"] = str(out_path)
+    
     print("-" * 50)
     print(f"Results saved to: {result_path}")
     print(f"Success: {final_result['success_count']}/{len(questions)}")
@@ -1009,11 +1011,12 @@ def main():
             import traceback
             traceback.print_exc()
     
-    # Evaluation
+    # Evaluation (run when --eval, always save results to output dir)
     if args.eval and all_results:
         print("\n" + "=" * 50)
         print("Running evaluation...")
         from benchmark.evaluators import UnifiedEvaluator
+        from benchmark.run_evaluation import result_to_dict
         
         evaluator = UnifiedEvaluator()
         task_config = load_task(args.task)
@@ -1021,6 +1024,7 @@ def main():
         for result in all_results:
             if result.get("results"):
                 print(f"\nModel: {result['model_name']}")
+                eval_results_list = []
                 for i, q_result in enumerate(result["results"]):
                     if q_result.get("success"):
                         # Build evaluation input
@@ -1035,10 +1039,38 @@ def main():
                         }
                         
                         eval_result = evaluator.evaluate_task(task_config, agent_result, i)
-                        print(f"  {q_result['qid']}: answer={eval_result.answer_score:.2f}, "
-                              f"tool={eval_result.tool_score:.2f}, "
-                              f"state={eval_result.state_score:.2f}, "
-                              f"total={eval_result.total_score:.2f}")
+                        qid = q_result.get("qid", f"q_{i}")
+                        line = f"  {qid}: answer={eval_result.answer_score:.2f}, " \
+                               f"tool={eval_result.tool_score:.2f}, " \
+                               f"reasoning={eval_result.reasoning_score:.2f}, " \
+                               f"state={eval_result.state_score:.2f}, " \
+                               f"total={eval_result.total_score:.2f}"
+                        jr = eval_result.agent_judge_result
+                        if eval_result.agent_judge_triggered and jr:
+                            line += f"\n    [Judge] {jr.get('verdict','')} " \
+                                    f"adjusted={jr.get('adjusted_score', jr.get('final_score', 0)):.2f}"
+                            if jr.get("reasoning"):
+                                line += f"\n    Reasoning: {jr['reasoning'][:150]}{'...' if len(jr.get('reasoning',''))>150 else ''}"
+                        print(line)
+                        d = result_to_dict(eval_result)
+                        d["qid"] = qid
+                        d["question_idx"] = i
+                        eval_results_list.append(d)
+                    else:
+                        eval_results_list.append({"qid": q_result.get("qid", f"q_{i}"), "success": False})
+                
+                # Save eval results to output dir (alongside result.json)
+                output_dir = result.get("_output_dir")
+                if output_dir and eval_results_list:
+                    eval_path = Path(output_dir) / "eval_result.json"
+                    with open(eval_path, "w", encoding="utf-8") as f:
+                        json.dump({
+                            "model": result.get("model_name", result.get("model", "")),
+                            "task_id": result.get("task_id", ""),
+                            "timestamp": datetime.now().isoformat(),
+                            "results": eval_results_list
+                        }, f, indent=2, ensure_ascii=False)
+                    print(f"  Evaluation saved to: {eval_path}")
 
 
 if __name__ == "__main__":

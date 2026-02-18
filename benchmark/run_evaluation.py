@@ -41,22 +41,28 @@ def save_json(data: Dict, path: str):
 
 def result_to_dict(result: UnifiedEvalResult) -> Dict:
     """Convert UnifiedEvalResult to dict"""
-    return {
+    d = {
         "task_type": result.task_type,
         "question_id": result.question_id,
         "scores": {
             "answer": result.answer_score,
             "tool": result.tool_score,
+            "reasoning": result.reasoning_score,
+            "tool_reasoning": result.tool_reasoning_score,
             "state": result.state_score,
             "total": result.total_score
         },
         "details": {
             "answer": result.answer_details,
             "tool": result.tool_details,
+            "reasoning": result.reasoning_details,
             "state": result.state_details
         },
-        "eval_weights": result.eval_weights
+        "eval_weights": result.eval_weights,
+        "agent_judge_triggered": result.agent_judge_triggered,
+        "agent_judge_result": result.agent_judge_result
     }
+    return d
 
 
 def evaluate_single(task_path: str,
@@ -88,20 +94,33 @@ def evaluate_single(task_path: str,
     r = evaluator.evaluate_task(task_config, agent_result, question_idx)
     
     if verbose:
-        print(f"\n{'='*60}")
-        print(f"Evaluation Results: {Path(result_path).stem} (Q{question_idx})")
-        print(f"{'='*60}")
-        print(f"Task Type: {r.task_type}")
-        print(f"Question ID: {r.question_id}")
-        print(f"\nScores:")
-        print(f"  Answer:  {r.answer_score:.3f}")
-        print(f"  Tool:    {r.tool_score:.3f}")
-        print(f"  State:   {r.state_score:.3f}")
-        print(f"  Total:   {r.total_score:.3f}")
-        print(f"\nWeights: tool_call={r.eval_weights.get('tool_call', 0.6)}, "
-              f"final_state={r.eval_weights.get('final_state', 0.4)}")
+        _print_eval_result(r, Path(result_path).stem, question_idx)
     
     return r
+
+
+def _print_eval_result(r: UnifiedEvalResult, stem: str = "", qidx: int = 0) -> None:
+    """Print evaluation result with scores and Agent-as-Judge reasoning when present."""
+    print(f"\n{'='*60}")
+    print(f"Evaluation Results: {stem} (Q{qidx})" if stem else f"Evaluation Results (Q{qidx})")
+    print(f"{'='*60}")
+    print(f"Task Type: {r.task_type}")
+    print(f"Question ID: {r.question_id}")
+    print(f"\nScores:")
+    print(f"  Answer:          {r.answer_score:.3f}")
+    print(f"  Tool:            {r.tool_score:.3f}")
+    print(f"  Reasoning:       {r.reasoning_score:.3f}")
+    print(f"  Tool+Reasoning:  {r.tool_reasoning_score:.3f}")
+    print(f"  State:           {r.state_score:.3f}")
+    print(f"  Total:           {r.total_score:.3f}")
+    if r.agent_judge_triggered and r.agent_judge_result:
+        j = r.agent_judge_result
+        print(f"\nAgent-as-Judge:")
+        print(f"  Verdict: {j.get('verdict', 'N/A')}")
+        print(f"  Adjusted: {j.get('adjusted_score', j.get('final_score', 0)):.3f}")
+        if j.get("reasoning"):
+            print(f"  Reasoning: {j['reasoning']}")
+    print(f"\nWeights: {r.eval_weights}")
 
 
 def evaluate(task_path: str,
@@ -141,7 +160,7 @@ def evaluate(task_path: str,
         print(f"Evaluating {n} questions...\n")
     
     out: List[Dict] = []
-    scores: Dict[str, List[float]] = {"answer": [], "tool": [], "state": [], "total": []}
+    scores: Dict[str, List[float]] = {"answer": [], "tool": [], "reasoning": [], "tool_reasoning": [], "state": [], "total": []}
     
     for i in range(n):
         r = evaluate_single(task_path, result_path, question_idx=i, verbose=False)
@@ -154,15 +173,21 @@ def evaluate(task_path: str,
         
         if verbose:
             sid = d["qid"]
-            print(f"  {sid}: answer={d['scores']['answer']:.2f}, tool={d['scores']['tool']:.2f}, "
-                  f"state={d['scores']['state']:.2f}, total={d['scores']['total']:.2f}")
+            line = f"  {sid}: answer={d['scores']['answer']:.2f}, tool={d['scores']['tool']:.2f}, " \
+                   f"reasoning={d['scores']['reasoning']:.2f}, state={d['scores']['state']:.2f}, " \
+                   f"total={d['scores']['total']:.2f}"
+            jr = d.get("agent_judge_result")
+            if jr and jr.get("reasoning"):
+                line += f"\n    [Judge] {jr.get('verdict', '')} | {jr.get('reasoning', '')[:120]}..."
+            print(line)
     
     avg = {k: (sum(scores[k]) / len(scores[k])) if scores[k] else 0.0 for k in scores}
     
     if verbose:
         print(f"\n--- Summary ({n} questions) ---")
         print(f"  Avg Answer: {avg['answer']:.3f}  Avg Tool: {avg['tool']:.3f}  "
-              f"Avg State: {avg['state']:.3f}  Avg Total: {avg['total']:.3f}")
+              f"Avg Reasoning: {avg['reasoning']:.3f}  Avg State: {avg['state']:.3f}  "
+              f"Avg Total: {avg['total']:.3f}")
     
     return out
 
@@ -310,6 +335,8 @@ def compute_summary(results: List[Dict]) -> Dict:
         scores = {
             "answer": [r["scores"]["answer"] for r in type_results],
             "tool": [r["scores"]["tool"] for r in type_results],
+            "reasoning": [r["scores"]["reasoning"] for r in type_results],
+            "tool_reasoning": [r["scores"]["tool_reasoning"] for r in type_results],
             "state": [r["scores"]["state"] for r in type_results],
             "total": [r["scores"]["total"] for r in type_results]
         }
@@ -329,86 +356,7 @@ def compute_summary(results: List[Dict]) -> Dict:
     return summary
 
 
-def run_demo_test(verbose: bool = True):
-    """
-    Run a demo test with synthetic agent result.
-    
-    Creates a mock agent result and evaluates against scatter_cars_001 task.
-    """
-    # Paths
-    benchmark_dir = Path(__file__).parent
-    task_path = benchmark_dir / "tasks" / "objective" / "clear+single" / "scatter_cars_001.json"
-    
-    if not task_path.exists():
-        print(f"Task file not found: {task_path}")
-        return
-    
-    # Create synthetic agent result
-    mock_agent_result = {
-        "answer": "Japan",
-        "final_answer": "Japan",
-        "tool_calls": [
-            {
-                "name": "zoom_dense_area",
-                "params": {
-                    "x_range": [65, 115],
-                    "y_range": [28, 42]
-                }
-            }
-        ],
-        "final_spec": {
-            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "encoding": {
-                "x": {
-                    "field": "Horsepower",
-                    "type": "quantitative",
-                    "scale": {"domain": [65, 115]}
-                },
-                "y": {
-                    "field": "Miles_per_Gallon",
-                    "type": "quantitative",
-                    "scale": {"domain": [28, 42]}
-                },
-                "color": {
-                    "field": "Origin",
-                    "type": "nominal"
-                }
-            }
-        }
-    }
-    
-    # Save mock result temporarily
-    mock_result_path = benchmark_dir / "results" / "_demo_test_result.json"
-    mock_result_path.parent.mkdir(parents=True, exist_ok=True)
-    save_json(mock_agent_result, str(mock_result_path))
-    
-    try:
-        results = evaluate(
-            str(task_path),
-            str(mock_result_path),
-            verbose=verbose
-        )
-        if not results:
-            return None
-        
-        r = results[0]
-        if verbose:
-            print("\n" + "-"*40)
-            print("Demo test completed successfully!")
-            print(f"Overall Score: {r['scores']['total']:.3f}")
-            print("\n--- Answer Details ---")
-            print(json.dumps(r["details"]["answer"], indent=2))
-            print("\n--- Tool Details ---")
-            print(json.dumps(r["details"]["tool"], indent=2))
-            print("\n--- State Details ---")
-            print(json.dumps(r["details"]["state"], indent=2))
-        
-        return r
-        
-    finally:
-        # Cleanup
-        if mock_result_path.exists():
-            mock_result_path.unlink()
+
 
 
 def main():
@@ -416,7 +364,7 @@ def main():
     parser.add_argument("--task", type=str, help="Path to task configuration JSON")
     parser.add_argument("--result", type=str, help="Path to agent result JSON")
     parser.add_argument("--output", "-o", type=str, default=None,
-                        help="Save full result JSON to this path (do not print to stdout)")
+                        help="Override default eval save path (default: <result_stem>_eval.json)")
     
     parser.add_argument("--batch", action="store_true", help="Run batch evaluation")
     parser.add_argument("--tasks-dir", type=str, help="Directory with task configs")
@@ -428,11 +376,8 @@ def main():
     
     args = parser.parse_args()
     verbose = not args.quiet
-    
-    if args.demo:
-        run_demo_test(verbose=verbose)
         
-    elif args.batch:
+    if args.batch:
         if not args.tasks_dir or not args.results_dir:
             print("Error: --batch requires --tasks-dir and --results-dir")
             return
@@ -457,16 +402,14 @@ def main():
             args.result,
             verbose=verbose
         )
-        out_path = args.output
-        if out_path:
-            out_path = Path(out_path)
-            out_path.parent.mkdir(parents=True, exist_ok=True)
-            save_json(results, str(out_path))
-            if verbose:
-                print(f"\nFull result saved to: {out_path.resolve()}")
-        else:
-            print("\n--- Full Result (JSON) ---")
-            print(json.dumps(results, indent=2, ensure_ascii=False))
+        # Always save to default path if no -o specified; -o overrides
+        result_path = Path(args.result)
+        default_eval_path = result_path.parent / f"{result_path.stem}_eval.json"
+        out_path = Path(args.output) if args.output else default_eval_path
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        save_json(results, str(out_path))
+        if verbose:
+            print(f"\nEvaluation results saved to: {out_path.resolve()}")
         
     else:
         parser.print_help()
@@ -474,5 +417,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

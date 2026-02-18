@@ -284,13 +284,11 @@ class StateEvaluator:
         # data_filtered - for filter operations
         if "data_filtered" in expected_state:
             df = expected_state["data_filtered"]
-            # 兼容 list 格式 [{"filter": "..."}, ...]：取首项
-            expected_df = df[0] if isinstance(df, list) and len(df) else df
-            if isinstance(expected_df, dict):
-                score, result = self._eval_data_filtered(actual_state, expected_df)
-                scores.append(score)
-                details["data_filtered"] = result
-            # 若格式不对则跳过，不报错
+            # GT format is a list of filter dicts: [{"filter": "..."}, ...]
+            expected_filters = df if isinstance(df, list) else [df]
+            score, result = self._eval_data_filtered(actual_state, expected_filters)
+            scores.append(score)
+            details["data_filtered"] = result
         
         # layers - for regression_line, marginal_bars
         if "layers" in expected_state:
@@ -549,31 +547,47 @@ class StateEvaluator:
         
         return total_score, results
     
-    def _eval_data_filtered(self, actual_state: Dict, expected: Dict) -> Tuple[float, Dict]:
+    def _eval_data_filtered(self, actual_state: Dict, expected_filters: List[Dict]) -> Tuple[float, Dict]:
         """
-        Evaluate data filtering.
-        Used for: All chart types with filter operations
+        Evaluate data filtering by comparing filter expressions.
+        
+        For each GT filter expression, check if the actual filter conditions
+        contain the same content (simple string containment on the full
+        GT expression against the concatenated actual conditions).
+        
+        Args:
+            actual_state: extracted state from actual spec
+            expected_filters: [{"filter": "<expression>"}, ...]
         """
-        removed_categories = expected.get("removed_categories", [])
-        field = expected.get("field", "")
-        
-        # Check if filter transform exists
-        has_filter = actual_state.get("has_filter", False)
-        
-        if not has_filter:
-            return 0.0, {"error": "No filter transform found", "expected_removed": removed_categories}
-        
-        # Check filter conditions
-        filter_conditions = actual_state.get("filter_conditions", [])
-        
-        # Score based on filter existence
-        score = 1.0 if has_filter else 0.0
-        
+        if not actual_state.get("has_filter", False):
+            return 0.0, {"error": "No filter transform found"}
+
+        actual_conditions = actual_state.get("filter_conditions", [])
+        # Concatenate all actual filter conditions into one searchable string
+        actual_combined = " ".join(str(c).lower() for c in actual_conditions)
+
+        # For each GT filter, extract the category values mentioned and check coverage
+        gt_categories = []
+        for f in expected_filters:
+            expr = f.get("filter", "")
+            # Extract double-quoted values from GT expression (category names)
+            values = re.findall(r'"([^"]+)"', expr.replace('\\"', '"'))
+            gt_categories.extend(v.lower() for v in values)
+
+        if not gt_categories:
+            return 1.0, {"has_filter": True, "note": "no GT categories to check"}
+
+        # Check how many GT categories appear in the actual filter
+        found = [cat for cat in gt_categories if cat in actual_combined]
+        missing = [cat for cat in gt_categories if cat not in actual_combined]
+        score = len(found) / len(gt_categories)
+
         return score, {
-            "has_filter": has_filter,
-            "filter_conditions": filter_conditions,
-            "expected_removed": removed_categories,
-            "expected_field": field
+            "has_filter": True,
+            "gt_categories": gt_categories,
+            "found": found,
+            "missing": missing,
+            "coverage": score
         }
     
     def _eval_layers(self, actual_state: Dict, expected: Dict) -> Tuple[float, Dict]:
@@ -1362,16 +1376,52 @@ class StateEvaluator:
     # ==================== Helper methods ====================
     
     def _extract_selection_region(self, spec: Dict) -> Optional[Dict]:
-        """Extract selection region from spec params"""
+        """
+        Extract selection region from spec params.
+        
+        FIX: Actually implemented instead of returning None.
+        Looks for interval selection params with domain values.
+        """
         params = spec.get("params", [])
         
         for param in params:
             if isinstance(param, dict):
                 select = param.get("select", {})
-                if isinstance(select, dict):
-                    if select.get("type") == "interval":
-                        encodings = select.get("encodings", [])
-                        pass
+                if isinstance(select, dict) and select.get("type") == "interval":
+                    # Try to get region from param value
+                    value = param.get("value", {})
+                    if isinstance(value, dict):
+                        region = {}
+                        if "x" in value:
+                            region["x"] = value["x"]
+                        if "y" in value:
+                            region["y"] = value["y"]
+                        if region:
+                            return region
+                    
+                    # Try to get from encodings + scale domain
+                    encodings = select.get("encodings", [])
+                    encoding = spec.get("encoding", {})
+                    region = {}
+                    for enc in encodings:
+                        if enc in encoding:
+                            domain = encoding[enc].get("scale", {}).get("domain")
+                            if domain and isinstance(domain, list) and len(domain) >= 2:
+                                region[enc] = domain
+                    if region:
+                        return region
+        
+        # Fallback: check if spec has selection store in data
+        for layer in spec.get("layer", []):
+            if isinstance(layer, dict):
+                layer_params = layer.get("params", [])
+                for param in layer_params:
+                    if isinstance(param, dict):
+                        select = param.get("select", {})
+                        if isinstance(select, dict) and select.get("type") == "interval":
+                            value = param.get("value", {})
+                            if isinstance(value, dict) and ("x" in value or "y" in value):
+                                return value
         
         return None
     
