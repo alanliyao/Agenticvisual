@@ -6,8 +6,24 @@ benchmark 脚本可以通过 --model 参数选择。
 """
 
 import os
+import sys
+from pathlib import Path
 from typing import Dict, Any, Optional
 from dataclasses import dataclass
+
+# 加载 .env 文件（从项目根目录）
+try:
+    from dotenv import load_dotenv
+    # 找到项目根目录（当前文件的上级目录）
+    project_root = Path(__file__).parent.parent
+    env_path = project_root / ".env"
+    if env_path.exists():
+        load_dotenv(env_path)
+        print(f"[配置] 已加载 .env 文件: {env_path}")
+    else:
+        print(f"[警告] 未找到 .env 文件: {env_path}")
+except ImportError:
+    print("[警告] 未安装 python-dotenv，跳过 .env 加载")
 
 
 @dataclass
