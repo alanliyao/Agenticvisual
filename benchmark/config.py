@@ -88,6 +88,7 @@ MODELS: Dict[str, ModelConfig] = {
         base_url="https://openrouter.ai/api/v1",
         model="qwen/qwen3-vl-235b-a22b-instruct",
         api_key_env="OPENROUTER_API_KEY",
+        tool_choice_format="string",  # Qwen 需要字符串格式
     ),
     
     # Grok (via OAI Pro)

@@ -39,7 +39,7 @@ from core.vega_service import get_vega_service
 CLAUDE_CONFIG = {
     'api_key_env': 'OPENROUTER_API_KEY',
     'base_url': 'https://api.oaipro.com/v1',
-    'model': 'claude-sonnet-4-20250514',
+    'model': 'anthropic/claude-3-5-sonnet-20241022',
     'max_iterations': 8,
     'temperature': 0,
     'timeout': 180,
@@ -660,7 +660,7 @@ def main():
     
     parser = argparse.ArgumentParser(description='Claude Benchmark Test (New Format)')
     parser.add_argument('task_path', help='Path to benchmark task JSON file')
-    parser.add_argument('--model', default='claude-sonnet-4-20250514',
+    parser.add_argument('--model', default='anthropic/claude-3-opus-20240229',
                         help='Claude model name')
     parser.add_argument('--max-iterations', type=int, default=8)
     parser.add_argument('--base-url', default='https://openrouter.ai/api/v1',

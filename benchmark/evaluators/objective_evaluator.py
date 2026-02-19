@@ -108,7 +108,7 @@ Respond with ONLY "CORRECT" or "INCORRECT" on a single line."""
             model=self.model,
             messages=[{"role": "user", "content": judge_prompt}],
             temperature=0.0,
-            max_tokens=10
+            max_tokens=50
         )
 
         judgment = response.choices[0].message.content.strip().upper()

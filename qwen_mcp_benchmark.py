@@ -283,14 +283,35 @@ async def run_benchmark_async(task_path: str) -> dict:
         task = json.load(f)
     
     task_id = task['task_id']
-    vega_spec_path = task['task']['initial_visualization']['vega_spec_path']
+    
+    # 兼容新旧两种格式
+    if 'task' in task and 'initial_visualization' in task['task']:
+        # 旧格式
+        vega_spec_path = task['task']['initial_visualization']['vega_spec_path']
+        query = task['task']['query']
+        chart_type = task.get('metadata', {}).get('chart_type', 'scatter_plot')
+        questions = [{'question': query, 'qid': 'q1', 'ground_truth': task.get('ground_truth', {})}]
+    else:
+        # 新格式 (01_scatter.json)
+        vega_spec_path = task['vega_spec_path']
+        chart_type = task.get('chart_type', 'scatter_plot')
+        questions = task.get('questions', [])
+        if not questions:
+            print("❌ 没有找到 questions")
+            return None
+    
     vega_spec = load_vega_spec(vega_spec_path)
-    query = task['task']['query']
-    chart_type = task['metadata'].get('chart_type', 'scatter_plot')
     
     print(f" 任务: {task_id}")
     print(f" 图表类型: {chart_type}")
-    print(f" 查询: {query}\n")
+    print(f" 问题数量: {len(questions)}\n")
+    
+    # 先处理第一个问题（后续可以扩展为循环处理所有问题）
+    first_question = questions[0]
+    query = first_question['question']
+    qid = first_question.get('qid', 'q1')
+    ground_truth = first_question.get('ground_truth', {})
+    print(f" 当前问题 ({qid}): {query[:80]}...\n")
     
     # 2. 创建输出目录
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
