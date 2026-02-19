@@ -20,6 +20,13 @@ from pathlib import Path
 from typing import List, Tuple, Dict, Any
 from datetime import datetime
 
+# 导入 benchmark.config 以触发 .env 加载（必须在其他导入之前）
+try:
+    sys.path.insert(0, str(Path(__file__).parent))
+    from benchmark.config import *  # 这会触发 .env 加载
+except Exception as e:
+    print(f"[警告] 加载 benchmark.config 失败: {e}")
+
 # 支持的模型列表（不再映射到脚本，统一用 run_benchmark.py）
 DEFAULT_MODELS = ["gpt", "claude", "gemini", "grok", "qwen", "llama", "mistral"]
 
