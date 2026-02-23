@@ -14,7 +14,7 @@
         "task_type": "clear_single",
         "answer": {
           "type": "boolean",
-          "value": "No."
+          "value": "No"
         },
         "key_insights": [],
         "reasoning": [

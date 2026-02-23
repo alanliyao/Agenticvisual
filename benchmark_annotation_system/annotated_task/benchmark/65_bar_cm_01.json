@@ -13,7 +13,7 @@
       "ground_truth": {
         "task_type": "clear_multi",
         "answer": {
-          "type": "categorical",
+          "type": "boolean",
           "value": "Yes.",
           "alternatives": []
         },
