@@ -132,66 +132,76 @@ def convert_mcp_tools_to_openai_format(mcp_tools) -> List[Dict[str, Any]]:
 # =============================================================================
 
 def get_system_prompt(chart_type: str) -> str:
-    """生成系统提示词"""
+    """Generate system prompt for the given chart type."""
     
-    chart_type_names = {
-        'scatter_plot': '散点图',
-        'bar_chart': '柱状图',
-        'line_chart': '折线图',
-        'heatmap': '热力图',
-        'parallel_coordinates': '平行坐标图',
-        'sankey_diagram': '桑基图'
-    }
-    chart_type_cn = chart_type_names.get(chart_type, chart_type)
-    
-    return f"""你是一个专业的数据可视化分析助手。你的任务是探索图表数据，发现有价值的洞察。
+    return f"""You are a professional data visualization analysis assistant. Your task is to analyze chart data based on user questions and discover valuable insights.
 
-当前图表类型：**{chart_type_cn}** ({chart_type})
+Current chart type: **{chart_type}**
 
-## 分析策略
-1. 仔细观察图表，识别数据模式、趋势和异常
-2. 使用提供的工具进行深入分析
-3. 基于工具结果发现有价值的洞察
+## Analysis Strategy
+1. Carefully read the user question and understand the task
+2. Use the provided tools for analysis (if a specific tool is mentioned in the question, you must use that tool)
+3. Answer the user question based on tool results
 
-## 工具选择建议
-- **散点图**: calculate_correlation, identify_clusters, select_region,zoom_dense_area
-- **柱状图**: sort_bars, highlight_top_n, compare_groups
-- **折线图**: zoom_time_range, detect_anomalies
-- **热力图**: cluster_rows_cols, filter_cells, highlight_region
-- **平行坐标图**: filter_dimension, highlight_cluster, reorder_dimensions
-- **桑基图**: trace_node, highlight_path, filter_flow
-- **通用工具**: highlight, filter, zoom, get_data_summary, reset_view
+## Tool Selection Guidelines
+- **scatter_plot**: select_region, calculate_correlation, identify_clusters, zoom_dense_area, brush_region, change_encoding,filter_categorical,show_regression,
+- **bar_chart**: sort_bars, highlight_top_n,filter_categories,expand_stack,toggle_stack_mode,add_bars,remove_bars,add_bar_items,remove_bar_items,change_encoding
+- **line_chart**: zoom_time_range, detect_anomalies,highlight_trend,bold_lines,filter_lines,show_moving_average,focus_lines,drilldown_line_time,reset_line_drilldown,resample_time,reset_resample,change_encoding
+- **heatmap**: adjust_color_scale,filter_cells,highlight_region,cluster_rows_cols,select_submatrix,find_extremes,threshold_mask,drilldown_time,reset_drilldown,add_marginal_bars,transpose,change_encoding
+- **parallel_coordinates**: filter_dimension, highlight_cluster, reorder_dimensions,filter_by_category,highlight_category,hide_dimensions,reset_hidden_dimensions
+- **sankey_diagram**: trace_node, highlight_path, filter_flow,calculate_conversion_rate,collapse_nodes,expand_node,auto_collapse_by_rank,color_flows,find_bottleneck,reorder_nodes_in_layer
 
-## 输出要求（避免重复）
-- 每一轮只输出“新增”的洞察和推理，避免重复上轮内容。
-- 如果本轮没有新工具结果、也没有新增洞察，请直接设置 exploration_complete=true 并结束，不要复述旧结论。
-- 若需要继续探索，请给出明确的下一个工具选择理由；否则结束。"""
+## Answer Format Specification
+Numeric Questions
+When to use: Questions asking "how many", "what is the value", "count", "coefficient", "percentage"
+Format: Single number only
+Example: "How many cars are there in the dataset?" -> "100"
+
+Categorical Questions
+When to use: Questions asking "which", "what category", "what type", "which country/region"
+Format: Single word/phrase only
+Example: "Which country has the highest horsepower?" -> "United States"
+
+
+Boolean Questions
+When to use: Questions asking "is there", "does it", "are they", "yes/no question"
+Format: `Yes` or `No` only
+Example: "Are there any cars with horsepower greater than 200?" -> "Yes"
+
+Open-ended Questions
+When to use: Questions asking about vague exploration of the data
+Format: freely answer the question with sentences
+Example: "Reveal subtle differences in temperature patterns across cities and months
+" -> "Denver’s June temperature (around 22°C) is now visibly higher than its January temperature (around 8°C).\nMiami’s temperatures are consistently high across all months, with its lowest monthly temperature still being warmer than the highest temperatures in Denver or Seattle."
+
+## Output Requirements
+- After completing tool calls, provide a clear answer
+- If the question requires a specific tool, ensure that tool is called
+- Answers should be direct and concise"""
+
+
 
 
 def get_analysis_prompt() -> str:
-    """生成分析阶段的提示词（防重复与早结束指引）"""
-    return """基于当前视图和最新的工具结果，请返回 JSON 格式的分析。请遵循：
-1) 只输出“新增”的洞察和推理，避免重复上一轮内容。
-2) 如果本轮没有新工具结果，且没有新增洞察，请将 exploration_complete 设为 true，并简短收尾，不要复述旧结论。
-3) 若确有新增洞察，请提供清晰的 key_insights 与 reasoning；否则结束。
+    """Generate analysis phase prompt."""
+    return """Based on the current view and tool results, please return your analysis in JSON format:
 
 ```json
 {
-  "key_insights": [
-    "洞察1（本轮发现的关键洞察）",
-    "洞察2"
-  ],
-  "reasoning": "你的推理过程：观察到什么，工具结果说明什么，下一步应该做什么，调用什么工具...",
-  "exploration_complete": false
+  "key_insights": ["Insight 1", "Insight 2"],
+  "reasoning": "Your reasoning process",
+  "answer": "Direct answer to the user question",
+  "exploration_complete": true
 }
 ```
 
-字段说明：
-- **key_insights**: 本轮发现的洞察（基于观察和工具结果）
-- **reasoning**: 推理过程
-- **exploration_complete**: 是否完成探索（true=结束，false=继续）
+Field descriptions:
+- **key_insights**: Discovered insights
+- **reasoning**: Reasoning process
+- **answer**: Direct answer to the user question (required)
+- **exploration_complete**: Whether exploration is complete (usually true)
 
-请确保返回有效的 JSON。"""
+Please ensure you return valid JSON."""
 
 
 # =============================================================================
