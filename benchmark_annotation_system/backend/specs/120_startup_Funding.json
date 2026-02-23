@@ -1291,7 +1291,7 @@
       }
     ],
     "title": {
-      "text": "Startup Cash Flow: Funding → Capital Pool → Department → Expense → Outcome ($K)",
+      "text": "sankey Cash Flow: Funding → Capital Pool → Department → Expense → Outcome ($K)",
       "subtitle": "Hover to trace funds  |  Click to isolate  |  $50M capital; Eng=40% OpEx; Salaries=63% burn; 18% reserve",
       "fontSize": 16,
       "subtitleFontSize": 11,
