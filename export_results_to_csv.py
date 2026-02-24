@@ -48,22 +48,42 @@ def parse_eval_result(eval_path: Path) -> Optional[Dict[str, Any]]:
         scores = result.get('scores', {})
         agent_judge = result.get('agent_judge_result')
         
+        # Get scores
+        answer_score = scores.get('answer', 0)
+        tool_score = scores.get('tool', 0)
+        reasoning_score = scores.get('reasoning', 0)
+        tool_reasoning_score = scores.get('tool_reasoning', 0)
+        state_score = scores.get('state', 0)
+        total_score = scores.get('total', 0)
+        
         row = {
             'task_id': task_id,
             'model': model,
             'category': extract_category(task_id),
-            'answer': scores.get('answer', 0),
-            'tool': scores.get('tool', 0),
-            'reasoning': scores.get('reasoning', 0),
-            'tool_reason': scores.get('tool_reasoning', 0),
-            'state': scores.get('state', 0),
-            'total': scores.get('total', 0),
+            'answer': answer_score,
+            'tool': tool_score,
+            'reasoning': reasoning_score,
+            'tool_reason': tool_reasoning_score,
+            'state': state_score,
         }
         
-        # LLM adjusted scores
+        # Three total scores: original, llm_adjusted, final
         if agent_judge and result.get('agent_judge_triggered'):
+            # LLM was triggered - we have all three scores
             dimension_scores = agent_judge.get('dimension_scores', {})
             
+            # Original score (before LLM adjustment)
+            original_total = agent_judge.get('original_score', total_score)
+            # LLM calculated score
+            llm_total = agent_judge.get('adjusted_total_score') or agent_judge.get('adjusted_score', '')
+            # Final score (after verdict applied)
+            final_total = agent_judge.get('final_score', total_score)
+            
+            row['original_total'] = original_total
+            row['llm_total'] = llm_total
+            row['final_total'] = final_total
+            
+            # LLM dimension scores
             if dimension_scores:
                 row['llm_answer'] = dimension_scores.get('answer', '')
                 row['llm_tool'] = dimension_scores.get('tool', '')
@@ -76,15 +96,18 @@ def parse_eval_result(eval_path: Path) -> Optional[Dict[str, Any]]:
                 row['llm_state'] = ''
             
             row['llm_tool_r'] = dimension_scores.get('reasoning', '') if dimension_scores else ''
-            row['llm_total'] = agent_judge.get('adjusted_total_score') or agent_judge.get('adjusted_score', '')
             row['llm_reason'] = agent_judge.get('reasoning', '')
         else:
+            # No LLM triggered - all three are the same (original rule-based score)
+            row['original_total'] = total_score
+            row['llm_total'] = ''  # No LLM evaluation
+            row['final_total'] = total_score
+            
             row['llm_answer'] = ''
             row['llm_tool'] = ''
             row['llm_reasoning'] = ''
             row['llm_tool_r'] = ''
             row['llm_state'] = ''
-            row['llm_total'] = ''
             row['llm_reason'] = ''
         
         return row
@@ -161,11 +184,11 @@ def export_single_model_single_task(rows: List[Dict], output_dir: Path):
     output_file = output_dir / f"{model}_{task}_detailed.csv"
     fieldnames = ['dimension', 'original_score', 'llm_score', 'change']
     
-    dimensions = ['answer', 'tool', 'reasoning', 'state', 'total']
+    dimensions = ['answer', 'tool', 'reasoning', 'state', 'original_total', 'llm_total', 'final_total']
     csv_rows = []
     for dim in dimensions:
         orig = row.get(dim, '')
-        llm = row.get(f'llm_{dim}', '') if dim != 'total' else row.get('llm_total', '')
+        llm = row.get(f'llm_{dim}', '') if 'llm' in dim else ''
         change = ''
         if orig != '' and llm != '':
             change = format_float(float(llm) - float(orig))
@@ -206,8 +229,9 @@ def export_single_model_multi_task(rows: List[Dict], output_dir: Path):
     output_file = output_dir / f"{model}_results.csv"
     fieldnames = [
         'task_id', 'category', 'answer', 'tool', 'reasoning', 'tool_reason',
-        'state', 'total', 'llm_answer', 'llm_tool', 'llm_reasoning',
-        'llm_tool_r', 'llm_state', 'llm_total', 'llm_reason'
+        'state', 'original_total', 'llm_total', 'final_total', 
+        'llm_answer', 'llm_tool', 'llm_reasoning',
+        'llm_tool_r', 'llm_state', 'llm_reason'
     ]
     
     rows_sorted = sorted(rows, key=lambda x: x['task_id'])
@@ -230,7 +254,7 @@ def export_single_model_multi_task(rows: List[Dict], output_dir: Path):
     # Category breakdown
     cat_scores = defaultdict(list)
     for row in rows:
-        cat_scores[row['category']].append(float(row.get('total', 0) or 0))
+        cat_scores[row['category']].append(float(row.get('final_total', 0) or 0))
     
     table_data = []
     for cat in ['cs', 'cm', 'vm', 'vs']:
@@ -242,12 +266,14 @@ def export_single_model_multi_task(rows: List[Dict], output_dir: Path):
     print_table(['Category', 'Count', 'Avg Total'], table_data, "Performance by Category")
     
     # Overall stats
-    all_scores = [float(r.get('total', 0) or 0) for r in rows]
+    all_scores = [float(r.get('original_total', 0) or 0) for r in rows]
+    final_scores = [float(r.get('final_total', 0) or 0) for r in rows]
     llm_scores = [float(r.get('llm_total', 0) or 0) for r in rows if r.get('llm_total') not in ['', None]]
     
-    print(f"Overall Average: {format_float(sum(all_scores)/len(all_scores))}")
+    print(f"Original Avg: {format_float(sum(all_scores)/len(all_scores))}")
+    print(f"Final Avg: {format_float(sum(final_scores)/len(final_scores))}")
     if llm_scores:
-        print(f"LLM Adjusted Avg: {format_float(sum(llm_scores)/len(llm_scores))}")
+        print(f"LLM Calculated Avg: {format_float(sum(llm_scores)/len(llm_scores))}")
     print(f"Tasks with LLM Review: {len(llm_scores)}/{len(rows)}")
 
 
@@ -257,10 +283,10 @@ def export_multi_model_single_task(rows: List[Dict], output_dir: Path):
     
     # Save comparison CSV
     output_file = output_dir / f"{task}_comparison.csv"
-    fieldnames = ['model', 'answer', 'tool', 'reasoning', 'state', 'total', 
-                  'llm_total', 'llm_adjusted']
+    fieldnames = ['model', 'answer', 'tool', 'reasoning', 'state', 'original_total', 
+                  'llm_total', 'final_total', 'llm_adjusted']
     
-    rows_sorted = sorted(rows, key=lambda x: float(x.get('total', 0) or 0), reverse=True)
+    rows_sorted = sorted(rows, key=lambda x: float(x.get('final_total', 0) or 0), reverse=True)
     
     with open(output_file, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -272,8 +298,9 @@ def export_multi_model_single_task(rows: List[Dict], output_dir: Path):
                 'tool': format_float(row.get('tool', '')),
                 'reasoning': format_float(row.get('reasoning', '')),
                 'state': format_float(row.get('state', '')),
-                'total': format_float(row.get('total', '')),
+                'original_total': format_float(row.get('original_total', '')),
                 'llm_total': format_float(row.get('llm_total', '')),
+                'final_total': format_float(row.get('final_total', '')),
                 'llm_adjusted': 'Yes' if row.get('llm_total') not in ['', None] else 'No'
             })
     
@@ -291,11 +318,12 @@ def export_multi_model_single_task(rows: List[Dict], output_dir: Path):
             format_float(row.get('answer', '')),
             format_float(row.get('tool', '')),
             format_float(row.get('state', '')),
-            format_float(row.get('total', '')),
+            format_float(row.get('original_total', '')),
+            format_float(row.get('final_total', '')),
             'Yes' if row.get('llm_total') not in ['', None] else 'No'
         ])
     
-    print_table(['Model', 'Answer', 'Tool', 'State', 'Total', 'LLM Adj?'], 
+    print_table(['Model', 'Answer', 'Tool', 'State', 'Original', 'Final', 'LLM Adj?'], 
                 table_data, "Model Comparison")
 
 
@@ -311,8 +339,9 @@ def export_multi_model_multi_task(rows: List[Dict], models: List[str], output_di
         output_file = output_dir / f'{model}_results.csv'
         fieldnames = [
             'task_id', 'category', 'answer', 'tool', 'reasoning', 'tool_reason',
-            'state', 'total', 'llm_answer', 'llm_tool', 'llm_reasoning',
-            'llm_tool_r', 'llm_state', 'llm_total', 'llm_reason'
+            'state', 'original_total', 'llm_total', 'final_total',
+            'llm_answer', 'llm_tool', 'llm_reasoning',
+            'llm_tool_r', 'llm_state', 'llm_reason'
         ]
         
         with open(output_file, 'w', newline='', encoding='utf-8') as f:
@@ -330,8 +359,9 @@ def export_multi_model_multi_task(rows: List[Dict], models: List[str], output_di
     output_file = output_dir / 'all_models_results.csv'
     fieldnames = [
         'model', 'task_id', 'category', 'answer', 'tool', 'reasoning', 'tool_reason',
-        'state', 'total', 'llm_answer', 'llm_tool', 'llm_reasoning',
-        'llm_tool_r', 'llm_state', 'llm_total', 'llm_reason'
+        'state', 'original_total', 'llm_total', 'final_total',
+        'llm_answer', 'llm_tool', 'llm_reasoning',
+        'llm_tool_r', 'llm_state', 'llm_reason'
     ]
     
     rows_sorted = sorted(rows, key=lambda x: (x['model'], x['task_id']))
@@ -349,20 +379,21 @@ def export_multi_model_multi_task(rows: List[Dict], models: List[str], output_di
     # Category stats
     print("\n  [3/4] Exporting category statistics...")
     stats = defaultdict(lambda: defaultdict(lambda: {
-        'count': 0, 'total_sum': 0, 'llm_count': 0, 'llm_total_sum': 0
+        'count': 0, 'original_sum': 0, 'final_sum': 0, 'llm_count': 0, 'llm_total_sum': 0
     }))
     
     for row in rows:
         s = stats[row['model']][row['category']]
         s['count'] += 1
-        s['total_sum'] += float(row.get('total', 0) or 0)
+        s['original_sum'] += float(row.get('original_total', 0) or 0)
+        s['final_sum'] += float(row.get('final_total', 0) or 0)
         llm_total = row.get('llm_total')
         if llm_total not in ['', None]:
             s['llm_count'] += 1
             s['llm_total_sum'] += float(llm_total)
     
     output_file = output_dir / 'category_stats.csv'
-    fieldnames = ['model', 'category', 'count', 'avg_total', 'llm_count', 'avg_llm_total']
+    fieldnames = ['model', 'category', 'count', 'avg_original', 'avg_final', 'llm_count', 'avg_llm_total']
     
     stat_rows = []
     for model in models:
@@ -373,7 +404,8 @@ def export_multi_model_multi_task(rows: List[Dict], models: List[str], output_di
                     'model': model,
                     'category': cat,
                     'count': s['count'],
-                    'avg_total': format_float(s['total_sum'] / s['count']),
+                    'avg_original': format_float(s['original_sum'] / s['count']),
+                    'avg_final': format_float(s['final_sum'] / s['count']),
                     'llm_count': s['llm_count'],
                     'avg_llm_total': format_float(s['llm_total_sum'] / s['llm_count']) if s['llm_count'] > 0 else ''
                 })
@@ -399,10 +431,10 @@ def export_multi_model_multi_task(rows: List[Dict], models: List[str], output_di
         f.write(f"- Models: {', '.join(models)}\n\n")
         
         # Model ranking
-        f.write("## Model Ranking (by Avg Total Score)\n\n")
+        f.write("## Model Ranking (by Avg Final Score)\n\n")
         model_scores = defaultdict(list)
         for row in rows:
-            model_scores[row['model']].append(float(row.get('total', 0) or 0))
+            model_scores[row['model']].append(float(row.get('final_total', 0) or 0))
         
         ranking = [(m, sum(scores)/len(scores), len(scores)) for m, scores in model_scores.items()]
         ranking.sort(key=lambda x: x[1], reverse=True)
@@ -420,10 +452,10 @@ def export_multi_model_multi_task(rows: List[Dict], models: List[str], output_di
             cat_data = [r for r in stat_rows if r['category'] == cat]
             if cat_data:
                 f.write(f"### {cat.upper()}\n\n")
-                f.write("| Model | Avg Total | Tasks |\n")
-                f.write("|:------|:---------:|:-----:|\n")
+                f.write("| Model | Avg Original | Avg Final | Tasks |\n")
+                f.write("|:------|:------------:|:---------:|:-----:|\n")
                 for r in cat_data:
-                    f.write(f"| {r['model']} | {r['avg_total']} | {r['count']} |\n")
+                    f.write(f"| {r['model']} | {r['avg_original']} | {r['avg_final']} | {r['count']} |\n")
                 f.write("\n")
         
         # LLM adjusted
@@ -435,7 +467,7 @@ def export_multi_model_multi_task(rows: List[Dict], models: List[str], output_di
             f.write("| Model | Task | Original | Adjusted | Change |\n")
             f.write("|:------|:-----|:--------:|:--------:|:------:|\n")
             for row in adjusted[:20]:
-                orig = float(row.get('total', 0) or 0)
+                orig = float(row.get('original_total', 0) or 0)
                 adj = float(row.get('llm_total', 0) or 0)
                 change = adj - orig
                 change_str = f"+{format_float(change)}" if change > 0 else format_float(change)
