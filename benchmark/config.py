@@ -56,21 +56,22 @@ MODELS: Dict[str, ModelConfig] = {
         supports_external_tools=False,  # System has internal tool logic
     ),
     
-    # Claude (via OAI Pro)
+    # Claude (via OpenRouter)
     "claude": ModelConfig(
         name="Claude Sonnet 4",
-        base_url="https://api.oaipro.com/v1",
-        model="claude-sonnet-4-20250514",
-        api_key_env="ANTHROPIC_API_KEY",
+        base_url="https://openrouter.ai/api/v1",
+        model="anthropic/claude-sonnet-4",
+        api_key_env="OPENROUTER_API_KEY",
+        tool_choice_format="string",  # Claude 需要字符串格式
     ),
     
-    # GPT-4o
+    # GPT-4o (via OpenRouter)
     "gpt": ModelConfig(
         name="GPT-4o",
-        base_url="https://api.openai.com/v1",
-        model="gpt-4o",
-        api_key_env="OPENAI_API_KEY",
-        tool_choice_format="string",  # OpenAI native API accepts string
+        base_url="https://openrouter.ai/api/v1",
+        model="openai/gpt-4o",
+        api_key_env="OPENROUTER_API_KEY",
+        tool_choice_format="string",
     ),
     
     # GPT-5 (via OAI Pro)
@@ -84,9 +85,9 @@ MODELS: Dict[str, ModelConfig] = {
     
     # Gemini (via OpenRouter)
     "gemini": ModelConfig(
-        name="Gemini 2.5 Flash",
+        name="Gemini 2.0 Flash",
         base_url="https://openrouter.ai/api/v1",
-        model="google/gemini-2.5-flash-preview-09-2025",
+        model="google/gemini-2.0-flash-001",
         api_key_env="OPENROUTER_API_KEY",
     ),
     
@@ -107,12 +108,22 @@ MODELS: Dict[str, ModelConfig] = {
         tool_choice_format="string",  # Qwen 需要字符串格式
     ),
     
-    # Grok (via OAI Pro)
-    "grok": ModelConfig(
-        name="Grok 4",
+    # Mistral (via OpenRouter)
+    "mistral": ModelConfig(
+        name="Mistral Small 3.2",
         base_url="https://openrouter.ai/api/v1",
-        model="x-ai/grok-4",
+        model="mistralai/mistral-small-3.2-24b-instruct",
         api_key_env="OPENROUTER_API_KEY",
+        tool_choice_format="string",  # Mistral 需要字符串格式
+    ),
+    
+    # Grok (via OpenRouter)
+    "grok": ModelConfig(
+        name="Grok 4.1 Fast",
+        base_url="https://openrouter.ai/api/v1",
+        model="x-ai/grok-4.1-fast",
+        api_key_env="OPENROUTER_API_KEY",
+        tool_choice_format="string",  # Grok 需要字符串格式
     ),
 }
 

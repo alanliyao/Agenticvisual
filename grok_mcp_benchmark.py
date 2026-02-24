@@ -30,7 +30,7 @@ from core.vega_service import get_vega_service
 GROK_CONFIG = {
     'api_key_env': 'OPENROUTER_API_KEY',
     'base_url': 'https://openrouter.ai/api/v1',
-    'model': 'x-ai/grok-4',  # 可在命令行指定
+    'model': 'x-ai/grok-4-1-fast',  # 可在命令行指定
     'max_iterations': 8,
     'temperature': 0,
     'timeout': 180,

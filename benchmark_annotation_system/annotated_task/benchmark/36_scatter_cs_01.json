@@ -14,7 +14,7 @@
         "task_type": "clear_single",
         "answer": {
           "type": "numeric",
-          "value": "0.339.",
+          "value": "0.339",
           "tolerance": 0.05
         },
         "key_insights": [

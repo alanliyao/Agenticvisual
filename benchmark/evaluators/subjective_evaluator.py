@@ -175,6 +175,8 @@ class SubjectiveEvaluator:
 
     def _eval_insights(self, agent_insights: List[str], gt_insights: List[str],
                        is_fully_subjective: bool) -> InsightEvalResult:
+        gt_insights = gt_insights or []
+        agent_insights = agent_insights or []
         gt_text = "\n".join(f"- {ins}" for ins in gt_insights)
         agent_text = "\n".join(f"- {ins}" for ins in agent_insights)
 
@@ -245,14 +247,22 @@ class SubjectiveEvaluator:
     def _call_llm(self, prompt: str) -> Dict:
         """Call LLM and parse JSON response."""
         client = self._get_client()
-        response = client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=500,
-            temperature=0
-        )
-
-        response_text = response.choices[0].message.content.strip()
+        try:
+            response = client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=500,
+                temperature=0
+            )
+            response_text = response.choices[0].message.content.strip()
+        except Exception as e:
+            # API failure (e.g., credits exhausted) - return default scores
+            return {
+                "groundedness": 1,
+                "depth": 1,
+                "clarity": 1,
+                "explanation": f"API call failed: {str(e)}"
+            }
 
         # Strip markdown code fences if present
         if response_text.startswith("```"):
@@ -260,4 +270,13 @@ class SubjectiveEvaluator:
             if response_text.startswith("json"):
                 response_text = response_text[4:]
 
-        return json.loads(response_text)
+        try:
+            return json.loads(response_text)
+        except json.JSONDecodeError:
+            # Invalid JSON response - return default scores
+            return {
+                "groundedness": 1,
+                "depth": 1,
+                "clarity": 1,
+                "explanation": "Failed to parse LLM response"
+            }

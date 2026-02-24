@@ -7,7 +7,7 @@ Combines all evaluators:
 - Tool call evaluation (F1 + params)
 - State evaluation
 - Structured reasoning evaluation (tool-aligned)
-- Agent-as-Judge for ambiguous scores in [0.4, 0.7]
+- Agent-as-Judge for ambiguous scores in [0.3, 0.9]
 
 Score composition (3 dimensions):
   1. answer_score: answer correctness
@@ -31,8 +31,8 @@ from .subjective_evaluator import SubjectiveEvaluator, SubjectiveEvalResult
 # Configuration
 # ============================================================
 
-AGENT_JUDGE_LOW_THRESHOLD = 0.4
-AGENT_JUDGE_HIGH_THRESHOLD = 0.7
+AGENT_JUDGE_LOW_THRESHOLD = 0.3
+AGENT_JUDGE_HIGH_THRESHOLD = 0.9
 
 # Score weights for each task type
 SCORE_WEIGHTS = {
@@ -74,11 +74,24 @@ Review and determine:
 
 Consider: task intent understanding, tool call reasonableness (alternative valid approaches), state closeness, answer correctness.
 
+You must provide:
+1. Overall verdict (PASS/FAIL/BORDERLINE)
+2. Individual dimension scores (0.0-1.0) - re-evaluate each dimension based on your review
+3. Detailed reasoning
+
+**IMPORTANT**: The system will automatically calculate the adjusted_total_score from your dimension_scores using the formula:
+- adjusted_total_score = 0.5 * answer + 0.25 * (0.5*tool + 0.5*reasoning) + 0.25 * state
+
 Output JSON only:
 {{
     "verdict": "PASS" or "FAIL" or "BORDERLINE",
-    "adjusted_score": <0.0-1.0>,
-    "reasoning": "<brief explanation>"
+    "dimension_scores": {{
+        "answer": <0.0-1.0>,
+        "tool": <0.0-1.0>,
+        "reasoning": <0.0-1.0>,
+        "state": <0.0-1.0>
+    }},
+    "reasoning": "<detailed explanation>"
 }}"""
 
 
@@ -179,7 +192,7 @@ class UnifiedEvaluator:
     3. Structured reasoning evaluation (tool-aligned)
     4. State evaluation
     5. Combined score = weighted(answer, tool_reasoning, state)
-    6. Agent-as-Judge for scores in [0.4, 0.7]
+    6. Agent-as-Judge for scores in [0.3, 0.9]
     """
 
     def __init__(self,
@@ -425,7 +438,7 @@ class UnifiedEvaluator:
                             tool_result, state_result) -> Tuple[float, bool, Optional[Dict]]:
         """
         Conditionally trigger LLM review for ambiguous scores.
-        score < 0.4 -> auto-fail, score > 0.7 -> auto-pass
+        score < 0.3 -> auto-fail, score > 0.9 -> auto-pass
         """
         if total_score < self.low_threshold or total_score > self.high_threshold:
             return total_score, False, None
@@ -464,17 +477,48 @@ class UnifiedEvaluator:
         judge_result = self.subjective_eval._call_llm(prompt)
 
         verdict = str(judge_result.get("verdict", "BORDERLINE")).upper()
-        adjusted = max(0.0, min(1.0, float(judge_result.get("adjusted_score", total_score))))
+        
+        # Ensure dimension_scores exists (for backward compatibility with old responses)
+        if "dimension_scores" not in judge_result:
+            judge_result["dimension_scores"] = {
+                "answer": answer_score,
+                "tool": tool_result.tool_match_score if hasattr(tool_result, 'tool_match_score') else 0.0,
+                "reasoning": 0.0,  # Will be populated from subjective eval if available
+                "state": state_score
+            }
+        
+        # Calculate adjusted_total_score from dimension_scores (not from LLM's direct output)
+        # This ensures consistency between dimension scores and total
+        dim_scores = judge_result["dimension_scores"]
+        weights = SCORE_WEIGHTS.get(task_type.split('_')[0] if '_' in task_type else task_type, SCORE_WEIGHTS["objective"])
+        
+        # Get individual dimension scores
+        dim_answer = float(dim_scores.get("answer", answer_score))
+        dim_tool = float(dim_scores.get("tool", tool_result.tool_match_score if hasattr(tool_result, 'tool_match_score') else 0.0))
+        dim_reasoning = float(dim_scores.get("reasoning", 0.0))
+        dim_state = float(dim_scores.get("state", state_score))
+        
+        # Calculate weighted total (matching the original scoring logic)
+        tr_split = weights.get("tool_reasoning_split", {"tool": 0.5, "reasoning": 0.5})
+        dim_tool_reasoning = tr_split["tool"] * dim_tool + tr_split["reasoning"] * dim_reasoning
+        
+        adjusted_total = (weights["answer"] * dim_answer + 
+                         weights["tool_reasoning"] * dim_tool_reasoning + 
+                         weights["state"] * dim_state)
+        adjusted_total = max(0.0, min(1.0, float(adjusted_total)))
 
         if verdict == "PASS":
-            final_score = max(total_score, adjusted)
+            final_score = max(total_score, adjusted_total)
         elif verdict == "FAIL":
-            final_score = min(total_score, adjusted)
+            final_score = min(total_score, adjusted_total)
         else:
             final_score = total_score
 
         judge_result["original_score"] = total_score
         judge_result["final_score"] = final_score
+        # For backward compatibility
+        judge_result["adjusted_score"] = adjusted_total
+        judge_result["adjusted_total_score"] = adjusted_total
 
         return final_score, True, judge_result
 

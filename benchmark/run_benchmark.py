@@ -338,8 +338,26 @@ IMPORTANT:
 - Each round should add new insights based on new observations"""
 
 
-def format_user_message_with_image(text: str, image_base64: str) -> dict:
+def format_user_message_with_image(text: str, image_base64: str, model_name: str = None) -> dict:
     """Format user message with image."""
+    # Grok 使用不同的 image 格式
+    if model_name and 'grok' in model_name.lower():
+        # xAI Grok 格式: input_image 类型
+        return {
+            'role': 'user',
+            'content': [
+                {'type': 'text', 'text': text},
+                {
+                    'type': 'input_image',
+                    'image_url': {
+                        'url': f'data:image/png;base64,{image_base64}',
+                        'detail': 'high'
+                    }
+                }
+            ]
+        }
+    
+    # 标准 OpenAI 格式
     return {
         'role': 'user',
         'content': [
@@ -605,7 +623,7 @@ async def run_multi_turn_with_mcp(
     formatted_question = f"Please answer the following question:\n\n{question_text}\n\n{EVALUATION_FORMAT}"
     messages = [
         {'role': 'system', 'content': system_prompt},
-        format_user_message_with_image(formatted_question, current_image)
+        format_user_message_with_image(formatted_question, current_image, config.model)
     ]
     
     all_tool_calls = []
@@ -622,15 +640,24 @@ async def run_multi_turn_with_mcp(
         tool_choice_value = {"type": "auto"} if config.tool_choice_format == "dict" else "auto"
         
         try:
-            response1 = client.chat.completions.create(
-                model=config.model,
-                messages=messages,
-                tools=openai_tools,
-                tool_choice=tool_choice_value,
-                temperature=config.temperature,
-            )
+            # Grok 不接受空 tools 列表配 tool_choice，做特殊处理
+            kwargs = {
+                "model": config.model,
+                "messages": messages,
+                "temperature": config.temperature,
+            }
+            if openai_tools:
+                kwargs["tools"] = openai_tools
+                kwargs["tool_choice"] = tool_choice_value
+            
+            response1 = client.chat.completions.create(**kwargs)
         except Exception as e:
             print(f"      API error: {e}")
+            break
+        
+        # 空值检查
+        if not response1 or not response1.choices:
+            print(f"      Error: Empty response from API")
             break
         
         message1 = response1.choices[0].message
@@ -711,7 +738,7 @@ async def run_multi_turn_with_mcp(
         # Phase 2: Analysis - use final prompt on last iteration
         is_final = (i == max_iterations - 1) or (not message1.tool_calls)
         analysis_prompt = get_analysis_prompt(is_final=is_final)
-        messages.append(format_user_message_with_image(analysis_prompt, current_image))
+        messages.append(format_user_message_with_image(analysis_prompt, current_image, config.model))
         
         try:
             response2 = client.chat.completions.create(

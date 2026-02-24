@@ -52,8 +52,15 @@ class StateEvaluator:
         Returns:
             Dict with extracted state fields
         """
-        encoding = vega_spec.get("encoding", {})
-        mark = vega_spec.get("mark", {})
+        # Handle layer specs: extract encoding from first layer if top-level encoding is empty
+        layers = vega_spec.get("layer", [])
+        if layers and not vega_spec.get("encoding"):
+            # Use first layer's encoding and mark
+            encoding = layers[0].get("encoding", {})
+            mark = layers[0].get("mark", {})
+        else:
+            encoding = vega_spec.get("encoding", {})
+            mark = vega_spec.get("mark", {})
         
         # Extract mark info (handle both string and dict format)
         if isinstance(mark, dict):

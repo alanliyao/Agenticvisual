@@ -59,9 +59,22 @@ class ObjectiveEvaluator:
     # ==================== Numeric ====================
 
     def _eval_numeric(self, predicted: Any, gt: Dict) -> EvalResult:
+        # Handle empty/None predictions (API failure case)
+        if predicted is None or str(predicted).strip() == '':
+            return EvalResult(
+                score=0.0, matched=False,
+                details={"predicted": predicted, "target": gt.get("value"), "error": "empty_prediction"}
+            )
+        
         target = float(gt["value"])
         tolerance = gt.get("tolerance", 0.05)
-        pred_val = float(predicted)
+        try:
+            pred_val = float(predicted)
+        except (ValueError, TypeError):
+            return EvalResult(
+                score=0.0, matched=False,
+                details={"predicted": predicted, "target": target, "error": "invalid_number"}
+            )
 
         diff = abs(pred_val - target)
         score = 1.0 if diff <= tolerance else 0.0
@@ -74,6 +87,13 @@ class ObjectiveEvaluator:
     # ==================== Categorical ====================
 
     def _eval_categorical(self, predicted: Any, gt: Dict) -> EvalResult:
+        # Handle empty/None predictions (API failure case)
+        if predicted is None or str(predicted).strip() == '':
+            return EvalResult(
+                score=0.0, matched=False,
+                details={"predicted": predicted, "target": gt.get("value"), "judgment": "INCORRECT", "method": "empty_prediction"}
+            )
+        
         target = gt["value"]
         alternatives = gt.get("alternatives", [])
         valid_answers = [str(target)] + [str(alt) for alt in alternatives]
@@ -104,14 +124,21 @@ Task: Determine if the predicted answer is semantically equivalent to any of the
 Respond with ONLY "CORRECT" or "INCORRECT" on a single line."""
 
         client = self._get_client()
-        response = client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": judge_prompt}],
-            temperature=0.0,
-            max_tokens=50
-        )
+        try:
+            response = client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": judge_prompt}],
+                temperature=0.0,
+                max_tokens=50
+            )
+            judgment = response.choices[0].message.content.strip().upper()
+        except Exception as e:
+            # API failure (e.g., credits exhausted) - fall back to 0 score
+            return EvalResult(
+                score=0.0, matched=False,
+                details={"predicted": predicted, "target": target, "judgment": "INCORRECT", "method": "llm_judge_failed", "error": str(e)}
+            )
 
-        judgment = response.choices[0].message.content.strip().upper()
         is_correct = judgment == "CORRECT"
         score = 1.0 if is_correct else 0.0
 
