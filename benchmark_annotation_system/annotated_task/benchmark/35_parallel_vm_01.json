@@ -1,0 +1,92 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "35_parallel_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/35_bmw_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What is the trend between the price and mpg of diesel cars?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It can be seen that the difference in mpg across a wide range of prices is not very significant, But you can still see the trend that cars with higher prices tend to have lower mpg."
+        },
+        "key_insights": [
+          "The current view still doesn't show the relationship between price and mpg.",
+          "It can be seen that the difference in mpg across a wide range of prices is not very significant.",
+          "But you can still see the trend that cars with higher prices tend to have lower mpg."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "The issue focuses on diesel cars, so the highlight category tool is used to highlight diesel cars."
+          },
+          {
+            "iteration": 2,
+            "tool": "filter_by_category",
+            "reasoning": "The focus is on the relationship between price and mpg, so the filter by category tool is used to remove tax and mileage."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "fuelType",
+                  "values": [
+                    "Diesel"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "filter_by_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "dimension",
+                  "values": [
+                    "tax",
+                    "mileage"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "data_filtered": [
+            {
+              "filter": "indexof([\"tax\",\"mileage\"], datum['dimension']) < 0"
+            }
+          ],
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

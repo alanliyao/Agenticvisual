@@ -1,0 +1,146 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "35_parallel_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/35_bmw_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_07",
+      "question": "Which fuel type has the widest price range?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Diesel.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "To observe the price range of each fuelType, it's necessary to use the highlight category tool to highlight each fuelType in turn."
+          },
+          {
+            "iteration": 2,
+            "tool": "undo_view",
+            "reasoning": "To use the highlight category tool to highlight each fuelType, it's necessary to use the undo view tool to return to the original view."
+          },
+          {
+            "iteration": 3,
+            "tool": "highlight_category",
+            "reasoning": "To observe the price range of each fuelType, it's necessary to use the highlight category tool to highlight each fuelType in turn."
+          },
+          {
+            "iteration": 4,
+            "tool": "undo_view",
+            "reasoning": "To use the highlight category tool to highlight each fuelType, you need to use the undo view tool to return to the original view."
+          },
+          {
+            "iteration": 5,
+            "tool": "highlight_category",
+            "reasoning": "To observe the price range of each fuelType, it's necessary to use the highlight category tool to highlight each fuelType in turn."
+          },
+          {
+            "iteration": 6,
+            "tool": "undo_view",
+            "reasoning": "To use the highlight category tool to highlight each fuelType, it's necessary to use the undo view tool to return to the original view."
+          },
+          {
+            "iteration": 7,
+            "tool": "highlight_category",
+            "reasoning": "To use the highlight category tool to highlight each fuelType, you need to use the undo view tool to return to the original view."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "fuelType",
+                  "values": [
+                    "Petrol"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "undo_view",
+              "param_eval": {}
+            },
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "fuelType",
+                  "values": [
+                    "Diesel"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "undo_view",
+              "param_eval": {}
+            },
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "fuelType",
+                  "values": [
+                    "Hybrid"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "undo_view",
+              "param_eval": {}
+            },
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "fuelType",
+                  "values": [
+                    "Other"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

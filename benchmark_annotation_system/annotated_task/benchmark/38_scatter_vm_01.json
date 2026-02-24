@@ -1,0 +1,71 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "38_scatter_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/38_cancer_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What is the relationship between concavity and diagnosis?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "It seems that benign cases are almost all purple, meaning the concavity is relatively small, while those leaning toward yellow are almost all malignant. Therefore, the relationship should be that the larger the concavity, the higher the probability of being malignant."
+        },
+        "key_insights": [
+          "From the view, it can be seen that the larger the concavity, the more it leans toward the upper right in the view, meaning that both smoothness and compactness are greater; the smaller the concavity, the more it leans toward the lower left in the view, meaning that both smoothness and compactness are smaller.",
+          "From the view, it can be seen that almost all benign ones are purple, meaning they have smaller concavity, while the ones that are more yellow are almost all malignant."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "To explore the relationship between concavity and diagnosis, you first need to use the change encoding tool to select the channel as color and switch the field to concavity."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "The question asks about the relationship between concavity and diagnosis, so the change encoding tool was used to select Channel as Size and switch Field to Diagnosis, which allows the relationship between the two to be seen in the view."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Concavity (mean)",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Diagnosis",
+                  "channel": "size"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Smoothness (mean)",
+            "y": "Compactness (mean)",
+            "color": "Concavity (mean)"
+          }
+        }
+      }
+    }
+  ]
+}

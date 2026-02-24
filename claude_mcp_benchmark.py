@@ -167,20 +167,17 @@ When to use: Questions asking "which", "what category", "what type", "which coun
 Format: Single word/phrase only
 Example: "Which country has the highest horsepower?" -> "United States"
 
-Region/Range Questions
-When to use: Questions asking "what range", "between what values", "interval"
-Format: Format: `[min, max]` or `min-max`
-Example: "What is the range of horsepower?" -> "[100, 200]"
 
 Boolean Questions
 When to use: Questions asking "is there", "does it", "are they", "yes/no question"
 Format: `Yes` or `No` only
 Example: "Are there any cars with horsepower greater than 200?" -> "Yes"
 
-Year Questions
-When to use: Questions asking "what year", "which year"
-Format: Full year: `2023`
-Example: "What year is the data from?" -> "2023"
+Open-ended Questions
+When to use: Questions asking about vague exploration of the data
+Format: freely answer the question with sentences
+Example: "Reveal subtle differences in temperature patterns across cities and months
+" -> "Denver’s June temperature (around 22°C) is now visibly higher than its January temperature (around 8°C).\nMiami’s temperatures are consistently high across all months, with its lowest monthly temperature still being warmer than the highest temperatures in Denver or Seattle."
 
 ## Output Requirements
 - After completing tool calls, provide a clear answer

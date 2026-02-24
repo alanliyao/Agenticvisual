@@ -1,0 +1,54 @@
+{
+  "task_type": "vague_single",
+  "task_id": "38_scatter_vs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/38_cancer_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.3,
+    "final_state": 0.7
+  },
+  "questions": [
+    {
+      "qid": "vs_01",
+      "question": "How does tumor diagnosis relate to the distribution of points in this plot?",
+      "ground_truth": {
+        "task_type": "vague_single",
+        "answer": {
+          "type": "open_ended",
+          "value": "It seems that the average smoothness and compactness of malignant cases are greater than those of benign cases."
+        },
+        "key_insights": [
+          "In the view, the orange dots, representing malignant cases, tend to be in the upper right, meaning both compactness and smoothness are larger; whereas the blue dots, representing benign cases, tend to be in the lower left, meaning both compactness and smoothness are smaller."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "change_encoding",
+            "reasoning": "In order to find the relationship between tumor diagnosis and compactness and smoothness, it is necessary to use the change encoding tool to select the channel as color and switch the field to diagnosis."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Diagnosis",
+                  "channel": "color"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Smoothness (mean)",
+            "y": "Compactness (mean)",
+            "color": "Diagnosis"
+          }
+        }
+      }
+    }
+  ]
+}

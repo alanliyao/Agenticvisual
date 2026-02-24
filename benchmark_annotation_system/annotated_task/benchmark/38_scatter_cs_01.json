@@ -1,0 +1,52 @@
+{
+  "task_type": "clear_single",
+  "task_id": "38_scatter_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/38_cancer_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What is the correlation coefficient between smoothness and compactness?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "numeric",
+          "value": "0.67.",
+          "tolerance": 0.05
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "calculate_correlation",
+            "reasoning": "The question asks for the correlation coefficient, so you need to use the calculate correlation tool to compute the correlation coefficient."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "calculate_correlation",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "method": "pearson"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "Smoothness (mean)",
+            "y": "Compactness (mean)",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}
