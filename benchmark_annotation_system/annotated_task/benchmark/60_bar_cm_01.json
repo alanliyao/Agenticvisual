@@ -30,6 +30,11 @@
             "reasoning": "To select the location, it's necessary to use the change encoding tool to switch the field to location."
           },
           {
+            "iteration":3,
+            "tool":"change_encoding",
+            "reasoning": "To compare robberies at different locations, it's necessary to use toggle stack mode to switch the y axis to robbery."
+          }
+          {
             "iteration": 3,
             "tool": "toggle_stack_mode",
             "reasoning": "To compare robberies at different locations, it's necessary to use toggle stack mode to switch the mode to grouped.. filter_categories."
@@ -67,6 +72,17 @@
                 "target": {
                   "field": "Location",
                   "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Robbery",
+                  "channel": "y"
                 }
               }
             },

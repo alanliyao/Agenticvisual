@@ -1,0 +1,80 @@
+{
+  "task_type": "vague_multi",
+  "task_id": "65_bar_vm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/65_vitamin_deficiency_disease_dataset_bar.json",
+  "eval_weights": {
+    "tool_call": 0.2,
+    "final_state": 0.8
+  },
+  "questions": [
+    {
+      "qid": "vm_02",
+      "question": "What is the trend of vitamin D intake among pescatarians at different exercise levels?",
+      "ground_truth": {
+        "task_type": "vague_multi",
+        "answer": {
+          "type": "open_ended",
+          "value": "The vitamin_d_percent_rda is highest in sedentary people, followed by those with a light exercise level, and then the vitamin_d_percent_rda of people with active to moderate exercise levels is about the same."
+        },
+        "key_insights": [
+          "From the current view, it can be seen that among pescatarians, the light exercise level has the highest vitamin C percent RDA across all exercise levels.",
+          "From the view, it can be seen that the vitamin_d_percent_rda is highest in sedentary people, followed by those with a light exercise level, and then the vitamin_d_percent_rda of people with active to moderate exercise levels is about the same.",
+          "The vitamin D percent RDA for sedentary is about the same as for a light exercise level."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "filter_subcategories",
+            "reasoning": "Since the question is about Pescatarians, the filter subcategories tool is used to remove omnivores, vegans, and vegetarians."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "Since the issue focuses on the vitamin D intake of pescatarians, the change encoding tool should be used to select the channel as 'y' and switch the field to 'vitamin_d_percent_rda'."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "filter_subcategories",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "subcategories_to_remove": [
+                    "Omnivore",
+                    "Vegan",
+                    "Vegetarian"
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "vitamin_d_percent_rda",
+                  "channel": "y"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "exercise_level",
+            "y": "vitamin_d_percent_rda",
+            "color": "diet_type"
+          },
+          "data_filtered": [
+            {
+              "filter": "datum['diet_type'] != \"Omnivore\" && datum['diet_type'] != \"Vegan\" && datum['diet_type'] != \"Vegetarian\""
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

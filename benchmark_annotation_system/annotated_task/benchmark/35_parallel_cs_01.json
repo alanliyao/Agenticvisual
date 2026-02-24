@@ -1,0 +1,69 @@
+{
+  "task_type": "clear_single",
+  "task_id": "35_parallel_cs_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/35_bmw_parallel.json",
+  "eval_weights": {
+    "tool_call": 0.8,
+    "final_state": 0.2
+  },
+  "questions": [
+    {
+      "qid": "cs_01",
+      "question": "What is the typical mileage range for Diesel cars?",
+      "ground_truth": {
+        "task_type": "clear_single",
+        "answer": {
+          "type": "categorical",
+          "value": "From 1 to 18347.",
+          "alternatives": [
+            " 1 to 18347."
+          ]
+        },
+        "key_insights": [
+          "The typical mileage range for Diesel cars is from 1 to 18347."
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "highlight_category",
+            "reasoning": "Use the highlight category tool to highlight Diesel in order to observe its range in mileage."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "highlight_category",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "fuelType",
+                  "values": [
+                    "Diesel"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "dimension",
+            "y": null,
+            "color": null
+          },
+          "layers": {
+            "count": 5,
+            "types": [
+              "rule",
+              "line",
+              null,
+              null,
+              null
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

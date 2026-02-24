@@ -1,0 +1,104 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "38_scatter_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/38_cancer_scatter.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_03",
+      "question": "Zoom into the points in the densest region, what proportion are malignant?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "numeric",
+          "value": "0.796657",
+          "tolerance": 0.01
+        },
+        "key_insights": [
+          "After zooming in on the densest area, the range of smoothness is approximately from 0.072 to 0.11, and the range of compactness is approximately from 0.025 to 0.12.",
+          "From the view, it can be seen that the number of benign cases is greater than that of malignant cases.",
+          "distribution: “B”: 286, “M”: 73, so the proportion of malignant cases is 0.796657"
+        ],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "zoom_dense_area",
+            "reasoning": "Use the Zoom Dense Area tool to zoom into the points in the densest region."
+          },
+          {
+            "iteration": 2,
+            "tool": "change_encoding",
+            "reasoning": "The question asks for the proportion of malignant cases, so you need to use the change encoding tool, select 'color' for the channel, and switch the field to 'diagnosis'."
+          },
+          {
+            "iteration": 3,
+            "tool": "get_data_summary",
+            "reasoning": "To calculate the proportion of malignant cases, use the 'get data summary' tool to calculate the distribution of malignant and benign cases."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "zoom_dense_area",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "x_range": [
+                    0.0716888885498047,
+                    0.11115555521647136
+                  ],
+                  "y_range": [
+                    0.015458351135253916,
+                    0.12045835113525388
+                  ]
+                }
+              }
+            },
+            {
+              "tool": "change_encoding",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "field": "Diagnosis",
+                  "channel": "color"
+                }
+              }
+            },
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "visible"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "visible_domain": {
+            "x": [
+              0.0716888885498047,
+              0.11115555521647136
+            ],
+            "y": [
+              0.015458351135253916,
+              0.12045835113525388
+            ]
+          },
+          "encoding": {
+            "x": "Smoothness (mean)",
+            "y": "Compactness (mean)",
+            "color": "Diagnosis"
+          }
+        }
+      }
+    }
+  ]
+}

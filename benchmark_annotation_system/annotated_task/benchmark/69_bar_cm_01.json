@@ -1,0 +1,67 @@
+{
+  "task_type": "clear_multi",
+  "task_id": "69_bar_cm_01",
+  "vega_spec_path": "benchmark_annotation_system/backend/specs/69_top_100_linkedin_companies_2026_bar.json",
+  "eval_weights": {
+    "tool_call": 0.7,
+    "final_state": 0.3
+  },
+  "questions": [
+    {
+      "qid": "cm_02",
+      "question": "Which companies have followers above the average number?",
+      "ground_truth": {
+        "task_type": "clear_multi",
+        "answer": {
+          "type": "categorical",
+          "value": "Google, Amazon, LinkedIn, Microsoft, Ted Conferences, Unilever, Deloitte.",
+          "alternatives": []
+        },
+        "key_insights": [],
+        "reasoning": [
+          {
+            "iteration": 1,
+            "tool": "get_data_summary",
+            "reasoning": "The question asks which companies have followers exceeding the average number, so you need to use the 'get data summary' tool to obtain the average number first."
+          },
+          {
+            "iteration": 2,
+            "tool": "sort_bars",
+            "reasoning": "To more easily find which companies have followers above the average number, use the sort bars tool to sort the companies."
+          }
+        ],
+        "tool_eval": {
+          "tools": [
+            {
+              "tool": "get_data_summary",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "scope": "all"
+                }
+              }
+            },
+            {
+              "tool": "sort_bars",
+              "param_eval": {
+                "type": "object",
+                "param": "all_params",
+                "target": {
+                  "order": "descending"
+                }
+              }
+            }
+          ]
+        },
+        "state_eval": {
+          "encoding": {
+            "x": "company",
+            "y": "followers",
+            "color": null
+          }
+        }
+      }
+    }
+  ]
+}

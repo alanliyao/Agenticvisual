@@ -9,7 +9,7 @@
   "questions": [
     {
       "qid": "cs_01",
-      "question": " What is the name of the third most fuel-efficient model series after sorting?",
+      "question": "Use the sort_bars tool to arrange all bars in descending order. What is the name of the third most fuel-efficient model series after sorting?",
       "ground_truth": {
         "task_type": "clear_single",
         "answer": {
